@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 11 — El Judaisme: Història, Creences, Pràctiques i Diversitat</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="estil.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- HEADER FIXE & NAV TOGGLE -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title">Capítol 11 — El Judaisme</div>
+  <!-- Aquest div buit serveix per centrar visualment el títol gràcies a flexbox -->
+  <div style="width: 44px;"></div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">Capítol 11<br>El Judaisme</div>
+  </div>
+  <nav>
+    <a href="#cover" class="lvl1">Portada</a>
+    <a href="#intro" class="lvl1">Introducció</a>
+
+    <a href="#s11" class="lvl1">11.1 Orígens i evolució</a>
+    <a href="#s111" class="lvl2">11.1.1 L'aliança fundacional</a>
+    <a href="#s112" class="lvl2">11.1.2 Monarquia i Temples</a>
+    <a href="#s113" class="lvl2">11.1.3 Diàspora i judaisme rabínic</a>
+
+    <a href="#s12" class="lvl1">11.2 Textos sagrats</a>
+    <a href="#s121" class="lvl2">11.2.1 El Tanakh</a>
+    <a href="#s122" class="lvl2">11.2.2 Mixnà, Guemarà i Talmud</a>
+    <a href="#s123" class="lvl2">11.2.3 El Midraix</a>
+
+    <a href="#s13" class="lvl1">11.3 Teologia i ètica</a>
+    <a href="#s131" class="lvl2">11.3.1 Monoteisme ètic</a>
+    <a href="#s132" class="lvl2">11.3.2 L'Aliança i els Mitzvot</a>
+    <a href="#s133" class="lvl2">11.3.3 Poble, terra i messianisme</a>
+
+    <a href="#s14" class="lvl1">11.4 Vida quotidiana i festiva</a>
+    <a href="#s141" class="lvl2">11.4.1 El Sàbat</a>
+    <a href="#s142" class="lvl2">11.4.2 El calendari festiu</a>
+    <a href="#s143" class="lvl2">11.4.3 El cicle de la vida</a>
+
+    <a href="#s15" class="lvl1">11.5 Diversitat contemporània</a>
+    <a href="#s151" class="lvl2">11.5.1 Corrents religiosos</a>
+    <a href="#s152" class="lvl2">11.5.2 Judaisme secular</a>
+    <a href="#s153" class="lvl2">11.5.3 Reptes de la modernitat</a>
+
+    <a href="#s16" class="lvl1">11.6 Llegat</a>
+    <a href="#s161" class="lvl2">11.6.1 Influències rebudes</a>
+    <a href="#s162" class="lvl2">11.6.2 Matriu abrahamítica</a>
+    <a href="#s163" class="lvl2">11.6.3 Filosofia i Occident</a>
+    <a href="#s164" class="lvl2">11.6.4 Sionisme i Israel</a>
+
+    <a href="#s17" class="lvl1">11.7 Metodologia</a>
+    <a href="#s171" class="lvl2">11.7.1 Enfocament historicocrític</a>
+    <a href="#s172" class="lvl2">11.7.2 Perspectiva sociològica</a>
+    <a href="#s173" class="lvl2">11.7.3 Ètica i neutralitat</a>
+
+    <a href="#s18" class="lvl1">11.8 Bibliografia</a>
+    <a href="#s181" class="lvl2">11.8.1 Fonts primàries</a>
+    <a href="#s182" class="lvl2">11.8.2 Obres de referència</a>
+    <a href="#s183" class="lvl2">11.8.3 Literatura acadèmica</a>
+  </nav>
+  </aside>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-menorah">✡</div>
+  <div class="cover-ornament">Història de les Religions</div>
+  <div class="cover-rule"></div>
+  <div class="cover-hebrew">בְּרֵאשִׁית</div>
+  <h1 class="cover-chapter">Capítol 11</h1>
+  <div class="cover-subtitle">El Judaisme — Història, Creences, Pràctiques i Diversitat</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong> El judaisme no és simplement una religió, sinó la primera gran tradició que va transformar la catàstrofe en pedagogia divina i va convertir la pèrdua del territori i del Temple en el fonament d'una identitat portàtil i universal, capaç de sobreviure a qualsevol forma d'opressió.
+  </div>
+  <div class="cover-scroll">
+    <span>Llegir</span>
+    <div class="cover-scroll-line"></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="content">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     INTRODUCCIÓ
+══════════════════════════════════════════════════════════════════════ -->
+<section id="intro" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num">Introducció</span>Una tradició forjada en la crisi</h1>
+
+  <p class="drop-cap">Hi ha tradicions religioses que neixen en la glòria dels imperis, legitimant el poder dels grans i consagrant les jerarquies existents. El judaisme és l'exacte contrari: una tradició forjada en l'esclavitud, la derrota i l'exili, que ha trobat en cada catàstrofe la matèria primera d'una nova formulació teològica. Comprendre el judaisme exigeix abandonar les lectures apologètiques o polèmiques i adoptar la perspectiva del que el sociòleg Peter Berger ha anomenat un "nòmada de la identitat": un poble que, en perdre repetidament el territori, va aprendre a portar la pàtria en els texts.</p>
+
+  <p>El judaisme és, alhora, una de les religions més antigues del món i una de les més vives i complexes del present. La seva trajectòria abraça més de tres mil anys de sedimentació cultural, teològica i filosòfica, durant els quals ha donat a la humanitat el concepte de monoteisme ètic, la noció d'aliança com a relació recíproca entre Déu i la humanitat, el model de la sinagoga com a comunitat d'estudi, i una tradició interpretativa que ha convertit el text sagrat en un organisme perpetuament viu i en disputa.</p>
+
+  <p>Tres grans ruptures estructuren la seva evolució: la destrucció del Primer Temple (586 aC) i l'exili a Babilònia; la restauració del Segon Temple i la seva posterior destrucció (70 EC) a mans de Roma; i la llarga travessia de la Diàspora, que va culminar en el segle XX amb l'Holocaust i el retorn a la terra d'Israel. Cadascuna d'aquestes ruptures ha generat una resposta creativa que ha ampliat i aprofundit la tradició fins al punt que el judaisme rabínic del Talmud, el judaisme cabalístic medieval i el judaisme contemporani en les seves múltiples expressions —ortodoxa, reformista, secular o reconstructivista— comparteixen el mateix text fundacional però l'habiten de maneres radicalment diverses.</p>
+
+  <div class="tesi">
+    <p>El judaisme és la primera tradició religiosa que va aprendre a existir sense un centre geogràfic únic, convertint el text, l'estudi i la pràctica comunitària en substituts funcionals del Temple. Aquesta estratègia de supervivència, elaborada al llarg de segles de crisi, és la clau de la seva extraordinària resiliència al llarg de la història.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     11.1 ORÍGENS
+══════════════════════════════════════════════════════════════════════ -->
+<section id="intro" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num">11.1</span>Orígens històrics i evolució d'una identitat</h1>
+  <p class="section-lead">c. 2000 aC – 70 EC: Del Pròxim Orient cananeu fins a la maduresa rabínica.</p>
+
+  <p class="drop-cap">La història del judaisme no s'ha de llegir com una simple línia de temps, sinó com un procés de sedimentació cultural on cada crisi —des de l'exili fins a la destrucció dels temples— ha estat una oportunitat per a una nova formulació teològica. La identitat israelita és, per damunt de tot, el resultat d'una diferenciació conscient i sostinguda en el temps contra els paradigmes del món pagà del Pròxim Orient antic. La figura de l'investigador israelià Israel Finkelstein i l'historiador alemany Jan Assmann s'erigeixen com a referències inevitables en aquest recorregut: el primer ha reconstruït el procés d'emergència de la identitat israelita com un fenomen gradual i endogen; el segon ha explicat com els textos sagrats funcionen com a dipòsits de memòria que permeten a les comunitats sobreviure a les catàstrofes més desoladores.</p>
+
+  <h2 id="s11-context">El Pròxim Orient com a matriu: context cananeu i diferenciació</h2>
+
+  <p>L'arqueologia contemporània, especialment els treballs d'Israel Finkelstein i Neil Asher Silberman a <em>The Bible Unearthed</em> (2001), ha desmitificat la narració d'una conquesta militar sobtada de Canaan. La realitat apunta cap a un procés d'emergència interna: comunitats seminòmades i grups de les terres altes, pròxims lingüísticament i culturalment als cananeus, van començar a definir-se de manera oposada a la cultura urbana jerarquitzada i al sistema de ciutats-estat dels seus veïns.</p>
+
+  <p>El panteó cananeu, documentat a través dels textos d'Ugarit, presenta les divinitats com a forces imanents integrades en els cicles de la natura. El proto-judaisme va iniciar un procés de separació radical entre el Creador i la creació —allò que el filòsof Yehezkel Kaufmann va analitzar a <em>The Religion of Israel</em> (1960)— desmitificant el cosmos i convertint-lo en un escenari de la història humana. Karen Armstrong, a <em>A History of God</em> (1993), ha subratllat que aquest procés no fou lineal: durant segles, el culte a Yahvé va conviure amb el culte a Asherah, com demostren les inscripcions de Kuntillet Ajrud (s. VIII aC). El monoteisme exclusiu fou una conquesta tardana, fruit de la crisi exílica.</p>
+
+  <div class="highlight">
+    <p>«There was no Exodus from Egypt, no wandering in the Sinai desert, no violent conquest of Canaan—but this doesn't diminish the power of the biblical narrative as the foundation of a people's identity.»</p>
+    <span class="cita-autor">— Israel Finkelstein & Neil Asher Silberman, <em>The Bible Unearthed</em>, 2001</span>
+  </div>
+
+  <p>Karl Jaspers va descriure el període comprès entre els segles VIII i III aC com «Època Axial». A Israel, aquesta epopeia es va manifestar en el moviment profètic clàssic —Amós, Osees, Isaïes, Miquees— que va articular una visió de Déu que transcendia els límits nacionals. Robert Bellah, a <em>Religion in Human Evolution</em> (2011), ha argumentat que el que es va produir no fou simplement una reforma religiosa, sinó una transformació de la consciència: la capacitat de mirar críticament les institucions existents en nom d'un principi transcendent.</p>
+</section>
+
+<!-- 11.1.1 -->
+<section id="s111" class="reveal">
+  <h2>11.1.1. L'aliança fundacional: d'Abraham a la revelació del Sinaí amb Moisès</h2>
+
+  <p>La figura patriarcal introdueix una novetat absoluta: el Déu d'Israel no és una força amb la qual es negocia mitjançant rituals de fertilitat, sinó un interlocutor moral que estableix un compromís solemne i personalitzat. La historicitat dels patriarques ha estat objecte d'un dels debats més intensos de la historiografia bíblica: Thomas L. Thompson a <em>The Historicity of the Patriarchal Narratives</em> (1974) i John Van Seters a <em>Abraham in History and Tradition</em> (1975) van argumentar que els textos patriarcals són composicions tardanes que projecten en el passat remot les preocupacions teològiques del I mil·lenni aC.</p>
+
+  <p>El concepte de <strong>Berit</strong> (Aliança) representa una innovació teològica sense paral·lel en el Pròxim Orient antic. Existien tractats de vassallatge hetites i assiris, i Klaus Baltzer a <em>The Covenant Formulary</em> (1971) ha establert paral·lels estructurals entre aquests pactes i l'aliança del Sinaí. Però la novetat israelita és qualitativa: el soci del pacte no és un rei humà, sinó la divinitat mateixa, i l'objecte del pacte no és la lleialtat política, sinó la fidelitat moral. Michael Fishbane, a <em>Sacred Attunement</em> (2008), ha explorat la Berit com el fonament d'una «hermenèutica de la resposta»: cada generació ha de reinterpretar el pacte fundacional en el context del seu temps.</p>
+
+  <p>Jan Assmann, en la seva obra <em>Moses the Egyptian</em> (1997) i a <em>The Price of Monotheism</em> (2008), ha introduït el concepte de «distinció mosaica» per descriure la ruptura que representa la revelació del Sinaí: per primera vegada en la història de les religions, una comunitat es defineix per la seva fidelitat a una Llei exclusiva que exclou explícitament totes les altres formes de culte.</p>
+
+  <div class="highlight">
+    <p>«The Mosaic distinction introduces into the world something new: the idea of truth in matters of religion and, along with it, the idea of its opposite, namely, heresy, falsehood, and idolatry.»</p>
+    <span class="cita-autor">— Jan Assmann, <em>The Price of Monotheism</em>, 2008</span>
+  </div>
+
+  <p>La Torà, com ha analitzat Moshe Halbertal a <em>People of the Book</em> (1997), és el text que crea la comunitat que la llegeix: no existeix una comunitat preexistent que adopta un text, sinó que és la pràctica de llegir, interpretar i discutir el text la que constitueix la comunitat. El politòleg Michael Walzer, a <em>Exodus and Revolution</em> (1985), ha analitzat com el relat de l'Èxode ha funcionat com a model de revolució política per a les tradicions emancipatòries d'Occident: la seqüència alliberament-peregrinació-constitució és la gramàtica profunda de tota política alliberadora.</p>
+</section>
+
+<!-- 11.1.2 -->
+<section id="s112" class="reveal">
+  <h2>11.1.2. De la monarquia al Temple: el Regne d'Israel i la destrucció dels Temples</h2>
+
+  <p>La institució de la monarquia va ser, des dels seus orígens, una font de tensió teològica profunda. El relat de I Samuel presenta la demanda popular d'un rei com una renúncia a la sobirania divina. Finkelstein i Silberman, a <em>David and Solomon</em> (2006), han aplicat l'anàlisi arqueològica a la monarquia unida amb conclusions controvertides però influents: Jerusalem al segle X aC podria ser una petita aldea de les terres altes, molt lluny de la capital imperial que descriu la Bíblia. Les descobertes a Khirbet Qeiyafa (2007-2013), però, han revelat evidències d'escriptura del s. X aC que han complicat —sense resoldre— el debat.</p>
+
+  <p>El moviment profètic clàssic (segles VIII-VI aC) representa un dels fenòmens intel·lectuals més extraordinaris de la història humana. Abraham J. Heschel, a <em>The Prophets</em> (1962), va definir el profeta no com l'home que parla «de» Déu, sinó com l'home capaç de participar de la «pateticitat divina» —<em>sympatheia</em>—: la capacitat de ser afectat pel sofriment humà com si fos el propi sofriment de Déu.</p>
+
+  <div class="highlight">
+    <p>«The prophet is a man who feels fiercely. God has thrust a burden upon his soul, and he is bowed and stunned at man's fierce greed.»</p>
+    <span class="cita-autor">— Abraham J. Heschel, <em>The Prophets</em>, 1962</span>
+  </div>
+
+  <p>La destrucció del Primer Temple el 586 aC per Nabucodonosor II va ser un sotrac ontològic sense precedents. La resposta teològica dels intel·lectuals exiliats fou revolucionària: la derrota no era la derrota de Déu, sinó el judici de Déu contra el seu propi poble per la seva infidelitat a l'Aliança. John J. Collins, a <em>Introduction to the Hebrew Bible</em> (2004), ha analitzat com aquesta «teologia del judici» va permetre al judaisme sobreviure a la catàstrofe. La destrucció del Segon Temple l'any 70 EC va forçar la desaparició dels grups que depenien del sacrifici. En el buit de poder, els fariseus van emergir com els artífexs de la supervivència.</p>
+</section>
+
+<!-- 11.1.3 -->
+<section id="s113" class="reveal">
+  <h2>11.1.3. La Diàspora i el judaisme rabínic: adaptació i supervivència</h2>
+
+  <p>A Babilònia, lluny de la terra prometuda, els exiliats van desenvolupar una intensa tasca de compilació textual —donant forma a gran part del Pentateuc—, van desvincular les pràctiques rituals del lloc físic, i van iniciar el camí cap a la sinagoga com a lloc d'assemblea. Lee I. Levine, a <em>The Ancient Synagogue</em> (2000), ha argumentat que la sinagoga és un dels invents religiosos més revolucionaris de la humanitat: la seva portabilitat és la seva fortalesa.</p>
+
+  <p>La llegenda talmúdica de Iokhanan ben Zakkai —que va sortir de Jerusalem assetjada i va demanar a Vespasià únicament «Dóna'm Iavne i els seus savis»— és el relat fundacional d'una nova estratègia de supervivència: renunciar a la terra, al temple i al poder polític per preservar l'estudi de la Torà. Shaye J.D. Cohen, a <em>From the Maccabees to the Mishnah</em> (1987), ha analitzat com aquesta decisió va transformar el judaisme d'una religió nacional-territorial en una «religió portàtil» de caràcter universal.</p>
+
+  <p>Daniel Boyarin, a <em>Border Lines</em> (2004), ha explorat com el judaisme rabínic i el cristianisme primitiu es van construir mútuament en un procés de diferenciació recíproca. Les «fronteres» entre les dues tradicions van ser el resultat d'un procés llarg i conflictiu de definició identitària que no va concloure fins als segles IV-V EC. El Talmud —tant el de Jerusalem (c. 400 EC) com el de Babilònia (c. 500-600 EC)— és el monument intel·lectual d'aquest procés: no un codi legal tancat, sinó el registre d'un debat ininterromput entre generacions de rabins, on la pluralitat de veus és deliberada perquè la tradició considera que la diversitat d'opinions és inherent a la recerca de la veritat divina.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     11.2 TEXTOS SAGRATS
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s12" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">11.2</span>Textos sagrats i fonts de la tradició</h1>
+  <p class="section-lead">El Tanakh, la tradició oral i la pràctica hermenèutica del Midraix.</p>
+
+  <p class="drop-cap">Si hi ha un element que distingeix el judaisme d'altres tradicions de l'Antiguitat és la seva relació constitutiva amb el text. No es tracta simplement que el judaisme tingui escriptures sagrades —moltes tradicions en tenen—, sinó que la pràctica de llegir, comentar, discutir i reinterpretar el text és, ella mateixa, una forma d'acció religiosa. L'estudi de la Torà no és la preparació per al culte: és el culte. Aquesta identificació entre lectura i sagrat és el que ha permès al judaisme sobreviure sense temple, sense territori i sense poder polític durant llargs períodes de la seva història.</p>
+
+  <p>L'arquitectura textual del judaisme és estratificada i dialògica: el Tanakh és el fonament; la Mixnà i el Talmud en constitueixen la interpretació autoritzada; el Midraix en desenvolupa les dimensions narratives i teològiques; la filosofia medieval —de Saadia Gaon a Maimonides— en cerca la coherència racional; la Càbala en explora les dimensions místiques; i les <em>responsa</em> halàkhiques apliquen tots aquests recursos a les situacions noves que cada generació afronta. Comprendre el judaisme com a sistema textual implica reconèixer que cap d'aquestes capes existeix de manera aïllada: totes dialoguen entre elles en una conversa que s'ha mantingut viva durant tres mil·lennis.</p>
+
+  <p>Moshe Halbertal, a <em>People of the Book: Canon, Meaning, and Authority</em> (1997), ha formulat amb precisió la paradoxa fonamental d'aquest sistema: el text crea la comunitat que el llegeix i la comunitat crea el text que la constitueix. No existeix una comunitat preexistent que adopta un text; és la pràctica de llegir, interpretar i discutir el text la que constitueix i reconstitueix la comunitat en cada generació. Aquesta circularitat constitutiva és el fonament de la resiliència jueva: mentre hi hagi una comunitat que llegeixi la Torà, hi haurà judaisme.</p>
+</section>
+
+<section id="s121" class="reveal">
+  <h2>11.2.1. El Tanakh: estructura i significat de la Torà, els Neviïm i els Ketuvim</h2>
+
+  <p>El Tanakh és l'acrònim dels tres grans corpus que componen la Bíblia hebrea: <strong>Torà</strong> (la Llei), <strong>Neviïm</strong> (els Profetes) i <strong>Ketuvim</strong> (els Escrits). Cadascun d'aquests corpus té un estatut diferent dins de la tradició: la Torà —els cinc llibres de Moisès o Pentateuc: Gènesi, Èxode, Levític, Nombres i Deuteronomi— ocupa el lloc central i posseeix la màxima autoritat normativa. Els Neviïm inclouen tant els profetes anteriors (Josuè, Jutges, Samuel, Reis) com els posteriors (Isaïes, Jeremies, Ezequiel i els Dotze Profetes Menors). Els Ketuvim agrupen una extraordinària diversitat de gèneres: himnes i oracions (Salms), poesia eròtica (El Càntic dels Càntics), saviesa pràctica (Proverbis), reflexió existencial (Cohèlet), drama (Job) i narrativa (Rut, Ester).</p>
+
+  <div class="triple-path">
+    <div class="triple-card">
+      <span class="term">תּוֹרָה</span>
+      <span class="meaning">Torà — La Llei<br>Els cinc llibres de Moisès. Màxima autoritat normativa. Rellegida públicament en cicle anual cada Sàbat.</span>
+    </div>
+    <div class="triple-card">
+      <span class="term">נְבִיאִים</span>
+      <span class="meaning">Neviïm — Els Profetes<br>Profetes anteriors i posteriors. La veu crítica que jutja reis i institucions en nom de l'Aliança.</span>
+    </div>
+    <div class="triple-card">
+      <span class="term">כְּתוּבִים</span>
+      <span class="meaning">Ketuvim — Els Escrits<br>Salms, Proverbis, Job, Rut, Ester. La veu de la saviesa, la pregària i la narrativa.</span>
+    </div>
+  </div>
+
+  <h3>La formació del cànon: un procés secular</h3>
+
+  <p>La fixació del cànon del Tanakh no va ser un acte instantani sinó el resultat d'un procés llarg i complexe que s'estengué al llarg de segles. La Torà va assolir probablement la seva forma substancial actual al segle V aC, en el context de les reformes d'Esdres i Nehemies. Els Neviïm van ser reconeguts progressivament entre els segles IV i II aC. La clausura dels Ketuvim va ser objecte de debat fins ben entrat el període rabínic: l'Acadèmia de Iavne (c. 90 EC) va ser el context d'importants discussions sobre l'estatut canònic de Cohèlet, el Càntic dels Càntics i el Llibre d'Ester.</p>
+
+  <p>James L. Kugel, a <em>The Bible As It Was</em> (1997), ha assenyalat que la tradició interpretativa no comença amb el Talmud: ja dins del text bíblic existeix una pràctica constant de re-lectura i re-interpretació de les tradicions anteriors. El Deuteronomista reescriu l'Èxode; les Cròniques reescriuen els Reis. Aquesta «interpretació activa» és constitutiva del text i no simplement un afegit posterior. Emanuel Tov, en la seva magnum opus <em>Textual Criticism of the Hebrew Bible</em> (1992, revisada 2012), ha demostrat la complexitat de la transmissió textual: els manuscrits del Mar Mort han revelat que a l'època del Segon Temple existien diverses versions del text bíblic circulant simultàniament, molt abans que es fes la fixació del text consonàntic hebreu (text masorètic), que es va estabilitzar entre els segles I i IV EC.</p>
+
+  <h3>La Torà: narració, llei i teologia entrellaçades</h3>
+
+  <p>Un tret distintiu de la Torà respecte a altres corpus legals de l'Antiguitat és la seva estructura narrativa englobant: les lleis no s'exposen en el buit, sinó que s'inscriuen en una narració de la relació entre Déu i Israel. El Codi d'Hammurabi mesopotàmic és un codi legal pur; el Levític i el Deuteronomi insereixen la Llei en el marc del relat de l'Aliança. Aquesta arquitectura narrativajurídica és el que fa de la Torà quelcom cualitativamente diferent d'un simple codi normatiu: és, alhora, una cosmogonia, una saga familiar, un relat d'alliberament, un codi legal i un manual litúrgic.</p>
+
+  <p>La teoria documental de Julius Wellhausen (<em>Prolegomena to the History of Israel</em>, 1878) va distingir quatre grans tradicions literàries en el Pentateuc —la Jahvista (J), l'Elohista (E), la Deuteronomista (D) i la Sacerdotal (P)— cadascuna amb la seva pròpia teologia, vocabulari i Sitz im Leben. Aquesta teoria, refinada i parcialment revisada per investigadors com Frank Moore Cross, Richard Elliott Friedman (<em>Who Wrote the Bible?</em>, 1987) i més recentment per Konrad Schmid i Eckart Otto, continua sent el marc de referència per a la crítica de les fonts del Pentateuc, tot i que la investigació actual tendeix a subratllar la complexitat dels processos redaccionals i a qüestionar les fronteres massa netes entre les «fonts».</p>
+
+  <h3>Els Neviïm: la veu crítica d'Israel</h3>
+
+  <p>Els Neviïm —dividits en «anteriors» (Josuè, Jutges, Samuel, Reis: la història deuteronomista de la monarquia) i «posteriors» (els profetes clàssics)— constitueixen el registre de la consciència crítica d'Israel. Abraham J. Heschel, a <em>The Prophets</em> (1962), ha ofert la lectura filosòfica i teològica més penetrant d'aquest fenomen: el profeta no és un predicador moralitzant, sinó un home que participa de la «pateticitat divina», la capacitat de Déu d'ésser afectat pel sofriment humà. Des d'aquesta perspectiva, el profetisme és la forma jueva de misticisme: no la fusió mística amb el diví, sinó la participació en el «pathos» del Déu que s'indigna davant la injustícia.</p>
+
+  <p>El Deutero-Isaïes (Isaïes 40-55), compost probablement a Babilònia durant l'exili, representa el punt culminant de la universalització del monoteisme israelita: el Déu que consola el seu poble exiliat es revela com el Creador de tot l'univers, el Senyor de totes les nacions, davant del qual els ídols dels babilonis no són res. La declaració «Jo sóc el primer i sóc l'últim, i fora de mi no hi ha cap Déu» (Is 44,6) és una de les formulacions més radicals del monoteisme exclusiu en tota la tradició bíblica.</p>
+
+  <h3>Els Ketuvim: la saviesa, la pregària i la narració</h3>
+
+  <p>Els Ketuvim representen la faceta més diversa i literàriament rica del Tanakh. El Llibre de Job és un dels textos filosòfics més audaços de la literatura universal: un experiment mental sobre el problema del sofriment del just que no es resol amb una teodicea racional sinó amb una teofania —l'aparició directa de Déu— que supera la pregunta sense respondre-la. Harold Bloom i David Rosenberg, a <em>The Book of J</em> (1990), van proposar que darrere d'algunes de les narratives més vívides del Pentateuc es pot detectar la veu d'una escriptora, una hipòtesi provocadora que il·lustra la vitalitat dels debats sobre autoria i gènere en els estudis bíblics contemporanis.</p>
+
+  <p>El Càntic dels Càntics —una col·lecció de poemes eròtics que no menciona el nom de Déu— ha generat una de les tradicions al·legòriques més riques de la literatura religiosa: els rabins el van llegir com a al·legoria de l'amor entre Déu i Israel, i els místics cristians com a al·legoria de l'amor entre Crist i l'Església. La decisió del rabí Akiva d'incloure'l al cànon, declarant-lo «el Sant dels Sants de tots els escrits», és un dels actes hermenèutics més audaços de la tradició rabínica: en lloc de suprimir l'erotisme, el va consagrar com a vehicle de l'experiència mística.</p>
+</section>
+
+<section id="s122" class="reveal">
+  <h2>11.2.2. La tradició oral i la interpretació: el paper de la Mixnà, la Guemarà i el Talmud</h2>
+
+  <p>La tradició rabínica afirma que al Sinaí Moisès va rebre no sols la Torà escrita sinó també una <strong>Torà oral</strong> (<em>Torah she-be'al peh</em>), transmesa de generació en generació a través d'una cadena ininterrompuda de mestres i deixebles. Aquesta concepció —formulada programàticament al primer capítol del tractat <em>Avot</em> («Moisès va rebre la Torà del Sinaí i la va transmetre a Josuè, Josuè als Ancians, els Ancians als Profetes, i els Profetes la van transmetre als homes de la Gran Assemblea»)— no és simplement una afirmació histórica sinó una reivindicació teòrica: la interpretació rabínica no és una creació humana posterior i derivada, sinó part integrant de la revelació original.</p>
+
+  <h3>La Mixnà: la primera codificació de la Llei oral</h3>
+
+  <p>La Torà oral va ser codificada per Raví Iehudà ha-Nasí (el «Patriarca») cap al 200 EC en la <strong>Mixnà</strong> —de l'arrel <em>shanah</em>, «repetir» o «estudiar». La Mixnà organitza el material jurídic en sis ordres (<em>sedarim</em>): <em>Zeraim</em> (llavors, agricultura i pregàries), <em>Moed</em> (temps assenyalats, festes), <em>Nashim</em> (dones, matrimoni i divorci), <em>Nezikin</em> (danys, dret civil i penal), <em>Kodashim</em> (coses sagrades, culte del Temple) i <em>Tohorot</em> (pureses rituals). Cadascun d'aquests ordres es divideix en tractats (<em>masekhtot</em>), i cadascun dels tractats en capítols (<em>perakim</em>) i seccions (<em>mishnayot</em>).</p>
+
+  <p>L'estil de la Mixnà és notable per la seva laconicitat i per la seva inclusió sistemàtica de les opinions discordants. A diferència d'un codi legal convencional que enunciaria únicament la norma vàlida, la Mixnà sovint presenta l'opinió de la minoria al costat de l'opinió de la majoria: «Aquests diuen X, aquells diuen Y, i la norma és Z». Jacob Neusner, que va traduir la Mixnà completa a l'anglès (<em>The Mishnah: A New Translation</em>, 1988) i en va fer una anàlisi exhaustiva en la seva obra monumental, ha argumentat que la Mixnà no és simplement un codi legal sinó un «sistema filosòfic» que proposa una visió de la realitat basada en categories de santitat, ordre i separació.</p>
+
+  <h3>La Guemarà i el Talmud: el debat infinit</h3>
+
+  <p>La <strong>Guemarà</strong> —del arameu <em>gemara</em>, «completar» o «aprendre»— és el comentari i la discussió rabínica a la Mixnà, compilat en dues versions: el <strong>Talmud de Jerusalem</strong> (<em>Yerushalmi</em>, c. 400 EC), redactat a Tiberíades i menys complet, i el <strong>Talmud de Babilònia</strong> (<em>Bavli</em>, c. 500-600 EC), redactat a les acadèmies de Sura i Pumbedita, a l'actual Iraq. El Talmud babilònic, d'una extensió de més de dos milions i mig de paraules repartits en 37 tractats, és el text de referència del judaisme rabínic i la font d'autoritat primera per a la pràctica religiosa ortodoxa fins avui.</p>
+
+  <p>L'estructura del Talmud és radicalment diferent de qualsevol altre text legal de la història. Una pàgina típica del Talmud babilònic presenta al centre el text de la Mixnà, al voltant el text de la Guemarà, i als marges els comentaris medievals de Rashi (s. XI) i dels <em>Tosafistes</em> (ss. XII-XIV). Llegir una pàgina de Talmud és, per tant, participar en una conversa que es va iniciar fa vint segles i que continua oberta: estudiants de tot el món llegeixen avui la mateixa «daf yomi» (pàgina diària) en un cicle de set anys i mig que converteix el Talmud en una experiència global i sincrònica.</p>
+
+  <div class="highlight">
+    <p>La seva estructura dialogística, on les opinions minoritàries i les opinions majoritàries coexisteixen sense jerarquia definitiva, és la traducció formal del principi que «les paraules dels uns i les paraules dels altres són paraules del Déu viu» — <em>Elu ve-elu divré Elohim hayyim</em>.</p>
+    <span class="cita-autor">— Talmud Babilònic, tractat <em>Eruvin</em> 13b</span>
+  </div>
+
+  <p>David Weiss Halivni, en la seva monumental obra <em>Mekorot u-Mesorot</em> (Fonts i Tradicions), ha analitzat el procés de redacció talmúdica, identificant les capes successives de tradicions i argumentant que la redacció final, obra dels «Stammaim» (redactors anònims del s. VI EC), és la que ha donat al Talmud la seva forma dialèctica característica. Adin Steinsaltz, autor de l'edició bilingüe moderna del Talmud babilònic (<em>The Koren Talmud Bavli</em>), ha popularitzat l'accés al Talmud per a lectors no especialitzats tot mantenint el rigor de la tradició.</p>
+
+  <h3>La literatura post-talmúdica: responsa, codificació i comentari</h3>
+
+  <p>El Talmud no va tancar el procés interpretatiu: va obrir-lo de manera sistemàtica. A partir del s. VI EC, els <em>Geonim</em> (directors de les acadèmies babilòniques) van respondre les preguntes de les comunitats disperses a través de les <em>responsa</em> (<em>she'elot u-teshuvot</em>): documents jurídics que apliquen els principis talmúdics a situacions noves i canviants. Aquesta literatura de responsa —que s'estén ininterrompudament fins al present i cobreix temes tan actuals com la bioètica, les finances digitals o els drets laborals— és la prova més eloqüent de la vitalitat adaptativa de la tradició halàkhica.</p>
+
+  <p>La necessitat de codificació sistemàtica va produir dues obres monumentals: el <em>Mishnè Torà</em> de Maimonides (s. XII), que organitza tota la halakhà en catorze volums sistemàtics, i el <em>Xulhà Arukh</em> de Josep Caro (1565), que es va convertir en el codi de referència universal del judaisme ortodox fins avui. El <em>Xulhà Arukh</em> va ser glossat per Moses Isserles (<em>Rema</em>) per incorporar-hi les pràctiques del judaisme asquenazita, demostrant que la codificació no elimina la diversitat sinó que la canalitza.</p>
+</section>
+
+<section id="s123" class="reveal">
+  <h2>11.2.3. L'hermenèutica jueva: l'estudi actiu i el debat com a forma d'observança religiosa (el Midraix)</h2>
+
+  <p>El <strong>Midraix</strong> —de l'arrel hebrea <em>darash</em>, «cercar», «investigar», «interrogar»— és la forma d'interpretació bíblica més característica de la tradició rabínica. Si el Talmud és el lloc on es debat la norma (<em>halakhà</em>), el Midraix és el lloc on el text bíblic és ampliat, completat, aprofundit i reimaginat a través de la narració, la paràbola, l'associació de textos aparentment inconexos i la resposta a preguntes que el text mateix no formula explícitament. Existeix una distinció bàsica entre el <em>Midraix Halakhà</em>, que s'ocupa de derivar normes de conducta dels textos legislatius, i el <em>Midraix Aggadà</em>, que desenvolupa les dimensions narratives, teològiques i morals dels textos bíblics a través de contes, llegendes, especulacions cosmològiques i reflexions espirituals.</p>
+
+  <h3>La pluralitat de sentits com a principi hermenèutic</h3>
+
+  <p>La tradició rabínica va elaborar un sistema de quatre nivells d'interpretació textual conegut amb l'acrònim <strong>PaRDeS</strong>: <em>Peshat</em> (el sentit literal o contextual), <em>Remez</em> (el sentit al·legòric), <em>Derash</em> (el sentit homilètic o midràshic) i <em>Sod</em> (el sentit místic o secret, especialment en la tradició cabalística). Significativament, el terme <em>PaRDeS</em> significa «jardí» o «paradís» en hebreu i arameu: la interpretació del text és una experiència d'abundància i de fecunditat, no de restricció.</p>
+
+  <p>Susan Handelman, a <em>The Slayers of Moses: The Emergence of Rabbinic Interpretation in Modern Literary Theory</em> (1982), ha analitzat la tradició midràshica com una «hermenèutica de la multiplicitat» que anticipa en dos mil anys les intuïcions de la teoria literària contemporània. A diferència de la tradició cristiana patrística —que tendeix a buscar el «sentit únic i veritable» del text, ja sigui literal, tipològic o al·legòric— la tradició rabínica no sols accepta sinó que cultiva activament la pluralitat de lectures com a expressió de la riquesa inesgotable de la Paraula divina. L'afirmació talmúdica que el text bíblic té «setanta cares» (<em>shivim panim la-Torah</em>) és la formulació clàssica d'aquest principi.</p>
+
+  <div class="highlight">
+    <p>«¿No és la meva paraula com el foc —diu el Senyor— i com un martell que fa esclatar la roca?» (Jr 23,29). Igual que el martell fa saltar múltiples espurnes, cada verset de l'Escriptura conté múltiples significats.</p>
+    <span class="cita-autor">— Talmud Babilònic, <em>Sanhedrin</em> 34a</span>
+  </div>
+
+  <h3>Grans col·leccions midràshiques i la seva funció social</h3>
+
+  <p>Les col·leccions midràshiques es van compilar en un arc cronològic que va del segle III al XII EC, amb nuclis de material molt anterior. Les més importants inclouen el <em>Bereshit Rabbà</em> (sobre el Gènesi), el <em>Shemot Rabbà</em> (sobre l'Èxode), el <em>Vayikrà Rabbà</em> (sobre el Levític), el <em>Devarim Rabbà</em> (sobre el Deuteronomi), el <em>Midraix Tehilim</em> (sobre els Salms) i el <em>Pirké de-Rabí Elièzer</em>, una obra narrativa de caràcter enciclopèdic. A part hi ha els <em>Tanhuma</em>, homilies vinculades a les porcions setmanals de la Torà llegides a la sinagoga.</p>
+
+  <p>La funció social del Midraix és doble. D'una banda, serveix a l'ensenyament popular: l'homilia midràshica a la sinagoga era el vehicle per fer accessibles les complexitats del text bíblic a una audiència amplia, no necessàriament formada en els debats talmúdics. De l'altra, el Midraix és un instrument de teologia pràctica: respon preguntes que el text deixa sense resposta (per què Déu va demanar a Abraham que sacrifiqués Isaac? Quina era la naturalesa del serpent al jardí de l'Edèn?) i aporta respostes que no pretenen ser definitives sinó fecundes.</p>
+
+  <h3>El Midraix com a psicologia espiritual: Zornberg</h3>
+
+  <p>Avivah Gottlieb Zornberg, en les seves lectures del Gènesi (<em>Genesis: The Beginning of Desire</em>, 1995) i de l'Èxode (<em>The Particulars of Rapture</em>, 2001), ha explorat de quina manera el Midraix funciona com un instrument de psicologia espiritual de primera magnitud. Les llacunes i les ambigüitats del text bíblic —les motivacions no explicades, les emocions no descrites, les contradiccions no resoltes— no s'han d'eliminar o harmonitzar, sinó habitar creativament. El Midraix no és una forma de tancar el text, sinó d'obrir-lo cap a la profunditat de l'experiència humana: la por d'Abraham, la resistència de Moisès, la solitud de Job.</p>
+
+  <p>Zornberg, que combina la formació en crítica literària anglesa (Cambridge) amb la formació tradicional en textos jueus, s'ha convertit en una de les figures més influents de la lectura contemporània de la Bíblia i el Midraix, demostrant que l'aproximació midrashica pot dialogar productivament amb Freud, Lacan, Winnicott, Keats i Kafka sense trair ni la profunditat de la tradició ni el rigor de la crítica literària.</p>
+
+  <h3>El Midraix i la tradició interpretativa moderna</h3>
+
+  <p>La influència del model midràshic s'estén molt més enllà de la tradició religiosa estricta. El filòsof Jacques Derrida va reconèixer explícitament la influència de la tradició hermenèutica jueva en la seva concepció de la <em>différance</em> i de la inestabilitat del sentit. Geoffrey Hartman i Sanford Budick van editar el volum col·lectiu <em>Midrash and Literature</em> (1986), que va establir el diàleg sistemàtic entre el Midraix i la teoria literària contemporània. El moviment del «new midrash» —creació literària i poètica en resposta al text bíblic— és avui una pràctica habitual en les comunitats jueves progressistes com a forma de renovació espiritual i creativa.</p>
+
+  <p>En darrer terme, el Midraix és la prova més eloqüent que el judaisme no és una «religió del Llibre» en el sentit d'una devoció passiva a un text tancat, sinó una «religió del Diàleg amb el Llibre»: un procés ininterromput de pregunta, resposta, contrapregunta i nova resposta en el qual cada generació es veu interpel·lada de nou per la Paraula i hi respon des de la seva experiència particular. Martin Buber, en la seva filosofia del diàleg, va veure en aquesta estructura responsorial la forma més profunda de la relació entre l'ésser humà i Déu: no el monòleg de la revelació, sinó el diàleg infinit de la interpretació.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     11.3 TEOLOGIA
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s13" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">11.3</span>Teologia, ètica i pilars de la fe</h1>
+  <p class="section-lead">El monoteisme ètic, l'Aliança, els Mitzvot i l'esperança messiànica.</p>
+
+  <p class="drop-cap">La teologia jueva no es pot entendre com un sistema de dogmes tancats comparable al Credo cristià o als Cinc Pilars de l'Islam. El judaisme ha resistit històricament la reducció de la fe a un conjunt d'articles d'obligatòria acceptació. Maimonides va intentar, als seus famosos Tretze Principis de Fe (s. XII), sistematitzar el nucli teològic del judaisme; però la tradició rabínica mai va acceptar aquests principis com a dogmes obligatoris amb el caràcter vinculant que va voler donar-los. En el judaisme, el que s'exigeix no és tant la «fe correcta» (<em>ortodòxia</em>) com la «pràctica correcta» (<em>ortopraxis</em>): la qüestió central no és «en què creus?» sinó «com actues?»</p>
+
+  <p>Aquesta primacia de la pràctica no implica indiferència a la qüestió de Déu, sinó una manera diferent d'abordar-la. Louis Jacobs, a <em>A Jewish Theology</em> (1973), va descriure la teologia jueva com un «procés obert» en el qual la mateixa tradició inclou veus radicalment diverses sobre la naturalesa de Déu, la providència, el mal, la resurrecció i la vida futura, sense que cap d'elles arribi a suprimir les altres. Arthur Green, a <em>Radical Judaism</em> (2010), ha proposat una lectura panteista del judaisme contemporani que seria impensable en un sistema de dogmes tancats, però que resulta perfectament possible dins de la tradició pluralista rabínica. El debat teològic és, en el judaisme, una forma d'adoració: fer preguntes difícils a Déu és una postura pietosa, no irreverent.</p>
+
+  <p>La filosofia medieval jueva —de Saadia Gaon (<em>Emunot ve-Deot</em>, s. X) a Maimonides (<em>Guia de Perplexos</em>, s. XII), de Iehudà Halevi (<em>El Cuzari</em>, s. XII) a Gersònides (<em>Les guerres del Senyor</em>, s. XIV)— va elaborar els grans sistemes teològics en diàleg crític amb el kalam islàmic i la filosofia aristotèlica. La seva problemàtica central —com conciliar la raó filosòfica amb la revelació bíblica; com parlar de Déu sense caure en l'antropomorfisme; com justificar el sofriment dels justos— continua sent el marc de referència per a la teologia jueva contemporània, que hi torna en cada nova crisi: la Il·lustració, l'Holocaust, la bioètica, la intel·ligència artificial.</p>
+</section>
+
+<section id="s131" class="reveal">
+  <h2>11.3.1. Monoteisme ètic: la concepció de Déu, la justícia i la santedat de la vida humana</h2>
+
+  <p>El monoteisme jueu no és un simple «teisme» en sentit filosòfic —la creença en un ser suprem creador—, sinó un «monoteisme ètic»: la convicció que el Déu únic és, per la seva naturalesa mateixa, el fonament de l'ordre moral de l'univers. Aquesta convicció té una conseqüència revolucionària i pertorbadora: si Déu és just, la injustícia humana no és simplement una desgràcia social o un problema polític —és una transgressió teològica, una ruptura de l'ordre còsmic. El profeta Amós ho va formular amb una crueltat que no deixa escapatòria: «Odio, menyspreo les vostres festes, i no em delecten les vostres assemblees solemnes (...). Però que la justícia broti com les aigües, i la rectitud com un torrent incessant» (Am 5, 21-24).</p>
+
+  <h3>La concepció de Déu: entre l'atribut negatiu i la presència personal</h3>
+
+  <p>La filosofia medieval jueva va haver d'afrontar la tensió entre dues exigències aparentment contradictòries: la intel·lectual, que exigia un concepte de Déu racionalment coherent i lliure d'antropomorfismes; i la religiosa, que reclamava un Déu amb qui es pogués parlar, pregar, negociar i fins i tot disputar. Maimonides, a la <em>Guia de Perplexos</em> (c. 1190), va proposar la «teologia negativa» com a solució: no podem dir res positiu de Déu sense caure en l'error; només podem dir el que Déu no és. Déu no és ignorant, no és impotent, no és múltiple —però res d'allò que afirmem positivament de Déu captura realment la seva essència.</p>
+
+  <p>Iehudà Halevi, per contra, al seu <em>Cuzari</em> (c. 1140), va criticar el Déu dels filòsofs com una abstracció freda incapaç de fonamentar la relació religiosa: el Déu d'Abraham no és el «motor immòbil» d'Aristòtil, sinó el Déu que crida, allibera, estima i s'indigna. Franz Rosenzweig, a <em>L'Estrella de la Redempció</em> (1921), va reprendre aquesta crítica en clau moderna: el sistema filosòfic que pretén absorbir Déu en el pensament tanca el camí cap a la relació viva. Déu, l'ésser humà i el món no són moments d'un sistema: són realitats independents posades en relació per l'amor, la revelació i la redempció.</p>
+
+  <p>Martin Buber, a <em>Jo i Tu</em> (<em>Ich und Du</em>, 1923), va articular la distinció fonamental entre la relació «Jo-Tu» —relació personal, directa, irreductible a objecte— i la relació «Jo-Allò» —relació instrumental, objectivadora. Déu és el «Tu etern», la única relació que no pot convertir-se en «Allò». La pregària, el ritual i l'estudi no són accions «sobre» Déu: són el lloc on el «Jo» humà s'obre al «Tu» diví en una relació que transforma les dues parts.</p>
+
+  <h3>La imatge de Déu (<em>Tselem Elohim</em>) i la dignitat humana</h3>
+
+  <p>El concepte de <em>Tselem Elohim</em> —«a imatge de Déu» (Gn 1,27)— és el fonament de tota la doctrina jueva sobre la dignitat humana. A diferència de les cosmogonies mesopotàmiques, on la humanitat és creada com a servent dels déus, el Gènesi afirma que tot ésser humà —home i dona, sense distinció d'origen o condició— porta en si la imatge del Creador. Aquesta afirmació té implicacions ètiques enormes: la vida humana és inviolable no per raons de conveniència social sinó per raó teològica. El tractat talmúdic <em>Sanhedrin</em> ho formula amb la màxima que ha inspirat tota la tradició dels drets humans: «Qui destrueix una sola ànima, és com si hagués destruït un món sencer; i qui salva una sola ànima, és com si hagués salvat un món sencer» (<em>Sanhedrin</em> 4,5).</p>
+
+  <p>El concepte d'<strong>imitatio Dei</strong> —«sereu sants, perquè jo, el Senyor, el vostre Déu, sóc sant» (Lv 19,2)— converteix la vida moral en una forma de participació en la naturalesa divina. No es tracta d'imitar els atributs metafísics de Déu —la seva omnipotència o omnisciència—, sinó els seus atributs morals: la misericòrdia, la justícia, la compassió, el sosteniment dels febles. El Talmud (<em>Sota</em> 14a) ho il·lustra amb una cadena d'exemples: «Igual com Déu vestí els despullats (Adam i Eva), tu vesteix els despullats. Igual com Déu visità els malalts (Abraham), tu visita els malalts. Igual com Déu enterrà els morts (Moisès), tu enterra els morts».</p>
+
+  <h3>Levinas: el rostre de l'altre com a epifania del diví</h3>
+
+  <p>Emmanuel Levinas, el filòsof jueu lituà format en la fenomenologia d'Edmund Husserl i profundament marcat per l'experiència de l'Holocaust, va elaborar la seva filosofia com una resposta al fracàs de la filosofia occidental davant el mal radical del segle XX. A <em>Totalitat i Infinit</em> (1961) i a <em>D'altra manera que ser</em> (1974), Levinas va proposar que la filosofia primera no és l'ontologia —la pregunta per l'ésser— sinó l'ètica: la relació amb l'altre humà que em precedeix i em interpel·la abans que jo pugui tematitzar-lo.</p>
+
+  <div class="highlight">
+    <p>El rostre de l'altre obre la dimensió del transcendent. El rostre és el que no es pot matar —o almenys, és allò l'assassinat del qual constitueix la temptació i la tentació mateixa del mal absolut.</p>
+    <span class="cita-autor">— Emmanuel Levinas, <em>Totalitat i Infinit</em>, 1961</span>
+  </div>
+
+  <p>Per a Levinas, la responsabilitat il·limitada davant l'altre no és una derivació de la teologia, sinó la seva condició de possibilitat: la relació amb Déu passa necessàriament per la relació amb el proïsme. Aquesta lectura ha tingut una influència enorme en la teologia jueva i cristiana, la filosofia política i els estudis de l'Holocaust, i representa una de les contribucions més originals del pensament jueu a la filosofia contemporània.</p>
+
+  <h3>Tikkun Olam: de la Càbala luriànica al compromís social</h3>
+
+  <p>El concepte de <em>Tikkun Olam</em> —«reparació del món»— ha tingut una trajectòria semàntica fascinant que il·lustra perfectament els processos de reinterpretació i adaptació característics de la tradició jueva. En el seu origen cabalístic, especialment en la cosmologia d'Isaac Luria (s. XVI, Safed), el <em>Tikkun</em> descriu el procés còsmic de restauració de les «espurnes divines» (<em>nitzotzot</em>) disperses per l'univers arran del «trencament dels vasos» (<em>shevirat ha-kelim</em>): la catàstrofe originària que va seguir a la primera emanació divina. En aquesta visió mística, cada acte ritual d'un jueu —cada pregària, cada mitzvà complerta— contribueix literalment a la restauració de l'harmonia còsmica originària i accelera l'adveniment de la redempció.</p>
+
+  <p>En el context del judaisme reformista i progressista del segle XX —i especialment als Estats Units a partir dels anys seixanta— el <em>Tikkun Olam</em> va ser reinterpretat en clau social i política: la «reparació del món» és la responsabilitat de transformar les estructures d'injustícia, de lluitar per la igualtat, els drets civils, el feminisme i la pau. La revista <em>Tikkun</em>, fundada per Michael Lerner el 1986, va convertir-se en la tribuna d'aquest progressisme jueu que veia en la tradició profètica i en el concepte luriànic la legitimació religiosa del compromís polític. Gershom Scholem va criticar ja en vida les reinterpretacions que buidaven el terme del seu contingut místic original. El debat entre les dues lectures —cosmicoteològica i sociopolítica— continua sent un eix central de les tensions internes del judaisme contemporani.</p>
+</section>
+
+<section id="s132" class="reveal">
+  <h2>11.3.2. L'Aliança (Berit) i la Llei (Mitzvot): els 613 manaments com a guia pràctica de conducta</h2>
+
+  <p>La Torà conté, segons la computació rabínica tradicional —sistematitzada per Maimònides al seu <em>Sefer ha-Mitzvot</em> i per Nahmànides en la seva crítica a aquella obra—, <strong>613 Mitzvot</strong> (manaments): 248 prescripcions positives («fes», <em>mitzvot aseh</em>) i 365 prohibicions («no fes», <em>mitzvot lo taaseh</em>). Aquesta numerologia no és casual: 248 correspon al nombre de membres del cos humà (en l'anatomia rabínica), i 365 al nombre de dies de l'any solar —una manera de dir que els manaments afecten la totalitat del cos i la totalitat del temps, que l'aliança no és un compromís limitat sinó una consagració total de l'existència.</p>
+
+  <h3>L'estructura de la halakhà: entre obligació i sentit</h3>
+
+  <p>Els 613 manaments cobreixen tots els àmbits de la vida: les relacions amb Déu (pregària, Sàbat, festes), les relacions interpersonals (justícia, honestedat, cura dels pobres i dels estrangers), les pautes alimentàries (lleis de caixer), la vida familiar (matrimoni, separació, puresa), les pràctiques agrícoles (drets dels pobres sobre les collites, l'any sabàtic) i les obligacions econòmiques (prohibició de la usura, alliberament dels deutes). La seva totalitat forma el que els rabins anomenen <em>halakhà</em> —de l'arrel <em>halakh</em>, «caminar»—: no una llei en sentit restrictiu i punitiu, sinó la manera de caminar per la vida que l'Aliança proposa com a resposta amorosa a la crida divina.</p>
+
+  <p>La distinció entre manaments «entre l'home i Déu» (<em>mitzvot ben adam la-Makom</em>) i «entre l'home i el seu proïsme» (<em>mitzvot ben adam la-havero</em>) és fonamental en l'ètica rabínica. El Yom Kippur —el dia d'expiació— perdona els pecats comesos contra Déu, però no els comesos contra el proïsme fins que el culpable no hagi demanat perdó directament a la persona ofesa i hagi reparat el dany. Aquesta estructura no permet l'evasió còmode de la responsabilitat interpersonal a través del ritual religiós: la reconciliació vertical amb Déu passa necessàriament per la reconciliació horitzontal amb els altres.</p>
+
+  <h3>Raons dels manaments: <em>ta'amei ha-mitzvot</em></h3>
+
+  <p>La pregunta sobre les «raons dels manaments» (<em>ta'amei ha-mitzvot</em>) ha estat una de les qüestions més debatudes de la filosofia jueva medieval i moderna. Dues posicions principals s'enfronten: la que afirma que els manaments han de ser complerts per obediència a la voluntat divina, independentment de si n'entenem la raó (<em>hukkim</em>, estatuts sense raó aparent, com les lleis de puresa o les alimentàries); i la que afirma que els manaments tenen raons racionals i morals que és legítim i necessari comprendre per complir-los amb plena consciència.</p>
+
+  <p>Maimònides, a la <em>Guia de Perplexos</em> (III, 26-49), va emprendre la tasca sistemàtica de trobar raons racionals per a tots els manaments, incloent-hi els <em>hukkim</em> aparentment irracionals: les lleis de caixer serien mesures d'higiene i moderació; la prohibició del sacrifici d'animals amb la seva cria seria una forma d'educació de la compassió; les lleis de puresa ritual servirien per regular l'accés al sagrat i evitar la trivialització. Nahmànides va criticar aquesta aproximació com una reducció de la revelació a la raó: els manaments poden tenir raons que superen la nostra comprensió, i exigir-ne una justificació racional ens converteix en jutges de Déu en lloc de receptors de la seva voluntat.</p>
+
+  <h3>Rosenzweig i la llei com a amor: de <em>Gesetz</em> a <em>Gebot</em></h3>
+
+  <p>Franz Rosenzweig, en el context del seu diàleg epistolar amb Martin Buber sobre la llei jueva (publicat a <em>On Jewish Learning</em>, 1955), va elaborar una distinció que ha resultat fonamental per a la teologia jueva del segle XX: la distinció entre la llei com a <em>Gesetz</em> (norma externa imposada, hetèronoma, que s'obeeix per obligació) i la llei com a <em>Gebot</em> (manament interioritzat com a expressió d'amor i resposta lliure a una crida amorosa). Per a Rosenzweig, la Llei es converteix en <em>Gebot</em> —manament viu— en el moment en què deixa de ser una norma abstracta i es converteix en la forma concreta de la meva resposta al Déu que m'estima i em crida.</p>
+
+  <div class="highlight">
+    <p>El manament és només el moment de la revelació; la Llei és el resultat de la seva acceptació en el temps. El mandament diu «t'estimo»; la Llei diu «et segueixo». El primer és instantani; el segon, una vida sencera.</p>
+    <span class="cita-autor">— Franz Rosenzweig, <em>L'Estrella de la Redempció</em>, 1921</span>
+  </div>
+
+  <p>Buber va anar més lluny que Rosenzweig en la crítica de la Llei com a institució: per a Buber, qualsevol codificació de la relació amb Déu en normes fixes comporta el risc de substituir la relació viva «Jo-Tu» per una estructura institucional «Jo-Allò». La seva posició va ser criticada per Rosenzweig i per pensadors posteriors com Emil Fackenheim i Joseph B. Soloveitchik, que van argumentar que la llei no és l'antítesi de la relació personal sinó el seu vehicle necessari: la forma en la qual l'amor diví s'encarna en la vida quotidiana i es fa accessible a tota una comunitat, no sols als moments d'experiència mística individual.</p>
+
+  <h3>Soloveitchik i «l'home de la halakhà»</h3>
+
+  <p>Joseph B. Soloveitchik, el gran pensador del judaisme ortodox modern nord-americà, va elaborar a <em>Halakhic Man</em> (1944) una fenomenologia de l'experiència religiosa jueva centrada en la figura de l'«home de la halakhà» (<em>ish ha-halakha</em>). Per a Soloveitchik, el jueu format en la tradició talmúdica no fuig del món per cercar Déu en l'èxtasi místic o en la retirada contemplativa: al contrari, s'enfronta al món amb les categories de la halakhà i el transforma aplicant-hi l'ordre i la mesura de la Llei divina. L'«home de la halakhà» és, alhora, el científic que mesura i ordena la realitat i el sant que consagra cada moment de l'existència a Déu —una combinació que Soloveitchik considera la contribució específica i irreductible del judaisme a la civilització humana.</p>
+</section>
+
+<section id="s133" class="reveal">
+  <h2>11.3.3. El concepte de poble, terra i messianisme: identitat col·lectiva i esperança escatològica</h2>
+
+  <p>El judaisme ha mantingut al llarg dels segles una tensió productiva i creativa entre la seva dimensió universalista —el Déu d'Israel és el Creador de tot l'univers i el Pare de tota la humanitat— i la seva dimensió particularista —Israel és el «poble escollit» (<em>am segulà</em>), el poble de l'Aliança, el depositari d'una missió específica en la història. Aquesta tensió ha generat posicions molt diverses i sovint antagòniques: des del particularisme estricte del moviment hassídic de Satmar fins a l'universalisme profètic d'un Segon Isaïes que proclama Israel «llum de les nacions». Comprendre l'«elecció» d'Israel sense caure en les caricatures —ni en la de la supèrbia ètnica ni en la del fardell masoquista— és una de les claus per accedir a la comprensió de la identitat jueva.</p>
+
+  <h3>El poble escollit: <em>am segulà</em> i la missió profètica</h3>
+
+  <p>El concepte d'«elecció» (<em>behirà</em>) d'Israel és un dels més malentesos i distorsionats de la tradició jueva, tant per la crítica externa com per algunes lectures internes. L'elecció bíblica no és un privilegi de superioritat racial o moral: és una responsabilitat particular en el marc d'un pla universal. El Deuteronomi ho formula amb una claredat que no deixa lloc a l'arrogància: «No us va estimar el Senyor i us va escollir perquè sigueu més nombrosos que tots els pobles —sou en realitat el menys nombrós dels pobles—, sinó perquè us estimava» (Dt 7,7-8). L'elecció és gratuïta, no meritocràtica, i comporta una exigència major, no un privilegi: «De tots els pobles de la terra, només us he conegut a vosaltres; per això us faré retrets de totes les vostres culpes» (Am 3,2).</p>
+
+  <p>Arnold Eisen, a <em>The Chosen People in America</em> (1983), ha analitzat com el concepte d'elecció ha estat interpretat de maneres radicalment diverses per les comunitats jueves americanes: des de la legitimació religiosa de la missió civilitzadora fins a la redefinició reformista de l'«elecció» com a vocació ètica universal, passant per la negació reconstruccionista de Mordecai Kaplan, que va proposar eliminar el concepte del liturgia per les seves connotacions etnocèntriques. El debat continua obert i és un dels eixos de les tensions internes del judaisme contemporani.</p>
+
+  <h3>La terra: categoria teològica i geopolítica</h3>
+
+  <p>La terra d'Israel (<em>Eretz Israel</em>) no és simplement un territori geogràfic en la tradició jueva; és una categoria teològica de primer ordre. La relació entre el poble, la terra i Déu forma una tríada constitutiva de l'Aliança: la promesa de la terra a Abraham, la conquesta sota Josuè, l'exili a Babilònia i el retorn sota Cir formen un cicle de promesa-pèrdua-restauració que és la columna vertebral de la teologia bíblica deuteronomista. La terra no és «propietat» d'Israel: «La terra és meva, i vosaltres sou forans i hostes davant meu» (Lv 25,23). Israel l'habita en condicions de fidelitat a l'Aliança; la infidelitat comporta la pèrdua.</p>
+
+  <p>W.D. Davies, a <em>The Gospel and the Land</em> (1974), va analitzar exhaustivament la dimensió teològica de la terra en el judaisme bíblic i post-bíblic, concloent que la «espiritualització» del concepte de terra en el judaisme de la Diàspora —que va substituir la terra física per la Torà com a «pàtria portàtil»— no va eliminar mai del tot la tensió amb la dimensió territorial concreta. El sionisme del segle XIX, amb Theodor Herzl com a figura central, va secularitzar i polititzar aquesta categoria teològica, convertint la promesa bíblica en projecte nacional modern. Aquesta operació va generar divisions profundes en el judaisme: una part de l'ortodòxia va condemnar el sionisme com a «forçar la fi» de la redempció sense la intervenció divina; el judaisme reformista alemany va rebutjar inicialment el sionisme per incompatible amb la plena integració en les nacions europees; mentre que el judaisme religiós sionista (el moviment Mizrahi, fundat el 1902) va intentar una síntesi entre l'observança tradicional i el retorn a la terra.</p>
+
+  <h3>El messianisme: apocalíptic, utòpic i les seves tensions</h3>
+
+  <p>El <strong>messianisme</strong> jueu és una esperança col·lectiva en un futur redimit de la història, no en un alliberament individual de l'ànima. El Messies (<em>Mashíah</em>, «l'ungit») és, en la visió rabínica majoritària, un líder humà —descendent de la casa de David— que inaugura una era de pau universal, restauració del Temple, retorn dels exiliats i coneixement universal de Déu. Aquesta concepció és radicalment diferent del messianisme cristià: el Messies jueu és un rei terrenal que transforma la història, no un salvador transcendent que redimeix les ànimes individuals del pecat original.</p>
+
+  <p>Gershom Scholem, a <em>The Messianic Idea in Judaism</em> (1971), va elaborar l'anàlisi més influent d'aquest fenomen, distingint entre el messianisme apocalíptic —que espera una irrupció sobrenatural i catastròfica que fractura la história i inaugura una nova era— i el messianisme restauracionista —que aspira a la recuperació del passat daunat de David— i el messianisme utòpic —que aposta per una transformació gradual del món a través de la justícia humana. Scholem va argumentar que el messianisme apocalíptic ha estat la força més dinàmica i perillosa de la tradició jueva: la seva capacitat de mobilitzar masses ha generat fenòmens com el sabbatianisme (el moviment al voltant de Sabbatai Tzvi, 1626-1676, el fals messies que va sacsejar el món jueu i va acabar convertint-se a l'islam) i el frankisme (el moviment de Jacob Frank al s. XVIII), i es pot rastrejar —de manera secularitzada— en les revolucions modernes.</p>
+
+  <div class="highlight">
+    <p>La idea messiànica ha forçat un preu enorme en el poble jueu: el preu de la vida en la utopia, una vida referida a un punt que es troba en el futur i que converteix tot allò que existeix en el present en quelcom provisional.</p>
+    <span class="cita-autor">— Gershom Scholem, <em>The Messianic Idea in Judaism</em>, 1971</span>
+  </div>
+
+  <p>El filòsof Walter Benjamin, en la seva darrera obra, les <em>Tesis sobre el concepte d'història</em> (1940), va elaborar una versió laica i revolucionària del messianisme jueu: cada moment present porta en si la possibilitat de la redempció, entesa no com un progrés lineal sinó com una irrupció que trenca el contínuum de la catàstrofe i obre una nova possibilitat. Jacob Taubes, a <em>La teologia política de Pau</em> (1987), va explorar les connexions entre el messianisme jueu i les teologies polítiques modernes —des del marxisme fins al conservadorisme de Carl Schmitt— argumentant que la categoria messiànica és irreductible a la secularització i continua articulant les esperances i les angúnies de la modernitat fins i tot allà on sembla haver estat definitivament suprimida.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     11.4 VIDA QUOTIDIANA
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s14" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">11.4</span>Vida quotidiana, ritus i calendari festiu</h1>
+  <p class="section-lead">El temps sagrat, el cicle vital i les pràctiques que estructuren la identitat jueva quotidiana.</p>
+
+  <p class="drop-cap">Una de les característiques més notables del judaisme és la seva capacitat de sacralitzar el temps quotidià. El Sàbat, les festes, les oracions diàries, les lleis d'alimentació i els ritus del cicle vital no són simplement «obligacions religioses» separades de la vida ordinària: són la trama mateixa a través de la qual la vida ordinària adquireix significat religiós. El sociòleg Émile Durkheim va veure en els ritus la mecànica de la cohesió social; en el cas del judaisme, el ritus és alhora cohesió social, memòria cultural i educació moral. Però la lectura durkheimaniana, malgrat la seva fecunditat analítica, no és suficient per comprendre el judaisme: els ritus jueus no simplement enforteixen la solidaritat del grup, sinó que posen en relació el present amb un passat fundacional que cal reactualitzar i amb un futur messiànic que cal anticipar.</p>
+
+  <p>El calendari jueu és, en la seva estructura mateixa, una teologia del temps. A diferència del calendari gregoriàn, que organitza el temps en funció dels cicles naturals solars, el calendari hebreu és luni-solar: segueix els mesos lunars però s'ajusta al cicle solar afegint un mes addicional (<em>Adar II</em>) en els anys embolísmics. Aquesta hibridació reflecteix la tensió entre la dimensió còsmica del temps —els cicles de la natura que recorden la creació— i la dimensió histórica —els esdeveniments salvífics que estructuren la memòria col·lectiva. Jan Assmann, a <em>Cultural Memory and Early Civilization</em> (2011), ha analitzat el calendari festiu jueu com el mecanisme institucional per excel·lència de la «memòria cultural»: la que permet a una comunitat mantenir viu el contacte amb el seu passat fundacional a través de la repetició ritual, convertint la distància temporal en presència simbòlica.</p>
+
+  <p>L'estructura de la pregària diària —les tres oracions (<em>Shaharit</em>, <em>Minhà</em> i <em>Arvit</em>), el recitat del <em>Shemà</em>, les bènedicies (<em>brakhot</em>) que acompanyen cada acció quotidiana des del despertar fins al son— converteix el dia sencer en un marc de consciència religiosa. Reuven Kimelman, a les seves investigacions sobre la litúrgia rabínica, ha demostrat que la forma de la pregària jueva no és simplement devocional sinó profundament teològica: cada <em>brakha</em> (<em>Barukh Atà Adonai</em>, «Beneït siguis, Senyor...») és una afirmació de la sobirania divina sobre el domini específic de l'experiència que acompanya —el menjar, el cos, la llum, el coneixement. La vida quotidiana es converteix en un tapís de reconeixements de la presència divina en allò ordinari.</p>
+</section>
+
+<section id="s141" class="reveal">
+  <h2>11.4.1. El Sàbat (Shabbat): el dia de repòs com a eix central de la vida jueva</h2>
+
+  <p>El Sàbat —del posta de sol del divendres al sortir les tres estrelles el dissabte a la nit— és la institució temporal més central i definidora del judaisme. El seu fonament és doble: el Gènesi el presenta com el dia en el qual Déu «reposà de tota la seva obra de creació» (Gn 2,2-3), donant-li un fonament cosmogònic; el Deuteronomi, en canvi, el fonamenta en la memòria de l'esclavitud i l'alliberament d'Egipte (Dt 5,15), donant-li un fonament historicoètic. Aquesta doble fonamentació no és una contradicció, sinó la síntesi característica de la tradició bíblica: el Sàbat és alhora imitació del ritme diví de creació i repòs, i commemoració de la llibertat guanyada. El descansat sabàtic no és opcional —és el quart dels Deu Manaments— i el seu compliment és un signe de l'Aliança tan fonamental com la circumcisió: «Els israelites guardaran el Sàbat, celebrant-lo en totes les generacions com una aliança perpètua» (Ex 31,16).</p>
+
+  <h3>Heschel i la «civilització del temps»</h3>
+
+  <p>Abraham Joshua Heschel, a <em>The Sabbath: Its Meaning for Modern Man</em> (1951), va elaborar la reflexió filosòfica i poètica més influent sobre el Sàbat en el judaisme contemporani. La seva tesi central és que l'home modern viu en la «civilització de l'espai»: una civilització obsessionada per la conquesta, la possessió i la transformació del món material, que mesura el progrés per la quantitat de territori, de recursos o de productes acumulats. El Sàbat és la protesta radical contra aquesta civilització: un dia en el qual no es construeix, no es posseeix i no es transforma. El Sàbat no és un dia en l'espai —no és un lloc sagrat, no és el Temple— sinó un «palau en el temps»: un monument temporal en el qual la humanitat abandona la seva funció de productora i recupera la seva dignitat d'existent.</p>
+
+  <div class="highlight">
+    <p>El Sàbat és una catedral que construïm en el temps, no en l'espai. Sis dies a la setmana treballem; el setè dia, el Sàbat, és la nostra gran catedral.</p>
+    <span class="cita-autor">— Abraham Joshua Heschel, <em>The Sabbath</em>, 1951</span>
+  </div>
+
+  <p>Erich Fromm, a <em>You Shall Be as Gods</em> (1966), va aprofundir en la dimensió alliberadora del Sàbat des d'una perspectiva psicoanalítica: el descans sabàtic no és un mer cessament de l'activitat, sinó una forma d'existència radicalment diferent en la qual l'ésser humà deixa d'identificar-se amb la seva funció social i recupera la seva humanitat plena. Per a Fromm, el Sàbat és la primera formulació de l'ideal d'una humanitat que no es redueix al seu valor de canvi en el mercat, una anticipació de la llibertat que el marxisme buscarà per altres vies.</p>
+
+  <h3>Les 39 categories de treball i la halakhà sabàtica</h3>
+
+  <p>La tradició rabínica ha articulat la prohibició del treball sabàtic en 39 categories (<em>avot melakhà</em>), derivades de les tasques necessàries per a la construcció del Tabernacle descrita a l'Èxode. Aquestes 39 categories —que inclouen sembrar, coure, teixir, encendre foc, escriure, construir i altres— no s'han de llegir com a llista arbitrària, sinó com una topologia de l'activitat creativa i transformadora humana: tot el que representa «dominar la natura» o «crear coses noves» queda suspès el Sàbat, perquè el Sàbat és el dia en el qual la creació s'atura i es contempla com a completa.</p>
+
+  <p>La modernitat ha plantejat reptes enormes a la halakhà sabàtica: l'electricitat, el cotxe, el telèfon, internet i els dispositius digitals han generat un corpus enorme de responsa que intenten determinar quines activitats modernes cauen sota la categoria de «treball prohibit». La postura ortodoxa dominant —que prohibeix l'ús de l'electricitat per analogia amb «encendre foc»— contrasta amb la postura conservadora, que distingeix entre usos «constructius» i «passius» de l'electricitat, i amb la postura reformista, que entén el Sàbat com una aspiració espiritual adaptable a cada context. Aquestes diferències pràctiques reflecteixen posicions teològiques fondes sobre la naturalesa de la tradició i la seva relació amb la modernitat.</p>
+
+  <h3>La pràctica sabàtica: de l'encesa de les llums al <em>Havdalà</em></h3>
+
+  <p>La pràctica del Sàbat comença amb l'encesa de les llums (<em>hadlakat nerot</em>) per part de la dona de la casa almenys divuit minuts abans de la posta de sol del divendres, acompanyada de la benedicció i la pregària silenciosa personal. La taula es cobreix amb una estovalles blanca, s'hi col·loquen dues <em>jalot</em> (pans trenats, que recorden el doble ràció de mannà al desert) i s'hi disposa el vi per al <em>quiddush</em> (santificació). El pare o el cap de casa pronuncia el <em>quiddush</em> —una benedicció que declara la santedat del dia— i la família comparteix el sopar sabàtic en un ambient de celebració i reunió.</p>
+
+  <p>L'oració de l'<em>Arvit</em> sabàtic a la sinagoga inclou l'especial <em>Lekhà Dodí</em>, un poema del cabalista Salomó Alkabeç (s. XVI, Safed) que personifica el Sàbat com una núvia que es rep amb alegria. La litúrgia del dissabte al matí (<em>Shaharit</em>) inclou la lectura de la <em>parashà</em> setmanal de la Torà —dividida en set fragments (<em>aliyot</em>) als quals els membres de la congregació són cridats per a la benedicció— i la porció dels Profetes (<em>haftarà</em>). El Sàbat es clou amb el ritual del <em>Havdalà</em> («separació»): una cerimònia amb vi, espècies aromàtiques i una espelma de múltiples flames que marca el trànsit entre el sagrat i el profà, entre el repòs i la setmana de treball que comença.</p>
+</section>
+
+<section id="s142" class="reveal">
+  <h2>11.4.2. El cicle de l'any jueu: festivitats de penediment i de pelegrinatge</h2>
+
+  <p>El calendari festiu jueu és, en la seva totalitat, una pedagogia de la memòria col·lectiva. Cada festa commemora un moment fundacional de la història d'Israel, reactualitzant-lo per a cada generació fins al punt que els participants no recordin sinó que <em>reviuen</em>. Yosef Hayim Yerushalmi, a <em>Zakhor: Jewish History and Jewish Memory</em> (1982), va analitzar la distinció fonamental entre la «memòria» jueva —que opera a través del ritual i la celebració litúrgica— i la «historiografia» moderna, que opera a través de la recerca crítica. Per a Yerushalmi, el judaisme clàssic no necessitava la historiografia perquè el ritual garantia una forma de contacte amb el passat molt més íntima i transformadora que el coneixement intel·lectual: el Seder de Pèssah no explica que els israelites van sortir d'Egipte; fa que el participant <em>experimenti</em> la sortida d'Egipte com un fet del present.</p>
+
+  <h3>Les tres festes de pelegrinatge (<em>Shalosh Regalim</em>)</h3>
+
+  <p>Les tres grans festes de pelegrinatge —<strong>Pèssah</strong>, <strong>Shavuot</strong> i <strong>Sukkot</strong>— tenien originalment un caràcter agrícola vinculat als cicles de la collita palestinenca: Pèssah marcava l'inici de la collita de la civada a la primavera; Shavuot, la primera collita de blat cinquanta dies després; Sukkot, la collita tardoral de fruites i verdures. La tradició va reinterpretar progressivament aquests cicles agrícoles en clau de memòria histèrica, superposant sobre la celebració de la natura la commemoració dels grans actes salvífics de Déu en la història d'Israel.</p>
+
+  <p><strong>Pèssah</strong> (Pasqua jueva) commemora l'alliberament de l'esclavitud egípcia i és la festa central del judaisme. El seu element ritual definidor és el <em>Seder</em> («ordre»): el sopar familiar litúrgic que segueix l'estructura de la <em>Hagadà</em> («narració»), un text compilat al llarg dels segles que combina la narració bíblica de l'Èxode, la seva interpretació rabínica, càntics, paràboles, preguntes dels infants i la degustació d'aliments simbòlics. La <em>matzà</em> (pa no fermentat) recorda la precipitació de la sortida; les herbes amargues (<em>maror</em>), l'amargor de l'esclavitud; el <em>jaroset</em> (pasta d'fruits secs i vi), el morter amb el qual els esclaus construïen. Significativament, la <em>Hagadà</em> ordena que «en cada generació, cadascú s'ha de veure a si mateix com si ell mateix hagués sortit d'Egipte» (<em>Pesahim</em> 10,5): no és un ritu memorial passiu, sinó una identificació activa i personal.</p>
+
+  <p><strong>Shavuot</strong> (Pentecosta), set setmanes després de Pèssah, commemora la revelació de la Torà al Sinaí. Si Pèssah és la festa de la llibertat física, Shavuot és la festa de la llibertat espiritual: la recepció de la Llei que dóna contingut i direcció a la llibertat guanyada. Es celebra amb la lectura nocturna de la Torà i altres textos (<em>Tikkun Leil Shavuot</em>), amb el costum de menjar productes làctics —l'explicació és múltiple i debatuda— i amb la lectura litúrgica del Llibre de Rut, la historia d'una moabita que abraça voluntàriament la tradició d'Israel, escollint l'Aliança amb llibertat plena.</p>
+
+  <p><strong>Sukkot</strong> (Tabernacles), quinze dies després de Roix ha-Xanà, és la festa de la vulnerabilitat conscient. Durant set dies, la família construeix i habita una <em>sukkà</em> —una cabana provisional de parets i tela coberta de branques i fullatge a través del qual es veuen les estrelles— que commemora les barraques on van viure els israelites durant els quaranta anys de peregrinació pel desert. La <em>sukkà</em> és, per definició, fràgil i exposada: abandonar la seguretat de la casa i habitar la intempèrie és un acte de fe i de recordança. Els quatre vegetals (<em>arba minim</em>) —el <em>lulav</em> (palma), l'<em>etrog</em> (llimó cítric), el <em>mirtus</em> i el salze— s'agiten en les quatre direccions en el servei litúrgic, simbolitzant la presència divina en tot l'espai. La festa es clou amb el <em>Simhat Torà</em>, la «Joia de la Torà»: el dia en el qual es conclou i es recomença el cicle anual de lectura de la Torà, celebrat amb danses, cants i la processó dels rotlles de la Torà al voltant de la sinagoga.</p>
+
+  <h3>Els Dies Terribles (<em>Yamim Noraïm</em>): penediment i renovació</h3>
+
+  <p><strong>Roix ha-Xanà</strong> («Cap d'Any», literalment «cap de l'any») inaugura el desè mes del calendari litúrgic hebreu —el primer de Tixrí, tardor— amb deu dies d'introspecció i penediment que culminen en el Yom Kippur. És el «Dia del Judici» còsmic: la tradició ensenya que en Roix ha-Xanà tota la creació desfila davant el «Tribunal Diví» i el veredicte de l'any que comença queda inscrit en el «Llibre de la Vida», pendent de ser segelat deu dies més tard. El toc del <em>shofar</em> —la banya de moltó— és el senyal acústic definidor de la festa: un so aspre, urgent i inconfusible que crida a despertar de la inconsciència moral. Maimonides va definir el sentit del <em>shofar</em> amb una concisió impressionant: «Desperteu, dormidors! Examineu les vostres obres i convertiu-vos».</p>
+
+  <p><strong>Yom Kippur</strong> —el «Dia de l'Expiació»— és el dia més solemne del calendari jueu i, paradoxalment, un dels més profundament humans. Durant vint-i-cinc hores de dejuni complet —cap menjar, cap beguda, cap relació sexual, cap ús de sabates de cuir, cap ús de cosmètics— la comunitat es reuneix en cinc serveis litúrgics que articulen un arc de penitència, confessió, súplica i renovació. La confessió —el <em>Viddui</em>— es pronuncia en plural («hem pecat», no «he pecat»), perquè la responsabilitat moral és col·lectiva: els pecats individuals afecten la comunitat sencera i la comunitat és responsable dels pecats dels seus membres. El servei de la <em>Neilà</em> («tancament»), al crepuscle, és el moment de màxima intensitat: les «portes» del cel es tanquen, el veredicte és imminent, i la communitat apel·la una darrera vegada a la misericòrdia divina.</p>
+
+  <div class="highlight">
+    <p>El penediment (<em>teshuvà</em>), la pregària (<em>tefillà</em>) i la caritat (<em>tzedakà</em>) anul·len el mal del decret.</p>
+    <span class="cita-autor">— Litúrgia dels <em>Yamim Noraïm</em>, <em>Unetaneh Tokef</em>, poema de Rabí Amnon de Magúncia (s. XI)</span>
+  </div>
+
+  <h3>Altres festes: Hanukà, Purim i la Shoà</h3>
+
+  <p>El calendari jueu inclou, a més de les festes bíbliques, diverses festivitats d'institució post-bíblica. <strong>Hanukà</strong> («dedicació»), la «Festa de les Llums», commemora la victòria dels Macabeus sobre els selèucides (168-165 aC) i la redededicació del Temple. La seva pràctica central és l'encesa del <em>hanukkià</em> (canelobre de vuit branques) durant vuit nits, commemorant el miracle del recipient d'oli que havia de durar un dia i va durar vuit. La seva proximitat temporal al Nadal cristià l'ha convertit, especialment als Estats Units, en una festa de gran visibilitat cultural, en alguns casos amb un protagonisme comercial que distorsiona el seu significat religiós original. <strong>Purim</strong> commemora el relat del Llibre d'Ester: l'alliberament dels jueus perses del pla d'extermini de Hamà. És la festa més carnavalesca del calendari jueu: es llegeix públicament el Llibre d'Ester fent soroll amb el <em>greguer</em> en cada menció del nom de Hamà, es porta disfresses, es fan regals de menjar als veïns (<em>mishloah manot</em>) i caritat als pobres (<em>matanot la-evionim</em>).</p>
+
+  <p>El calendari contemporani ha incorporat dues commemoracions noves d'enorme pes simbòlic: el <strong>Yom ha-Shoà</strong> («Dia de la Shoà i de l'Heroisme», 27 de Nisan), establert per l'Estat d'Israel el 1951 per commemorar les víctimes de l'Holocaust, amb els seus sis milions de jueus assassinats; i el <strong>Yom ha-Atzmaut</strong> («Dia de la Independència», 5 d'Iyyar), la celebració de la creació de l'Estat d'Israel el 1948. L'addició d'aquestes dates al calendari litúrgic ha generat debat teològic intens: com integrar l'Holocaust en el marc del significat religiós? Com donar estatut sagrat a un fet polític en una tradició que fins ara reservava el sagrat per als actes de Déu? La tensió entre la commemoració civil i la integració teològica continua sent un dels reptes oberts de la liturgia jueva contemporània.</p>
+</section>
+
+<section id="s143" class="reveal">
+  <h2>11.4.3. El cicle de la vida i les pautes diàries: el Brit Milà, el Bar/Bat Mitzvà, el matrimoni, el dol i les lleis d'alimentació</h2>
+
+  <p>El judaisme marca els moments clau del cicle vital amb ritus que integren la dimensió biològica, social i religiosa en un marc de significat que lliga l'individu a la comunitat i a la tradició. Arnold van Gennep va descriure els «ritus de pas» com a estructures tripartides de separació, llindar i incorporació que marquen les transicions entre estadis vitals en totes les cultures humanes. En el judaisme, aquests ritus no són simplement transicions socials: són incorporacions explícites a l'Aliança, moments en els quals la identitat individual es redefineix en relació amb el pacte entre Déu i Israel.</p>
+
+  <h3>Brit Milà: el signe de l'Aliança en el cos</h3>
+
+  <p>La <strong>Brit Milà</strong> («aliança de la circumcisió») és el primer ritu que marca el nadó masculí jueu al vuitè dia de vida, en compliment del manament diví a Abraham: «Circumcidau-vos, i serà el senyal de l'aliança entre vosaltres i jo» (Gn 17,11). La circumcisió no és simplement un procediment higiènic o cultural: és la inscripció de l'Aliança en el cos físic de l'home, la incorporació irreversible a la cadena generacional que ve d'Abraham. La cerimònia és presidida per un <em>mohel</em> (especialista ritual), en presència de la família i els amics, i inclou la benedicció del vi, la donació del nom hebreu al nen i l'àpat festiu que segueix.</p>
+
+  <p>La circumcisió de les noies no és prescrita per la Torà; en el judaisme progressista contemporani, alguns corrents han creat cerimònies equivalents —la <em>Simhat Bat</em> («alegria per una filla»)— per marcar el naixement femení amb la mateixa solemnitat i significació comunitària. La <em>Simhat Bat</em> no té una forma estandarditzada i cada família la personalitza, la qual cosa reflecteix la tensió entre la igualtat de gènere i la fidelitat a la forma tradicional.</p>
+
+  <h3>Bar i Bat Mitzvà: la majoria d'edat religiosa</h3>
+
+  <p>El <strong>Bar Mitzvà</strong> («fill del manament», per a nois als 13 anys) i el <strong>Bat Mitzvà</strong> («filla del manament», per a noies als 12 anys en el judaisme ortodox i 13 en els corrents liberals) marquen el moment en el qual el jove jueu passa a ser responsable del compliment dels manaments com a adult religiós independent. El ritu central és la lectura de la <em>parashà</em> setmanal de la Torà en hebreu davant la congregació sinagogal, seguida sovint d'un <em>dvar Torà</em> (comentari bíblic) que el mateix jove prepara i exposa.</p>
+
+  <p>El <em>Bat Mitzvà</em> és una institució relativament moderna: va ser introduïda per Mordecai Kaplan el 1922, quan va celebrar la primera Bat Mitzvà per a la seva filla Judith a Nova York. L'acceptació progressiva del Bat Mitzvà en la majoria dels corrents del judaisme contemporani és un dels signes més visibles del canvi en el paper de les dones en la tradició. En el judaisme ortodox, les noies celebren la seva Bat Mitzvà sense lectura pública de la Torà —per no assumir un rol litúrgic reservat als homes— però amb diverses formes de celebració privada o comunitària femenina.</p>
+
+  <h3>Matrimoni: Kiddushin i Nissuin</h3>
+
+  <p>El matrimoni jueu és una cerimònia en dues parts: el <strong>Kiddushin</strong> («santificació» o «consagració») és l'acte d'adquisició legal de la muller, avui integrat en la cerimònia principal; el <strong>Nissuin</strong> («elevació») és la unió matrimonial pròpiament dita. La cerimònia es celebra sota la <em>khupà</em> (dosser nupcial de quatre pals i una coberta, símbol del nou hogar que es crea), en presència d'un mínim de deu adults (<em>minyan</em>). L'element legal fonamental és la <em>ketubà</em> («escrit»), el contracte matrimonial que estipula les obligacions de l'espòs envers l'esposa —inclosa la seva manutenció en cas de divorci— i que és llegit públicament i signat per dos testimonis. Les <em>Sheva Brakhot</em> («Set Benediccions») pronunciades sobre la copa de vi exalten la creació, la dignitat humana, la creació de la parella i la joia de la unió.</p>
+
+  <p>El divorci jueu (<em>get</em>) és una institució diferenciada del matrimoni civil: sense el <em>get</em> rabínic, una dona divorciada civilment però no religiosament continua essent «lligada» (<em>agunà</em>) i no pot contraure un nou matrimoni jueu. La condició de l'<em>agunà</em> —la dona l'espòs de la qual es nega a concedir el <em>get</em>— és un dels problemes halàkhics i de drets humans més greus del judaisme contemporani, especialment en el judaisme ortodox, on no existeix cap mecanisme rabínic unilateral per forçar la concessió del <em>get</em> al marit refractari.</p>
+
+  <h3>El dol: Avelut, Kaddish i la presència en l'absència</h3>
+
+  <p>El sistema de dol jueu (<strong>Avelut</strong>) és un dels exemples més sofisticats de la psicologia del dol en qualsevol tradició religiosa. Estructurat en fases de durada decreixent, permet al dolent una transició gradual de la pèrdua aguda cap a la reintegració a la vida comunitària. La <strong>Shivà</strong> («set», en al·lusió als set dies) és el període de dol agut immediat a l'enterrament: el dolent se quedea a casa, rep les visites de la comunitat, no treballa, no es renta ni es pentina, i es cobreix els miralls. El <strong>Sheloshim</strong> («trenta») és un període d'intensitat reduïda que s'estén fins als trenta dies des de la mort. Per la mort d'un progenitor, el dol s'allarga fins als dotze mesos, durant els quals el fill recita el <strong>Kaddish</strong> en cada servei litúrgic.</p>
+
+  <p>El Kaddish és, paradoxalment, la pregària més identificada amb la mort i el dol en la consciència popular jueva sense mencionar una sola vegada la mort, el dol o la pèrdua. És una doxologia en arameu —una exaltació de la grandesa i la santedat del nom diví— que en el context del dol afirma la confiança en Déu precisament en el moment de la seva màxima opacitat. Elie Wiesel ha dit del Kaddish que és la pregunta més valenta que un ésser humà pot dirigir a Déu: afirmar la seva grandesa quan tot porta a negar-la. La recitació del Kaddish per part dels fills durant onze mesos —i no dotze, per no suggerir que el progenitor mort necessita el màxim període de purgació— és un dels lligams comunitaris i generacionals més poderosos de la pràctica jueva.</p>
+
+  <h3>Les lleis d'alimentació (Caixer): identitat, santedad i distinció</h3>
+
+  <p>Les lleis d'alimentació —el sistema <strong>caixer</strong> (del mot hebreu <em>kasher</em>, «apte» o «adequat»)— imposen una sèrie de distincions que estructuren el consum quotidià i converteixen cada àpat en un acte de consciència religiosa i identitària. Els principis fonamentals del sistema caixer són: la prohibició dels animals «no purs» (porc, conill, marisc, mol·luscs, insectes); l'exigència que els animals permesos siguin sacrificats segons el mètode ritual de la <em>shehità</em> (tall ràpid de la jugular que minimitza el sofriment i permet l'evacuació de la sang, estrictament prohibida); la prohibició de consumir sang (que comporta la saladura i l'escaldament de la carn per extreure-la); i la prohibició barrejada de carn i làctics en el mateix àpat —basada en el manament bíblic de «no bollir el cabrit en la llet de la seva mare» (Ex 23,19)—, que implica l'ús de plats, coberts i utensilis separats per a cadascun dels dos tipus d'aliments.</p>
+
+  <p>Les explicacions de les lleis alimentàries han estat múltiples i debatudes. Maimonides va propugnar raons de salut i higiene; Mary Douglas, a <em>Purity and Danger</em> (1966), va proposar que els animals prohibits pertanyen a categories «anòmales» que violen l'ordre taxonòmic del Levític —els animals del mar han de tenir aletes i escates, els de terra han de tenir l'ungla fesa i ser remugants— i que la contaminació és simbòlicament l'«anomalia», allò que no encaixa en les categories establertes per la creació. Jean Soler i Leon Kass han aprofundit en dimensions cosmogòniques i antropolègiques de les lleis alimentàries. El que totes les interpretacions comparteixen és la constatació que el sistema caixer transforma el menjar —la necessitat biològica més elemental— en un acte de distinció cultural i religiosa: cada àpat és una oportunitat de recordar qui s'és i a quina tradició s'hi pertany.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     11.5 DIVERSITAT
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s15" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">11.5</span>El judaisme contemporani i la seva diversitat</h1>
+  <p class="section-lead">Dels corrents religiosos al judaisme secular: mapes d'una identitat plural.</p>
+
+  <p class="drop-cap">Parlar del «judaisme» en singular és una simplificació que la realitat contemporània desmenteix en cada moment. El judaisme del segle XXI és un ecosistema extraordinàriament divers de corrents religiosos, cultures nacionals, posicions polítiques i expressions artístiques que comparteixen un text fundacional però l'habiten de maneres radicalment diverses. Comprendre aquesta diversitat és una exigència metodològica bàsica per a qualsevol estudi acadèmic rigorós, i alhora un repte conceptual de primer ordre: ¿quin és el mínim comú denominador que fa que el judaisme ortodox de Mea Shearim a Jerusalem, el judaisme reformista de Manhattan i el judaisme secular de Tel-Aviv siguin expressions del mateix fenomen?</p>
+
+  <p>La sociòloga Sylvia Barack Fishman, a <em>Jewish Life and American Culture</em> (2000), ha descrit el judaisme nord-americà contemporani com un conjunt de «judaïsmes» en plural, cadascun amb la seva pròpia teologia, litúrgia, pràctica i visió de la identitat. Charles Liebman i Steven M. Cohen, a <em>Two Worlds of Judaism</em> (1990), van analitzar la divergència entre el judaisme israelià —centrat en la dimensió nacional, cultural i lingüística— i el judaisme nord-americà —centrat en la dimensió religiosa i congregacional— com a dos models d'identitat jueva estructuralment incompatibles, malgrat els vincles polítics i afectius que els uneixen. Avui, els debats sobre les lleis de conversió a Israel, el reconeixement del matrimoni no ortodox i el finançament de les sinagogues no ortodoxes pels organismes estatals israelians han convertit aquesta divergència en un conflicte polític obert que afecta la unitat del poble jueu a escala global.</p>
+</section>
+
+<section id="s151" class="reveal">
+  <h2>11.5.1. Principals corrents religiosos: ortodòxia, conservadorisme, reformisme i reconstruccionisme</h2>
+
+  <p>Els grans corrents del judaisme contemporani no han sorgit de manera espontània, sinó com a respostes diferenciades al repte de la modernitat: la Il·lustració, l'emancipació civil dels jueus europeus, la historiografia crítica de la Bíblia i la transformació radical de les condicions socials i polítiques del segle XIX van forçar el judaisme a definir la seva relació amb el món modern. Les respostes a aquest repte han donat lloc a una pluralitat de moviments que, tot i compartir l'arrel textual i litúrgica, difereixen profundament en teologia, pràctica i visió de la identitat.</p>
+
+  <div class="corrents-grid">
+    <div class="corrent-card">
+      <div class="corrent-nom">Judaisme Ortodox</div>
+      <p>Defensa la vinculació normativa de la <em>halakhà</em> tal com ha estat codificada, entenent que tant la Torà escrita com la Torà oral són de revelació divina i, per tant, irrevocables. Dins seu coexisteixen corrents molt diversos: el judaisme rabínic lituà (<em>litvak</em>), centrat en l'estudi talmúdic i representat per figures com el Gaon de Vilna (s. XVIII); el moviment <strong>hassídic</strong>, fundat per Israel Baal Shem Tov (c. 1700-1760) i les seves dynasties de <em>tzadikim</em> (Lubavitch, Satmar, Ger, Breslov), que posa l'accent en la devoció fervent, l'alegria religiosa i l'accessibilitat de la relació amb Déu; i l'<strong>Ortodòxia Moderna</strong> (<em>Modern Orthodox</em>), teoritzada per Shimshon Raphael Hirsch (s. XIX) amb el lema <em>Torah im Derekh Eretz</em> («Torà amb el camí del món»), que busca la síntesi entre l'observança tradicional rigorosa i la participació plena en la cultura i la ciència contemporànies.</p>
+    </div>
+    <div class="corrent-card">
+      <div class="corrent-nom">Judaisme Conservador (Masorti)</div>
+      <p>Sorgit a Alemanya al s. XIX amb Zacharias Frankel i el seu concepte de <em>«judaisme positiu-histèric»</em>, el moviment conservador afirma la vinculació a la <em>halakhà</em> però accepta que la llei jueva ha evolucionat al llarg de la història i pot continuar evolucionant a través d'un procés de decisió rabínica col·lectiva. El <em>Jewish Theological Seminary</em> de Nova York, fundat el 1886, és la seva institució acadèmica central. A Amèrica del Nord —on s'autoanomena «Conservatiu»— i a Europa i Israel —on s'autoanomena «Masorti» («tradicional»)— ha introduït la plena participació litúrgica de les dones i l'ordenació de rabines (1985) i de rabins gais i lesbianes (2006). En els darrers decennis ha viscut una crisi d'afiliació als EUA, amb un nombre creixent de membres que migren cap al reformisme o cap a l'ortodòxia.</p>
+    </div>
+    <div class="corrent-card">
+      <div class="corrent-nom">Judaisme Reformista (Liberal)</div>
+      <p>Fundat a Hamburg el 1818 amb la inauguració del primer temple reformista, el judaisme reformista —o liberal a Europa— és la resposta més radical a la modernitat: posa l'accent en els valors ètics universals del profetisme per sobre de les prescripcions cerimonials, entén la revelació com un procés continu i no com un acte únic al Sinaí, i considera que cada generació té el dret i el deure d'adaptar la tradició a les exigències morals del seu temps. Ha introduït la predicació en llengua vernacla, la música d'orgue a la sinagoga, la Confirmació com a equivalent al Bar Mitzvà, l'ordenació de rabines (1972 als EUA) i la celebració de matrimonis entre persones del mateix sexe. Avui és el corrent majoritari als Estats Units i creixent a Europa i Israel, on enfronta la resistència del rabbinat ortodox oficial.</p>
+    </div>
+    <div class="corrent-card">
+      <div class="corrent-nom">Judaisme Reconstruccionista i Renovació</div>
+      <p>El <strong>Reconstruccionisme</strong>, fundat per Mordecai M. Kaplan (1881-1983) i elaborat principalment a <em>Judaism as a Civilization</em> (1934), entén el judaisme no com una religió revelada sinó com una «civilització en evolució»: un conjunt integrat de llengua, cultura, valors, art, historia i pràctica religiosa que la comunitat jueva ha construït al llarg dels segles i que cada generació ha de recrear creativament. Kaplan va eliminar del liturgia reformulat les referències a l'«elecció» d'Israel i a la resurrecció corporal, substituint-les per afirmacions de la vocació ètica i de la renovació spiritual. El moviment de <strong>Renovació Jueva</strong> (<em>Jewish Renewal</em>), associat a la figura de Reb Zalman Schachter-Shalomi (1924-2014), incorpora elements del misticisme hassídic, la psicologia transpersonal i el feminisme en una proposta de renovació espiritual que ha exercit una influència significativa en les comunitats jueves progressistes de tot el món.</p>
+    </div>
+  </div>
+
+  <h3>El hassidisme: devoció, alegria i els <em>tzadikim</em></h3>
+
+  <p>El moviment hassídic mereix una atenció específica per la seva importància cultural i religiosa. Sorgit als anys 1730-1760 a la Ucraïna i Polònia actuals com a moviment popular de renovació espiritual en resposta a la rigidesa acadèmica del judaisme litvak, el hassidisme va posar l'accent en la devoció fervent (<em>devekut</em>, «adherència» a Déu), l'alegria religiosa (<em>simhà</em>) com a obligació espiritual, la pregària com a forma d'unió mística amb el diví, i el rol central del <em>tzadik</em> («just», mestre espiritual carismàtic) com a intermediari entre Déu i la comunitat. Gershom Scholem, a <em>Major Trends in Jewish Mysticism</em> (1941), va analitzar el hassidisme com l'última gran expressió de la mística jueva; Martin Buber va popularitzar les llegendes i els contes hassídics (<em>Tales of the Hasidim</em>, 1947-1948) com a font de saviesa humanista universal. El moviment Lubavitch (Habad), sota el lideratge dels rabins de la dinastia Schneerson, s'ha convertit en el corrent hassídic de major presència global, amb centres i emissaris (<em>shlikhim</em>) en més de cent països.</p>
+</section>
+
+<section id="s152" class="reveal">
+  <h2>11.5.2. Judaisme secular i identitat cultural: ser jueu més enllà de la pràctica religiosa</h2>
+
+  <p>Una de les característiques més singulars del judaisme en el context de les grans tradicions religioses mundials és la possibilitat —i la realitat socialment ben documentada— d'una identitat jueva sòlida i profundament viscuda que no inclou cap observança religiosa. «Ser jueu» pot implicar simplement compartir una herència cultural, lingüística, histórica i familiar, sense pregar, sense guardar el Sàbat, sense observar les lleis de caixer i fins i tot sense creure en Déu. Aquesta possibilitat no és una anomalia del judaisme contemporani: és una conseqüència directa de la seva estructura com a «poble-nació-religió» en la qual les dimensions ètnica, cultural i religiosa s'han entrelaçat durant mil·lennis sense mai fusionar-se completament.</p>
+
+  <h3>El pensament jueu secular i la seva fecunditat</h3>
+
+  <p>El judaisme secular del segle XIX i XX ha produït una de les contribucions intel·lectuals i culturals més extraordinàries de la modernitat. Karl Marx, Sigmund Freud, Albert Einstein, Franz Kafka, Walter Benjamin, Hannah Arendt, Claude Lévi-Strauss, Isaiah Berlin, Noam Chomsky, Susan Sontag —per citar només alguns noms d'una llista que és literalment centenars de persones— eren jueus que no practicaven el judaisme religiós però que, en graus diversos, van ser formats per, van dialogar amb o van reaccionar contra la tradició jueva. La seva fecunditat intel·lectual extraordinària ha estat atribuïda a factors molt diversos: la tradició d'estudi i de debat; el biaix crític inherent a la posició de minoria; la tensió entre la pertinença a la comunitat jueva i la integració en les cultures nacionals europees i americanes; i la secularització de categories teològiques —mesianisme, redempció, profetisme, justícia— que van trobar noves encarnacions en la filosofia, la teoria social i l'art.</p>
+
+  <p>Thorstein Veblen, en el seu assaig de 1919 «The Intellectual Pre-eminence of Jews in Modern Europe», va proposar que la marginalitat social del jueu europeu —ni plenament integrat en la cultura cristiana ni plenament inserit en el ghetto— creava la condició de possibilitat d'una creativitat intel·lectual excepcional: la capacitat de veure les coses amb ulls nous, sense donar per evidents les premisses del propi entorn cultural. Yuri Slezkine, a <em>The Jewish Century</em> (2004), ha elaborat una versió actualitzada d'aquesta tesi, argumentant que els jueus van ser els «primers moderns» per la seva experiència secular de mobilitat, plurilingüisme i adaptabilitat que la modernitat va generalitzar a tota la humanitat.</p>
+
+  <h3>Les cultures jueves en llengua ídix i ladino</h3>
+
+  <p>Una dimensió fonamental del judaisme secular és la de les cultures en llengua vernacla jueva, especialment l'<strong>ídix</strong> (judeoalemany) i el <strong>ladino</strong> (judeoespanyol). L'ídix —llengua dels jueus asquenazites d'Europa central i oriental, derivada del medieval alemany alt amb elements de l'hebreu, l'arameu i les llengues eslaves— va ser la llengua materna de més de deu milions de persones abans de la Shoà. Va generar una literatura rica i diversa —de Sholem Aleichem a Isaac Bashevis Singer (Premi Nobel 1978)—, un teatre popular (<em>Yiddish Theater</em>) de gran vitalitat, una premsa i un cinema propis. La Shoà va destruir la major part de la comunitat parlant d'ídix a Europa; avui l'ídix sobreviu en alguns enclavaments hassídics (Williamsburg, Borough Park a Nova York; Bnei Brak a Israel) i en un moviment de revitalització cultural que inclou universitats, premis literaris i grups de música klezmer. El ladino —llengua dels jueus sefardites expulsats d'Espanya el 1492, derivada del castellà medieval amb elements del turc, el grec i l'hebreu— va ser la llengua de les comunitats sefardites de l'Imperi Otomà, els Balcans i el Mediterrani oriental. La Shoà va aniquilar gran part d'aquestes comunitats; avui el ladino és una llengua en perill d'extinció, tot i els esforços de preservació de la <em>Autoridad Nasionala del Ladino</em> a Israel.</p>
+
+  <h3>La pregunta de «qui és jueu»: definicions en conflicte</h3>
+
+  <p>La pregunta de «qui és jueu?» no té una resposta unívoca i és la font de conflictes polítics, jurídics i teològics d'enorme intensitat en el judaisme contemporani. La <em>halakhà</em> tradicional determina la judeïtat de manera matrilineal: és jueu qui neix de mare jueva, o qui es converteix al judaisme seguint el procés estipulat per l'autoritat rabínica (que inclou, per als homes, la circumcisió, la immersió en el <em>mikvè</em> i l'acceptació dels manaments davant un tribunal rabínic). Aquesta definició, que s'ha mantingut com a estàndard en el judaisme ortodox i conservador, fou adoptada per l'Estat d'Israel en la seva llei de ciutadania però no en la seva <em>Llei del Retorn</em> (1950, modificada 1970), que atorga el dret a immigrar a Israel als fills i nets d'un jueu per qualsevol linia, incloent-hi la patrilineal.</p>
+
+  <p>El judaisme reformista nord-americà va adoptar el 1983 el principi de la «filiació patrilineal»: és jueu qui neix de pare o de mare jueu, sempre que es crii en la tradició jueva. Aquesta decisió —que reconeix com a jueus moltes persones que el judaisme ortodox i conservador no reconeixeria— ha ampliat la bretxa entre els corrents i ha complicat la qüestió del reconeixement mutu de les conversions i els matrimonis. Per a moltes persones contemporànies, la identitat jueva és el resultat d'una elecció activa i d'un procés d'aprenentatge i identificació que no es pot reduir a cap criteri biològic o ritual: és, en definitiva, una qüestió de pertinença a una comunitat de memòria, de valors i de destí compartit.</p>
+</section>
+
+<section id="s153" class="reveal">
+  <h2>11.5.3. El judaisme davant els reptes de la modernitat: gènere, ciència i pluralisme</h2>
+
+  <p>El judaisme contemporani s'enfronta a un conjunt de reptes que no tenen precedent en la seva llarga historia i que posen a prova tant la coherència interna de la tradició com la seva capacitat d'adaptació creativa. Tres d'aquests reptes mereixen una atenció específica per la profunditat de les transformacions que exigeixen: la Shoà i la teodicea post-Holocaust, la revolució de gènere i el feminisme jueu, i el diàleg amb la ciència i la bioètica.</p>
+
+  <h3>La Shoà i la teodicea: Déu «després d'Auschwitz»</h3>
+
+  <p>L'Holocaust —l'assassinat sistemàtic de sis milions de jueus per part del règim nazi entre 1941 i 1945— és el repte teològic més radical que ha afrontat el judaisme en la seva historia. La pregunta és aparentment simple i absolutament devastadora: ¿on era Déu a Auschwitz? ¿Com és possible afirmar la sobirania, la providència i la bondat d'un Déu que va permetre l'extermini d'un milió i mig d'infants innocents? Les respostes teològiques han estat múltiples i cap d'elles és satisfactòria en el sentit de «resoldre» el problema: en el millor dels casos, obren vies per continuar vivint i creient malgrat la impossibilitat de la resposta.</p>
+
+  <p>Eliezer Berkovits, a <em>Faith After the Holocaust</em> (1973), va proposar la tesi de la «ocultació del rostre de Déu» (<em>hester panim</em>): la Shoà no és un cas únic en la historia del sofriment jueu, sinó la manifestació extrema d'una postura teològica bíblica —el Déu que es retira i permet a la humanitat exercir la seva llibertat fins a les seves conseqüències més terribles. Ignacio Ellacuría Berkovits no deixa d'afirmar el Déu de la tradició, però exigeix que la teologia post-Holocaust comenci per l'escolta del sofriment i no per la construcció de sistemes. Emil Fackenheim, a <em>To Mend the World</em> (1982), va proposar el «614è manament» —sumant-lo als 613 de la Torà—: la prohibició de donar a Hitler cap victòria pòstuma. Abandonar el judaisme, perdre la fe, renunciar a la transmissió de la tradició seria, per a Fackenheim, deixar que Hitler guanyés póstumament el que no va guanyar del tot en vida.</p>
+
+  <div class="highlight">
+    <p>Estem prohibits de lliurar al món post-Holocaust victòries pòstumes a Hitler. Estem obligats a sobreviure com a jueus, per tal que el poble jueu no pereixi. Estem obligats a recordar les víctimes de l'Holocaust, per tal que la seva memòria no pereixi.</p>
+    <span class="cita-autor">— Emil Fackenheim, <em>To Mend the World</em>, 1982</span>
+  </div>
+
+  <p>Elie Wiesel, supervivent d'Auschwitz i Buchenwald i Premi Nobel de la Pau 1986, va elaborar una resposta que és, al mateix temps, literatura i teologia: <em>La Nit</em> (1958) és el relat autobiogràfic de la destrucció de la fe infantil en contacte amb l'horror, però no de la seva substitució per l'ateisme, sinó per una relació amb Déu feta de disputa, acusació i exigència de comptes. Wiesel va recuperar la figura bíblica i talmúdica del «judici de Déu» (<em>din Torah</em>) —on la comunitat cita Déu davant el seu propi tribunal— com a forma de mantenir la relació sense capitular davant cap resposta fàcil. Irving Greenberg va proposar el concepte de «voluntarisme post-Holocaust»: en el món post-Auschwitz, els manaments no es poden exigir com a obligació hetèronoma, sinó que han de ser assumits lliurement i reiteradament per una comunitat que ha experimentat el silenci diví en la seva forma més extrema.</p>
+
+  <h3>Feminisme jueu: revisió de la tradició des de l'experiència femenina</h3>
+
+  <p>El feminisme jueu —sorgit als anys setanta del segle XX en el context del moviment feminista nord-americà més ampli— ha plantejat una revisió sistemàtica de la tradició jueva des de la perspectiva de les dones, que durant mil·lennis han estat excloses dels centres de producció del saber religiós (el Bet Midraix, la sinagoga com a espai litúrgic actiu, el rabbinat) i cuya experiència i veu han quedat en gran mesura fora del cànon textual.</p>
+
+  <p>Judith Plaskow, a <em>Standing Again at Sinai: Judaism from a Feminist Perspective</em> (1990), va formular la crítica feminista fonamental: el judaisme tal com ha estat transmès és el producte de la perspectiva masculina, i les dones han estat «absents» al Sinaí no físicament, sinó com a subjectes de la revelació. La reconstrucció feminista del judaisme no és una destrossa de la tradició sinó la seva ampliació: incorporar les experiències, les veus i la saviesa de les dones en el procés d'interpretació que la tradició sempre ha considerat continu. Rachel Adler, a <em>Engendering Judaism</em> (1998), ha anat més lluny en proposar reformes halàkhiques concretes —incloent-hi una proposta de cerimònia de partnership matrimonial igualitari— basades en recursos interns de la tradició.</p>
+
+  <p>Les transformacions pràctiques han estat notables: l'ordenació de rabines i cantores (<em>hazzanot</em>) en els corrents conservador (1985), reformista (1972) i reconstruccionista (1968); la introducció del Bat Mitzvà equiparat al Bar Mitzvà; la revisió del <em>siddur</em> (llibre de pregàries) per incorporar formes femenines del nom de Déu i referències a les matriarques; la creació de noves cerimònies —<em>Simhat Bat</em>, <em>Rosh Hodesh</em> (celebració de la lluna nova com a festa femenina)— i la recuperació de figures femenines bíbliques i rabíniques. En el judaisme ortodox, el moviment de les <em>Maharat</em> i les <em>Rabba</em> (títols femenins equivalents al rabí, proposats per Yeshivat Maharat a Nova York) ha generat una intensa controversia interna sobre els límits del canvi possible dins del marc de la halakhà tradicional.</p>
+
+  <h3>Ciència, bioètica i intel·ligència artificial: la tradició davant els nous horitzons</h3>
+
+  <p>La tradició halàkhica no té cap principi d'incompatibilitat amb la ciència moderna. El judaisme no ha viscut res comparable al conflicte Galileu-Vaticà ni al Creacionisme contra el Darwinisme en el sentit cristià protestant: la comprensió rabínica dominant és que la ciència descriu el «com» de la creació, mentre que la tradició proporciona el «per a què» i el «per a qui». Figures com el rabí Jonathan Sacks (<em>The Great Partnership</em>, 2011) han argumentat que la fe i la ciència no sols no són incompatibles sinó que es necessiten mútuament: la ciència sense ètica és cega al sentit; la fe sense ciència és vulnerable a la superstició.</p>
+
+  <p>Els reptes més aguts de la bioètica contemporània —la fertilització in vitro, la clonació terapèutica, l'eutanàsia, el trasplantament d'òrgans, la manipulació genètica— han generat un corpus impressionant de responsa halàkhiques, especialment en el judaisme israelià on el sistema sanitari públic interacciona constantment amb l'autoritat rabínica. La tradició halàkhica considera la vida humana un valor suprem (<em>pikuah nefesh</em>, la preservació de la vida, és la consideració que supera pràcticament qualsevol altra prescripció), però no la sacralitza de manera absoluta —la eutanàsia passiva és admesa per alguns posek (decisors halàkhics), el trasplantament d'òrgans és no sols permès sinó considerat un acte de salvació de vides. La intel·ligència artificial planteja preguntes per a les quals el Talmud no té resposta directa —però sí metodologia: la tradició del Gòlem, el ser artificial creat per mitjans màgics, és el recurs simbòlic més citat en els debats teològics sobre la IA, com ha analitzat Noreen Herzfeld a <em>In Our Image: Artificial Intelligence and the Human Spirit</em> (2002).</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     11.6 LLEGAT: INFLUÈNCIES REBUIDES I PROJECCIÓ HISTÒRICA
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s16" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">11.6</span>Llegat: influències rebudes i projecció històrica</h1>
+  <p class="section-lead">De la matriu del Pròxim Orient i l'abrahamisme fins a la filosofia occidental i el sionisme modern.</p>
+
+  <p class="drop-cap">Cap tradició religiosa s'alça en un buit absolut. El judaisme antic, lluny d'aparèixer com un sistema completament original i aïllat al bell mig de l'Orient Pròxim, es va constituir com un extraordinari organisme de síntesi, adaptació, relectura i polèmica contra les cultures que el van precedir i envoltar. Seguint el principi metodològic de l'enfocament interdisciplinari i la història comparada de les religions, l'anàlisi de les influències rebudes i de la projecció exercida pel judaisme il·lumina la seva complexitat real en el si de la història de la humanitat.</p>
+</section>
+
+<section id="s161" class="reveal">
+  <h2>11.6.1. Influències rebudes: Mesopotàmia, Canaan i Pèrsia</h2>
+
+  <p>La relació del judaisme amb Mesopotàmia s'estén des de les seves arrels mítiques més remotes fins a la catàstrofe fundacional de l'exili babilònic del segle VI aC. La recerca comparativa de texts —especialment a partir de la descoberta i desxiframent de la literatura d'Ugarit i de les tauletes cuneïformes mesopotàmiques al llarg dels segles XIX i XX— ha posat de manifest paral·lelismes profunds i inesquivables en les estructures narratives, cosmogòniques i legislatives. Els relats del Gènesi relatius a la creació del cosmos, al jardí de l'Edèn, a la construcció de la torre de Babel i, de manera molt assenyalada, el cicle del Diluvi Universal amb la figura de Noè, guarden una dependència literària i motívica directa amb la mitologia mesopotàmica, particularment amb el poema de l'<em>Atrahasis</em> i l'<em>Epopeia de Gilgamesh</em>. Tanmateix, tal com ha analitzat extensament l'assiriòleg Thorkild Jacobsen i biblistes contemporanis com John Day (<em>Yahweh and the Gods and Goddesses of Canaan</em>, 2002), la genialitat teològica del proto-judaisme no va consistir a inventar relats <em>ex nihilo</em>, sinó a exercir una <strong>subversió i desmitificació radical</strong> dels mateixos mites. Mentre que a l'<em>Enuma Elish</em> babilònic el món sorgeix d'una violenta guerra còsmica i del cadàver esquarterat d'una deessa primordial, el Gènesi hebreu desactiva la violència divina: el cosmos és creat per un únic Déu mitjançant la paraula pacífica i ordenada, i l'ésser humà no és un esclau creat per abastar les necessitats físiques i materials d'uns capritxosos déus, sinó un subjecte dotat de dignitat moral i creat a imatge i semblança del Creador.</p>
+
+  <p>Aquest diàleg amb la matriu mesopotàmica també es deixa sentir amb força en l'estructura jurídica del Pentateuc —clarament visible en el Codi de l'Aliança de l'Èxode (20-23)—, el qual mostra un deute històric inequívoc amb els grans codis legals del Pròxim Orient antic, com el Codi d'Hammurabi o les lleis d'Eshnunna. El principi de la retribució proporcional i mètrica —la coneguda <em>lex talionis</em> o «ull per ull, dent per dent»— és una categoria jurídica comuna a tot el context cultural de la regió. No obstant això, la transformació teològica i social introduïda pel judaisme rau en la <strong>sacralització i universalització de la llei</strong>: a Mesopotàmia i a les monarquies veïnes, el rei promulgava les lleis com a mer representant o visir de la divinitat nacional, mentre que a Israel la llei prové directament de l'autoritat de Yahvé i vincula de manera igualitària tant el monarca com el darrer dels súbdits, sotmetent el poder polític secular a un estàndard ètic transcendent i innegociable. Més enllà d'aquests estrats mítics i legals, l'experiència directa i traumàtica de l'exili a Babilònia (586-538 aC) va actuar com el gresol definitiu que va accelerar la metamorfosi del judaisme: d'una religió cultual lligada de manera immutable a un temple territorial i a una dinastia reial, va passar a convertir-se en una <strong>religió del text i de l'Escriptura</strong>, inventant la institució de la sinagoga i depurant el monoteisme estricte front a la pressió del paganisme imperial.</p>
+
+  <p>Pel que fa a la matriu cananea, cal recordar que Israel va créixer i es va gestar originàriament dins del mateix espai cultural i lingüístic de Canaan. Des d'una perspectiva antropològica i arqueològica rigorosa, els primers israelites eren grups de caràcter seminòmada i comunitats de les terres altes que compartien arrels ètniques i lingüístiques amb els cananeus, però que van començar a definir una identitat pròpia precisament per <strong>oposició frontal</strong> a la cultura urbana jerarquitzada i al sistema de ciutats-estat paganes de la costa. Aquest origen compartit explica que la religió d'Israel compartís un nombre massiu de categories cultuals i lèxiques. El nom genèric de la divinitat en la llengua hebrea, <em>Elohim</em>, és un cognat directe del terme semític occidental <em>El</em>, que designava el déu suprem i pare del panteó d'Ugarit. Molts dels títols i atributs poètics atorgats a Yahvé en la literatura bíblica més antiga eren originàriament epitets de les deïtats cananees. Mark S. Smith, en la seva obra fonamental <em>The Early History of God: Yahweh and the Other Deities in Ancient Israel</em> (2002), ha demostrat amb evidències filològiques i arqueològiques que el mateix Yahvé va absorbir i integrar moltes de les característiques del déu de la tempesta Baal i del mateix El durant el procés d'emergència d'Israel. Tanmateix, aquesta proximitat va generar una llarga i sagnant <strong>guerra cultural interna</strong> durant el període monàrquic (segles X-VI aC): la religió popular d'Israel i Judà fou profundament sincretista, amb el poble adorant sovint a Yahvé al costat de Baal i d'Asherah (la deessa mare i consort). La literatura dels Profetes i dels llibres històrics registra l'esforç implacable de la facció monoteista i sacerdotal per purificar el culte fins a erradicar totalment aquest sincretisme cananeu, un procés que no culminarà amb èxit fins a les reformes post-exíliques.</p>
+
+  <p>Finalment, pel que fa a la matriu persa i zoroastriana, cal destacar que l'experiència de l'Imperi Aquemènida —a partir de la conquesta de Babilònia per Cir el Gran l'any 539 aC— va posar el judaisme del Segon Temple en contacte directe amb el zoroastrisme, la religió oficial de l'Estat persa. Tot i les reticències històriques d'alguna historiografia a admetre préstecs exteriors, la recerca comparativa moderna —avalada per autoritats com Mary Boyce a <em>Zoroastrians: Their Religious Beliefs and Practices</em>, 1979— ha confirmat un flux d'idees teològiques profund en el període post-exílic. Abans d'aquest contacte, la visió israelita de la vida després de la mort era sumptament ombrívola i homogènia a través del concepte del <em>Xeol</em> (un rebaix subterrani sense consciència ni distribució moral). Sota l'estímul indirecte del pensament zoroastrià —que disposava d'una elaborada escatologia sobre el final dels temps, el combat còsmic, el judici de les ànimes, la resurrecció dels cossos i el triomf definitiu del Bé sobre el Mal—, el judaisme post-exílic comença a articular una vigorosa literatura apocalíptica. La idea de la <strong>resurrecció dels natius i dels morts</strong> fa la seva aparició explícita per primera vegada en la literatura bíblica en aquest context (com es palesa clarament al Llibre de Daniel 12,2). Paral·lelament, la figura de *Satanàs* —que en els textos bíblics més antics exercia com un subordinat o "fiscal" obedient dins de la cort celestial de Déu— es transforma sota la influència del dualisme persa en una entitat autònoma, personificació del Mal absolut, capdavantera d'una host de dimonis i enemics de l'ordre diví, alhora que s'enriqueix de manera notable l'angelologia oficial amb noms propis i estructures jeràrquiques celestials molt definides.</p>
+</section>
+
+<section id="s162" class="reveal">
+  <h2>11.6.2. La matriu de l'abrahamisme: projecció sobre el cristianisme i l'islam</h2>
+
+  <p>La relació històrica, filològica i teològica entre el judaisme i el cristianisme primitiu constitueix un dels processos de transformació religiosa més complexos de la història de la humanitat, sovint descrit per la recerca acadèmica contemporània a través de la fórmula de la «separació de camins» (<em>the parting of the ways</em>). El cristianisme no va néixer en cap moment com una religió nova, aliena i exterior al món judueu; al contrari, va emergir originàriament com un moviment messiànic i apocalíptic sorgit directament <em>dins</em> de la matriu del judaisme del Segon Temple, concretament en el si del medi socioreligiós de la Galilea del segle I de l'era cristiana. Des d'una perspectiva estrictament històrica i crítica —avalada per dècades de recerca per part d'especialistes de la talla de Geza Vermes a <em>Jesus the Jew</em> (1973) o E.P. Sanders a <em>The Historical Figure of Jesus</em> (1993)—, Jesús de Natzaret fou un mestre, rabí i profeta jueu plenament inserit en les controvèrsies doctrinals, socials i polítiques del seu temps. Les seves ensenyances més emblemàtiques —articulades a través de paràboles de tradició rabínica, d'apassionats debats sobre l'correcte compliment i interpretació de la Torà, de la crítica mordaç al formalisme burocràtic del Temple de Jerusalem i de l'esperança fervent en la imminent instauració del Regne de Déu— no pretenien en absolut fundar una nova tradició separada, sinó reformar, interioritzar i purificar el judaisme de la seva època davant de la sacsejada de la crisi escatològica que s'aveïnava. Jesús era, per tant, un jueu observant que s'adreçava a deixebles jueus, debatent colze a col·loc amb fariseus, saduceus i essenis sota els mateixos paràmetres hermenèutics del judaisme d'aquell període.</p>
+
+  <p>El punt d'inflexió decisiu que va desplaçar a poc a poc aquest moviment reformista intrajudueu cap a la condició d'una religió universal i autònoma es troba en la construcció teològica de Pau de Tars i en les comunitats de la diàspora hel·lenística posterior. Pau va dur a terme una operació hermenèutica i teològica d'enormes dimensions: va desvincular de manera irreversible la pertinença a l'Aliança divina de l'observança estricta dels marcadors identitaris nacionals de la Torà —tals com la circumcisió obligatòria, les lleis complexes d'alimentació o el compliment estricte del Sàbat—, obrint formalment les portes de l'Aliança a tota la gentada del món sense necessitat de passar prèviament per la naturalització ètnica jueva. Aquest trencament gradual, accelerat per la destrucció del Segon Temple l'any 70 EC que va privar ambdós moviments del seu centre de gravetat cultual, va conduir a una llarga història de polèmiques recíproques, on el judaisme rabínic que es consolidava a Iavne i el cristianisme imperial emergent es van definir en un clar procés d'autonomia i diferenciació mútua. Durant segles, la teologia cristiana dominant va legitimar aquesta separació a través de la anomenada «teologia de la supersessió» o de la substitució, argumentant de manera dogmàtica que l'Església passava a ser el «Nou Israel» que desplaçava l'«Antic Israel» per haver refusat el Messies. Aquesta construcció ideològica va constituir el substrat tràgic de l'antijudaïsme històric occidental, una ferida que no començaria a tancar-se teològicament fins a la segona meitat del segle XX, amb documents conciliaris com la <em>Nostra Aetate</em> (1965) i amb la revisió profunda de les lectures paulines inaugurada per la recerca protestant i catòlica moderna.</p>
+
+  <p>Per la seva banda, l'islam s'insereix en el gran tronc de la tradició abrahamítica a través d'una operació teològica de restauració, depuració i culminació de la Llei que es materialitza al segle VII de l'era cristiana a la península Aràbiga. El naixement de l'islam es produeix en un ambient de constant contacte comercial i espiritual amb comunitats jueves i cristianes (tant ortodoxes com heterodoxes i marginals) presents a la regió aràbiga. El Corró reflecteix aquest diàleg intens incorporant de manera sistemàtica nombroses figures i relats procedents directament del Tanakh —reformulats i adaptats lingüísticament a l'àrab com <em>Ibrahim</em> (Abraham), <em>Musa</em> (Moisès), <em>Dawud</em> (David) o <em>Isa</em> (Jesús)—, als quals presenta no pas com a personatges aliens, sinó com a baules essencials d'una única i ininterrompuda cadena de profetes d'una mateixa religió primordial (*din al-hanif*): la sumissió absoluta a la voluntat d'un Déu únic i intransigent. L'islam es concebia a si mateix, doncs, no com una religió totalment nova, sinó com la depuració definitiva de les desviacions doctrinals que, segons la seva òptica, s'haurien infiltrat tant en el judaisme com en el cristianisme al llarg dels segles.</p>
+
+  <p>Estructuralment i tipològica, l'islam mostra una proximitat pràctica i institucional incomparablement més intensa amb el judaisme que amb el cristianisme tradicional, de manera molt especial en allò que fa referència a la centralitat absoluta de la Llei i de l'Escriptura. Tant el judaisme com l'islam pertanyen de ple a la categoria de les <strong>religions de l'ortopraxi jurídica</strong>: en ambdues tradicions, la salvació i la santedat no depenen d'una confessió de fe dogmàtica o d'un credo abstracte, sinó de l'obediència meticulosa a un sistema normatiu revelat que regula fins al darrer detall de la vida quotidiana. El concepte islàmic de la <em>Sharia</em> (la via normativa) guarda una homologia funcional i conceptual extraordinària amb la <em>Halakhà</em> jueva: ambdues estructuren la pregària, la higiene, el dret civil, les relacions familiars i les pautes alimentàries estrictes (amb l'equivalent normatiu entre el concepte de carn *halal* i el sistema de caixer). Aquesta profunda "fraternitat jurídica i monoteista" va facilitar històricament que, sota el domini polític i militar de l'islam medieval —de manera culminant durant l'Edat d'Or jueva a l'Hispània islàmica d'Al-Andalús—, les comunitats jueves poguessin desenvolupar una de les èpoques més brillants de la seva història intel·lectual, filosòfica i científica, operant sota el reconeixement legal de l'estatut de <em>dhimmis</em> («pobles del Llibre») i assimilant amb naturalesa les categories especulatives del monoteisme islàmic més pur.</p>
+</section>
+
+<section id="s163" class="reveal">
+  <h2>11.6.3. El llegat en la filosofia i la cultura occidental</h2>
+
+  <p>Més enllà de la seva projecció directa i genealògica sobre les altres dues grans religions abrahamítiques, el judaisme ha exercit un paper constitutiu, estructurant i sovint subterrani en la configuració de la <strong>filosofia, la moral, la sensibilitat política i la cultura general d'Occident</strong>. Durant segles, la historiografia filosòfica eurocentrística va intentar contraposar i separar de manera artificial "l'esperit grec" (identificat amb la raó autònoma, la indagació científica, la democràcia i la filosofia especulativa) de "l'esperit hebreu" (reduït a la revelació dogmàtica, l'obediència cega a la llei i el fideisme religiós). Aquest binarisme esquemàtic i reduccionista ha estat cèlebrement criticat i desmuntat per pensadors de la talla d'Emmanuel Levinas i per crítics culturals com Erich Auerbach al seu clàssic estudi <em>Mimesis</em> (1946). L'anàlisi històrica, filològica i cultural contemporània demostra, ben al contrari, que la modernitat occidental és absolutament impensable sense la presència activa, la secularització i la reinterpretació constant de categories conceptuals que foren forjades originàriament en el si de la tradició jueva.</p>
+
+  <p>En primer lloc, cal subratllar la introducció d'una sacsejada conceptual de magnitud incalculable respecte als paràmetres del món antic grecoromà: **la linearitat i la direccionalitat progressiva de la història**. Mentre que la filosofia i el pensament del món antic clàssic concebien el temps de manera fonamentalment cíclica —una rotació perpètua i mecànica d'edicions còsmiques, edats daurades i catàstrofes recurrents segellades pel ritme immutable de la natura (el conegut concepte de l'etern retorn)—, el pensament bíblic i profètic va postular amb fermesa que el temps té un inici absolut (la creació lliure per part de Déu) i un horitzó final i orientat cap a una meta (la redempció o l'era messiànica), trobant-se a més travessat per esdeveniments històrics irrepetibles on la divinitat intervé directament (com l'Èxode o l'Aliança). Aquesta estructura temporal d'orientació lineal és el fonament directe i necessari sobre el qual s'alçarà posteriorment la noció moderna de <strong>progrés històric i emancipació social</strong>. Filòsofs de la història de la talla de Karl Löwith a <em>Meaning in History</em> (1949) o Jürgen Habermas en els seus treballs dedicats a les bases filosòfiques de la consciència moderna han demostrat amb rigor que les grans filosofies de la història pròpies de la Il·lustració europea (des de Voltaire fins a Condorcet) i el materialisme històric de Karl Marx no són sinó secularitzacions directes i estructurals de l'escatologia profètica jueva: la promesa salvífica d'un futur just i d'una humanitat alliberada de l'opressió estructural es manté intacta, però despullada del seu llenguatge teològic i transcendental originari.</p>
+
+  <p>En segon lloc, l'herència directa del profetisme bíblic constitueix un dels pilars indestructibles de la tradició crítica occidental. A diferència de les filosofies polítiques clàssiques gregues (com les de Plató o Aristòtil), que s'orientaven principalment a cercar l'ordre ideal, l'equilibri institucional i l'harmonia de la <em>polis</em> existent, els grans profetes d'Israel (Amós, Isaïes, Jeremies, Miquees) introdueixen una dimensió radicalment subversiva al cor del poder: **la justícia social com a mesura i estàndard absolut de la legitimitat de qualsevol ordre polític**. Per al pensament profètic jueu, cap estructura de poder estatal, cap monarquia i cap institució religiosa no pot situar-se mai per damunt de la llei moral i de l'exigència de justícia per als vulnerables. Si un Estat tolera sistemàticament l'explotació del pobre, la corrupció dels tribunals o l'opressió de l'estranger, aquest Estat està teològicament i moralment condemnat al fracàs i a la ruïna històrica, per molta fortalesa militar o esplendors econòmics que exhibeixi. Aquesta tradició de "crítica profètica" s'infiltra com una vena subterrània i vibrant a través de la història intel·lectual d'Occident, nodrint des dels moviments d'heretgia social medievals fins a les teologies modernes de l'alliberament i la formulació contemporània dels drets humans universals. Quan figures cabdals de la modernitat cívica, com el líder dels drets civils Martin Luther King Jr., invocaven apassionadament el torrent d'Amós («que brolli la justícia com a corrent d'aigua») en les seves marxes per la igualtat i la dignitat humana als Estats Units, no feien sinó reactivar de manera directa aquesta matriu ètica jueva mil·lenària.</p>
+
+  <p>En tercer lloc, la pràctica quotidiana de l'estudi rigorós (*limmud*) i de l'exegesi dialèctica constant pròpia del judaisme rabínic va generar a llarg termini una cultura altament alfabetitzada i focalitzada en el text, on la relació amb la veritat no s'establia mitjançant la submissió passiva a un dogma extern, sinó a través de l'argumentació personal, el dubte metòdic, l'anàlisi filològica i el diàleg escrit entre mestres i deixebles. Aquest hàbit hermenèutic col·lectiu va transformar profundament la subjectivitat humana cap a una intensa interioritat i una alta densitat verbal. Finalment, cal destacar que durant els segles XIX i XX, amb el procés històric de l'Emancipació i la sortida dels jueus dels espais tancats dels ghettos cap a la societat civil europea, es va desfermar un fenomen d'una fecunditat intel·lectual incalculable. Despullats en de molts casos de la pràctica religiosa tradicional però conservant l'energia crítica, l'hàbit dialèctic i la sensibilitat aguda per la justícia social pròpies de la seva herència cultural, una plèiade de pensadors jueus seculars es va situar de cop al centre mateix de les grans revolucions culturals i científiques de la modernitat occidental: Karl Marx va redefinir l'economia política i la crítica social secularitzant el messianisme i el clam profètic contra l'alienació; Sigmund Freud va erigir la psicoanàlisi en una cultura fortament marcada per l'exegesi textual, la recerca del sentit ocult darrere dels símptomes i la importància cabdal del trauma i de la memòria col·lectiva; Albert Einstein va reflectir una sensibilitat monoteista implícita en la seva recerca unificada de les lleis de l'univers; i Hannah Arendt va utilitzar les categories d'una formació rigorosa per analitzar amb lucidesa inigualable els mecanismes del totalitarisme i la fragilitat dels drets polítics moderns.</p>
+</section>
+
+<section id="s164" class="reveal">
+  <h2>11.6.4. El sionisme i la creació de l'Estat d'Israel: la transformació moderna de la identitat jueva</h2>
+
+  <p>La culminació política, territorial i existencial més important i traumàtica del judaisme contemporani és, sense cap mena de dubte, l'aparició del <strong>sionisme polític</strong> a finals del segle XIX i la conseqüent fundació de l'<strong>Estat d'Israel l'any 1948</strong>. Aquest procés no s'ha d'interpretar només com un esdeveniment geopolític circumstancial derivat de la descomposició dels grans imperis de l'Orient Mitjà i del trauma absolut i catastròfic de l'Holocaust (la Shoà), sinó com una <strong>mutació antropològica, cultural i teològica radical</strong> en la manera mateixa com el poble jueu es relaciona amb el seu destí col·lectiu, amb la història humana i amb el concepte tradicional de redempció escatològica.</p>
+
+  <p>Durant gairebé dos mil·lennis, el judaisme rabínic de la Diàspora havia mantingut una actitud de paciència espiritual i resignació històrica respecte al retorn a la terra d'Israel. Aquesta postura es basava fonamentalment en una interpretació de la llei talmúdica que prohibia explícitament al poble jueu "forçar el mur" o avançar-se als temps divins mitjançant la rebel·lió militar o l'acció política humana massiva. El retorn s'esperava com un acte sobrenatural i directe de la providència divina en l'anomenada era messiànica. El sionisme modern va trencar violentament amb aquest paradigma tradicional. Formulat sistemàticament per Theodor Herzl a la seva obra fonamental <em>Der Judenstaat</em> (L'Estat dels jueus, 1896) i precedit per les reflexions d'autors com Leon Pinsker a <em>Autoemancipation</em> (1882), el sionisme va suposar una <strong>secularització radical i conscient de l'esperança messiànica</strong>. Davant el fracàs estrepitós de l'emancipació europea per eradicar l'antisemitisme —que es va manifestar de manera sagnant en els *pogroms* de l'Imperi Rus i en el clima obertament xenòfob del cas Dreyfus a la Tercera República Francesa—, els pensadors del sionisme polític van argumentar amb contundència que la supervivència física i cultural dels jueus ja no podia continuar depenent de la protecció incerta d'altres nacions, de la bona voluntat dels poders hostils ni de la pasivitat espiritual. Els jueus havien de deixar d'esperar passivament un miracle i constituir-se urgentment com un subjecte polític modern, autònom i sobirà en el seu territori ancestral històric.</p>
+
+  <p>La irrupció i el ràpid creixement del moviment sionista van provocar una fractura intel·lectual profunda i permanent en el si del món jueu global, enfrontant tres grans sensibilitats ideològiques i teològiques que continuen modelant els debats contemporanis. En primer lloc, el <strong>sionisme secular i socialista</strong> (representat per les figures fundacionals del yixuv i de les primeres dècades de l'Estat d'Israel, com David Ben-Gurion) aspirava a crear un «nou jueu» (*ha-yehudi ha-hadash*): un subjecte productiu, llaurador, soldat i autònom, radicalment alliberat de allò que consideraven la «psicologia del ghetto» de la diàspora. Aquest corrent veia la tradició religiosa rabínica amb un profund escepticisme o, en el millor dels casos, com un element cultural passat que calia subordinar o instrumentalitzar al servei del projecte nacional col·lectiu i la construcció col·lectivista de la terra (visible en el fenomen dels *kibbutzim*). En segon lloc, l'<strong>antisionisme religiós tradicional</strong> va rebutjar frontalment el sionisme des del seu naixement, considerant-lo un moviment profundament herètic i secularitzant que pretenia usurpar les prerrogatives divines i substituir la redempció espiritual per un esforç polític purament humà. Aquesta posició fou defensada per sectors amplis de l'ortodòxia centreeuropea i es manté viva avui en dia en algunes comunitats hassídiques extremes (com el corrent de Satmar), que argumenten que qualsevol estat jueu establert per vies polítiques humanes abans de l'arribada real del Messies és una violació directa de la voluntat de Déu. En tercer lloc, el <strong>sionisme religiós</strong> —articulat teològicament per figures de la talla del rabí Abraham Isaac Kook, el primer rabí asquenazita principal del Mandat Britànic de Palestina— va realitzar una síntesi intel·lectual extraordinàriament potent i influent: va integrar el projecte nacional secular dins d'un marc estrictament místic i messiànic. Per a Kook, els pioners sionistes seculars no eren rebels contra la fe, sinó «instruments inconscients de la voluntat divina»; el seu treball material, agrícola i polític a la terra no era una ruptura amb el cel, sinó el primer estadi de la redempció divina en marxa (*atchalta de-ge'ulah*). Aquesta visió teològica ha evolucionat posteriorment, en el judaisme israelian contemporani, cap al messianisme polític, radical i territorialista dels moviments d'assentaments posteriors a la Guerra dels Sis Dies (1967), convertint la geografia de la terra en un absolut teològic innegociable.</p>
+
+  <p>La fundació de l'Estat d'Israel l'any 1948, seguida de les transformacions territorials i militars posteriors, va reconfigurar de manera irreversible la geopolítica del judaisme mundial. Si abans de la Segona Guerra Mundial el centre neuràlgic de la cultura, la llengua i la demografia jueves es trobava a l'Europa Central i Oriental, l'assassinat sistemàtic de sis milions de jueus a la Shoà va desplaçar aquest centre de gravetat cap a una nova polaritat bilateral: d'una banda, els Estats Units, que van albergar la diàspora més pròspera i influent de la història; de l'altra, l'Estat d'Israel, convertit en el refugi i el centre nacional del poble jueu. Aquest desplaçament ha generat allò que els sociòlegs Charles Liebman i Steven M. Cohen han descrit analíticament com els «dos mons del judaisme»: per a la gran majoria dels jueus israelians, la identitat es viu a través de la llengua (l'hebreu modern, un cas insòlit i únic a la història de la lingüística de resurrecció d'una llengua litúrgica com a idioma nacional viu), la cultura quotidiana, la ciutadania i la història col·lectiva en un entorn majoritàriament jueu, sovint al marge de la pràctica rabínica estricta; per a la diàspora nord-americana, en canvi, Israel s'ha convertit en un element central i simbòlic de la identitat emocional i política, tot i registrar tensions creixents derivades de les discrepàncies ideològiques respecte a la gestió del conflicte palestí, el monopoli de l'ortodòxia en el reconeixement civil i religiós dins d'Israel, i la naturalesa mateixa de la democràcia en un estat de caràcter nacional ètnic.</p>
+
+  <p>En darrer terme, el sionisme representa filosòficament la **negació absoluta de la teologia de la Diàspora**. Mentre que durant dos mil·lennis el judaisme rabínic havia fet de l'exili una condició espiritual i havia desvinculat la santedat de la possessió militar i territorial, el sionisme va postular que la normalitat existencial d'un poble exigeix imperativament un territori, un exèrcit, una llengua pròpia i una sobirania política institucionalitzada. Aquesta mutació continua generant un debat intel·lectual apassionant i dolorós dins del pensament jueu contemporani. Pensadors crucials com el filòsof francès Emmanuel Levinas o el literat George Steiner van expressar repetidament una profunda incomoditat amb la "normalització" del poble jueu com a Estat-nació convencional, defensant que la vocació més noble, universal i pròpia del judaisme històric era precisament la seva condició de <em>testimoni desterrat</em>, radicalment lliure de les temptacions, la coacció i les violències estructurals associades inevitablement al poder polític i militar terrenal. En contraposició a aquesta visió crítica i diaspòrica, la realitat irreversible de l'Estat d'Israel demostra de manera incontestable que el judaisme ha sabut transitar —amb totes les seves contradiccions, drames i ambicions— des de la "pàtria portàtil" dels llibres fins a la complexitat dura, conflictiva i ineludible de la política sobre la terra.</p>
+</section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+     11.7 METODOLOGIA
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s17" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">11.7</span>Metodologia per a l'estudi del judaisme</h1>
+  <p class="section-lead">Enfocaments crítics, perspectives sociològiques i exigències d'objectivitat acadèmica.</p>
+
+  <p class="drop-cap">L'estudi acadèmic del judaisme presenta reptes metodològics específics que el distingeixen d'altres camps d'investigació humanística. La combinació de factors —una tradició viva i en evolució, una historia marcada per l'antisemitisme i la violència, una forta càrrega ideològica en els debats sobre Israel/Palestina, i la tendència d'alguns estudiosos a projectar categories cristianes o occidentals sobre una tradició que les resisteix— exigeix un rigor metodológic i una consciència dels propis biaixos particularment aguditzats.</p>
+
+  <p>L'estudi del judaisme és un camp pluridisciplinari per definició. La filologia hebrea i aramaica, la critica literària, l'arqueologia, la historia, la sociologia, l'antropologia, la filosofia i la teologia hi convergeixen, i cap d'elles per si sola és suficient per comprendre la riquesa i la complexitat de la tradició. Jacob Neusner —l'estudiós que ha publicat més sobre el judaisme en el segle XX, amb més de 900 obres— va insistir repetidament que l'estudi del judaisme requereix el rigor de les ciències humanes sense la pretensió de reduir el fenomen religiós a les seves dimensions socials o psicològiques: la realitat teologica que la tradició experimenta com a autèntica és un objecte d'estudi legítim, no una il·lusió que cal desmitificar.</p>
+
+  <p>Al mateix temps, l'estudi rigorós del judaisme exigeix una distinció clara entre la perspectiva del creient —que llegeix els textos com a expressió de la voluntat divina i la seva vida com a resposta a una crida sobrenatural— i la perspectiva de l'investigador —que analitza els textos com a artefactes culturals i histories de les comunitats que els han produït. Aquestes dues perspectives no s'exclouen: molts dels millors estudiosos del judaisme han estat jueus profundament compromesos amb la tradició (Scholem, Heschel, Levinas, Boyarin). Però la confusió entre les dues perspectives —llegir com a creient quan cal analitzar com a investigador, o analitzar com a investigador quan cal escoltar com a testimoni— és la font de les distorsions més freqüents en aquest camp.</p>
+</section>
+
+<section id="s171" class="reveal">
+  <h2>11.7.1. Enfocament historicocrític: l'anàlisi de les fonts textuals en el seu context históric</h2>
+
+  <p>L'enfocament historicocrític aplicat a l'estudi del judaisme implica situar els textos —bíblics, rabínics, medievals o moderns— en el context históric, social i cultural de la seva producció; identificar les seves fonts, estrats de composició i processos redaccionals; analitzar com han estat transmesos, editats i transformats al llarg del temps; i comprendre com han funcionat en les comunitats que els han generat i rebut. Aquesta metodologia, que es va desenvolupar principalment en l'àmbit de l'exegesi bíblica protestant alemanya dels segles XVIII i XIX, ha estat aplicada progressivament a tots els corpus de la literatura jueva, des del Pentateuc fins al Talmud i la literatura cabalística.</p>
+
+  <h3>La crítica bíblica: de Wellhausen a la New Revised Documentary Hypothesis</h3>
+
+  <p>La crítica histórica de la Bíblia hebrea passa per diverses disciplines metodologies complementàries. La <strong>crítica de les fonts</strong> (<em>Quellenkritik</em>) identifica les tradicions literàries independents que han estat combinades en els textos actuals: la hipòtesi documental de Julius Wellhausen (<em>Prolegomena to the History of Israel</em>, 1878), que identificava quatre fonts literàries (J, E, D, P) en el Pentateuc, ha estat la base del debat durant més d'un segle. La <strong>crítica de les formes</strong> (<em>Formkritik</em>), desenvolupada per Hermann Gunkel, analitza els gèneres literaris (himne, lamentation, llegenda, llei casuística, llei apodíctica) i els seus contextos vitals originals (<em>Sitz im Leben</em>). La <strong>crítica de la redacció</strong> (<em>Redaktionskritik</em>) estudia com els editors o redactors finals han combinat i reinterpretat les tradicions anteriors per crear un conjunt teològicament coherent.</p>
+
+  <p>En les darreres dècades, el debat sobre la composició del Pentateuc s'ha intensificat. La hipòtesi documental clàssica ha estat desafiada per la <em>hipòtesi dels suplements</em> (que postula una obra base amplida successivament sense fonts paral·leles independents) i per la <em>hipòtesi dels fragments</em> (que nega l'existència de fonts extenses continues). Konrad Schmid (<em>Genesis and the Moses Story</em>, 2010) i Eckart Otto han proposat una cronologia tardana per a la composició de la majoria del Pentateuc, situant-la en gran mesura en el període exílic i post-exílic (ss. VI-V aC). Emanuel Tov, a <em>Textual Criticism of the Hebrew Bible</em> (3a ed., 2012), ha demostrat que els manuscrits del Mar Mort evidencien una pluralitat de versions textuals en circulació simultània al s. I aC, anterior a l'estabilització del text consonàntic masorètic.</p>
+
+  <h3>L'arqueologia com a interlocutora crítica</h3>
+
+  <p>La integració de les evidències arqueológiques en l'estudi de la historia d'Israel ha transformat radicalment el debat sobre la historicitat dels relats bíblics. Israel Finkelstein i Neil Asher Silberman, a <em>The Bible Unearthed</em> (2001) i a <em>David and Solomon</em> (2006), han argumentat que el registre material no confirma la narració bíblica de la conquesta de Canaan, del gran regne de David i Salomó ni de l'Èxode d'Egipte en els termes literals que presenta el text. Les descobertes de Khirbet Qeiyafa (des de 2007) i la relectura de les inscripcions de Tel Dan, Megiddo i Hazor continuen alimentant un debat en el qual la distància entre el «minimalisme» (que redueix la historicitat de la narració bíblica al mínim) i el «maximalisme» (que defensa una major correspondència entre text i realitat arqueológica) no s'ha tancat.</p>
+
+  <p>Per a l'estudi del judaisme post-bíblic, l'arqueologia ha aportat contribucions fonamentals: els Manuscrits del Mar Mort (descoberts a Qumran entre 1947 i 1956) han transformat la comprensió del judaisme del Segon Temple; les excavacions de sinagogues antigues a Galilea, Judea i la Diàspora han il·luminat la diversitat de la pràctica litúrgica; les inscripcions funeràries de la catacumba de la Via Torlonia a Roma i del Bet Shearim a Israel han revelat la vida quotidiana de les comunitats jueves de l'antiguitat tardana.</p>
+
+  <h3>La crítica histórica aplicada al Talmud i la literatura rabínica</h3>
+
+  <p>L'aplicació de la crítica histórica a la literatura rabínica és un camp relativament recent però de gran vitalitat. Jacob Neusner va pioner en l'aplicació sistemàtica dels mètodes de la crítica literaria al corpus talmúdic, argumentant que les tradicions atribuïdes als rabins de les primeres generacions no poden ser acceptades acríticament com a testimonis fidels de les seves opinions: han passat per processos de transmissió, edició i reformulació que cal identificar i analitzar. David Weiss Halivni ha analitzat la distinció entre les tradicions originals (<em>mekorot</em>) i la seva posterior elaboració editorial (<em>mesorot</em>), sostenint que els «Stammaim» anònims responsables de la forma definitiva del Talmud Babilònic van reelaborar les tradicions anteriors de manera molt més activa del que habitualment es reconeix. Christine Hayes, a <em>Between the Babylonian and Palestinian Talmuds</em> (1997), ha analitzat les diferències entre les dues versions del Talmud com a evidència de les condicions polítiques i culturals diverses en les quals van ser compilades.</p>
+</section>
+
+<section id="s172" class="reveal">
+  <h2>11.7.2. Perspectiva sociològica i antropològica: l'estudi del judaisme com a cultura viscuda</h2>
+
+  <p>L'estudi del judaisme com a cultura viscuda —no simplement com a cos de textos o com a sistema de creences— és un dels enfocaments més fecunds i metodológicament exigents de la investigació contemporània. La sociologia de la religió, l'antropologia del ritual i els estudis de la memòria cultural ofereixen instruments conceptuals per analitzar com les comunitats jueves construeixen, transmeten, negocien i transformen la seva identitat en contextos geogràfics, polítics i socials molt diversos.</p>
+
+  <h3>La sociologia clàssica i el judaisme</h3>
+
+  <p>Max Weber, a <em>Ancient Judaism</em> (1917-1919), va oferir la primera anàlisi sociológica sistemàtica del judaisme bíblic, interpretant-lo com un «judaisme paria» —una religió de grup marginat que havia desenvolupat una ètica de la compensació futura i una solidaritat interna excepcionals com a resposta a la seva posició d'exclusió social. La tesi de Weber ha estat criticada per la seva instrumentalització de categories antisemites i per la seva visió estàtica d'una tradició en realitat dinàmica, però el seu intent de situar el judaisme en el context de les estructures socials i econòmiques del seu temps continua sent metodologicament estimulant. Émile Durkheim, malgrat no dedicar obres específiques al judaisme, va proporcionar el marc conceptual per a l'anàlisi dels ritus com a mecanismes de cohesió col·lectiva i de reforç dels vincles comunitaris —un marc aplicat sistemàticament al judaisme per investigadors com Samuel Heilman a <em>Synagogue Life</em> (1976).</p>
+
+  <h3>Antropologia del ritual i etnografia jueva</h3>
+
+  <p>L'antropologia del ritual —Victor Turner, Clifford Geertz, Mary Douglas— ha proporcionat instruments fonamentals per a l'anàlisi de les pràctiques jueves. Turner va analitzar els ritus de pas com a estructures tripartides (separació-llindar-incorporació) que marquen i produeixen les transicions entre estadis vitals i socials: el seu model s'aplica directament a la Brit Milà, el Bar Mitzvà, el matrimoni i el dol en el judaisme. Mary Douglas, a <em>Purity and Danger</em> (1966), va analitzar les lleis d'alimentació jueves com a sistema de classificació taxonómica que construeix l'ordre simbòlic del món i delimita les fronteres de la identitat comunitària. Clifford Geertz, a <em>The Interpretation of Cultures</em> (1973), va proposar que les religions són «sistemes de símbols» que estableixen disposicions durades i estats anímics en els seus membres: el ritual no és simplement l'expressió d'una creença prèvia, sinó el mecanisme que la produeix i la manté.</p>
+
+  <p>L'etnografia de les comunitats jueves contemporànies ha revelat una diversitat de pràctiques i de significats atribuïts a la identitat jueva que desmenteix qualsevol definició essencialista. Samuel Heilman, a <em>Defenders of the Faith: Inside Ultra-Orthodox Jewry</em> (1992), ha ofert una descripció densa de la vida quotidiana en el judaisme ultraortodox. Susan Kahn, a <em>Reproducing Jews: A Cultural Account of Assisted Conception in Israel</em> (2000), ha analitzat com les noves tecnologies reproductives qüestionen i reconfiguren les categories de la judeïtat en Israel. Deborah Dash Moore, a <em>At Home in America: Second Generation New York Jews</em> (1981), ha explorat les cultures jueves urbanes americanes de la primera meitat del segle XX. Riv-Ellen Prell, a <em>Prayer and Community: The Havurah in American Judaism</em> (1989), ha estudiat els grups de pregaria informals que van emergir als anys setanta com a alternativa a la sinagoga institucional.</p>
+
+  <h3>Estudis de la memòria cultural</h3>
+
+  <p>Els estudis de la memòria cultural —associats principalment als noms de Jan Assmann i Aleida Assmann, i als seus predecessors Maurice Halbwachs i Paul Connerton— han proporcionat un dels marcs conceptuals més fecunds per a l'estudi del judaisme. Jan Assmann, a <em>Cultural Memory and Early Civilization</em> (2011), ha analitzat el calendari festiu jueu com el mecanisme institucional per excel·lència de la «memòria cultural»: la que permet a una comunitat mantenir viu el contacte amb el seu passat fundacional a través de la repetició ritual. Yosef Hayim Yerushalmi, a <em>Zakhor: Jewish History and Jewish Memory</em> (1982), va distingir entre la «memòria» jueva —que opera a través del ritual i la litúrgia— i la «historiografia» moderna —que opera a través de la recerca crítica de l'evidència— argumentant que aquestes dues formes de relació amb el passat no sols metodológicament sinó ontológicament diverses: el ritual <em>reactualitza</em> el passat; la historiografia el <em>reconstrueix</em>. La tensió entre les dues és un dels motius de fons de l'estudi contemporani del judaisme.</p>
+</section>
+
+<section id="s173" class="reveal">
+  <h2>11.7.3. Ètica i neutralitat acadèmica: evitar biaixos confessionals i anacronismes en l'estudi de les religions comparades</h2>
+
+  <p>L'estudi del judaisme exigeix una vigilància especial davant de diversos tipus de biaixos que han distorsionat la investigació al llarg de la seva historia i que continuen presents en formes més subtils en la investigació contemporània. La identificació i la gestió d'aquests biaixos no és una qüestió de «neutralitat» en sentit positivista —l'investigador sempre interpreta des d'una posició— sinó de <strong>reflexivitat metodológica</strong>: la consciència explícita de les pròpies premisses, limitacions i interessos, i la disposició a revisar-les quan les evidències ho exigeixen.</p>
+
+  <h3>Els biaixos principals en l'estudi del judaisme</h3>
+
+  <p>El primer i més perillós és el <strong>biaix antisemita</strong>, que pot presentar-se de maneres explícites —la caricatura del judaisme com a religió legalista, mercantilista o particularista— o en formes que es presenten com a «crítica objectiva» però que reprodueixen estereotips seculars. La tradició de l'<em>Adversus Iudaeos</em> cristiana, que llegeix el judaisme com a refús de la «veritat» cristiana i com a supervivència fòssil d'una etapa superada, ha impregnat la scholarship occidental molt més profundament del que sol reconèixer-se. L'obra col·lectiva <em>Anti-Judaism and the Gospels</em>, editada per William Farmer (1999), i la revisió crítica dels estudis paulins inaugurada per E.P. Sanders a <em>Paul and Palestinian Judaism</em> (1977) han documentat fins a quin punt les lectures distorsionades del judaisme del Segon Temple han determinat la interpretació del Nou Testament i, per rebotiment, la imatge académica del judaisme durant dècades.</p>
+
+  <p>El segon és el <strong>biaix confessional intern</strong>: la tendència —present tant en estudiosos jueus practicants com en textos produïts per institucions religioses— a presentar el judaisme en termes apologètics, idealitzats o excessivament unitaris, occultant les tensions, els conflictes i les posicions heterodoxes que formen part integral de la tradició. El judaisme és una tradició de debat: suavitzar el debat per presentar una façana harmoniosa és una forma de distorsió tan greu com l'hostilitat antisemita.</p>
+
+  <p>El tercer és el <strong>biaix anacrónic</strong>: la projecció de categories modernes —nació, ètnia, raça, religió, individu, ciutadania— sobre contextos premoderns en els quals tenien un significat radicalment diferent o simplement no existien. Parlar de la «religió» d'Israel en el sentit modern —com a esfera autónoma de l'activitat humana separada de la política, l'economia o la família— és un anacronisme que deforma la comprensió del judaisme bíblic i rabínic, per als quals la Torà abasta la totalitat de l'existència sense distingir entre el «religiós» i el «secular». Daniel Boyarin ha alertat repetidament contra la importació de categories cristianes —«ortodòxia», «heretgia», «religió», «raça»— en l'estudi del judaisme rabínic, categories que distorsionen la comprensió d'un sistema que funciona amb una lógica pròpia.</p>
+
+  <p>El quart és el <strong>biaix cristocèntric o supersessionista</strong>: llegir el judaisme com a «preparació» del cristianisme, com a «Antic Testament» que troba el seu compliment en el «Nou», o com a estadio inferior d'una evolució religiosa que s'hauria completat en la revelació cristiana. Aquesta perspectiva —que ha impregnat la scholarship cristiana des dels Pares de l'Església fins al segle XX— no sols és teologicament problemàtica sinó metodologicament inacceptable en un context d'estudi acadèmic plural. E.P. Sanders, a <em>Paul and Palestinian Judaism</em> (1977), va demostrar que la imatge del judaisme fariseu com a «religió de la llei» contrària a la «gràcia» cristiana era una construcció pejorativa sense base en les fonts primàries: el judaisme del Segon Temple era una religió de gràcia i salvació no menys que el primer cristianisme.</p>
+
+  <h3>La comparació religiosa: eina i perill</h3>
+
+  <p>Jonathan Z. Smith, a <em>Imagining Religion: From Babylon to Jonestown</em> (1982) i a <em>Drudgery Divine</em> (1990), va formular el principi metodológic fonamental per a tot l'estudi comparatiu de les religions: la comparació no és un descobriment de similituds «objectives» que existeixin al marge del marc teóric que les cerca, sinó una eina construïda per l'investigador amb finalitats heurístiques específiques. Comparar el messianisme jueu amb el messianisme cristià, o el concepte jueu d'Aliança amb els tractats de vassallatge hetites, és legítim i fecund sempre que es sigui explícit sobre els criteris de comparació, els límits del paral·lelisme i les diferències que la comparació tendeix a ocultar.</p>
+
+  <p>Aplicat a l'estudi del judaisme, el principi de Smith significa: ser explícit sobre quines categories s'utilitzen i d'on provenen; preferir sempre les categories natives —els termes que la tradició estudiada utilitza per descriure's a si mateixa— sobre les categories externes quan éstiguin disponibles; i estar disposats a revisar o abandonar les categories externes quan la realitat de la tradició estudiada les excedeixi o les contradigui. Al mateix temps, no es tracta de renunciar a la comparació sinó de practicar-la amb rigor i autoconsciència: el judaisme no existeix en el buit, sinó en constant interacció i comparació amb les tradicions que l'envolten —el politeisme cananeu, el zoroastrisme persa, l'hel·lenisme, l'Islam, el cristianisme, la modernitat secular— i comprendre-les com a interlocutors és essencial per comprendre la tradició jueva en la seva especificitat.</p>
+
+  <h3>L'investigador i la comunitat estudiada: qüestions d'ètica i posicionalitat</h3>
+
+  <p>L'estudi del judaisme planteja, finalment, qüestions d'ètica de la investigació que mereixen una reflexió explícita. La distinció entre l'investigador «intern» (el jueu que estudia la pròpia tradició) i l'investigador «extern» (el no-jueu que estudia una tradició aliena) és menys nítida del que sembla: ambdues posicions comporten avantatges i riscos específics. L'investigador intern té accés privilegiat a la dimensió viscuda de la tradició, però pot tenir dificultats per mantenir la distància analítica necessària. L'investigador extern pot mantenir la distància crítica, però pot importar categories alienes que distorsionen l'objecte d'estudi.</p>
+
+  <p>La investigació etnogràfica en comunitats jueves vives planteja qüestions específiques de consentiment informat, confidencialitat i responsabilitat envers la comunitat estudiada. Les comunitats jueves ultraortodoxes, en particular, han mostrat una resistència comprensible a ser objecte d'estudi per part d'investigadors externs, i l'ètica de la investigació exigeix una negociació transparent de les condicions d'accés i de presentació dels resultats. En darrer terme, l'estudi acadèmic del judaisme —com el de tota tradició religiosa viva— ha de ser capaç de rendir comptes tant davant la comunitat científica com davant la comunitat estudiada, sense que cap de les dues exigències anuli l'altra.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     11.8 BIBLIOGRAFIA
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s18" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">11.8</span>Bibliografia</h1>
+
+  <p class="section-lead">Fonts primàries, estudis clàssics i literatura acadèmica contemporània citada al llarg del capítol, organitzada per àmbits temàtics.</p>
+
+  <section id="s181">
+    <div class="bib-section">
+      <h3>11.8.1. Fonts primàries traduïdes: versions recomanades del Tanakh i seleccions del Talmud</h3>
+
+      <h4>Bíblia hebrea (Tanakh)</h4>
+      <p class="bib-entry"><em>Tanakh: The Holy Scriptures.</em> Philadelphia: Jewish Publication Society, 1985. [La traducció anglesa de referència acadèmica, produïda per un equip de filòlegs de la JPS sobre el text masorètic.]</p>
+      <p class="bib-entry"><em>The Jewish Study Bible.</em> Ed. Adele Berlin i Marc Zvi Brettler. Oxford: Oxford University Press, 2004. 2a ed. 2014. [La Bíblia hebrea amb comentaris acadèmics de referència; indispensable per a l'estudiant universitari.]</p>
+      <p class="bib-entry">Alter, Robert, trad. i ed. <em>The Hebrew Bible: A Translation with Commentary.</em> 3 vols. Nova York: W.W. Norton, 2019. [Traducció literaria magistral que recupera les qualitats estilístiques de l'hebreu bíblic.]</p>
+      <p class="bib-entry"><em>La Bíblia.</em> Trad. Armand Puig i Tàrrech et al. Barcelona: Claret / Associació Bíblica de Catalunya, 2019. [Primera traducció completa de la Bíblia al català des dels textos originals; inclou notes exegètiques.]</p>
+
+      <h4>Torà i Pentateuc</h4>
+      <p class="bib-entry">Friedman, Richard Elliott, trad. i ed. <em>The Torah: With Commentary.</em> San Francisco: HarperOne, 2001. [Traducció amb comentaris des de la perspectiva de la crítica de les fonts.]</p>
+      <p class="bib-entry">Plaut, W. Gunther, ed. <em>The Torah: A Modern Commentary.</em> Ed. rev. Nova York: Union for Reform Judaism, 2005. [Comentari de referència del judaisme reformista nord-americà.]</p>
+
+      <h4>Mixnà</h4>
+      <p class="bib-entry">Neusner, Jacob, trad. <em>The Mishnah: A New Translation.</em> New Haven: Yale University Press, 1988. [Traducció completa en anglès modern; l'única disponible fins fa poc; imprescindible.]</p>
+      <p class="bib-entry">Albeck, Hanoch, ed. <em>Shishah Sidrei Mishnah.</em> 6 vols. Jerusalem / Tel-Aviv: Bialik Institute / Dvir, 1952-1958. [Edició crítica de referència en hebreu amb introducció i comentari.]</p>
+
+      <h4>Talmud</h4>
+      <p class="bib-entry">Steinsaltz, Adin Even-Israel, ed. <em>The Koren Talmud Bavli.</em> 42 vols. Jerusalem: Koren Publishers, 2012-2019. [Edició bilingüe hebreu-arameu / anglès amb puntuació, traducció i comentari; la més accessible per a l'estudiant.]</p>
+      <p class="bib-entry">Schottenstein, Nosson, dir. <em>Talmud Bavli.</em> 73 vols. Brooklyn: Mesorah Publications (ArtScroll), 1990-2005. [L'edició bilingüe de referència en el món ortodox nord-americà.]</p>
+      <p class="bib-entry">Neusner, Jacob, trad. <em>The Talmud of the Land of Israel.</em> 35 vols. Chicago: University of Chicago Press, 1982-1994. [Única traducció completa del Talmud de Jerusalem a l'anglès.]</p>
+
+      <h4>Midraix i literatura rabínica</h4>
+      <p class="bib-entry">Freedman, H., i Maurice Simon, ed. <em>Midrash Rabbah.</em> 10 vols. Londres: Soncino Press, 1939. [Traducció anglesa de les principals col·leccions del Midraix Rabbà.]</p>
+      <p class="bib-entry">Bialik, Hayim Nahman, i Yehoshua Hana Ravnitzky, ed. <em>The Book of Legends / Sefer Ha-Aggadah.</em> Trad. William G. Braude. Nova York: Schocken Books, 1992. [Antologia temàtica de llegendes i narracions talmúdiques i midràshiques; un tresors d'accés.]</p>
+
+      <h4>Filosofia medieval</h4>
+      <p class="bib-entry">Maimonides (Moshè ben Maimon). <em>The Guide for the Perplexed.</em> Trad. Shlomo Pines. Chicago: University of Chicago Press, 1963. [La traducció académica de referència de la <em>Guia de Perplexos</em>.]</p>
+      <p class="bib-entry">Halevi, Iehudà. <em>The Kuzari: An Argument for the Faith of Israel.</em> Trad. Hartwig Hirschfeld. Nova York: Schocken Books, 1964.</p>
+      <p class="bib-entry">Saadia Gaon. <em>The Book of Beliefs and Opinions.</em> Trad. Samuel Rosenblatt. New Haven: Yale University Press, 1948.</p>
+
+      <h4>Càbala i mística</h4>
+      <p class="bib-entry"><em>The Zohar.</em> Trad. i ed. Daniel C. Matt. 12 vols. Stanford: Stanford University Press, 2004-2017. [La traducció académica completa del Zohar; un monument de l'erudició contemporània.]</p>
+    </div>
+  </section>
+
+  <section id="s182">
+    <div class="bib-section">
+      <h3>11.8.2. Obres de referència i estudis clàssics: historiadors i teòlegs clau</h3>
+
+      <h4>Historia d'Israel i dels orígens del judaisme</h4>
+      <p class="bib-entry">Finkelstein, Israel, i Neil Asher Silberman. <em>The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts.</em> Nova York: Free Press, 2001. [Revisió arqueológica fonamental de la narració bíblica.]</p>
+      <p class="bib-entry">Finkelstein, Israel, i Neil Asher Silberman. <em>David and Solomon: In Search of the Bible's Sacred Kings and the Roots of the Western Tradition.</em> Nova York: Free Press, 2006.</p>
+      <p class="bib-entry">Thompson, Thomas L. <em>The Historicity of the Patriarchal Narratives.</em> Berlín: De Gruyter, 1974; reimpr. Harrisburg: Trinity Press International, 2002.</p>
+      <p class="bib-entry">Van Seters, John. <em>Abraham in History and Tradition.</em> New Haven: Yale University Press, 1975.</p>
+      <p class="bib-entry">Armstrong, Karen. <em>A History of God: The 4,000-Year Quest of Judaism, Christianity and Islam.</em> Nova York: Alfred A. Knopf, 1993.</p>
+      <p class="bib-entry">Kaufmann, Yehezkel. <em>The Religion of Israel: From Its Beginnings to the Babylonian Exile.</em> Trad. Moshe Greenberg. Chicago: University of Chicago Press, 1960.</p>
+
+      <h4>Bíblia hebrea: crítica i hermenèutica</h4>
+      <p class="bib-entry">Wellhausen, Julius. <em>Prolegomena to the History of Israel.</em> Trad. J. Sutherland Black i Allan Menzies. Edimburg: Adam & Charles Black, 1885; reimpr. Atlanta: Scholars Press, 1994.</p>
+      <p class="bib-entry">Friedman, Richard Elliott. <em>Who Wrote the Bible?</em> Nova York: Summit Books, 1987; ed. rev. HarperOne, 1997.</p>
+      <p class="bib-entry">Kugel, James L. <em>The Bible As It Was.</em> Cambridge: Harvard University Press, 1997.</p>
+      <p class="bib-entry">Kugel, James L. <em>How to Read the Bible: A Guide to Scripture, Then and Now.</em> Nova York: Free Press, 2007.</p>
+      <p class="bib-entry">Tov, Emanuel. <em>Textual Criticism of the Hebrew Bible.</em> 3a ed. rev. Minneapolis: Fortress Press, 2012.</p>
+      <p class="bib-entry">Schmid, Konrad. <em>Genesis and the Moses Story: Israel's Dual Origins in the Hebrew Bible.</em> Trad. James D. Nogalski. Winona Lake: Eisenbrauns, 2010.</p>
+      <p class="bib-entry">Handelman, Susan A. <em>The Slayers of Moses: The Emergence of Rabbinic Interpretation in Modern Literary Theory.</em> Albany: SUNY Press, 1982.</p>
+      <p class="bib-entry">Brettler, Marc Zvi. <em>How to Read the Bible.</em> Philadelphia: Jewish Publication Society, 2005.</p>
+
+      <h4>Segon Temple, apocalíptica i judaisme hel·lenístic</h4>
+      <p class="bib-entry">Collins, John J. <em>The Apocalyptic Imagination: An Introduction to Jewish Apocalyptic Literature.</em> 2a ed. Grand Rapids: Eerdmans, 1998.</p>
+      <p class="bib-entry">Collins, John J. <em>Introduction to the Hebrew Bible.</em> Minneapolis: Fortress Press, 2004. 3a ed. 2018.</p>
+      <p class="bib-entry">Sanders, E.P. <em>Paul and Palestinian Judaism: A Comparison of Patterns of Religion.</em> Philadelphia: Fortress Press, 1977.</p>
+      <p class="bib-entry">Sanders, E.P. <em>Judaism: Practice and Belief, 63 BCE–66 CE.</em> Londres: SCM Press / Philadelphia: Trinity Press International, 1992.</p>
+      <p class="bib-entry">Cohen, Shaye J.D. <em>From the Maccabees to the Mishnah.</em> Philadelphia: Westminster Press, 1987. 3a ed. Louisville: Westminster John Knox, 2014.</p>
+      <p class="bib-entry">Hengel, Martin. <em>Judaism and Hellenism: Studies in their Encounter in Palestine during the Early Hellenistic Period.</em> 2 vols. Trad. John Bowden. Philadelphia: Fortress Press, 1974.</p>
+      <p class="bib-entry">Vermes, Geza. <em>The Dead Sea Scrolls in English.</em> 4a ed. rev. i ampl. Londres: Penguin, 1995.</p>
+      <p class="bib-entry">Boyarin, Daniel. <em>Border Lines: The Partition of Judaeo-Christianity.</em> Philadelphia: University of Pennsylvania Press, 2004.</p>
+      <p class="bib-entry">Dunn, James D.G. <em>The Parting of the Ways Between Christianity and Judaism.</em> Londres: SCM Press, 1991. 2a ed. 2006.</p>
+
+      <h4>Judaisme rabínic i Talmud</h4>
+      <p class="bib-entry">Neusner, Jacob. <em>Judaism: The Evidence of the Mishnah.</em> Chicago: University of Chicago Press, 1981.</p>
+      <p class="bib-entry">Halivni, David Weiss. <em>Midrash, Mishnah, and Gemara: The Jewish Predilection for Justified Law.</em> Cambridge: Harvard University Press, 1986.</p>
+      <p class="bib-entry">Hayes, Christine. <em>Between the Babylonian and Palestinian Talmuds: Accounting for Halakhic Difference in Selected Sugyot from Tractate Avodah Zarah.</em> Oxford: Oxford University Press, 1997.</p>
+      <p class="bib-entry">Boyarin, Daniel. <em>Intertextuality and the Reading of Midrash.</em> Bloomington: Indiana University Press, 1990.</p>
+
+      <h4>Teologia i filosofia jueva</h4>
+      <p class="bib-entry">Buber, Martin. <em>I and Thou.</em> Trad. Walter Kaufmann. Nova York: Scribner, 1970. [Traducció de referència; preferible a la de R.G. Smith de 1937.]</p>
+      <p class="bib-entry">Rosenzweig, Franz. <em>The Star of Redemption.</em> Trad. Barbara Galli. Madison: University of Wisconsin Press, 2005.</p>
+      <p class="bib-entry">Levinas, Emmanuel. <em>Totalité et Infini: Essai sur l'extériorité.</em> La Haia: Martinus Nijhoff, 1961. Trad. catalana: <em>Totalitat i Infinit.</em> Barcelona: Edicions 62, 1999.</p>
+      <p class="bib-entry">Levinas, Emmanuel. <em>Autrement qu'être ou au-delà de l'essence.</em> La Haia: Martinus Nijhoff, 1974.</p>
+      <p class="bib-entry">Heschel, Abraham Joshua. <em>The Prophets.</em> Nova York: Harper & Row, 1962; reimpr. Nova York: Perennial Classics, 2001.</p>
+      <p class="bib-entry">Heschel, Abraham Joshua. <em>The Sabbath: Its Meaning for Modern Man.</em> Nova York: Farrar, Straus and Giroux, 1951; reimpr. 2005.</p>
+      <p class="bib-entry">Soloveitchik, Joseph B. <em>Halakhic Man.</em> Trad. Lawrence Kaplan. Philadelphia: Jewish Publication Society, 1983.</p>
+      <p class="bib-entry">Fackenheim, Emil L. <em>To Mend the World: Foundations of Post-Holocaust Jewish Thought.</em> Nova York: Schocken Books, 1982; reimpr. Bloomington: Indiana University Press, 1994.</p>
+      <p class="bib-entry">Halbertal, Moshe. <em>People of the Book: Canon, Meaning, and Authority.</em> Cambridge: Harvard University Press, 1997.</p>
+      <p class="bib-entry">Fishbane, Michael. <em>Sacred Attunement: A Jewish Theology.</em> Chicago: University of Chicago Press, 2008.</p>
+
+      <h4>Mística i Càbala</h4>
+      <p class="bib-entry">Scholem, Gershom. <em>Major Trends in Jewish Mysticism.</em> Nova York: Schocken Books, 1941; ed. rev. 1954.</p>
+      <p class="bib-entry">Scholem, Gershom. <em>The Messianic Idea in Judaism and Other Essays on Jewish Spirituality.</em> Nova York: Schocken Books, 1971.</p>
+      <p class="bib-entry">Scholem, Gershom. <em>Sabbatai Sevi: The Mystical Messiah, 1626–1676.</em> Trad. R.J. Zwi Werblowsky. Princeton: Princeton University Press, 1973.</p>
+      <p class="bib-entry">Idel, Moshe. <em>Kabbalah: New Perspectives.</em> New Haven: Yale University Press, 1988.</p>
+      <p class="bib-entry">Taubes, Jacob. <em>The Political Theology of Paul.</em> Trad. Dana Hollander. Stanford: Stanford University Press, 2004.</p>
+
+      <h4>Mesianisme i escatologia</h4>
+      <p class="bib-entry">Walzer, Michael. <em>Exodus and Revolution.</em> Nova York: Basic Books, 1985.</p>
+      <p class="bib-entry">Benjamin, Walter. «Über den Begriff der Geschichte.» A: <em>Gesammelte Schriften</em>, vol. I.2. Frankfurt: Suhrkamp, 1974. Trad. castellana: «Tesis sobre el concepto de historia.» A: <em>Discursos interrumpidos I.</em> Madrid: Taurus, 1973.</p>
+
+      <h4>Diàspora, sinagoga i judaisme postbíblic</h4>
+      <p class="bib-entry">Levine, Lee I. <em>The Ancient Synagogue: The First Thousand Years.</em> New Haven: Yale University Press, 2000. 2a ed. 2005.</p>
+      <p class="bib-entry">Yerushalmi, Yosef Hayim. <em>Zakhor: Jewish History and Jewish Memory.</em> Seattle: University of Washington Press, 1982.</p>
+      <p class="bib-entry">Assmann, Jan. <em>Cultural Memory and Early Civilization: Writing, Remembrance, and Political Imagination.</em> Cambridge: Cambridge University Press, 2011.</p>
+      <p class="bib-entry">Assmann, Jan. <em>The Price of Monotheism.</em> Trad. Robert Savage. Stanford: Stanford University Press, 2010.</p>
+      <p class="bib-entry">Assmann, Jan. <em>Moses the Egyptian: The Memory of Egypt in Western Monotheism.</em> Cambridge: Harvard University Press, 1997.</p>
+    </div>
+  </section>
+
+  <section id="s183">
+    <div class="bib-section">
+      <h3>11.8.3. Manuals, estudis contemporanis i literatura acadèmica introductòria</h3>
+
+      <h4>Manuals generals i introduccions</h4>
+      <p class="bib-entry">De Lange, Nicholas, ed. <em>The Illustrated History of the Jewish People.</em> Nova York: Harcourt Brace, 1997.</p>
+      <p class="bib-entry">De Lange, Nicholas. <em>An Introduction to Judaism.</em> Cambridge: Cambridge University Press, 2000. 2a ed. 2010.</p>
+      <p class="bib-entry">Neusner, Jacob. <em>Judaism: The Basics.</em> Nova York: Routledge, 2006.</p>
+      <p class="bib-entry">Sacks, Jonathan. <em>A Letter in the Scroll: Understanding Our Jewish Identity and Exploring the Legacy of the World's Oldest Religion.</em> Nova York: Free Press, 2000.</p>
+      <p class="bib-entry">Sacks, Jonathan. <em>The Great Partnership: Science, Religion, and the Search for Meaning.</em> Nova York: Schocken Books, 2011.</p>
+      <p class="bib-entry">Jacobs, Louis. <em>A Jewish Theology.</em> Londres: Darton, Longman & Todd, 1973.</p>
+
+      <h4>Historia moderna del judaisme i dels jueus</h4>
+      <p class="bib-entry">Slezkine, Yuri. <em>The Jewish Century.</em> Princeton: Princeton University Press, 2004.</p>
+      <p class="bib-entry">Johnson, Paul. <em>A History of the Jews.</em> Nova York: Harper & Row, 1987. [Accessible i de gran abast; calen reserves metodológiques però és útil com a visió de conjunt.]</p>
+      <p class="bib-entry">Dash Moore, Deborah. <em>At Home in America: Second Generation New York Jews.</em> Nova York: Columbia University Press, 1981.</p>
+      <p class="bib-entry">Fishman, Sylvia Barack. <em>Jewish Life and American Culture.</em> Albany: SUNY Press, 2000.</p>
+      <p class="bib-entry">Liebman, Charles S., i Steven M. Cohen. <em>Two Worlds of Judaism: The Israeli and American Experiences.</em> New Haven: Yale University Press, 1990.</p>
+
+      <h4>Judaisme contemporani i els seus corrents</h4>
+      <p class="bib-entry">Kaplan, Mordecai M. <em>Judaism as a Civilization: Toward a Reconstruction of American-Jewish Life.</em> Nova York: Macmillan, 1934; reimpr. Philadelphia: Jewish Publication Society, 1981.</p>
+      <p class="bib-entry">Green, Arthur. <em>Radical Judaism: Rethinking God and Tradition.</em> New Haven: Yale University Press, 2010.</p>
+      <p class="bib-entry">Eisen, Arnold M. <em>The Chosen People in America: A Study in Jewish Religious Ideology.</em> Bloomington: Indiana University Press, 1983.</p>
+      <p class="bib-entry">Heilman, Samuel C. <em>Defenders of the Faith: Inside Ultra-Orthodox Jewry.</em> Nova York: Schocken Books, 1992.</p>
+      <p class="bib-entry">Heilman, Samuel C. <em>Synagogue Life: A Study in Symbolic Interaction.</em> Chicago: University of Chicago Press, 1976.</p>
+
+      <h4>Feminisme jueu i estudis de gènere</h4>
+      <p class="bib-entry">Plaskow, Judith. <em>Standing Again at Sinai: Judaism from a Feminist Perspective.</em> San Francisco: Harper & Row, 1990.</p>
+      <p class="bib-entry">Adler, Rachel. <em>Engendering Judaism: An Inclusive Theology and Ethics.</em> Philadelphia: Jewish Publication Society, 1998.</p>
+      <p class="bib-entry">Zornberg, Avivah Gottlieb. <em>Genesis: The Beginning of Desire.</em> Philadelphia: Jewish Publication Society, 1995.</p>
+      <p class="bib-entry">Zornberg, Avivah Gottlieb. <em>The Particulars of Rapture: Reflections on Exodus.</em> Nova York: Doubleday, 2001.</p>
+
+      <h4>Holocaust i teologia post-Holocaust</h4>
+      <p class="bib-entry">Wiesel, Elie. <em>La Nuit.</em> París: Les Éditions de Minuit, 1958. Trad. catalana: <em>La nit.</em> Barcelona: Proa, 2006.</p>
+      <p class="bib-entry">Berkovits, Eliezer. <em>Faith After the Holocaust.</em> Nova York: Ktav Publishing House, 1973.</p>
+      <p class="bib-entry">Greenberg, Irving. «Cloud of Smoke, Pillar of Fire: Judaism, Christianity, and Modernity after the Holocaust.» A: Eva Fleischner, ed., <em>Auschwitz: Beginning of a New Era?</em> Nova York: Ktav, 1977. [Article fonamental per a la teologia post-Holocaust.]</p>
+
+      <h4>Sociologia, antropologia i memòria cultural</h4>
+      <p class="bib-entry">Douglas, Mary. <em>Purity and Danger: An Analysis of Concepts of Pollution and Taboo.</em> Londres: Routledge & Kegan Paul, 1966.</p>
+      <p class="bib-entry">Kahn, Susan Martha. <em>Reproducing Jews: A Cultural Account of Assisted Conception in Israel.</em> Durham: Duke University Press, 2000.</p>
+      <p class="bib-entry">Prell, Riv-Ellen. <em>Prayer and Community: The Havurah in American Judaism.</em> Detroit: Wayne State University Press, 1989.</p>
+      <p class="bib-entry">Smith, Jonathan Z. <em>Imagining Religion: From Babylon to Jonestown.</em> Chicago: University of Chicago Press, 1982.</p>
+      <p class="bib-entry">Smith, Jonathan Z. <em>Drudgery Divine: On the Comparison of Early Christianities and the Religions of Late Antiquity.</em> Chicago: University of Chicago Press, 1990.</p>
+      <p class="bib-entry">Weber, Max. <em>Ancient Judaism.</em> Trad. Hans H. Gerth i Don Martindale. Glencoe: Free Press, 1952.</p>
+
+      <h4>Estudis crítics de les fonts bíbliques: complementaris</h4>
+      <p class="bib-entry">Bellah, Robert N. <em>Religion in Human Evolution: From the Paleolithic to the Axial Age.</em> Cambridge: Harvard University Press, 2011.</p>
+      <p class="bib-entry">Boyce, Mary. <em>Zoroastrians: Their Religious Beliefs and Practices.</em> Londres: Routledge & Kegan Paul, 1979.</p>
+      <p class="bib-entry">Davies, W.D. <em>The Gospel and the Land: Early Christianity and Jewish Territorial Doctrine.</em> Berkeley: University of California Press, 1974.</p>
+      <p class="bib-entry">Halevi, Iehudà. <em>The Kuzari.</em> Trad. Hartwig Hirschfeld. Nova York: Schocken Books, 1964.</p>
+      <p class="bib-entry">Herzfeld, Noreen L. <em>In Our Image: Artificial Intelligence and the Human Spirit.</em> Minneapolis: Fortress Press, 2002.</p>
+    </div>
+  </section>
+
+  <div class="rule-ornament">✦ ✦ ✦</div>
+
+  <p class="note"><strong>Nota sobre recursos en català i castellà:</strong> Per a una introducció sòlida en català, es recomana Sebastià Janeras, <em>Les religions del món</em> (Barcelona: Cruïlla, 2004), i els capítols corresponents de la <em>Gran Enciclopèdia Catalana</em>. En castellà, és útil Gonzalo Puente Ojea, <em>El evangelio de Marcos: del Cristo de la fe al Jesús de la historia</em> (Madrid: Siglo XXI, 1992) per al context del judaisme del Primer segle, i la <em>Historia de las religiones</em> de Mircea Eliade i Ioan P. Couliano (Madrid: Siruela, 1992) com a marc comparatiu general. La major part de la recerca académica de referència es publica en anglès, hebreu i alemany; el domini de l'anglès és indispensable per a qualsevol estudi seriós del judaisme.</p>
+
+  <p class="note"><strong>Nota sobre traduccions al català:</strong> Emmanuel Levinas, <em>Totalitat i Infinit</em> (Barcelona: Edicions 62, 1999; trad. Francesc Perenya); Walter Benjamin, <em>Discursos interrumpits</em> i <em>Tesis sobre la filosofia de la historia</em> (disponibles en castellà; en procés de traducció al català); Elie Wiesel, <em>La nit</em> (Barcelona: Proa, 2006; trad. Marta Pera Cucurell). La Bíblia completa en català és accessible a través de la traducció de l'Associació Bíblica de Catalunya (Claret, 2019).</p>
+</section>
+
+</main>
+
+<a href="#cover" class="back-top" id="backTop" aria-label="Tornar al principi" title="Tornar al principi">↑</a>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 14 — Els grans patrons mítics recurrents</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Estils Externs -->
+<link rel="stylesheet" href="estil.css">
+
+<!-- Estils propis del Capítol 14 -->
+<style>
+  :root { --sidebar-bg: #2B170D; } 
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+
+  /* ESTIL LLEUGER PER A L'ÍNDEX INTERN */
+  .index-section.editorial {
+    background: transparent !important;
+    border: none !important;
+    border-top: 2px solid var(--lapis);
+    border-bottom: 2px solid var(--lapis);
+    padding: 2.5rem 0 !important;
+    margin: 3rem 0 !important;
+    border-radius: 0 !important;
+  }
+  
+  .index-section.editorial h3 { display: none; }
+  
+  .index-section.editorial .index-list {
+    column-count: 1;
+    column-gap: 2rem;
+  }
+
+  @media (min-width: 600px) {
+    .index-section.editorial .index-list {
+      column-count: 2;
+    }
+  }
+
+  .index-section.editorial .index-list li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    padding-left: 0;
+    break-inside: avoid;
+  }
+  
+  .index-section.editorial .index-list li a {
+    color: var(--lapis);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .index-section.editorial .index-list li a:hover {
+    color: var(--gold);
+  }
+  
+  .index-section.editorial .index-list li::before {
+    content: none; 
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- HEADER -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title">Capítol 14 — Patrons Mítics</div>
+  <div style="width: 44px;"></div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">Capítol 14<br>Patrons Mítics</div>
+  </div>
+<nav>
+  <ul class="sidebar-nav">
+    <li><a href="#cover" class="lvl1">Portada</a></li>
+    <li><a href="#s141" class="lvl1">14.1 Introducció</a></li>
+    <li><a href="#s142" class="lvl1">14.2 Mites dels orígens</a></li>
+    <li><a href="#s143" class="lvl1">14.3 Destrucció i destí</a></li>
+    <li><a href="#s144" class="lvl1">14.4 Mites heroics</a></li>
+    <li><a href="#s145" class="lvl1">14.5 Món sagrat</a></li>
+    <li><a href="#s146" class="lvl1">14.6 Altres patrons</a></li>
+    <li><a href="#s147" class="lvl1">14.7 Conclusions</a></li>
+    <li><a href="#s148" class="lvl1">14.8 Bibliografia</a></li>
+    <li><a href="#annexos" class="lvl1">Annexos</a></li>
+  </ul>
+</nav>
+  </aside>
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-menorah">✡</div>
+  <div class="cover-ornament">Història de les Religions</div>
+  <div class="cover-rule"></div>
+  <h1 class="cover-chapter">Capítol 14</h1>
+  <div class="cover-subtitle">Els Grans Mites de la Humanitat — La recurrencia dels principals mites universals i els arquetips humans</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong>"Els grans patrons mítics no són relats del passat, sinó estructures vives que converteixen l'atzar històric en un ordre còsmic necessari; la seva recurrència no revela una veritat metafísica universal, sinó una exigència estructural de les societats humanes per mitologitzar el poder i legitimar la jerarquia social com un reflex de l'ordre natural."
+  </div>
+  <div class="cover-scroll">
+    <span>Llegir</span>
+    <div class="cover-scroll-line"></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="content">
+  
+  <!-- 14.1 INTRODUCCIÓ -->
+  <section id="s141" class="reveal">
+    <h1 class="chapter-title"><span class="ch-num">14.1</span>Introducció i fonaments teòrics</h1>
+    <div class="index-section editorial">
+      <ul class="index-list">
+        <li><a href="#sub1411">14.1.1 El concepte de mite</a></li>
+        <li><a href="#sub1412">14.1.2 La mitologia comparada</a></li>
+        <li><a href="#sub1413">14.1.3 La recurrència dels mites</a></li>
+        <li><a href="#sub1414">14.1.4 Les explicacions científiques actuals</a></li>
+        <li><a href="#sub1415">14.1.5 Criteris de classificació</a></li>
+      </ul>
+      </div>
+   <h2 id="sub1411">14.1.1 El concepte de mite</h2>
+   <h3 class="editorial-h3">1. Introducció analítica: El trencament del prejudici contemporani</h3>
+<p>L'estudi rigorós de la història de les religions exigeix, com a pas previ i ineludible, una purificació terminològica radical. En el llenguatge col·loquial i periodístic contemporani, la paraula «mite» ha sofert una devaluació semàntica extrema fins a esdevenir sinònim de ficció, mentida, falsedat o creença errònia superada per la racionalitat científica. Tanmateix, des de la perspectiva de la història de les religions i l'antropologia cultural, el mite no té cap relació amb la falsedat empírica; ben al contrari, constitueix la formulació més elevada de veritat per a les societats que el relaten. D'acord amb la terminologia establerta en aquesta obra, definim el mite com un <strong>relat simbòlic que explica l'origen d'una realitat, una institució, un poble o un fenomen mitjançant un llenguatge religiós</strong>.</p>
+<p>Aquesta definició, aparentment senzilla, amaga una complexitat estructural profunda. El mite no és una pre-ciència immadura que intentava explicar el cicle de la pluja o el moviment dels astres davant la manca d'instruments de mesura. Llegir la mitologia exclusivament com un intent fallit d'explicació física del cosmos és incórrer en un anacronisme etnocèntric. El mite és, en realitat, una eina hermenèutica i ontològica. És un relat que ordena el caos, que proporciona una arquitectura de sentit a l'existència humana i que tradueix l'angoixa davant l'atzar i la impermanència en un ordre còsmic necessari i justificat. El relat mític té un caràcter fundacional: no ens explica simplement <em>com</em> va sorgir el món físic, sinó <em>per què</em> el món humà, amb les seves regles, jerarquies, patiments i propòsits, és tal com és, justificant-lo mitjançant la intervenció de forces transcendents o divinitats.</p>
+<h3 class="editorial-h3">2. L'anàlisi de les fonts: La mutació filològica de <em>Mythos</em> a <em>Logos</em></h3>
+<p>Per comprendre com el concepte de mite va perdre el seu caràcter de veritat absoluta per passar a ser considerat una simple faula, és imprescindible acudir a les arrels filològiques del terme en l'Antiga Grècia, el bressol d'aquesta dicotomia conceptual. La paraula «mite» prové del grec <em>mŷthos</em> (μῦθος), que en l'època arcaica, concretament en els textos homèrics (segle VIII aC), significava, literalment, «paraula», «discurs profètic» o «relat veritable». En Homer, quan un rei o un guerrer pren la paraula a l'assemblea o formula un jurament, el que pronuncia és un <em>mŷthos</em>: un discurs carregat d'autoritat, performatiu, inqüestionable i sovint emparat per la voluntat dels déus.</p>
+<p>En aquell context primitiu, no existia una oposició entre <em>mŷthos</em> i veritat. Tanmateix, amb l'aparició de la filosofia presocràtica (segle VI aC) i, posteriorment, amb la sofística i el platonisme (segles V i IV aC), es produeix una fractura epistemològica decisiva: la separació entre <em>mŷthos</em> i <em>lógos</em> (λόγος). El terme <em>lógos</em>, que originalment compartia significat amb <em>mŷthos</em> com a "paraula" o "càlcul", va anar apropiant-se de la noció de discurs racional, argumentat, lògic i sotmès a la crítica o a la demostració. Filòsofs com Xenòfanes de Colofó van començar a criticar obertament els relats d'Homer i Hesíode per atribuir als déus comportaments amorals (robatoris, adulteris, enganys). En aquest procés dialèctic, el <em>lógos</em> es va erigir com el llenguatge de la veritat filosòfica, mentre que el <em>mŷthos</em> va ser progressivament arraconat i redefinit com a relat tradicional, inescrutable racionalment i, finalment, com a relat fantàstic o il·lusori, utilitzat per Plató més aviat com una eina al·legòrica (com en el Mite de la Caverna) que no pas com a expressió de veritat literal. Aquesta transformació filològica grega va marcar el destí de la paraula a Occident, condemnant el relat mític a la perifèria de la raó científica fins al segle XIX.</p>
+<h3 class="editorial-h3">3. Perspectives acadèmiques contrastades: Consens i debat</h3>
+<p>La recuperació del mite com a objecte d'estudi rigorós es va consolidar a principis del segle XX. Dins la història i la sociologia de les religions, existeixen diverses aproximacions teòriques fonamentals que, tot i divergir en el seu enfocament principal, conformen avui el consens acadèmic sobre la rellevància del relat mític.</p>
+<p>Des de la història de les religions, <strong>Mircea Eliade</strong> va establir una de les tesis més influents: el mite és fonamentalment la narrativa d'una creació sagrada. Per a Eliade, el mite relata sempre els esdeveniments que van tenir lloc <em>in illo tempore</em> (en aquell temps primordial), un temps atemporal on els déus o els avantpassats van fixar les estructures del món. Recitar o representar ritualment un mite no és recordar un passat mort, sinó actualitzar-lo, reactivar el seu poder sagrat per renovar el cosmos i abolir el terror de la història lineal.</p>
+<p>Des d'una perspectiva sociològica, autors com <strong>Émile Durkheim</strong> i l'antropòleg funcionalista Bronisław Malinowski (tot i treballar fora del panteó estrictament teològic) ens ofereixen un enfocament pragmàtic que és consensuat avui dia: el mite funciona com una "carta magna" (en paraules de Malinowski) per a la societat. Durkheim assenyala que la religió i els seus mites són el mitjà a través del qual la societat s'adora a si mateixa, reforçant la cohesió del grup. El mite proporciona la legitimitat transcendent necessària per mantenir les lleis, els tabús i les obligacions socials.</p>
+<p>Per la seva banda, <strong>Karen Armstrong</strong> incideix en la separació metodològica entre el mite (que proporciona sentit, context i valor, relacionant-se amb l'inconscient humà) i el logos (que proporciona control pràctic sobre el món, basant-se en la raó). Armstrong argumenta que la tragèdia del món modern ha estat intentar llegir el mite amb els criteris del logos (creacionisme literal, per exemple), destruint així la seva autèntica funció terapèutica i espiritual.</p>
+<p>Aquest consens sobre la funcionalitat i la centralitat del mite coexisteix, però, amb debats acadèmics vius sobre l'origen últim d'aquestes estructures narratives. Per l'antropòleg <strong>Claude Lévi-Strauss</strong> (estructuralisme), els mites no expliquen res històric, sinó que són mecanismes psicològics universals que la ment humana utilitza per resoldre, a nivell simbòlic, contradiccions insolubles a nivell pràctic (la vida i la mort, l'endogàmia i l'exogàmia, la natura i la cultura). Aquesta teoria purament estructural contrasta sovint amb enfocaments com el de l'egiptòleg <strong>Jan Assmann</strong>, que emmarca el mite dins de la <em>memòria cultural</em>, destacant que els mites pateixen modificacions i reescriptures constants al llarg del temps, funcionant com a "mnemohistòria": no importa com va succeir el passat empíricament, sinó com es recorda i s'utilitza en el present per forjar una identitat col·lectiva i justificar estructures de poder històriques concretes.</p>
+<h3 class="editorial-h3">4. Doble nivell de lectura: Ontologia i poder social</h3>
+<p>D'acord amb la tesi central d'aquest capítol i recolzant-nos en l'antropologia interpretativa de <strong>Clifford Geertz</strong>, el concepte de mite exigeix un doble nivell de lectura. A nivell íntim i existencial, el mite funciona com un sistema de símbols que estableix estats d'ànim i motivacions profundes en l'ésser humà. Salva a l'individu del caos ontològic (el buit, l'absurditat, la mort) donant-li un propòsit dins d'un drama còsmic establert per éssers superiors.</p>
+<p>Però hi ha una segona lectura sociopolítica que mai s'ha d'obviar. Tal com exigeixen els principis d'aquest projecte d'investigació històrica, no podem analitzar les religions sense observar-ne el context de poder. Els mites són, estructuralment, formidables eines de legitimitat i estratificació social. El relat mític converteix l'atzar històric (per exemple, que una determinada dinastia governi o que una casta tingui el monopoli de la terra) en un destí teològicament inevitable i sancionat divinament. Si els déus van separar el cel de la terra d'una manera concreta, si van crear el primer rei o van lliurar un codi sagrat al cim d'una muntanya, qualsevol rebel·lió contra l'ordre establert no és únicament un delicte civil, sinó un atemptat contra l'arquitectura mateixa de l'univers (un sacrilegi). Aquesta capacitat del mite per naturalitzar allò que és purament cultural i històric és el que el fa tan persistent i poderós al llarg de la història de les religions.</p>
+<h3 class="editorial-h3">5. Conclusió de la secció</h3>
+<p>En conclusió, en l'estudi de la història de les religions, el mite s'ha d'entendre i s'ha d'abordar no pas com una narració fantasiosa del passat pre-literari que s'ha de desmentir, sinó com un dispositiu simbòlic viu i operatiu. És el llenguatge a través del qual l'ésser humà ha processat la transcendència, ha construït la seva identitat col·lectiva, ha justificat les seves institucions i ha donat sentit a la seva presència al món. Aquesta naturalesa fonamental explica precisament la qüestió que abordarem als propers subapartats: el motiu pel qual trobem, repetidament, els mateixos patrons, arquetips i estructures mítiques arreu del globus, des de les primeres manifestacions del paleolític fins als grans textos canònics de l'antiguitat, travessant barreres culturals, temporals i geogràfiques.</p>
+
+    <h2 id="sub1412">14.1.2 La mitologia comparada</h2>
+    
+D'acord. Seguint el protocol de desplegament expansiu, redacto el subapartat 14.1.2 La mitologia comparada.
+Aquest text construeix el marc teòric indispensable per entendre per què podem comparar tradicions religioses molt allunyades en el temps i l'espai, advertint dels perills de fer-ho de manera superficial i establint quins criteris utilitzarem en la resta del capítol.
+Aquí tens la meva anàlisi. Llegeix-la i confirma'm si assoleix els estàndards requerits.
+<h2 id="sub1412">14.1.2 La mitologia comparada</h2>
+<h3 class="editorial-h3">1. Introducció analítica: La naturalesa i els riscos de la comparació</h3>
+<p>Dins del marc de la història de les religions, la mitologia comparada és la disciplina acadèmica que s'ocupa d'estudiar de manera sistemàtica i transversal els relats mítics de diferents cultures per identificar-ne les estructures compartides, les influències històriques i les divergències fonamentals. Ara bé, l'acte de comparar no és metodològicament neutre. Un dels errors més habituals en l'estudi de les religions —sovint present en la divulgació poc rigorosa— és el fenomen que l'acadèmia denomina «paral·lelomania»: l'obsessió per trobar semblances superficials entre dues tradicions i deduir-ne automàticament una influència directa o un origen comú.</p>
+<p>Com estableixen els principis fundacionals d'aquest projecte, les semblances entre religions no constitueixen, per si soles, una prova d'influència. L'autèntica mitologia comparada no busca igualar totes les religions sota el lema reduccionista de "totes diuen el mateix". Al contrari, la comparació rigorosa serveix precisament per il·luminar allò que és únic i específic de cada cultura. Quan observem com una societat concreta adopta un patró mític universal (com el del diluvi o el del déu que mor) i el transforma per adaptar-lo al seu context geogràfic, econòmic i polític, és quan comprenem l'autèntica evolució de les idees religioses. La comparació, doncs, és una eina de contrast hermenèutic, no un instrument d'homogeneïtzació.</p>
+<h3 class="editorial-h3">2. El context historiogràfic i filològic: Del segle XIX a l'acadèmia moderna</h3>
+<p>La mitologia comparada com a disciplina amb aspiracions científiques neix al segle XIX, impulsada profundament pels descobriments filològics. Quan autors com Friedrich Max Müller van demostrar la connexió lingüística entre el sànscrit, el grec, el llatí i les llengües germàniques (la família indoeuropea), es va intentar aplicar el mateix model a la mitologia. Müller, a través de la filologia, defensava que els mites compartits per aquests pobles eren, en origen, una "malaltia del llenguatge": antigues metàfores per descriure fenòmens naturals (especialment el sol i l'aurora) que, amb el pas dels segles, s'haurien literalitzat fins a convertir-se en relats sobre déus antropomòrfics.</p>
+<p>Aquesta primera etapa filològica va ser metodològicament pionera, però ràpidament va quedar desfasada. A finals del segle XIX i principis del XX, l'antropologia emergent (amb figures com James George Frazer i la seva monumental obra <em>La branca daurada</em>) va començar a recopilar mites de cultures no indoeuropees a escala global, demostrant que estructures mítiques similars apareixien en pobles sense cap connexió lingüística o històrica possible (des d'Amèrica fins a la Polinèsia). Aquest trencament del marc purament indoeuropeu va obligar l'acadèmia a abandonar la filologia com a única eina explicativa i va obrir la porta a aproximacions històriques, sociològiques i psicològiques molt més complexes.</p>
+<h3 class="editorial-h3">3. Perspectives acadèmiques contrastades: Difusió, estructura i arquetip</h3>
+<p>Un cop constatat que societats aïllades produeixen relats mítics extremadament similars (caos primordial, arbres del món, herois salvadors), la mitologia comparada s'enfronta al seu gran debat teòric: com expliquem aquesta recurrència? Actualment, la comunitat acadèmica divideix les seves explicacions en dos grans blocs, que no són excloents sinó complementaris segons el cas d'estudi.</p>
+<p>D'una banda, trobem la <strong>hipòtesi difusionista</strong>, defensada per les escoles estrictament historicistes. Aquesta perspectiva sosté que determinats mites van ser creats en un bressol cultural específic (per exemple, Mesopotàmia) i, a través de migracions, rutes comercials o conquestes militars, es van anar transmetent i adaptant cap a altres regions (com la influència babilònica en els textos bíblics o en la mitologia grega). El difusionisme requereix proves tangibles: com assenyala la metodologia d'aquesta obra, qualsevol afirmació d'influència cultural exigeix coherència cronològica, viabilitat geogràfica i un rastre documental o arqueològic.</p>
+<p>D'altra banda, trobem les tesis basades en el <strong>desenvolupament independent o poligenisme</strong>. Com expliquem l'existència de mites piramidals o diluvians en cultures precolombines sense cap contacte possible amb el Pròxim Orient antic? Aquí entren en joc dues grans perspectives teòriques. La primera és l'enfocament antropològic-estructuralista, liderat per <strong>Claude Lévi-Strauss</strong>, que postula que el cervell humà opera sota les mateixes estructures lògiques (les categories d'oposició binària: cru/cuit, vida/mort) arreu del món. Per tant, davant dels mateixos reptes ambientals i existencials, la ment humana produeix independentment solucions mítiques idèntiques en la seva estructura profunda. La segona perspectiva, pertanyent a la psicologia analítica de Carl G. Jung, formula la hipòtesi dels "arquetips" de l'inconscient col·lectiu; si bé aquesta tesi va tenir un èxit literari innegable de la mà de deixebles com Joseph Campbell, avui dia l'acadèmia historigràfica la considera una teoria hermenèutica i psicològica, però no una eina de validació històrica, ja que essencialitza els relats i els desposseeix del seu context socioeconòmic.</p>
+<p>Com a punt d'equilibri, <strong>Mircea Eliade</strong> aporta l'enfocament de la fenomenologia de la religió. Per Eliade, els patrons compartits s'expliquen perquè l'ésser humà, independentment de la seva cultura, experimenta la condició humana (la gravetat, l'angoixa, els cicles de la natura, la verticalitat del cel, el pes de la mort) d'una manera biològicament i ontològicament anàloga, i per tant "descobreix" el món sagrat a través dels mateixos simbolismes essencials (l'aigua sempre purifica i dissol, la muntanya sempre eleva i acosta al cel).</p>
+<h3 class="editorial-h3">4. Doble nivell de lectura: L'etnocentrisme metodològic</h3>
+<p>L'exercici de la mitologia comparada comporta un risc metodològic profund del qual l'historiador ha de ser conscient: el biaix etnocèntric. Tradicionalment, la cultura occidental ha utilitzat categories de pensament heretades de la filosofia grega i dels monoteismes abrahàmics (concepcions lineals del temps, dicotomies estrictes entre el Bé i el Mal absoluts) com a vara de mesurar universal. Això ha provocat que es forcés la interpretació de mites asiàtics, africans o amerindis per fer-los encaixar en categories alienes.</p>
+<p>Seguint l'antropòleg <strong>Clifford Geertz</strong>, és imprescindible distingir entre la perspectiva <em>etic</em> (l'anàlisi de l'investigador extern que busca patrons globals) i la perspectiva <em>emic</em> (el significat que els propis practicants donen al seu relat). Un mite no es pot buidar de la seva funció cultural local només per satisfer una taula comparativa de motius universals. A nivell històric i sociològic, una semblança formal (dos déus creadors, per exemple) sovint amaga funcions socials completament antagòniques en dues cultures diferents. La metodologia rigorosa exigeix no mutilar el context del relat en favor de l'espectacularitat de la comparació.</p>
+<h3 class="editorial-h3">5. Conclusió de la secció</h3>
+<p>En definitiva, la mitologia comparada contemporània ha deixat de ser una cerca romàntica d'una hipotètica "religió primordial única" o una caça de paral·lelismes descontextualitzats, per esdevenir un instrument historiogràfic crític. Aquest marc metodològic és precisament el que s'aplicarà al llarg d'aquest capítol: analitzarem l'origen, l'evolució i la transmissió dels grans relats mítics combinant, en tot moment, la recerca de les estructures compartides per la humanitat (desenvolupament independent per condició humana) amb el rastreig rigorós de les transferències culturals verificables històricament (difusionisme cronològic). Comprendre per què els mites es repeteixen exigeix analitzar-ne tant l'arquitectura mental com la història material.</p>
+
+<h2 id="sub1413">14.1.3 La recurrència dels mites</h2>
+<h3 class="editorial-h3">1. Introducció analítica: El fenomen de la repetició universal</h3>
+<p>Un dels descobriments més trasbalsadors de la història de les religions i de l'antropologia cultural és la constatació empírica de la recurrència mítica. Independentment del grau de desenvolupament tecnològic, de l'aïllament geogràfic o de l'època històrica, les societats humanes produeixen conjunts de relats que presenten unes similituds estructurals i temàtiques sorprenents. Des de les estepes siberianes fins a la selva amazònica, trobem narracions sobre aigües primordials, grans diluvis purificadors, herois que baixen a l'inframón, déus que moren i ressusciten amb els cicles agrícoles, o germans enfrontats on un assassina l'altre. Aquesta repetició constant no pot ser despatxada com una simple casualitat estadística; exigeix una anàlisi rigorosa per comprendre per què l'imaginari humà gravita invariablement cap als mateixos nuclis narratius.</p>
+<p>La recurrència mítica posa sobre la taula un problema fonamental de l'estudi històric: la tensió entre el particularisme cultural (cada societat és única i els seus relats són producte del seu context específic) i l'universalisme humà (hi ha constants que travessen tota l'espècie). El fet que l'estructura profunda d'un relat sobre l'origen de la mort o el robatori del foc es repeteixi en tradicions inconnexes indica que el mite respon a exigències i angoixes que són inherents a la condició humana mateixa, operant com a respostes estandarditzades davant l'experiència de la finitud, el dolor i el misteri del cosmos.</p>
+<h3 class="editorial-h3">2. L'anàlisi de les fonts: La catalogació del folklore i el mite</h3>
+<p>Per poder afirmar de manera científica i no merament intuïtiva que els mites es repeteixen, l'acadèmia va haver de desenvolupar eines de catalogació massiva. A principis del segle XX, el folklorista finlandès Antti Aarne i, posteriorment, l'estatunidenc Stith Thompson van crear un sistema de classificació exhaustiu conegut actualment com l'Índex Aarne-Thompson-Uther (ATU) i el <em>Motif-Index of Folk-Literature</em>. Tot i que originàriament van ser dissenyats per a l'estudi de contes populars i folklore, la història de les religions els va adaptar ràpidament per identificar i aïllar els "motius" (les unitats narratives més petites que formen un relat) presents en les mitologies d'arreu del món.</p>
+<p>Aquesta catalogació va permetre als investigadors desglossar els mites complexos en els seus components bàsics, evidenciant empíricament la recurrència. Per exemple, el relat d'una creació a partir de les restes d'un monstre o un déu primigeni esmicolat es documenta amb la mateixa precisió taxonòmica en el poema babilònic de l'<em>Enuma Elish</em> (Tiamat), en la mitologia nòrdica (el gegant Ymir) i en tradicions mesoamericanes (Cipactli). Aquesta sistematització documental és la base empírica que impedeix que la comparació caigui en el terreny de les simples suposicions romàntiques.</p>
+<h3 class="editorial-h3">3. Perspectives acadèmiques contrastades: El debat sobre l'origen comú</h3>
+<p>Com la història de les religions avalua aquesta sorprenent recurrència? Actualment, el consens metodològic integra diverses perspectives segons l'abast de la comparació, defugint de solucions dogmàtiques o unilaterals. L'acadèmia moderna rebutja frontalment certes teories esotèriques del segle XIX i XX (com el tradicionalisme de René Guénon) que postulen l'existència d'una autèntica revelació primordial o d'una "Tradició Primigènia" revelada a la humanitat que posteriorment es va fragmentar. Aquestes teories, mancades de suport arqueològic i filològic, són apriorismes metafísics, no història.</p>
+<p>Des d'un enfocament estrictament acadèmic, historiadors de les religions com <strong>Bruce Lincoln</strong> o <strong>Jonathan Z. Smith</strong> han matisat les tesis clàssiques de Mircea Eliade. Mentre que Eliade veia en la recurrència una resposta universal davant el "sagrat", l'escola crítica contemporània adverteix que la recurrència a vegades és una il·lusió òptica produïda pel mateix investigador. Smith argumenta cèlebrement que el "mite" com a categoria universal és una construcció acadèmica; agafem relats enormement diferents, els desposseïm de tot allò que els fa incòmodes o inclassificables, ens fixem només en el que s'assembla, i concloem triomfalment que "són iguals". Per tant, avui dia, la disciplina reconeix que existeixen patrons estructurals reals (vinculats al desenvolupament biològic i cognitiu humà), però exigeix analitzar les diferències amb el mateix rigor que les similituds.</p>
+<h3 class="editorial-h3">4. Doble nivell de lectura: Constants biològiques i models de dominació</h3>
+<p>Si busquem el perquè profund d'aquesta repetició de motius, hi ha dos estrats explicatius ineludibles. A nivell existencial, els mites es repeteixen perquè el maquinari biològic de l'ésser humà és idèntic en totes les latituds, així com els seus límits ineludibles: naixem d'una mare biològica, necessitem menjar, experimentem el cicle dia/nit, la successió d'estacions, el creixement, la malaltia i, finalment, la mort biològica impredictible i aterrida. Aquests vectors generen invariablement mites sobre les mares fertilitzadores (Terra), els pares celestials protectors (Cel), herois que vencen el caos fosc, i explicacions sobre l'origen i el propòsit de la mort per fer-la assumible.</p>
+<p>Però hi ha una segona capa històrica que explica la recurrència de mites menys "naturals" i més polítics: totes les civilitzacions complexes (mesopotàmica, xinesa, egípcia, andina, mesoamericana) han experimentat necessitats idèntiques d'estratificació i dominació social (agricultura extensiva, exèrcits, acumulació d'excedents, naixement de l'Estat). Així, sorgeixen repetidament mites que justifiquen el poder reial com una delegació directa dels déus, mites de pobles escollits i mites que divideixen la humanitat en castes sorgides de diferents parts d'un ésser primordial. El patró es repeteix no perquè hi hagi un accés místic a una veritat superior, sinó perquè els reptes organitzatius de l'Estat antic i la necessitat ideològica de justificar la desigualtat social exigeixen respostes mitològiques pràcticament idèntiques.</p>
+<h3 class="editorial-h3">5. Conclusió de la secció</h3>
+<p>En síntesi, la recurrència dels mites no és el ressò esmorteït d'una veritat perduda a l'alba dels temps, ni tampoc la mera còpia d'uns pobles a uns altres. És el resultat inevitable d'una mateixa espècie enfrontant-se als mateixos abismes existencials i als mateixos reptes d'articulació social. Els patrons mítics són solucions repetides a problemes repetits, siguin aquests el buit de sentit i la por a la mort, o bé la necessitat de legitimar un rei i mantenir cohesionada la tribu. Aquesta comprensió ens portarà, precisament, al següent apartat: com l'actual biologia i la ciència cognitiva expliquen els mecanismes concrets a través dels quals el nostre cervell crea, reté i transmet aquests relats arquetípics.</p>
+<h2 id="sub1414">14.1.4 Les explicacions científiques actuals</h2>
+<h3 class="editorial-h3">1. Introducció analítica: L'aportació de les ciències cognitives</h3>
+<p>Al llarg del segle XX, l'estudi de la mitologia va estar dominat per les humanitats: la filologia, la filosofia, la història i la sociologia aportaven el gruix de la recerca. No obstant això, des de finals del segle XX i al llarg del segle XXI, s'ha produït una autèntica revolució epistemològica amb la irrupció de la Ciència Cognitiva de la Religió (CSR, per les seves sigles en anglès) i la biologia evolutiva. Per primera vegada, no només es pregunta què significa un mite o com es va difondre històricament, sinó per què el cervell d'<em>Homo sapiens</em> està biològicament preconfigurat per generar creences sobrenaturals i relats mítics estructurats de manera pràcticament idèntica a tot arreu.</p>
+<p>Aquestes aproximacions no busquen reduir l'experiència religiosa o mítica a una simple reacció química neuronal, eliminant-ne el valor cultural. L'objectiu de l'estudi científic contemporani del mite és desxifrar quins avantatges evolutius va tenir la creació d'aquests relats o, alternativament, entendre'ls com un subproducte de les capacitats cognitives que van permetre a la nostra espècie sobreviure en el Plistocè. En el rigorós estudi de la història de les religions, ja no es pot abordar el naixement del mite sense atendre a l'arquitectura evolutiva de la ment humana que el pensa, l'emmagatzema i el transmet.</p>
+<h3 class="editorial-h3">2. L'anàlisi de les fonts: L'HADD i els conceptes mínimament contraintuïtius</h3>
+<p>Dins d'aquest paradigma modern, destaquen investigadors com <strong>Pascal Boyer</strong> (autor del llibre fundacional <em>Religion Explained</em>), Justin L. Barrett i Scott Atran, aportacions fonamentals que s'han integrat com a autors de referència en la nostra metodologia. Segons la CSR, l'ésser humà està dotat d'un "Dispositiu de Detecció d'Agència Hiperactiva" (conegut com a HADD). En l'entorn ancestral, era evolutivament més rendible assumir que el soroll rere uns matolls era causat per un agent intencional (un depredador o un enemic) i fugir per precaució (fals positiu), que no pas assumir que era només el vent i ser devorat (fals negatiu). Aquest maquinari mental de supervivència ens fa propensos a projectar intencionalitat i consciència sobre els fenòmens naturals inanimats: així neix l'animisme i les primeres personificacions mítiques, on una tempesta, un riu o una malaltia passen a ser "esperits" o "déus" amb voluntat pròpia.</p>
+<p>Més endavant, Boyer demostra que per a què un relat mític tingui èxit i es transmeti massivament per memòria oral i sobrevisqui a través de les generacions, ha de posseir el que ell anomena "conceptes mínimament contraintuïtius" (MCI). Si un relat només explica coses naturals (un home caça un cérvol), no genera prou interès ni es memoritza; si és massa abstracte o aliè a les lleis de la física (teologia sistemàtica extremadament complexa), el cervell no el pot retenir. El mite perfecte és aquell on tot segueix les regles naturals excepte un o dos detalls violats (un arbre que parla, un déu amb forma d'home que travessa parets, un heroi que mor però torna a la vida). Aquests conceptes trenquen lleugerament les nostres expectatives ontològiques i assoleixen una adhesió i memorització òptima en el cervell humà.</p>
+<h3 class="editorial-h3">3. Perspectives acadèmiques contrastades: Adaptació o Subproducte?</h3>
+<p>El debat central dins d'aquesta nova branca científica se situa entre dos corrents principals respecte a la funció del relat mític religiós: és el mite una adaptació evolutiva o un "spandrel" (subproducte evolutiu)?</p>
+<p>Els adaptacionistes, alineats d'alguna manera amb la clàssica teoria sociològica de cohesió de <strong>Max Weber</strong> i <strong>Émile Durkheim</strong>, sostenen que creure en déus, en mites de creació comuns i en un destí compartit va proporcionar un avantatge evolutiu immens. Segons autors com David Sloan Wilson, les tribus d'homínids que compartien relats sagrats col·laboraven millor, es sacrificaven els uns pels altres amb més eficàcia i tenien índexs de supervivència superiors a aquells grups fragmentats sense un mite cohesionador. Els déus i els mites funcionen, en aquesta visió, com el pegament social que permet la cooperació a gran escala d'estranys.</p>
+<p>En el bàndol contrari, la teoria del subproducte (defensada pel mateix Boyer i Richard Dawkins, tot i els diferents matisos antireligiosos d'aquest últim, no adoptats per la disciplina històrica rigorosa) argumenta que la religió i el mite no van evolucionar perquè fossin útils directament. Són simplement el "dany col·lateral" de la nostra intel·ligència, el resultat que el cervell humà posseeixi teoria de la ment, reconeixement de patrons i memòria a llarg termini. Igual que l'evolució no ens va dissenyar per apreciar la música o resoldre equacions diferencials (són subproductes del llenguatge i el pensament abstracte), la mitologia és l'art narratiu generat espontàniament pel nostre excés de potència cognitiva i la nostra necessitat inherent d'establir relacions causa-efecte.</p>
+<h3 class="editorial-h3">4. Doble nivell de lectura: Neurologia i modes de religiositat</h3>
+<p>Integrar aquestes explicacions científiques en la història requereix observar com aquest hardware biològic s'articula socialment, tal com exposa el teòric <strong>Harvey Whitehouse</strong> amb la seva influent teoria dels "modes de religiositat". Segons Whitehouse, la manera com el cervell emmagatzema records i relats dona lloc a dos tipus de ritus i mites en la història humana: el mode imagístic i el mode doctrinal.</p>
+<p>En societats petites o tribals, els relats i els coneixements mítics es transmeten mitjançant el *mode imagístic*: rituals extremadament intensos, infreqüents i d'alta intensitat emocional (ritus d'iniciació, patiment, èxtasi xamànic) que graven els mites a la "memòria episòdica" (records autobiogràfics de fort impacte). Amb l'arribada de les grans civilitzacions agrícoles descrites a la nostra Cronologia de Referència, la transmissió mítica canvia al *mode doctrinal*: la religió necessita organitzar milers de persones. Es substitueix l'èxtasi per l'aprenentatge repetitiu de textos dogmàtics, codis i sermons constants, utilitzant la "memòria semàntica" del cervell (la que emmagatzema fets i regles generals). Així veiem com l'arquitectura neurològica explica directament el pas dels cultes mistèrics a les religions dogmàtiques mundials.</p>
+<h3 class="editorial-h3">5. Conclusió de la secció</h3>
+<p>Les explicacions científiques contemporànies no suposen una desacreditació o desmitificació condescendent del relat religiós; per contra, afegeixen una fonamentació empírica sòlida a l'estudi de la religió comparada. Sabem ara que la ment humana no és una pissarra en blanc, sinó que està esbiaixada sistemàticament per generar i donar credibilitat a entitats invisibles, a l'ordre intencional i als equilibris còsmics. Entendre com l'evolució cognitiva ens fa permeables als relats de déus i herois és el pas final que ens permet abordar amb precisió i metodologia la immensa biblioteca d'històries que constitueix el patrimoni de la humanitat, establint així un marc fiable per classificar-los, tasca que emprendrem en el pròxim apartat.</p>
+<h2 id="sub1415">14.1.5 Criteris de classificació dels patrons mítics</h2>
+<h3 class="editorial-h3">1. Introducció analítica: L'arquitectura tipològica de la mitologia</h3>
+<p>Enfrontats a la immensitat inabastable de les tradicions mitològiques del món documentades des de la revolució neolítica fins a l'actualitat, el repte historiogràfic fonamental consisteix a organitzar aquesta massa de relats en una tipologia operativa. Per poder estudiar de manera coherent com els mites evolucionen, es transformen o es transmeten (objectiu fundacional establert al Manifest d'aquest projecte), resulta imprescindible establir uns criteris de classificació clars. Una taxonomia rigorosa no és un simple catàleg, sinó una eina hermenèutica: classificar adequadament un mite permet il·luminar-ne la funció original i situar-lo correctament dins la xarxa d'influències d'aquella tradició religiosa.</p>
+<p>Amb tot, la classificació temàtica és un recurs exclusivament metodològic. Un relat no pertany mai a una sola categoria de manera pura, ja que, a l'interior de la cosmovisió de les cultures que els produeixen, els mites es presenten com un contínuum orgànic. Tot i així, basant-nos en el consens acadèmic contemporani i en les categories estructurals definides al Glossari del projecte, organitzarem els grans patrons recurrents en quatre àrees d'investigació temàtica que guiaran la resta d'aquest capítol: orígens (cosmogonies i antropogonies), destrucció i destí (escatologia), actes heroics (soteriologia i figures mediadores), i la sagralització de l'espai (geografia sagrada i eixos del món).</p>
+<h3 class="editorial-h3">2. L'anàlisi de les fonts: De l'erudició decimonònica a la taxonomia moderna</h3>
+<p>Els primers intents de classificar els mites durant l'antiguitat clàssica obeïen a propòsits de sistematització literària (com la <em>Biblioteca</em> d'Apol·lodor) més que a l'anàlisi comparada. Fou amb el sorgiment de la ciència de les religions (<em>Religionswissenschaft</em>) a finals del segle XIX i principis del XX quan autors com <strong>Hermann Usener</strong> o <strong>Jan de Vries</strong> van començar a formular tipologies temàtiques basades en la matriu indoeuropea. Més endavant, sota el mestratge de <strong>Mircea Eliade</strong> i la seva <em>Història de les creences i les idees religioses</em>, l'acadèmia va consolidar els models fenomenològics, prioritzant aquelles narracions que funden la condició ontològica humana per damunt dels mites de caràcter merament local o genealògic.</p>
+<p>Aquestes metodologies ens proporcionen els marcs interpretatius generals. Els grans diccionaris de les religions contemporanis (com l'editat per Lindsay Jones) o les recopilacions exhaustives d'antropologia estructural utilitzen divisions on el <em>nucli d'acció</em> determina la categoria. D'aquesta manera, els mites es classifiquen en funció d'allò que <em>inauguren</em> dins l'esquema d'existència d'una cultura, facilitant així el rastreig de préstecs culturals al llarg del temps, eix clau dins del nostre marc d'estudi cronològic.</p>
+<h3 class="editorial-h3">3. Perspectives acadèmiques contrastades: El problema de l'encavallament tipològic</h3>
+<p>L'acte de classificar és, inherentment, font de controvèrsia dins la historiografia i l'antropologia de les religions. Un corrent clàssic, del qual parteix la taxonomia de la majoria de manuals i enciclopèdies religioses, manté que categoritzar per motius (creació del món, diluvi, viatge a l'inframón) és necessari per al diagnòstic ràpid de la influència i l'anàlisi estructural. No obstant això, corrents contemporanis, liderats per acadèmics d'arrel sociològica com l'escola durkheimiana o enfocaments basats en l'anàlisi crítica del discurs teològic, alerten sobre els perills de l'"encasellament rígid" i imposat.</p>
+<p>El debat rau en el fet que un mateix relat actua alhora en diverses categories depenent del fragment sobre el qual posem el focus. El cèlebre mite del Diluvi descrit a l'Epopeia de Gilgamesh i als textos bíblics n'és un exemple paradigmàtic. S'ha de classificar com un mite de destrucció i judici escatològic (pel càstig dels déus/Déu cap a la humanitat)? O és, en el fons, un nou mite d'orígens, de re-creació i un pacte per establir un nou ordre moral mundial? El consens actual adverteix que les categories són perilloses quan invisibilitzen aquesta polivalència simbòlica. Qualsevol model de classificació utilitzat ha de ser elàstic, assumint que els mites de gran abast (la caiguda, el robatori del foc, l'homicidi primordial) són estructures fractals que es poden llegir des de múltiples categories simultàniament.</p>
+<h3 class="editorial-h3">4. Doble nivell de lectura: L'organització com a discurs etic vs. emic</h3>
+<p>Aquest esforç per la classificació exposa de nou la diferència clau entre l'aproximació de l'investigador (perspectiva *etic*) i la del creient originari de la tradició (perspectiva *emic*), seguint l'esquema antropològic de <strong>Clifford Geertz</strong>. Per a l'estudiós de la història de les religions contemporani, desmuntar la literatura vèdica en diferents subcategories mítiques (mites de creació per esquarterament de Purusha, mites de sobirania amb Indra) és un instrument cognitiu i arxivístic necessari; permet l'estudi aïllat de motius i facilita, per exemple, descobrir vincles posteriors de transmissió a altres regions asiàtiques.</p>
+<p>En el doble nivell, però, és vital entendre que per al participant de la tradició –siguin sacerdots sumeris del segle XXIV aC o clergat medieval– aquestes classificacions resulten alienes o absurdes. En la realitat viscuda, el mite de la creació no estava separat del mite de com s'havia de sacrificar un animal correctament al temple, ni d'explicacions sobre les crescudes del riu. Aquesta arquitectura tipològica no ha de fer-nos oblidar el caràcter integrador i absolut de la religió. Fragmentar per analitzar és necessari; però per poder entendre la religió, és imperatiu reintegrar mentalment totes les categories al seu lloc originari un cop l'estudi ha acabat.</p>
+<h3 class="editorial-h3">5. Conclusió de la secció</h3>
+<p>Finalment, tenint en compte els precedents metodològics, els riscos epistemològics i les lliçons de la ciència cognitiva establerts en les pàgines anteriors d'aquest capítol introductori, procedirem en endavant aplicant una taxonomia àmplia i operativa, dissenyada per a l'anàlisi històrica. Començarem analitzant els Mites dels orígens (cosmogonies i primeres ordenacions); seguidament estudiarem la Destrucció, renovació i el destí (fi de la innocència, diluvis i judicis finals); continuarem amb la complexa tipologia heroica i d'intermediaris divins, i conclourem aquest gran apartat de l'obra aprofundint en els relats que descriuen la transformació del caos en un cosmos estructurat a través de l'establiment del món i l'espai sagrat (eixos, llocs i animals primordials). Aquesta estructura permetrà rastrejar l'evolució fonamental de la idea del sagrat en les societats humanes.</p>    
+
+  </section>
+	<section id="s142" class="reveal">
+    <h1 class="chapter-title"><span class="ch-num">14.2</span> Els mites dels orígens</h1>
+    <div class="index-section editorial">
+      <ul class="index-list">
+        <li><a href="#sub1421">14.2.1 El caos primordial</a></li>
+        <li><a href="#sub1422">14.2.2 Les aigües primordials</a></li>
+        <li><a href="#sub1423">14.2.3 L'ou còsmic</a></li>
+        <li><a href="#sub1424">14.2.4 La separació del Cel i la Terra</a></li>
+        <li><a href="#sub1425">14.2.5 El sacrifici de l'Ésser Primordial</a></li>
+        <li><a href="#sub1426">14.2.6 Els pilars del món</a></li>
+        <li><a href="#sub1427">14.2.7 L'estructura del cosmos</a></li>
+        <li><a href="#sub1428">14.2.8 Els humans creats de fang</a></li>
+        <li><a href="#sub1429">14.2.9 La primera parella</a></li>
+        <li><a href="#sub14210">14.2.10 El paradís primordial</a></li>
+        <li><a href="#sub14211">14.2.11 La llengua original</a></li>
+        <li><a href="#sub14212">14.2.12 El robatori del foc i coneixement</a></li>
+      </ul>
+    </div>
+    <h2 id="sub1421">14.2.1 El caos primordial</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1422">14.2.2 Les aigües primordials</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1423">14.2.3 L'ou còsmic</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1424">14.2.4 La separació del Cel i la Terra</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1425">14.2.5 El sacrifici de l'Ésser Primordial</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1426">14.2.6 Els pilars del món</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1427">14.2.7 L'estructura del cosmos (Cel, Terra i Inframón)</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1428">14.2.8 Els humans creats de fang</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1429">14.2.9 La primera parella</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14210">14.2.10 El paradís primordial</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14211">14.2.11 La llengua original</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14212">14.2.12 El robatori del foc i del coneixement</h2>
+    <p>Text de l'apartat...</p>
+  </section>
+<!-- 14.3 Mites de destrucció -->
+<section id="s143" class="reveal">
+    <h1 class="chapter-title"><span class="ch-num">14.3</span> Destrucció, renovació i destí</h1>
+    <div class="index-section editorial">
+        <ul class="index-list">
+            <li><a href="#sub1431">14.3.1 Diluvi universal</a></li>
+            <li><a href="#sub1432">14.3.2 Altres catàstrofes</a></li>
+            <li><a href="#sub1433">14.3.3 Les edats de la humanitat</a></li>
+            <li><a href="#sub1434">14.3.4 Caiguda innocència</a></li>
+            <li><a href="#sub1435">14.3.5 L'origen del mal</a></li>
+            <li><a href="#sub1436">14.3.6 L'origen de la mort</a></li>
+            <li><a href="#sub1437">14.3.7 Déus que ressusciten</a></li>
+            <li><a href="#sub1438">14.3.8 Mites agrícoles</a></li>
+            <li><a href="#sub1439">14.3.9 Judici dels morts</a></li>
+            <li><a href="#sub14310">14.3.10 Paradisos i inferns</a></li>
+            <li><a href="#sub14311">14.3.11 L'apocalipsi</a></li>
+            <li><a href="#sub14312">14.3.12 Salvador escatològic</a></li>
+            <li><a href="#sub14313">14.3.13 Renovació definitiva</a></li>
+        </ul>
+    </div>
+    <h2 id="sub1431">14.3.1 El diluvi universal</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1432">14.3.2 Altres catàstrofes còsmiques</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1433">14.3.3 Les edats de la humanitat</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1434">14.3.4 La caiguda de la innocència</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1435">14.3.5 L'origen del mal</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1436">14.3.6 L'origen de la mort</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1437">14.3.7 Els déus que moren i ressusciten</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1438">14.3.8 Els mites agrícoles</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1439">14.3.9 El judici dels morts</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14310">14.3.10 Paradisos i inferns</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14311">14.3.11 L'apocalipsi</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14312">14.3.12 El salvador escatològic</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14313">14.3.13 La renovació definitiva del món</h2>
+    <p>Text de l'apartat...</p>
+</section>
+
+<!-- 14.4 Mites heroics -->
+<section id="s144" class="reveal">
+    <h1 class="chapter-title"><span class="ch-num">14.4</span> Els mites heroics</h1>
+    <div class="index-section editorial">
+        <ul class="index-list">
+            <li><a href="#sub1441">14.4.1 El viatge de l'heroi</a></li>
+            <li><a href="#sub1442">14.4.2 Naixement extraordinari</a></li>
+            <li><a href="#sub1443">14.4.3 El nen abandonat</a></li>
+            <li><a href="#sub1444">14.4.4 Els bessons divins</a></li>
+            <li><a href="#sub1445">14.4.5 Combat contra el drac</a></li>
+            <li><a href="#sub1446">14.4.6 L'heroi i el monstre</a></li>
+            <li><a href="#sub1447">14.4.7 Gegants primordials</a></li>
+            <li><a href="#sub1448">14.4.8 Descens als inferns</a></li>
+            <li><a href="#sub1449">14.4.9 Retorn dels morts</a></li>
+            <li><a href="#sub14410">14.4.10 Fundació de pobles</a></li>
+        </ul>
+    </div>
+	<h2 id="sub1441">14.4.1 El viatge de l'heroi</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1442">14.4.2 El naixement extraordinari</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1443">14.4.3 El nen abandonat</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1444">14.4.4 Els bessons divins</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1445">14.4.5 El combat contra el drac</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1446">14.4.6 L'heroi vencedor del monstre</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1447">14.4.7 Els gegants primordials</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1448">14.4.8 El descens als inferns</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1449">14.4.9 El retorn del món dels morts</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14410">14.4.10 La fundació de pobles i civilitzacions</h2>
+    <p>Text de l'apartat...</p>
+</section>
+
+<!-- 14.5 Món sagrat -->
+<section id="s145" class="reveal">
+    <h1 class="chapter-title"><span class="ch-num">14.5</span> Mites del cosmos i sagrat</h1>
+    <div class="index-section editorial">
+        <ul class="index-list">
+            <li><a href="#sub1451">14.5.1 L'Arbre del Món</a></li>
+            <li><a href="#sub1452">14.5.2 Muntanya Sagrada</a></li>
+            <li><a href="#sub1453">14.5.3 L'Axis Mundi</a></li>
+            <li><a href="#sub1454">14.5.4 Ciutats sagrades</a></li>
+            <li><a href="#sub1455">14.5.5 La Gran Mare</a></li>
+            <li><a href="#sub1456">14.5.6 El Pare Celeste</a></li>
+            <li><a href="#sub1457">14.5.7 Éssers civilitzadors</a></li>
+            <li><a href="#sub1458">14.5.8 La serp simbòlica</a></li>
+            <li><a href="#sub1459">14.5.9 Animals sagrats</a></li>
+            <li><a href="#sub14510">14.5.10 Arbres sagrats</a></li>
+            <li><a href="#sub14511">14.5.11 Muntanyes sagrades</a></li>
+            <li><a href="#sub14512">14.5.12 Coves primordials</a></li>
+            <li><a href="#sub14513">14.5.13 Foc purificador</a></li>
+            <li><a href="#sub14514">14.5.14 Aigua simbòlica</a></li>
+            <li><a href="#sub14515">14.5.15 Nombres simbòlics</a></li>
+            <li><a href="#sub14516">14.5.16 Ponts entre mons</a></li>
+        </ul>
+    </div>
+	<h2 id="sub1451">14.5.1 L'Arbre del Món</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1452">14.5.2 La Muntanya Sagrada</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1453">14.5.3 L'Axis Mundi</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1454">14.5.4 Les ciutats sagrades</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1455">14.5.5 La Gran Mare</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1456">14.5.6 El Pare Celeste</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1457">14.5.7 Els éssers civilitzadors</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1458">14.5.8 La serp com a símbol universal</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1459">14.5.9 Els animals sagrats</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14510">14.5.10 Els arbres sagrats</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14511">14.5.11 Les muntanyes sagrades</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14512">14.5.12 Les coves primordials</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14513">14.5.13 El foc purificador</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14514">14.5.14 L'aigua com a símbol universal</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14515">14.5.15 Els nombres simbòlics</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub14516">14.5.16 Els ponts entre mons</h2>
+    <p>Text de l'apartat...</p>
+</section>
+
+<!-- 14.6 Altres patrons -->
+<section id="s146" class="reveal">
+    <h1 class="chapter-title"><span class="ch-num">14.6</span> Altres patrons recurrents</h1>
+    <div class="index-section editorial">
+        <ul class="index-list">
+            <li><a href="#sub1461">14.6.1 Civilitzacions perdudes</a></li>
+            <li><a href="#sub1462">14.6.2 Illes paradisíaques</a></li>
+            <li><a href="#sub1463">14.6.3 Pobles escollits</a></li>
+            <li><a href="#sub1464">14.6.4 Altres motius</a></li>
+        </ul>
+    </div>
+    <h2 id="sub1461">14.6.1 Les civilitzacions perdudes</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1462">14.6.2 Les illes paradisíaques</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1463">14.6.3 Els pobles escollits</h2>
+    <p>Text de l'apartat...</p>
+    <h2 id="sub1464">14.6.4 Altres motius recurrents</h2>
+    <p>Text de l'apartat...</p>
+</section>
+<!-- 14.7 Conclusions -->
+<section id="s147" class="reveal">
+    <h1 class="chapter-title"><span class="ch-num">14.7</span> Conclusions</h1>
+    <div class="index-section editorial">
+        <ul class="index-list">
+            <li><a href="#sub1471">14.7.1 La recurrència dels mites</a></li>
+            <li><a href="#sub1472">14.7.2 Mites universals?</a></li>
+            <li><a href="#sub1473">14.7.3 Difusió vs. Desenvolupament</a></li>
+            <li><a href="#sub1474">14.7.4 Classificació dels patrons</a></li>
+            <li><a href="#sub1475">14.7.5 Patrimoni de la humanitat</a></li>
+            <li><a href="#sub1476">14.7.6 Estat actual de la recerca</a></li>
+        </ul>
+    </div>
+	<h2 id="sub1471">14.7.1 La recurrència dels mites</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="sub1472">14.7.2 Mites universals?</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="sub1473">14.7.3 Difusió vs. Desenvolupament independent</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="sub1474">14.7.4 Classificació dels grans patrons</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="sub1475">14.7.5 Els mites com a patrimoni cultural</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="sub1476">14.7.6 Estat actual de la recerca</h2>
+    <p>Text de l'apartat...</p>
+</section>
+
+<!-- 14.8 Bibliografia -->
+<section id="s148" class="reveal">
+    <h1 class="chapter-title"><span class="ch-num">14.8</span> Bibliografia bàsica</h1>
+    <div class="index-section editorial">
+        <ul class="index-list">
+            <li><a href="#sub1481">14.8.1 Fonts primàries</a></li>
+            <li><a href="#sub1482">14.8.2 Obres clàssiques</a></li>
+            <li><a href="#sub1483">14.8.3 Investigació contemporània</a></li>
+            <li><a href="#sub1484">14.8.4 Articles científics</a></li>
+        </ul>
+    </div>
+
+    <h2 id="sub1481">14.8.1 Fonts primàries</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="sub1482">14.8.2 Obres clàssiques</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="sub1483">14.8.3 Investigació contemporània</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="sub1484">14.8.4 Articles científics i recursos</h2>
+    <p>Text de l'apartat...</p>
+</section>
+
+<!-- ANNEXOS -->
+<section id="annexos" class="reveal">
+    <h1 class="chapter-title"><span class="ch-num">A</span> Annexos</h1>
+    <div class="index-section editorial">
+        <ul class="index-list">
+            <li><a href="#subA">Annex A: Taula de classificació</a></li>
+            <li><a href="#subB">Annex B: Comparativa per civilitzacions</a></li>
+            <li><a href="#subC">Annex C: Cronologia de fonts</a></li>
+            <li><a href="#subD">Annex D: Evolució i transmissió</a></li>
+            <li><a href="#subE">Annex E: Glossari de conceptes</a></li>
+        </ul>
+    </div>
+	 <h2 id="subA">Annex A: Taula de classificació dels patrons</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="subB">Annex B: Taula comparativa per civilitzacions</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="subC">Annex C: Cronologia de les principals fonts</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="subD">Annex D: Evolució i transmissió dels mites</h2>
+    <p>Text de l'apartat...</p>
+
+    <h2 id="subE">Annex E: Glossari de conceptes</h2>
+    <p>Text de l'apartat...</p>
+</section>
+
+</main>
+
+<a href="#cover" class="back-top" id="backTop" title="Tornar al principi">↑</a>
+
+<!-- Scripts Externs -->
+<script src="scripts.js"></script>
+
+</body>
+</html>

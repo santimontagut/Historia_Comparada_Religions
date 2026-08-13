@@ -9,7 +9,33 @@
 <style>
   :root { --sidebar-bg: #2B170D; } 
   .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+
+  /* ESTIL LLEUGER PER A L'ÍNDEX INTERN */
+  .index-section.editorial {
+    background: transparent !important;
+    border: none !important;
+    border-top: 2px solid var(--lapis);
+    border-bottom: 2px solid var(--lapis);
+    padding: 2.5rem 0 !important;
+    margin: 3rem 0 !important;
+    border-radius: 0 !important;
+  }
+  .index-section.editorial h3 { display: none; }
+  .index-section.editorial .index-list { column-count: 1; column-gap: 2rem; }
+  @media (min-width: 600px) { .index-section.editorial .index-list { column-count: 2; } }
+  .index-section.editorial .index-list li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    padding-left: 0;
+    break-inside: avoid;
+  }
+  .index-section.editorial .index-list li a { color: var(--lapis); text-decoration: none; transition: 0.3s; }
+  .index-section.editorial .index-list li a:hover { color: var(--gold); }
+  .index-section.editorial .index-list li::before { content: none; }
 </style>
+
 </head>
 
 <body>
@@ -46,10 +72,30 @@
   </nav>
 </aside>
 <main class="content">
-  <section id="s144" class="reveal">
+<!-- 14.4 Mites heroics -->
+<section id="s144" class="reveal">
     <h1 class="chapter-title"><span class="ch-num">14.4</span> Els mites heroics</h1>
-    <!-- Enganxa aquí el contingut 14.4 -->
-  </section>
+    <div class="index-section editorial">
+        <ul class="index-list">
+            <li><a href="#sub1441">14.4.1 El viatge de l'heroi</a></li>
+            <li><a href="#sub1442">14.4.2 L'origen: Naixement, abandonament i bessons</a></li>
+            <li><a href="#sub1443">14.4.3 El combat contra el caos: Dracs, monstres i gegants</a></li>
+            <li><a href="#sub1444">14.4.4 La catàbasi: Descens als inferns i retorn</a></li>
+        </ul>
+    </div>
+	
+    <h2 id="sub1441">14.4.1 El viatge de l'heroi</h2>
+    <p>Text de l'apartat...</p>
+    
+    <h2 id="sub1442">14.4.2 L'origen de l'heroi: Naixement, abandonament i bessons divins</h2>
+    <p>Text de l'apartat...</p>
+    
+    <h2 id="sub1443">14.4.3 El combat contra el caos: Dracs, monstres i gegants</h2>
+    <p>Text de l'apartat...</p>
+    
+    <h2 id="sub1444">14.4.4 La catàbasi: Descens als inferns i retorn</h2>
+    <p>Text de l'apartat...</p>
+</section>
   <div style="text-align: center; margin: 4rem 0;">
     <a href="capitol14_3.html" style="color: var(--gold);">← Anterior: 14.3</a> | 
     <a href="capitol14_5.html" style="color: var(--gold);">Següent: 14.5 →</a>

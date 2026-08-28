@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 12 — El Cristianisme: De secta a imperi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+  :root { 
+    --c12: #6B4A8B; /* Porpra cardenalici oficial del Cristianisme */
+  } 
+
+  /* PERSONALITZACIÓ ESPECÍFICA PER AL CAPÍTOL 12 (Fons més fosc basat en el porpra) */
+  .sidebar, #mainHeader {
+    background-color: #16101c !important; /* Un porpra nocturn, profund i elegant */
+  }
+
+  /* Correcció de seguretat: el text sempre es veu */
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+</style>
+
+<link rel="stylesheet" href="estil.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- HEADER FIXE & NAV TOGGLE -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title" style="color: var(--c12);">Capítol 12 — El Cristianisme</div>
+  
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a href="index.html" style="font-family: 'Crimson Pro', serif; font-size: 0.75rem; color: #c4a44a; text-decoration: none; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block; margin-bottom: 0.5rem; opacity: 0.7;">← Índex General</a>
+    <div class="sidebar-title">Capítol 12<br>El Cristianisme</div>
+  </div>
+  <nav>
+    <a href="#cover" class="lvl1">Portada</a>
+    <a href="#intro" class="lvl1">12. Introducció</a>
+
+    <a href="#s121" class="lvl1">12.1 Orígens i formació</a>
+    <a href="#s1211" class="lvl2">12.1.1 Món jueu i grecoromà</a>
+    <a href="#s1212" class="lvl2">12.1.2 Jesús de Natzaret</a>
+    <a href="#s1213" class="lvl2">12.1.3 Primeres comunitats</a>
+    <a href="#s1214" class="lvl2">12.1.4 Pau de Tars</a>
+
+    <a href="#s122" class="lvl1">12.2 Escriptures i tradició</a>
+    <a href="#s1221" class="lvl2">12.2.1 Antic i Nou Testament</a>
+    <a href="#s1222" class="lvl2">12.2.2 Cànon i autoritat</a>
+    <a href="#s1223" class="lvl2">12.2.3 Interpretació i exegesi</a>
+
+    <a href="#s123" class="lvl1">12.3 Teologia i doctrina</a>
+    <a href="#s1231" class="lvl2">12.3.1 Déu i Trinitat</a>
+    <a href="#s1232" class="lvl2">12.3.2 Crist i salvació</a>
+    <a href="#s1233" class="lvl2">12.3.3 Pecat i gràcia</a>
+    <a href="#s1234" class="lvl2">12.3.4 Església i sagraments</a>
+
+    <a href="#s124" class="lvl1">12.4 Història i transformació</a>
+    <a href="#s1241" class="lvl2">12.4.1 Persecució i consolidació</a>
+    <a href="#s1242" class="lvl2">12.4.2 Cristianisme imperial</a>
+    <a href="#s1243" class="lvl2">12.4.3 Concilis i doctrina</a>
+    <a href="#s1244" class="lvl2">12.4.4 Cisma d’Orient i Occident</a>
+    <a href="#s1245" class="lvl2">12.4.5 Reformes del segle XVI</a>
+
+    <a href="#s125" class="lvl1">12.5 Societat i vida quotidiana</a>
+    <a href="#s1251" class="lvl2">12.5.1 Litúrgia i culte</a>
+    <a href="#s1252" class="lvl2">12.5.2 Calendari i festes</a>
+    <a href="#s1253" class="lvl2">12.5.3 Moral i vida social</a>
+    <a href="#s1254" class="lvl2">12.5.4 Església i poder</a>
+
+    <a href="#s126" class="lvl1">12.6 Diversitat cristiana</a>
+    <a href="#s1261" class="lvl2">12.6.1 Catolicisme i ortodòxia</a>
+    <a href="#s1262" class="lvl2">12.6.2 Protestantismes</a>
+    <a href="#s1263" class="lvl2">12.6.3 Anglicanisme i altres</a>
+    <a href="#s1264" class="lvl2">12.6.4 Evangelicalisme i pentecostalisme</a>
+    <a href="#s1265" class="lvl2">12.6.5 Cristianismes orientals</a>
+
+    <a href="#s127" class="lvl1">12.7 Cristianisme contemporani</a>
+    <a href="#s1271" class="lvl2">12.7.1 Secularització i modernitat</a>
+    <a href="#s1272" class="lvl2">12.7.2 Vaticà II</a>
+    <a href="#s1273" class="lvl2">12.7.3 Ecumenisme i diàleg</a>
+    <a href="#s1274" class="lvl2">12.7.4 Cristianisme global</a>
+    <a href="#s1275" class="lvl2">12.7.5 Reptes del segle XXI</a>
+
+    <a href="#s128" class="lvl1">12.8 Llegat i influència</a>
+    <a href="#s1281" class="lvl2">12.8.1 Herència jueva i hel·lenística</a>
+    <a href="#s1282" class="lvl2">12.8.2 Influències interreligioses</a>
+    <a href="#s1283" class="lvl2">12.8.3 Pensament occidental</a>
+    <a href="#s1284" class="lvl2">12.8.4 Política i institucions</a>
+    <a href="#s1285" class="lvl2">12.8.5 Art i cultura</a>
+    <a href="#s1286" class="lvl2">12.8.6 Llegat contemporani</a>
+
+    <a href="#s129" class="lvl1">12.9 Metodologia i limitacions</a>
+    <a href="#s1291" class="lvl2">12.9.1 Fonts històriques</a>
+    <a href="#s1292" class="lvl2">12.9.2 Fonts cristianes i externes</a>
+    <a href="#s1293" class="lvl2">12.9.3 Enfocament historicocrític</a>
+    <a href="#s1294" class="lvl2">12.9.4 Història i teologia</a>
+    <a href="#s1295" class="lvl2">12.9.5 Biaixos i limitacions</a>
+
+    <a href="#s1210" class="lvl1">12.10 Bibliografia</a>
+    <a href="#s12101" class="lvl2">12.10.1 Fonts primàries</a>
+    <a href="#s12102" class="lvl2">12.10.2 Obres generals</a>
+    <a href="#s12103" class="lvl2">12.10.3 Història del cristianisme</a>
+    <a href="#s12104" class="lvl2">12.10.4 Teologia i estudis bíblics</a>
+    <a href="#s12105" class="lvl2">12.10.5 Estudis comparatius</a>
+  </nav>
+</aside>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-ornament" style="color: var(--c12);">Història de les Religions</div>
+  <div class="cover-rule" style="background: var(--c12);"></div>
+  <div class="cover-hebrew">ΙΧΘΥΣ</div>
+  <h1 class="cover-chapter">Capítol 12</h1>
+  <div class="cover-subtitle" style="color: var(--c12);">El Cristianisme — De secta a imperi</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong> Com un moviment apocalíptic jueu centrat en la figura d’un mestre itinerant va acabar convertint-se en una arquitectura metafísica que pretén explicar el sentit de l’existència, legitimar estructures de poder, universalitzar una veritat particular i modelar la consciència moral d’Occident, tot generant —entre la promesa d’amor i la tensió del dogma— una tradició capaç de transformar profundament la història humana i, al final, de revelar les paradoxes existents entre fe, raó i llibertat.
+  </div>
+  <div class="cover-scroll">
+    <span>Llegir</span>
+    <div class="cover-scroll-line"></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="content">
+
+<!-- INTRODUCCIÓ -->
+<!-- INTRODUCCIÓ -->
+<section id="intro" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12</span>Introducció</h1>
+  
+  <p class="drop-cap">El cristianisme constitueix un dels fenòmens històrics i culturals més complexos i transformadors de la història de la humanitat. Nascut al primer terç del segle I com un petit moviment apocalíptic i de renovació dins del judaisme del Segon Temple, a la remota província romana de Judea, va aconseguir, en poc més de tres segles, erigir-se com la religió oficial de l'Imperi Romà. Aquesta metamorfosi —d'una secta perifèrica, marginada i esporàdicament perseguida, a l'arquitectura teològica i institucional que acabaria vertebrant la civilització occidental— no es pot comprendre des de l'aïllament. Tal com exigeix l'estudi històric de les religions, el cristianisme s'ha d'analitzar com una formidable síntesi dinàmica: l'herència esatològica jueva es va hibridar amb la metafísica i la filosofia hel·lenístiques, tot adoptant, finalment, el pragmatisme organitzatiu de l'Imperi Romà. L'objectiu d'aquest capítol no és jutjar la veracitat dels seus dogmes, sinó analitzar com es van formar, com es van transmetre i com van alterar per sempre la concepció humana del temps, de l'individu i del poder.</p>
+
+  <h3 class="subsection-title">La naturalesa de les fonts: història i kerygma</h3>
+  <p>El primer repte metodològic en l'estudi dels orígens cristians és la naturalesa de les fonts documentals. Els historiadors s'enfronten a un corpus textual extraordinàriament ric però metodològicament espinós. Els evangelis (cànònics i apòcrifs), les epístoles paulines i la resta de literatura paleocristiana no van ser redactats com a cròniques històriques o reportatges biogràfics, sinó com a <em>kerygma</em>: textos de proclamació i de fe, escrits per creients amb la voluntat explícita de persuadir, edificar comunitats i legitimar interpretacions teològiques. Des de l'enfocament historicocrític, per tant, s'exigeix un treball de filologia i exegesi molt rigorós per destriar el "Jesús històric" (el fuster i predicador jueu de Galilea) del "Crist de la fe" (el Logos encarnat de la teologia posterior). Les escasses però valuosíssimes fonts externes del segle I i principis del segle II —com les mencions de l'historiador jueu Flavi Josep, o els romans Tàcit, Suetoni i Plini el Jove— permeten ancorar el fenomen en fets històrics inqüestionables: l'existència històrica de Jesús, la seva execució a la creu sota el mandat de Ponç Pilat, i la ràpida i problemàtica expansió dels seus seguidors per les ciutats de l'Imperi.</p>
+
+  <h3 class="subsection-title">Perspectives acadèmiques: Del carisma a la institució</h3>
+  <p>El consens acadèmic actual, avalat per investigadors contemporanis i grans teòrics de la història de les religions, coincideix a assenyalar el cristianisme com l'exemple paradigmàtic de l'evolució d'una idea religiosa. Des de la sociologia de la religió de <strong>Max Weber</strong>, el cristianisme primitiu s'entén com l'explosió d'una "autoritat carismàtica" pura (liderada per Jesús i, posteriorment, pels apòstols o líders inspirats), que a mesura que creix i preveu la pervivència en el temps, necessita ineludiblement passar per un procés de "rutinització del carisma". És a dir, l'impuls profètic originari es va refredant i institucionalitzant per donar pas a l'autoritat racional-legal i tradicional: la jerarquia eclesiàstica, el cànon de les Escriptures i el dogma. D'altra banda, basant-nos en les tesis de <strong>Jan Assmann</strong> sobre la memòria cultural i la "distinció mosaica", el cristianisme agafa l'exclusivisme teològic del monoteisme jueu (un sol Déu vertader), però trenca les seves fronteres ètniques gràcies a l'impuls de Pau de Tars. Alhora, estudioses com <strong>Karen Armstrong</strong> destaquen com el cristianisme va ser capaç de donar respostes emocionals i estructurals en un món antic dominat per la desigualtat i la violència, establint el concepte revolucionari que la divinitat mateixa pot patir i morir per solidaritat amb la condició humana.</p>
+
+  <h3 class="subsection-title">Doble nivell de lectura: Teologia i impacte social</h3>
+  <p>Per entendre l'èxit del cristianisme, cal analitzar-lo amb una doble lent. En l'àmbit estrictament religiós i conceptual, el cristianisme introdueix innovacions radicals en el relat mitològic i teològic del Mediterrani antic. La creença en l'encarnació (el Déu inabastable que es fa matèria històrica) i la resurrecció ofereixen una escatologia esperançadora que democratitza la salvació: ja no depèn de l'estrat social, la riquesa o el gènere, sinó de la fe i la pertinença a la comunitat eclesial. Aquesta premissa ("ja no hi ha jueu ni grec, esclau ni lliure, home ni dona", com escriuria Pau de Tars) amagava unes implicacions sociològiques subversives. Les primeres xarxes cristianes van funcionar com a espais d'assistència mútua (vídues, orfes, malalts) en unes urbs romanes sovint brutals i despersonalitzades. No obstant això, aquesta força horitzontal, un cop oficialitzada per l'Estat al segle IV, mutaria ràpidament. L'ètica del servei va haver de conviure —i sovint entrar en tensió— amb l'exercici del poder terrenal, creant una paradoxa històrica constant entre els ideals evangèlics i l'acció política de la cristiandat institucional.</p>
+
+  <h3 class="subsection-title">El full de ruta del capítol</h3>
+  <p>Aquest capítol analitzarà sistemàticament aquest trajecte, des de les comunitats clandestines que es reunien a les cases per trencar el pa, fins als grans concilis ecumènics que debatien la naturalesa de la Trinitat amb categories filosòfiques gregues. Estudiarem com la tradició cristiana, lluny de ser un bloc monolític, ha estat sempre un camp de diversitat i debat: des de les disputes inicials amb els gnòstics, passant pel Cisma d'Orient i Occident (segle XI), la fractura de la Reforma Protestant (segle XVI), fins a l'actual pluralitat global que abasta des del catolicisme romà fins a la inabastable xarxa de comunitats neopentecostals arreu del món. Resseguir la història del cristianisme és, en gran mesura, resseguir l'evolució de la matriu moral i filosòfica de les societats contemporànies.</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.1 ORÍGENS I FORMACIÓ -->
+<section id="s121" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.1</span>Orígens i formació del cristianisme</h1>
+  <p class="section-lead">Context històric, social i religiós del sorgiment del moviment cristià.</p>
+
+  <h2 id="s1211">12.1.1. Món jueu i grecoromà</h2>
+    <p class="drop-cap">El naixement del cristianisme a principis del segle I no es pot entendre com un fenomen aïllat o una anomalia històrica sobtada, sinó com el resultat directe d'una fricció tectònica entre tres grans plaques culturals: la religió jueva, la cultura hel·lenística i el poder polític i militar de l'Imperi Romà. Palestina occidental (la regió històrica de Judea, Samaria i Galilea) era, en temps de Jesús de Natzaret, un autèntic laboratori social i religiós travessat per profundes tensions. Des de la conquesta de Jerusalem per part del general romà Pompeu l'any 63 aC, el territori havia perdut la seva independència política, quedant sotmès a la maquinària tributària i administrativa de Roma. Aquesta ocupació va exacerbar el sentiment de greuge d'un poble que es considerava l'escollit per l'únic Déu vertader. Alhora, tot l'Orient Mitjà portava més de tres segles submergit en l'hel·lenisme —la cultura grega universalitzada des de les conquestes d'Alexandre el Gran—, fet que va transformar no només la llengua i l'economia, sinó també els marcs mentals de l'època. És precisament en aquest "brou de cultiu" de domini imperial, efervescència escatològica i intercanvi cultural on s'han d'anar a buscar les arrels del moviment cristià.</p>
+
+  <h3 class="subsection-title">Anàlisi de les fonts primàries: Qumran, Flavi Josep i Filó d'Alexandria</h3>
+  <p>Per reconstruir aquest escenari, els historiadors no depenen exclusivament dels textos cristians posteriors, sinó d'un conjunt de fonts primàries d'un valor incalculable que permeten dibuixar la complexitat del judaisme del Segon Temple. Els escrits de l'historiador jueu romanitzat <strong>Flavi Josep</strong> (<em>Antiguitats judaiques</em> i <em>La guerra dels jueus</em>) són la columna vertebral per comprendre l'esfera política i la divisió sectària de la societat jueva (les "quatre filosofies": fariseus, saduceus, essenis i zelotes). D'altra banda, el descobriment dels <strong>Manuscrits de la Mar Morta</strong> (Qumran) a mitjans del segle XX va suposar un terratrèmol metodològic: aquests textos originals ens revelen en temps real el nivell de radicalisme apocalíptic, l'obsessió per la puresa ritual i l'esperança d'un Messies imminent que tenien certs grups marginals del judaisme, oferint un paral·lelisme fascinant amb el to de les primeres predicacions cristianes. Finalment, l'obra de <strong>Filó d'Alexandria</strong>, un filòsof jueu contemporani de Jesús que vivia a Egipte, demostra fins a quin punt l'elit jueva de la Diàspora intentava sintetitzar la Torà amb la filosofia platònica, utilitzant conceptes com el <em>Logos</em> (la Raó divina), que dècades més tard l'Evangeli de Joan utilitzaria per descriure la naturalesa de Crist.</p>
+
+  <h3 class="subsection-title">Perspectives acadèmiques: El mite del judaisme monolític</h3>
+  <p>L'estudi historicocrític contemporani ha desmuntat completament la vella noció teològica d'un judaisme homogeni, legalista i fossilitzat en temps de Jesús. El consens acadèmic actual descriu el <strong>judaisme del Segon Temple</strong> com un ecosistema altament plural, competitiu i divers. L'historiador i teòleg Martin Hengel va demostrar magistralment a la seva obra fonamental que tot el judaisme de l'època —inclús el de Jerusalem— estava "hel·lenitzat" en diferents graus, fent insostenible la divisió binària entre un judaisme palestí "pur" i un judaisme de la Diàspora "contaminat" pels grecs. Com assenyala <strong>Karen Armstrong</strong> en la seva anàlisi evolutiva, la pressió imperial provocava diverses reaccions: mentre els <em>saduceus</em> (l'elit sacerdotal del Temple) optaven pel col·laboracionisme pragmàtic amb Roma per mantenir l'statu quo, i els <em>fariseus</em> intentaven democratitzar la santedat portant la puresa ritual a la vida domèstica del poble, altres grups desenvolupaven <strong>l'apocalíptica</strong>. Aquesta visió del món, molt present en l'anàlisi sociològica de <strong>Max Weber</strong> sobre els estrats socials subalterns, es basava en la creença que el món present estava dominat per forces demoníaques (plasmades en l'imperi de torn) i que Déu intervindria aviat, de manera cataclísmica i mitjançant un Messies ("l'Ungit"), per restablir la justícia, expulsar els estrangers i instaurar el seu Regne directe sobre la terra. És dins d'aquest marc d'urgència escatològica, i no en un buit religiós, on el missatge de Jesús cobra sentit històric.</p>
+
+  <h3 class="subsection-title">Doble nivell de lectura: Infraestructura imperial i sincretisme hel·lenístic</h3>
+  <p>Des d'una perspectiva històrica, el cristianisme no només va necessitar les categories teològiques del judaisme per néixer, sinó les infraestructures del món grecoromà per expandir-se i sobreviure. En l'àmbit religiós, l'hel·lenisme va aportar la <em>koiné</em>, el grec comú que va actuar com a llengua franca de l'època. L'escriptura del Nou Testament en grec i la utilització de la <em>Septuaginta</em> (la traducció grega de la Bíblia jueva) van permetre que el missatge cristià fos intel·ligible fora de les fronteres ètniques jueves, apel·lant directament als "temorosos de Déu" (simpatitzants gentils del monoteisme jueu). Sociològicament, la <em>Pax Romana</em>, amb la seva xarxa de calçades, rutes marítimes segures i l'absència de grans guerres interestatals, va permetre una mobilitat de persones, béns i idees sense precedents. A nivell cultural, l'Imperi patia una forta crisi de sentit: els antics déus cívics es percebien com a llunyans o freds. Molts ciutadans romans i grecs buscaven una experiència religiosa més íntima, fet que explica l'auge de les anomenades <strong>religions mistèriques</strong> (culte a Isis, Mitra, Dionís), que prometien salvació personal, renaixement i vida d'ultratomba. El cristianisme s'infiltrarà exactament en aquesta esquerda: oferint l'estricte monoteisme ètic del judaisme (sense l'exigència tribal de la circumcisió) combinat amb la promesa de salvació personal i immortalitat anhelada pel món grecoromà.</p>
+
+  <h3 class="subsection-title">Conclusió de la matriu històrica</h3>
+  <p>La trobada entre aquests dos mons va produir l'esclat del moviment originari. Sense la teologia de l'Aliança, el monoteisme estricte i l'esperança messiànica i apocalíptica del judaisme, el missatge de Jesús no hauria existit mai. Però, simultàniament, sense la llengua grega universal, les categories del pensament filosòfic hel·lenístic per estructurar la teologia, la xarxa urbana romana i l'anhel de salvació personal de la societat imperial, aquest moviment hauria nascut i mort a Galilea com una secta jueva marginal més (com va passar amb els essenis o els seguidors de Joan Baptista). Aquesta intersecció espaciotemporal precisa estableix l'escenari fonamental per apropar-nos, en el següent subapartat, a l'enigmàtica i revolucionària figura històrica que va actuar com a catalitzador de tot aquest procés: el predicador apocalíptic Jesús de Natzaret.</p>
+
+   <h2 id="s1212">12.1.2. Jesús de Natzaret</h2>
+  <h2 id="s1212">12.1.2. Jesús de Natzaret</h2>
+  
+  <p>Abordar la figura de Jesús de Natzaret des de la disciplina de la història de les religions exigeix una precisió metodològica extrema. Durant segles, la imatge de Jesús va estar dictada exclusivament pel dogma eclesiàstic, que el presentava de manera indestriable com a figura històrica i com a segona persona de la Trinitat. Tanmateix, des del segle XIX, l'acadèmia va iniciar allò que es coneix com la "Recerca del Jesús històric" (<em>Quest for the Historical Jesus</em>). L'objectiu d'aquesta empresa intel·lectual no és teològic, sinó historiogràfic: destriar el predicador jueu del segle I (l'home de Galilea) del Crist de la fe (l'objecte de culte de la religió posterior). Avui, la investigació acadèmica assumeix, pràcticament sense excepció, l'existència històrica de Jesús, però adverteix de la immensa dificultat de reconstruir-ne la biografia detallada a causa de la naturalesa de la documentació conservada.</p>
+
+  <h3 class="subsection-title">L'opacitat de les fonts: Els Evangelis i el problema sinòptic</h3>
+  <p>L'historiador que s'apropa a Jesús es topa amb un obstacle fonamental: Jesús no va deixar res escrit. Tot el que sabem d'ell ens ha arribat a través de seguidors que escriuen dècades després de la seva mort. Les fonts primeres i més detallades són els Evangelis canònics (Marc, Mateu, Lluc i Joan), escrits en grec entre els anys 70 i 100 dC. La crítica textual ha demostrat que aquests documents no són biografies en el sentit modern, sinó <em>kerygma</em> (proclamació de fe). Els autors evangelistes van seleccionar, editar i teologitzar les tradicions orals prèvies per respondre a les necessitats de les seves respectives comunitats. L'acadèmia actual treballa majoritàriament amb la "teoria de les dues fonts", segons la qual l'Evangeli de Marc és el més antic (c. 70 dC), i tant Mateu com Lluc el van utilitzar com a base narrativa, afegint-hi una hipotètica font de dites perduda, coneguda com a Font Q (de l'alemany <em>Quelle</em>), que recolliria els ensenyaments directes de Jesús. Aquesta complexitat documental obliga a aplicar criteris d'autenticitat històrica (com el criteri de dificultat, o el de múltiple atestació) per intentar aïllar els fets històrics més probables sota les capes de teologia afegides per l'Església primitiva.</p>
+
+  <h3 class="subsection-title">Un profeta apocalíptic jueu</h3>
+  <p>Si hi ha un consens sòlid en la historiografia contemporània (l'anomenada "Tercera Recerca", liderada per acadèmics com E.P. Sanders o John P. Meier), és la profunda i innegable judeïtat de Jesús. Jesús no va fundar el cristianisme ni tenia la intenció de crear una nova religió separada del judaisme. Va ser un jueu galileu, circumcidat, observador de la Torà, que va exercir com a mestre (<em>rabí</em>) i guaridors itinerant. El seu perfil encaixa de ple en la figura del <strong>profeta apocalíptic</strong>. El centre absolut de la seva predicació no era ell mateix, sinó l'imminent arribada del "Regne de Déu" (<em>Malkhut Shamayim</em>). En el context del judaisme del Segon Temple, aquest concepte no designava un paradís celestial post mortem, sinó una intervenció dràstica i terrenal de Déu en la història per derrocar els poders opressors (inclosos els romans i l'aristocràcia corrupta) i instaurar una era de justícia, pau i puresa d'acord amb l'Aliança d'Israel. Jesús concebia aquest esdeveniment no com un futur llunyà, sinó com una realitat que ja estava irrompent a través del seu propi ministeri.</p>
+
+  <h3 class="subsection-title">Praxi social i l'ètica de la subversió</h3>
+  <p>L'impacte de Jesús no radicava exclusivament en l'anunci escatològic, sinó en la manera com la seva praxi traduïa aquest missatge. Des d'una perspectiva sociològica, el moviment de Jesús era un moviment de renovació carismàtica intra-jueu que atreia les capes més baixes de la societat agrària galilea. Dues pràctiques històriques documentades destaquen per la seva càrrega subversiva. En primer lloc, la <strong>comensalitat oberta</strong>: el fet que Jesús mengés públicament amb "publicans i pecadors" (recaptadors d'impostos, prostitutes, malalts i marginats). En la cultura de puresa ritual i honor de l'Orient Mitjà antic, compartir taula implicava acceptació i validació divina; aquesta pràctica trencava de facto les estrictes barreres de puresa establertes per grups com els fariseus o els essenis. En segon lloc, les pràctiques de guarició i exorcisme, que la crítica històrica accepta que van tenir lloc (independentment de l'explicació sobrenatural o psicosomàtica que se'ls doni). En el marc mental del segle I, expulsar un dimoni era una acció altament simbòlica: significava que el Regne de Déu estava derrotant, en el present, les forces del mal i l'opressió. L'ètica del Sermó de la Muntanya —estimar els enemics, la benaurança dels pobres i els pacificadors— representava un gir radical dels valors establerts de l'Imperi Romà, que divinitzava la força militar i l'estatus.</p>
+
+  <h3 class="subsection-title">El conflicte amb l'statu quo i l'execució</h3>
+  <p>Aquesta combinació de carisma de masses, missatge apocalíptic i pràctiques igualitàries generava una tensió insostenible. Al voltant de l'any 30 dC, Jesús va viatjar a Jerusalem per la festa de la Pasqua, el moment de màxima efervescència nacionalista jueva, amb la ciutat plena de pelegrins i amb les tropes romanes en alerta màxima. Els evangelis relaten l'incident de l'"expulsió dels mercaders del Temple". Històricament, aquest acte es llegeix no com una simple rebequeria contra el comerç, sinó com una acció profètica simbòlica que anunciava la destrucció de la institució sagrada gestionada per l'aristocràcia saducea. Això va suposar la línia vermella. Les autoritats del Temple el van detenir i el van lliurar al prefecte romà, Ponç Pilat. La crucifixió de Jesús és potser el fet històric més inqüestionable de la seva vida, confirmat tant per fonts cristianes com per autors romans (Tàcit). Roma no crucificava per disputes teològiques jueves, sinó per sedició política. El <em>Titulus Crucis</em> —el rètol de la creu que l'acusava de ser el "Rei dels jueus"— demostra que Roma el va executar sota el càrrec de pretendent messiànic, un delicte d'alta traïció (<em>crimen laesae maiestatis</em>) contra l'emperador.</p>
+
+  <h3 class="subsection-title">La dissonància cognitiva de la Creu</h3>
+  <p>L'execució d'un Messies era, conceptualment, un absurd absolut per al judaisme del segle I. Si el Messies havia de derrotar els enemics d'Israel i alliberar el poble, un Messies crucificat, nu i torturat per l'imperi estranger era la prova empírica del seu fracàs total (la mateixa Torà deia que "qui penja d'un arbre és maleït per Déu"). Sociològicament, el moviment hauria d'haver-se dissolt aquí, com va passar amb altres líders apocalíptics del període. Tanmateix, una anomalia històrica radical va capgirar el procés. Pocs dies després de la mort de Jesús, els seus seguidors directes, que inicialment havien fugit terroritzats, van començar a proclamar de manera vehement que havien tingut experiències de trobada amb el Jesús viu i que Déu l'havia ressuscitat d'entre els morts. L'historiador no pot certificar o refutar empíricament un esdeveniment metahistòric com la resurrecció, però sí que pot constatar l'efecte transformador d'aquestes experiències visionàries. Aquesta convicció absoluta —l'experiència pasqual— va ser el motor que va transformar un grup de camperols galileus atemorits en els propagadors d'un missatge que aviat desafiaria l'Imperi sencer.</p>
+
+  <h2 id="s1213">12.1.3. Primeres comunitats cristianes</h2>
+  
+  <p>L'endemà de l'experiència pasqual, el moviment dels seguidors de Jesús es trobava davant del repte vertiginós de la supervivència i la reorganització. Lluny de trencar immediatament amb el judaisme per fundar una "nova religió", la primera generació de creients es concebia a si mateixa com l'autèntic romanent d'Israel, el grup que havia reconegut el Messies en la figura de Jesús crucificat i ressuscitat. Aquest col·lectiu originari, establert principalment a Jerusalem, continuava sent estrictament jueu: circumcidaven els seus fills, respectaven les lleis de puresa alimentària (<em>kosher</em>), guardaven el sàbat i acudien diàriament a pregar al recinte del Temple. Estaven liderats pels dotze apòstols, amb Pere com a figura prominent, i per Jaume, conegut com el "germà del Senyor", que ràpidament assumiria el lideratge indiscutible de l'Església mare de Jerusalem, caracteritzada per un conservadorisme teològic fortament arrelat a la Torà.</p>
+
+  <h3 class="subsection-title">Crítica de fonts: Els Fets dels Apòstols davant la història</h3>
+  <p>L'estudi d'aquest període primitiu topa novament amb el problema hermenèutic de les fonts. La font narrativa principal és el llibre dels <em>Fets dels Apòstols</em>, redactat pel mateix autor de l'Evangeli de Lluc (probablement entre els anys 80 i 90 dC). L'enfocament historicocrític adverteix que Lluc actua aquí més com un teòleg de la història que no pas com un cronista objectiu. La seva obra presenta un relat harmonitzat i sovint idealitzat, on l'expansió del missatge des de Jerusalem fins a Roma es descriu com un procés pacífic, fluid i guiat harmònicament per l'Esperit Sant. Tanmateix, quan els historiadors contrasten aquest relat amb les cartes autèntiques de Pau (escrits molt més antics, de la dècada dels 50), aflora una realitat històrica molt més convulsa i fracturada. Les primeres comunitats estaven dividides per aspres debats ideològics sobre el grau de fidelitat a la llei jueva i sobre qui tenia l'autoritat legítima per parlar en nom del Crist absent.</p>
+
+  <h3 class="subsection-title">La xarxa <em>domèstica</em> i el radicalisme sociològic</h3>
+  <p>Si la teologia mantenia el focus en el Temple i l'escatologia, la sociologia de les primeres comunitats revelava una organització altament innovadora. En abandonar el culte del Temple com a única via d'accés a Déu, el cristianisme primitiu es va traslladar a l'espai privat: les "esglésies domèstiques" (de la paraula grega <em>ekklēsia</em>, que significa 'assemblea', no pas un edifici). Es reunien a les cases dels membres més benestants de la comunitat per celebrar el "trencament del pa" (l'origen de l'eucaristia) i compartir els béns materials. Aquest entorn domèstic va permetre un grau d'igualitarisme inaudit en l'estratificada societat grecoromana. Esclaus, dones, comerciants i marginats compartien espai i ritual en peu d'igualtat. De fet, l'acadèmia reconeix avui el paper protagonista de les dones en aquesta fase carismàtica (abans de la institucionalització patriarcal posterior): actuaven com a profetesses, amfitriones i líders de la comunitat (com Febe, diaconessa, o Júnia, reconeguda com a "il·lustre entre els apòstols" per Pau). Era un model de "família fictícia" que proporcionava una xarxa de protecció, identitat i dignitat als qui no tenien ni drets civils ni veu en l'espai públic romà.</p>
+
+  <h3 class="subsection-title">La crisi del retard de la Parusia</h3>
+  <p>Al llarg de les primeres dècades, la comunitat va haver d'enfrontar-se al seu primer gran terratrèmol teològic: el retard de la Parusia (la segona vinguda de Crist). Les primeres comunitats vivien en un estat d'urgència apocalíptica absoluta; estaven convençuts que Jesús tornaria de manera imminent, abans que morís la seva generació, per instaurar el judici final. Però a mesura que passaven els anys (els anys 40, els 50) i els membres originaris començaven a envellir i a morir a causa de l'edat o de les persecucions, la comunitat va experimentar el que la sociologia de la religió anomena "dissonància cognitiva". L'esperança expectant va donar pas a la necessitat de reinterpretar el missatge. A poc a poc, el Regne de Déu va deixar de ser vist únicament com un cataclisme futur i va començar a ser entès com una realitat ja present espiritualment i administrada històricament per la institució naixent: l'Església. Aquest va ser el motor fonamental que va iniciar la transició de secta apocalíptica jueva a religió organitzada amb visió de permanència temporal.</p>
+
+  <h3 class="subsection-title">La primera fractura: Hebreus i hel·lenistes</h3>
+  <p>Aquesta transformació es va accelerar a causa d'un conflicte intern crucial. Els <em>Fets dels Apòstols</em> descriuen la primera gran divisió entre dos grups de cristians jueus a Jerusalem: els "hebreus" (parlants d'arameu, més lligats a l'ortodòxia del Temple) i els "hel·lenistes" (jueus de la diàspora establerts a Jerusalem, de llengua grega i amb una mentalitat més oberta). Van ser els hel·lenistes, encapçalats per Esteve —el primer màrtir cristià, lapidat per les autoritats jueves—, els primers a fer una crítica oberta al Temple i a la Llei de Moisès. La persecució subsegüent contra aquesta facció hel·lenista va provocar que fugissin de Jerusalem i portessin el seu missatge a ciutats com Samaria, Damasc i, especialment, Antioquia (Síria). És allà, en una metròpoli cosmopolita greco-parlant on, per primera vegada a la història, jueus i pagans no circumcidats començaran a compartir comunitat teològica i on rebran, de manera irònica o despectiva per part dels romans, el nom de "cristians" (partidaris de Crist). S'havia preparat l'escenari perquè entrés en acció l'arquitecte de la universalitat cristiana.</p>
+
+  <h2 id="s1214">12.1.4. Pau de Tars</h2>
+  
+  <p>La figura de Pau de Tars és de tal magnitud que un gruix considerable de la historiografia acadèmica, des del segle XIX fins avui, ha plantejat sovint la hipòtesi de si caldria considerar-lo el veritable "fundador" del cristianisme tal com el coneixem. Si bé aquesta afirmació conté un excés de simplificació acadèmica, el consens subratlla que sense la reformulació teològica de Pau, el moviment de Jesús hauria quedat confinat a una secta perifèrica dins de la matriu jueva, condemnada, molt probablement, a desaparèixer després de la destrucció de Jerusalem l'any 70 dC per les legions romanes de Titus. Pau representa la intersecció perfecta dels tres mons de l'antiguitat: era un jueu de la diàspora rigorosament format en la Llei (fariseu); la seva llengua materna i el seu marc de pensament conceptual era el grec hel·lenístic, i ostentava el preuat títol de ciutadà romà. L'anomenada "experiència de Damasc" (aproximadament l'any 34 dC) va transformar el més ferotge perseguidor d'aquestes comunitats en l'apòstol dels gentils (els pagans, no jueus).</p>
+
+  <h3 class="subsection-title">Les cartes paulines: La pedra angular documental</h3>
+  <p>Des d'un punt de vista metodològic i cronològic, els textos de Pau són un tresor històric inestimable. Són el nucli més antic del Nou Testament, escrits entre el 50 i el 60 dC, vint anys abans que es redactés el primer evangeli (Marc). L'erudició moderna ha establert una clara distinció fonamental a l'hora de treballar amb aquest corpus. De les 13 cartes atribuïdes a Pau en el cànon bíblic, hi ha un consens absolut sobre l'autoria directa de set (Romans, 1 i 2 Corintis, Gàlates, Filipencs, 1 Tessalonicencs i Filemó). Aquestes "cartes autèntiques" ens mostren a temps real, sense el filtre de la idealització posterior, els problemes, les disputes i la maduració ideològica del cristianisme primitiu. En aquests documents no hi trobem relats sobre els miracles de Jesús, el seu naixement virginal o paràboles de Galilea; per a Pau, l'únic focus que té rellevància teològica és la paradoxa de la creu i el triomf escatològic de la resurrecció.</p>
+
+  <h3 class="subsection-title">La ruptura teològica: Justificació per la fe i universalisme</h3>
+  <p>L'aportació teològica més radical de Pau —i la que provocaria el cisma històric més gran respecte al judaisme de Jerusalem— va ser la doctrina de la "justificació per la fe". Formulat especialment a les cartes als Gàlates i als Romans, Pau va deduir lògicament les implicacions de l'esdeveniment pasqual: si la humanitat es pogués salvar mitjançant el compliment estricte de la Torà i les obres de la Llei, la mort de Crist no hauria estat necessària. Per tant, Crist obre una Nova Aliança on l'accés a la salvació no requereix complir els marcadors d'identitat ètnica de l'antic Israel (la circumcisió, el repòs del sàbat o la puresa dels aliments). Aplicant la perspectiva de <strong>Jan Assmann</strong> sobre el monoteisme, Pau agafa la intolerància cognitiva de la "distinció mosaica" (només hi ha un Déu veritable i els déus pagans són ídols), però en destrueix les barreres ètniques de l'elecció. Amb la fórmula <em>"Ja no hi ha ni jueu ni grec, ni esclau ni lliure, ni home ni dona; perquè tots vosaltres sou un de sol en Crist Jesús"</em> (Gàl 3:28), Pau va fonamentar la primera gran visió universalista, oferint al món grecoromà una identitat transcendent que superava totes les divisions socials, culturals o racials imposades per l'Imperi.</p>
+
+  <h3 class="subsection-title">La sociologia i geopolítica de les missions</h3>
+  <p>En l'àmbit operatiu, Pau va ser un estrateg brillant. En lloc de romandre al món rural palestí, va aplicar una estricta "estratègia urbana". Les seves xarxes comunitàries es van establir exclusivament en els grans nusos de comunicació i comerç de l'Imperi Romà: Antioquia, Efes, Corint, Tessalònica i, finalment, Roma. Fundava cèl·lules a les cases de famílies simpatitzants (generalment treballadors lliures o artesans, com ell mateix, que era fabricant de tendes) i es comunicava amb ells mitjançant cartes, creant una xarxa transnacional i supra-local cohesionada, on tothom es deia "germà". Aquesta densitat reticular, unida a la recollida de col·lectes econòmiques per ajudar l'Església mare de Jerusalem, va atorgar al moviment paulí una solidesa institucional capaç d'aguantar les amenaces externes. Les comunitats paulines funcionaven com una societat paral·lela, amb el seu propi codi moral basat en el refús de la idolatria, una moralitat sexual molt més restrictiva que la pagana i un compromís de solidaritat interna innegociable.</p>
+
+  <h3 class="subsection-title">L'Incident d'Antioquia i l'Assemblea de Jerusalem</h3>
+  <p>Aquest procés de desculturització jueva i adaptació gentil va desembocar en un xoc brutal d'autoritats. Com podien menjar junts a la mateixa taula eucarística els cristians d'origen jueu, que respectaven estrictament la puresa ritual alimentària, i els nous conversos d'origen pagà (als quals Pau havia eximit de circumcidar-se i de la dieta <em>kosher</em>)? Aquest debat identitari central es va dirimir l'any 49 dC en l'anomenat "Concili de Jerusalem". Allà, Pau es va enfrontar obertament als "judeocristians" liderats per Jaume el Just. Tot i que Pau i Lluc en donen versions lleugerament diferents en els seus respectius escrits, el consens històric va ser un pacte fràgil: s'acceptava que els gentils no s'havien de circumcidar, eximint-los de la càrrega de la Torà, però se'ls demanava una abstenció mínima de menjar carn oferida als ídols i evitar comportaments sexuals pagans (lleis de puresa bàsiques). Aquest acord va salvar la unitat formal de l'Església naixent, però a la llarga va sentenciar el cristianisme més lligat al Temple. Pocs anys més tard, la destrucció de Jerusalem (70 dC) esborraria el poder de la facció judeocristiana de Jaume, deixant via lliure a la interpretació teològica paulina per dominar, expandir i, amb el temps, estructurar dogmàticament l'imperi occidental.</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.2 ESCRIPTURES I TRADICIÓ -->
+<section id="s122" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.2</span>Escriptures i tradició</h1>
+  <p class="section-lead">La formació del cànon, els textos normatius i l'hermenèutica cristiana.</p>
+
+  <h2 id="s1221">12.2.1. Antic i Nou Testament</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1222">12.2.2. Cànon i autoritat</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1223">12.2.3. Interpretació i exegesi</h2>
+  <p>[Desenvolupament pendent...]</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.3 TEOLOGIA I DOCTRINA -->
+<section id="s123" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.3</span>Teologia i doctrina</h1>
+  <p class="section-lead">Estructura metafísica, dogmes fonamentals i sistemes de salvació.</p>
+
+  <h2 id="s1231">12.3.1. Déu i Trinitat</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1232">12.3.2. Crist i salvació</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1233">12.3.3. Pecat i gràcia</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1234">12.3.4. Església i sagraments</h2>
+  <p>[Desenvolupament pendent...]</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.4 HISTÒRIA I TRANSFORMACIÓ -->
+<section id="s124" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.4</span>Història i transformació</h1>
+  <p class="section-lead">De secta perseguida a religió d'estat i la seva evolució institucional.</p>
+
+  <h2 id="s1241">12.4.1. Persecució i consolidació</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1242">12.4.2. Cristianisme imperial</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1243">12.4.3. Concilis i doctrina</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1244">12.4.4. Cisma d’Orient i Occident</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1245">12.4.5. Reformes del segle XVI</h2>
+  <p>[Desenvolupament pendent...]</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.5 SOCIETAT I VIDA QUOTIDIANA -->
+<section id="s125" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.5</span>Societat i vida quotidiana</h1>
+  <p class="section-lead">Litúrgia, moral, calendari i la relació de l'Església amb el poder civil.</p>
+
+  <h2 id="s1251">12.5.1. Litúrgia i culte</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1252">12.5.2. Calendari i festes</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1253">12.5.3. Moral i vida social</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1254">12.5.4. Església i poder</h2>
+  <p>[Desenvolupament pendent...]</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.6 DIVERSITAT DEL CRISTIANISME -->
+<section id="s126" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.6</span>Diversitat del cristianisme</h1>
+  <p class="section-lead">Mapa de tradicions, confessions i sensibilitats contemporànies.</p>
+
+  <h2 id="s1261">12.6.1. Catolicisme i ortodòxia</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1262">12.6.2. Protestantismes</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1263">12.6.3. Anglicanisme i altres tradicions</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1264">12.6.4. Evangelicalisme i pentecostalisme</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1265">12.6.5. Cristianismes orientals</h2>
+  <p>[Desenvolupament pendent...]</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.7 CRISTIANISME CONTEMPORANI -->
+<section id="s127" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.7</span>Cristianisme contemporani</h1>
+  <p class="section-lead">Secularització, concili, ecumenisme i expansió global al segle XXI.</p>
+
+  <h2 id="s1271">12.7.1. Secularització i modernitat</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1272">12.7.2. Vaticà II</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1273">12.7.3. Ecumenisme i diàleg</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1274">12.7.4. Cristianisme global</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1275">12.7.5. Reptes del segle XXI</h2>
+  <p>[Desenvolupament pendent...]</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.8 LLEGAT I INFLUÈNCIA -->
+<section id="s128" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.8</span>Llegat i influència</h1>
+  <p class="section-lead">Impacte cultural, filosòfic, polític i artístic del cristianisme en la història.</p>
+
+  <h2 id="s1281">12.8.1. Herència jueva i hel·lenística</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1282">12.8.2. Influències interreligioses</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1283">12.8.3. Pensament occidental</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1284">12.8.4. Política i institucions</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1285">12.8.5. Art i cultura</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1286">12.8.6. Llegat contemporani</h2>
+  <p>[Desenvolupament pendent...]</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.9 METODOLOGIA I LIMITACIONS -->
+<section id="s129" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.9</span>Metodologia i limitacions</h1>
+  <p class="section-lead">Fonts d'estudi, enfocaments crítics i gestió de biaixos acadèmics.</p>
+
+  <h2 id="s1291">12.9.1. Fonts històriques</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1292">12.9.2. Fonts cristianes i externes</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1293">12.9.3. Enfocament historicocrític</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1294">12.9.4. Història i teologia</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s1295">12.9.5. Biaixos i limitacions</h2>
+  <p>[Desenvolupament pendent...]</p>
+</section>
+
+<hr class="rule">
+
+<!-- 12.10 BIBLIOGRAFIA -->
+<section id="s1210" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num" style="color: var(--c12);">12.10</span>Bibliografia</h1>
+  <p class="section-lead">Fonts primàries, estudis històrics i recerca acadèmica especialitzada.</p>
+
+  <h2 id="s12101">12.10.1. Fonts primàries</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s12102">12.10.2. Obres generals</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s12103">12.10.3. Història del cristianisme</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s12104">12.10.4. Teologia i estudis bíblics</h2>
+  <p>[Desenvolupament pendent...]</p>
+
+  <h2 id="s12105">12.10.5. Estudis comparatius</h2>
+  <p>[Desenvolupament pendent...]</p>
+</section>
+
+</main>
+
+<a href="#cover" class="back-top" id="backTop" title="Tornar al principi">↑</a>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 13 — L'islam: De la revelació profètica a la civilització universal</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Estils Externs -->
+<link rel="stylesheet" href="estil.css">
+<!-- Personalització de color per a aquest capítol (si vols canviar el blau) -->
+<style>
+  :root { --sidebar-bg: #0B1B2E; } 
+  /* Correcció de seguretat: el text sempre es veu */
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+</style>
+
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- HEADER FIXE & NAV TOGGLE -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title">Capítol 13 — L'Islam </div>
+  <!-- Aquest div buit serveix per centrar visualment el títol gràcies a flexbox -->
+  <div style="width: 44px;"></div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+  <a href="index.html" style="font-family: 'Crimson Pro', serif; font-size: 0.75rem; color: #c4a44a; text-decoration: none; text-transform: uppercase;   letter-spacing: 0.15em; display: inline-block; margin-bottom: 0.5rem; opacity: 0.7;">← Índex General</a>
+    <div class="sidebar-title">Capítol 13<br>L'Islam</div>
+  </div>
+  <nav>
+     <a href="#cover" class="lvl1">Portada</a>
+    <a href="#intro" class="lvl1">Introducció</a>
+    
+    <!-- 13.1 -->
+    <a href="#s1" class="lvl1">13.1 Orígens històrics</a>
+    <a href="#s11" class="lvl2">13.1.1 La Península Aràbiga preislàmica</a>
+    <a href="#s12" class="lvl2">13.1.2 Muhàmmad i la comunitat</a>
+    <a href="#s13" class="lvl2">13.1.3 Els primers califats, Omeia i Abàssida</a>
+
+    <!-- 13.2 -->
+    <a href="#s2" class="lvl1">13.2 Textos sagrats i creences</a>
+    <a href="#s21" class="lvl2">13.2.1 L'Alcorà</a>
+    <a href="#s22" class="lvl2">13.2.2 Hadits i Sunna</a>
+    <a href="#s23" class="lvl2">13.2.3 Xaria i Fiqh</a>
+    <a href="#s24" class="lvl2">13.2.4 El Tawhid</a>
+    <a href="#s25" class="lvl2">13.2.5 Kalam (Teologia Racional)</a>
+    <a href="#s26" class="lvl2">13.2.6 Escatologia</a>
+
+    <!-- 13.3 -->
+    <a href="#s3" class="lvl1">13.3 Els Cinc Pilars i la vida religiosa</a>
+    <a href="#s31" class="lvl2">13.3.1 Els Cinc Pilars</a>
+    <a href="#s32" class="lvl2">13.3.2 La mesquita</a>
+    <a href="#s33" class="lvl2">13.3.3 Calendari i festivitats</a>
+
+    <!-- 13.4 -->
+    <a href="#s4" class="lvl1">13.4 Espiritualitat, ètica i diversitat</a>
+    <a href="#s41" class="lvl2">13.4.1 Ètica islàmica (akhlaq)</a>
+    <a href="#s42" class="lvl2">13.4.2 Halal i normes de vida</a>
+    <a href="#s43" class="lvl2">13.4.3 Sufisme (tasawwuf)</a>
+    <a href="#s44" class="lvl2">13.4.4 Sunnisme</a>
+    <a href="#s45" class="lvl2">13.4.5 Xiisme</a>
+    <a href="#s46" class="lvl2">13.4.6 Ibadisme</a>
+    <a href="#s47" class="lvl2">13.4.7 Islam contemporani</a>
+
+    <!-- 13.5 -->
+    <a href="#s5" class="lvl1">13.5 Civilització i cultura</a>
+    <a href="#s51" class="lvl2">13.5.1 L'Edat d'Or islàmica</a>
+    <a href="#s52" class="lvl2">13.5.2 Ciència islàmica</a>
+    <a href="#s53" class="lvl2">13.5.3 Filosofia islàmica</a>
+    <a href="#s54" class="lvl2">13.5.4 Art i arquitectura</a>
+
+    <!-- 13.6 -->
+    <a href="#s6" class="lvl1">13.6 Societat, dret i reptes</a>
+    <a href="#s61" class="lvl2">13.6.1 La Gent del Llibre (Ahl al-Kitab)</a>
+    <a href="#s62" class="lvl2">13.6.2 Convivència i diàleg interreligiós</a>
+    <a href="#s63" class="lvl2">13.6.3 La dona en l'islam</a>
+    <a href="#s64" class="lvl2">13.6.4 Família i herència</a>
+    <a href="#s65" class="lvl2">13.6.5 Drets humans</a>
+    <a href="#s66" class="lvl2">13.6.6 Reptes contemporanis</a>
+
+    <!-- 13.7 -->
+    <a href="#s7" class="lvl1">13.7 Llegat i influències creuades</a>
+    <a href="#s71" class="lvl2">13.7.1 Influències rebudes</a>
+    <a href="#s72" class="lvl2">13.7.2 Impacte sobre el judaisme medieval</a>
+    <a href="#s73" class="lvl2">13.7.3 Irradiació cap a la Cristiandat</a>
+    <a href="#s74" class="lvl2">13.7.4 Interaccions a l'Orient i sikhisme</a>
+    <a href="#s75" class="lvl2">13.7.5 Tradicions emergents</a>
+
+    <!-- 13.8 -->
+    <a href="#s8" class="lvl1">13.8 Metodologia d'estudi</a>
+    <a href="#s81" class="lvl2">13.8.1 Historiografia crítica</a>
+    <a href="#s82" class="lvl2">13.8.2 Filologia alcorànica</a>
+    <a href="#s83" class="lvl2">13.8.3 Antropologia i sociologia</a>
+    <a href="#s84" class="lvl2">13.8.4 Superació de l'Orientalisme</a>
+
+    <!-- 13.9 -->
+    <a href="#s9" class="lvl1">13.9 Bibliografia i fonts</a>
+    <a href="#s91" class="lvl2">13.9.1 Fonts primàries</a>
+    <a href="#s92" class="lvl2">13.9.2 Teologia i filosofia</a>
+    <a href="#s93" class="lvl2">13.9.3 Història i estudis</a>
+    <a href="#s94" class="lvl2">13.9.4 Recursos digitals</a>
+    <a href="#s95" class="lvl2">13.9.5 Cronologia comparada</a>
+  </nav>
+</aside>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-menorah">☪</div>
+  <div class="cover-ornament">Història de les Religions</div>
+  <div class="cover-rule"></div>
+  <div class="cover-hebrew">الإسلام</div>
+  <h1 class="cover-chapter">Capítol 13</h1>
+  <div class="cover-subtitle">L'islam — De la revelació profètica a la civilització universal</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong> L'islam no sorgeix com un fenomen aïllat al desert, sinó com una síntesi monoteista radical de l'Antiguitat Tardana que transforma els vincles de sang en una comunitat universal de creients (<em>umma</em>), configurant una tradició dinàmica que entrellaça la submissió a l'Únic amb una immensa pluralitat jurídica, intel·lectual i espiritual.
+  </div>
+  <div class="cover-scroll">
+    <span>Llegir</span>
+    <div class="cover-scroll-line"></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="content">
+
+  <!-- ==========================================
+       INTRODUCCIÓ
+       ========================================== -->
+  <section id="intro">
+    <h2>Introducció: L'islam en la història de les idees religioses</h2>
+    <p>En el marc d'una història comparada de les religions, l'emergència de l'islam al segle VII dC constitueix un dels fenòmens més singulars, dinàmics i transformadors de l'experiència espiritual i política humana. Lluny de respondre al tòpic historiogràfic d'una irrupció sobtada, aïllada i inexplicable en els deserts aràbics, l'islam representa la culminació madura i la reconfiguració crítica de les grans tensions religioses, filosòfiques i socials que travessaven el Pròxim Orient en el període de l'Antiguitat Tardana. La seva aparició no s'ha d'interpretar com un començament absolut <em>ex nihilo</em>, sinó com un procés dialèctic profundament incardinat en el patrimoni monoteista preexistent, del qual es proclama alhora hereu, intèrpret i culminació definitiva.</p>
+
+    <h3>L'epifania monoteista en el gresol de l'Antiguitat Tardana</h3>
+    <p>Des de la perspectiva de la història de les idees, el naixement de l'islam culmina el llarg procés de transició que el teòric de la memòria cultural Jan Assmann ha definit com el pas de les «religions primàries» (aquelles indissociables de l'ordre còsmic, el ritual agrari i les estructures polítiques locals politeistes) a les «religions secundàries» o «contrareligions». Aquestes últimes es fonamenten en una ruptura radical amb el paganisme mitjançant la instauració d'una distinció epistemològica infranquejable: la distinció entre la veritat revelada i la falsedat idolàtrica. L'islam porta aquesta lògica monoteista a la seva màxima expressió d'intransigència teològica mitjançant el concepte de <em>Tawhid</em> (la unicitat absoluta de Déu), despullant la divinitat de qualsevol temptativa d'antropomorfisme, multiplicitat hipostàtica o representació figurativa.</p>
+
+    <p>Aquesta gènesi té lloc en un espai geogràfic i cultural que operava com a cruïlla de civilitzacions. La Península Aràbiga no era un espai buit, sinó una perifèria porosa on interactuaven el cristianisme bizantí (en les seves variants trinitàries enfrontades: melquita, monofisita i nestoriana), el judaisme rabínic i himiarita, el dualisme zoroastrià de l'Imperi Sassànida i una pluralitat de corrents pietosos autòctons coneguts com a <em>hunafa'</em>. L'islam emergeix en diàleg directe amb aquest ecosistema discursiu. La novetat del seu missatge no rau en la introducció d'un Déu desconegut, sinó en la reorganització revolucionària de conceptes teològics i escatològics ja presents al Pròxim Orient, sotmesos a una rigorosa purificació ètica i lingüística en llengua àrab.</p>
+
+    <h3>El concepte d'islam: restitució primordial i sacralitat del text</h3>
+    <p>Terminològicament, el mot <em>islam</em> prové de l'arrel semítica triconsonàntica <em>s-l-m</em>, associada tant a la «pau» (<em>salam</em>) com a la «integritat» i la «submissió voluntària». En la seva dimensió teològica, no designa una submissió servil o fatalista al destí, sinó l'acte conscient, lliure i total de rendició de la voluntat humana davant la sobirania de l'Únic Creador. Per la seva banda, el qui realitza aquest acte de confiança i lliurament és el <em>muslim</em> (musulmà).</p>
+
+    <p>En la seva pròpia autocomprensió fenomenològica, l'islam rebutja categòricament la condició de religió innovadora. El discurs alcorànic sosté que la veritat fonamental ha estat revelada des dels orígens de la humanitat a una cadena ininterrompuda de missatgers i profetes (<em>anbiya'</em>), entre els quals destaquen figures centrals de la tradició bíblica com Adam, Noè (<em>Nuh</em>), Abraham (<em>Ibrahim</em>), Moisès (<em>Musa</em>) i Jesús (<em>Isa</em>). Segons aquesta visió, el missatge original de tots ells era idèntic: el monoteisme pur i la justícia ètica. Tanmateix, les comunitats històriques anteriors haurien alterat, oblidat o corromput parcialment aquest missatge primigeni (mitjançant el fenomen de la <em>tahrif</em> o alteració textual i interpretativa).</p>
+
+    <p>Per aquest motiu, la missió del profeta Muhàmmad (c. 570–632 dC) s'articula com una <strong>restitució definitiva</strong> i com el <strong>Segell de la Profecia</strong> (<em>Khatam al-Nabiyyin</em>). L'Alcorà no és percebut com una obra inspirada per la divinitat a través de la ment d'un autor humà, sinó com la paraula directa, increada i literal de Déu dictada a través de l'arcàngel Gabriel (<em>Jibril</em>). Aquesta condició atorga al text una sacralitat ontològica equiparable —fent una analogia amb la teologia cristiana— no pas als evangelis, sinó al mateix Logos encarnat: en el cristianisme la Paraula divina es fa carn; en l'islam, la Paraula divina es fa Llibre.</p>
+
+    <div class="callout">
+      <p><strong>Clau metodològica (Mircea Eliade i Jan Assmann):</strong> L'islam no funda un mite dels orígens en un temps primordial indeterminat, sinó que consagra una <em>hierofania històrica</em>. La revelació succeeix en el temps històric exacte de la societat aràbiga del segle VII, però el seu contingut postula la reactivació de la fe primordial (<em>al-din al-fitra</em>) inscrita en la mateixa naturalesa de l'ésser humà des de la creació.</p>
+    </div>
+
+    <h3>La fractura de l'ordre tribal: carisma profètic i naixement de la Umma</h3>
+    <p>En el pla sociològic, l'impacte de l'islam ha estat objecte d'anàlisis cabdals, particularment des del marc de Max Weber sobre l'autoritat carismàtica i la transformació institucional. La societat mecana preislàmica s'estructurava sobre una solidaritat exclusiva de parentiu biològic (<em>asabiyya</em>) i un codi moral heroic lligat a l'oligarquia mercantil dels Quraysh, que legitimava una profunda desigualtat econòmica i la desprotecció dels segments vulnerables (orfes, vídues, esclaus).</p>
+
+    <p>La predicació profètica de Muhàmmad introdueix un tall epistemològic i social d'abast revolucionari:</p>
+    <ul>
+      <li><strong>Desplaçament del vincle de sang pel vincle de fe:</strong> La fundació de la <strong>Umma</strong> (la comunitat trans-tribal i universal de creients) substitueix la genealogia biològica per una fidelitat ètica i transcendent compartida. Davant de Déu, tots els creients són ontològicament iguals, concepte que dinamita la jerarquia aristocràtica tribal.</li>
+      <li><strong>Ètica de la responsabilitat individual:</strong> Enfront de la venjança col·lectiva tribal, l'escatologia alcorànica estableix que cada ànima serà jutjada de manera estrictament individual en el Judici Final en virtut de les seves accions i de la seva conducta moral cap a la comunitat.</li>
+      <li><strong>Institucionalització de la compassió:</strong> La justícia social deixa de ser un acte de benevolència discrecional del cap del clan per esdevenir una obligació legal i religiosa universal, cristal·litzada institucionalment en el precepte de l'almoina obligatòria (<em>Zakat</em>).</li>
+    </ul>
+
+    <p>Aquesta transformació il·lustra perfectament la concepció de Clifford Geertz de la religió com un «sistema cultural»: un conjunt integrat de símbols que estableix motivacions i disposicions anímiques de gran abast mitjançant la formulació d'una cosmovisió que harmonitza la interpretació de l'ordre còsmic amb la praxi quotidiana i l'organització política.</p>
+
+    <h3>Unitat fonamental i pluralisme civilitzatori: el concepte d'allò «islamicat»</h3>
+    <p>Un dels errors més freqüents en l'estudi de l'islam ha estat la seva essencialització com un bloc rígid, homogeni i immutable. Ben al contrari, la història de l'islam és la història d'una tensió permanent i fecunda entre la unitat irrenunciable del seu dogma fundacional i la immensa diversitat de les seves manifestacions històriques, jurídiques, filosòfiques i regionals.</p>
+
+    <p>Per superar els biaixos orientalistes que identificaven erròniament el món àrab amb la totalitat de l'islam, l'historiador Marshall Hodgson va encunyar en la seva obra monumental <em>The Venture of Islam</em> distincions conceptuals indispensables que aquest capítol assumeix de ple:</p>
+    <ul>
+      <li><strong>Allò religiós islàmic (<em>Islamic</em>):</strong> Fa referència estricta a la fe, les doctrines teològiques, els ritus i els textos sagrats de la confessió.</li>
+      <li><strong>Allò civilitzatori o «islamicat» (<em>Islamicate</em>):</strong> Designa el conjunt ampli de produccions culturals, científiques, artístiques, literàries i filosòfiques desenvolupades en societats governades per musulmans o profundament influïdes pel patró cultural islàmic, en les quals van participar activament no només musulmans, sinó també comunitats jueves, cristianes, zoroastrianes i sabeus.</li>
+      <li><strong>L'espai geopolític (<em>Islamdom</em>):</strong> La regió política, institucional i territorial complexa on l'islam ostentava l'hegemonia o una presència dominant.</li>
+    </ul>
+    <p>Des d'aquesta perspectiva, l'islam es revela com una civilització pluricèntrica i universal que, al llarg de catorze segles, ha anat arrelant i adoptant tonalitats pròpies en el món àrab, l'espai turcoman, la Pèrsia iraniana, l'Àsia central, el subcontinent indi, l'Àfrica subsahariana, el sud-est asiàtic (on es concentra avui la major comunitat de musulmans del planeta) i l'Occident contemporani.</p>
+    <h3>Objecte, enfocament i itinerari del capítol</h3>
+    <p>Fidel als principis fundacionals del nostre projecte d'investigació, aquest capítol abordarà l'islam rebutjant tant la reducció apologètica confessional com l'esguard reduccionista exterior. L'estudi s'articularà en vuit grans eixos metodològicament interconnectats:</p>
+    <ol>
+      <li><strong>Gènesi històrica i institucional (13.1):</strong> L'anàlisi de l'Aràbia preislàmica, el ministeri profètic de Muhàmmad, la formulació de la Constitució de Medina i l'expansió primerenca sota els califats Raixidun, Omeia i Abàssida.</li>
+      <li><strong>Cànon, teologia i dret (13.2):</strong> La fixació de l'Alcorà, la ciència del Hadit, l'epistemologia jurídica del Fiqh, la intransigència metafísica del Tawhid, els debats racionals del Kalam i l'escatologia.</li>
+      <li><strong>La dimensió ritual i comunitària (13.3):</strong> L'articulació quotidiana dels Cinc Pilars, la funció social de la mesquita i el cicle sagrat del temps lunar.</li>
+      <li><strong>Espiritualitat, ètica i corrents doctrinals (13.4):</strong> El desenvolupament de l'ètica moral, l'experiència mística del sufisme i la fractura històrico-teològica entre sunnisme, xiisme i ibadisme, així com els moviments reformistes contemporanis.</li>
+      <li><strong>L'aportació intel·lectual i estètica (13.5):</strong> L'Edat d'Or de les ciències, la fecundació del pensament aristotèlic i neoplatònic en la <em>falsafa</em> i la poètica anicònica de l'art i l'arquitectura.</li>
+      <li><strong>L'islam en el segle XXI: dret, societat i convivència (13.6):</strong> L'estatus de la Gent del Llibre, l'hermenèutica de gènere, la família, els drets humans i les tensions amb la secularització modernitzadora.</li>
+      <li><strong>Llegat i transferència interreligiosa (13.7):</strong> La reciprocitat d'influències amb el judaisme, el cristianisme, les tradicions de l'Índia (gènesi del sikhisme) i les religions noves nascudes del seu gresol (com la fe bahà'í).</li>
+      <li><strong>Historiografia i metodologia crítica (13.8):</strong> La crítica de fonts primàries, la filologia alcorànica contemporània i la superació epistemològica dels paradigmes orientalistes.</li>
+    </ol>
+    <p>A través d'aquest itinerari, aquest capítol es proposa desentranyar no només el desenvolupament intern d'una fe que avui aplega gairebé dos mil milions de persones, sinó la manera com la seva cosmovisió ha configurat el diàleg intercultural i l'evolució de les grans idees de la història universal.</p>
+
+  </section>
+
+  <!-- ==========================================
+       13.1. ORÍGENS HISTÒRICS
+       ========================================== -->
+  <section id="s1">
+    <h2>13.1. Orígens històrics i la gran expansió dels primers segles</h2>
+
+    <p>L'emergència i la fulgurant expansió de l'islam durant els segles VII i VIII dC constitueixen un dels fenòmens geopolítics i religiosos més decisius de la història universal. En menys d'un segle, un moviment profètic nascut als marges àrids del Hijaz, a l'Aràbia occidental, va aconseguir desmantellar completament el mil·lenari Imperi Sassànida de Pèrsia, arrabassar a l'Imperi Romà d'Orient (Bizanci) les seves províncies més riques (Síria, Palestina i Egipte) i bastir un imperi transcontinental que s'estenia des de les ribes de l'Atlàntic i la Península Ibèrica fins a les valls de l'Indus i les fronteres de la Xina Tang.</p>
+
+    <p>Aquest procés no es pot entendre com un simple esclat de conquesta militar beduïna, sinó com la cristal·lització d'una nova cosmovisió religiosa capaç d'articular una revolució institucional i social sense precedents. L'estudi d'aquests orígens planteja interrogants historiogràfics de primer ordre: com es va transformar una societat tribal fragmentada en una comunitat unificada sota una sobirania transcendent? De quina manera les tensions de l'Antiguitat Tardana van modelar el missatge revelat? I a través de quins mecanismes polítics i administratius els primers califats —els <em>Raixidun</em> o ortodoxos (632–661), els Omeies de Damasc (661–750) i els Abàssides de Bagdad (750–1258)— van institucionalitzar el carisma profètic original en un estat imperial i cosmopolita?</p>
+
+    <p>Per respondre a aquestes qüestions, la investigació crítica contemporània (representada per autors com Fred Donner, Hugh Kennedy, Robert Hoyland i Patricia Crone) ha hagut de sotmetre les cròniques islàmiques clàssiques —redactades en la seva majoria segles després dels fets per historiadors com al-Tabari, al-Baladhuri o Ibn Hisham— a un contrast rigorós amb l'epigrafia contemporània, la numismàtica, els papirs administratius primerencs i els testimonis documentals no musulmans (siríacs, armenis, grecs i coptes). L'objectiu d'aquest bloc és reconstruir aquesta trajectòria fundacional des del seu bressol aràbic fins a la universalització de la civilització islàmica.</p>
+
+    <!-- 13.1.1 -->
+    <div id="s11">
+      <h3>13.1.1. La Península Aràbiga preislàmica: geopolítica de l'Antiguitat Tardana, estructures tribals i univers religiós</h3>
+
+      <h4>El marc geopolític tardoantic: la perifèria estratègica dels grans imperis</h4>
+      <p>Tradicionalment, la historiografia romàntica i colonial havia concebut la Península Aràbiga com un territori aïllat, un desert impenetrable aliè a les dinàmiques de la civilització urbana. La investigació arqueològica i documental recent ha desmentit radicalment aquest paradigma: l'Aràbia del segle VI dC formava part indissociable del complex geopolític de l'Antiguitat Tardana, sotmesa a la influència indirecta però constant de les dues superpotències de l'època: l'Imperi Romà d'Orient (Bizanci), de llengua grega i teologia cristiana calcidoniana, i l'Imperi Sassànida d'Iran, de confessió zoroastriana.</p>
+
+      <p>Incapaces de sostenir una ocupació militar directa a l'interior desèrtic a causa del cost logístic, ambdues potències van competir pel control de les rutes comercials i la seguretat de les seves fronteres mitjançant la creació d'estats àrabs clients que actuaven com a zones d'amortiment (*buffer states*):</p>
+
+      <ul>
+        <li><strong>Els Gassànides (nord-oest):</strong> Confederació tribal àrab establerta a l'estepa siriana, aliada de Constantinoble amb l'estatus de federats (<em>foederati</em>). Els gassànides van adoptar el cristianisme monofisita (o miafisita), una tradició que rebutjava les conclusions del Concili de Calcedònia (451 dC) i defensava la unicitat de la naturalesa divina de Crist, fet que generava tensions periòdiques amb l'ortodòxia imperial romana. Van exercir una funció clau en l'arabització cultural de la perifèria siriana i en la difusió de conceptes teològics cristians cap a l'interior de la península.</li>
+        <li><strong>Els Làxmides (nord-est):</strong> Establerts a la fèrtil regió mesopotàmica amb capital a al-Hira (sud de l'actual Iraq), actuaven com a vassalls dels emperadors sassànides. La seva cort esdevingué un dels focus culturals i literaris més brillants del món àrab preislàmic. Majoritàriament van abraçar el cristianisme siríac oriental (l'Església de l'Orient, anomenada tradicionalment nestoriana), mantenint una intensa relació amb les elits perses i integrant influències culturals iranianes en el lèxic i les institucions àrabs.</li>
+      </ul>
+
+      <p>Al sud de la península, la regió fèrtil i agrícola de l'Aràbia Feliç (l'actual Iemen) albergava l'antic i poderós regne de <strong>Himyar</strong>. Durant el segle V dC, la monarquia himiarita va protagonitzar un gir teològic i geopolític monumental en abandonar el paganisme politeista sud-aràbic per adoptar oficialment el **judaisme**, sota la fórmula del culte al «Senyor del Cel» (*Rahmanan*). Cap al 523 dC, el rei jueu Yusuf As'ar Yath'ar (conegut en la tradició àrab com Dhu Nuwas) va dur a terme una persecució sistemàtica contra la comunitat cristiana de Najran, un esdeveniment que va commocionar el món tardoantic i que va provocar la intervenció militar del regne cristià d'Aksum (Etiòpia), recolzat per la flota bizantina. Els etíops van conquerir el Iemen cap al 525 dC; tanmateix, dècades més tard (c. 575 dC), l'Imperi Sassànida va expulsar els aksumites i va establir un protectorat persa a la regió. Així, la Península Aràbiga es trobava literalment encerclada per la confrontació imperial i teològica entre Roma, Pèrsia i Axum.</p>
+
+      <h4>Societat tribal, nomadisme i l'enclavament de la Meca</h4>
+      <p>A l'interior de la península, i especialment a la regió occidental del Hijaz, l'estructura social descansava en el principi del parentiu patriarcal. La historiografia islàmica anomena aquest període la <em>Jahiliyya</em>, un terme que no denota simplement «analfabetisme» o «desconeixement», sinó sobretot un estat de **barbàrie moral, impulsivitat i ignorància del monoteisme i de la llei divina** (en contraposició al concepte d'<em>islam</em> com a domini de si mateix i submissió a Déu).</p>
+
+      <p>L'individu només existia en tant que membre integrat d'un clan (*qawm*) articulat dins d'una tribu més àmplia (*qabila*). En absència d'un aparell estatal o d'un dret codificat, l'únic mecanisme de supervivència i contenció de la violència era la solidaritat incondicional de sang: l'<strong>asabiyya</strong>. Aquest principi imposava el deure sagrat de la venjança de sang (*thar*): l'assassinat d'un membre del clan obligava a exigir una compensació econòmica equivalent (*diya*) o a llevar la vida de l'homicida o de qualsevol membre del seu grup. Aquesta dinàmica engendrava guerres de venjança cròniques (els <em>Ayyam al-Arab</em> o «Dies dels Àrabs») celebrades en l'alta poesia èpica.</p>
+
+      <p>El codi normatiu que regia aquesta societat era la <strong>muruwwa</strong> (l'ideal de virtut viril o cavallerositat tribal), basat en la valentia en el combat, la lleialtat cega al llinatge, la protecció del feble dins del grup i, sobretot, una hospitalitat hiperbòlica i generositat desmesurada cap a l'hoste, sovint manifestada en sacrificis sumptuaris que dilapidaven la riquesa personal per aconseguir prestigi poètic immortal.</p>
+
+      <p>Dins d'aquest univers, bàsicament nòmada i pastoral (*badw*), emergia un sector sedentari urbà i oasi (*hadar*), el centre neuràlgic del qual era la ciutat de **la Meca** (*Makka*), controlada per la tribu dels <strong>Quraysh</strong>. El paper històric de la Meca ha estat objecte d'un intens debat en la historiografia contemporània:</p>
+
+      <ul>
+        <li><strong>La tesi del capitalisme comercial (W. Montgomery Watt):</strong> Sostenia que a finals del segle VI, la Meca havia esdevingut el principal centre financer i redistribuïdor del comerç d'espècies i articles de luxe entre l'Índia, el Iemen i la Mediterrània. Segons Watt, aquesta transició accelerada cap a una economia mercantil individualista va erosionar la solidaritat tribal comunitària tradicional, generant bosses creixents de marginació social que van preparar el terreny per al missatge justicier de Muhàmmad.</li>
+        <li><strong>La tesi revisionista (Patricia Crone):</strong> En la seva influent obra <em>Meccan Trade and the Rise of Islam</em> (1987), Crone va demostrar mitjançant el buidatge de fonts gregues, llatines i aràbigues que la Meca no dominava les grans rutes d'espècies internacionals (que ja es feien principalment per via marítima). El comerç mecà era essencialment d'abast regional: cuir, llana, resines, queviures i or de les mines properes.</li>
+        <li><strong>El consens historiogràfic contemporani (Fred Donner, Robert Hoyland):</strong> La preeminència de la Meca no raïa en un gran monopoli del trànsit internacional, sinó en la seva condició de <strong>santuari sagrat inviolable (<em>haram</em>)</strong>. Els Quraysh van saber vincular el seu comerç a la gestió del santuari de la Kaaba. Durant els «mesos sagrats» de pelegrinatge, tota hostilitat bèl·lica quedava estrictament proscrita a l'entorn del santuari, la qual cosa permetia la celebració de grans fires comercials i certàmens de poesia a ciutats properes com Ukaz. La Meca operava com un node d'arbitratge diplomàtic, religiós i mercantil que conferia als Quraysh una autoritat moral hegemònica a tot el Hijaz.</li>
+      </ul>
+
+      <h4>El mosaic religiós: politeisme politeístic, presència abrahàmica i els <em>hunafa'</em></h4>
+      <p>La Península Aràbiga preislàmica era un espai de profunda complexitat i efervescència religiosa, on coexistien estructures politeistes arcaiques amb tradicions monoteistes scripturàries consolidades:</p>
+
+      <p><strong>1. El politeisme aràbic i el culte als betils:</strong><br>
+      La religió tradicional dels beduïns i de les ciutats del Hijaz era una forma de politeisme local i astral, descrita detalladament per l'erudit Hisham ibn al-Kalbi (m. 819 dC) en el seu <em>Kitab al-Asnam</em> («El Llibre dels Ídols»). Aquestes divinitats no residien en conceptes abstractes, sinó que es manifestaven sovint en pedres sagrades, betils o megàlits (*ansab*), que actuaven com a receptacles del poder diví (el que Mircea Eliade conceptualitza com una *hierofania lític-sagrada*). Al voltant de la <strong>Kaaba</strong> de la Meca —un edifici cúbic d'origen antiquíssim— es congregaven unes 360 representacions de divinitats tutelars, entre les quals sobresortia el déu <strong>Hubal</strong>, venerat amb rituals de sacrifici i adivinació mitjançant fletxes sagrades.</p>
+
+      <p>Al costat d'aquest panteó, ocupaven una posició preeminent tres deesses considerades popularment com les «filles d'Al·là» (<em>banat Allah</em>):</p>
+      <ul>
+        <li><strong>Al-Lat:</strong> Deessa mare de la fertilitat i de la vegetació, el santuari principal de la qual es trobava a Taïf, venerada en forma d'un gran bloc de pedra blanca cúbica.</li>
+        <li><strong>Al-Uzza:</strong> «La Més Poderosa», deessa de la guerra i de l'estrella del matí (el planeta Venus), el centre de culte de la qual se situava a la vall de Nakhla, prop de la Meca, envoltada d'acàcies sagrades.</li>
+        <li><strong>Manat:</strong> Deessa primordial del destí inexorable i de la mort, venerada a la costa de la Mar Roja (a Qudayd), a la qual acudien en pelegrinatge tant les tribus paganes de la Meca com les de Medina.</li>
+      </ul>
+
+      <p>Darrere d'aquesta multiplicitat, la figura d'<strong>Al·là</strong> (*al-Ilah*, literalment «el Déu») era reconeguda com la divinitat suprema, creadora de l'univers i garant última dels juraments solemnes. Tanmateix, seguint un model clàssic d'<em>henoteisme</em> o *deus otiosus*, Al·là era percebut com una entitat remota que no intervenia directament en les necessitats quotidianes dels éssers humans. Per això, la devoció popular es canalitzava cap a les deesses i els déus menors, concebuts com a intercessors (*shufa'a*) davant la deïtat superior.</p>
+
+      <p><strong>2. El judaisme aràbic:</strong><br>
+      El judaisme gaudia d'un arrelament secular a la península, fruit tant de migracions històriques (després de les destruccions del Temple de Jerusalem el 586 aC i el 70 dC) com de la conversió activa de poblacions autòctones àrabs. Al Hijaz septentrional, els oasis més rics com <strong>Yathrib</strong> (la futura Medina), <strong>Khaybar</strong>, Fadak i Tayma estaven dominats o fortament influïts per tribus jueves (com els Banu Qurayza, els Banu al-Nadir i els Banu Qaynuqa). Aquestes comunitats eren mestres en l'agricultura de regadiu i la metal·lúrgia, i van introduir en l'imaginari àrab categories teològiques fonamentals: la noció d'escriptura revelada (la Torà), la llei divina codificada, el descans sabàtic, el judici escatològic i l'esperança en l'adveniment d'una figura messiànica.</p>
+
+      <p><strong>3. El cristianisme:</strong><br>
+      El cristianisme era present tant en les fronteres imperials com en l'interior peninsular. A més dels regnes gassànida i làxmida, hi havia comunitats episcopals a l'Aràbia oriental (Qatar, Bahrain i Oman), la cèlebre seu màrtir de Najran al sud, i presència de monjos anacoretes als deserts que envolten el Sinaí i Síria. A través del contacte diari amb caravanes mercantils, els habitants del Hijaz estaven familiaritzats amb les narracions evangèliques apòcrifes (especialment sobre la infantesa de Jesús), la doctrina de la resurrecció dels cossos i l'ascetisme monàstic.</p>
+
+      <p><strong>4. Els <em>hunafa'</em> (singular: <em>hanif</em>):</strong><br>
+      Tant l'Alcorà com la tradició historiogràfica primerenca documenten l'existència, a finals del segle VI, d'una categoria d'individus coneguts com a <em>hunafa'</em>. Es tractava de cercadors espirituals autòctons que sentien una profunda aversió per la idolatria politeista i les pràctiques sanguinàries tribals, però que alhora rebutjaven integrar-se institucionalment en el judaisme rabínic o en el cristianisme eclesiàstic. Els <em>hunafa'</em> (entre els quals la tradició cita figures com Zayd ibn Amr ibn Nufayl o Waraqa ibn Nawfal, cosí de la primera esposa de Muhàmmad) reivindicaven el retorn a la fe pura i originària d'<strong>Abraham (Ibrahim)</strong>, a qui consideraven el constructor primordial de la Kaaba i el patriarca del monoteisme abans de les divisions doctrinals posteriors.</p>
+
+      <div class="callout">
+        <p><strong>Clau metodològica:</strong> L'existència dels <em>hunafa'</em> i la penetració de conceptes bíblics demostren que la predicació de Muhàmmad no va caure sobre un buit cultural, sinó sobre una societat que vivia una accelerada transició espiritual. El terreny semàntic i conceptual per al monoteisme ètic ja estava sembrat; la tasca històrica de l'islam serà sintetitzar-lo, purificar-lo i dotar-lo d'una expressió lingüística i institucional revolucionària.</p>
+      </div>
+    </div>
+
+   <!-- 13.1.2 -->
+    <div id="s12">
+      <h3>13.1.2. Muhàmmad i la gènesi de la comunitat: de la Meca a la constitució de Medina</h3>
+
+      <h4>La qüestió de les fonts històriques: entre la memòria pietosa i la crítica contemporània</h4>
+      <p>L'estudi acadèmic de la figura històrica de <strong>Muhàmmad ibn Abd Al·lah</strong> (c. 570–632 dC) s'enfronta a un dels reptes metodològics més complexos de la ciència de les religions. La imatge tradicional del Profeta descansa principalment sobre tres corpus literaris compilats per la tradició islàmica entre un segle i mig i tres segles després de la seva mort:</p>
+
+      <ul>
+        <li><strong>La <em>Sira</em> (biografia profètica):</strong> Inaugurada per Ibn Ishaq (m. 767 dC) i conservada en la recensió posterior d'Ibn Hisham (m. 833 dC), complementada per la literatura de les campanyes militars (<em>Maghazi</em>) d'al-Waqidi (m. 822 dC). Es tracta d'obres narratives monumentals que barregen memòria històrica, hagiografia pietosa, esquemes èpics àrabs i motius teològics d'arrel bíblica (com la prefiguració de la profecia des de la infantesa).</li>
+        <li><strong>Els <em>Hadits</em> (tradicions transmeses):</strong> Dictàmens, sentències i fets atribuïts a Muhàmmad i als seus companys, avaluats formalment a partir del segle IX mitjançant la cadena de transmissors (<em>isnad</em>).</li>
+        <li><strong>Les cròniques universals:</strong> Obres com la de Muhammad ibn Jarir al-Tabari (m. 923 dC), que integren la història profètica dins del gran arc narratiu de la història de la salvació des de la creació del món.</li>
+      </ul>
+
+      <p>Aquesta distància temporal entre els fets i la seva fixació per escrit va alimentar, a partir de la dècada de 1970, el corrent conegut com a <strong>«revisionisme hipercrític»</strong> (encapçalat per autors com John Wansbrough, Patricia Crone i Michael Cook a <em>Hagarism</em>, 1977). Aquests estudiosos van plantejar la hipòtesi radical que gairebé res del que transmet la literatura musulmana clàssica no és històricament aprofitable, suggerint que l'islam hauria cristal·litzat molt més tard com un moviment monoteista que s'hauria projectat retrospectivament cap a un passat aràbic mític.</p>
+
+      <p>Tanmateix, la investigació historiogràfica i filològica de les últimes tres dècades (representada per investigadors com <strong>Harald Motzki, Gregor Schoeler, Fred Donner, Nicolai Sinai i Robert Hoyland</strong>) ha superat aquest escepticisme extrem, establint un sòlid <strong>consens crític contemporani</strong>:</p>
+
+      <ul>
+        <li><strong>L'Alcorà com a document contemporani indiscutible:</strong> L'anàlisi de manuscrits antiquíssims (com els fragments de Birmingham, datats per radiocarboni entre el 568 i el 645 dC, i els palimpsests de Sanaa), juntament amb l'estudi lingüístic i rítmic (Angelika Neuwirth), confirma que el text alcorànic va ser fixat en el seu conjunt en ple segle VII i constitueix un testimoni de primera mà de la veu profètica i del seu context hijazí.</li>
+        <li><strong>L'existència de testimonis externs immediats:</strong> L'obra de Robert Hoyland (<em>Seeing Islam as Others Saw It</em>, 1997) ha catalogat desenes de fonts no musulmanes contemporànies (grecs, siríacs, armenis i coptes dels anys 630–680 dC) —com la <em>Doctrina Jacobi nuper baptizati</em> (c. 634 dC) o la crònica siríaca de Tomàs el Prevere (c. 640 dC)— que ja anomenen explícitament Muhàmmad com a líder i profeta àrab que lidera una comunitat monoteista militarment activa.</li>
+        <li><strong>La pervivència de documents arcaics autèntics:</strong> Textos com la <em>Constitució de Medina</em>, conservats dins de la mateixa <em>Sira</em>, presenten un llenguatge tan arcaic i un context jurídic tan allunyat dels interessos dinàstics posteriors que la historiografia unànime els reconeix com a documents originals del segle VII transmesos de manera fidedigna.</li>
+      </ul>
+
+      <h4>El període mecà (c. 610–622 dC): escatologia imminent i crisi de l'oligarquia qurayshita</h4>
+      <p>Segons la tradició històrica, Muhàmmad va néixer a la Meca cap a l'any 570 dC en el si del clan dels <strong>Banu Hashim</strong>, un llinatge aristocràtic de la tribu dels Quraysh que, tot i gaudir d'un alt prestigi religiós vinculat a la custòdia del pou sagrat de Zamzam, havia quedat relegat econòmicament enfront de clans mercantils més rics i agressius com els Banu Umayya o els Banu Makhzum. Havent quedat orfe de pare i de mare a la primera infantesa, Muhàmmad va créixer sota la tutela del seu avi Abd al-Muttalib i, posteriorment, del seu oncle Abu Talib. La seva activitat com a administrador de caravanes comercials el va posar en contacte directe amb la rica comerciant <strong>Khadija bint Khuwaylid</strong>, amb qui va contraure un matrimoni monogàmic que durà més de dues dècades i que li va atorgar independència material i un suport emocional i intel·lectual fonamental.</p>
+
+      <p>Cap a l'any 610 dC, en el curs dels seus retirs espirituals habituals a la cova del mont <strong>Hira</strong>, als afores de la Meca, Muhàmmad va experimentar la seva primera experiència numinosa, descrita com un mandat auditiu i visionari aclaparador transmès per l'arcàngel Gabriel (<em>Jibril</em>), que l'instava a proclamar el text diví: <em>Iqra'</em> («Recita!» o «Proclama!», inici de la sura 96, <em>al-Alaq</em>). Aquesta commoció existencial inicial va ser confortada per Khadija i pel seu cosí Waraqa ibn Nawfal, qui, des del seu profund coneixement de les escriptures monoteistes, va interpretar que Muhàmmad havia rebut el mateix <em>Nomos</em> (llei/revelació) atorgat anteriorment a Moisès.</p>
+
+      <p>El contingut de les primeres revelacions mecanes (les sures cronològicament més antigues de l'Alcorà) es caracteritza per un llenguatge poètic breu, urgent, d'una tensió rítmica esfereïdora i d'un impacte emocional insòlit. Lluny d'un tractat abstracte, el missatge fundacional s'articulava sobre tres eixos indissociables:</p>
+
+      <ol>
+        <li><strong>Escatologia apocalíptica i judici imminent:</strong> L'afirmació contundent que la història humana no és un cicle infinit dominat pel destí cec (<em>dahr</em>), sinó un temps lineal que s'acosta al seu judici definitiu (<em>Yawm al-Din</em>). La terra i el cosmos seran destruïts i cada ésser humà serà ressuscitat per respondre davant Déu de la seva responsabilitat moral.</li>
+        <li><strong>El Tawhid intransigent:</strong> La denúncia explícita de la inutilitat dels ídols de la Kaaba (Hubal, al-Lat, al-Uzza, Manat). Les deïtats paganes són desemmascarades com a mers noms inventats pels avantpassats, incapaços de crear, proveir vida o intercedir davant l'únic Senyor dels mons (<em>Rabb al-Alamin</em>).</li>
+        <li><strong>Justícia social i denúncia de la cobdícia:</strong> Un atac frontal contra la plutocràcia mercantil dels Quraysh. L'Alcorà mecà condemna amb vehemència l'acumulació obsessiva de riquesa (<em>kanz</em>), l'engany en els pesos i mesures de les balances comercials, la supèrbia dels qui es creuen autosuficients (<em>istighna'</em>) i la desatenció despietada cap als estrats més indefensos de la societat tribal: els orfes, els captaires, els captius i la pràctica de l'infanticidi femení (<em>wa'd</em>).</li>
+      </ol>
+
+      <p>Aquest missatge va atreure inicialment un cercle reduït de conversos: la seva esposa Khadija, el seu jove cosí Ali ibn Abi Talib, el seu llibert Zayd ibn Haritha, el seu amic i respectat comerciant Abu Bakr, i un nombre significatiu de joves i individus sense protecció clanica efectiva (com l'esclau abissini Bilal ibn Rabah). Tanmateix, l'oligarquia qurayshita va percebre ràpidament el caràcter revolucionari i subversiu de la predicació. L'atac als déus tradicionals no era només una heretgia teològica: amenaçava directament el prestigi sagrat del santuari de la Meca, qüestionava la legitimitat aristocràtica dels líders tribals i desarticulava el comerç vinculat a les fires religioses.</p>
+
+      <p>L'oposició dels Quraysh va evolucionar ràpidament de la burla a l'hostilitat sistemàtica: campanyes de difamació (qualificant Muhàmmad de posseït per un geni, <em>majnun</em>, de bruixot o de poeta delirant), agressions físiques contra els creients desprotegits, l'emigració d'un contingent de musulmans cap al regne cristià d'Aksum (c. 615 dC) buscant asil sota el monarca Najashi, i el posterior <strong>boicot econòmic i social</strong> imposat a tot el clan dels Banu Hashim.</p>
+
+      <p>La crisi va assolir el seu punt crític l'any 619 dC, conegut en la tradició com l'<strong>«Any de la Tristesa» (<em>Am al-Huzn</em>)</strong>, arran de la mort gairebé consecutiva de Khadija i del seu protector clanic, Abu Talib. La direcció dels Banu Hashim va recaure en un altre oncle, Abu Lahab, enemic acèrrim de la nova fe, que va retirar formalment la protecció del clan a Muhàmmad. En el dret consuetudinari àrab, un individu desposseït de la tutela del seu llinatge podia ser assassinat impunement sense perill de represàlies de sang. Conscient que la seva continuïtat a la Meca era insostenible, Muhàmmad va provar sense èxit d'obtenir la protecció de la ciutat veïna de Taïf i va començar a negociar discretament amb els pelegrins que visitaven les fires comercials de la Meca.</p>
+
+      <h4>L'Hègira (622 dC): de la persecució a la refundació política</h4>
+      <p>La salvació del projecte profètic va provenir de l'oasi de <strong>Yathrib</strong>, situat a uns 350 quilòmetres al nord de la Meca. Yathrib (la futura <em>Madinat al-Nabi</em>, «Ciutat del Profeta», simplificada com <strong>Medina</strong>) era un assentament agrícola ric i fèrtil habitat per dues grans tribus àrabs politeistes rivals (els <strong>Aws</strong> i els <strong>Khazraj</strong>) i tres tribus jueves principals (<strong>Banu Qaynuqa, Banu al-Nadir i Banu Qurayza</strong>). Les guerres intestines entre els Aws i els Khazraj (que havien culminat en la sagnant batalla de Bu'ath cap al 617 dC) havien deixat la comunitat esgotada i sumida en una espiral destructiva de venjances creuades que el sistema tribal era incapaç de resoldre.</p>
+
+      <p>Els habitants de Yathrib —acostumats al vocabulari monoteista i a les expectatives messiàniques transmeses pels seus veïns jueus— van veure en Muhàmmad no només un home pietós, sinó un <strong>àrbitre neutral (*hakam*)</strong> imparcial i dotat d'autoritat divina, capaç de pacificar l'oasi. Mitjançant els dos <strong>Pactes d'al-Aqaba</strong> (621 i 622 dC), representants dels Aws i els Khazraj van jurar obeir el Profeta i protegir-lo militarment amb les seves pròpies vides a canvi d'admetre la seva autoritat religiosa i civil.</p>
+
+      <p>Durant l'estiu de l'any 622 dC, els musulmans de la Meca van començar a evacuar la ciutat de manera esglaonada cap a Yathrib. Finalment, després d'esquivar un complot dels Quraysh per assassinar-lo al seu propi llit, Muhàmmad i Abu Bakr van emprendre una arriscada travessia pel desert fins a arribar a l'oasi de Medina al setembre del 622 dC. Aquest trasllat fundacional és l'<strong>Hègira (<em>Hijra</em>)</strong>.</p>
+
+      <p>Des del punt de vista de la història de les religions, l'Hègira no és una simple fugida geogràfica, sinó una **fractura ontològica i sociològica radical**. Implicava la renúncia deliberada a la solidaritat del clan natal a canvi d'un pacte fideïcomissari sagrat amb una nova comunitat. Per aquesta raó transcendent, el segon califa Umar ibn al-Khattab establiria oficialment l'any 622 dC com l'inici absolut (Any 1) de l'<strong>era musulmana</strong> (*taqwim hijri*): el temps històric islàmic no comença amb el naixement ni amb la mort del profeta, sinó amb la constitució visible i emancipada de la comunitat dels creients.</p>
+
+      <h4>La Constitució de Medina (<em>Sahifat al-Madina</em>) i la invenció de la Umma</h4>
+      <p>Immediatament després de la seva arribada a Medina, Muhàmmad va promulgar un text contractual d'una importància cabdal: la <strong><em>Sahifat al-Madina</em></strong> (sovint traduïda com la «Carta» o «Constitució de Medina»). Aquest document històric, preservat a la biografia d'Ibn Hisham, articulava les bases de la coexistència cívica i militar entre els diferents grups de l'oasi:</p>
+
+      <ul>
+        <li>Els <strong>Muhajirun</strong> («Emigrants»): Els musulmans que havien abandonat la Meca desposseïts de tot patrimoni.</li>
+        <li>Els <strong>Ansar</strong> («Auxiliars»): Els conversos medinesos de les tribus Aws i Khazraj que acollien i acollien els nouvinguts.</li>
+        <li>Les diverses <strong>tribus jueves</strong> de l'oasi i els seus clients associats.</li>
+        <li>Els clans pagans medinesos que encara no havien acceptat l'islam.</li>
+      </ul>
+
+      <p>La troballa política més revolucionària de la Carta és la proclamació que tots aquests grups heterogenis passen a formar <strong>«una única comunitat separada de la resta dels homes» (<em>umma wahida min dun al-nas</em>)</strong>. Aquesta formulació dinamitava l'estructura clàssica de la solidaritat aràbica:</p>
+
+      <ul>
+        <li><strong>Superació de l'asabiyya:</strong> La lleialtat fonamental ja no respon a la consanguinitat biològica, sinó al pacte confederal i religiós comú. Un musulmà no podia aliar-se amb un familiar politeista en contra d'un altre creient.</li>
+        <li><strong>Monopoli i centralització de la justícia:</strong> La venjança privada queda abolida. Qualsevol conflicte intern que amenaça la pau de l'oasi ha de ser sotmès a l'arbitratge final «d'Al·là i de Muhàmmad, el Seu Missatger», instaurant un embrió de dret públic i d'estat centralitzat.</li>
+        <li><strong>Estatut de les comunitats jueves:</strong> El document estableix expressament que «els jueus tenen la seva religió (<em>din</em>) i els musulmans la seva», reconeixent la seva personalitat jurídica, el dret a la llibertat de culte i la seguretat dels seus béns. A canvi, els jueus s'obligaven a contribuir a les despeses militars comunes i a prestar suport defensiu incondicional en cas que Medina fos atacada per un enemic extern.</li>
+      </ul>
+
+      <h4>Tensions doctrinals, ruptura amb els clans jueus i la nova Qibla</h4>
+      <p>En un primer moment, Muhàmmad esperava que les comunitats jueves de Medina, coneixedores de les escriptures monoteistes, acceptessin la seva condició profètica com a continuador legítim de la tradició mosaica. Per facilitar aquest apropament, els musulmans van adoptar inicialment pràctiques anàlogues a les jueves: l'orientació de la pregària cap a <strong>Jerusalem</strong>, el dejuni del dia d'Ashura (coincident amb el <em>Yom Kippur</em> jueu) i la celebració de la pregària comunitària dels divendres com a preparació del sàbat.</p>
+
+      <p>Tanmateix, la gran majoria dels líders rabínics de Medina van rebutjar categòricament la pretensió de Muhàmmad. Des de la seva perspectiva scripturària, un àrab que no pertanyia al llinatge d'Isaac i David no podia ser el profeta esperat. A més, els doctors jueus van començar a assenyalar amb ironia discrepàncies narratives entre els relats alcorànics i el text hebreu de la Torà.</p>
+
+      <p>La resposta alcorànica a aquest xoc intel·lectual va marcar un canvi d'època en la identitat de l'islam. L'Alcorà va formular la tesi que Muhàmmad no venia a imitar el judaisme rabínic ni el cristianisme eclesiàstic, sinó a restaurar la puresa original de la <strong>religió d'Abraham (<em>Millat Ibrahim</em>)</strong>, l'arquetip del monoteista primordial (<em>hanif</em>) que havia viscut segles abans de la promulgació de la Torà i de l'Evangeli (Sura 3:67: <em>«Abraham no era jueu ni cristià, sinó monoteista sincer [hanif] sotmès a Déu [muslim]»</em>). Aquesta emancipació teològica es va consumar simbòlicament cap a l'any 624 dC mitjançant la revelació que ordenava el <strong>canvi de la Qibla</strong> (l'adreça de la pregària): els creients deixaven de mirar cap a Jerusalem per girar-se definitivament cap a la <strong>Kaaba de la Meca</strong>, el santuari abrahàmic per excel·lència.</p>
+
+      <p>Paral·lelament a aquest distanciament religiós, es va produir una escalada de tensió geopolítica i militar a Medina. Els clans jueus van començar a ser percebuts per Muhàmmad no només com a dissidents teològics, sinó com a potencials col·laboradors de l'oligarquia dels Quraysh en el context de la guerra oberta que enfrontava Medina amb la Meca. Això va derivar en la ruptura progressiva dels pactes de la <em>Sahifa</em> i en l'expulsió successiva de dues de les grans tribus jueves després d'episodis de traïció o violacions de la seguretat comuna: els <strong>Banu Qaynuqa</strong> (el 624 dC, després de Badr) i els <strong>Banu al-Nadir</strong> (el 625 dC, després d'Uhud).</p>
+
+      <h4>La lluita militar contra la Meca: de Badr al triomf d'al-Hudaybiyya</h4>
+      <p>Per sostenir econòmicament els Emigrants desposseïts i forçar la Meca a negociar, la comunitat musulmana va començar a interceptar les caravanes mercantils dels Quraysh que vorejaven el Hijaz rumb a Síria. El que va començar com a escaramusses locals va desencadenar una guerra a gran escala:</p>
+
+      <ol>
+        <li><strong>La Batalla de Badr (624 dC):</strong> Un contingent musulmà d'uns 300 homes va infligir una derrota humiliant a un exèrcit mecà tres vegades superior. La victòria va ser interpretada com una intervenció divina miraculosa (un «dia del discerniment», <em>Yawm al-Furqan</em>) que va consolidar el lideratge indiscutible de Muhàmmad sobre tot l'oasi i va atreure l'adhesió de noves tribus beduïnes.</li>
+        <li><strong>La Batalla d'Uhud (625 dC):</strong> Sedents de revenja, els Quraysh, comandats per Abu Sufyan, van mobilitzar un poderós exèrcit i van vèncer els musulmans prop de Medina. Muhàmmad mateix va ser ferit en combat i el seu oncle Hamza va ser mutilat i mort. Tanmateix, els mequians no van ser capaços d'explotar la victòria ni d'entrar a la ciutat, retirant-se sense haver destruït la comunitat.</li>
+        <li><strong>La Batalla de la Rasa (<em>al-Khandaq</em>, 627 dC):</strong> Els Quraysh van forjar una gran confederació de 10.000 guerrers que van assetjar Medina amb la intenció d'aniquilar definitivament l'islam. Aconsellat pel convers persa Salman al-Farsi, Muhàmmad va fer cavar una profunda rasa defensiva que va inutilitzar la cavalleria enemiga. Després d'un setge prolongat marcat pel fred i la discòrdia entre els aliats, els confederats es van dispersar en una humiliant retirada.</li>
+      </ol>
+
+      <p>L'endemà d'Uhud i la Rasa, es va produir l'episodi més tràgic i discutit de la trajectòria medinesa: el judici i càstig dels <strong>Banu Qurayza</strong>, la darrera tribu jueva que romania a l'oasi. Acusats d'haver pactat en secret amb els assetjadors mequians per atacar els musulmans per la rereguarda durant el setge (fet que hauria comportat l'extermini de tota la comunitat musulmana), la tribu va capitular incondicionalment. La sentència va ser encomanada a Sad ibn Mu'adh (cap dels Aws, clan aliat tradicional dels Qurayza), qui va dictaminar que tots els homes en edat militar fossin executats per alta traïció en temps de guerra i que les dones i criatures fossin preses com a captius. La historiografia crítica contemporània (Fred Donner, Maxime Rodinson) analitza aquest fet no com un acte de persecució antisemita de caràcter racial o religiós, sinó com una brutal mesura política i bèl·lica de l'Antiguitat Tardana per eliminar definitivament el perill d'una cinquena columna interna i consolidar el control exclusiu de Medina.</p>
+
+      <h4>La conquesta incruenta de la Meca i el pelegrinatge de comiat (628–632 dC)</h4>
+      <p>L'any 628 dC, Muhàmmad va demostrar una consumada visió diplomàtica en encapçalar una marxa pacífica de 1.400 pelegrins desarmats cap a la Meca. Davant l'oposició armada dels Quraysh, es va negociar el <strong>Tractat d'al-Hudaybiyya</strong>: un pacte de no-agressió per deu anys en què el Profeta va acceptar concessions aparentment desfavorables (com retornar als mequians els conversos que fugissin sense permís del seu tutor). Tot i el descontentament inicial d'alguns companys com Umar, el tractat va ser una victòria estratègica monumental: la Meca reconeixia per primera vegada la igualtat política i jurídica de la comunitat musulmana, i la treva va obrir un període de pau que va accelerar les conversions espontànies d'il·lustres estrategs com Khalid ibn al-Walid i Amr ibn al-As.</p>
+
+      <p>Quan dos anys després els aliats dels Quraysh van violar els termes de la treva, Muhàmmad va marxar sobre la Meca l'any <strong>630 dC (any 8 de l'Hègira)</strong> al capdavant d'un contingent imparable de 10.000 homes. La ciutat es va rendir pràcticament sense vessament de sang. Lluny d'executar una venjança massiva, Muhàmmad va proclamar una <strong>amnistia general</strong> per a la població (els <em>tulaqa'</em>, inclòs el seu vell enemic Abu Sufyan). En un acte d'una transcendència simbòlica incommensurable, el Profeta va penetrar al recinte de la <strong>Kaaba</strong> i va destruir personalment un per un tots els ídols i representacions politeistes que l'omplien, recitant el versicle alcorànic: <em>«Ha arribat la Veritat i ha desaparegut la Falsedat; en veritat la falsedat és efímera»</em> (Sura 17:81). La Kaaba quedava redimida com el santuari universal del Déu únic, eix espiritual i centre de gravetat del monoteisme abrahàmic.</p>
+
+      <p>Durant els dos darrers anys de la seva vida, la immensa majoria de les tribus de la Península Aràbiga van enviar delegacions a Medina per prestar jurament de lleialtat i tributació (el cèlebre «Any de les Delegacions», 630–631 dC). Al març del 632 dC, Muhàmmad va realitzar el seu <strong>Pelegrinatge de Comiat (<em>Hajjat al-Wada'</em>)</strong>, en el qual va pronunciar el seu discurs testamentari davant de desenes de milers de seguidors al mont Arafat, proclamant la inviolabilitat sagrada de la vida, la propietat i l'honor, i consagrant l'absoluta igualtat espiritual de tots els éssers humans:</p>
+
+      <blockquote>
+        <p>«Oh gent! El vostre Senyor és un i el vostre avantpassat és un. Tots descendiu d'Adam, i Adam va ser creat de la pols. Cap àrab no té superioritat sobre un no àrab, ni un no àrab sobre un àrab; cap blanc no té superioritat sobre un negre, ni un negre sobre un blanc, excepte per la pietat i el bon obrar.»</p>
+      </blockquote>
+
+      <p>Pocs mesos després, el 8 de juny de 632 dC (13 de Rabi al-Awwal de l'any 11 de l'Hègira), Muhàmmad va morir a Medina a l'edat aproximada de 62 anys, a les estances de la seva jove esposa <strong>Aixa bint Abi Bakr</strong>, deixant un buit institucional sense precedents que obriria la gran qüestió de la successió en el lideratge de la Umma.</p>
+
+      <div class="callout">
+        <p><strong>Clau metodològica (Max Weber i Fred Donner):</strong> La trajectòria de Muhàmmad exemplifica la transició d'un carisma purament ètico-profètic (el període mecà) a la fundació d'una autoritat teològico-política legal (el període medinès). Com ha subratllat Fred Donner a <em>Muhammad and the Believers</em>, el moviment inicial no es concebia com una religió excloent delimitada per barreres burocràtiques, sinó com una comunitat de «creients» (<em>mu'minun</em>) lliurada a la praxi del monoteisme estricte i a la purificació ètica abans de la fi dels temps.</p>
+      </div>
+    </div>
+
+   <!-- 13.1.3 -->
+    <div id="s13">
+      <h3>13.1.3. Els primers califats (Raixidun), Omeia i Abàssida: de la comunitat carismàtica a l'imperi universal</h3>
+
+      <h4>La crisi successòria a la Saqifa i l'era dels Califes Ben Guiats (<em>al-Khulafa' al-Raixidun</em>, 632–661 dC)</h4>
+      <p>La mort sobtada de Muhàmmad l'any 632 dC va precipitar una crisi institucional sense precedents en la jove comunitat musulmana. En tant que «Segell dels Profetes», la seva autoritat carismàtica i revelatòria era per definició irreemplaçable: ningú no podia al·legar una nova comunicació divina. Tanmateix, calia determinar amb urgència qui assumia la direcció política, militar i judicial de la Umma. Mentre el cos del Profeta era preparat per a l'enterrament per la seva família directa (encapçalada pel seu gendre i cosí Ali ibn Abi Talib), els líders dels auxiliars medinesos (Ansar) es van reunir d'urgència al pòrtic dels <strong>Banu Sa'ida (la <em>Saqifa</em>)</strong> per escollir un líder propi.</p>
+
+      <p>Informat de la trobada, Abu Bakr, acompanyat per Umar ibn al-Khattab i Abu Ubayda (representants dels Emigrants mequians, Muhajirun), va intervenir decisivament en el debat. Argumentant que les tribus de la Península Aràbiga mai no acatarien l'autoritat d'un líder que no pertanyés a la tribu hegemònica dels Quraysh, Umar va prendre la iniciativa i va prestar jurament de fidelitat (<em>bay'a</em>) a <strong>Abu Bakr</strong>. Aquest compromís va ser acceptat per la majoria dels presents, investint-lo com a <strong><em>Khalifat Rasul Allah</em></strong> («Successor del Missatger de Déu», títol d'on deriva el mot <em>califa</em>).</p>
+
+      <p>Aquest acord d'emergència, tanmateix, va contenir la llavor de la fractura teològica i política més profunda de l'islam. Una facció influent de la comunitat —l'anomenada <em>Shi'at Ali</em> («la facció d'Ali»)— sostenia que el lideratge no havia de quedar a mercè d'acords polítics o consensos tribals arbitraris, sinó que corresponia legítimament a la família profètica (l'<em>Ahl al-Bayt</em>) i, en concret, a <strong>Ali ibn Abi Talib</strong>, qui, segons la tradició xiïta posterior, hauria estat designat explícitament pel mateix Muhàmmad durant el retorn del Pelegrinatge de Comiat a l'oasi de <strong>Ghadir Khumm</strong>.</p>
+
+      <p>La tradició sunnita va consagrar posteriorment els quatre primers successors com els <strong>Califes Ben Guiats (<em>al-Khulafa' al-Raixidun</em>)</strong>, considerant el seu govern de tres dècades com l'edat daurada de la virtut piadosa i la fidelitat a l'esperit profètic:</p>
+
+      <ol>
+        <li><strong>Abu Bakr al-Siddiq (632–634 dC):</strong> El seu breu califat va estar marcat per les anomenades <strong>Guerres de la Ridda (Guerres de l'Apostasia)</strong>. Amb la mort de Muhàmmad, nombroses confederacions tribals del centre i sud d'Aràbia van considerar extingits els seus pactes tributaris, van refusar pagar la <em>Zakat</em> a Medina i van seguir líders profètics locals autòctons (com Musaylima al-Kadhdhab a la Yamama). Mitjançant una campanya militar implacable dirigida per l'estrateg Khalid ibn al-Walid, Abu Bakr va esclafar els dissidents, va reunificar la Península sota l'hegemonia medinesa i va canalitzar l'energia guerrera de les tribus cap a l'exterior de les fronteres aràbigues.</li>
+
+        <li><strong>Umar ibn al-Khattab (634–644 dC):</strong> El gran arquitecte de l'expansió imperial i de la primera institucionalització estatal. Sota el seu comandament, els exèrcits àrabs van aprofitar l'extenuació mútua de Bizanci i Pèrsia després de dècades de guerres devastadores. A la <strong>Batalla del Yarmuk (636 dC)</strong>, van derrotar l'exèrcit imperial romà d'Orient, obrint les portes a la conquesta de Damasc, Síria i Palestina, culminada amb la capitulació pacífica de Jerusalem l'any 638 dC. Paral·lelament, a la <strong>Batalla d'al-Qadisiyya (636 dC)</strong> i a <strong>Nihavand (642 dC)</strong>, els musulmans van destruir l'exèrcit imperial de Pèrsia, provocant el col·lapse definitiu de la dinastia Sassànida i la conquesta de Mesopotàmia i de l'altiplà iranià. Per la seva banda, el general Amr ibn al-As va arrabassar Egipte a Bizanci (640–642 dC).<br><br>
+        Umar va establir les bases de l'administració de conquesta:
+        <ul>
+          <li><strong>Fundació de ciutats-campament (<em>amsar</em>):</strong> Com <strong>Kufa</strong> i <strong>Bàssora</strong> a l'Iraq, i <strong>Fustat</strong> a Egipte. Els guerrers àrabs tenien prohibit adquirir terres als territoris conquerits i s'havien d'aquarterar en aquests campaments per evitar la seva assimilació per les poblacions autòctones i preservar la disciplina militar.</li>
+          <li><strong>La institució del <em>Diwan</em>:</strong> Un registre burocràtic centralitzat que recollia els ingressos tributaris de les províncies i distribuïa pensions monetàries periòdiques (<em>ata'</em>) als membres de la comunitat segons la seva antiguitat en la conversió a l'islam (el principi de la <em>sabiqa</em>).</li>
+          <li><strong>L'Estatut de la <em>Dhimma</em>:</strong> La protecció jurídica i de culte atorgada a les poblacions monoteistes («Gent del Llibre»: cristians, jueus i zoroastrians) a canvi del pagament d'un impost sobre la propietat agrícola (<em>kharaj</em>) i un impost de capitació personal (<em>jizya</em>).</li>
+        </ul>
+        Umar va morir assassinat a la mesquita de Medina l'any 644 dC a mans d'un esclau persa anomenat Abu Lu'lu'a.</li>
+
+        <li><strong>Uthman ibn Affan (644–656 dC):</strong> Membre de la rica aristocràcia dels <strong>Banu Umayya</strong> de la Meca, escollit per un consell restringit d'electors (<em>shura</em>). Durant el seu govern, les conquestes van prosseguir cap a Líbia al nord d'Àfrica, i cap al Caucas, Xipre i l'Àsia Central. L'aportació de major rellevància teològica del seu mandat va ser la <strong>codificació canònica de l'Alcorà</strong> (c. 650 dC): davant la proliferació de variants textuals que amenaçaven la unitat religiosa de les tropes a les províncies, va ordenar compilar una recensió oficial autoritzada i destruir totes les còpies divergents.<br><br>
+        Tanmateix, la segona meitat del seu califat va estar marcada per una greu crisi de legitimitat. Uthman va ser acusat de nepotisme sistemàtic per haver col·locat membres del seu propi clan omeia en els governs provincials més lucratius (com el seu cosí Mu'awiya a Síria) i d'haver desviat fons públics. L'any 656 dC, contingents de tropes rebels procedents d'Egipte i Kufa van marxar sobre Medina, van assetjar la seva residència i el van assassinar mentre llegia l'Alcorà, obrint una ferida cismàtica inesborrable.</li>
+
+        <li><strong>Ali ibn Abi Talib (656–661 dC) i la Primera Guerra Civil (<em>Fitna</em>):</strong> Proclamat califa pels rebels i pels ciutadans de Medina, Ali va assumir el poder en un clima de fractura total. El seu mandat va estar íntegrament dominat per la <strong>Primera <em>Fitna</em> (656–661 dC)</strong>:
+        <ul>
+          <li><strong>La Batalla del Camell (656 dC):</strong> Lluitada a les afores de Bàssora, on Ali va derrotar la facció opositora encapçalada pels prestigiosos companys Talha i al-Zubayr, i per la mateixa vídua de Muhàmmad, <strong>Aixa</strong>, qui va contemplar el combat des del seu palanquí sobre un camell.</li>
+          <li><strong>La Batalla de Siffin (657 dC):</strong> A la vora de l'Eufrates, Ali es va enfrontar a l'exèrcit sirià de <strong>Mu'awiya ibn Abi Sufyan</strong>, qui exigia venjança de sang per l'assassinat del seu cosí Uthman abans de reconèixer l'autoritat del nou califa. Quan les tropes d'Ali estaven a punt d'imposar-se, els sirians van clavar fulls de l'Alcorà a les puntes de les seves llances clamant per un arbitratge judicial basat en la llei divina. Ali va acceptar aturar la batalla i nomenar àrbitres.</li>
+          <li><strong>L'escissió dels Kharijites (<em>Khawarij</em>):</strong> Un sector de les tropes més radicals d'Ali va considerar que sotmetre la voluntat de Déu a un arbitratge humà era una traïció sacrílega al lema «No hi ha més judici que el de Déu» (<em>La hukma illa li-Llah</em>). Aquests dissidents van abandonar l'exèrcit (d'on prové el mot <em>kharijita</em>, «els qui se'n van anar») i es van convertir en enemics mortals tant d'Ali com de Mu'awiya, desenvolupant una teologia fanàtica que considerava qualsevol musulmà pecador com un apòstata digne de mort.</li>
+        </ul>
+        El gener de l'any 661 dC, mentre entrava a la mesquita de Kufa (on havia traslladat la capital), Ali va ser assassinat per l'espasa enverinada del kharijita Abd al-Rahman ibn Muljam. La seva mort posava fi oficialment al període dels Califes Raixidun.</li>
+      </ol>
+
+      <h4>L'Imperi Omeia de Damasc (661–750 dC): arabització, monarquia dinàstica i fractura confessional</h4>
+      <p>Després de l'assassinat d'Ali i de la renúncia forçada del seu primogènit al-Hasan a canvi d'una compensació econòmica, <strong>Mu'awiya I</strong> es va proclamar califa a Jerusalem i va inaugurar el <strong>Califat Omeia (661–750 dC)</strong>. Mu'awiya va dur a terme una transformació política estructural: va traslladar definitivament la capitalitat imperial de Medina a <strong>Damasc</strong> (centre del seu poder militar sirià) i va substituir el model electiu-consultiu (<em>shura</em>) per un sistema monàrquic hereditari (<em>mulk</em>), designant en vida el seu fill Yazid com a successor.</p>
+
+      <p>Aquesta ruptura dinàstica va desfermar la <strong>Segona <em>Fitna</em> (680–692 dC)</strong>, marcada per dos fets fundacionals:</p>
+      <ul>
+        <li><strong>El martiri d'al-Husayn a Karbala (680 dC):</strong> El segon fill d'Ali, <strong>al-Husayn ibn Ali</strong>, va refusar jurar lleialtat a Yazid I i va marxar cap a Kufa amb un petit contingent de 72 seguidors i familiars. Encerclats a les planes de <strong>Karbala</strong> (Iraq) per un exèrcit omeia aclaparadorament superior, Husayn i tots els seus companys van ser massacrats el dia 10 del mes de Muharram (l'<strong>Ashura</strong>). Aquest esdeveniment esdevingué l'acte fundacional del <strong>xiisme com a confessió religiosa diferenciada</strong>, transformant una disputa dinàstica inicial en una profunda teologia del martiri, el sacrifici redemptor i la lluita permanent contra la tirania il·legítima.</li>
+        <li><strong>El contra-califat d'Abd Allah ibn al-Zubayr:</strong> Paral·lelament, el fill del prestigiós company al-Zubayr es va proclamar califa a la Meca i va controlar bona part del món islàmic durant gairebé una dècada, fins que la ciutat santa va ser assetjada i bombardejada amb catapultes per les tropes omeies d'al-Hajjaj ibn Yusuf l'any 692 dC.</li>
+      </ul>
+
+      <p>Sota el regnat del califa <strong>Abd al-Malik ibn Marwan (685–705 dC)</strong> i els seus successors, l'Imperi Omeia va assolir el seu apogeu administratiu i territorial:</p>
+
+      <ul>
+        <li><strong>Arabització administrativa i reforma monetària:</strong> Abd al-Malik va desplaçar el grec a Síria i el pahlavi (persa mitjà) a l'Iraq com a llengües de l'administració, instaurant l'<strong>àrab com a llengua burocràtica universal</strong> de l'imperi. Paral·lelament, va reemplaçar les antigues monedes bizantines i sassànides per una moneda pròpia i estrictament anicònica: el <strong>dinar d'or</strong> i el <strong>dírham de plata</strong>, decorats exclusivament amb cal·ligrafia alcorànica proclamant el <em>Tawhid</em>.</li>
+        <li><strong>Monumentalitat arquitectònica com a manifestació de sobirania:</strong> L'any 691 dC, Abd al-Malik va culminar a Jerusalem la construcció de la <strong>Cúpula de la Roca (<em>Qubbat al-Sakhra</em>)</strong>. Aquest edifici —erigit sobre l'antiga esplanada del Temple de Salomó— no era només un santuari que commemorava el viatge nocturn (<em>Isra</em>) i l'ascensió celestial (<em>Mi'raj</em>) de Muhàmmad, sinó un missatge geopolític i teològic dirigit directament a la Cristiandat: les seves inscripcions cal·ligràfiques alcoràniques desafiaven obertament la doctrina trinitària i proclamaven que l'islam era la culminació definitiva de la revelació divina.</li>
+        <li><strong>La màxima expansió territorial:</strong> Per l'oest, les tropes dirigides per Tariq ibn Ziyad i Musa ibn Nusayr van creuar l'estret de Gibraltar el <strong>711 dC</strong>, destruint el regne visigot i incorporant la Península Ibèrica (<strong>al-Andalus</strong>) a l'imperi, penetrant a França fins a ser frenats a la Batalla de Poitiers (732 dC). Per l'est, sota el general Qutayba ibn Muslim i Muhammad ibn al-Qasim, els exèrcits van conquerir la Transoxiana (Samarcanda, Bukharà) i la vall de l'Indus (Sindh), situant les fronteres musulmanes a les portes de l'Índia i l'Àsia Central.</li>
+      </ul>
+
+      <p>Malgrat aquesta grandesa imperial, l'estat omeia arrossegava greus contradiccions estructurals que en precipitarien la caiguda. El règim funcionava fonamentalment com una <strong>casta aristocràtica militar àrab</strong>. Quan milions de súbdits perses, arameus, coptes i amazics es van convertir a l'islam, van ser tractats com a ciutadans de segona classe: eren anomenats <strong><em>Mawali</em></strong> (clients), havien d'adscriure's obligatòriament a una tribu àrab per tenir reconeixement civil i, en contra dels preceptes alcorànics d'igualtat religiosa, se'ls continuava exigint el pagament de la <em>jizya</em> per evitar el col·lapse dels ingressos fiscals de l'estat. Aquest greuge social, sumat al descontentament dels pietistes islàmics davant la vida secular i cortesana dels califes de Damasc i a la insurrecció permanent dels xiïtes i kharijites, va generar un clima revolucionari irreversible.</p>
+
+      <h4>La Revolució Abàssida i la universalització cosmopolita de Bagdad (750–1258 dC)</h4>
+      <p>L'enderrocament dels Omeies va ser fruit d'una conspiració revolucionària meticulosament ordida des de les províncies orientals del <strong>Khurasan</strong> (a l'actual Iran/Àsia Central). Sota la propaganda clandestina de la <strong>Haiximiyya</strong>, els rebels van mobilitzar el descontentament dels <em>Mawali</em> perses i dels simpatitzants alides sota una consigna messiànica deliberadament ambigua: el retorn del poder a «un elegit de la família del Profeta» (<em>al-Rida min Al Muhammad</em>). El cervell militar d'aquesta insurrecció va ser el misteriós general llibert <strong>Abu Muslim al-Khurasani</strong>, qui l'any 747 dC va hissar les <strong>banderes negres</strong> de la revolta.</p>
+
+      <p>L'any 750 dC, a la <strong>Batalla del Zab</strong> (a l'actual Iraq), els exèrcits rebels van aixafar les tropes de l'últim califa omeia, Marwan II. El poder va ser usurpat per una branca de la família profètica diferent dels descendents d'Ali: els descendents d'<strong>al-Abbas</strong>, un oncle patern de Muhàmmad. El primer califa de la nova dinastia, Abu al-Abbas (autoproclamat amb el significatiu títol d'<strong>al-Saffah</strong>, «el Vessador de Sang»), va ordenar la persecució implacable i l'extermini de tota la família omeia (només el jove príncep Abd al-Rahman ibn Mu'awiya va aconseguir escapar a través del nord d'Àfrica per fundar l'any 756 dC l'emirat independent d'al-Andalus a Còrdova).</p>
+
+      <p>L'adveniment del <strong>Califat Abàssida (750–1258 dC)</strong> no va ser un simple relleu dinàstic, sinó una autèntica <strong>mutació civilitzatòria</strong>:</p>
+
+      <ul>
+        <li><strong>Desarabització i universalització de l'Imperi:</strong> La distinció discriminatòria entre àrabs i conversos (<em>Mawali</em>) va ser abolida definitivament. L'islam es va consolidar com una fe universal i cosmopolita on l'elit dirigent va passar a ser compartida per àrabs, perses, turcs i siríacs.</li>
+        <li><strong>El trasllat del centre de gravetat cap a Mesopotàmia:</strong> L'any 762 dC, el segon califa abàssida, <strong>al-Mansur</strong>, va fundar la seva nova capital imperial: <strong>Bagdad</strong> (oficialment anomenada <em>Madinat al-Salam</em>, «la Ciutat de la Pau»). Dissenyada com una colossal ciutat circular a la riba del Tigris, Bagdad va esdevenir en poques dècades la metròpoli més gran, rica i avançada del planeta, amb prop d'un milió d'habitants.</li>
+        <li><strong>Persianització de l'estructura estatal:</strong> Els califes abàssides van abandonar la simplicitat tribal dels primers temps i van adoptar el complex cerimonial cortesà, l'etiqueta hieràtica i l'aparell burocràtic de l'antic Imperi Sassànida. Es va institucionalitzar la figura totpoderosa del <strong>Visir (<em>Wazir</em>)</strong> o primer ministre —il·lustrada per la cèlebre família persa dels <strong>Barmàquides</strong>—, encarregat de coordinar la cancelleria i les finances imperials.</li>
+        <li><strong>L'Edat d'Or intel·lectual i el Moviment de Traducció:</strong> Durant els regnats de <strong>Harun al-Rashid (786–809 dC)</strong> —immortalitzat en la memòria literària de <em>Les mil i una nits</em>— i del seu fill <strong>al-Ma'mun (813–833 dC)</strong>, Bagdad va viure una esplendor cultural inigualable. Al-Ma'mun va institucionalitzar la <strong><em>Bayt al-Hikma</em> (la Casa de la Saviesa)</strong>, una acadèmia d'investigació, traducció i biblioteca on erudits musulmans, cristians siríacs i jueus van traduir sistemàticament a l'àrab el corpus científic i filosòfic de l'Antiguitat grega (Plató, Aristòtil, Galè, Ptolemeu, Euclides), persa i índia, posant les bases del floriment de la filosofia (<em>falsafa</em>), la medicina i les matemàtiques islàmiques.</li>
+      </ul>
+
+      <p>Tanmateix, a partir del segle X, la immensitat territorial de l'imperi, les revoltes socials camperoles (com la sagnant rebel·lió dels esclaus negres dels aiguamolls iraquià, la <em>Revolta dels Zanj</em>, 869–883 dC) i la creixent dependència dels califes respecte a guàrdies pretorianes de mercenaris esclaus turcs (els <em>ghilman</em> o mamelucs) van provocar la fragmentació política irreversible de l'imperi.</p>
+
+      <p>L'autoritat efectiva dels califes es va reduir progressivament a la rodalia de Bagdad, mentre proliferaven dinasties autònomes a les províncies: els emirs samànides a l'Àsia Central, els tulúnides a Egipte i, molt especialment, l'aparició de dos califats rivals que van trencar el monopoli abàssida sobre la Umma: el <strong>Califat Fatimita xiïta ismaïlita</strong> (fundat a Ifríqiya el 909 dC i instal·lat a la nova ciutat del Caire a partir del 969 dC) i el <strong>Califat Omeia de Còrdova</strong> (proclamat per Abd al-Rahman III l'any 929 dC).</p>
+
+      <p>Fins i tot a la mateixa Bagdad, els califes van ser sotmesos a la tutela militar de dinasties foranes: primer els emirs <strong>buwàyhides</strong> (d'origen persa i confessió xiïta duodecimana, que van controlar la capital entre el 945 i el 1055 dC) i posteriorment els <strong>soldans seljúcides</strong> (turcs nòmades sunnites, a partir del 1055 dC). El califa abàssida va quedar reformat com una figura purament sacral i simbòlica, garant de l'ortodòxia religiosa i de la continuïtat formal de la comunitat, fins que el <strong>1258 dC</strong> les hordes mongoles d'<strong>Hulagu Khan</strong> van saquejar Bagdad, van assassinar l'últim califa al-Musta'sim i van posar fi de manera sagnant a més de cinc segles de Califat Abàssida clàssic.</p>
+
+      <div class="callout">
+        <p><strong>Clau metodològica (Max Weber i Hugh Kennedy):</strong> El trànsit del califat dels <em>Raixidun</em> als Omeies i Abàssides reflecteix de manera paradigmàtica el concepte weberià de la <em>«rutinització del carisma»</em> (<em>Veralltäglichung des Charismas</em>). Una autoritat originada en la revelació profètica personal i en la camaraderia de combat esdevé progressivament una dominació tradicional-patrimonial (la dinastia omeia) i finalment un aparell burocràtic imperial d'administració racionalitzada i cosmopolita (l'estat abàssida).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13.2. TEXTOS SAGRATS I CREENCES FONAMENTALS
+       ========================================== -->
+  <section id="s2">
+    <h2>13.2. Textos sagrats, jurisprudència i creences fonamentals</h2>
+
+    <div id="s21">
+      <h3>13.2.1. L'Alcorà: revelació, transmissió i naturalesa textual</h3>
+      <p><em>[Contingut 13.2.1 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s22">
+      <h3>13.2.2. Hadits i Sunna: ciència de la transmissió i col·leccions canòniques</h3>
+      <p><em>[Contingut 13.2.2 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s23">
+      <h3>13.2.3. Xaria i Fiqh: fonts del dret i escoles jurídiques</h3>
+      <p><em>[Contingut 13.2.3 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s24">
+      <h3>13.2.4. El Tawhid: la unicitat divina radical</h3>
+      <p><em>[Contingut 13.2.4 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s25">
+      <h3>13.2.5. Kalam (Teologia Racional): debats doctrinals</h3>
+      <p><em>[Contingut 13.2.5 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s26">
+      <h3>13.2.6. Escatologia: judici, resurrecció i destí final</h3>
+      <p><em>[Contingut 13.2.6 en desenvolupament...]</em></p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13.3. ELS CINC PILARS I LA VIDA RELIGIOSA
+       ========================================== -->
+  <section id="s3">
+    <h2>13.3. Els Cinc Pilars i la vida religiosa</h2>
+
+    <div id="s31">
+      <h3>13.3.1. Els Cinc Pilars (arkan al-Islam)</h3>
+      <p><em>[Contingut 13.3.1 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s32">
+      <h3>13.3.2. La mesquita (masjid) i la pregària comunitària</h3>
+      <p><em>[Contingut 13.3.2 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s33">
+      <h3>13.3.3. Calendari lunar i cicle festiu</h3>
+      <p><em>[Contingut 13.3.3 en desenvolupament...]</em></p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13.4. ESPIRITUALITAT, ÈTICA I DIVERSITAT
+       ========================================== -->
+  <section id="s4">
+    <h2>13.4. Espiritualitat, ètica i diversitat de l'islam</h2>
+
+    <div id="s41">
+      <h3>13.4.1. Ètica islàmica (akhlaq) i responsabilitat moral</h3>
+      <p><em>[Contingut 13.4.1 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s42">
+      <h3>13.4.2. Halal i normes de vida (ahkam)</h3>
+      <p><em>[Contingut 13.4.2 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s43">
+      <h3>13.4.3. Sufisme (tasawwuf): ordes místics i experiència interior</h3>
+      <p><em>[Contingut 13.4.3 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s44">
+      <h3>13.4.4. Sunnisme: tradició, consens i comunitat</h3>
+      <p><em>[Contingut 13.4.4 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s45">
+      <h3>13.4.5. Xiisme: l'autoritat de l'Imamat i branques doctrinals</h3>
+      <p><em>[Contingut 13.4.5 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s46">
+      <h3>13.4.6. Ibadisme: singularitat teològica i pervivència</h3>
+      <p><em>[Contingut 13.4.6 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s47">
+      <h3>13.4.7. Islam contemporani: modernitat i reformisme</h3>
+      <p><em>[Contingut 13.4.7 en desenvolupament...]</em></p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13.5. CIVILITZACIÓ I APORTACIONS CULTURALS
+       ========================================== -->
+  <section id="s5">
+    <h2>13.5. Civilització i aportacions culturals</h2>
+
+    <div id="s51">
+      <h3>13.5.1. L'Edat d'Or islàmica i la transmissió del saber</h3>
+      <p><em>[Contingut 13.5.1 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s52">
+      <h3>13.5.2. Ciència islàmica: matemàtiques, astronomia i medicina</h3>
+      <p><em>[Contingut 13.5.2 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s53">
+      <h3>13.5.3. Filosofia (falsafa): la integració del pensament clàssic</h3>
+      <p><em>[Contingut 13.5.3 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s54">
+      <h3>13.5.4. Art i arquitectura: aniconisme i geometria sagrada</h3>
+      <p><em>[Contingut 13.5.4 en desenvolupament...]</em></p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13.6. SOCIETAT, DRET I REPTES CONTEMPORANIS
+       ========================================== -->
+  <section id="s6">
+    <h2>13.6. Societat, dret i reptes contemporanis</h2>
+
+    <div id="s61">
+      <h3>13.6.1. La Gent del Llibre (Ahl al-Kitab) i l'estatus de dhimmi</h3>
+      <p><em>[Contingut 13.6.1 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s62">
+      <h3>13.6.2. Convivència històrica i diàleg interreligiós</h3>
+      <p><em>[Contingut 13.6.2 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s63">
+      <h3>13.6.3. La dona en l'islam: perspectives històriques i hermenèutica</h3>
+      <p><em>[Contingut 13.6.3 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s64">
+      <h3>13.6.4. Família, matrimoni (nikah) i dret successori</h3>
+      <p><em>[Contingut 13.6.4 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s65">
+      <h3>13.6.5. Drets humans i llibertat religiosa</h3>
+      <p><em>[Contingut 13.6.5 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s66">
+      <h3>13.6.6. Reptes contemporanis: secularisme, pluralisme i bioètica</h3>
+      <p><em>[Contingut 13.6.6 en desenvolupament...]</em></p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13.7. LLEGAT I INFLUÈNCIES CREUADES
+       ========================================== -->
+  <section id="s7">
+    <h2>13.7. Llegat, transmissió i influències creuades en la història de les religions</h2>
+
+    <div id="s71">
+      <h3>13.7.1. Influències rebudes: substrat semític, escatologia iraniana i hel·lenisme</h3>
+      <p><em>[Contingut 13.7.1 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s72">
+      <h3>13.7.2. L'impacte sobre el judaisme medieval: filosofia i mística</h3>
+      <p><em>[Contingut 13.7.2 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s73">
+      <h3>13.7.3. La irradiació cap a la Cristiandat: de l'averroisme a l'escolàstica</h3>
+      <p><em>[Contingut 13.7.3 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s74">
+      <h3>13.7.4. Interaccions a l'Orient: sufisme, moviment Bhakti i gènesi del sikhisme</h3>
+      <p><em>[Contingut 13.7.4 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s75">
+      <h3>13.7.5. Tradicions religioses emergents de matriu islàmica: bahaísme i altres corrents</h3>
+      <p><em>[Contingut 13.7.5 en desenvolupament...]</em></p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13.8. METODOLOGIA D'ESTUDI
+       ========================================== -->
+  <section id="s8">
+    <h2>13.8. Metodologia per a l'estudi de l'islam</h2>
+
+    <div id="s81">
+      <h3>13.8.1. Historiografia crítica i fonts primàries</h3>
+      <p><em>[Contingut 13.8.1 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s82">
+      <h3>13.8.2. Filologia alcorànica i lingüística</h3>
+      <p><em>[Contingut 13.8.2 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s83">
+      <h3>13.8.3. Perspectives antropològiques i sociològiques</h3>
+      <p><em>[Contingut 13.8.3 en desenvolupament...]</em></p>
+    </div>
+
+    <div id="s84">
+      <h3>13.8.4. Superació de l'orientalisme i marcs postcolonials</h3>
+      <p><em>[Contingut 13.8.4 en desenvolupament...]</em></p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13.9. BIBLIOGRAFIA, FONTS I RECURSOS
+       ========================================== -->
+  <section id="s9">
+    <h2>13.9. Bibliografia, fonts i recursos</h2>
+
+    <div id="s91">
+      <h3>13.9.1. Fonts primàries</h3>
+      <p><em>[Llistat de fonts primàries...]</em></p>
+    </div>
+
+    <div id="s92">
+      <h3>13.9.2. Teologia, filosofia i dret</h3>
+      <p><em>[Estudis doctrinals i jurídics...]</em></p>
+    </div>
+
+    <div id="s93">
+      <h3>13.9.3. Història i estudis contemporanis</h3>
+      <p><em>[Monografies historiogràfiques...]</em></p>
+    </div>
+
+    <div id="s94">
+      <h3>13.9.4. Recursos digitals i acadèmics</h3>
+      <p><em>[Portals de recerca i corpus textuals...]</em></p>
+    </div>
+
+    <div id="s95">
+      <h3>13.9.5. Cronologia comparada de l'islam</h3>
+      <p><em>[Taula cronològica de referència...]</em></p>
+    </div>
+  </section>
+
+</main>
+Ja tenim la carcassa del document perfectament alinea
+<a href="#cover" class="back-top" id="backTop" aria-label="Tornar al principi" title="Tornar al principi">↑</a>
+
+<!-- Scripts Externs -->
+<script src="scripts.js"></script>
+</body>
+</html>

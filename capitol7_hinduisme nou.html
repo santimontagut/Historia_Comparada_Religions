@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 7 — Hinduisme: L'Enginyeria Social del Dharma</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Estils Externs -->
+<link rel="stylesheet" href="estil.css">
+
+<!-- Personalització per al Capítol 7 (Hinduisme) -->
+<style>
+  :root {
+    --sidebar-bg: #402816;
+    --saffron: #e07b1a;
+    --saffron-dim: rgba(224, 123, 26, 0.1);
+  }
+  
+  /* Seguretat UI */
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+
+  /* Mòdul específic per a la taula dels Yugas (Capítol 7) */
+  .yuga-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: #c4a44a33; margin: 2rem 0; font-size: .9rem; }
+  .yuga-cell { background: var(--cream, #faf7f2); padding: .75rem 1rem; }
+  .yuga-cell.header { background: #1a1408; color: #c4a44a; font-weight: 600; font-family: 'Cormorant Garamond', serif; font-size: 1rem; }
+  @media(max-width: 600px) { .yuga-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- HEADER FIXE & NAV TOGGLE -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title">Capítol 7 — Hinduisme</div>
+  <!-- Espaiador flexbox per centrar el títol -->
+  <div style="width: 44px;"></div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a href="index.html" style="font-family: 'Crimson Pro', serif; font-size: 0.75rem; color: #c4a44a; text-decoration: none; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block; margin-bottom: 0.5rem; opacity: 0.7;">← Índex General</a>
+    <div class="sidebar-title">Capítol 7<br>Hinduisme — L'Enginyeria Social del Dharma</div>
+  </div>
+  <nav>
+    <a href="#cover" class="lvl1">Portada</a>
+    <a href="#intro" class="lvl1">Introducció: Què és l'hinduisme?</a>
+    <a href="#s71" class="lvl1">7.1 Context històric i geogràfic</a>
+    <a href="#s711" class="lvl2">7.1.1 Civilització de l'Indus</a>
+    <a href="#s712" class="lvl2">7.1.2 Els aris i la controvèrsia</a>
+    <a href="#s713" class="lvl2">7.1.3 El període vèdic</a>
+    <a href="#s714" class="lvl2">7.1.4 El període upanixàdic</a>
+    <a href="#s715" class="lvl2">7.1.5 L'hinduisme clàssic</a>
+    <a href="#s716" class="lvl2">7.1.6 El moviment Bhakti</a>
+    <a href="#s717" class="lvl2">7.1.7 L'hinduisme colonial</a>
+    <a href="#s718" class="lvl2">7.1.8 El Hindutva</a>
+    <a href="#s72" class="lvl1">7.2 Els textos sagrats</a>
+    <a href="#s721" class="lvl2">7.2.1 Shruti i Smriti</a>
+    <a href="#s722" class="lvl2">7.2.2 Els Vedes</a>
+    <a href="#s723" class="lvl2">7.2.3 Brahmanas i Aranyakes</a>
+    <a href="#s724" class="lvl2">7.2.4 Les Upanishads</a>
+    <a href="#s725" class="lvl2">7.2.5 La Bhagavad Gita</a>
+    <a href="#s726" class="lvl2">7.2.6 Els Epics</a>
+    <a href="#s727" class="lvl2">7.2.7 Els Puranes</a>
+    <a href="#s728" class="lvl2">7.2.8 Les Tantres</a>
+    <a href="#s73" class="lvl1">7.3 Cosmovisió hindú</a>
+    <a href="#s731" class="lvl2">7.3.1 La cosmologia cíclica</a>
+    <a href="#s732" class="lvl2">7.3.2 Brahman i Atman</a>
+    <a href="#s733" class="lvl2">7.3.3 Maya</a>
+    <a href="#s734" class="lvl2">7.3.4 Karma i samsara</a>
+    <a href="#s735" class="lvl2">7.3.5 Moksha i els quatre objectius</a>
+    <a href="#s736" class="lvl2">7.3.6 La Trimúrti</a>
+    <a href="#s74" class="lvl1">7.4 El sistema de castes</a>
+    <a href="#s741" class="lvl2">7.4.1 Varna i Jati</a>
+    <a href="#s742" class="lvl2">7.4.2 El svadharma</a>
+    <a href="#s743" class="lvl2">7.4.3 Els Dalit</a>
+    <a href="#s744" class="lvl2">7.4.4 El Manusmriti</a>
+    <a href="#s745" class="lvl2">7.4.5 Gènere i casta</a>
+    <a href="#s746" class="lvl2">7.4.6 Crítiques internes i externes</a>
+    <a href="#s75" class="lvl1">7.5 El ritual, el temple i la vida quotidiana</a>
+    <a href="#s751" class="lvl2">7.5.1 El puja</a>
+    <a href="#s752" class="lvl2">7.5.2 El temple hindú</a>
+    <a href="#s753" class="lvl2">7.5.3 Els Samskaras</a>
+    <a href="#s754" class="lvl2">7.5.4 El calendari ritual i les festes</a>
+    <a href="#s755" class="lvl2">7.5.5 La peregrinació</a>
+    <a href="#s76" class="lvl1">7.6 Les grans tradicions devocionals</a>
+    <a href="#s761" class="lvl2">7.6.1 El Vaishnavisme</a>
+    <a href="#s762" class="lvl2">7.6.2 El Shaivisme</a>
+    <a href="#s763" class="lvl2">7.6.3 El Shaktisme</a>
+    <a href="#s764" class="lvl2">7.6.4 El moviment Bhakti</a>
+    <a href="#s765" class="lvl2">7.6.5 El Tantra</a>
+    <a href="#s77" class="lvl1">7.7 Filosofia hindú — Shad Darshana</a>
+    <a href="#s771" class="lvl2">7.7.1 Nyaya</a>
+    <a href="#s772" class="lvl2">7.7.2 Vaisheshika</a>
+    <a href="#s773" class="lvl2">7.7.3 Samkhya</a>
+    <a href="#s774" class="lvl2">7.7.4 Yoga</a>
+    <a href="#s775" class="lvl2">7.7.5 Mimamsa</a>
+    <a href="#s776" class="lvl2">7.7.6 Vedanta</a>
+    <a href="#s78" class="lvl1">7.8 L'hinduisme i el poder polític</a>
+    <a href="#s781" class="lvl2">7.8.1 Arthashastra i Rajadharma</a>
+    <a href="#s782" class="lvl2">7.8.2 L'hinduisme i els imperis</a>
+    <a href="#s783" class="lvl2">7.8.3 L'hinduisme colonial</a>
+    <a href="#s784" class="lvl2">7.8.4 La independència</a>
+    <a href="#s785" class="lvl2">7.8.5 El Hindutva</a>
+    <a href="#s79" class="lvl1">7.9 L'hinduisme en el món contemporani</a>
+    <a href="#s791" class="lvl2">7.9.1 La diàspora hindú</a>
+    <a href="#s792" class="lvl2">7.9.2 El Yoga global</a>
+    <a href="#s793" class="lvl2">7.9.3 Els nous moviments hindús</a>
+    <a href="#s794" class="lvl2">7.9.4 Reptes contemporanis</a>
+    <a href="#s710" class="lvl1">7.10 Influències sobre altres tradicions</a>
+    <a href="#s7101" class="lvl2">7.10.1 Sobre el budisme</a>
+    <a href="#s7102" class="lvl2">7.10.2 Sobre el jainisme</a>
+    <a href="#s7103" class="lvl2">7.10.3 Sobre el sikhisme</a>
+    <a href="#s7104" class="lvl2">7.10.4 Sobre el pensament occidental</a>
+    <a href="#s711m" class="lvl1">7.11 Metodologia</a>
+    <a href="#s712b" class="lvl1">7.12 Bibliografia</a>
+  </nav>
+</aside>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-menorah">🕉</div>
+  <div class="cover-ornament">Història de les Religions</div>
+  <div class="cover-rule"></div>
+  <div class="cover-hebrew">ॐ • DHARMA</div>
+  <h1 class="cover-chapter">Capítol 7</h1>
+  <div class="cover-subtitle">Hinduisme — L'Enginyeria Social del Dharma</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong> L'hinduisme no és una religió en el sentit occidental del terme, sinó un sistema total d'organització de la realitat —còsmica, social, política i individual— que ha funcionat durant tres mil·lennis com la tecnologia més sofisticada de legitimació i reproducció de l'ordre social mai construïda per una civilització humana.
+  </div>
+  <div class="cover-scroll"><span>Llegir</span><div class="cover-scroll-line"></div></div>
+</div>
+
+<main class="content">
+
+<!-- ═══════════════════════════════════════════════════ INTRODUCCIÓ -->
+<section id="intro" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">Introducció</span>Què és l'hinduisme? El problema de la definició</h1>
+
+<p class="drop-cap">Hi ha una pregunta que tots els manuals d'història de les religions eviten en les seves primeres pàgines perquè no té una resposta còmoda: <em>Existeix realment l'hinduisme?</em></p>
+
+<p>No es tracta d'una provocació filosòfica buida. És una pregunta acadèmica legítima i profundament desestabilitzadora, perquè quan intentem aplicar a l'hinduisme els mateixos criteris que utilitzem per definir el cristianisme, l'islam o el budisme —un fundador, un text sagrat central, un credo doctrinal, una estructura institucional, una comunitat de pertinença definida— ens trobem que cap d'ells funciona. L'hinduisme no té fundador conegut. No té un text sagrat únic, sinó una biblioteca de milers de textos compostos al llarg de tres mil·lennis, molts dels quals es contradiuen entre si. No té credo —no hi ha un equivalent hindú del Credo Apostòlic o de la <em>shahada</em> islàmica. No té papa, ni sinodi, ni consell de savis amb autoritat doctrinal universal. I, sobretot, no hi ha un criteri únic i acceptat per determinar qui és hindú i qui no ho és.</p>
+
+<p>I, tanmateix, centenars de milions de persones s'identifiquen amb aquesta tradició, organitzen la seva vida al voltant dels seus rituals, les seves festes i els seus textos sagrats, defensen la seva identitat en front d'altres sistemes religiosos, i han construït al llarg dels segles algunes de les obres arquitectòniques, filosòfiques i literàries més extraordinàries de la història humana. Quelcom existeix, evidentment. La pregunta és: <em>Què?</em></p>
+
+<p>La resposta a aquesta pregunta no és simplement acadèmica. Determinar com es defineix l'hinduisme té conseqüències polítiques directes i immediates en l'Índia d'avui, on el terme és objecte d'un debat ferotge entre els qui el conceben com una tradició de tolerància i pluralisme constitutiva de la identitat índia i els qui el volen convertir en el fonament d'un nacionalisme exclusivista que definiria la ciutadania en termes religiosos. La definició de l'hinduisme és, en el segle XXI, una qüestió de vida o mort política —literalment, en alguns casos.</p>
+
+<h3>El problema del nom</h3>
+
+<p>La paraula "hinduisme" no existeix en cap llengua índia antiga. No apareix als Vedes, ni a les Upanishads, ni a la Bhagavad Gita, ni a cap dels grans textos filosòfics i religiosos de la tradició. És, per tant, una paraula forana que s'ha aplicat a una realitat que es definia a si mateixa amb d'altres termes.</p>
+
+<p>L'origen de la paraula és geogràfic, no religiós. "Hindu" deriva del persa <em>Hindū</em>, que designava els habitants de la regió al voltant del riu Sindhu —l'Indus, el gran riu que marca la frontera occidental del subcontinent—, tal com apareix ja en les inscripcions de Darios I a Persèpolis al segle VI aC. Els àrabs van adoptar el terme com a <em>al-Hind</em> per referir-se al subcontinent en conjunt. Els perses musulmans medievals el van usar per designar tots els habitants del subcontinent que no eren musulmans, independentment de les seves creences específiques. En aquesta etapa, "hindú" era simplement un terme geogràfic i etnogràfic: significava "habitant de l'Índia".</p>
+
+<p>La transformació de "hindú" en denominació religiosa es produeix de manera gradual i, decisivament, sota la influència del colonialisme britànic. Quan la Companyia Britànica de les Índies Orientals va necessitar administrar legalment una població immensa i diversíssima al llarg dels segles XVIII i XIX, els seus funcionaris i orientalistes van haver de crear categories jurídiques manejables. Van constatar que la majoria de la població del subcontinent no era musulmana, ni budista, ni jainista, ni sikha —i que compartia un corpus difús de pràctiques, textos i creences. Van anomenar tot aquest conjunt heterogeni "hinduisme" i van tractar-lo com a una religió unificada comparable al cristianisme o a l'islam. Amb aquest gest administratiu, els britànics no van descobrir l'hinduisme: en certa mesura, el van <em>inventar</em>, o almenys li van donar una forma unificada que no tenia prèviament.</p>
+
+<p>La teòrica postcolonial Romila Thapar ha proposat parlar de "hinduismes" en plural. L'erudit Ronald Inden, en el seu influent llibre <em>Imagining India</em> (1990), ha documentat com la construcció occidental de l'"hinduisme essencial" va ser un instrument ideològic del colonialisme que servia per justificar la dominació britànica presentant els indis com a incapaços de la racionalitat moderna. La crítica és poderosa i necessària. La posició més defensable és que "hinduisme" és un terme de conveniència per designar un conjunt de tradicions religioses, filosòfiques i socials del subcontinent indi que comparteixen arrels comunes, elements doctrinals recurrents i una consciència de pertinença a una mateixa civilització, però que no formen un sistema unificat i homogeni comparable a les religions abrahàmiques.</p>
+
+<h3>El <em>Sanātana Dharma</em>: com es defineix la tradició a si mateixa</h3>
+
+<p>Si "hinduisme" és un terme extern, com s'ha definit la tradició a si mateixa al llarg dels segles? La resposta és <em>Sanātana Dharma</em>, que es pot traduir aproximadament com "l'ordre etern" o "la llei universal i eterna". És l'autodenominació que els practicants de la tradició han usat des de l'antiguitat i que continua essent la preferida per molts hinduistes contemporanis que rebutgen el terme "hinduisme" per les seves connotacions colonials.</p>
+
+<p>La paraula <em>dharma</em> és una de les més riques i intraduïbles del sànscrit. Deriva de l'arrel <em>dhri</em>, "sostenir", "mantenir", i designa alhora l'ordre còsmic que sosté l'univers, la llei moral que regeix la conducta humana, el deure específic que correspon a cada persona en funció de la seva posició social i de l'etapa de la seva vida, i la veritat religiosa que s'ha de preservar i transmetre. No hi ha cap paraula occidental que capti tots aquests significats simultàniament: "llei", "ordre", "deure", "veritat", "religió", "justícia" i "naturalesa pròpia" son tots aspectes parcials del <em>dharma</em>.</p>
+
+<p><em>Sanātana</em>, per la seva banda, significa "etern", "sense principi ni fi", "que ha existit sempre". Quan la tradició es defineix com a <em>Sanātana Dharma</em>, afirma que no és una religió fundada per un profeta en un moment particular de la història, sinó la manifestació temporal d'un ordre que existia abans de la creació del món i que continuarà existint després del seu final.</p>
+
+<h3>La diversitat interna: un espectre que ho abasta tot</h3>
+
+<p>Una de les coses que més sorprèn l'observador extern és la capacitat de l'hinduisme per contenir en el seu interior posicions filosòfiques i religioses que, en una tradició abrahàmica, serien absolutament incompatibles i s'exclourien mútuament.</p>
+
+<p>L'hinduisme conté els sistemes filosòfics <strong>monistes</strong> més radicals que ha produït la humanitat: l'<em>Advaita Vedanta</em> de Shankaracharya (segle VIII dC) afirma que la distinció entre el jo individual i la realitat última és pura il·lusió (<em>maya</em>), que no hi ha en realitat més que una sola existència (<em>Brahman</em>). <em>"Tat tvam asi"</em> —"Tu ets allò"— diu la Chandogya Upanishad: el teu ser més profund és idèntic al ser del cosmos.</p>
+
+<p>Però l'hinduisme conté <em>simultàniament</em> els sistemes <strong>politeistes</strong> més exuberants i elaborats: panteons de milions de divinitats, cadascuna amb la seva pròpia iconografia, els seus temples, els seus rituals i les seves llegendes. I conté <em>simultàniament</em> formes de <strong>monoteisme</strong> devocional tan intenses com qualsevol de les tradicions abrahàmiques: la tradició <em>bhakti</em>, que florix entre els segles VI i XVII. I conté <em>simultàniament</em> formes d'<strong>ateisme</strong> filosòfic completament desenvolupades: el sistema Samkhya és explícitament ateista.</p>
+
+<p>La resposta hindú a com és possible que totes aquestes posicions coexisteixin és, aproximadament: la realitat última és tan complexa que cap perspectiva humana pot captar-la en la seva totalitat. Cada tradició, cada filosofia, cada pràctica devocional capta un aspecte real de la realitat. Com diu el Rig-Veda: <em>"Ekam sat viprā bahudhā vadanti"</em> — "La veritat és una; els savis la diuen de moltes maneres."</p>
+
+<h3>El problema de la continuïtat sense institució central</h3>
+
+<p>Una de les preguntes que planteja l'hinduisme és purament organitzativa: com ha sobrevingut i s'ha transmès durant tres mil·lennis i mig una tradició tan immensa i tan complexa sense cap institució centralitzada que en garantís la continuïtat? Les religions monoteistes han resolt el problema de la transmissió amb institucions poderoses i centralitzades. L'hinduisme no ha tingut mai res equivalent. No hi ha un Papa hindú. No hi ha un Concili de Nicea hindú. No hi ha una jerarquia sacerdotal unificada que pugui excomulgar heretges o imposar doctrines.</p>
+
+<p>La solució que l'hinduisme ha trobat és la <strong>família</strong> i el <strong>cos</strong>. L'hinduisme no es transmet principalment a través d'institucions, sinó a través de pràctiques incorporades en la vida quotidiana que es transmeten de pares a fills, de mestres a deixebles, en una cadena ininterrompuda que no requereix cap autoritat central per mantenir-se. El <em>puja</em> quotidià davant l'altar domèstic, la preparació dels aliments amb consciència de les normes de puresa ritual, la transmissió dels contes dels Puranes als fills a través de la narrativa oral, la participació en les festes del calendari ritual: tot plegat forma un teixit de pràctiques concretes que transmeten la tradició no com a doctrina abstracta, sinó com a forma de vida viscuda.</p>
+
+<h3>L'hinduisme com a sistema total: la tesi del capítol</h3>
+
+<p>L'hinduisme és, en la seva estructura profunda, un <strong>sistema total</strong> —el que el sociòleg Marcel Mauss hauria anomenat un <em>fait social total</em>— que no deixa cap dimensió de l'existència humana fora del seu abast: regula la posició social i les obligacions de cada individu en funció de la seva casta de naixement; estructura el temps a través d'un calendari ritual que marca el ritme de la vida col·lectiva; organitza l'espai a través d'una geografia sagrada de llocs de pelegrinatge i temples; defineix les obligacions morals de cada persona en funció de la seva edat, el seu sexe i la seva posició social (<em>dharma</em>); proporciona un marc cosmològic que dota de sentit el sofriment, la mort i la desigualtat; i legitima l'ordre social existent presentant-lo com a reflex de l'ordre còsmic.</p>
+
+<p>En aquest sentit, l'hinduisme és quelcom molt semblant al que el pensador Thorstein Veblen hauria reconegut com a <strong>ideologia en el sentit fort del terme</strong>: no un conjunt de mentides conscients dissenyades per enganyar, sinó un sistema de representació de la realitat que serveix simultàniament com a mapa del cosmos i com a justificació de l'ordre social, de manera que qüestionar l'ordre social exigeix qüestionar la cosmologia, i qüestionar la cosmologia equival, per a molts dels seus practicants, a qüestionar la realitat mateixa.</p>
+
+<p>Comprendre l'hinduisme exigeix, per tant, una doble mirada: la mirada del fenomenòleg que vol entendre la tradició des de dins, en la seva riquesa i en la seva profunditat espiritual; i la mirada del crític social que vol entendre com aquesta tradició ha funcionat en la història real, qui n'ha tret profit i qui n'ha patit les conseqüències. Cap de les dues mirades sola és suficient. La primera sense la segona produeix un orientalisme romàntic que idealitza l'hinduisme com a saviesa ancestral. La segona sense la primera produeix un reduccionisme crític que tracta una de les tradicions filosòfiques i espirituals més riques de la humanitat com a simple ideologia de classe.</p>
+
+<p>Aquest capítol intentarà mantenir les dues mirades simultàniament. No sempre serà còmode. Però és l'única manera de fer justícia a la complexitat d'una tradició que ha modelat, directament o indirectament, la vida de més d'un quart de la humanitat durant tres mil·lennis i mig.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.1 -->
+<section id="s71" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.1</span>Context històric i geogràfic — De les estepes a la civilització de la vall de l'Indus</h1>
+
+<p class="drop-cap">Si la Introducció ens ha plantejat el problema conceptual —<em>Què és l'hinduisme?</em>— el 7.1 ens planteja el problema històric: <em>D'on ve?</em> I la resposta a aquesta pregunta és, com veurem, molt més complicada, molt més disputada i molt més políticament carregada del que qualsevol manual escolar estaria disposat a admetre.</p>
+
+<p>L'hinduisme no té un moment fundacional clar. No hi ha un any zero, no hi ha una revelació inaugural, no hi ha un profeta que s'aixequi un matí amb la missió de fundar una religió nova. El que hi ha és un procés d'acumulació, transformació i síntesi que s'estén durant almenys tres mil cinc-cents anys —i probablement molt més— i que absorbeix, transforma i integra tradicions d'origens molt diversos: les pràctiques religioses de les civilitzacions urbanes de la vall de l'Indus, les tradicions dels pobles pastors indoeuropeus que van arribar al subcontinent des de les estepes d'Àsia Central, les religions dels pobles dravídics del sud, i les pràctiques dels pobles tribals de l'interior de l'Índia.</p>
+
+<h2 id="s711">7.1.1 La civilització de l'Indus (3300–1300 aC)</h2>
+
+<p>Quan parlem dels orígens de l'hinduisme, la majoria dels textos escolars comencen amb els Vedes i els pobles aris. És una simplificació que ignora una realitat arqueològica d'una importància enorme: abans que els aris arribessin al subcontinent, a la vall dels rius Indus i Ghaggar-Hakra hi havia florit durant quasi dos mil anys una de les civilitzacions urbanes més avançades del món antic.</p>
+
+<p>La <strong>civilització de l'Indus</strong>, també anomenada civilització harappana per la ciutat de Harappa, una de les seves metròpolis principals, va assolir el seu apogeu entre el 2600 i el 1900 aC. En el seu moment de màxima extensió, va ocupar una àrea d'uns 1,25 milions de quilòmetres quadrats —més gran que l'Egipte faraònic i la Mesopotàmia sumeroacàdia juntes—, i va tenir una població estimada d'entre un i cinc milions de persones distribuïda en centenars de poblaments.</p>
+
+<p>Les seves dues grans metròpolis, <strong>Harappa</strong> i <strong>Mohenjo-daro</strong>, presenten un nivell de planificació urbana que no es tornaria a veure al subcontinent durant mil·lennis. Els carrers seguien una quadrícula ortogonal. Les cases de maó cuit tenien sistemes de sanejament amb canonades i latrines connectades a una xarxa d'aigüeres cobertes que discorria sota els carrers —un sistema d'higiene urbana que l'Europa medieval no igualaria fins al segle XIX. Hi havia magatzems de gra de dimensions monumentals, edificis públics de funció incerta, i un gran "bany públic" a Mohenjo-daro —una estructura de maó impermeabilitzada amb betum que els arqueòlegs interpreten habitualment com un espai ritual de purificació, un precedent dels <em>ghats</em> i dels estancs sagrats que avui trobem en qualsevol temple hindú important.</p>
+
+<p>L'escriptura de l'Indus —uns quatre-cents símbols gravats en segells de pedra, taules d'argila i objectes de coure— continua sense ser desxifrada, malgrat dècades d'esforços acadèmics. Sense textos llegibles, tot el que podem fer és inferir les pràctiques religioses a partir de les restes materials, una empresa necessàriament especulativa.</p>
+
+<p>El que sí que tenim és un conjunt de troballes arqueològiques que els especialistes han associat amb elements que reapareixeran en l'hinduisme posterior. El més cèlebre és el <strong>segell Pasupati</strong>: un segell de pedra trobat a Mohenjo-daro que representa una figura assentada en posició que recorda el lotus del ioga, envoltada d'animals —un búfal, un rinoceront, un elefant, un tigre—, amb el que sembla ser una corona tricorn. L'arqueòleg John Marshall, que va publicar la seva descripció el 1931, va identificar la figura com un precursor de Shiva en el seu aspecte de <em>Pasupati</em> ("Senyor dels Animals"). La identificació ha estat molt debatuda, però el paral·lelisme és suggestiu. Altres troballes inclouen figures femenines que podrien representar deesses de la fertilitat, <em>lingams</em> i <em>yonis</em> de pedra, i representacions de la figuera sagrada <em>pipal</em> (<em>Ficus religiosa</em>), que continuarà sent sagrada en l'hinduisme i en el budisme.</p>
+
+<p>La civilització de l'Indus va desaparèixer —o es va transformar radicalment— entre el 1900 i el 1300 aC, en un procés que els arqueòlegs debaten intensament. Les grans ciutats van ser abandonades. La xarxa d'intercanvi comercial es va fragmentar. L'escriptura va deixar d'usar-se. Les causes d'aquest col·lapse —canvi climàtic i dessecació dels rius, epidèmies, transformacions econòmiques internes, invasions exteriors— continuen sent objecte d'un debat acadèmic viu i polititzat.</p>
+
+<h2 id="s712">7.1.2 Els aris i la gran controvèrsia (1500–1000 aC)</h2>
+
+<p>Poques qüestions de la història antiga han generat tanta passió, tanta desinformació i tant d'ús polític com la pregunta sobre l'origen dels aris i el seu paper en la formació de la civilització índia. És una qüestió que involucra lingüística comparada, arqueologia, genètica de poblacions, ideologia nacionalista i, en el context indi contemporani, la política identitària de primer ordre.</p>
+
+<p>Entre el 2000 i el 1000 aC, al subcontinent indi van arribar pobles que parlaven una llengua de la família <strong>indoeuropea</strong>, relacionada amb el llatí, el grec, el persa, el germànic i les altres llengues de la gran família lingüística que s'estén des de l'Índia fins a Irlanda. Aquesta llengua va evolucionar cap al <strong>sànscrit vèdic</strong>, la llengua dels Vedes, i és l'ancestre de les llengues indoàries modernes —hindi, bengalí, panjabi, gujarati, marathi— que parlen avui uns mil milions de persones al subcontinent.</p>
+
+<p>La <strong>teoria de la invasió ària</strong>, dominant en la historiografia occidental del segle XIX i bona part del XX, sostenia que cap al 1500 aC uns pobles guerrers procedents de les estepes d'Àsia Central van envair el subcontinent, van destruir o desplaçar la civilització de l'Indus, van subjugar les poblacions dravídiques autòctones i van imposar la seva llengua, la seva religió i el seu sistema social. Aquesta teoria ha estat profundament qüestionada en les últimes dècades per múltiples línies d'evidència. En primer lloc, l'arqueologia no ha trobat proves d'una invasió violenta a gran escala. En segon lloc, la <strong>genètica de poblacions</strong> moderna ha complicat enormement la imatge.</p>
+
+<p>El model que la majoria dels especialistes contemporanis prefereixen és el de la <strong>migració gradual i difusió cultural</strong>: grups de pastors de les estepes eurasiàtiques van arribar al subcontinent en onades successives al llarg de segles, no com a exèrcit conqueridor sinó com a grups que s'integraven, conflictuaven i fusionaven amb les poblacions existents en un procés llarg i complex.</p>
+
+<p>Tot això, però, és objecte d'un debat políticament explosiu a l'Índia contemporània. El moviment <strong>hindutva</strong> ha promogut agressivament la teoria de l'"origen autòcton" de l'hinduisme: la idea que els aris no van venir de fora sinó que eren els habitants originals del subcontinent. Aquesta teoria, coneguda com a <strong>OIT</strong> (<em>Out of India Theory</em>), és rebutjada per la comunitat acadèmica mainstream per manca d'evidència lingüística i arqueològica, però gaudeix d'un suport polític considerable a l'Índia i alimenta una narrativa de "retorn" de l'hinduisme com a identitat nacional originàriament índia davant les religions "estrangeres" —l'islam i el cristianisme.</p>
+
+<h2 id="s713">7.1.3 El període vèdic (1500–500 aC)</h2>
+
+<p>El <strong>Rig-Veda</strong> —el més antic dels quatre Vedes, compost probablement entre el 1500 i el 1200 aC— ens mostra una societat pastoral i seminòmada organitzada al voltant del bestiar, del cavall i del sacrifici de foc. Els deu <em>mandalas</em> (llibres) del Rig-Veda contenen 1.028 himnes dirigits a les divinitats del panteó vèdic: <strong>Indra</strong>, el déu de la tempesta i de la guerra; <strong>Agni</strong>, el foc sagrat, mediador entre el món dels humans i el món dels déus; <strong>Varuna</strong>, el guardià de l'ordre còsmic (<em>rta</em>), el déu del cel nocturn, omniscient i jutge moral; <strong>Soma</strong>, la divinitat de la beguda ritual extreta d'una planta; <strong>Ushas</strong>, la deessa de l'aurora.</p>
+
+<p>La societat vèdica era estructurada al voltant de tres grans categories funcionals: els <strong>sacerdots</strong> (<em>brahmin</em>), especialistes en el ritual i en la transmissió dels textos sagrats; els <strong>guerrers</strong> (<em>kshatriya</em> o <em>rajanya</em>), responsables de la protecció de la comunitat i de la guerra; i els <strong>pagesos i ramaders</strong> (<em>vaishya</em>), que produïen la riquesa material de la societat. Fora d'aquestes tres categories hi havia els <strong>shudra</strong>, probablement les poblacions autòctones sotmeses, que servien les tres categories superiors.</p>
+
+<p>El centre de la vida religiosa vèdica era el <strong>yajna</strong>, el gran sacrifici de foc. El yajna no era simplement un ritual de comunicació amb les divinitats: era, en la concepció vèdica, una acció cosmogònica en sentit literal: el sacrifici <em>mantenia</em> l'ordre còsmic, <em>sostenia</em> el moviment dels astres i el cicle de les estacions, <em>garantia</em> la continuïtat de l'existència. Sense el sacrifici correctament realitzat, l'univers s'aturaria. Aquesta concepció del sacrifici com a acció cosmogònica tenia implicacions polítiques enormes: si el bon funcionament del cosmos depèn del sacrifici, i si el sacrifici only pot ser realitzat pels <em>brahmins</em> que han rebut la formació adequada, aleshores els <em>brahmins</em> no son simplement especialistes religiosos: son la instància sense la qual la societat —i el cosmos sencer— no pot funcionar.</p>
+
+<h2 id="s714">7.1.4 El període upanixàdic i l'Era Axial (800–200 aC)</h2>
+
+<p>El segle VIII aC marca, a l'Índia com arreu del món axial, un moment de trencament intel·lectual profund. En el mateix període en el qual a Grècia els primers filòsofs comencen a qüestionar les explicacions mítiques del cosmos, en el qual a la Xina Confuci i Laozi reformulen els fonaments de l'ordre social i polític, i en el qual a la Pèrsia Zaratustra —com hem vist al Capítol 6— formula el primer sistema ètic universal, a l'Índia un moviment de pensadors radicals comença a qüestionar des de dins els fonaments del sistema ritual vèdic.</p>
+
+<p>Aquestes figures van recollit el seu pensament en les <strong>Upanishads</strong>, que proposen un desplaçament del centre de gravetat del ritual exterior cap a la realització interior. Si en els himnes del Rig-Veda el sacerdot es dirigia als déus amb reverència i esperava la seva resposta benevolent, en les Upanishads el savi que assoleix la comprensió directa de la realitat última no necessita ni rituals ni sacerdots: la veritat és accessible directament a través de la realització de la identitat entre el jo profund (<em>Atman</em>) i la realitat última (<em>Brahman</em>). <em>"Tat tvam asi"</em> —"Tu ets allò"—: tu, el que et creus ser, en la teva realitat més profunda, ets idèntic al principi que sosté el cosmos.</p>
+
+<p>Simultàniament amb el moviment upanixàdic sorgeixen els dos grans moviments de reforma religiosa que qüestionaran obertament el sistema vèdic: el <strong>budisme</strong> de Siddharta Gautama (circa 563–483 aC) i el <strong>jainisme</strong> de Mahavira (circa 599–527 aC). Tots dos rebutgen l'autoritat dels Vedes, el sistema de castes com a ordenació divina de la societat, i el ritual del sacrifici animal. La resposta de la tradició brahminica va ser, fascinantment, l'absorció: en lloc de combatir el budisme i el jainisme frontalment, va integrar molts dels seus elements en un sistema renovat i ampliat.</p>
+
+<h2 id="s715">7.1.5 L'hinduisme clàssic i els imperis (200 aC–1200 dC)</h2>
+
+<p>La síntesi que emergeix dels segles que segueixen l'Era Axial és el que els especialistes habitualment anomenen "hinduisme clàssic". Els seus elements constitutius principals s'assemblen als d'un mosaic: la cosmologia i el ritual dels Vedes i els Brahmanas; la filosofia de les Upanishads sobre Brahman, Atman i moksha; els conceptes de karma i samsara; els grans epics —el <strong>Mahabharata</strong> i el <strong>Ramayana</strong>—; els <strong>Puranes</strong>, que elaboren les mitologies de les grans divinitats; i el sistema de castes (<em>varnashramadharma</em>), codificat en textos legals com el <em>Manusmriti</em>.</p>
+
+<p>La forma política que acompanya i patrocina aquest hinduisme clàssic és el <strong>regne hindú</strong>, que assolirà la seva expressió més plena en els <strong>Guptes</strong> (320–550 dC), considerats per molts historiadors l'edat d'or de la civilització índia clàssica. El poeta <strong>Kalidasa</strong>, les matemàtiques guptes que inventen el sistema decimal posicional i el zero, la medicina ayurvèdica en la seva sistematització clàssica: tot plegat floreix en aquest período. El temple hindú, que es convertirà en la institució central de la vida religiosa i social, no és simplement un lloc de culte: és una institució econòmica, política i cultural de primer ordre.</p>
+
+<h2 id="s716">7.1.6 L'hinduisme medieval i el moviment Bhakti (segles VI–XVII)</h2>
+
+<p>Una de les transformacions més profundes i més duradores de la historia de l'hinduisme va ser el <strong>moviment bhakti</strong>, que va esclatar al sud de l'Índia cap al segle VI i que es va estendre per tot el subcontinent durant els mil anys següents. <em>Bhakti</em> vol dir "devoció", "participació", "amor". El moviment bhakti proposa una relació directa, personal i amorosa entre el devot i la seva divinitat escollida, sense intermediació sacerdotal, sense el filtre del ritual complex i costós, sense el coneixement del sànscrit que el sistema brahminic feia prerequisit de la pràctica religiosa "correcta". L'amor de Déu, diu el moviment bhakti, és accessible a tots: a les dones, als Dalit, als camperols analfabets, als mercaders, als reis i als mendics per igual.</p>
+
+<p>Els <strong>Alvars</strong> —dotze poetes-sants tamils del vaishnavisme, actius entre els segles VI i IX— van compondre en llengua tamil, no en sànscrit, una poesia devocional d'una bellesa i d'una profunditat espiritual extraordinàries. Els <strong>Nayanmars</strong> —seixanta-tres poetes-sants del shaivisme tamil— van fer el mateix per a Shiva. Al nord, figures com <strong>Kabir</strong> (segle XV), <strong>Mirabai</strong> (1498–1547) i <strong>Tukaram</strong> (1598–1650) van portar el missatge bhakti a capes de la societat que el sistema brahminic havia relegat als marges. El moviment bhakti és la primera gran democratització religiosa de la historia de l'Índia.</p>
+
+<h2 id="s717">7.1.7 L'hinduisme colonial i la reforma del segle XIX</h2>
+
+<p>L'arribada dels britànics al subcontinent va produir una transformació de l'hinduisme que els seus practicants —almenys els de les classes educades— en gran part no van triar ni van anticipar, però que va resultar irreversible. A través d'una combinació d'orientalisme acadèmic, administració legal i pressió missionera cristiana, els britànics van forçar les elits índies educades a enfrontar la seva pròpia tradició a través del mirall deformant de les categories intel·lectuals europees.</p>
+
+<p><strong>Ram Mohan Roy</strong> (1772–1833), el fundador del Brahmo Samaj, va condemnar el <em>sati</em> (la cremació de les vídues), el sistema de castes en la seva dimensió d'opressió, i el politeisme "popular", redescobrint un "hinduisme autèntic" en els textos filosòfics antics que pogués competir amb les tradicions espirituals d'Occident en termes d'universalitat i racionalitat. Roy va ser decisiu en la campanya que va portar a la prohibició legal del <em>sati</em> per part del govern britànic el 1829.</p>
+
+<p><strong>Swami Vivekananda</strong> (1863–1902) va representar un moment diferent: la proclamació de la superioritat filosòfica i espiritual de l'hinduisme sobre totes les tradicions d'Occident. El seu discurs al Parlament Mundial de les Religions de Chicago el 1893 —en el qual va saludar l'assemblea com a "germans i germanes d'Amèrica" i va proclamar la universalitat de l'espiritualitat hinduista— va tenir un impacte enorme i és considerat el moment fundacional de la globalització de l'hinduisme.</p>
+
+<h2 id="s718">7.1.8 L'hinduisme polític contemporani: el <em>Hindutva</em></h2>
+
+<p>La darrera transformació major de la narrativa sobre l'hinduisme és la que ens porta al present: el sorgiment del <strong>hindutva</strong> —l'"hindusitat"— com a ideologia política que reivindica l'hinduisme no principalment com a tradició religiosa i espiritual, sinó com a identitat nacional i civilitzatòria.</p>
+
+<p>El concepte és formulat per <strong>Vinayak Damodar Savarkar</strong> en el seu text <em>Hindutva: Qui és un Hindú?</em> (1923). La definició de Savarkar és explícitament territorial, ancestral i cultural, no religiosa: hindú és qui considera el subcontinent indi tant la seva <em>pitribhumi</em> (pàtria, terra dels pares) com la seva <em>punyabhumi</em> (terra sagrada). Amb aquesta definició, Savarkar inclou en la categoria "hindú" els budistes, els jainistes i els sikhs —tots ells originats al subcontinent—, mentre que exclou els musulmans i els cristians indis, les tradicions dels quals ell considera foranies.</p>
+
+<p>Les organitzaciones que articulen el <em>hindutva</em> —el <strong>RSS</strong> (Rashtriya Swayamsevak Sangh), fundado el 1925; el <strong>VHP</strong> (Vishwa Hindu Parishad); el <strong>BJP</strong> (Bharatiya Janata Party), el partit polític que ha governat l'Índia amb majoria absoluta des del 2014— han construït una narrativa en la qual l'hinduisme és la tradició indígena i originàriament índia que va ser colonitzada i humiliada primer per l'islam medieval i després pel cristianisme britànic, i que necessita ara una "reconquesta" cultural i política. La destrucció de la <strong>mesquita de Babri</strong> a Ayodhya el 6 de desembre de 1992 per una multitud de militants del <em>hindutva</em>, i la inauguració del temple de Rama al seu lloc el gener de 2024 per part del primer ministre Modi, son els moments culminants d'aquesta trajectòria.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.2 -->
+<section id="s72" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.2</span>Els textos sagrats — La biblioteca més gran del món</h1>
+
+<p class="drop-cap">Cap altra tradició religiosa de la humanitat ha produït un corpus textual de dimensions i diversitat comparables. La Bíblia cristiana conté uns 31.000 versos. El Corà en té 6.236. El corpus dels textos sagrats hindús —els Vedes, els Brahmanas, els Aranyakes, les Upanishads, els dos grans epics, els divuit Mahapuranes i els divuit Upapuranes, els Tantres, els Agames, els Dharmashastra i una multitud de textos regionals i sectorials— ocupa, en les edicions modernes, desenes de milers de pàgines en centenars de volums.</p>
+
+<p>Però la grandiositat quantitativa no és el tret més notable d'aquest corpus. El que resulta veritablement extraordinari és la seva <strong>estratigrafia temporal</strong>: els textos més antics, els himnes del Rig-Veda, van ser compostos probablement cap al 1500-1200 aC; els textos més recents de la tradició viva daten del segle XII o XIII dC. Estem parlant d'un corpus que s'ha anat construint, capa sobre capa, durant més de dos mil cinc-cents anys, i en el qual les capes no es cancel·len sinó que s'acumulen, es reinterpreten i es posen en diàleg les unes amb les altres en una conversa intel·lectual d'una continuïtat i d'una profunditat sense paral·lel en la historia de la humanitat.</p>
+
+<h2 id="s721">7.2.1 <em>Shruti</em> i <em>Smriti</em>: la distinció fonamental</h2>
+
+<p><strong>Shruti</strong> —"allò que s'ha escoltat"— és el corpus de textos que la tradició considera de revelació directa: no escrits per humans, sinó "escoltats" pels <em>rishis</em> (vidents) en estats de consciència expandida i transmesos oralment de generació en generació amb una fidelitat absoluta. El Shruti no és una revelació en el sentit que una divinitat personal dicti el text a un profeta escollit: és, en la concepció hindú, la percepció directa de la veritat còsmica per part d'individus que han assolit el nivell de consciència necessari per "veure" allò que sempre ha existit. El terme tècnic per a aquests vidents és <em>drashtara</em> —"els qui veuen"—, no <em>shravaka</em> —"els qui escolten la paraula de Déu". La metàfora visual és significativa: la veritat no és proclamada per una autoritat exterior, sinó percebuda per una consciència suficientment refinada.</p>
+
+<p>El corpus del Shruti és fix i tancat: inclou els quatre Vedes (Rig, Sama, Yajur, Atharva), els Brahmanas, els Aranyakes i les Upanishads. Cap text nou pot afegir-se al Shruti. La seva autoritat és, en principi, absoluta i no qüestionable.</p>
+
+<p><strong>Smriti</strong> —"allò que s'ha recordat"— és el corpus vastíssim de textos que la tradició considera d'autoritat humana derivada: productes de la memòria, de la transmissió i de l'elaboració humana a partir de la veritat revelada en el Shruti. El Smriti inclou els dos grans epics (Mahabharata i Ramayana), els Puranes, els textos legals i ètics (<em>Dharmashastra</em>, com el <em>Manusmriti</em>), els textos filosòfics de les diverses escoles (<em>darshana</em>) i una multitud de textos devocionals, rituals i científics. El corpus del Smriti és, en principi, obert: nous textos poden adquirir l'estatus de Smriti si la tradició els reconeix com a transmissors autèntics de la saviesa revelada.</p>
+
+<p>La relació entre Shruti i Smriti no és simplement jeràrquica: és una relació de complementarietat funcional. El Shruti estableix els principis; el Smriti els aplica, els elabora, els narra i els fa accessibles. El Shruti és la font; el Smriti és el riu que porta l'aigua als camps. Aquesta distinció ha estat decisiva per a la capacitat adaptativa de l'hinduisme: quan un reformador vol canviar una pràctica concreta, pot invocar l'autoritat del Shruti per qüestionar un text del Smriti que la justifica, sense posar en qüestió la totalitat de la tradició.</p>
+
+<h2 id="s722">7.2.2 Els Vedes: el fonament de tot</h2>
+
+<p>La paraula <em>Veda</em> deriva de l'arrel sànscrita <em>vid</em>, "saber", "conèixer", la mateixa arrel que produeix el llatí <em>videre</em> ("veure"), el grec <em>oida</em> ("sé") i, en última instància, la paraula anglesa <em>wisdom</em>. Els Vedes son, literalment, "el saber": no un saber particular sobre un tema específic, sinó el Saber en absolut.</p>
+
+<p>Son quatre: el <strong>Rig-Veda</strong>, el <strong>Sama-Veda</strong>, el <strong>Yajur-Veda</strong> i l'<strong>Atharva-Veda</strong>. Cadascun té la seva funció específica en el context del gran sacrifici vèdic (<em>yajna</em>):</p>
+
+<p>El <strong>Rig-Veda</strong> —"Veda dels himnes" (<em>ric</em>, "vers" o "himne")— és el més antic i el més important. Conté 1.028 himnes distribuïts en deu llibres (<em>mandalas</em>), compostos en sànscrit vèdic arcaic entre aproximadament el 1500 i el 1200 aC. És, en molts sentits, el document fundacional de tota la civilització índia, i un dels textos més antics de la humanitat que hem conservat amb la seva forma original. Els himnes del Rig-Veda van ser compostos per bards sacerdotals (<em>hotri</em>) per ser recitats en veu alta durant el sacrifici, i la seva transmissió oral va assolir un nivell d'exactitud que no té precedents en cap altra tradició: durant tres mil cinc-cents anys, generació rere generació de <em>brahmins</em> han memoritzat i transmès el text síl·laba per síl·laba, amb un sistema de verificació creuada tan elaborat que garantia la preservació de cada lletra, cada accent tonal i cada pausa.</p>
+
+<p>El <strong>Nasadiya Sukta</strong> (Rig-Veda X.129) —el "Himne de la Creació"— és un dels passatges filosòfics més notables de la tradició: s'interroga sobre l'origen del cosmos amb una radicalitat que anticipa els problemes de la cosmologia moderna, i conclou amb la pregunta de si Déu mateix coneix la resposta sobre la creació. Un text sagrat que acaba dubtant de si Déu ho sap tot és, per dir-ho suaument, inusual en qualsevol tradició religiosa.</p>
+
+<p>El <strong>Sama-Veda</strong> —"Veda de les melodies" (<em>saman</em>, "cant")— és essencialment una antologia de versos extrets del Rig-Veda als quals se'ls ha assignat una melodia específica per ser cantats pels sacerdots <em>udgatri</em> durant el sacrifici. Representa la primera documentació sistemàtica de la música sacra índia, i la seva influència sobre la tradició de la música clàssica índia és profunda.</p>
+
+<p>El <strong>Yajur-Veda</strong> —"Veda de les fórmules sacrificials" (<em>yajus</em>, "fórmula de sacrifici")— conté les fórmules en prosa que els sacerdots <em>adhvaryu</em> recitaven mentre executaven físicament les accions del ritual. Existeix en dues versions principals: el "Yajur-Veda Negre" (<em>Krishna Yajurveda</em>) i el "Yajur-Veda Blanc" (<em>Shukla Yajurveda</em>). És el text que ens proporciona la informació més detallada sobre el ritual vèdic en la seva dimensió pràctica.</p>
+
+<p>L'<strong>Atharva-Veda</strong> —"Veda d'Atharvan"— és el més tardà dels quatre, compost probablement entre el 1200 i el 1000 aC, i el més heterogeni en contingut. Conté himnes de lloança als déus, però també —i és el que el fa únic i sovint incòmode per als defensors de la "puresa" vèdica— una gran quantitat d'encanteris, màgies curatives, encanteris de protecció, malediccions, rituals per obtenir l'amor d'una persona, per expulsar els dimonis de les malalties, per garantir l'èxit en el joc o en la guerra. L'Atharva-Veda ens mostra una capa de la religiositat popular vèdica que els altres tres Vedes, centrats en el gran ritual sacrificial d'Estat, tendeixen a amagar: la religió de la gent corrent, amb les seves pors, els seus desigs concrets i les seves estratègies màgiques per navegar la incertesa de la vida quotidiana.</p>
+
+<h2 id="s723">7.2.3 Els Brahmanas i els Aranyakes: el ritual com a ciència còsmica</h2>
+
+<p>Els <strong>Brahmanas</strong> —textos en prosa que acompanyen i interpreten cada Veda— representen una transformació crucial de la religió vèdica: el pas d'una religió de lloança i petició als déus a una religió de control ritual de l'ordre còsmic. Si en els himnes del Rig-Veda el sacerdot es dirigia als déus amb reverència i esperava la seva resposta benevolent, en els Brahmanas el sacerdot que realitza el ritual correctament <em>obliga</em> el cosmos a respondre. El sacrifici no és una súplica: és una acció cosmogònica que produeix efectes necessaris si s'executa amb exactitud.</p>
+
+<p>El <em>Shatapatha Brahmana</em> —"Brahmana dels Cent Camins", el més extens i el més important— descriu amb una precisió obsessiva els rituals del gran sacrifici vèdic, explicant la correspondència còsmica de cada gest, cada recitació, cada ofrena: l'altar del foc és l'univers, els maons que el componen corresponen als dies de l'any, el foc central és el sol, l'espai entre els altars és l'atmosfera. Realitzar el ritual és, literalment, reconstruir i mantenir el cosmos.</p>
+
+<p>Els <strong>Aranyakes</strong> —"textos del bosc" (<em>aranya</em>, "bosc")— marquen una transició important: pertanyen als qui s'han retirat del món actiu per a la meditació i l'estudi, i comencen el moviment d'interiorització que culminarà en les Upanishads. Els Aranyakes ofereixen interpretacions al·legòriques i espirituals dels rituals vèdics: en lloc de realitzar el sacrifice extern, el meditador pot realitzar el sacrifici interiorment, fent correspon el foc del sacrifici amb el calor del cos, l'ofrena de menjar amb la pràctica de l'ascetisme, la recitació dels himnes amb la meditació silenciosa.</p>
+
+<h2 id="s724">7.2.4 Les Upanishads: la gran revolució filosòfica</h2>
+
+<p>Les <strong>Upanishads</strong> —la paraula deriva de <em>upa</em> ("prop"), <em>ni</em> ("baix") i <em>shad</em> ("seure"), i significa literalment "seure prop" del mestre— representen el moment més extraordinari de tota la tradició vèdica: la revolució intel·lectual que transforma una religió de sacrifici i propiciació en un sistema filosòfic de recerca de la identitat última de la consciència i del cosmos.</p>
+
+<p>Hi ha uns dos-cents textos que porten el títol d'"Upanishad", però la tradició reconeix dotze o tretze com a "principals" (<em>mukhya upanishads</em>) per la seva antiguitat, la seva profunditat i la seva influència. Les més antigues —la Brihadaranyaka i la Chandogya— van ser compostes probablement entre el 800 i el 600 aC.</p>
+
+<p>La pregunta central de les Upanishads és: <em>Quin és el principi últim de la realitat?</em> I la resposta que les Upanishads elaboren és, en la seva forma més radical, la que formulen les <strong>Mahavakyas</strong> —les "Gran Afirmacions"— que cada Upanishad principal conté:</p>
+
+<div class="highlight">
+<p><strong>"Prajnanam Brahma"</strong> — "La consciència és Brahman" (Aitareya Upanishad)<br>
+<strong>"Aham Brahmasmi"</strong> — "Jo soc Brahman" (Brihadaranyaka Upanishad)<br>
+<strong>"Tat tvam asi"</strong> — "Tu ets allò" (Chandogya Upanishad)<br>
+<strong>"Ayam Atma Brahma"</strong> — "Aquest Atman és Brahman" (Mandukya Upanishad)</p>
+</div>
+
+<p>Cadascuna d'aquestes afirmacions expressa la mateixa realització des d'una perspectiva diferent: el principi últim del cosmos (<em>Brahman</em>) i el principi últim del jo individual (<em>Atman</em>) no son dues realitats separades sinó una sola. La percepció de separació entre el jo i el cosmos és, en la perspectiva de les Upanishads, el gran error cognitiu que genera tota la resta d'errors: l'apego, el desig, el sofriment, el cicle de renaixements.</p>
+
+<p>La <strong>Brihadaranyaka Upanishad</strong> —"la gran Upanishad del bosc"— és probablement el text filosòfic més antic i més profund del corpus. En ella, el savi <strong>Yajnavalkya</strong> protagonitza una sèrie de diàlegs que exploren la naturalesa de l'Atman, el son i la vigília, la mort i el renaixement, i la identitat última entre el jo i Brahman. Quan la seva esposa <strong>Maitreyi</strong> li demana si la riquesa material li donaria la immortalitat, Yajnavalkya respon amb una de les frases més citades de tota la filosofia índia: <em>"Per amor de Brahman, estimem el marit; per amor de Brahman, estimem l'esposa; per amor de Brahman, estimem tot allò que estimem: és Brahman, l'estimat últim, el que s'amaga darrere de tots els amors."</em></p>
+
+<p>La <strong>Chandogya Upanishad</strong> conté el diàleg entre el savi <strong>Uddalaka Aruni</strong> i el seu fill <strong>Shvetaketu</strong>, en el qual la identitat entre Atman i Brahman s'il·lustra a través d'una sèrie d'exemples quotidians. Quan Uddalaka demana al fill que dissolgui sal en una copa d'aigua i la provi en tres punts —dalt, al mig, a baix—, i el fill constata que el gust salat és idèntic en tots tres punts tot i que la sal és invisible, el pare conclou: <em>"Aquesta és la veritat subtil que sosté tot el que existeix. Això és la Realitat. Això és l'Atman. Tat tvam asi, Shvetaketu: tu ets allò."</em></p>
+
+<p>La <strong>Katha Upanishad</strong> presenta el diàleg entre el jove <strong>Nachiketa</strong> i <strong>Yama</strong>, el déu de la mort, que demana per al tercer desig la resposta a la pregunta: <em>Quan un home mor, alguns diuen que existeix, d'altres que no existeix. Explica'm la veritat.</em> El que segueix és un dels tractaments filosòfics de la mort i de la immortalitat de l'Atman més profunds que ha produït cap tradició humana.</p>
+
+<p>La <strong>Mandukya Upanishad</strong> —la més breu de les principals, amb només dotze versos— analitza els quatre estats de la consciència: la vigília (<em>jagrat</em>), el somni (<em>svapna</em>), el son profund sense somnis (<em>sushupti</em>) i el quart estat (<em>turiya</em>) —no un estat entre els altres sinó el substrat silenciós que fa possibles tots tres, la consciència pura que no té contingut però sense la qual cap contingut seria possible.</p>
+
+<h2 id="s725">7.2.5 La Bhagavad Gita: el poema que ha transformat el món</h2>
+
+<p>Si les Upanishads representen el cim de la filosofia hindú en el seu sentit més abstracte i metafísic, la <strong>Bhagavad Gita</strong> —"El Cant del Senyor"— és el text que ha tingut un impacte pràctic i polític més directe sobre la vida de centenars de milions de persones. Cap altre text de la tradició hindú —i, podria argumentar-se, cap text de cap tradició del món— ha estat tan llegit, tan comentat, tan debatut i tan utilitzat políticament al llarg dels segles.</p>
+
+<p>La Gita no és un text independent: és un episodi del sisè llibre del <strong>Mahabharata</strong>. Es situa en el moment just anterior a la batalla de Kurukshetra, la batalla decisiva de la guerra civil entre els clans Pandava i Kaurava. El príncep guerrer <strong>Arjuna</strong>, assegut en el seu carro de guerra entre les dues armades, contempla els seus mestres, els seus parents i els seus amics als quals haurà de combatre i matar, i és pres per un paràlisi moral i emocional: no pot lluitar. El seu auriga, que resulta ser el déu <strong>Krishna</strong> en persona, li respon amb un discurs que s'estén al llarg de divuit capítols i 700 versos.</p>
+
+<p>L'argument central de Krishna és d'una audàcia filosòfica i ètica extraordinària. Krishna comença per rebutjar la base emocional del bloqueig d'Arjuna: la tristesa per haver de matar els seus parents és un error cognitiu. L'Atman —el principi conscient que habita el cos— és etern, no neix ni mor, no pot ser destruït per cap arma. <em>"Tal com un home es treu la roba vella i en posa de nova, així l'Atman es treu els cossos vells i pren cossos nous"</em> (II.22). Si Arjuna és un guerrer (<em>kshatriya</em>), el seu <em>svadharma</em> és lluitar. <em>"Millor és complir el propi dharma, per imperfectament que sigui, que el dharma d'un altre, per perfectament que sigui"</em> (III.35).</p>
+
+<p>Però Krishna no es limita a justificar la guerra. El seu argument més original i més influent és la doctrina del <strong>nishkama karma</strong> —l'acció desinteressada: <em>"Et correspon l'acció, mai els seus fruits. No siguis motivat pels fruits de l'acció, ni tampoc t'absentis de l'acció"</em> (II.47). Arjuna ha de lluitar no per obtenir el tron, sinó simplement perquè és el seu deure, sense cap apego al resultat.</p>
+
+<p>La Gita presenta tres camins principals d'alliberament:</p>
+<div class="triple-path">
+  <div class="triple-card"><span class="avesic">Jnana Yoga</span><span class="meaning">El camí del coneixement i de la comprensió filosòfica de la veritat de l'Atman/Brahman</span></div>
+  <div class="triple-card"><span class="avesic">Karma Yoga</span><span class="meaning">El camí de l'acció desinteressada al món sense apego als seus resultats</span></div>
+  <div class="triple-card"><span class="avesic">Bhakti Yoga</span><span class="meaning">El camí suprem de la devoció amorosa i la rendició total a Déu</span></div>
+</div>
+
+<p>La dimensió política de la Gita il·lustra perfectament la tensió de la tradició. <strong>Bal Gangadhar Tilak</strong> (1856-1920) va llegir la Gita com un manual d'acció política: una crida a l'acció desinteressada enfront de la tirania colonial britànica. <strong>Mohandas Gandhi</strong> (1869-1948) va llegir la mateixa Gita de manera radicalment diferent: la batalla de Kurukshetra era per a ell una al·legoria del conflicte interior entre les forces del bé i del mal en el cor de cada individu. El fet que el mateix text pugui ser llegit simultàniament com a justificació de la violència política i com a fonament filosòfic de la no-violència és una de les paradoxes més il·lustratives de la riquesa —i de l'ambigüitat— de la tradició hindú.</p>
+
+<h2 id="s726">7.2.6 Els Epics: Mahabharata i Ramayana</h2>
+
+<p>Els dos grans epics de la tradició hindú son, en el sentit més ple del terme, <strong>enciclopèdies morals i polítiques</strong> d'una civilització. A través de la narrativa transmeten la totalitat del sistema de valors, les normes de conducta, els models de virtut i de vici, i les concepcions del poder, la justícia i l'ordre social que estructuren la civilització hindú.</p>
+
+<p>El <strong>Mahabharata</strong> —"La gran història dels Bharata"— és, en termes de paraules, la narració més llarga que ha produït la humanitat: en la seva forma estàndard, conté uns 100.000 versos en sànscrit, que equival a unes set vegades la Bíblia o quinze vegades la <em>Ilíada</em> i l'<em>Odissea</em> juntes. Va ser compost en diverses capes entre el 400 aC i el 400 dC, i atribuït al llegendari savi <strong>Vyasa</strong>.</p>
+
+<p>El tema central del Mahabharata és la guerra entre els cinc germans Pandava i els cent germans Kaurava per l'herència del regne. Però el Mahabharata és molt més que la narració d'aquesta guerra: és un dipòsit de tot el saber moral, filosòfic, polític i jurídic de la civilització clàssica índia. El dilema moral central és d'una complexitat que ha fascinat lectors durant dos mil·lennis: no hi ha herois perfectes ni vilans absoluts. El rei just Yudhishthira és un jugador compulsiu. El valent Arjuna pateix paràlisi moral. El noble Karna —fill secret de la mare dels Pandava, lleial als seus amos tot i saber-los al bàndol equivocat— és un dels personatges moralment més complexos de tota la literatura mundial.</p>
+
+<p>El <strong>Ramayana</strong> —"El viatge de Rama"— és, per contrast, estructuralment molt més simple i moralment molt més nítid: és la historia de l'heroi ideal, el príncep <strong>Rama</strong> —avatar de Vishnu— que és exiliat injustament, que viu al bosc amb la seva esposa <strong>Sita</strong> i el seu germà <strong>Lakshmana</strong>, que ha de rescatar Sita del dimoni <strong>Ravana</strong> que l'ha segrestada a Lanka, i que finalment retorna a la seva capital Ayodhya per ser coronat rei just. Atribuït al savi <strong>Valmiki</strong>, va ser compost probablement entre el 500 i el 100 aC en la seva versió originaria.</p>
+
+<p>La influència del Ramayana en la cultura popular de l'Índia i del Sud-est Asiàtic és difícil d'exagerar. Existeix en desenes de versions en tantes llengues com hi ha al subcontinent: el <em>Ramcharitmanas</em> d'en Tulsidas en hindi (segle XVI), el <em>Kambaramayanam</em> en tamil (segle XII), versions en javaní, tailandès, khmer, birmà, malai. El Ramayana tailandès —el <em>Ramakien</em>— és un dels pilars de la cultura reial tailandesa fins avui.</p>
+
+<h2 id="s727">7.2.7 Els Puranes: la mitologia com a política</h2>
+
+<p>Si els Vedes i les Upanishads s'adrecen als especialistes religiosos i als filòsofs, i si els epics narren les gestes dels herois i les guerres dels reis, els <strong>Puranes</strong> —"els antics" o "les velles histories"— s'adrecen a tothom: homes i dones de totes les castes, en totes les regions, en totes les etapes de la vida. Són la gran literatura popular de l'hinduisme, el vehicle a través del qual la cosmologia, la teologia, la moral i la política de la tradició es transmeten en forma de narrativa accessible, plena de miracles, d'aventures divines, de batalles còsmiques i d'histories d'amor i devoció.</p>
+
+<p>Hi ha divuit <strong>Mahapuranes</strong> ("Grans Puranes") reconeguts per la tradició, als quals s'afegeixen divuit <strong>Upapuranes</strong> ("Puranes Menors") i una multitud inabastable de Puranes regionals dedicats a divinitats, llocs sagrats i dinasties locals. Van ser compostos principalment entre el 300 i el 1200 dC, tot i que contenen material molt més antic. La seva funció no era simplement religiosa o literaria: era explícitament política. Cada gran Purana serveix, entre altres coses, per legitimar la divinitat particular —Vishnu, Shiva o la Deessa— que és l'objecte de la seva devoció, i molts inclouen genealogies de dinasties reials que els connecten amb els déus i els herois del temps primordial.</p>
+
+<p>El <strong>Bhagavata Purana</strong> —dedicat a Vishnu en la seva forma de Bhagavan, el "Senyor personal"— és el Purana més venerat i el més influent en la teologia vaishnaava. El seu desè llibre, dedicat a les aventures infantils i juvenils de <strong>Krishna</strong>, és un dels textos devocionals més estimats de tota la tradició hindú: les travessures del petit Krishna que roba mantega a les lleteres, les seves danses nocturnes amb les pastores (<em>gopis</em>) al clar de lluna, el seu amor amb <strong>Radha</strong>.</p>
+
+<h2 id="s728">7.2.8 Les Tantres: el cos com a cosmos i el desig com a camí</h2>
+
+<p>El darrer gran corpus que hem de considerar és el que la tradició anomena les <strong>Tantres</strong> —un terme que en sànscrit significa "teixit" o "trama" i que designa un conjunt vast i heterogeni de textos compostos principalment entre els segles V i XII dC, que proposen un camí d'alliberament radicalment diferent del dels Vedes i les Upanishads.</p>
+
+<p>On la via vedàntica proposa la transcendència del cos i del desig com a camí vers la realitat última, el Tantra proposa la seva transformació i la seva utilització com a vehicle d'alliberament. On l'ortodòxia brahminica construeix l'accés a la divinitat a través de la puresa ritual i la jerarquia de casta, el Tantra el democratitza radicalment: el cos de cada ésser humà —independent de la seva casta, del seu sexe o de la seva condició social— és el microcosmos que conté la totalitat del macrocosmos.</p>
+
+<p>La via tàntrica de l'"esquerra" (<em>vamachara</em>) proposa la utilització ritual de les cinc "M" (<em>pancha makara</em>): <em>madya</em> (vi), <em>mamsa</em> (carn), <em>matsya</em> (peix), <em>mudra</em> (gra torrat o gestos rituals), i <em>maithuna</em> (unió sexual). Aquestes cinc substàncies i pràctiques, que l'ortodòxia brahminica considera impures o prohibides, es transformen en el context del ritual tàntric en ofertes sagrades a la divinitat i en vehicles de la realització espiritual: el tabú es converteix en porta, la impuresa en instrument de purificació, el desig en camí vers la seva pròpia dissolució.</p>
+
+<p>La <strong>kundalini</strong> —l'energia serp adormida que resideix a la base de la columna vertebral— és el símbol central de la fisiologia tàntrica. El treball espiritual tàntric consisteix en despertar la <em>kundalini</em> i guiar-la cap amunt a través dels set <strong>chakres</strong> —centres d'energia que corresponen a nivells creixents de consciència— fins al <em>sahasrara</em>, el chakra de la corona, on la <em>kundalini</em> (Shakti) s'uneix amb la consciència pura (Shiva) en una experiència d'unió mística que és, simultàniament, el <em>moksha</em> i el gaudi suprem.</p>
+
+<p>La influència del Tantra sobre la civilització índia és molt més àmplia del que la seva reputació controvertida suggeriria. L'arquitectura dels temples hindús medievals, amb la seva rica iconografia eròtica —Khajuraho, Konarak— és una expressió tàntrica de la visió del cosmos com a manifestació de la unió divina entre Shiva i Shakti. La medicina ayurvèdica, amb la seva comprensió del cos com a sistema d'energies que cal equilibrar, deu molt a la fisiologia esotèrica tàntrica. I la tradició del Yoga en la seva forma moderna —amb els seus chakres, el seu kundalini i el seu sistema de pranayama— és, en gran mesura, una herència tàntrica.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.3 -->
+<section id="s73" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.3</span>Cosmovisió hindú — El cosmos com a sistema</h1>
+
+<p class="drop-cap">Si els textos sagrats que hem descrit al 7.2 son l'arquitectura textual de la tradició hindú, el 7.3 n'és l'arquitectura conceptual: el sistema de categories a través del qual l'hinduisme concep i organitza la realitat. No és un sistema filosòfic en el sentit occidental del terme, sinó quelcom més semblant al que els antropòlegs anomenen una <strong>cosmologia</strong>: un marc total de comprensió de l'existència que organitza simultàniament el temps, l'espai, el cos, la societat i la consciència en un sistema coherent de correspondències.</p>
+
+<p>El que és notable de la cosmovisió hindú no és simplement la seva riquesa o la seva complexitat —que son extraordinàries— sinó la seva <strong>coherència sistèmica</strong>: els conceptes que la componen no estan simplement juxtaposats sinó articulats en una arquitectura en la qual cada element remet als altres. El <em>karma</em> té sentit en el marc del <em>samsara</em>, que té sentit en el marc de la cosmologia cíclica dels <em>yugas</em>, que té sentit en el marc de la metafísica de Brahman/Atman, que té sentit en el marc de la distinció entre <em>maya</em> i la realitat última.</p>
+
+<h2 id="s731">7.3.1 La cosmologia cíclica: el temps com a degradació i renovació</h2>
+
+<p>Una de les diferències més profundes entre la cosmovisió hindú i la cosmovisió de les tres religions abrahamítiques és la concepció del temps. On el judaisme, el cristianisme i l'islam conceben el temps com a lineal, la cosmovisió hindú concep el temps com a <strong>cíclic</strong>: el cosmos no té un principi ni un final en sentit absolut, sinó que passa per cicles enormes de creació, conservació i dissolució.</p>
+
+<p>La unitat bàsica del temps còsmic és el <strong>Yuga</strong>, una "edat" o "era". Hi ha quatre Yugas que formen un cicle complet (<em>Mahayuga</em>):</p>
+
+<div class="yuga-grid">
+  <div class="yuga-cell header">Yuga</div><div class="yuga-cell header">Significat</div><div class="yuga-cell header">Durada (anys humans)</div>
+  <div class="yuga-cell"><strong>Satya Yuga</strong></div><div class="yuga-cell">Edat d'or; dharma perfecte</div><div class="yuga-cell">1.728.000</div>
+  <div class="yuga-cell"><strong>Treta Yuga</strong></div><div class="yuga-cell">Dharma a tres quartes parts</div><div class="yuga-cell">1.296.000</div>
+  <div class="yuga-cell"><strong>Dvapara Yuga</strong></div><div class="yuga-cell">Dharma reduït a la meitat</div><div class="yuga-cell">864.000</div>
+  <div class="yuga-cell"><strong>Kali Yuga</strong></div><div class="yuga-cell">Edat fosca; dharma a un quart</div><div class="yuga-cell">432.000</div>
+</div>
+
+<p>El <strong>Kali Yuga</strong> —"Era de la Discòrdia"— és l'edat en la qual el <em>dharma</em> queda reduït a només una quarta part de la seva perfecció original: l'era del conflicte, de la ignorància, de la degradació moral, de les guerres i de l'opressió. La tradició hindú situa el seu inici el 3102 aC, coincidint amb la mort de Krishna i la batalla de Kurukshetra. Estem, per tant, en ple Kali Yuga, amb uns 427.000 anys per endavant fins al seu final.</p>
+
+<p>Un <em>Mahayuga</em> complet suma 4.320.000 anys. Mil <em>Mahayugas</em> formen un <strong>Kalpa</strong>, un "dia de Brahma", que dura 4.320.000.000 anys —extraordinàriament proper a l'edat de la Terra calculada per la geologia moderna (4.500 milions d'anys). Cent "anys de Brahma" constitueixen la vida completa de Brahma, que suma uns 311 trilions d'anys humans. Al final de la seva vida, el cosmos sencer es dissol en Brahman, i després un nou Brahma sorgeix i comença un nou cicle de creació.</p>
+
+<p>Les implicacions d'aquesta cosmologia per a la comprensió de la condició humana i de l'ordre social son enormes i no sempre innocent des del punt de vista polític. Si vivim en el Kali Yuga, aleshores la corrupció de les institucions, la injustícia social i el sofriment no son anomalies que cal corregir sinó les característiques necessàries de l'era en la qual vivim. La cosmologia cíclica pot, en determinades lectures, funcionar com a ideologia de la resignació. Tanmateix, la mateixa cosmologia admet lectures molt diferents: precisament perquè el Kali Yuga fa impossibles les pràctiques espirituals costoses del passat, la gràcia divina es fa disponible a tothom a través de l'amor i la devoció simples.</p>
+
+<h2 id="s732">7.3.2 Brahman i Atman: el monisme de Vedanta</h2>
+
+<p>Al cor de la filosofia hindú hi ha una afirmació que és simultàniament la més simple i la més radical que pugui fer cap sistema de pensament: <strong>tot és un</strong>. Aquesta realitat única s'anomena <strong>Brahman</strong> —terme derivat de l'arrel <em>brh</em>, "expandir-se", "créixer", "ser gran".</p>
+
+<p>D'una banda, hi ha el <strong>Nirguna Brahman</strong> —"Brahman sense qualitats"—: la realitat última tal com és en si mateixa, més enllà de tota determinació, de tota forma, de tot atribut. D'altra banda, hi ha el <strong>Saguna Brahman</strong> —"Brahman amb qualitats"—: la mateixa realitat última considerada en la seva relació amb el món, com a creador, conservador i destructor del cosmos, com a Déu personal accessible a la devoció i a l'amor.</p>
+
+<p><strong>Shankaracharya</strong> (788–820 dC aproximadament) formula l'<em>Advaita Vedanta</em> ("Vedanta no-dual") en termes inequívocs: la realitat última és Nirguna Brahman, i tot el que no és Nirguna Brahman —els déus personals, el món material, les ànimes individuals— és <em>maya</em>, aparença.</p>
+
+<p><strong>Ramanuja</strong> (1017–1137 dC) s'oposa frontalment a Shankaracharya des del seu <em>Vishishtadvaita</em> ("Vedanta no-dual qualificat"). Per a Ramanuja, les ànimes individuals i el món material no son simplement <em>maya</em>: son reals, i son el "cos" de Brahman —identificat amb Vishnu/Bhagavan. La unió amb Déu no és la dissolució de l'ànima individual sinó la seva relació d'amor etern amb la divinitat personal.</p>
+
+<p><strong>Madhva</strong> (1238–1317 dC) porta la distinció al seu extrem en el seu <em>Dvaita</em> ("Vedanta dual"): Déu (Vishnu), les ànimes i el món son reals i eternament distints. L'alliberament no és la dissolució de l'ànima en Brahman sinó la seva fruïció eterna de la presència de Déu, preservant la seva individualitat.</p>
+
+<h2 id="s733">7.3.3 Maya: la il·lusió que no és falsa</h2>
+
+<p>El concepte de <em>maya</em> és un dels més incompresos de tota la filosofia hindú. <em>Maya</em> no significa que el món sigui una al·lucinació, que les coses materials no existeixin, o que el sofriment no sigui real. Significa alguna cosa filosòficament molt més precisa: que la manera habitual en la qual percebem el món —com a conjunt de coses separades, independents i permanents— no correspon a la naturalesa última de la realitat.</p>
+
+<p>Una de les metàfores més usades per il·lustrar <em>maya</em> és la de la <strong>corda i la serp</strong>: en la foscor, un home veu una corda al terra i, per un moment, la confon amb una serp i sent por. Quan s'apropa amb una llum, veu que és una corda i la por desapareix. La serp mai va existir: era una projecció de la ment sobre la realitat de la corda.</p>
+
+<p>Però <em>maya</em> té també una dimensió <strong>social i política</strong>: la doctrina pot funcionar com a ideologia de legitimació de l'ordre social existent. Si el món és <em>maya</em>, si les distincions entre rics i pobres, entre castes superiors i inferiors son aparences en el fons de la unitat de Brahman, aleshores qualsevol lluita per canviar l'ordre social pot ser presentada com a confusió espiritual. Però la mateixa doctrina conté el seu antídot: si totes les distincions mundanes son en última instancia aparences, aleshores la jerarquia de casta no té cap fonament en la realitat última. Molts dels sants <em>bhakti</em> han explotat precisament aquesta potencialitat igualitàrista.</p>
+
+<h2 id="s734">7.3.4 Karma i <em>samsara</em>: la mecànica moral de l'existència</h2>
+
+<p><strong>Karma</strong> —de l'arrel <em>kri</em>, "fer", "actuar"— designa la llei universal de causa i efecte en el pla moral: cada acció —pensament, paraula o acte— deixa una empremta (<em>samskara</em>) en la consciència del qui l'executa, i aquestes empremtes determinen les condicions futures de l'existència. El karma no és un sistema de recompensa i càstig administrat per una divinitat jutge: és una llei impersonal de la naturalesa, tan automàtica com la gravetat.</p>
+
+<p>La Bhagavad Gita introdueix una distinció crucial: el karma que genera nous lligams és el karma executat amb apego als seus fruits (<em>sa-kama karma</em>), mentre que l'acció executada sense apego (<em>nishkama karma</em>) no genera nous lligams kàrmics.</p>
+
+<p><strong>Samsara</strong> —"el que flueix conjuntament", "la roda que gira"— designa el cicle de renaixements en el qual l'ànima individual es troba atrapada a causa del karma acumulat. Allò que es transmet d'una vida a l'altra no és exactament la personalitat individual sinó el <em>jiva</em> —el principi de vida individual— juntament amb les empremtes kàrmiques acumulades.</p>
+
+<p>La implicació social d'aquesta doctrina és d'una importància immensa i d'una ambigüitat que no es pot ignorar. Si la posició social en la qual neix una persona és el resultat del seu karma personal en vides anteriors, aleshores la desigualtat social no és una injustícia que cal corregir: és el funcionament just i impersonal de la llei còsmica. És precisament contra aquesta lectura del karma que B. R. Ambedkar va dirigir la seva crítica més ferotge: <em>"La raó per la qual la casta subsisteix és la creença religiosa que la sustenta. La doctrina del karma és la principal entre les creences que sustenten el sistema de castes."</em></p>
+
+<h2 id="s735">7.3.5 <em>Moksha</em> i els quatre objectius de la vida humana</h2>
+
+<p>La cosmovisió hindú no concep la vida humana com un simple interval entre el naixement i la mort. La concep com un <strong>procés d'evolució</strong> —a través de moltes vides— vers la realització de la pròpia natura última. Aquesta sensibilitat gradualista es reflecteix en la doctrina dels <strong>quatre objectius de la vida</strong> (<em>Purusharthas</em>):</p>
+
+<p><strong>Dharma</strong> —ordre moral, deure, rectitud. El primer i fonamental objectiu: actuar conforme al <em>dharma</em>, complint les obligacions que deriven de la pròpia naturalesa i posició social.</p>
+
+<p><strong>Artha</strong> —riquesa, poder, èxit material, prosperitat. L'hinduisme no condemna la riquesa material o el poder polític exercit conforme al <em>dharma</em>: l'<em>Arthashastra</em> de Kautilya és un manual de política i economia que tracta l'<em>artha</em> amb un realisme que no té res a envejar a Maquiavel.</p>
+
+<p><strong>Kama</strong> —desig, amor, plaer, bellesa, les arts. El <em>Kamasutra</em> de Vatsyayana no és un manual de tècniques sexuals: és un tractat de vida cultivada que abasta l'art de viure bé, l'estètica i la psicologia de les relacions humanes.</p>
+
+<p><strong>Moksha</strong> —alliberament, emancipació del cicle del samsara. El quart i suprem objectiu: l'alliberament definitiu del cicle de renaixements i la realització de la identitat entre l'Atman individual i Brahman universal.</p>
+
+<p>La doctrina dels <em>Purusharthas</em> és filosòficament notable per la seva <strong>negació del puritanisme</strong>: la tradició hindú en el seu corrent principal no condemna la recerca de la riquesa, el poder o el plaer com a obstacles espirituals per si mateixos. Els condemna quan s'erigeixen com a fins absoluts en lloc de mitjans relatius.</p>
+
+<h2 id="s736">7.3.6 La Trimúrti i l'estructura divina del cosmos</h2>
+
+<p>La cosmovisió hindú concep el cosmos com un procés dinàmic de creació, conservació i dissolució que es repeteix cíclicament a totes les escales de l'existència. Aquesta dinàmica ternària és personificada en la <strong>Trimúrti</strong> —la "Triple Forma":</p>
+
+<p><strong>Brahma</strong>, el creador, inicia cada cicle còsmic produint el món de la multiplicitat a partir de Brahman. Paradoxalment, tot i ser el creador, Brahma és avui la menys adorada de les tres divinitats: existeix tan sols un temple important dedicat exclusivament a ell a tota l'Índia, el de Pushkar.</p>
+
+<p><strong>Vishnu</strong>, el conservador, manté l'ordre còsmic entre la creació i la dissolució, i intervé en la história quan l'equilibri del <em>dharma</em> és amenaçat a través de la doctrina dels <strong>Avatars</strong> —"descensos" de la divinitat al món material.</p>
+
+<p><strong>Shiva</strong>, el destructor i el transformador, és probablement la divinitat hindú de major profunditat filosòfica. La seva funció còsmica no és la destrucció en el sentit de la simple aniquilació: és la dissolució que fa possible la renovació. La imatge del <strong>Nataraja</strong> —Shiva dansant dins d'un cercle de flames— és una de les icones espirituals i artístiques més poderoses que ha produït la humanitat.</p>
+
+<p>La Trimúrti no esgota la divinitat en la cosmovisió hindú. Al costat de les tres divinitats masculines hi ha les seves <strong>Shaktis</strong> —"poders" o "energies" femenines— sense les quals son incapaços de cap funció còsmica: <strong>Sarasvati</strong> (saviesa, parella de Brahma), <strong>Lakshmi</strong> (prosperitat, parella de Vishnu) i <strong>Parvati/Durga/Kali</strong> (l'energia primordial en les seves formes dolça, guerrera i terrible, parella de Shiva). La tradició <strong>Shakta</strong> —que adora la Gran Deessa com a realitat última— és una de les tradicions més antigues i més vives de l'hinduisme.</p>
+
+<p>Fora de la Trimúrti hi ha dues figures de presència omnipresent en la vida religiosa quotidiana: <strong>Ganesha</strong> —el fill de Shiva amb cap d'elefant, déu dels inicis i de la saviesa— i <strong>Hanuman</strong> —el déu mico, servidor devot de Rama, probablement el déu més popular de l'Índia contemporània en termes de devoció activa.</p>
+
+<p>La diversitat d'aquest panteó no és el producte d'una addició acumulativa de creences incompatibles: és l'expressió d'una cosmovisió en la qual la realitat última és tan rica i tan diversa que necessita infinites formes per manifestar-se.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.4 -->
+<section id="s74" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.4</span>El sistema de castes — L'enginyeria social del <em>dharma</em></h1>
+
+<p class="drop-cap">Si hi ha un aspecte de l'hinduisme que ha generat més debat, més indignació i més malentesos que qualsevol altre, és el sistema de castes. Per als seus defensors, és l'expressió d'un ordre social orgànic i harmoniós. Per als seus crítics —des de Buda i Mahavira fins a Ambedkar i els moviments Dalit contemporanis— és una de les institucions d'opressió humana més refinades, durades i resistents al canvi que ha produït cap civilització.</p>
+
+<h2 id="s741">7.4.1 <em>Varna</em> i <em>Jati</em>: la distinció fonamental</h2>
+
+<p><strong>Varna</strong> —paraula que significa "color" o "categoria"— designa les quatre grans categories cosmològiques: <strong>Brahmin</strong> (sacerdots i erudits), <strong>Kshatriya</strong> (guerrers i governants), <strong>Vaishya</strong> (mercaders, artesans i agricultors) i <strong>Shudra</strong> (servidors). Aquestes quatre categories están dotades d'una legitimació cosmogònica explícita en el <strong>Purusha Sukta</strong> (Rig-Veda X.90): del cos sacrificat del Purusha —l'Home Primordial— neix el cosmos, i de les seves diverses parts sorgeixen les quatre <em>varnas</em>: <em>"El Brahmin va sorgir de la seva boca, el Kshatriya dels seus braços, el Vaishya de les seves cuixes, el Shudra dels seus peus."</em></p>
+
+<p>La implicació cosmogònica d'aquest himne és d'una eficàcia ideológica extraordinària: les quatre categories socials no son el producte d'una convenció humana, sinó el reflex, en el pla social, de l'estructura del cos còsmic.</p>
+
+<p>Però el <strong>varna</strong> en el sentit de les quatre categories cosmológiques és, en la pràctica sociológica real de l'Índia, relativament abstracte. La realitat concreta és el <strong>jati</strong> —"naixement", "espècie"— la casta específica en la qual neix cada individu i que determina amb qui es casa, amb qui menja, quin treball fa, on pot viure i quins recursos té accés. Hi ha literalment <strong>milers de jatis</strong> al subcontinent indi, cadascun endogàmic.</p>
+
+<h2 id="s742">7.4.2 <em>Dharma</em> com a obligació diferenciada: el <em>svadharma</em></h2>
+
+<p>Un dels conceptes centrals que justifiquen el sistema de castes és la doctrina del <strong>svadharma</strong> —el "dharma propi", l'obligació moral específica que correspon a cada individu en funció de la seva <em>varna</em>, la seva edat (<em>ashrama</em>) i el seu sexe. La Bhagavad Gita ho formula en els seus versos més citats: <em>"Millor és el propi dharma, per imperfectament que sigui complert, que el dharma d'un altre, per perfectament que sigui complert."</em></p>
+
+<p>Des del punt de vista de la justificació del sistema de castes, la doctrina del <em>svadharma</em> opera de manera molt eficient: converteix l'obligació de romandre en el propi <em>jati</em> i de realitzar les funcions que li son assignades en un deure moral i còsmic. El filòsof <strong>Amartya Sen</strong> ha assenyalat que la doctrina del <em>svadharma</em> és una forma de negació de la llibertat. <strong>Ambedkar</strong> va ser més directe: <em>"El Hindú és net amb el brahmin i brut amb el Dalit no perquè el sistema de castes sigui just, sinó perquè el sistema de castes ha creat en el brahmin la psicologia del dominador i en el Dalit la psicologia del dominat."</em></p>
+
+<h2 id="s743">7.4.3 Els <em>Dalit</em>: fora del sistema, dins de l'opressió</h2>
+
+<p>Fora de les quatre <em>varnas</em> hi ha una cinquena categoria que la terminologia ortodoxa denomina <em>asprishya</em> ("intocables") i que en la nomenclatura contemporànea prefereix el terme <strong>Dalit</strong> —"el que ha estat trencat". Els Dalit son els membres dels <em>jatis</em> que la jerarquia de puresa ritual col·loca fora dels límits de la societat "pura": els qui realitzen les feines que el sistema considera ritualment contaminants: la recollida d'escombraries, la neteja de latrines, el rentat dels cadàvers, el treballat del cuiro, la matança d'animals.</p>
+
+<p>La "intocabilitat" no és una metàfora: és una realitat física que en la seva forma tradicional prohibia el contacte físic, la proximitat, l'entrada als temples, beure dels mateixos pous. Les formes de violència associades al manteniment del sistema de castes son documentades i continúes fins avui: crims d'honor, atacs de casta.</p>
+
+<p><strong>Bhimrao Ramji Ambedkar</strong> (1891–1956), nascut en una família Dalit (<em>Mahar</em>) de Maharashtra, va obtenir doctorats a la Columbia University de Nova York i a la London School of Economics, i va dedicar la seva vida a la lluita per l'emancipació dels Dalit. El 14 d'octubre de 1956, Ambedkar va convertir-se al budisme a Nagpur juntament amb aproximadament 600.000 seguidors: un repudi explícit i públic de l'hinduisme com a sistema religiós que considerava inseparable de l'opressió de casta. La seva obra <em>Annihilation of Caste</em> (1936) és un dels textos de crítica social més poderosos del segle XX.</p>
+
+<p>La Constitució de l'Índia de 1950, principalment redactada per Ambedkar, aboleix la "intocabilitat" en l'article 17, estableix la igualtat de tots els ciutadans en l'article 15, i preveu un sistema de reserves per a les Scheduled Castes i Scheduled Tribes en l'educació i en l'ocupació pública.</p>
+
+<h2 id="s744">7.4.4 El <em>Manusmriti</em>: el codi que ha definit i maleït la tradició</h2>
+
+<p>Cap text de la tradició hindú ha generat tanta controvèrsia com el <strong>Manusmriti</strong> —el "Codi de Manu", compost probablement entre el 200 aC i el 200 dC. En els seus dotze capítols i 2.685 versos, codifica les normes que han de regir tots els aspectes de la vida social. El contingut del <em>Manusmriti</em> en relació amb el sistema de castes és explícit i despietat: els <em>Shudra</em> no poden acumular riquesa, no poden realitzar els rituals vèdics; si un <em>Shudra</em> s'asseu al mateix nivell que un brahmin per arrogància, ha de ser castigat corporalment.</p>
+
+<p>Les disposicions del <em>Manusmriti</em> sobre la <strong>dona</strong> son igualment dures: la dona no és mai independent, no ha de tenir voluntat pròpia, ha de venerar el seu marit com a déu independent de la seva conducta.</p>
+
+<p>El <em>Manusmriti</em> va ser objecte d'una acció simbòlica de gran potència el <strong>25 de desembre de 1927</strong>, quan Ambedkar va presidir una cerimònia de crema pública del text a Mahad, Maharashtra: el primer acte de crema pública de llibres de la história índia moderna, realitzat per una comunitat oprimida per repudiar el text que legitimava la seva opressió.</p>
+
+<h2 id="s745">7.4.5 Gènere i sistema de castes: el <em>stridharma</em></h2>
+
+<p>El sistema de castes i el sistema de gènere no son dues institucions separades: son els dos eixos d'un sol sistema de control social que s'articulen i es reforcen mútuament. El <strong>stridharma</strong> —el "dharma de la dona"— prescriu que la dona ha de ser <strong>pativrata</strong> —"devota al marit"—, considerar el seu marit com la seva divinitat, servir-lo incondicionalment, preservar la seva puresa sexual.</p>
+
+<p>La connexió entre el <em>stridharma</em> i el sistema de castes es fa evident quan s'entén que la casta es transmet per línia patrilineal i que la "puresa" de la casta depèn de la "puresa" sexual de les dones del grup. El control del cos femení és la condició material de la reproducció de la casta. Les institucions del <strong>sati</strong> (cremació de la vídua), del <strong>purdah</strong> (confinament de les dones) i del <strong>matrimoni infantil</strong> son les expressions més extremes d'aquest sistema de control.</p>
+
+<h2 id="s746">7.4.6 Crítiques internes i externes: les veus que han dit "no"</h2>
+
+<p>El sistema de castes no s'ha reproduït sense resistència. <strong>El budisme i el jainisme</strong> van representar el primer gran repte: Buda va rebutjar explícitament el criteri del naixement com a determinant del valor espiritual: <em>"No és per naixement que un home és un brahmin o un paria; és per les seves accions."</em></p>
+
+<p><strong>El moviment Bhakti</strong> va representar el segon gran repte intern: <strong>Kabir</strong> (1440–1518) va atacar simultàniament el brahmanisme hindú i l'ortodòxia islàmica. <strong>Ravidas</strong> (circa 1450–1520), sant bhakti de casta Chamar, va compondre versos de devoció de tal profunditat que van ser inclosos en el <em>Guru Granth Sahib</em>, el text sagrat del sikhisme.</p>
+
+<p><strong>Ram Mohan Roy</strong> va combinar el pensament il·lustrat europeu amb la filosofia upanixàdica per argumentar que l'hinduisme "autèntic" era incompatible amb el sistema de castes. <strong>Jyotirao Phule</strong> (1827–1890), de casta Mali, va ser el primer reformador social que va atacar el sistema de castes des de la perspectiva explícita de les castes oprimides; la seva obra <em>Gulamgiri</em> (1873) estava dedicada als abolicionistes afroamericans dels Estats Units.</p>
+
+<p><strong>Mahatma Gandhi</strong> va condemnar la intocabilitat i va lluitar per a la inclusió dels Dalit —als quals va anomenar <em>Harijan</em>— però no va qüestionar el sistema de <em>varnas</em> en si. Des de la perspectiva d'<strong>Ambedkar</strong>, la posició de Gandhi era, en última instancia, una defensa del sistema de castes disfressada d'humanitarisme. El debat entre Gandhi i Ambedkar ressona en cada discussió contemporànea sobre política de reserves, representació política dels Dalit i violència de casta.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.5 -->
+<section id="s75" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.5</span>El ritual, el temple i la vida quotidiana</h1>
+
+<p class="drop-cap">Si el 7.4 ens ha mostrat l'hinduisme en la seva dimensió d'opressió estructural, el 7.5 ens mostra una altra cara de la mateixa tradició: la seva capacitat extraordinària de dotar la vida quotidiana de significat, de bellesa i de profunditat espiritual. El ritual hindú no separa el sagrat del profà: aspira a la sacralització total de l'existència.</p>
+
+<h2 id="s751">7.5.1 El <em>puja</em>: l'adoració com a hospitalitat divina</h2>
+
+<p>El centre de la vida ritual hindú és el <strong>puja</strong> —"adoració" o "culte". El <em>puja</em> és, en la seva estructura, un acte d'<strong>hospitalitat</strong>: el tracte a la divinitat com a hoste il·lustre que arriba a la casa o al temple. La forma estàndard del <em>puja</em> en el context del temple inclou setze passos (<em>shodashopachara</em>): <strong>Avahana</strong> (invocació), <strong>Asana</strong> (seient), <strong>Padya</strong> (rentar els peus), <strong>Arghya</strong> (aigua per a les mans), <strong>Achamana</strong> (aigua per a la boca), <strong>Snana</strong> (bany ritual), <strong>Vastra</strong> (vestir la imatge), <strong>Yajnopavita</strong> (fil sagrat), <strong>Gandha</strong> (pasta de sàndal), <strong>Pushpa</strong> (flors), <strong>Dhupa</strong> (encens), <strong>Dipa</strong> (llum, l'<em>arati</em>), <strong>Naivedya</strong> (menjar), <strong>Tambula</strong> (betel), <strong>Pradakshina</strong> (circumambulació) i <strong>Visarjana</strong> (comiat).</p>
+
+<p>La <strong>murti</strong> —la imatge sagrada— mereix una atenció especial. No és simplement un símbol que representa la divinitat absent: en la comprensió hindú, la <em>murti</em> consecrada a través del ritual de <strong>pranapratishtha</strong> —"establiment de la força vital"— és una presència real de la divinitat. Mirar la <em>murti</em> amb devoció —l'acte del <strong>darshan</strong>, "visió"— no és contemplar un símbol: és rebre la "mirada" de la divinitat i entrar en comunió directa amb ella. Aquesta comprensió explica per qué el temple de Tirupati rep entre 50.000 i 100.000 peregrins diaris.</p>
+
+<h2 id="s752">7.5.2 El temple hindú: arquitectura del cosmos</h2>
+
+<p>El temple hindú no és simplement un edifici per a la pràctica religiosa: és una <strong>cosmologia construïda en pedra</strong>. L'element arquitectònic central del temple del nord de l'Índia —l'estil <strong>Nagara</strong>— és el <strong>shikhara</strong> ("cim de muntanya"), la torre que s'eleva sobre el santuari interior en una corba que imita el perfil del <strong>Mont Meru</strong>, l'eix còsmic que sosté el cel i connecta els mons subterranis amb els celestials.</p>
+
+<p>Al sud de l'Índia, l'estil <strong>Dravida</strong> produeix temples dominats per les enormes <strong>gopurams</strong> —les torres-portals piramidals que marquen les entrades del recinte sagrat. Les grans ciutats-temple del sud —<strong>Madurai</strong>, <strong>Srirangam</strong>, <strong>Tiruvannamalai</strong>— son veritables ciutats dins de les ciutats.</p>
+
+<p>El <strong>garbhagriha</strong> —literalment "cambra de l'úter"— és el cor del temple: la cambra fosca i reduïda en la profunditat de la qual resideix la <em>murti</em> principal. La seva obscuritat no és accidental: és el buit primordial, el ventre del cosmos del qual tota manifestació sorgeix. L'exterior del temple, per contrast, és un festival de llum i de forma: les parets estan cobertes d'una proliferació de figures esculpides —divinitats, gandharves, apsares, animals sagrats, escenes mitológiques, figures eròtiques— que representen la totalitat de la manifestació còsmica.</p>
+
+<p>Les <strong>escultures eròtiques</strong> que adornen l'exterior de molts temples medievals —les de <strong>Khajuraho</strong>, les de <strong>Konarak</strong>— han generat tant de comentari i tanta especulació que mereixen un esment específic. Les explicacions propostes inclouen: la representació de <em>kama</em> que ha de ser "deixat a la porta" quan el devot entra en la recerca del <em>moksha</em>; la representació tàntrica de la unió de Shiva i Shakti; i, simplement, l'afirmació de la totalitat de l'experiència humana com a manifestació de la divinitat.</p>
+
+<p>El temple hindú, a més de la seva funció religiosa, era una institució econòmica i política de primera magnitud. Els grans temples del sud —els temples Chola del segle XI, els temples Vijayanagara dels segles XIV-XVI— controlaven vastes extensions de terra agricultural, empleaven milers de persones, i actuaven com a centres de redistribució econòmica.</p>
+
+<h2 id="s753">7.5.3 Els <em>Samskaras</em>: el cicle de la vida com a ritual continu</h2>
+
+<p>Una de les maneres en les quals l'hinduisme aconsegueix sacralitzar la totalitat de l'existència humana és a través del sistema dels <strong>samskaras</strong> —els ritus de pas que marquen els moments clau del cicle vital. El sistema clàssic reconeix setze samskaras principals.</p>
+
+<p>Entre els samskaras prenatals i del naixement: <strong>Garbhadhana</strong> (concepció sagrada), <strong>Pumsavana</strong> (rite del tercer mes de gestació), <strong>Simantonnayana</strong> (rite del setè mes), <strong>Jatakarma</strong> (naixement), <strong>Namakarana</strong> (donació del nom, al desè o dotzè dia), <strong>Annaprashana</strong> (primera alimentació sòlida, als sis mesos) i <strong>Chudakarma</strong> (primer tonsurat).</p>
+
+<p>El samskara de transició a l'edat adulta més important socialment és l'<strong>Upanayana</strong> —la "iniciació brahminica" o "investidura del fil sagrat": el noi entre els vuit i els dotze anys és acceptat com a deixeble per un guru, que li ensenya el mantra sagrat del <strong>Gayatri</strong> i li imposa el <strong>yajnopavita</strong>, el fil sagrat que significa el "segon naixement" espiritual.</p>
+
+<p>El samskara central de la vida adulta és el <strong>Vivaha</strong> —el matrimoni—, amb el <strong>Kanyadan</strong> ("la donació de la núvia"), les <strong>Saptapadi</strong> ("els set passos" al voltant del foc sagrat) i el <strong>Mangalsutra</strong> (el collaret sagrat).</p>
+
+<p>El darrer dels grans samskaras és l'<strong>Antyesti</strong> —els "últims ritus" o la cremació. El cos és rentat, adornat amb flors i pasta de sàndal. La pira funeraria és encesa pel fill gran del difunt: és l'obligació última que un fill deu als seus pares. El cicle de rituals post-mortem —els <strong>shraddha</strong>— continua durant tretze dies, un mes i un any després de la mort.</p>
+
+<h2 id="s754">7.5.4 El calendari ritual i les grans festes</h2>
+
+<p>El <strong>calendari ritual hindú</strong> —el <em>panchang</em>— integra el cicle solar, el cicle lunar, les posicions dels planetes en un sistema de determinació del temps que és simultàniament astronòmic, astrológic i religiós.</p>
+
+<p><strong>Diwali</strong> —la "festa de les llums"— se celebra en el mes de <em>Kartika</em> i commemora la victòria de Rama sobre Ravana. Les llums de Diwali son el símbol de la victòria de la llum sobre la foscor, del coneixement sobre la ignorància.</p>
+
+<p><strong>Holi</strong> —la "festa dels colors"— marca el final de l'hivern. És, en la seva dimensió social, una festa d'inversió de l'ordre en la qual les jerarquies habituals queden suspeses temporalment: joves i vells, homes i dones, rics i pobres participen en la mateixa alegria desordenada.</p>
+
+<p><strong>Durga Puja</strong> commemora la victòria de la deessa Durga sobre el búfal-dimoni Mahishasura. La dimensió social a Calcuta és impossible d'exagerar: la ciutat sencera es transforma durant deu dies.</p>
+
+<p><strong>Kumbh Mela</strong> —la "fira del pot"— és l'esdeveniment religiós de màssima afluència del planeta i potser la concentració humana voluntaria més gran de la historia de la humanitat. En el Kumbh Mela de Prayagraj del 2019 es va estimar una afluència de 120 milions de persones al llarg dels cinquanta dies de la festa.</p>
+
+<h2 id="s755">7.5.5 La peregrinació: l'Índia com a geografia sagrada</h2>
+
+<p><strong>Tirtha</strong> —"vadable"— designa un lloc on la frontera entre el món humà i el món diví és particularment permeable. La tradició reconeix set llocs sagrats especialment importants —les <strong>sapta puri</strong>: <strong>Ayodhya</strong>, <strong>Mathura</strong>, <strong>Haridwar</strong>, <strong>Varanasi/Kashi</strong>, <strong>Kanchipuram</strong>, <strong>Ujjain</strong> i <strong>Dwarka</strong>.</p>
+
+<p><strong>Varanasi</strong> —coneguda com <strong>Kashi</strong>— és probablement la ciutat habitada de forma continuada més antiga del món i el centre cosmológic de l'univers en la visió hindú. És la residència de Shiva i el lloc on, segons la tradició, morir garanteix el <em>moksha</em> directe. Els <strong>ghats</strong> de Varanasi son l'escena en la qual la totalitat del cicle humà es desenvolupa de manera comprimida i visible. Als ghats de cremació de <strong>Manikarnika</strong> i <strong>Harishchandra</strong>, les pires funeràries cremen ininterrompudament, vint-i-quatre hores al dia, des de fa segles.</p>
+
+<p>La peregrinació als <em>tirthas</em> té una dimensió econòmica enorme i una dimensió política significant: la disputa sobre Ayodhya —lloc de naixement de Rama, lloc de la mesquita de Babri— n'és el cas més dramàtic i més violent.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.6 -->
+<section id="s76" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.6</span>Les grans tradicions devocionals</h1>
+
+<p class="drop-cap">El <strong>bhakti</strong> —"devoció", "participació", "amor"— ha estat, probablement, la força religiosa més poderosa i més transformadora de la historia de l'hinduisme. Però el bhakti no és una tradició única: és un sistema de sistemes. Tres grans tradicions devocionals —el <strong>Vaishnavisme</strong>, el <strong>Shaivisme</strong> i el <strong>Shaktisme</strong>— cadascuna amb les seves pròpies teologies, els seus propis textos sagrats, els seus propis linatges de mestres i deixebles, articulen la vida religiosa de la majoria dels hindús del món.</p>
+
+<div class="tradition-header"><span class="tradition-icon">🪷</span><h2 class="tradition-title" id="s761">7.6.1 El Vaishnavisme: la devoció a Vishnu i els seus avatars</h2></div>
+
+<p>El <strong>Vaishnavisme</strong> —la tradició devocional centrada en <strong>Vishnu</strong> i en els seus avatars, especialment Rama i Krishna— és, en termes demogràfics, la tradició hindú més estesa del món. Avui, aproximadament el 70% dels hindús es consideren vaishnaves en algun sentit.</p>
+
+<p>La teologia vaishnaava té en el concepte de l'<strong>avatar</strong> el seu nucli distinctiu. La Bhagavad Gita enuncia el principi: <em>"Sempre que el dharma s'afebleix i l'adharma triomfa, jo em manifesto. Per protegir els bons, per destruir els malvats, per establir el dharma de nou, neixo d'era en era."</em> (IV.7-8)</p>
+
+<p>La doctrina dels <strong>deu avatars principals</strong> (<em>Dashavatara</em>) és una de les construccions teológiques més fascinants de la tradició: <strong>Matsya</strong> (el peix, salva els Vedes del diluvi), <strong>Kurma</strong> (la tortuga, sosté el mont Mandara), <strong>Varaha</strong> (el senglar, rescata la Terra), <strong>Narasimha</strong> (l'home-lleó, mata el dimoni Hiranyakashipu), <strong>Vamana</strong> (el nan, derrota el rei Bali amb tres passes), <strong>Parashurama</strong> (Rama de l'Aixada), <strong>Rama</strong> (el príncep ideal del Ramayana, el <em>maryada purushottama</em>), <strong>Krishna</strong> (el <em>purna avatara</em>, l'avatar ple i complet), <strong>Buda</strong> (l'exemple més clar de la capacitat d'absorció de la tradició) i <strong>Kalki</strong> (el salvador futur que vindrà al final del Kali Yuga muntat en un cavall blanc).</p>
+
+<p><strong>Chaitanya Mahaprabhu</strong> (1486–1534), de Bengal, va popularitzar el <strong>sankirtan</strong> —el cant devocional col·lectiu dels noms de Déu— com a pràctica espiritual central. La seva tradició —el <strong>Gaudiya Vaishnavisme</strong>— és la que <strong>A. C. Bhaktivedanta Swami Prabhupada</strong> va portar a Occident el 1965 quan va fundar la <strong>International Society for Krishna Consciousness</strong> (ISKCON), popularment coneguda com els <strong>Hare Krishna</strong>.</p>
+
+<div class="tradition-header"><span class="tradition-icon">🔱</span><h2 class="tradition-title" id="s762">7.6.2 El Shaivisme: la devoció a Shiva</h2></div>
+
+<p>El <strong>Shaivisme</strong> —la tradició devocional centrada en <strong>Shiva</strong>— és probablement la tradició hindú de major profunditat filosòfica. Shiva és simultàniament el déu de la destrucció i el déu del <em>yoga</em>, el gran asceta i el déu eròtic. El <strong>Nataraja</strong> —Shiva dansant al cercle de foc— és la seva forma més universalment reconeguda: la dansa còsmica que simultàniament crea i destrueix l'univers.</p>
+
+<p>El <strong>Shaivisme del Caixmir</strong> (<em>Kashmir Shaivism</em>), desenvolupat entre els segles VIII i XII dC per filòsofs com <strong>Abhinavagupta</strong> (circa 950–1020 dC), proposa un sistema de <strong>monisme radical</strong> en el qual Shiva no és simplement el Déu suprem sinó la consciència pura il·limitada, i el món no és <em>maya</em> sinó una <strong>expressió lliure i gojosa</strong> (<em>lila</em>) de la consciència de Shiva. La <em>Tantraloka</em> d'Abhinavagupta és una síntesi enciclopèdica de les tradicions shaiva tàntriques en 37 volums.</p>
+
+<p>El <strong>Virashaivisme</strong> o <strong>Lingayatisme</strong>, fundat pel reformador <strong>Basavanna</strong> (1134–1196) a Karnataka, va fundar una comunitat religiosa que rebutjava el sistema de castes, el sacerdoci brahminic, els temples de pedra i els rituals externs, en favor d'una devoció directa i personal a Shiva.</p>
+
+<div class="tradition-header"><span class="tradition-icon">🔥</span><h2 class="tradition-title" id="s763">7.6.3 El Shaktisme: la devoció a la Gran Deessa</h2></div>
+
+<p>El <strong>Shaktisme</strong> proposa una visió del cosmos en la qual el principi femení —la <strong>Shakti</strong>, l'energia còsmica— és la realitat última i la font de tota manifestació. La <strong>Devi</strong> es manifesta en formes diverses: <strong>Durga</strong> ("la difícilment accessible", la guerrera còsmica), <strong>Kali</strong> ("la negra", la forma més terrible i transgressora), <strong>Lakshmi</strong> (la deessa de la prosperitat, parella de Vishnu) i <strong>Sarasvati</strong> (la deessa del coneixement, parella de Brahma).</p>
+
+<p>El text fundacional és el <strong>Devi Mahatmya</strong> —"La Grandesa de la Deessa"— compost probablement entre els segles IV i VI dC, que narra tres grans batalles en les quals la Deessa derrota els dimonis que amenacen l'ordre còsmic: <em>"Tu ets la mare de l'univers."</em></p>
+
+<p>La dimensió política del Shaktisme és notable: la figura de Durga ha estat sistemàticament instrumentalitzada per la política del <em>hindutva</em>, l'Índia com a Bharat Mata, la "Mare Índia" que ha de ser defensada dels seus enemics.</p>
+
+<div class="tradition-header"><span class="tradition-icon">🎶</span><h2 class="tradition-title" id="s764">7.6.4 El moviment Bhakti: la gran democratització religiosa</h2></div>
+
+<p>El fil conductor del moviment Bhakti és la proclamació que <strong>l'amor de Déu no requereix mediació especialitzada</strong>. No cal saber sànscrit, ni conèixer els Vedes, ni realitzar sacrificis costosos, ni tenir una casta "apropiada". El que cal és l'amor —<em>prem</em>, <em>bhakti</em>— accessible a qualsevol ésser humà.</p>
+
+<p><strong>Kabir</strong> (1440–1518), teixidor de Varanasi, va proclamar un misticisme radical que disolia totes les fronteres religioses i socials: <em>"Si Déu habités en els temples, qui habitaria al carrer?"</em> <strong>Mirabai</strong> (1498–1547), princesa rajput, va refusar la subordinació al marit en favor d'una devoció absoluta a Krishna. <strong>Tukaram</strong> (1598–1650), camperol marathi, va veure la seva collita destruïda per la sequera i va trobar en la devoció a Vitthal la seva única font de sosteniment; els seus <em>abhangas</em> son d'una simplesa i profunditat memorables.</p>
+
+<p>El moviment Bhakti no va acabar als segles medievals: continua avui en els <strong>satsang</strong>, la música devocional i els gurus contemporanis que proclamen la universalitat de l'accés a la divinitat.</p>
+
+<div class="tradition-header"><span class="tradition-icon">☯</span><h2 class="tradition-title" id="s765">7.6.5 El Tantra: el cos com a temple i el desig com a camí</h2></div>
+
+<p>El Tantra afirma que el cos humà —amb tots els seus desigs, les seves passions, les seves sensacions— no és un obstacle per a la realització espiritual sinó el seu vehicle perfecte. La tradició distingeix entre la <strong>via de la dreta</strong> (<em>dakshinachara</em>) —que utilitza substituts simbòlics— i la <strong>via de l'esquerra</strong> (<em>vamachara</em>) —que els utilitza literalment.</p>
+
+<p>El punt central de la filosofia tàntrica és la doctrina de la <strong>Shakti</strong> com a principi immanent del cosmos. La <strong>kundalini</strong> és el símbol central de la fisiologia tàntrica: el treball espiritual consisteix en despertar-la i guiar-la cap amunt a través dels set <strong>chakres</strong> fins al <em>sahasrara</em>, on s'uneix amb la consciència pura de Shiva.</p>
+
+<p>La difusió global del Tantra en la cultura contemporània occidental ha produït una versió enormement simplificada i frecuentment distorsionada de la tradició original, que té amb la tradició filosòfica índia una relació molt llunyana.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.7 -->
+<section id="s77" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.7</span>Filosofia hindú — Els sis sistemes (<em>Shad Darshana</em>)</h1>
+
+<p class="drop-cap">La tradició filosòfica índia ha produït epistemologies, ontologies, lògiques i filosofies de la ment de sofisticació comparable a les millors que la tradició occidental coneix, i en alguns dominis ha assolit resultats que el pensament occidental no ha igualat fins als segles XIX i XX.</p>
+
+<p>L'estructura que organitza la filosofia hindú ortodoxa és el sistema dels <strong>Shad Darshana</strong> —els "Sis Sistemes de Visió". Els sis sistemes s'agrupen tradicionalment en tres parelles: <strong>Nyaya i Vaisheshika</strong> (lògica i atomisme), <strong>Samkhya i Yoga</strong> (dualisme i pràctica), <strong>Mimamsa i Vedanta</strong> (exegesi i síntesi).</p>
+
+<h2 id="s771">7.7.1 <em>Nyaya</em>: la lògica com a camí de salvació</h2>
+
+<p>El <strong>Nyaya</strong> —"el mètode correcte"— ha dedicat la seva atenció principal a les qüestions d'<strong>epistemologia</strong> i de <strong>lògica</strong>. Reconeix quatre <strong>pramanas</strong> —fonts vàlides de coneixement—: <strong>Pratyaksha</strong> (percepció directa), <strong>Anumana</strong> (inferència), <strong>Upamana</strong> (analogia) i <strong>Sabda</strong> (testimoni verbal).</p>
+
+<p>L'estructura bàsica de la inferència nyaya és el <strong>pancavayava</strong> —el "raonament de cinc membres": (1) Pratijña (afirmació: "Hi ha foc en aquella muntanya"), (2) Hetu (raó: "Perquè hi ha fum"), (3) Udaharana (exemple: "On hi ha fum, hi ha foc"), (4) Upanaya (aplicació: "Aquella muntanya té fum"), (5) Nigamana (conclusió: "Per tant, té foc").</p>
+
+<p>El Nyaya és <strong>teista</strong> i intenta provar l'existència de Déu (<em>Ishvara</em>) per via d'inferència: el món és un efecte; tot efecte requereix una causa intel·ligent; per tant, el món requereix una causa intel·ligent.</p>
+
+<h2 id="s772">7.7.2 <em>Vaisheshika</em>: l'atomisme còsmic</h2>
+
+<p>El <strong>Vaisheshika</strong> —de <em>vishesha</em>, "particularitat"— afirma que la realitat física es compon d'<strong>àtoms</strong> (<em>paramanu</em>) eternament existents, indivisibles i imperceptibles per als sentits. Elabora un sistema de sis categories (<em>padarthas</em>): Dravya (substàncies), Guna (qualitats), Karma (moviments), Samanya (universals), Vishesha (particularitats) i Samavaya (inherència).</p>
+
+<p>El diàleg entre el Vaisheshika i la física moderna requereix la màxima cautela metodológica: els àtoms del Vaisheshika son eterns i increades, mentre que les partícules de la física moderna son transformables i creables.</p>
+
+<h2 id="s773">7.7.3 <em>Samkhya</em>: el dualisme radical</h2>
+
+<p>El <strong>Samkhya</strong> —"enumeració"— és el sistema filosòfic hindú de major antiguitat documentada. La seva tesi central és un <strong>dualisme radical</strong>: <strong>Purusha</strong> —la consciència pura, immaterial, eterna, passiva— i <strong>Prakriti</strong> —la matèria primordial, activa, evolutiva, inconscient. El Samkhya clàssic és <strong>ateista</strong>.</p>
+
+<p>El sofriment és el resultat de la confusió entre Purusha i Prakriti; el <strong>moksha</strong> és el discerniment (<em>viveka</em>) pur entre ells. La teoria dels <strong>tres gunas</strong> —<strong>Sattva</strong> (luciditat), <strong>Rajas</strong> (activitat) i <strong>Tamas</strong> (inèrcia)— és el concepte samkhya d'influència més àmplia en tota la cultura índia, present en la medicina ayurvèdica, la cuina tradicional i l'ètica del brahmanisme.</p>
+
+<h2 id="s774">7.7.4 <em>Yoga</em>: la ciència de la transformació de la consciència</h2>
+
+<p>El <strong>Yoga</strong> —"unió"— sistematitzat per <strong>Patanjali</strong> en els <em>Yoga Sutras</em> (circa segles II aC-IV dC) articula el <strong>Ashtanga Yoga</strong> —el "Yoga de Vuit Membres":</p>
+
+<div class="triple-path">
+  <div class="triple-card"><span class="avesic">Yama / Niyama</span><span class="meaning">Restriccions ètiques (ahimsa, satya, asteya, brahmacharya, aparigraha) i observances (saucha, santosha, tapas, svadhyaya, Ishvara pranidhana)</span></div>
+  <div class="triple-card"><span class="avesic">Asana / Pranayama</span><span class="meaning">Postura estable i control de la respiració i de l'energia vital (prana)</span></div>
+  <div class="triple-card"><span class="avesic">Pratyahara / Dharana</span><span class="meaning">Retracció dels sentits i concentració en un sol objecte</span></div>
+</div>
+
+<p>Els darrers dos membres son <strong>Dhyana</strong> (meditació, el flux continu de consciència) i <strong>Samadhi</strong> (absorció, l'estat en el qual la distinció entre el meditador i l'objecte desapareix completament).</p>
+
+<p>El <strong>Hatha Yoga</strong> —que posa l'èmfasi en la disciplina del cos i de l'energia— és un desenvolupament posterior (segles XI-XVII) que deriva principalment de les tradicions tàntriques, i és d'aquesta tradició de la qual deriva el yoga contemporani global.</p>
+
+<h2 id="s775">7.7.5 <em>Mimamsa</em>: el ritual com a realitat</h2>
+
+<p>El <strong>Mimamsa</strong> —"investigació"— ha dedicat la seva atenció principal a la <strong>interpretació dels Vedes</strong> i a la defensa de la validesa absoluta del ritual vèdic. La seva resposta a com sabem que els Vedes son vàlids és radical: els Vedes no necessiten cap autor per ser vàlids, perquè son <strong>eterns, autogenerats i autovàlids</strong>.</p>
+
+<p>El Mimamsa defensa que els sons dels mantres vèdics posseïxen una potència intrínseca que s'activa quan son pronunciats correctament. El ritual vèdic produeix efectes en el cosmos per la seva pròpia potència (<em>apurva</em>), independentment de la voluntat de cap divinitat. El Mimamsa és, per tant, <strong>ateista</strong>.</p>
+
+<h2 id="s776">7.7.6 <em>Vedanta</em>: la síntesi que ha definit l'hinduisme modern</h2>
+
+<p>El <strong>Vedanta</strong> —"la culminació del Veda"— és el sisè i el més influent dels sistemes filosòfics ortodoxos. Es basa en el <strong>Prasthanatrayi</strong> —el "Triple Fonament": les Upanishads, els Brahma Sutras de Badarayana i la Bhagavad Gita.</p>
+
+<p>L'<strong>Advaita Vedanta</strong> de Shankaracharya distingeix entre la <strong>veritat convencional</strong> (<em>vyavaharika</em>) i la <strong>veritat última</strong> (<em>paramarthika</em>): en la veritat última, solament Brahman existeix. La crítica de Ramanuja: si tot és Brahman, qui experimenta la il·lusió? El <strong>Vishishtadvaita</strong> de Ramanuja preserva la unitat de Brahman sense dissoldre la realitat de les ànimes i del món: la relació és d'<strong>inclusió no-dual</strong>. El <strong>Dvaita</strong> de Madhva porta la distinció al seu extrem: Déu, les ànimes i el món son reals i eternament distints; l'infern és etern per als damnats irredimibles.</p>
+
+<p>La influència del Vedanta en la cultura global del segle XX i XXI és difícil d'exagerar: a través de Vivekananda, dels gurus del New Age, i de la popularització del yoga i de la meditació, el Vedanta s'ha convertit en la filosofia índia de referència per a milions de persones arreu del món.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.8 -->
+<section id="s78" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.8</span>L'hinduisme i el poder polític — Del <em>raja</em> al <em>hindutva</em></h1>
+
+<p class="drop-cap">L'hinduisme no ha tingut, en la seva historia, una relació simple ni uniforme amb el poder: ha estat la ideologia de legitimació dels imperis més poderosos del subcontinent, ha generat els manuals de política més realistes i més cínics de l'antiguitat, ha servit de fonament per a una de les constitucions democràtiques més avançades del món, i ha estat mobilitzat com a instrument d'exclusió i de violència contra les minories en el segle XXI.</p>
+
+<h2 id="s781">7.8.1 La teoria política hindú clàssica: <em>Arthashastra</em> i <em>Rajadharma</em></h2>
+
+<p>La teoria política de la tradició hindú clàssica s'articula al voltant de dos eixos en tensió permanent: el <strong>Rajadharma</strong> —el dharma específic del rei— i l'<strong>Arthashastra</strong> —la ciència del poder i de la riquesa.</p>
+
+<p>El model del rei just és el <strong>chakravartin</strong> —"el que fa girar la roda"—, el sobirà universal que fa girar la roda del Dharma. Les obligacions del Rajadharma inclouen protegir els súbdits, administrar justícia imparcial, mantenir el sistema de castes, patrocinar el culte, i fer la guerra conforme a les normes de la guerra justa (<em>dharmayuddha</em>). La dimensió utòpica és el <strong>Ram Rajya</strong> —el "Regne de Rama"—, l'edat d'or política, invocat tant per Gandhi com pel BJP contemporani amb significats oposats.</p>
+
+<p>L'<strong>Arthashastra</strong> de <strong>Kautilya</strong> (segle IV aC), el ministre del rei Chandragupta Maurya, és un text de naturalesa completament diferent: descriu amb realisme implacable els instruments del poder polític. El <strong>Dandaniti</strong> —la "política del bastó"— és la realitat del poder: sense capacitat de coerció, cap govern pot ser efectiu. Les <strong>quatre estratègies</strong> —<strong>Sama</strong> (conciliació), <strong>Dana</strong> (suborn), <strong>Bheda</strong> (divisió) i <strong>Danda</strong> (força)— han de ser aplicades en combinació. La doctrina del <strong>Mandala</strong> —el "cercle de reis"— descriu l'entorn geopolític com una sèrie de cercles concèntrics d'enemics i aliats potencials. La raó d'estat supera els escrúpols morals en la política exterior.</p>
+
+<h2 id="s782">7.8.2 L'hinduisme i els imperis: del Maurya al Vijayanagara</h2>
+
+<p>L'Imperi <strong>Maurya</strong> (321–185 aC) representa un moment de ruptura: <strong>Ashoka</strong> (268–232 aC), després de la devastadora conquesta de Kalinga, es va convertir al budisme i va adoptar el <strong>Dhamma</strong> com a fonament del seu govern. Les seves inscripcions en roca i en pilars proclamen la llibertat de culte, la prohibició dels sacrificis animals i la reforma del sistema penal.</p>
+
+<p>L'Imperi <strong>Gupta</strong> (320–550 dC) és l'edat d'or de la civilització índia clàssica: el poeta <strong>Kalidasa</strong>, les matemàtiques amb el sistema decimal posicional i el zero, la medicina ayurvèdica en la seva sistematització clàssica. Els reis gupta es presentaven com a <strong>chakravartins</strong>.</p>
+
+<p>Els grans temples <strong>Chola</strong> (circa 850–1279 dC) —el <strong>Brihadeshvara</strong> a Thanjavur (1010 dC), amb el seu <em>shikhara</em> de seixanta-sis metres— eren institucions que gestionaven vastes extensions de terra i actuaven com a centre de redistribució econòmica. L'Imperi <strong>Vijayanagara</strong> (1336–1646 dC) —el darrer gran imperi hindú— va resistir durant dos segles les pressions de les sultanies islàmiques del nord; la seva capital, Hampi, tenia entre 300.000 i 500.000 habitants en el seu apogeu.</p>
+
+<h2 id="s783">7.8.3 L'hinduisme colonial: entre la reforma i la resistència</h2>
+
+<p>L'arribada dels britànics va produir la "colonialitat del saber": una transformació profunda de les categories a través de les quals els indis es comprenien a si mateixos. Els orientalistes britànics van seleccionar com a "essència" de l'hinduisme el que s'assemblava al que consideraven gran i universal en la seva pròpia tradició, i van presentar com a "degeneració" el que era específic i popular.</p>
+
+<p>La codificació britànica del <strong>"dret hindú"</strong> a partir del Manusmriti va donar a aquest text una autoritat legal que mai havia tingut. La resposta dels intel·lectuals indis va prendre dues formes: la <strong>reforma</strong> —Ram Mohan Roy, abolició del sati (1829)— i la <strong>resistència</strong> —Vivekananda, superioritat espiritual de l'hinduisme. <strong>Tilak</strong> va fer de la Bhagavad Gita un instrument de mobilització política contra la dominació britànica, i <strong>Gandhi</strong> va construir el moviment d'independència sobre conceptes hindús com l'<em>ahimsa</em> i el <em>satyagraha</em>.</p>
+
+<h2 id="s784">7.8.4 L'hinduisme i la independència: Gandhi, Ambedkar i la partició</h2>
+
+<p>El 15 d'agost de 1947, l'Índia va assolir la independència, dividida en l'Índia i el Pakistan, amb entre deu i vint milions de persones desplaçades i entre 200.000 i dos milions de morts en la violència intercomunal.</p>
+
+<p><strong>Gandhi</strong> va defensar una "laïcitat inclusiva": un Estat que respectés totes les tradicions religioses basant-se en els valors morals comuns. <strong>Ambedkar</strong> va defensar l'Estat secular en termes encara més radicals: la separació estricta entre religió i estat era, per a ell, la condició necessaria per a l'emancipació dels Dalit. La Constitució que Ambedkar va redactar és explícitament secular, igualitarista i compromesa amb la protecció de les minories.</p>
+
+<p>L'assassinat de Gandhi el 30 de gener de 1948 a mans de <strong>Nathuram Godse</strong>, un militant del <em>hindutva</em> que considerava que Gandhi havia "traït" els hindús en la partició, va ser el signe tràgic de la tensió irresolta entre les dues visions de l'Índia.</p>
+
+<h2 id="s785">7.8.5 El <em>Hindutva</em>: l'hinduisme com a ideologia nacional</h2>
+
+<p>El <strong>Hindutva</strong> es formula per primera vegada per <strong>Vinayak Damodar Savarkar</strong> en el seu pamflet <em>Hindutva: Who Is a Hindu?</em> (1923). La seva definició és territorial, ancestral i cultural: hindú és qui considera el subcontinent indi tant la seva <strong>pitribhumi</strong> (pàtria) com la seva <strong>punyabhumi</strong> (terra sagrada). Els musulmans i els cristians indis no ho son, perquè la seva <em>punyabhumi</em> és estrangera.</p>
+
+<p>El <strong>Rashtriya Swayamsevak Sangh</strong> (RSS), fundat el 1925 per Keshav Baliram Hedgewar, és la columna vertebral organitzativa, amb sis milions de membres actius estimats. El <strong>Bharatiya Janata Party</strong> (BJP) és el braç electoral, governant l'Índia amb majoria absoluta des del 2014 sota <strong>Narendra Modi</strong>.</p>
+
+<p>Les polítiques dels governs Modi han inclòs la revocació de l'autonomia de Caixmir (2019), la Citizenship Amendment Act (2019) —discriminació religiosa explícita contra els musulmans en el procés de naturalització— i la inauguració del temple de Rama a Ayodhya al lloc de la destruïda mesquita de Babri (2024).</p>
+
+<p><strong>Amartya Sen</strong>, en <em>The Argumentative Indian</em> (2005), ha argumentat que el <em>Hindutva</em> és la negació d'allò que l'Índia ha estat en el millor de la seva historia —la civilització que va produir Ashoka, Akbar, Kabir i Gandhi. <strong>Romila Thapar</strong> ha assenyalat que la versió del passat hindú que el <em>Hindutva</em> promou —una edat d'or de civilització purament hindú pertorbada per invasions— és una construcció mitológica que no resisteix l'anàlisi histórica rigorosa.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.9 -->
+<section id="s79" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.9</span>L'hinduisme en el món contemporani</h1>
+
+<p class="drop-cap">El hinduisme contemporani no és simplement "l'hinduisme tradicional" en un nou embolcall. És una tradició que ha experimentat transformacions profundes a través del contacte amb la modernitat occidental, amb la globalització económica i cultural, amb les tecnologies digitals i amb les dinàmiques polítiques del nacionalisme post-colonial.</p>
+
+<h2 id="s791">7.9.1 La diàspora hindú: transmetre la tradició fora de casa</h2>
+
+<p>La <strong>diàspora hindú</strong> és el resultat de tres onades migratòries molt diferents. La <strong>primera onada</strong> és la del treball forçat colonial: entre 1838 i 1917, el govern britànic va transportar aproximadament un milió de treballadors indis a les plantacions de Maurici, Trinitat i Tobago, Guyana, Fiji i Sud-àfrica sota el sistema del "treball per contracte" (<em>indenture</em>). Les comunitats d'origen indi de Maurici (50% de la població), Trinitat i Tobago (37%), Guyana (40%) i Fiji (37%) son avui plenament arrelades.</p>
+
+<p>La <strong>segona onada</strong> és la de l'emigració voluntaria post-colonial al Regne Unit. La <strong>tercera onada</strong> —la que ha configurat la fesomia actual— és l'emigració professional de gran escala als Estats Units, al Canadà i al Golf Pèrsic des dels anys vuitanta. La comunitat d'origen indi als EUA (4,6 milions) és el grup d'immigrants de major ingrés mig del país, amb figures com <strong>Sundar Pichai</strong> (Google), <strong>Satya Nadella</strong> (Microsoft) i <strong>Kamala Harris</strong>.</p>
+
+<p>La pregunta que les comunitats de la diàspora enfronten és: com es transmet l'hinduisme fora del seu context natural? La resposta inclou el "temple pan-hindú" que acull la diversitat sectorial, l'"hinduisme de cap de setmana" i l'"escola dominical hindú". La <strong>tecnologia digital</strong> ha transformat profundament la vida religiosa de la diàspora: el <strong>darshan en línia</strong> —la retransmissió en viu de la imatge d'un temple— va proliferar durant la pandèmia del COVID-19.</p>
+
+<h2 id="s792">7.9.2 El <em>Yoga</em> global: de pràctica espiritual a indústria de benestar</h2>
+
+<p>La indústria global del yoga es estimada en aproximadament <strong>80.000 milions de dòlars anuals</strong>. La versió que s'ha difós globalment és dràsticament simplificada: principalment les <em>asanas</em> i el <em>pranayama</em>, extrets del seu context filosòfic i soteriológic i reinserits en el context del benestar físic.</p>
+
+<p>El debat sobre l'<strong>apropiació cultural</strong> del yoga enfronta els qui el consideren una pràctica hinduista inseparable de la seva tradició d'origen i els qui afirmen que les tècniques espirituals pertanyen a tota la humanitat. <strong>Modi</strong> ha promogut el <strong>Dia Internacional del Yoga</strong> (21 de juny, adoptat per l'ONU el 2014) presentant-lo com a "patrimoni de la humanitat" mentre defuig les seves arrels hindús explícites en el context internacional —una doble estratègia característica de la manera en la qual el <em>Hindutva</em> navega la tensió entre particularitat cultural i projecció global.</p>
+
+<h2 id="s793">7.9.3 Els nous moviments hindús: gurus, globalització i controvèrsia</h2>
+
+<p>La figura del <strong>guru</strong> proporciona a l'hinduisme un mecanisme de renovació religiosa que les institucions centralitzades no permeten, però el mateix mecanisme fa possible l'abús.</p>
+
+<p><strong>ISKCON</strong> (fundada el 1966 per <strong>Prabhupada</strong>) va construir en menys d'una dècada un moviment global, però va viure escàndols d'abús als seus internats. <strong>Osho</strong> (1931–1990) va ser mestre de meditació de reputació genuïna però la seva comunitat a Oregon va protagonitzar el primer atac bioterrorista de la historia dels Estats Units (1984). <strong>Sathya Sai Baba</strong> (1926–2011) va tenir entre 10 i 50 milions de seguidors, però va ser objecte d'acusacions de frau i d'abús sexual de menors mai investigades adequadament. <strong>Sri Sri Ravi Shankar</strong> i la <strong>Art of Living Foundation</strong> tenen presència en més de 180 països. <strong>Mata Amritanandamayi</strong> —<strong>Amma</strong>— ha abraçat físicament més de 37 milions de persones des dels anys vuitanta i gestiona hospitals, universitats i orfenats.</p>
+
+<h2 id="s794">7.9.4 L'hinduisme davant els reptes contemporanis</h2>
+
+<p><strong>El mediambient</strong>: el Ganges és la deessa <strong>Ganga</strong> per a centenars de milions de devots i simultàniament un dels rius més contaminats del planeta. El programa <strong>Namami Gange</strong> (2014, 3.000 milions de dòlars) ha produït resultats decebedors.</p>
+
+<p><strong>El gènere</strong>: l'Índia té una de les taxes de violència sexual més altes del món. El cas de Jyoti Singh (Delhi, 2012) va generar una onada de protestes. La selecció prenatal de sexe continua produïnt una ratio de gènere distorsionada. La sentència del Tribunal Suprem del 2018 que va obrir el temple de Sabarimala a totes les dones il·lustra la tensió entre dret constitucional i llibertat religiosa.</p>
+
+<p><strong>La casta</strong>: milers de "crims de casta" documentats anualment per l'<strong>National Crime Records Bureau</strong>. El moviment Dalit ha produït figures com K. R. Narayanan, Mayawati i Ram Nath Kovind, però la transformació de les pràctiques socials quotidianes avança molt més lentament que els avenços en representació formal.</p>
+
+<p><strong>El diàleg interreligiós</strong>: la tradició hindú posseïx, en la seva filosofia pluralista, alguns dels recursos conceptuals més rics per al diàleg entre tradicions religioses. Però el clima polític contemporani marcat per la retòrica d'exclusió del <em>Hindutva</em> ha fet més difícil la realització d'aquest potencial.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.10 -->
+<section id="s710" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.10</span>Influències de l'hinduisme sobre altres tradicions</h1>
+
+<p class="drop-cap">Si el Capítol 6 va analitzar les influències del zoroastrisme sobre les religions abrahamítiques, el 7.10 examina les influències de l'hinduisme sobre les tradicions que van sorgir del seu si o en contacte amb ell.</p>
+
+<h2 id="s7101">7.10.1 Sobre el budisme: la matriu i la ruptura</h2>
+
+<p>El Buda históric, <strong>Siddharta Gautama</strong> (circa 563–483 aC), va créixer immerso en l'univers conceptual de la tradició índia, amb els seus conceptes de karma, samsara, moksha i dharma com a marc de referència donat. El <strong>karma</strong> budista introdueix una innovació crucial: el que compta és la <em>intenció</em> (<em>cetana</em>), no l'acte exterior.</p>
+
+<p>La ruptura del budisme amb l'hinduisme en el punt de l'<strong>Atman</strong> és filosòficament radical: el budisme afirma l'<strong>anatta</strong> ("no-self") — no hi ha cap Atman permanent, perquè la noció mateixa d'un "self" permanent és la causa fonamental del sofriment. Aquest debat va inaugurar un diàleg filosòfic entre el Vedanta i el budisme que ha continuat fins als filòsofs contemporanis.</p>
+
+<p>La <strong>reabsorció del budisme per l'hinduisme</strong> (segles IX-XII dC) a través de la inclusió de Buda com a avatar de Vishnu és un dels processos histórics més fascinants de la história de les religions. <strong>Ambedkar</strong> es va convertir al budisme el 1956 juntament amb 600.000 seguidors com a acte polític d'emancipació Dalit; avui hi ha aproximadament vuit milions de budistes a l'Índia, la majoria Dalit que han adoptat el <strong>Navayana</strong> —"el Nou Vehicle"— com a vehicle d'emancipació.</p>
+
+<h2 id="s7102">7.10.2 Sobre el jainisme: parentiu i distinció</h2>
+
+<p>El <strong>jainisme</strong>, fundat per <strong>Mahavira</strong> (circa 599–527 aC), és la tradició en relació de parentiu més estret amb l'hinduisme. El karma jainista és una <strong>substància física</strong> que s'adherix a l'ànima (<em>jiva</em>). La conseqüència pràctica és la <strong>no-violència radical</strong> (<em>ahimsa</em>) que supera àmpliament la de l'hinduisme: tot ésser vivent —incloses les plantes i els microorganismes— posseïx una ànima.</p>
+
+<p>La doctrina jainista de l'<strong>anekantavada</strong> —el "no-absolutisme"— afirma que cap afirmació individual sobre la realitat és la veritat completa. La influència de l'<em>ahimsa</em> jainista sobre <strong>Gandhi</strong> —que va créixer a Gujarat, la regió amb major concentració de jainistes— és directa i documentada, i a través de Gandhi va influenciar <strong>Martin Luther King Jr.</strong> i els moviments de desobediència civil de tot el món.</p>
+
+<h2 id="s7103">7.10.3 Sobre el sikhisme: la síntesi i la distinció</h2>
+
+<p>El <strong>sikhisme</strong>, fundat per <strong>Guru Nanak</strong> (1469–1539), neix com una síntesi radical que superava les divisions entre hindús i musulmans: <em>"No hi ha ni hindú ni musulmà; l'únic camí és el de Déu."</em> Comparteix amb l'hinduisme el marc del karma i del samsara, però rebutja el sistema de castes de manera radical: el <strong>langar</strong> —el menjar comunitari gratuït a tots els <em>Gurdwara</em>, per a qualsevol persona— encarna físicament aquesta igualtat. El sikhisme rebutja igualment el culte de les imatges: l'única "presència" al Gurdwara és el <strong>Guru Granth Sahib</strong>.</p>
+
+<p>El genocidi dels sikhs del novembre del 1984 —entre 3.000 i 8.000 sikhs assassinats a Delhi i en altres ciutats— deixa una ferida en la relació entre les dues comunitats que continua sense tancar-se plenament.</p>
+
+<h2 id="s7104">7.10.4 Sobre el pensament occidental: de Schopenhauer a la neurociència</h2>
+
+<p><strong>Arthur Schopenhauer</strong> (1788–1860) va descriure la seva lectura dels Upanishads com "el consolament de la meva vida". La seva concepció del món com a manifestació d'una "Voluntat" cega presenta paral·lelismes estructurals amb el pensament upanixàdic i budista. <strong>Ralph Waldo Emerson</strong> i el moviment <strong>Transcendentalista</strong> van quedar profundament influenciats per la seva visió del cosmos com a manifestació de l'"Oversoul".</p>
+
+<p><strong>Carl Gustav Jung</strong> va elaborar la teoria dels <strong>arquetips</strong> en diàleg amb les tradicions hindús i budistes. <strong>Joseph Campbell</strong> va construir la teoria del "monomite" a partir d'una síntesi que deu molt a la mitologia hindú, influenciant <strong>George Lucas</strong> en la creació de <em>Star Wars</em>.</p>
+
+<p>En el camp de la <strong>neurociència i de la filosofia de la ment</strong>, el programa de <strong>Mindfulness-Based Stress Reduction</strong> (MBSR) de <strong>Jon Kabat-Zinn</strong> és avui un element estàndard de la medicina integrativa. El <strong>Mind & Life Institute</strong>, fundat el 1987 com a vehicle de diàleg entre el <strong>Dalai Lama</strong> i científics occidentals, ha estat el marc institucional d'aquest diàleg. El "problema difícil de la consciència" de <strong>David Chalmers</strong> ha obert un espai en la filosofia analítica on l'Advaita Vedanta i el Shaivisme del Caixmir son preses seriosament com a fonts de conceptes filosòfics.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.11 -->
+<section id="s711m" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.11</span>Metodologia</h1>
+<p style="font-style:italic;color:var(--ink-light);margin-bottom:2rem;">Advertències epistemológiques i criteris d'interpretació per a l'estudi de l'hinduisme.</p>
+
+<p class="drop-cap">L'estudi de l'hinduisme planteja a l'historiador de les religions, al filòsof i al pedagog un conjunt de dificultats metodológiques que cal explicitar per a qualsevol aproximació intel·lectualment honesta a una tradició d'una complexitat, d'una antiguitat i d'una vitalitat contemporànea sense paral·lel.</p>
+
+<h2 id="s7111">7.11.1 El problema de la unitat: pot parlar-se d'«hinduisme» en singular?</h2>
+
+<p>Quan parlem de «l'hinduisme» en singular, impliquem que hi ha un referent coherent al qual el terme s'aplica. Però l'hinduisme inclou en el seu interior posicions filosòfiques que en qualsevol altra tradició serien mutuament incompatibles. <strong>Romila Thapar</strong> ha proposat parlar de «hinduismes» en plural. <strong>Wendy Doniger</strong> ha proposat el concepte de «hinduisme sota rastre». <strong>Gavin Flood</strong> ha parlat de «tradicions brahmàniques o sànscrites».</p>
+
+<p>La posició que adoptarem és la que combina la utilitat pràctica de la denominació «hinduisme» amb la consciència explícita de les seves limitacions: usar el terme sabent que és una simplificació, i evitar sistemàticament les generalitzacions del tipus «l'hinduisme creu que...» quan allò que es vol dir és «la tradició Advaita Vedanta afirma que...».</p>
+
+<h2 id="s7112">7.11.2 L'orientalisme i la seva crítica</h2>
+
+<p><strong>Edward Said</strong> (<em>Orientalism</em>, 1978) i <strong>Ronald Inden</strong> (<em>Imagining India</em>, 1990) han documentat com les categories conceptuals de l'estudi occidental de l'hinduisme son producte d'un context colonial. L'orientalisme indi consistia en quatre operacions: l'<strong>essencialització</strong>, la <strong>historicització negativa</strong>, la <strong>textualització</strong> i la <strong>masculinització</strong>.</p>
+
+<p>La crítica de l'orientalisme és necessaria però té les seves pròpies limitacions: no tota descripció externa és orientalista, i la crítica pot caure en l'error oposat de l'essencialisme si afirma que «l'hinduisme és en realitat...» (tolerant, igualitari) com a resposta a les distorsions orientalistes.</p>
+
+<h2 id="s7113">7.11.3 El debat sobre el <em>varnashramadharma</em></h2>
+
+<p>El sistema de castes és, des d'un punt de vista sociológic, un fet que cal descriure. Però és igualment un sistema d'opressió, i la tasca del científic social comporta la responsabilitat de no presentar la descripció com si fos una normalització. La tensió entre la comprensió interna (<em>emic</em>) i l'anàlisi externa (<em>etic</em>) no té una resolució simple, i el que exigeix la bona pràctica metodológica és que aquesta tensió sigui explícita.</p>
+
+<h2 id="s7114">7.11.4 Fonts: el biaix brahminic i les tradicions silenciades</h2>
+
+<p>La gran majoria de les fonts escrites de la tradició hindú han estat produïdes per homes de les castes superiors en sànscrit. Els instruments per superar parcialment aquest biaix inclouen l'<strong>arqueologia</strong>, la <strong>tradició oral</strong>, l'<strong>etnografia religiosa</strong>, les <strong>tradicions vernacles</strong> (literatura bhakti en tamil, kannada, marathi, bengali, hindi) i les <strong>fonts crítiques</strong> budistes i jainistes.</p>
+
+<h2 id="s7115">7.11.5 La perspectiva <em>emic</em> i la perspectiva <em>etic</em></h2>
+
+<p>La posició metodológica que proposa la millor historiografia contemporànea manté les dues perspectives en tensió productiva: prendre seriosament la perspectiva interna dels practicants sense abandonar la capacitat d'anàlisi crítica externa, i reconèixer que la pròpia perspectiva de l'analista és part de l'objecte d'estudi.</p>
+
+<h2 id="s7116">7.11.6 Hinduisme i colonialisme: com llegir una tradició a través de categories imposades</h2>
+
+<p>No podem llegir les fonts hindús contemporàneas com si fossin simplement expressions de la tradició pre-colonial: totes elles son respostes al colonialisme. Però reconèixer la mediació colonial no implica que l'hinduisme contemporani sigui simplement una «construcció colonial»: la tradició existia abans de la dominació britànica i continua existint —transformada però no determinada— després d'ella. El que la metodologia adequada exigeix és una <strong>lectura estratigràfica</strong> capaç de distingir les capes de la tradició: el que és genuïnament antic, el que és producte de la síntesi clàssica, el que és resultat de la pressió colonial, i el que és innovació post-colonial.</p>
+
+<p>L'hinduisme és, per damunt de tot, una tradició viva: no un objecte del passat que l'anàlisi acadèmica conserva en formol, sinó una força activa i en constant transformació que continuarà generant preguntes noves molt temps després que les anàlisis presentades aquí hagin estat superades per les generacions futures d'investigadors.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 7.12 BIBLIOGRAFIA -->
+<section id="s712b" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">7.12</span>Bibliografia</h1>
+
+<div class="bib-section">
+<h3>Fonts primàries — Textos vèdics</h3>
+<p class="bib-entry">Jamison, Stephanie W., i Joel P. Brereton, trad. <em>The Rigveda: The Earliest Religious Poetry of India.</em> Oxford: Oxford University Press, 2014. 3 vols.</p>
+<p class="bib-entry">Eggeling, Julius, trad. <em>Shatapatha Brahmana.</em> Sacred Books of the East, vols. 12, 26, 41, 43, 44. Oxford: Clarendon Press, 1882-1900.</p>
+<p class="bib-entry">Whitney, William Dwight, trad. <em>Atharvaveda Samhita.</em> Harvard Oriental Series, vols. 7-8. Cambridge: Harvard University Press, 1905.</p>
+</div>
+
+<div class="bib-section">
+<h3>Fonts primàries — Upanishads</h3>
+<p class="bib-entry">Olivelle, Patrick, trad. i ed. <em>The Early Upanisads: Annotated Text and Translation.</em> Oxford: Oxford University Press, 1998. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Hume, Robert Ernest, trad. <em>The Thirteen Principal Upanishads.</em> Oxford: Oxford University Press, 1921.</p>
+<p class="bib-entry">Easwaran, Eknath, trad. <em>The Upanishads.</em> Tomales, CA: Nilgiri Press, 1987.</p>
+</div>
+
+<div class="bib-section">
+<h3>Fonts primàries — Bhagavad Gita i Epics</h3>
+<p class="bib-entry">Miller, Barbara Stoler, trad. <em>The Bhagavad Gita: Krishna's Counsel in Time of War.</em> Nova York: Columbia University Press, 1986.</p>
+<p class="bib-entry">Prabhupada, A. C. Bhaktivedanta Swami, trad. <em>Bhagavad Gita As It Is.</em> Nova York: Bhaktivedanta Book Trust, 1968.</p>
+<p class="bib-entry">Smith, John D., trad. <em>The Mahabharata.</em> Londres: Penguin Books, 2009.</p>
+<p class="bib-entry">Ganguli, Kisari Mohan, trad. <em>The Mahabharata.</em> Calcuta, 1883-1896. 18 vols. Disponible en línia a sacred-texts.com.</p>
+<p class="bib-entry">Goldman, Robert P., et al., trad. <em>The Ramayana of Valmiki: An Epic of Ancient India.</em> Princeton: Princeton University Press, 1984-2017. 7 vols.</p>
+<p class="bib-entry">Narayan, R. K., trad. i adapt. <em>The Ramayana.</em> Nova York: Viking, 1972.</p>
+</div>
+
+<div class="bib-section">
+<h3>Fonts primàries — Altres textos clàssics</h3>
+<p class="bib-entry">Doniger, Wendy, i Brian K. Smith, trad. <em>The Laws of Manu (Manusmriti).</em> Londres: Penguin Books, 1991.</p>
+<p class="bib-entry">Olivelle, Patrick, trad. <em>King, Governance, and Law in Ancient India: Kautilya's Arthasastra.</em> Oxford: Oxford University Press, 2013.</p>
+<p class="bib-entry">Haksar, A. N. D., trad. <em>Kama Sutra.</em> Nova York: Penguin Books, 2011.</p>
+<p class="bib-entry">Feuerstein, Georg, trad. i comentari. <em>Yoga Sutras of Patanjali.</em> Rochester, VT: Inner Traditions, 1989.</p>
+<p class="bib-entry">Coburn, Thomas B., trad. <em>Encountering the Goddess: A Translation of the Devi-Mahatmya and a Study of Its Interpretation.</em> Albany: State University of New York Press, 1991.</p>
+<p class="bib-entry">Larson, Gerald James, trad. <em>Samkhya Karika of Ishvarakrishna,</em> a <em>Classical Samkhya: An Interpretation of Its History and Meaning.</em> Delhi: Motilal Banarsidass, 1969.</p>
+</div>
+
+<div class="bib-section">
+<h3>Fonts primàries — Textos devocionals</h3>
+<p class="bib-entry">Hawley, John Stratton, i Mark Juergensmeyer, trad. <em>Songs of the Saints of India.</em> Oxford: Oxford University Press, 1988.</p>
+<p class="bib-entry">Mehrotra, Arvind Krishna, trad. <em>The Poems of Kabir.</em> Nova York: New York Review Books, 2011.</p>
+<p class="bib-entry">Bly, Robert, i Jane Hirshfield, trad. <em>Mirabai: Ecstatic Poems.</em> Boston: Beacon Press, 2004.</p>
+<p class="bib-entry">Ramanujan, A. K., trad. <em>Speaking of Siva.</em> Londres: Penguin Books, 1973.</p>
+<p class="bib-entry">Ramanujan, A. K., trad. <em>Hymns for the Drowning: Poems for Vishnu by Nammalvar.</em> Princeton: Princeton University Press, 1981.</p>
+</div>
+
+<div class="bib-section">
+<h3>Obres de referència generals</h3>
+<p class="bib-entry">Doniger, Wendy. <em>The Hindus: An Alternative History.</em> Nova York: Penguin Press, 2009. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Flood, Gavin. <em>An Introduction to Hinduism.</em> Cambridge: Cambridge University Press, 1996. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Michaels, Axel. <em>Hinduism: Past and Present.</em> Trad. Barbara Harshav. Princeton: Princeton University Press, 2004.</p>
+<p class="bib-entry">Zimmer, Heinrich. <em>Philosophies of India.</em> Ed. Joseph Campbell. Princeton: Princeton University Press, 1951.</p>
+<p class="bib-entry">Radhakrishnan, Sarvepalli. <em>Indian Philosophy.</em> Londres: George Allen & Unwin, 1923-1927. 2 vols.</p>
+<p class="bib-entry">Hiriyanna, Mysore. <em>Outlines of Indian Philosophy.</em> Londres: George Allen & Unwin, 1932.</p>
+<p class="bib-entry">Dasgupta, Surendranath. <em>A History of Indian Philosophy.</em> Cambridge: Cambridge University Press, 1922-1955. 5 vols.</p>
+<p class="bib-entry">Eliade, Mircea. <em>Yoga: Immortality and Freedom.</em> Trad. Willard R. Trask. Princeton: Princeton University Press, 1958.</p>
+</div>
+
+<div class="bib-section">
+<h3>Context històric i geogràfic</h3>
+<p class="bib-entry">Thapar, Romila. <em>A History of India, Vol. 1.</em> Londres: Penguin Books, 1966.</p>
+<p class="bib-entry">Thapar, Romila. <em>Early India: From the Origins to AD 1300.</em> Berkeley: University of California Press, 2002. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Keay, John. <em>India: A History.</em> Nova York: Grove Press, 2000.</p>
+<p class="bib-entry">Kulke, Hermann, i Dietmar Rothermund. <em>A History of India.</em> 4a ed. Londres: Routledge, 2004.</p>
+<p class="bib-entry">Possehl, Gregory L. <em>The Indus Civilization: A Contemporary Perspective.</em> Walnut Creek, CA: AltaMira Press, 2002.</p>
+<p class="bib-entry">McIntosh, Jane. <em>A Peaceful Realm: The Rise and Fall of the Indus Civilization.</em> Boulder, CO: Westview Press, 2002.</p>
+<p class="bib-entry">Bryant, Edwin. <em>The Quest for the Origins of Vedic Culture: The Indo-Aryan Migration Debate.</em> Oxford: Oxford University Press, 2001.</p>
+<p class="bib-entry">Witzel, Michael. «Autochthonous Aryans? The Evidence from Old Indian and Iranian Texts.» <em>Electronic Journal of Vedic Studies</em> 7, núm. 3 (2001): 1-93.</p>
+</div>
+
+<div class="bib-section">
+<h3>El sistema de castes</h3>
+<p class="bib-entry">Ambedkar, Bhimrao Ramji. <em>Annihilation of Caste.</em> 1936. Ed. anotada amb introducció d'Arundhati Roy. Londres: Verso, 2014. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Ambedkar, Bhimrao Ramji. <em>The Buddha and His Dhamma.</em> Bombai: Siddharth College Publications, 1957.</p>
+<p class="bib-entry">Ambedkar, Bhimrao Ramji. <em>Writings and Speeches.</em> Bombai: Education Department, Government of Maharashtra, 1979-2003. 17 vols.</p>
+<p class="bib-entry">Dumont, Louis. <em>Homo Hierarchicus: The Caste System and Its Implications.</em> Trad. Mark Sainsbury, Louis Dumont i Basia Gulati. Chicago: University of Chicago Press, 1970.</p>
+<p class="bib-entry">Gupta, Dipankar. <em>Interrogating Caste: Understanding Hierarchy and Difference in Indian Society.</em> Nova Delhi: Penguin Books India, 2000.</p>
+<p class="bib-entry">Omvedt, Gail. <em>Dalits and the Democratic Revolution: Dr. Ambedkar and the Dalit Movement in Colonial India.</em> Nova Delhi: Sage Publications, 1994.</p>
+<p class="bib-entry">Omvedt, Gail. <em>Buddhism in India: Challenging Brahmanism and Caste.</em> Nova Delhi: Sage Publications, 2003.</p>
+<p class="bib-entry">Zelliot, Eleanor. <em>From Untouchable to Dalit: Essays on the Ambedkar Movement.</em> Nova Delhi: Manohar Publishers, 1992.</p>
+<p class="bib-entry">Khare, Ravindra S., ed. <em>Caste, Hierarchy, and Individualism: Indian Critiques of Louis Dumont's Contributions.</em> Oxford: Oxford University Press, 2006.</p>
+</div>
+
+<div class="bib-section">
+<h3>Tradicions devocionals i moviment Bhakti</h3>
+<p class="bib-entry">Hawley, John Stratton. <em>A Storm of Songs: India and the Idea of the Bhakti Movement.</em> Cambridge: Harvard University Press, 2015. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Hawley, John Stratton, i Donna Marie Wulff, eds. <em>The Divine Consort: Radha and the Goddesses of India.</em> Berkeley: Graduate Theological Union, 1982.</p>
+<p class="bib-entry">Hardy, Friedhelm. <em>Viraha-Bhakti: The Early History of Krsna Devotion in South India.</em> Oxford: Oxford University Press, 1983.</p>
+<p class="bib-entry">Lorenzen, David N., ed. <em>Bhakti Religion in North India: Community Identity and Political Action.</em> Albany: State University of New York Press, 1995.</p>
+<p class="bib-entry">Pechilis, Karen, ed. <em>The Graceful Guru: Hindu Female Gurus in India and the United States.</em> Oxford: Oxford University Press, 2004.</p>
+<p class="bib-entry">White, David Gordon. <em>The Alchemical Body: Siddha Traditions in Medieval India.</em> Chicago: University of Chicago Press, 1996.</p>
+<p class="bib-entry">White, David Gordon, ed. <em>Tantra in Practice.</em> Princeton: Princeton University Press, 2000.</p>
+<p class="bib-entry">Urban, Hugh B. <em>Tantra: Sex, Secrecy, Politics, and Power in the Study of Religion.</em> Berkeley: University of California Press, 2003.</p>
+</div>
+
+<div class="bib-section">
+<h3>Filosofia hindú</h3>
+<p class="bib-entry">Potter, Karl H., ed. <em>Encyclopedia of Indian Philosophies.</em> 26 vols. Delhi: Motilal Banarsidass, 1970-2018.</p>
+<p class="bib-entry">Larson, Gerald James, i Ram Shankar Bhattacharya, eds. <em>Samkhya: A Dualist Tradition in Indian Philosophy.</em> Princeton: Princeton University Press, 1987.</p>
+<p class="bib-entry">Mohanty, Jitendra Nath. <em>Reason and Tradition in Indian Thought.</em> Oxford: Clarendon Press, 1992.</p>
+<p class="bib-entry">Phillips, Stephen H. <em>Classical Indian Metaphysics: Refutations of Realism and the Emergence of "New Logic."</em> Chicago: Open Court, 1995.</p>
+<p class="bib-entry">Matilal, Bimal Krishna. <em>The Character of Logic in India.</em> Albany: State University of New York Press, 1998.</p>
+<p class="bib-entry">Matilal, Bimal Krishna. <em>Perception: An Essay on Classical Indian Theories of Knowledge.</em> Oxford: Clarendon Press, 1986.</p>
+<p class="bib-entry">Shankaracharya. <em>Vivekachudamani (The Crest-Jewel of Discrimination).</em> Trad. Swami Madhavananda. Calcuta: Advaita Ashrama, 1921.</p>
+<p class="bib-entry">Ramanuja. <em>The Vedantasutras with the Commentary of Ramanujacharya (Sribhashya).</em> Trad. George Thibaut. Sacred Books of the East, vol. 48. Oxford: Clarendon Press, 1904.</p>
+<p class="bib-entry">Abhinavagupta. <em>Tantraloka.</em> Trad. parcial Navjivan Rastogi. Delhi: Motilal Banarsidass, 1987.</p>
+<p class="bib-entry">Muller-Ortega, Paul Eduardo. <em>The Triadic Heart of Siva: Kaula Tantricism of Abhinavagupta in the Non-Dual Shaivism of Kashmir.</em> Albany: State University of New York Press, 1989.</p>
+</div>
+
+<div class="bib-section">
+<h3>Hinduisme i poder polític</h3>
+<p class="bib-entry">Kangle, R. P., ed. i trad. <em>The Kautiliya Arthasastra.</em> Bombai: University of Bombay, 1965-1972. 3 vols.</p>
+<p class="bib-entry">Trautmann, Thomas R. <em>Kautilya and the Arthasastra: A Statistical Investigation of the Authorship and Evolution of the Text.</em> Leiden: Brill, 1971.</p>
+<p class="bib-entry">Heesterman, Jan C. <em>The Inner Conflict of Tradition: Essays in Indian Ritual, Kingship, and Society.</em> Chicago: University of Chicago Press, 1985.</p>
+<p class="bib-entry">Inden, Ronald. <em>Imagining India.</em> Oxford: Basil Blackwell, 1990. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Jaffrelot, Christophe. <em>The Hindu Nationalist Movement and Indian Politics, 1925 to the 1990s.</em> Nova York: Columbia University Press, 1996. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Jaffrelot, Christophe. <em>Modi's India: Hindu Nationalism and the Rise of Ethnic Democracy.</em> Trad. Cynthia Schoch. Princeton: Princeton University Press, 2021. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Savarkar, Vinayak Damodar. <em>Hindutva: Who Is a Hindu?</em> Poona: S. P. Gokhale, 1923. 6a ed. Bombai: Veer Savarkar Prakashan, 1989. <strong>[Font primària indispensable.]</strong></p>
+<p class="bib-entry">Golwalkar, Madhav Sadashiv. <em>We or Our Nationhood Defined.</em> Nagpur: Bharat Publications, 1939.</p>
+<p class="bib-entry">Sen, Amartya. <em>The Argumentative Indian: Writings on Indian History, Culture and Identity.</em> Londres: Allen Lane, 2005. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Nussbaum, Martha C. <em>The Clash Within: Democracy, Religious Violence, and India's Future.</em> Cambridge: Harvard University Press, 2007.</p>
+</div>
+
+<div class="bib-section">
+<h3>Reforma hindú i figures clau</h3>
+<p class="bib-entry">Kopf, David. <em>The Brahmo Samaj and the Shaping of the Modern Indian Mind.</em> Princeton: Princeton University Press, 1979.</p>
+<p class="bib-entry">Hatcher, Brian A. <em>Eclecticism and Modern Hindu Discourse.</em> Oxford: Oxford University Press, 1999.</p>
+<p class="bib-entry">Vivekananda, Swami. <em>The Complete Works of Swami Vivekananda.</em> 9 vols. Calcuta: Advaita Ashrama, 1907-1922.</p>
+<p class="bib-entry">Gandhi, Mohandas Karamchand. <em>The Collected Works of Mahatma Gandhi.</em> 100 vols. Nova Delhi: Publications Division, Government of India, 1958-1994.</p>
+<p class="bib-entry">Gandhi, Mohandas Karamchand. <em>The Bhagavad Gita According to Gandhi.</em> Ed. John Strohmeier. Berkeley: North Atlantic Books, 2009.</p>
+<p class="bib-entry">Guha, Ramachandra. <em>India After Gandhi: The History of the World's Largest Democracy.</em> Nova York: HarperCollins, 2007. <strong>[Indispensable.]</strong></p>
+</div>
+
+<div class="bib-section">
+<h3>Hinduisme contemporani i diàspora</h3>
+<p class="bib-entry">Vertovec, Steven. <em>The Hindu Diaspora: Comparative Patterns.</em> Londres: Routledge, 2000.</p>
+<p class="bib-entry">Kurien, Prema. <em>A Place at the Multicultural Table: The Development of an American Hinduism.</em> New Brunswick: Rutgers University Press, 2007.</p>
+<p class="bib-entry">Hinnells, John R., ed. <em>A New Handbook of Living Religions.</em> Oxford: Blackwell, 1997.</p>
+<p class="bib-entry">Klass, Morton. <em>Singing with Sai Baba: The Politics of Revitalization in Trinidad.</em> Boulder: Westview Press, 1991.</p>
+<p class="bib-entry">Lucia, Amanda J. <em>Reflections of Amma: Devotees in a Global Embrace.</em> Berkeley: University of California Press, 2014.</p>
+</div>
+
+<div class="bib-section">
+<h3>Hinduisme i gènere</h3>
+<p class="bib-entry">Leslie, Julia, ed. <em>Roles and Rituals for Hindu Women.</em> Rutherford: Fairleigh Dickinson University Press, 1991.</p>
+<p class="bib-entry">Sharma, Arvind, i Katherine K. Young, eds. <em>Feminism and World Religions.</em> Albany: State University of New York Press, 1999.</p>
+<p class="bib-entry">Kishwar, Madhu. <em>Off the Beaten Track: Rethinking Gender Justice for Indian Women.</em> Nova Delhi: Oxford University Press, 1999.</p>
+<p class="bib-entry">Chakravarti, Uma. <em>Gendering Caste Through a Feminist Lens.</em> Calcuta: Stree, 2003.</p>
+</div>
+
+<div class="bib-section">
+<h3>Hinduisme i pensament occidental</h3>
+<p class="bib-entry">Halbfass, Wilhelm. <em>India and Europe: An Essay in Understanding.</em> Albany: State University of New York Press, 1988. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Schwab, Raymond. <em>The Oriental Renaissance: Europe's Rediscovery of India and the East, 1680-1880.</em> Trad. Gene Patterson-Black i Victor Reinking. Nova York: Columbia University Press, 1984.</p>
+<p class="bib-entry">King, Richard. <em>Orientalism and Religion: Postcolonial Theory, India and "The Mystic East."</em> Londres: Routledge, 1999.</p>
+<p class="bib-entry">Varela, Francisco J., Evan Thompson i Eleanor Rosch. <em>The Embodied Mind: Cognitive Science and Human Experience.</em> Cambridge: MIT Press, 1991.</p>
+</div>
+
+<div class="bib-section">
+<h3>Metodologia en l'estudi de l'hinduisme</h3>
+<p class="bib-entry">Said, Edward W. <em>Orientalism.</em> Nova York: Pantheon Books, 1978. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Inden, Ronald. <em>Imagining India.</em> Oxford: Basil Blackwell, 1990.</p>
+<p class="bib-entry">Frykenberg, Robert Eric. «The Emergence of Modern "Hinduism" as a Concept and as an Institution: A Reappraisal with Special Reference to South India.» A <em>Hinduism Reconsidered,</em> ed. Günther-Dietz Sontheimer i Hermann Kulke. Nova Delhi: Manohar, 1989.</p>
+<p class="bib-entry">Lorenzen, David N. «Who Invented Hinduism?» <em>Comparative Studies in Society and History</em> 41, núm. 4 (1999): 630-659.</p>
+<p class="bib-entry">Nicholson, Andrew J. <em>Unifying Hinduism: Philosophy and Identity in Indian Intellectual History.</em> Nova York: Columbia University Press, 2010.</p>
+<p class="bib-entry">Pennington, Brian K. <em>Was Hinduism Invented? Britons, Indians, and the Colonial Construction of Religion.</em> Oxford: Oxford University Press, 2005.</p>
+</div>
+
+<p class="note" style="font-size:.85rem;color:var(--ink-light);font-style:italic;border-top:1px solid var(--rule);margin-top:3rem;padding-top:1rem;opacity:.8;">Nota: Per a una introducció accessible en català o castellà, es recomana el capítol sobre l'hinduisme de la <em>Historia de las religiones</em> de Mircea Eliade i Ioan P. Couliano (Madrid: Siruela, 1992), l'entrada «Hinduisme» de la <em>Gran Enciclopèdia Catalana</em>, i el volum <em>El hinduismo</em> de Gavin Flood en la seva traducció castellana (Madrid: Akal, 2008). Per als textos primaris, la col·lecció Penguin Classics ofereix traduccions de la Bhagavad Gita, les Upanishads, el Manusmriti i el Kamasutra de qualitat acadèmica i accessibilitat notable.</p>
+
+</section>
+
+</main>
+
+<a href="#cover" class="back-top" id="backTop" aria-label="Tornar al principi" title="Tornar al principi">↑</a>
+
+<!-- Scripts Externs -->
+<script src="scripts.js"></script>
+
+</body>

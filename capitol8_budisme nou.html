@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 8 — Budisme</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<!-- Estils Externs -->
+<link rel="stylesheet" href="estil.css">
+
+<!-- Personalització per al Capítol 8 (Budisme) -->
+<style>
+  :root {
+    --sidebar-bg: #231810; /* To fusta de teca / monestir càlid */
+    --saffron: #c2691d;
+    --saffron-light: #d99248;
+    --jade: #2f5d4f;
+  }
+  
+  /* Seguretat UI */
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+
+  /* Mòduls visuals propis del Capítol 8 */
+  .path-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #c2691d33; margin: 2rem 0; font-size: .9rem; }
+  .path-cell { background: var(--cream, #faf8f3); padding: .75rem 1rem; }
+  .path-cell.header { background: #1a1410; color: #d99248; font-weight: 600; font-family: 'Cormorant Garamond', serif; font-size: 1rem; }
+  .vehicle-header { display: flex; align-items: center; gap: 1rem; margin: 3rem 0 1.5rem; padding-bottom: .75rem; border-bottom: 1px solid rgba(194, 105, 29, 0.3); }
+  .vehicle-icon { font-size: 2rem; line-height: 1; }
+  .vehicle-title { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--lapis, #243a52); margin: 0; }
+  @media(max-width: 600px) { .path-grid { grid-template-columns: 1fr; } }
+</style>
+
+<body>
+<div class="progress-bar" id="progress"></div>
+<!-- HEADER FIXE & NAV TOGGLE -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title">Capítol 8 — Budisme</div>
+  <div style="width: 44px;"></div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+ <div class="sidebar-header">
+    <a href="index.html" style="font-family: 'Crimson Pro', serif; font-size: 0.75rem; color: #c4a44a; text-decoration: none; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block; margin-bottom: 0.5rem; opacity: 0.7;">← Índex General</a>
+    <div class="sidebar-title">Capítol 8<br>Budisme</div>
+  </div>
+  <nav>
+    <a href="#cover" class="lvl1">Portada</a>
+    <a href="#s81" class="lvl1">8.1 Introducció: naturalesa i origen</a>
+    <a href="#s811" class="lvl2">8.1.1 Visió general</a>
+    <a href="#s812" class="lvl2">8.1.2 Debat epistemològic</a>
+    <a href="#s813" class="lvl2">8.1.3 Els catorze silencis</a>
+    <a href="#s814" class="lvl2">8.1.4 Siddharta Gautama</a>
+    <a href="#s815" class="lvl2">8.1.5 Gautama históric vs. hagiografia</a>
+    <a href="#s816" class="lvl2">8.1.6 Les Quatre Sortides</a>
+    <a href="#s817" class="lvl2">8.1.7 Ātman vs. Anatta</a>
+    <a href="#s818" class="lvl2">8.1.8 Subordinació de les deïtats</a>
+    <a href="#s819" class="lvl2">8.1.9 L'Era Axial</a>
+    <a href="#s8110" class="lvl2">8.1.10 Karma com a intencionalitat</a>
+    <a href="#s8111" class="lvl2">8.1.11 Revolució ètica i social</a>
+    <a href="#s82" class="lvl1">8.2 Context històric i polític</a>
+    <a href="#s821" class="lvl2">8.2.1 Segona Urbanització</a>
+    <a href="#s822" class="lvl2">8.2.2 La Saṅgha democràtica</a>
+    <a href="#s823" class="lvl2">8.2.3 El moviment Śramaṇa rival</a>
+    <a href="#s824" class="lvl2">8.2.4 Sistema de castes</a>
+    <a href="#s825" class="lvl2">8.2.5 Economia i gremis</a>
+    <a href="#s826" class="lvl2">8.2.6 Vihāras i arquitectura rupestre</a>
+    <a href="#s827" class="lvl2">8.2.7 L'Imperi Maurya</a>
+    <a href="#s828" class="lvl2">8.2.8 Ashoka</a>
+    <a href="#s829" class="lvl2">8.2.9 Gandhara i el Milinda Pañha</a>
+    <a href="#s83" class="lvl1">8.3 Els textos sagrats</a>
+    <a href="#s831" class="lvl2">8.3.1 El Tripiṭaka</a>
+    <a href="#s832" class="lvl2">8.3.2 Transmissió oral i Concilis</a>
+    <a href="#s833" class="lvl2">8.3.3 Els Jātaka</a>
+    <a href="#s834" class="lvl2">8.3.4 L'escriptura Mahayana</a>
+    <a href="#s835" class="lvl2">8.3.5 Textos Vajrayana i Tantres</a>
+    <a href="#s836" class="lvl2">8.3.6 Autoria i historicitat</a>
+    <a href="#s84" class="lvl1">8.4 Cosmovisió budista</a>
+    <a href="#s841" class="lvl2">8.4.1 Les Quatre Nobles Veritats</a>
+    <a href="#s842" class="lvl2">8.4.2 El Camí Òctuple</a>
+    <a href="#s843" class="lvl2">8.4.3 Coproducció condicionada</a>
+    <a href="#s844" class="lvl2">8.4.4 Anicca, Anatta, Dukkha</a>
+    <a href="#s845" class="lvl2">8.4.5 Karma i saṃsāra budistes</a>
+    <a href="#s846" class="lvl2">8.4.6 El Nirvana</a>
+    <a href="#s85" class="lvl1">8.5 Els grans vehicles</a>
+    <a href="#s851" class="lvl2">8.5.1 Theravada</a>
+    <a href="#s852" class="lvl2">8.5.2 Mahayana i el Bodhisattva</a>
+    <a href="#s853" class="lvl2">8.5.3 Śūnyatā i Nagarjuna</a>
+    <a href="#s854" class="lvl2">8.5.4 Yogācāra</a>
+    <a href="#s855" class="lvl2">8.5.5 Vajrayana tibetà</a>
+    <a href="#s856" class="lvl2">8.5.6 Zen/Chan</a>
+    <a href="#s86" class="lvl1">8.6 Ètica, monacat i vida quotidiana</a>
+    <a href="#s861" class="lvl2">8.6.1 El Vinaya</a>
+    <a href="#s862" class="lvl2">8.6.2 Cinc preceptes laics</a>
+    <a href="#s863" class="lvl2">8.6.3 L'almoina</a>
+    <a href="#s864" class="lvl2">8.6.4 Festivitats</a>
+    <a href="#s865" class="lvl2">8.6.5 Samatha i vipassanā</a>
+    <a href="#s866" class="lvl2">8.6.6 Stūpas i relíquies</a>
+    <a href="#s87" class="lvl1">8.7 Filosofia budista</a>
+    <a href="#s871" class="lvl2">8.7.1 Nagarjuna i la Madhyamaka</a>
+    <a href="#s872" class="lvl2">8.7.2 Abhidharma</a>
+    <a href="#s873" class="lvl2">8.7.3 Dignāga i Dharmakīrti</a>
+    <a href="#s874" class="lvl2">8.7.4 Debat budisme-Vedanta</a>
+    <a href="#s88" class="lvl1">8.8 Budisme i poder polític</a>
+    <a href="#s881" class="lvl2">8.8.1 El Dhammarāja</a>
+    <a href="#s882" class="lvl2">8.8.2 Budisme d'Estat al SE asiàtic</a>
+    <a href="#s883" class="lvl2">8.8.3 El Dalai Lama</a>
+    <a href="#s884" class="lvl2">8.8.4 Nacionalisme contemporani</a>
+    <a href="#s885" class="lvl2">8.8.5 Budisme xinès i l'Estat</a>
+    <a href="#s89" class="lvl1">8.9 Expansió per l'Àsia</a>
+    <a href="#s891" class="lvl2">8.9.1 La Ruta de la Seda</a>
+    <a href="#s892" class="lvl2">8.9.2 Sinització</a>
+    <a href="#s893" class="lvl2">8.9.3 Japó: Nara, Heian, Zen</a>
+    <a href="#s894" class="lvl2">8.9.4 Tibet i el Bön</a>
+    <a href="#s895" class="lvl2">8.9.5 Sud-est asiàtic i Angkor</a>
+    <a href="#s810" class="lvl1">8.10 El budisme contemporani</a>
+    <a href="#s8101" class="lvl2">8.10.1 Colonització i orientalisme</a>
+    <a href="#s8102" class="lvl2">8.10.2 D.T. Suzuki i el Zen</a>
+    <a href="#s8103" class="lvl2">8.10.3 Mindfulness secular</a>
+    <a href="#s8104" class="lvl2">8.10.4 Budisme engatjat</a>
+    <a href="#s8105" class="lvl2">8.10.5 Diàspores i conversos</a>
+    <a href="#s811i" class="lvl1">8.11 Influències sobre altres tradicions</a>
+    <a href="#s8111i" class="lvl2">8.11.1 Sobre l'hinduisme</a>
+    <a href="#s8112" class="lvl2">8.11.2 Sikhisme i jainisme</a>
+    <a href="#s8113" class="lvl2">8.11.3 Taoisme i confucianisme</a>
+    <a href="#s8114" class="lvl2">8.11.4 Filosofia occidental</a>
+    <a href="#s812m" class="lvl1">8.12 Metodologia</a>
+    <a href="#s813b" class="lvl1">8.13 Bibliografia</a>
+  </nav>
+</aside>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-menorah">☸</div>
+  <div class="cover-ornament">Història de les Religions</div>
+  <div class="cover-rule"></div>
+  <div class="cover-hebrew">DHAMMACAKKA • ANATTA</div>
+  <h1 class="cover-chapter">Capítol 8</h1>
+  <div class="cover-subtitle">Budisme</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong> El budisme constitueix la primera tecnologia psicològica universal d'alliberament de la història: substitueix la salvació mediada pel ritual i la casta per un mètode empíric d'autoexamen accessible a qualsevol persona, i es converteix, sota Ashoka, en el primer experiment conegut d'ètica d'Estat post-tribal i de vocació transnacional.
+  </div>
+  <div class="cover-scroll"><span>Llegir</span><div class="cover-scroll-line"></div></div>
+</div>
+
+<main class="content">
+
+<!-- ═══════════════════════════════════════════════════ 8.1 -->
+<section id="s81" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.1</span>Introducció: Naturalesa i origen del budisme</h1>
+
+<h2 id="s811">8.1.1 Visió general</h2>
+<p class="drop-cap">El budisme constitueix una de les tradicions espirituals, filosòfiques i culturals més vastes i influents de la historia de la humanitat. Amb més de dos mil·lennis i mig d'evolució, el que va néixer com un moviment de reforma ascètica a la vall del riu Ganges, a l'antiga Índia, s'ha transformat en una tradició transnacional que ha modelat de manera decisiva les societats de l'Àsia Oriental, el Sud-est asiàtic i, de manera creixent en l'època contemporània, el pensament i la cultura d'Occident. A diferència d'altres grans sistemes religiosos de l'antiguitat, el budisme se'ns presenta originalment com un model de caràcter no teista: la seva indagació central no gravita al voltant de la revelació d'una deïtat creadora ni de la submissió a una voluntat divina, sinó que se centra de manera radical en l'experiència humana, el patiment existencial i la possibilitat de l'alliberament mitjançant el cultiu de la ment i de l'ètica.</p>
+
+<h2 id="s812">8.1.2 El debat epistemològic sobre la naturalesa del budisme: filosofia, religió o teràpia existencial</h2>
+<p>L'estudi del budisme des de la perspectiva de la historia comparada de les religions exigeix, en primera instància, una revisió crítica de les mateixes categories occidentals amb què solem classificar els fenòmens espirituals. Des de la seva introducció als cercles intel·lectuals d'Occident durant el segle XIX, el budisme ha estat objecte d'una intensa disputa epistemològica: s'ha de considerar una religió, una filosofia, una psicologia fenomenològica o bé una forma de teràpia existencial pràctica?</p>
+<p>D'una banda, si definim la "religió" a partir del patró de les tradicions abrahàmiques —és a dir, articulada entorn d'un Déu creador absolut, una veritat revelada de manera sobrenatural, un llinatge de profetes i un dogma inqüestionable—, el budisme originari s'allunya d'aquest esquema de manera gairebé provocadora. El Buda no es va proclamar mai fill, enviat ni portaveu de cap divinitat, sinó un ésser humà que, mitjançant l'esforç propi i la investigació introspectiva, va desvetllar les lleis de la realitat. No hi ha en el budisme primigeni un acte de fe (credo) en veritats metafísiques inaccessibles, sinó una crida a la verificació empírica personal. El mateix text conegut com el <em>Kālāma Sūtra</em> és sovint citat com la carta magna de la llibertat de pensament de l'antiguitat: en ell, el Buda insta els seus oients a no creure en res basant-se únicament en la tradició, l'autoritat dels mestres, els llibres sagrats o el prestigi de la institució, sinó a acceptar un coneixement només quan s'hagi comprovat per l'experiència directa que és saludable i condueix a la felicitat.</p>
+<p>Per aquesta raó, nombrosos filòsofs i intel·lectuals (des de Schopenhauer fins a pensadors contemporanis de la neurofilosofia) han preferit conceptualitzar el budisme com una filosofia de l'experiència o una fenomenologia de la ment. El mètode budista comparteix amb el racionalisme i l'empirisme la recerca de causes i efectes. La ment és tractada com un laboratori on cada pensament, emoció o impuls es pot analitzar desapassionadament mitjançant l'atenció i la presència mental.</p>
+<p>Tanmateix, reduir el budisme a una mera filosofia de saló o a un exercici intel·lectual buit seria cometre un error simètric de comprensió. El budisme té un objectiu eminentment soteriològic: busca la salvació o l'alliberament del patiment. Posseeix una comunitat monàstica amb regles de disciplina severes (<em>Vinaya</em>), una ètica universalitzada, rituals de devoció de caràcter comunitari i una geografia sagrada de llocs de pelegrinatge. Per tant, la definició acadèmica més precisa és la d'un sistema soteriològic no teista de caràcter empíric, o bé, seguint termes de la psicoteràpia actual, una teràpia existencial radical que utilitza la transformació de l'atenció de l'individu com el fàrmac definitiu per extirpar el malestar de la condició humana.</p>
+
+<h2 id="s813">8.1.3 Els catorze silencis de Buda i el rebuig de la metafísica especulativa</h2>
+<p>Una de les lliçons metodològiques més trencadores del mètode del Buda históric es troba reflectida en els passatges coneguts com els catorze silencis o les preguntes inefables (<em>avyākata</em>). En els diàlegs de la tradició oral de l'Índia antiga, era habitual que filòsofs i ascetes de diferents escoles abordessin el Buda amb llistes de qüestions metafísiques de gran volada abstracta: L'univers és etern o és finit? L'univers és infinit en l'espai o té límits? L'ànima és el mateix que el cos físic o són realitats independents? El Buda o l'ésser il·luminat existeix després de la mort, no existeix, ambdues coses alhora o cap de les dues?</p>
+<p>Davant d'aquestes interpel·lacions, el Buda responia invariablement mantenint un silenci absolut o bé rebutjant explícitament prendre una posició doctrinal. Aquest silenci no s'ha d'interpretar de cap manera com a agnosticisme, escepticisme o falta de coneixement filosòfic; ben al contrari, respon a una profunda intencionalitat pedagògica i terapèutica. Per al Buda, l'especulació metafísica pura sobre qüestions que no poden ser verificades de manera empírica és una trampa mental que alimenta la il·lusió de la ment i, el que és pitjor, distreu l'ésser humà de la tasca urgent de resoldre la seva pròpia existència.</p>
+<p>Aquesta posició queda perfectament il·lustrada en la cèlebre paràbola de la sagiteta enverinada recollida en el <em>Cūḷamālunkyovāda Sūtra</em>. En aquest diàleg, el monjo Mālunkyāputta amenaça d'abandonar l'orde si el Buda no respon d'una vegada per totes a les grans preguntes sobre l'eternitat de l'univers. El Buda li respon demanant-li que s'imagini un home que ha estat ferit al pit per una fletxa impregnada d'un verí mortal. Si la família d'aquest ferit crida un metge, seria racional que l'home ferit digués: "No permetré que em treguin la fletxa fins que sàpiga exactament el nom de l'arquer que la va disparar, a quina casta pertany, si és alt o baix, de quin bosc prové la fusta de la fletxa o de quin ocell són les plomes de la seva cua"? L'home moriria abans d'obtenir cap d'aquestes respostes. Amb aquesta metàfora, el Buda recorda que l'ésser humà es troba literalment ferit per la fletxa del patiment existencial, del canvi i de la finitud, i que la seva doctrina és exclusivament un mètode mèdic i d'urgència per extreure la fletxa.</p>
+
+<h2 id="s814">8.1.4 Siddharta Gautama: vida i context biogràfic</h2>
+<p>Les arrels históriques d'aquesta tradició es troben indissolublement lligades a la figura de Siddharta Gautama, conegut posteriorment com el Buddha. Tot i que les cronologies exactes varien segons les diferents escoles i la recerca historiogràfica contemporània —situant el seu naixement tradicionalment cap a l'any 563 aC, o bé en dates més tardanes properes a mitjans del segle V aC—, hi ha consens a definir-lo com una figura histórica real que va viure a la regió fronterera entre els actuals Nepal i l'Índia, concretament en el si de la república dels Śākya, amb capital a Kapilavastu.</p>
+<p>Nascut en una família aristocràtica de la casta dels guerrers i governants (<em>kṣatriyas</em>), el jove Siddharta va créixer en un entorn de màxim privilegi i opulència materials, protegit activament pel seu pare, el rei Śuddhodana, de les misèries del món exterior. Tanmateix, la tradició recull un punt d'inflexió biogràfic d'un profund calat filosòfic: l'episodi conegut com "les quatre sortides" o "els quatre encontres". En abandonar per uns instants el palau real, Siddharta es va confrontar successivament amb la cruesa de la realitat humana a través de quatre visions: un ancià decrepit, un malalt terminal, un cadàver camí de la incineració i, finalment, un asceta errant (<em>śramaṇa</em>) que mantenia una expressió de profunda serenitat enmig de la desolació del món.</p>
+<p>Aquesta confrontació directa amb el caràcter inherentment dolorós i canviant de l'existència va precipitar la seva "gran renúncia". Als vint-i-nou anys, Siddharta va abandonar la seva família, el seu palau i el seu futur llinatge regi per endinsar-se en els boscos de Magadha com un cercador espiritual sense llar. Inicialment, va practicar les tècniques de meditació més severes amb els mestres més cèlebres del seu temps i va dur a terme pràctiques d'ascetisme extrem que el van portar gairebé a la mort per inanició. Al cap de sis anys d'esforços infructuosos, va concloure que la mortificació del cos no aclaria la ment ni resolia l'arrel de l'angoixa existencial, de la mateixa manera que el luxe del palau tampoc no ho havia fet.</p>
+<p>Aquest descobriment el va portar a formular la noció del Camí del Mig (<em>majjhima patipada</em>), una via equidistant entre l'autoindulgència sensorial i l'autodestrucció ascètica. Assegut sota una figuera (la <em>Ficus religiosa</em>, coneguda des d'aleshores com l'arbre de la Bodhi) a la localitat de Bodh Gaya, es va sumir en una profunda meditació fins a assolir l'esclat del coneixement definitiu: el <em>Nirvāṇa</em>. Siddharta esdevenia així el Buda, algú que havia trencat de manera definitiva les cadenes de la ignorància i del cicle de reincorporacions (<em>saṃsāra</em>). Des d'aquest moment de desvetllament fins a la seva mort física als vuitanta anys (el seu <em>parinirvāṇa</em>), va dedicar la seva vida a transmetre la seva doctrina (<em>Dharma</em>) i a fundar la comunitat de deixebles (<em>Saṅgha</em>).</p>
+
+<h2 id="s815">8.1.5 El Gautama históric davant l'hagiografia tradicional</h2>
+<p>Per a l'estudiós de la história comparada de les religions, la figura de Siddharta Gautama presenta un repte metodològic similar al de Jesús de Natzaret o Sòcrates: la necessitat de destriar el nucli históric transcorregut en el segle VI-V aC de les denses capes de caràcter mític i hagiogràfic dipositades posteriorment per la devoció de les diferents escoles. Els textos més antics del Cànon Pali (com el <em>Majjhima Nikāya</em>) no es presenten com a biografies lineals o cronològiques, sinó com a col·leccions de discursos on els detalls vitals del mestre s'esmenten de manera fragmentària i contextual.</p>
+<p>Les grans narratives biogràfiques contínues, com el <em>Buddhacarita</em> (el poema èpic d'Aśvaghoṣa escrit al segle II dC) o el <em>Lalitavistara Sūtra</em>, van ser redactades segles després de la mort del Buda, en un període on la tradició Mahayana ja necessitava glorificar i divinitzar la figura de l'il·luminat per a un públic universal. En aquests relats tardans, el naixement de Siddharta s'anuncia mitjançant somnis profètics de la seva mare, la reina Māyā (un elefant blanc que s'introdueix al seu costat), i el nadó neix directament del seu costat dret. Segons el relat, fa set passes que fan brollar flors de lotus, proclamant la seva supremacia còsmica.</p>
+<p>La recerca arqueològica i textual contemporània ha dut a terme una intensa desmitificació d'aquestes narracions. Avui sabem que el context on va créixer Gautama no era una monarquia absoluta de caràcter medieval com la descrita en els poemes tardans, sinó una societat de caps de clan o oligarquies pròpies de les <em>gaṇa-saṅghas</em>. El seu pare, Śuddhodana, no era un rei totpoderós amb un palau de cristall, sinó un cap electe o un aristòcrata de gran influència dins de l'assemblea dels Śākya. Aquesta visió histórica més austera, lluny de restar valor al personatge, n'engrandeix la dimensió humana: la decisió de Siddharta d'abandonar el seu entorn no va ser una rebel·lia senyorial contra un luxe de faula, sinó una renúncia conscient als privilegis d'un clan polític en un moment on les estructures tradicionals trontollaven davant l'avenç de la tirania militar dels regnes veïns de Magadha i Kosala.</p>
+
+<h2 id="s816">8.1.6 L'estructura filosòfica de "Les Quatre Sortides" com a xoc existencial</h2>
+<p>Més enllà de la seva literalitat histórica o de la seva bellesa com a paràbola literària, l'episodi de "les quatre sortides" actua com la biga mestra conceptual sobre la qual s'erigeix tota la psicologia i la soteriologia budista. Representa el trànsit des d'un estat d'alienació o inconsciència naïf cap al mateix desvetllament existencial. El palau on el pare manté tancat Siddharta simbolitza l'esfera de l'autoindulgència, la societat del consum de l'antiguitat i els mecanismes de defensa psicològics que l'ésser humà construeix per evitar mirar de cara la finitud de la pròpia vida.</p>
+<p>Els tres primers encontres (la vellesa, la malaltia i la mort) no s'han d'entendre simplement com a desgràcies estadístiques o circumstancials, sinó com a limitacions estructurals de la condició humana. La genialitat de la reflexió del jove Siddharta rau en el fet que no va reaccionar davant d'aquestes visions amb una mera compassió externa cap als afectats, sinó amb un xoc d'autoreconeixement: "Jo també estic subjecte a la vellesa, jo també estic subjecte a la malaltia, jo també estic subjecte a la mort". Aquest instant marca el naixement del concepte de <em>Saṃvega</em>, un terme pali que descriu una commoció intel·lectual profunda, una barreja d'ansietat existencial i d'urgència espiritual en adonar-se que l'entorn material i els vincles mundans són inherentment inestables i mancats de substància permanent.</p>
+<p>La quarta sortida, la visió de l'asceta errant (<em>śramaṇa</em>), tanca el cercle conceptual oferint una sortida metodològica. L'asceta no representa l'evasió de la realitat, sinó la decisió radical d'estudiar la realitat a fons de manera experimental. En un món que és una corrent contínua de canvis i pèrdues, la recerca de l'asceta esdevé l'única activitat racional possible: trobar allò que no està subjecte al naixement, a la vellesa ni a la mort; és a dir, allò incondicionat.</p>
+
+<h2 id="s817">8.1.7 L'entorn intel·lectual i el trencament amb el pensament de les Upaniṣad: la disputa Ātman vs. Anatta</h2>
+<p>Per copsar la radical originalitat del budisme dins de la história de les idees de l'Índia antiga, cal analitzar la seva relació dialèctica amb el corrent de pensament religiós que s'estava gestant paral·lelament en els mateixos boscos de la conca del Ganges: la redacció de les primeres Upaniṣad. Aquests textos sagrats vèdics marcaven un pas des del ritualisme extern dels antics sacerdots cap a una metafísica interna de caràcter profundament místic. Els savis dels textos upaniṣàdics havien formulat un descobriment revolucionari: l'essència d'un mateix, el nucli conscient i etern de l'ésser humà, s'anomena <em>Ātman</em> (l'Ànima o el Jo immutable), i aquesta essència és, en última instància, idèntica a l'Absolut o l'Ànima universal, coneguda com a <em>Brahman</em>. La salvació (<em>mokṣa</em>) en aquest esquema consistia precisament en l'experiència contemplativa de reconèixer que "Tu ets això" (<em>Tat Tvam Asi</em>), és a dir, que la teva ànima és un fragment pur del mateix Déu còsmic.</p>
+<p>El Buda Gautama va portar a terme el trencament més radical i subversiu de l'Era Axial en rebutjar de ple l'existència de l'Ātman. Davant de l'afirmació que hi ha un jo etern, pur i immutable amagat a l'interior de la consciència, el budisme postula el concepte de <em>Anatta</em> (la inexistència d'un jo o ànima permanent). Mitjançant una anàlisi rigorosa de caràcter deconstructiu, el Buda va demostrar que si analitzem qualsevol ésser humà, només trobarem cinc grans agregats dinàmics en constant canvi (<em>khandhas</em>): el cos físic (<em>rūpa</em>), les sensacions (<em>vedanā</em>), les percepcions (<em>saññā</em>), les formacions mentals o impulsos volitius (<em>saṅkhāra</em>) i la consciència bàsica (<em>viññāṇa</em>).</p>
+<p>Cap d'aquests cinc elements és fix, ni etern, ni es pot identificar com una ànima individual. L'ésser humà no és una "substància" sòlida, sinó un "procés" continu de canvis causals, similar a un riu que manté una aparença de forma fixa tot i que l'aigua que el compon canvia a cada mil·lisegon. Aquest gir conceptual no té només implicacions metafísiques, sinó que té un impacte moral immediat: per al budisme, creure en la ficció de l'ànima permanent és la font última de l'egocentrisme, de la propietat privada, de la gelosia, de l'orgull de casta i de totes les formes de tancament espiritual. El Nirvana no s'assoleix fusionant la pròpia ànima amb un Déu global, sinó dissolent la mateixa il·lusió de tenir un jo independent.</p>
+
+<h2 id="s818">8.1.8 La subordinació de les deïtats vèdiques al Dharma</h2>
+<p>Un altre detall fonamental per definir el no-teisme budista i la seva intel·ligència histórica és que el Buda no va adoptar una postura d'ateisme bel·ligerant o de negació directa respecte als déus tradicionals del panteó de l'Índia de l'època (com Indra, Brahma, Agni o Varuna). En lloc de negar-ne l'existència o d'emprendre guerres de caràcter iconoclasta, el budisme va dur a terme una brillant maniobra d'assimilació i de subordinació teológica.</p>
+<p>En els diàlegs de la tradició oral budista, les deïtats vèdiques existeixen, posseeixen palaus celestials resplendents i gaudeixen de vides immensament llargues farcides de gaudi astral. Tanmateix, els déus han estat despullats per complet de les seves atribucions d'immortalitat, omnipotència o capacitat de creació. En la cosmovisió budista, els déus són éssers atrapats exactament igual que els humans o els animals dins de la roda del canvi del <em>saṃsāra</em> i de les lleis inevitables de la causalitat moral (<em>karma</em>). Haver nascut com un déu en un cel superior és simplement el resultat d'haver realitzat moltes accions bones o generoses en vides humanes anteriors.</p>
+<p>No obstant això, un cop s'exhaureix el crèdit o el mèrit de la força d'aquest karma bo, la deïtat morirà del seu cel i tornarà a caure en reincorporacions inferiors. Més trencador encara és el fet que, com que viuen en entorns de màxima facilitat sensorial, els déus es troben alienats i no posseeixen la urgència existencial per estudiar la impermanència de les coses. Per tant, els mateixos déus de la tradició de l'Índia necessiten baixar a la terra per rebre les lliçons de Buda i escoltar el Dharma. Els relats recullen escenes on deïtats de l'alçada del gran Mahābrahma es postren davant del Buda históric demanant-li que ensenyi la seva via d'alliberament als éssers de l'univers, deixant clar de manera rotunda que la il·luminació i el cultiu ètic de la ment humana estan per sobre de qualsevol poder celestial o ritual sagrat de l'antiguitat.</p>
+
+<h2 id="s819">8.1.9 L'Era Axial</h2>
+<p>Per comprendre la magnitud i la naturalesa del missatge originari del budisme, cal situar l'aparició de Siddharta Gautama en el context históric i filosòfic d'un dels períodes més transcendentals de la história de la humanitat: l'Era Axial (<em>Achsenzeit</em>), un concepte encunyat pel filòsof Karl Jaspers. Entre els segles VIII i III aC, de manera gairebé simultània però independent, es va produir una transformació radical de la consciència humana en tres grans focus de civilització: a la Xina (amb l'aparició de Confuci i Lao Tse), a Occident i el Pròxim Orient (amb els filòsofs presocràtics a Grècia, el zoroastrisme a Pèrsia i els profetes d'Israel) i a l'Índia (amb la redacció de les Upaniṣad, l'emergència del jainisme i el naixement del budisme).</p>
+<p>L'Era Axial marca el pas d'una visió mítica, ritualista i col·lectiva del món a una consciència de caràcter eminentment reflexiu, individual i ètic. Fins aleshores, les civilitzacions es fonamentaven en l'execució rigorosa de sacrificis i rituals per mantenir l'ordre còsmic i social, gestionats per elits sacerdotals tancades. Tanmateix, les profundes mutacions econòmiques i urbanes d'aquell període —l'aparició de grans ciutats, l'expansió del comerç i la consolidació d'estats monàrquics que desintegraven les antigues estructures tribals— van generar una crisi de sentit generalitzada.</p>
+<p>A l'Índia, aquesta crisi es va traduir en el moviment <em>śramaṇa</em>: una onada de pensadors heterodoxos, filòsofs errants i ascetes que van qüestionar l'autoritat suprema dels textos sagrats vèdics i l'eficàcia dels sacrificis de sagnia animal de la religió brahmànica. En aquest context de canvi d'època, l'ésser humà passa a ser vist, per primera vegada, com un subjecte amb capacitat d'autoexaminar-se. El Buda Gautama representa el cim d'aquesta transició axial a la península índia.</p>
+
+<h2 id="s8110">8.1.10 La transformació de la noció de Karma: de la mecànica del ritual a la intencionalitat de la ment (Cetanā)</h2>
+<p>En l'entorn de la religió brahmànica vèdica tradicional, el concepte de Karma tenia un significat restringit de caràcter material, mecànic i extern. Significava literalment "acció", referint-se de manera quasi exclusiva a l'acció ritual realitzada sobre l'altar de foc pels sacerdots brahmans. Si un sacrifici animal s'executava seguint les prescripcions geomètriques de l'altar i pronunciant els mantres en sànscrit de manera fonèticament perfecta, el ritual generava automàticament un resultat cosmológic favorable per al rei que el finançava, independentment de la qualitat moral interna o dels sentiments del sacerdot o de la persona afectada.</p>
+<p>El Buda Gautama va dur a terme un gir conceptual absolutament revolucionari que va canviar per sempre la história de l'ètica a Àsia. En el famós enunciat del <em>Aṅguttara Nikāya</em>, el Buda declara de manera contundent: "El Karma, oh monjos, jo dic que és la intenció" (<em>Cetanāhaṃ bhikkhave kammaṃ vadāmi</em>). Amb aquesta afirmació, el budisme desplaça el focus de la moralitat des del món extern i físic del ritual cap al món intern de la psicologia i de les motivacions.</p>
+<p>A partir d'aquest descobriment, el karma es classifica a partir dels tres grans motors de la ment o verins psicológics: la cobdícia (<em>lobha</em>), l'odi o aversió (<em>dosa</em>) i la il·lusió o ignorància mental (<em>moha</em>). Qualsevol paraula, pensament o acció corporal nascuda d'aquests tres motors enfosqueix la ment, enforteix l'ego i planta llavors de sofriment futur. Aquest trencament ètic va significar una autèntica alliberació de caràcter social: la moralitat deixava de dependre de l'accés a serveis i a cerimònies de caràcter sacerdotal d'alt cost econòmic per passar a estar sota la responsabilitat i l'autonomia directa de qualsevol persona.</p>
+
+<h2 id="s8111">8.1.11 Una revolució ètica, social i política</h2>
+<p>Com a expressió directa d'aquesta Era Axial, la doctrina proposada pel Buda no es va limitar a ser una mera via mística d'evasió individual, sinó que va articular una autèntica revolució en els àmbits ètic, social i polític de l'Índia antiga, desafiant els fonaments sobre els quals s'erigia la societat vèdica.</p>
+<p><strong>La democratització de l'espiritualitat i el rebuig de les castes:</strong> la revolució budista més immediata va ser la seva crítica radical al sistema de castes (<em>varṇa</em>). El Buda va subvertir totalment aquest ordre en afirmar que la puresa d'una persona no es determina pel seu naixement o el seu llinatge familiar, sinó exclusivament per les seves accions de caràcter moral i el seu estat mental. La Saṅgha es va dissenyar com un espai revolucionari on les barreres de casta quedaven completament abolides.</p>
+<p><strong>La inclusió de les dones:</strong> tot i els condicionants evidents del context patriarcal de l'època, el Buda va fer un pas históric sense precedents en reconèixer formalment que les dones posseïen la mateixa capacitat intel·lectual i espiritual que els homes per assolir el Nirvāṇa. Amb la creació de l'orde de les monges (<em>bhikkhunīs</em>), el budisme va oferir a les dones una sortida institucionalitzada i digna a les estructures rígides del matrimoni i de la submissió domèstica.</p>
+<p><strong>La transformació ètica de la noció de sacrifici:</strong> davant del model sacrificial brahman, el budisme va operar una revolució ètica en situar la no-violència (<em>ahiṃsā</em>) com el pilar central de la conducta. El "sacrifici" budista es va redefinir com un procés de purificació interna: l'abandonament de la cobdícia, de l'aversió i de la il·lusió.</p>
+<p><strong>Un nou model de governança i justícia social:</strong> el budisme primigeni va proposar un model d'autoritat basat en la rectitud i el benestar de la població, en contrast amb la tirania o el dret diví de la monarquia absoluta. Aquest vessant de transformació política trobaria la seva realització histórica més contundent un parell de segles més tard sota l'Imperi Maurya, amb el regnat de l'emperador Ashoka.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 8.2 -->
+<section id="s82" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.2</span>Context històric i polític</h1>
+<p class="drop-cap">Per comprendre la gènesi de la doctrina budista i la seva fulgurant expansió, resulta imprescindible analitzar el paisatge históric, socioeconòmic i polític que vivia el subcontinent indi durant el mil·lenni central de l'antiguitat.</p>
+
+<h2 id="s821">8.2.1 L'Índia del segle VI aC: urbanització, monarquies i crisi de sentit</h2>
+<p>L'Índia del segle VI aC es trobava immersa en el que la historiografia contemporània anomena la Segona Urbanització de la conca del Ganges. Després del col·lapse de la civilització de la vall de l'Indus milers d'anys enrere, la vida a la península índia s'havia vertebrat entorn de petites comunitats agropecuàries de caràcter tribal i pastoral. Tanmateix, la introducció massiva de la metal·lúrgia del ferro va permetre desbrossar les denses selves de la vall del Ganges, transformant el territori en una vasta zona de conreu intensiu d'arròs.</p>
+<p>Aquest excedent agrícola va actuar com el motor d'un creixement demogràfic sense precedents i de l'aparició de grans nuclis urbans mercantils (com ràpidament ho van ser Vārāṇasī, Rājagṛha, Śrāvastī o Vaiśālī). El territori es trobava dividit en setze grans entitats polítiques dominants, conegudes com els <strong>Mahājanapadas</strong>, que presentaven dos models de governança clarament diferenciats i en conflicte obert: les <strong>repúbliques oligàrquiques o confederacions tribals</strong> (<em>gaṇa-saṅghas</em>), de les quals provenia el mateix Siddharta Gautama, i les <strong>monarquies centralitzades i expansionistes</strong> com els regnes de Magadha i Kosala.</p>
+<p>L'expansió d'aquestes monarquies centralitzades va anar absorbint i aniquilant progressivament les velles estructures republicanes i tribals. Aquesta pèrdua d'autonomia local, sumada a l'estil de vida alienant de les noves ciutats i a l'asfíxia impositiva, va generar una profunda crisi de caràcter existencial i de sentit.</p>
+
+<h2 id="s822">8.2.2 La topografia urbana i l'organització democràtica de la Saṅgha</h2>
+<p>Quan el Buda va fundar la seva comunitat de deixebles errants, la Saṅgha, es va trobar davant de la necessitat de dotar aquest col·lectiu d'una estructura d'organització que li garantís la supervivència. És altament significatiu comprovar que el Buda no va dissenyar la Saṅgha seguint el model dictatorial, jeràrquic i centralitzat de les monarquies expansives de Magadha o Kosala. Ben al contrari, es va inspirar directament en les estructures institucionals pròpies de les antigues repúbliques confederades (<em>gaṇa-saṅghas</em>) d'on ell mateix provenia.</p>
+<p>La Saṅgha primigènia funcionava com una autèntica democràcia de caràcter assembleari i intern. Les decisions de gran abast es prenien en reunions locals un cop s'assolia la unanimitat de tots els membres ordenats d'aquella àrea (<em>saṅgha-kamma</em>). No hi havia una estructura piramidal amb un successor de caràcter papal un cop mort el mestre; el mateix Buda va declarar que abans de morir no deixava cap líder humà al capdavant de la comunitat, sinó que des d'aquell moment el lideratge i el guia suprem passaven a ser el Dharma i el Vinaya.</p>
+
+<h2 id="s823">8.2.3 El mapa de la competència intel·lectual: el moviment Śramaṇa rival</h2>
+<p>El paisatge filosòfic de les noves capitals urbanes de la vall del Ganges es trobava poblat per una immensa teranyina d'escoles ascètiques i pensadors heterodoxos que competien de manera ferotge per captar l'atenció i el finançament de la burgesia comercial <em>vaiśya</em>.</p>
+<p><strong>El Jainisme:</strong> fundat o sistematitzat per Vardhamāna Mahāvīra (conegut com el Jina, el Conqueridor), contemporani del Buda. Els jainistes compartien amb el budisme la crítica a les castes i el principi de la no-violència (<em>ahiṃsā</em>), portada a un extrem màxim de rigor. Tanmateix, diferien en el fet que el jainisme defensava l'existència d'una ànima individual de caràcter etern (<em>jīva</em>) atrapada pel pes material del karma sòlid.</p>
+<p><strong>Els materialistes hedonistes (Cārvāka o Lokāyata):</strong> defensaven un materialisme radical basat en l'evidència sensorial: l'ésser humà està constituït exclusivament pels quatre elements físics i, en el moment de la mort corporal, la consciència s'apaga per sempre. Negaven taxativament l'existència del karma o de la reincorporació.</p>
+<p><strong>Els fatalistes (Ājīvika):</strong> dirigits per Makkhali Gosāla, afirmaven que tot l'univers, la vida i el destí de cada individu es trobaven absolutament regits i predeterminats per una força còsmica immutable anomenada <em>Niyati</em> (el destí fatal).</p>
+<p>Aquest ambient de debat creuat obligarà el budisme a desplegar un esforç de producció intel·lectual d'un altíssim nivell lógic, desmarcant-se tant de l'ascetisme destructiu com del materialisme nihilista.</p>
+
+<h2 id="s824">8.2.4 El sistema de castes i l'hegemonia brahmànica</h2>
+<p>L'estratificació social de l'Índia de l'època es regia pel rígid sistema de les castes o <em>varṇas</em> ("colors"), una estructura que trobava la seva justificació teológica en els textos més antics de la tradició vèdica (com el famós himne <em>Puruṣasūkta</em> del Rigveda): els <strong>brahmans</strong> (sacerdots i custodis dels rituals), els <strong>kṣatriyas</strong> (guerrers i governants), els <strong>vaiśyas</strong> (agricultors, artesans i comerciants) i els <strong>śūdras</strong> (serfs i treballadors manuals).</p>
+<p>En el segle VI aC, els brahmans exercien un rígid monopoli sobre la salvació i el benestar de la societat mitjançant l'execució d'un complex i caríssim sistema de sacrificis animals. Tanmateix, la Segona Urbanització va fer emergir una nova i pròspera burgesia mercantil integrada dins de la casta dels <em>vaiśyas</em>. Malgrat acumular enormes riqueses, els mercaders es veien completament marginats pel rígid esquema de puresa dels brahmans, que consideraven impura l'activitat comercial.</p>
+<p>El budisme va saber canalitzar aquest descontentament históric de manera magistral. En rebutjar l'origen diví de les castes i afirmar que qualsevol ésser humà esdevenia noble exclusivament per les seves virtuts personals, el missatge del Buda va trobar immediatament els seus grans aliats financers i polítics en la burgesia comercial urbana i en els reis dels estats en expansió (com el rei Bimbisāra de Magadha).</p>
+
+<h2 id="s825">8.2.5 La transició econòmica de la Segona Urbanització: moneda, rutes i gèneres comercials</h2>
+<p>La transformació de les antigues economies d'intercanvi en espècie en sistemes de mercat complexos va anar lligada a la introducció de les primeres monedes de plata encunyades de l'Índia, conegudes com <em>punch-marked coins</em>. Aquestes monedes van agilitzar el comerç a llarga distància i van fer aparèixer una riquesa líquida i mòbil que competia directament amb la riquesa tradicional dels brahmans, basada en la propietat de la terra i el bestiar boví.</p>
+<p>L'aparició de grans rutes comercials —com l'<em>Uttarāpatha</em> i la <em>Dakkhiṇāpatha</em>— va propiciar la consolidació dels gremis o associacions de comerciants i artesans, anomenats <strong>Śreṇīs</strong>. Dins d'aquest nou engranatge econòmic, l'ortodòxia religiosa brahmànica es presentava com una rèmora reaccionària: els textos legals brahmànics condemnaven explícitament el cobrament d'interessos.</p>
+<p>El budisme, per contra, va oferir una ètica econòmica totalment adaptada a la modernitat d'aquella època. El Buda no només no condemnava la riquesa obtinguda de manera honesta mitjançant el comerç, sinó que donava instruccions pràctiques sobre com gestionar-la: aconsellava dividir els ingressos en quatre parts (una per a la subsistència, dues per reinvertir en el negoci i una quarta part com a estalvi). L'única condició ètica era que els negocis no impliquessin la venda d'armes, d'éssers humans, de carn, de verins o d'estimulants.</p>
+<p>A més, el budisme va introduir el concepte de <em>Dāna</em> (generositat ritualitzada), transformant l'excedent econòmic dels mercaders en capital espiritual. En lloc de gastar fortunes en sacrificis dirigits per brahmans, els comerciants podien finançar els monestirs budistes (<em>vihāras</em>), obtenint a canvi un gran prestigi social.</p>
+
+<h2 id="s826">8.2.6 El paper del monestir (Vihāra) com a institució socioeconòmica i el fenomen de l'arquitectura rupestre</h2>
+<p>El budisme va néixer com un moviment de monjos errants que tenien prohibit romandre més d'un parell de nits en un mateix lloc. L'única excepció era el <em>vassa</em>, el període de tres mesos de la pluja del monsó, durant el qual el mateix Buda va ordenar aturar els desplaçaments per evitar trepitjar de manera involuntària els brots verds dels cultius.</p>
+<p>Per oferir aixopluc als monjos durant el monsó, els rics comerciants <em>vaiśyas</em> van començar a fer donacions de terrenys i finques. El que inicialment eren simples cabanes temporals es va anar transformant gradualment en estructures residencials permanents: els <strong>Vihāras</strong> (monestirs). Amb el pas de les dècades, els monestirs budistes van deixar de ser refugis rústics per esdevenir autèntiques institucions corporatives monumentals.</p>
+<p>El cim arqueològic d'aquest procés es reflecteix en les colossals obres de l'arquitectura rupestre de l'Índia central i occidental: els cèlebres complexos de les coves de Karli, Bhaja, Ajanta o Ellora, que incloïen els <em>Vihāras</em> (cel·les) i les <em>Caityas</em> (sales d'oració amb una <em>stūpa</em> monolítica al fons). Aquests complexos posseïen grans cisternes, magatzems fortificats per a mercaders, i actuaven com a grans centres d'alfabetització i formació intel·lectual.</p>
+
+<h2 id="s827">8.2.7 L'Imperi Maurya i la institucionalització del budisme</h2>
+<p>Malgrat aquests èxits inicials, el budisme hauria pogut romandre com una de les tantes sectes ascètiques de l'Índia si no hagués estat per la transformació política radical viscuda al subcontinent entre els segles IV i III aC: la unificació imperial sota la dinastia Maurya.</p>
+<p>Després de la incursió d'Alexandre el Gran l'any 326 aC, el buit de poder al Panjab va ser aprofitat per Chandragupta Maurya, que amb l'astúcia d'estat del seu conseller Kautilya (autor de l'<em>Arthaśāstra</em>), va enderrocar la dinastia Nanda de Magadha i va fundar l'Imperi Maurya, la primera estructura estatal centralitzada que va governar pràcticament la totalitat del subcontinent indi. L'imperi necessitava una ideologia globalitzadora, una ètica comuna transregional que unís una amalgama ingent de cultures, pobles i llengües sota una única llei.</p>
+
+<h2 id="s828">8.2.8 Ashoka: de la conquesta bèl·lica al triomf del Dharma</h2>
+<p>L'artífex de la gran simbiosi entre l'Imperi Maurya i el budisme va ser el nét de Chandragupta: l'emperador <strong>Ashoka</strong> (qui va regnar aproximadament entre el 268 i el 232 aC).</p>
+<p>L'any 261 aC, va emprendre la conquesta del regne de Kalinga, una campanya militar que es va saldar amb més de 100.000 morts en combat, el desterrament de 150.000 persones i un nombre similar de víctimes mortals a causa de les posteriors epidèmies i de la fam. Contemplar aquest paisatge de desolació va provocar una profunda crisi moral en l'emperador, que el va portar a buscar consol en el missatge de no-violència (<em>ahiṃsā</em>) i compassió del budisme.</p>
+<p>La transformació de l'Imperi Maurya sota l'influx del budisme es va plasmar en els <strong>Edictes d'Ashoka</strong>, gravats en grans parets de roca i en colossals columnes coronades per capitells escultòrics (com el cèlebre capitell dels lleons de Sarnath, actual emblema de la República de l'Índia). Els edictes proclamaven la instauració del <em>Dhamma-vijaya</em> (la "Conquesta a través de la Rectitud"), en oposició a la conquesta militar.</p>
+<p>Mitjançant aquests decrets reals, Ashoka va abolir la tortura corporal i va humanitzar el sistema judicial; va prohibir els sacrificis d'animals i va crear els primers hospitals veterinaris registrats del món; va finançar infraestructures públiques (pous, albergs, arbres d'ombra); i va establir un cos de funcionaris, els <em>Dhamma-mahāmāttas</em>, encarregats de vetllar pel benestar dels desfavorits i de garantir la tolerància entre totes les sectes religioses de l'imperi.</p>
+<p>El símbol central coronant les seves columnes és la <strong>Dharmachakra</strong> (la roda de la llei, de vint-i-quatre raigs), que fusiona la noció mítica del <em>Chakravartin</em> (el monarca universal) amb l'acte originari del Buda de posar en marxa la roda de la doctrina al seu primer discurs de Sarnath. Ashoka va convocar i patrocinar el Tercer Concili Budista a Pāṭaliputra, i va enviar missioners —inclosos els seus propis fills, el monjo Mahinda i la monja Saṅghamittā— cap a Sri Lanka, l'Àsia Central, Birmània i els regnes hel·lenístics de la Mediterrània Oriental.</p>
+
+<h2 id="s829">8.2.9 El context post-Alexandre i el bilingüisme cultural de Gandhara</h2>
+<p>L'any 326 aC, les falanges de l'exèrcit macedoni d'Alexandre el Gran van conquerir la regió del Panjab, deixant rere seu una xarxa de colònies gregues que van sobreviure durant segles en els anomenats Regnes Grecobactrians i Indogrecs. Aquesta regió fronterera, coneguda com <strong>Gandhara</strong>, va esdevenir un laboratori de bilingüisme i sincretisme cultural d'una importància cabdal.</p>
+<p>Quan Ashoka va enviar les seves ambaixades a aquestes zones, va manar gravar edictes bilingües en grec i arameu (com el cèlebre Edicte de Kandahar). El concepte budista de Dharma va ser traduït al grec com <em>Eusebeia</em> (pietat o rectitud), dialogant directament amb el cinisme primigeni i l'estoïcisme en formació.</p>
+<p>L'evidència més monumental d'aquest diàleg es troba en el text clàssic <strong>Milinda Pañha</strong> ("Les preguntes del rei Milinda"), un diàleg filosòfic entre el monarca indogrec Menandre I (Milinda) i el savi monjo budista Nāgasena, en el qual el rei grec sotmet la doctrina budista a un rígid escrutini racionalista. La conversió final del monarca il·lustra com el budisme va saber utilitzar les eines de la dialèctica d'arrel grega per estendre la seva influència cap a l'Àsia Central, obrint les portes que connectarien el subcontinent indi amb la Ruta de la Seda i el cor de l'Imperi Xinès.</p>
+</section>
+
+<hr class="rule">
+<!-- ═══════════════════════════════════════════════════ 8.3 -->
+<section id="s83" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.3</span>Els textos sagrats — El Cànon i les seves capes</h1>
+<p class="drop-cap">Si el 8.1 i el 8.2 ens han mostrat el budisme en el seu context biogràfic i sociopolític, el 8.3 ens introdueix en un problema que travessa tota la história de les religions comparades, però que en el cas del budisme adquireix una complexitat singular: la qüestió de com es transmet, es fixa i es transforma un cos de doctrina al llarg de segles de transmissió oral abans de cristal·litzar-se en text escrit, i com aquesta transmissió genera, no un cànon únic, sinó múltiples cànons parcialment superposats que reflecteixen les diferents branques en què el budisme es va anar ramificant.</p>
+<p>A diferència del que hem vist en capítols anteriors, el corpus textual budista presenta una particularitat: <strong>no hi ha un únic Cànon budista, sinó diversos</strong>, cadascun reclamat com a autèntic per la tradició que el conserva, i la relació entre ells no és de successió sinó de coexistència i, en alguns casos, de competència doctrinal oberta.</p>
+
+<h2 id="s831">8.3.1 El Tripiṭaka / Cànon Pali: estructura interna</h2>
+<p>El corpus textual més antic que ha arribat fins a nosaltres en la seva totalitat és el que la tradició Theravada anomena <strong>Tipiṭaka</strong> (en pali) o <strong>Tripiṭaka</strong> (en sànscrit), literalment "les Tres Cistelles". La metàfora remet directament al mètode de conservació dels manuscrits de fulla de palmera (<em>ola</em>), tallats i emmagatzemats en cistelles de vímet organitzades per matèries.</p>
+<p>El <strong>Vinaya Piṭaka</strong> —"la Cistella de la Disciplina"— conté el codi de conducta detallat per als monjos (<em>bhikkhus</em>) i les monges (<em>bhikkhunīs</em>). És precisament aquest codi, i no cap autoritat jeràrquica personal, el que la tradició identifica com el "successor" del Buda després de la seva mort.</p>
+<p>El <strong>Sutta Piṭaka</strong> —"la Cistella dels Discursos"— és el corpus més extens, subdividit en cinc grans col·leccions (<em>nikāyas</em>): el <strong>Dīgha Nikāya</strong> (discursos llargs, incloent el <em>Mahāparinibbāna Sutta</em>), el <strong>Majjhima Nikāya</strong> (discursos de mitjana longitud, amb la paràbola de la sagiteta enverinada), el <strong>Saṃyutta Nikāya</strong> (organitzat temàticament), l'<strong>Aṅguttara Nikāya</strong> (organitzat numèricament) i el <strong>Khuddaka Nikāya</strong>, que inclou el <em>Dhammapada</em> —probablement el text budista més llegit a Occident— i el <em>Sutta Nipāta</em>, un dels estrats més antics de tot el corpus pali.</p>
+<p>L'<strong>Abhidhamma Piṭaka</strong> —"la Cistella de la Doctrina Superior"— és la secció més tardana i tècnica: set tractats que sistematitzen exhaustivament la psicologia i l'ontologia budistes mitjançant l'anàlisi dels <em>dhammas</em>, les unitats últimes d'experiència.</p>
+
+<h2 id="s832">8.3.2 La transmissió oral i els Concilis budistes</h2>
+<p>El Tipiṭaka no va ser redactat per escrit en vida del Buda. Durant generacions, el corpus doctrinal es va transmetre exclusivament mitjançant memorització oral col·lectiva, amb mecanismes de control de qualitat notables: la recitació coral periòdica (<em>saṅgāyana</em>), la divisió del corpus entre especialistes diferents, i la verificació creuada entre comunitats monàstiques.</p>
+<p>El <strong>Primer Concili</strong>, segons la tradició, es va celebrar a Rājagṛha immediatament després de la mort del Buda, amb Ānanda recitant els Suttes i Upāli el Vinaya. El <strong>Segon Concili</strong>, a Vaiśālī un segle després, va abordar disputes que ja indiquen l'inici de divergències regionals. El <strong>Tercer Concili</strong> va ser convocat per Ashoka a Pāṭaliputra per fixar definitivament una versió autoritzada del Cànon, tot i que la seva fixació escrita definitiva no es produirà fins al segle I aC a Sri Lanka. Un <strong>Quart Concili</strong> se sol situar a Caixmir, sota Kaniṣka, associat a la fixació de versions sànscrites.</p>
+
+<h2 id="s833">8.3.3 Els Jātaka: les vides anteriors del Buda com a literatura moral</h2>
+<p>Dins del Khuddaka Nikāya, el <strong>Jātaka</strong> és una col·lecció de cinc-cents cinquanta-set relats que narren les vides anteriors del Buda, en el llarg procés d'acumulació de virtut (<em>pāramitās</em>). El <em>Vessantara Jātaka</em>, el més cèlebre, narra un príncep que practica la generositat (<em>dāna</em>) fins a l'extrem de regalar els seus propis fills.</p>
+<p>Els Jātaka deriven, evidentment, de la literatura fabulística popular preexistent a l'Índia —comparteixen motius amb les faules del <em>Panchatantra</em> i, més enllà, amb les faules d'Esop. El budisme no va inventar aquest corpus narratiu: el va absorbir i el va reetiquetar com a "vides anteriors del Buda", convertint el patrimoni narratiu popular en vehicle de transmissió doctrinal.</p>
+
+<h2 id="s834">8.3.4 L'escriptura Mahayana: Sūtres del Lotus, Cor, Diamant</h2>
+<p>A partir aproximadament del segle I aC, comença a circular a l'Índia un nou corpus de textos, els <strong>Sūtres Mahayana</strong>, que afirmen ser ensenyaments del Buda que van romandre ocults fins que la humanitat va estar preparada per rebre'ls, segles després del Buda históric —una doctrina de la "revelació tardana" que planteja un problema metodológic enorme per a l'historiador.</p>
+<p>El <strong>Sūtra del Lotus</strong> (<em>Saddharmapuṇḍarīka Sūtra</em>) proclama que el Buda históric és només una manifestació pedagògica d'un principi de Budeitat etern i universal. El <strong>Sūtra del Cor</strong> condensa la doctrina de la <em>śūnyatā</em> (buidor) en la fórmula "la forma és buidor, la buidor és forma". El <strong>Sūtra del Diamant</strong> insisteix en no aferrar-se ni tan sols als propis conceptes budistes. El <strong>Sūtra de la Terra Pura</strong> descriu el regne d'Amitābha, accessible mitjançant la simple invocació devocional del seu nom, fonament de les escoles devocionals de la Terra Pura.</p>
+
+<h2 id="s835">8.3.5 Els textos Vajrayana i els Tantres tibetans</h2>
+<p>A partir del segle VI-VII dC emergeix el corpus dels <strong>Tantres budistes</strong>, fonament del <strong>Vajrayana</strong>. Comparteixen amb els Tantres hindús l'afirmació que el cos i les energies psicofísiques són vehicles per a l'alliberament, però mantenen com a horitzó final la mateixa realització de la buidor que defineix tota la tradició Mahayana.</p>
+<p>Aquest corpus, traduït massivament al tibetà a partir del segle VIII dC, es troba avui en dues grans col·leccions: el <strong>Kangyur</strong> (uns cent volums, els sūtres i tantres) i el <strong>Tengyur</strong> (més de dos-cents volums, els comentaris i tractats), que converteixen la tradició tibetana en la dipositària més completa de tot el corpus filosòfic indi tardà.</p>
+
+<h2 id="s836">8.3.6 El problema de l'autoria i la historicitat textual</h2>
+<p>Què significa, en el cas del budisme, preguntar-se "què va dir realment el Buda"? La resposta honesta és que no disposem de cap mitjà per accedir directament a les seves paraules históriques. Tenim un seguit de capes textuals successives, separades per dècades o segles de transmissió oral i de traducció entre llengües (pali, sànscrit, xinès, tibetà).</p>
+<p>L'aproximació metodológica que adoptarem consisteix a distingir sempre, en la mesura del possible, entre el que la filologia comparada considera estrats textuals més antics i les elaboracions doctrinals posteriors que els diferents vehicles han anat construint sobre aquest nucli comú, sense pretendre que aquesta distinció esgota el valor espiritual que cada tradició atorga als seus propis textos.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 8.4 -->
+<section id="s84" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.4</span>Cosmovisió budista — L'arquitectura conceptual de l'alliberament</h1>
+<p class="drop-cap">Si el 8.3 ens ha mostrat com es transmet i es fixa la doctrina budista, el 8.4 ens n'exposa el contingut nuclear: el sistema de categories filosòfiques i psicológiques que constitueix el nucli dur compartit per totes les branques del budisme.</p>
+<p>La diferència estructural fonamental amb la cosmovisió hindú: mentre que el sistema hindú s'articula al voltant de la recerca d'una identitat última (Atman-Brahman) que cal realitzar, el sistema budista s'articula al voltant de la dissolució de la il·lusió que hi hagi cap identitat última a realitzar. No és una cosmovisió que respongui primàriament a la pregunta "què és la realitat última?", sinó a la pregunta "per què sofrim, i com es pot deixar de sofrir?".</p>
+
+<h2 id="s841">8.4.1 Les Quatre Nobles Veritats (Cattāri Ariyasaccāni)</h2>
+<p>El primer discurs del Buda, al Parc de les Gaseles de Sarnath, conté la formulació més condensada de tota la doctrina budista: les <strong>Quatre Nobles Veritats</strong>. La seva estructura reprodueix l'esquema diagnóstic de la medicina índia clàssica: identificació de la malaltia, de la causa, pronóstic, i prescripció del tractament.</p>
+<p><strong>Dukkha</strong> (sofriment/insatisfacció): la traducció convencional és insuficient. Inclou el sofriment manifest, però també la insatisfacció subtil inherent a tota experiència condicionada, fins i tot les plaents. La tradició distingeix tres nivells: el sofriment ordinari, el sofriment que neix del canvi, i el sofriment estructural de tota existència condicionada.</p>
+<p><strong>Samudaya</strong> (l'origen): la <strong>set</strong> o ànsia (<em>taṇhā</em>), amb tres formes: el desig de plaer sensorial, el desig de continuar existint, i el desig de no existir —una anticipació notable de la pulsió de vida i de mort freudiana.</p>
+<p><strong>Nirodha</strong> (la cessació): si dukkha té una causa identificable, pot cessar quan la causa cessa. Aquesta cessació és el Nirvana.</p>
+<p><strong>Magga</strong> (el camí): el camí pràctic que condueix a aquesta cessació: el Camí Òctuple.</p>
+
+<h2 id="s842">8.4.2 El Camí Òctuple (Aṭṭhaṅgika Magga)</h2>
+<div class="path-grid">
+  <div class="path-cell header">Bloc</div><div class="path-cell header">Components</div>
+  <div class="path-cell"><strong>Saviesa (paññā)</strong></div><div class="path-cell">Visió correcta · Intenció correcta</div>
+  <div class="path-cell"><strong>Conducta ètica (sīla)</strong></div><div class="path-cell">Paraula correcta · Acció correcta · Mitjans de vida correctes</div>
+  <div class="path-cell"><strong>Concentració (samādhi)</strong></div><div class="path-cell">Esforç correcte · Atenció correcta · Concentració correcta</div>
+</div>
+<p>Convé subratllar que aquesta tripartició no és lineal ni jeràrquica: la tradició insisteix que es desenvolupen de manera interdependent, en espiral, on una conducta ètica més refinada facilita una concentració més estable, que aprofundeix la saviesa, que reforça la motivació ètica.</p>
+
+<h2 id="s843">8.4.3 La coproducció condicionada (Pratītyasamutpāda)</h2>
+<p>Si les Quatre Nobles Veritats constitueixen l'esquema pràctic, la <strong>coproducció condicionada</strong> en constitueix el nucli metafísic: <em>"Quan això existeix, allò sorgeix; amb la cessació d'això, allò cessa."</em> Res posseeix existència pròpia, independent i fixa (<em>svabhāva</em>): tot fenomen sorgeix únicament en dependència d'altres fenòmens.</p>
+<p>L'aplicació més cèlebre és la cadena dels <strong>dotze enllaços</strong> (<em>nidānas</em>): la ignorància condiciona les formacions volitives, que condicionen la consciència, que condiciona el nom-i-forma, que condiciona els sis sentits, que condicionen el contacte, que condiciona la sensació, que condiciona la set, que condiciona l'aferrament, que condiciona l'esdevenir, que condiciona el naixement, que condiciona la vellesa i la mort —tancant el cercle que reenvia a la ignorància inicial.</p>
+
+<h2 id="s844">8.4.4 Anicca, Anatta, Dukkha: les Tres Marques de l'Existència</h2>
+<p><strong>Anicca</strong> (impermanència): tot fenomen condicionat sorgeix, es transforma i cessa, en una successió tan ràpida d'instants (<em>kṣaṇa</em>) que genera la il·lusió perceptiva de continuïtat.</p>
+<p><strong>Anatta</strong> (absència d'un jo permanent): si tot és impermanent, la cerca d'un nucli fix darrere de l'experiència és una projecció conceptual sense correlat en la realitat observable.</p>
+<p><strong>Dukkha</strong> (insatisfacció): conseqüència necessària de combinar éssers que desitgen permanència amb un univers en el qual tot és impermanent.</p>
+
+<h2 id="s845">8.4.5 Karma i saṃsāra en clau budista: contrast amb la versió hindú</h2>
+<p>En la cosmovisió hindú clàssica, el <em>jiva</em> transmigra com una entitat relativament estable. El budisme, en negar l'Atman, articula una doctrina del renaixement sense transmigrant: no hi ha "viatger", sinó un procés causal en què les darreres formacions mentals condicionen l'aparició d'una nova consciència. La metàfora clàssica és la de la flama que es transmet d'una espelma a una altra: la segona flama no és idèntica a la primera, però tampoc no n'és completament diferent.</p>
+
+<h2 id="s846">8.4.6 El Nirvana: què és i què no és</h2>
+<p><strong>Nirvāṇa</strong> significa literalment "extinció" —la imatge és la d'una flama que s'apaga per manca de combustible (la cobdícia, l'aversió, la ignorància). És fonamental distingir-lo de la noció occidental d'"aniquilació": el Buda es va negar a respondre si el <em>Tathāgata</em> "existeix" o "no existeix" després de la mort, perquè aquestes opcions pressuposen, erròniament, l'existència d'un jo substancial.</p>
+<p>La tradició distingeix el <strong>Nirvana amb residu</strong> (l'estat de l'<em>Arahant</em> en vida) del <strong>Nirvana sense residu</strong> (<em>parinirvāṇa</em>, la cessació completa amb la mort física). Aquesta comprensió austera serà objecte d'una notable reelaboració positiva en les escoles Mahayana, que identificaran el Nirvana amb la mateixa naturalesa última de la realitat.</p>
+</section>
+
+<hr class="rule">
+<!-- ═══════════════════════════════════════════════════ 8.5 -->
+<section id="s85" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.5</span>Els grans vehicles — Theravada, Mahayana, Vajrayana</h1>
+<p class="drop-cap">El 8.5 ens mostra com el nucli conceptual comú es va ramificar, al llarg de segles d'elaboració doctrinal, en tres grans tradicions: el <strong>Theravada</strong>, predominant a Sri Lanka i al Sud-est asiàtic continental; el <strong>Mahayana</strong>, predominant a l'Àsia Oriental; i el <strong>Vajrayana</strong>, predominant a l'altiplà tibetà.</p>
+
+<div class="vehicle-header"><span class="vehicle-icon">☘</span><h2 class="vehicle-title" id="s851">8.5.1 El Theravada: "l'ensenyament dels ancians"</h2></div>
+<p>El <strong>Theravada</strong> —"la Doctrina dels Ancians"— es presenta com la branca que conserva amb major fidelitat l'estrat textual més antic: el Cànon pali. Descendent de l'antiga escola dels <em>Sthaviravāda</em>, és l'única de les "divuit escoles" que ha sobreviscut amb continuïtat institucional ininterrompuda. La seva consolidació histórica decisiva es va produir a Sri Lanka amb la missió del monjo Mahinda, fill d'Ashoka.</p>
+<p>Els seus trets distintius: una <strong>conservadoria textual</strong> que rebutja l'autoritat dels sūtres Mahayana; una <strong>soteriologia centrada en l'ideal de l'Arahant</strong>, l'alliberament personal seguint les mateixes etapes que el Buda históric; i una <strong>organització assembleria descentralitzada</strong> fidel al model de la Saṅgha originària.</p>
+
+<div class="vehicle-header"><span class="vehicle-icon">🪷</span><h2 class="vehicle-title" id="s852">8.5.2 El sorgiment del Mahayana i la figura del Bodhisattva</h2></div>
+<p>El <strong>Mahayana</strong> —"el Gran Vehicle"— sorgeix com un moviment difús que es presenta com la recuperació d'un ensenyament més profund del Buda, temporalment vetllat. El seu element més distintiu és l'ideal del <strong>Bodhisattva</strong>: l'ésser que posterga voluntàriament el seu propi Nirvana per dedicar-se, a través d'incomptables vides, a la salvació de tots els éssers sensibles.</p>
+<p>Doctrinalment, la Budeitat es concep com un principi còsmic etern (la doctrina dels <strong>Tres Cossos</strong>, <em>Trikāya</em>), del qual Siddharta Gautama és només una manifestació pedagógica. El Mahayana desenvolupa un panteó de <strong>Bodhisattves celestials</strong>: Avalokiteśvara (compassió), Mañjuśrī (saviesa), Maitreya (el Buda futur) i Amitābha (el Buda de la Terra Pura).</p>
+
+<div class="vehicle-header"><span class="vehicle-icon">○</span><h2 class="vehicle-title" id="s853">8.5.3 La doctrina de la buidor (Śūnyatā) i Nagarjuna</h2></div>
+<p>El nucli filosòfic del Mahayana és la doctrina de la <strong>buidor</strong> (<em>śūnyatā</em>), formulada per <strong>Nagarjuna</strong> (segle II dC). No significa que les coses "no existeixin" (nihilisme), sinó que tot fenomen està <strong>buit d'existència pròpia, independent i fixa</strong> (<em>svabhāva</em>) —la conclusió lógica de la coproducció condicionada.</p>
+<p>La conclusió més provocadora de Nagarjuna és la identificació estructural entre <em>saṃsāra</em> i Nirvana: si cap dels dos posseeix existència pròpia, no hi ha dues realitats diferents, sinó una sola realitat percebuda erróniament com a saṃsāra i correctament com a Nirvana. L'escola es coneix com <strong>Madhyamaka</strong> ("el Camí del Mig").</p>
+
+<div class="vehicle-header"><span class="vehicle-icon">◐</span><h2 class="vehicle-title" id="s854">8.5.4 L'escola Yogācāra i la filosofia de la consciència-només</h2></div>
+<p>L'escola <strong>Yogācāra</strong>, dels germans Asanga i Vasubandhu, desplaça el focus cap a una pregunta epistemológica: com és que percebem un món extern si cap fenomen posseeix existència independent? La resposta és que tota experiència és una manifestació de la consciència, postulant una <strong>consciència-magatzem</strong> (<em>ālayavijñāna</em>) que emmagatzema les empremtes de totes les accions passades.</p>
+
+<div class="vehicle-header"><span class="vehicle-icon">⚡</span><h2 class="vehicle-title" id="s855">8.5.5 El Vajrayana / budisme tàntric tibetà</h2></div>
+<p>El <strong>Vajrayana</strong> ("el Vehicle de Diamant") es desenvolupa com una especialització dins del Mahayana que pretén constituir una <strong>via ràpida</strong> cap a la Budeitat mitjançant la visualització de divinitats tàntriques, la recitació de mantres i la contemplació de <em>maṇḍalas</em>. La seva transmissió requereix una iniciació formal (<em>abhiṣeka</em>) entre el <strong>lama</strong> i el deixeble.</p>
+
+<div class="vehicle-header"><span class="vehicle-icon">☯</span><h2 class="vehicle-title" id="s856">8.5.6 Zen/Chan: l'austeritat de la il·luminació sobtada</h2></div>
+<p>El <strong>Chan</strong> xinès (<strong>Zen</strong> en japonès) sorgeix de la confluència entre la pràctica meditativa Mahayana i la sensibilitat taoista. El seu tret distintiu és la insistència en la <strong>il·luminació sobtada</strong> (<em>satori</em>): la naturalesa de Buda ja és present, aquí i ara, i la il·luminació és el reconeixement sobtat d'allò que mai havia deixat d'estar present. Mètodes com el <strong>kōan</strong> esgoten la capacitat de la ment discursiva per provocar un salt cognitiu directe.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 8.6 -->
+<section id="s86" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.6</span>Ètica, monacat i vida quotidiana</h1>
+<p class="drop-cap">El 8.6 ens porta al terreny de la pràctica viscuda: com s'organitza concretament la vida d'un monjo, quines obligacions assumeix un laic, quins rituals estructuren el calendari religiós.</p>
+
+<h2 id="s861">8.6.1 El Vinaya: el codi disciplinari dels monjos i monges</h2>
+<p>El Vinaya s'organitza al voltant del <strong>Pātimokkha</strong>, un llistat de regles —227 per als monjos, 311 per a les monges— recitat dues vegades al mes durant el <em>Uposatha</em>. Les més greus, les <strong>Pārājika</strong> ("derrotes"), comporten l'expulsió immediata: matar, robar, mantenir relacions sexuals, i reclamar falsament estats espirituals no assolits. Aquesta minuciositat normativa converteix el Vinaya en una história acumulativa de la pràctica monàstica i dels seus errors.</p>
+
+<h2 id="s862">8.6.2 Els cinc preceptes per al laic (Pañca-sīla)</h2>
+<p>Els laics segueixen els <strong>cinc preceptes</strong>: abstenir-se de matar, de robar, de la conducta sexual inapropiada, de mentir, i de consumir intoxicants. La formulació negativa reflecteix una lógica pedagógica: no defineixen un ideal heroic, sinó un terra mínim d'entrenament gradual de la voluntat.</p>
+
+<h2 id="s863">8.6.3 El ritual de l'almoina i la relació monjo-laic</h2>
+<p>L'<strong>almoina</strong> (<em>piṇḍapāta</em>) articula la relació econòmica i espiritual entre la Saṅgha i la societat laica. Cada matí, files de monjos caminen en silenci i els laics hi diposisten menjar, sense intercanvi verbal, en una oportunitat mútua de generació de mèrit: el monjo ofereix l'ocasió de practicar la generositat (<em>dāna</em>), i el laic fa possible que el monjo continuï la seva pràctica.</p>
+
+<h2 id="s864">8.6.4 Festivitats: Vesak, Uposatha</h2>
+<p><strong>Vesak</strong> commemora simultàniament el naixement, la il·luminació i el <em>parinirvāṇa</em> del Buda. L'<strong>Uposatha</strong> —dies de lluna plena i nova— estructura el ritme bimensual de la vida religiosa, tant monàstica com laica.</p>
+
+<h2 id="s865">8.6.5 Meditació: samatha i vipassanā</h2>
+<p><strong>Samatha</strong> ("quietud") desenvolupa la concentració mitjançant la fixació de l'atenció en un objecte, típicament la respiració, conduint progressivament als <em>jhānas</em>. <strong>Vipassanā</strong> ("visió penetrant") investiga directament la naturalesa dels fenòmens per realitzar experiencialment les Tres Marques de l'Existència. És aquesta tradició de <em>vipassanā</em> —sistematitzada a Birmània al segle XX per mestres com Mahasi Sayadaw— la que constituirà la base directa del fenomen contemporani del mindfulness secularitzat.</p>
+
+<h2 id="s866">8.6.6 Els Stūpas i la veneració de relíquies</h2>
+<p>L'<strong>stūpa</strong> és un mont funerari destinat a contenir relíquies del Buda: després de la seva cremació, les restes van ser dividides en vuit porcions i distribuïdes entre diferents clans. Ashoka en va redistribuir, segons la tradició, vuitanta-quatre mil exemplars arreu del seu imperi. La pràctica devocional central és la <strong>circumambulació</strong> (<em>pradakṣiṇā</em>), mantenint l'stūpa sempre al costat dret.</p>
+</section>
+
+<hr class="rule">
+<!-- ═══════════════════════════════════════════════════ 8.7 -->
+<section id="s87" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.7</span>Filosofia budista — Lògica, epistemologia, metafísica de la buidor</h1>
+<p class="drop-cap">El 8.7 amplia l'anàlisi de la Madhyamaka i el Yogācāra, situant-les en el context més ampli de la tradició filosòfica índia. La filosofia budista es desenvolupa en diàleg constant —i en polèmica explícita— amb el Nyaya, el Vaisheshika i el Vedanta hindús.</p>
+
+<h2 id="s871">8.7.1 Nagarjuna i la Madhyamaka</h2>
+<p>El mètode de Nagarjuna no consisteix a proposar una tesi metafísica positiva, sinó a desenvolupar un mètode <strong>dialèctic i reductiu</strong>: pren les categories que els seus oponents consideren evidents —la causalitat, el moviment, el temps— i en demostra la incoherència interna quan es pretenen com a entitats amb existència pròpia.</p>
+<p>Un exemple paradigmàtic és l'anàlisi del moviment: si un objecte es mou, el moviment no pot tenir lloc ni en el camí ja recorregut (on ja no hi és), ni en el camí per recórrer (on encara no hi és), ni en el punt exacte (una abstracció sense extensió). El "moviment" amb existència pròpia és, doncs, una construcció incoherent. Aquest tipus d'argument —la <strong>tètrade</strong> (<em>catuṣkoṭi</em>)— recorda l'estructura dels catorze silencis, però Nagarjuna en fa un ús sistemàtic i explícit.</p>
+
+<h2 id="s872">8.7.2 Vasubandhu, Asanga i l'Abhidharma</h2>
+<p>Abans de convertir-se al Yogācāra, <strong>Vasubandhu</strong> va compondre l'<em>Abhidharmakośa</em>, una sistematització de la tradició <strong>Sarvāstivāda</strong> ("els qui sostenen que tot existeix"). Aquesta escola sosté que els <em>dharmas</em> posseeixen una certa naturalesa pròpia en els tres temps —una posició que, als ulls de Nagarjuna, reintrodueix l'essencialisme que la coproducció condicionada hauria d'eliminar. És exactament aquesta tensió la que mou Vasubandhu a adoptar posteriorment el marc del Yogācāra.</p>
+
+<h2 id="s873">8.7.3 Dignāga i Dharmakīrti: lògica i epistemologia budistes</h2>
+<p><strong>Dignāga</strong> redueix els quatre <em>pramāṇas</em> del Nyaya a només dos: la <strong>percepció</strong> (que capta únicament el particular momentani) i la <strong>inferència</strong>. La seva teoria de l'<strong>exclusió d'altres</strong> (<em>apoha</em>) sosté que els universals no tenen existència real: són construccions útils generades per la ment. <strong>Dharmakīrti</strong> sistematitza aquesta teoria amb un rigor que els historiadors de la lógica comparen amb Frege o amb el positivisme lógic del segle XX.</p>
+
+<h2 id="s874">8.7.4 El debat budisme-Vedanta</h2>
+<p>El nucli del debat gira al voltant de l'Atman: Shankaracharya va dedicar un esforç considerable a refutar l'Anatta i la teoria dels moments discrets, argumentant que l'experiència de la continuïtat exigeix un substrat permanent. Els filòsofs budistes van respondre que la sensació de continuïtat no requereix cap substància permanent: n'hi ha prou amb la relació causal estricta entre moments successius, com un riu manté una identitat nominal tot i que l'aigua es renova constantment.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 8.8 -->
+<section id="s88" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.8</span>El budisme i el poder polític</h1>
+<p class="drop-cap">El 8.8 examina com el budisme ha estructurat, al llarg de dos mil·lennis i en geografies diverses, la relació entre l'autoritat religiosa i el poder polític.</p>
+
+<h2 id="s881">8.8.1 El model Ashoka del Dhammarāja (rei del Dharma)</h2>
+<p>El <strong>Dhammarāja</strong> o <em>Cakkavatti</em> desplaça l'eix de legitimació cap a la conducta ètica personal del sobirà, en contrast amb el <em>Rajadharma</em> hindú vinculat al manteniment de les castes. El sobirà legítim és aquell que <strong>patrocina i protegeix</strong> la Saṅgha, però que no posseeix autoritat per dictar el contingut de la doctrina —una separació teórica que la pràctica histórica del poder ha desbordat sistemàticament.</p>
+
+<h2 id="s882">8.8.2 Budisme d'Estat a Sri Lanka, Birmània, Tailàndia</h2>
+<p>A <strong>Sri Lanka</strong>, la legitimitat reial es va construir al voltant de la custòdia de la relíquia de la Dent del Buda. El <em>Mahāvaṃsa</em> narra l'illa com una successió ininterrompuda de reis budistes, establint una identificació entre identitat cingalesa i budisme que tindrà conseqüències polítiques explosives. A <strong>Tailàndia</strong>, la monarquia contemporània manté encara un vincle constitucional explícit amb el Theravada.</p>
+
+<h2 id="s883">8.8.3 El budisme tibetà i el model teocràtic del Dalai Lama</h2>
+<p>La institució del <strong>Dalai Lama</strong> es fonamenta en la doctrina de la <strong>reincarnació deliberada</strong> (<em>tulku</em>): el Dalai Lama és una manifestació successiva d'Avalokiteśvara. El Cinquè Dalai Lama (segle XVII) va establir una <strong>teocràcia</strong> plena. Des de la fugida a l'exili del Catorzè Dalai Lama el 1959, la institució s'ha transformat en un lideratge espiritual i diplomàtic internacional, mentre es planteja una disputa anticipada amb la Xina sobre la legitimitat d'una futura reincarnació.</p>
+
+<h2 id="s884">8.8.4 Budisme i nacionalisme contemporani (Myanmar, Sri Lanka)</h2>
+<p>A <strong>Myanmar</strong>, organitzacions com el <em>Ma Ba Tha</em>, liderades per monjos com Ashin Wirathu, han proporcionat legitimació religiosa a la campanya de violència contra la minoria musulmana <strong>rohingya</strong>, qualificada de genocidi per organismes internacionals. A <strong>Sri Lanka</strong>, una dinàmica similar va alimentar la guerra civil cingalesa-tàmil. Cap tradició religiosa és immune a la seva pròpia instrumentalització política quan s'articula com a marcador d'identitat col·lectiva.</p>
+
+<h2 id="s885">8.8.5 El budisme xinès i la relació amb l'Estat</h2>
+<p>Durant la dinastia <strong>Tang</strong>, l'edat d'or del budisme xinès, la relació amb la cort va ser de patrocini mutu, fins a la gran persecució de l'any <strong>845</strong> sota l'emperador Wuzong, motivada per l'acumulació de riquesa exempta d'impostos en mans de la Saṅgha. En l'època contemporània, la <strong>República Popular de la Xina</strong> manté un control estatal estricte, incloent la regulació formal del procés de reincarnació dels <em>tulku</em> tibetans.</p>
+</section>
+
+<hr class="rule">
+<!-- ═══════════════════════════════════════════════════ 8.9 -->
+<section id="s89" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.9</span>Expansió i transformació per l'Àsia</h1>
+<p class="drop-cap">El 8.9 aborda la capacitat del budisme per travessar fronteres lingüístiques i culturals radicalment diferents de les que el van veure néixer, transformant-se profundament en cada nou context sense perdre una identitat doctrinal reconeixible.</p>
+
+<h2 id="s891">8.9.1 La Ruta de la Seda i l'arribada a la Xina</h2>
+<p>El budisme va fer el seu primer gran salt civilitzatori a través de la <strong>Ruta de la Seda</strong>, amb els mercaders <strong>sogdians</strong> com a primers vehicles de difusió. La figura més emblemàtica d'aquest procés és el monjo xinès <strong>Xuanzang</strong> (602-664 dC), que va viatjar disset anys fins a la universitat monàstica de <strong>Nālandā</strong> i va portar centenars de manuscrits sànscrits de retorn a la Xina, dirigint sota patrocini Tang un dels esforços de traducció més rigorosos de tota la história budista.</p>
+
+<h2 id="s892">8.9.2 Sinització: el xoc amb el confucianisme i el taoisme</h2>
+<p>El monacat budista, amb el seu vot de celibat, xocava amb la centralitat confuciana de la pietat filial (<em>xiao</em>). La resposta budista va ser doble: una adaptació doctrinal (reinterpretar la pràctica monàstica com una forma superior de pietat filial) i una adaptació terminológica (usar el terme taoista <em>wu</em>, "no-ésser", per traduir la <em>śūnyatā</em>). D'aquest procés sorgeixen escoles genuïnament noves: el <strong>Tiantai</strong>, el <strong>Huayan</strong> (amb la seva imatge de la Xarxa d'Indra) i el <strong>Chan</strong>.</p>
+
+<h2 id="s893">8.9.3 El budisme al Japó: Nara, Heian, l'auge del Zen</h2>
+<p>El període <strong>Nara</strong> (710-794) institucionalitza el budisme amb el suport imperial. El període <strong>Heian</strong> veu el <strong>Tendai</strong> (Saichō) i el <strong>Shingon</strong> esotèric (Kūkai). La crisi del període <strong>Kamakura</strong> (1185-1333) genera les escoles de la <strong>Terra Pura</strong> (Hōnen, Shinran), l'escola <strong>Nichiren</strong>, i la consolidació del <strong>Zen</strong> (Rinzai d'Eisai, Sōtō de Dōgen), que s'aliarà amb la classe dels samurais en l'entrenament marcial, la cerimònia del te i el disseny de jardins.</p>
+
+<h2 id="s894">8.9.4 El budisme al Tibet i la síntesi amb el Bön</h2>
+<p>El budisme arriba al Tibet amb Songtsen Gampo (segle VII) i es consolida amb Trisong Detsen (segle VIII), amb la invitació de Śāntarakṣita i <strong>Padmasambhava</strong> (Guru Rinpoche). L'element distintiu és la <strong>síntesi</strong> amb la religió autóctona <strong>Bön</strong>: les divinitats locals son subjugades i integrades com a protectors subordinats del Dharma. El resultat és un budisme tibetà organitzat en quatre escoles: Nyingma, Kagyu, Sakya i Gelug (la que origina la institució del Dalai Lama).</p>
+
+<h2 id="s895">8.9.5 El Sud-est asiàtic: Birmània, Tailàndia, Cambodja, Angkor</h2>
+<p>El complex d'<strong>Angkor</strong> il·lustra la transició religiosa de la regió: <strong>Angkor Wat</strong> (Suryavarman II, segle XII) dedicat a Vishnu, i <strong>Angkor Thom</strong> amb el <strong>Bayon</strong> (Jayavarman VII) com a complex budista Mahayana amb els rostres d'Avalokiteśvara. La conversió definitiva al <strong>Theravada</strong> es consolida entre els segles XI i XIV, a través de missions des de Sri Lanka, conservant capes substancials de la síntesi hinduista i animista prèvia en els esperits locals (<em>nat</em>, <em>phi</em>, <em>neak ta</em>).</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 8.10 -->
+<section id="s810" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.10</span>El budisme en el món contemporani</h1>
+<p class="drop-cap">El 8.10 examina l'arribada del budisme a Occident, la seva descontextualització en marcs culturals i terapèutics radicalment aliens als seus orígens, i la seva transformació en un dels fenòmens religiosos més visibles del món globalitzat.</p>
+
+<h2 id="s8101">8.10.1 El budisme i la colonització / orientalisme</h2>
+<p>Els primers estudiosos europeus —Burnouf, Rhys Davids— van construir un "budisme de biblioteca" reconstruït a partir de textos pali, considerats la forma "original" davant de les pràctiques rituals titllades de "degeneracions". Aquesta construcció va generar, des de dins de les societats asiàtiques, el <strong>budisme protestant</strong> de figures com Anagarika Dharmapala, que va desplaçar l'èmfasi cap a la meditació individual precisament per adaptar-se a aquesta categoria acadèmica importada.</p>
+
+<h2 id="s8102">8.10.2 D. T. Suzuki i l'arribada del Zen a Occident</h2>
+<p><strong>Daisetz Teitaro Suzuki</strong> (1870-1966) va presentar el Zen com una experiència espiritual directa, lliure de l'estructura institucional japonesa real. Va influir Jung, Fromm i els escriptors del moviment <strong>Beat</strong> —Ginsberg, Kerouac, Snyder— generant el que la cultura nord-americana va etiquetar amb ironia com "Zen de saló".</p>
+
+<h2 id="s8103">8.10.3 El Mindfulness i la secularització terapèutica</h2>
+<p><strong>Jon Kabat-Zinn</strong>, a partir de 1979, va desenvolupar el programa <strong>MBSR</strong>, despullant les tècniques de <em>sati</em> de qualsevol referència doctrinal per integrar-les en el sistema sanitari laic. Aquest èxit institucional ha generat la crítica del <strong>"McMindfulness"</strong>: una versió comercialitzada i buidada de contingut que pot esdevenir simple gestió de l'estrès individual sense cap component de transformació ètica.</p>
+
+<h2 id="s8104">8.10.4 El budisme engatjat: Thich Nhat Hanh, Aung San Suu Kyi</h2>
+<p>El <strong>budisme engatjat</strong> busca aplicar els principis ètics budistes a la transformació de les estructures socials. <strong>Thich Nhat Hanh</strong> (1926-2022) va combinar pràctica meditativa amb acció humanitària durant la Guerra del Vietnam. <strong>Aung San Suu Kyi</strong> planteja la paradoxa més pertorbadora: després d'assolir el poder a Myanmar el 2016, va guardar silenci —i una complicitat activa, segons observadors internacionals— davant el genocidi rohingya.</p>
+
+<h2 id="s8105">8.10.5 Diàspores budistes i conversió a Occident</h2>
+<p>El <strong>budisme ètnic</strong> (comunitats immigrants vietnamites, cambodjanes, tibetanes) manté una continuïtat ritual notable però rep menys atenció acadèmica. El <strong>budisme de convers</strong> (occidentals de classe mitjana, sense ascendència budista) posa l'èmfasi en la pràctica individual i la filosofia. Totes dues son desenvolupaments legítims i doctrinalment defensables d'una tradició que ha demostrat, durant vint-i-cinc segles, una capacitat d'adaptació sense gaires paral·lels.</p>
+</section>
+
+<hr class="rule">
+<!-- ═══════════════════════════════════════════════════ 8.11 -->
+<section id="s811i" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.11</span>Influències del budisme sobre altres tradicions</h1>
+<p class="drop-cap">El 8.11 inverteix la direcció de la mirada: després d'haver vist com el budisme va absorbir elements de la cosmovisió vèdica, convé examinar com el budisme mateix ha actuat com a força transformadora sobre les tradicions amb què ha entrat en contacte.</p>
+
+<h2 id="s8111i">8.11.1 Sobre l'hinduisme</h2>
+<p>La influència més profunda es produeix, paradoxalment, en l'<strong>Advaita Vedanta</strong> de Shankaracharya, acusat pels seus crítics de ser un "budista encobert" (<em>pracchanna bauddha</em>): la doctrina de <em>maya</em> presenta paral·lelismes metodológics notables amb l'anàlisi budista de la vacuïtat. L'estructura mateixa dels monestirs hindús (<em>maṭhas</em>) sembla deure part de la seva organització institucional al model de la Saṅgha budista. I el Nyaya-Vaisheshika va haver de refinar el seu propi aparell lógic per respondre als reptes de Dignāga i Dharmakīrti.</p>
+
+<h2 id="s8112">8.11.2 Sobre el sikhisme i el jainisme</h2>
+<p>El <strong>jainisme</strong>, contemporani del Buda, comparteix arrels en el moviment śramaṇa; la seva doctrina de l'<em>anekāntavāda</em> presenta una estructura lógica que recorda la tètrade de Nagarjuna. El <strong>sikhisme</strong>, molt més tardà, n'hereta certs elements conceptuals (karma, <em>mukti</em>) de manera indirecta i mediada, a través de segles de cultura religiosa índia general.</p>
+
+<h2 id="s8113">8.11.3 Sobre el taoisme i el confucianisme xinesos</h2>
+<p>El <strong>taoisme religiós</strong> (<em>Daojiao</em>) va adoptar, en resposta a la competència organitzativa de la Saṅgha, un model de monestirs i de cànon textual (el <em>Daozang</em>) i una cosmologia de paradisos i inferns. En sentit invers, el taoisme va proporcionar al budisme xinès el vocabulari per traduir la <em>śūnyatā</em>. El <strong>neoconfucianisme</strong> de Zhu Xi (dinasties Song i Ming) incorpora, sense reconèixer-ho explícitament, estructures metafísiques deutores de l'escola Huayan.</p>
+
+<h2 id="s8114">8.11.4 Sobre la filosofia i la psicologia occidentals contemporànies</h2>
+<p>En filosofia, <strong>Derek Parfit</strong> (<em>Reasons and Persons</em>, 1984) va reconèixer explícitament el paral·lelisme entre la seva teoria reduccionista de la identitat personal i l'Anatta budista. En psicologia clínica, la <strong>MBCT</strong> i la <strong>Teràpia Dialèctica Conductual</strong> de Marsha Linehan incorporen tècniques derivades de la meditació budista. Aquesta influència opera, però, sobre una versió ja filtrada i descontextualitzada del marc soteriológic complet, generant el que alguns historiadors prefereixen anomenar un <strong>budisme occidental</strong> genuïnament híbrid i nou.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 8.12 -->
+<section id="s812m" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.12</span>Metodologia</h1>
+<p style="font-style:italic;color:var(--ink-light);margin-bottom:2rem;">Advertències epistemológiques i criteris d'interpretació per a l'estudi del budisme.</p>
+<p class="drop-cap">L'estudi del budisme planteja dificultats metodológiques que comparteixen una arrel comuna amb les de l'hinduisme —la pluralitat interna, el biaix de les fonts, la mediació colonial— però que adquireixen configuracions específiques derivades d'una trajectòria única: una tradició que neix a l'Índia, hi declina pràcticament, i sobreviu transformada en geografies tan diverses com Sri Lanka, el Tibet, la Xina i Califòrnia.</p>
+
+<h2 id="s8121">8.12.1 El problema de la historicitat de Buda</h2>
+<p>El lapse de transmissió oral d'uns quatre segles, combinat amb l'existència de múltiples tradicions textuals divergents, exigeix una <strong>anàlisi estratigràfica comparada</strong>: els elements que coincideixen entre cànons que es van separar molt aviat es consideren amb major probabilitat d'antiguitat; els elements presents només en una tradició, amb prodigis sobrenaturals creixentment elaborats, es classifiquen com a elaboracions hagiogràfiques tardanes.</p>
+
+<h2 id="s8122">8.12.2 El biaix de les fonts Theravada davant les fonts Mahayana</h2>
+<p>La filologia occidental va concedir una autoritat privilegiada al Cànon pali, presentant el Theravada com el budisme "autèntic" i el Mahayana/Vajrayana com a "desviacions". Aquesta jerarquització comet un error de proporció histórica: el Mahayana i el Vajrayana representen la pràctica de la majoria aclaparadora dels budistes que han existit al llarg de la história.</p>
+
+<h2 id="s8123">8.12.3 Orientalisme i la "invenció" del Buddhism com a categoria acadèmica</h2>
+<p>Philip C. Almond ha documentat com els erudits britànics del segle XIX van construir la idea d'un "budisme" textual unificat amb una relació distant de les pràctiques religioses vives. Reconèixer aquesta mediació colonial no equival a negar que existís, abans i independentment, una realitat religiosa i doctrinal genuïna a través de tota Àsia.</p>
+
+<h2 id="s8124">8.12.4 Emic/etic en l'estudi de la meditació</h2>
+<p>Com es pot estudiar, des d'una perspectiva externa (<em>etic</em>), una pràctica que, segons la seva tradició interna (<em>emic</em>), només revela el seu contingut a través de la pràctica sostinguda? La resposta proposada mantén les dues perspectives en tensió, evitant la confusió entre "la ciència ha demostrat que la meditació funciona" i "la ciència ha demostrat que el budisme té raó".</p>
+
+<p>El budisme és una tradició que ha demostrat, durant vint-i-cinc segles, una capacitat d'adaptació i de transformació interna que no té gaires paral·lels en la história comparada de les religions: des dels boscos de Magadha fins als hospitals nord-americans que avui prescriuen mindfulness, des dels debats lógics de Nālandā fins als laboratoris de neurociència contemporanis.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ═══════════════════════════════════════════════════ 8.13 BIBLIOGRAFIA -->
+<section id="s813b" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">8.13</span>Bibliografia</h1>
+
+<div class="bib-section">
+<h3>Fonts primàries — Cànon Pali</h3>
+<p class="bib-entry">Davids, T. W. Rhys, i C. A. F. Rhys Davids, trad. <em>Dialogues of the Buddha</em> [Dīgha Nikāya]. Sacred Books of the Buddhists, vols. 2-4. Londres: Pali Text Society, 1899-1921.</p>
+<p class="bib-entry">Ñāṇamoli, Bhikkhu, i Bhikkhu Bodhi, trad. <em>The Middle Length Discourses of the Buddha: A Translation of the Majjhima Nikāya.</em> Boston: Wisdom Publications, 1995. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Bodhi, Bhikkhu, trad. <em>The Connected Discourses of the Buddha.</em> Boston: Wisdom Publications, 2000.</p>
+<p class="bib-entry">Bodhi, Bhikkhu, trad. <em>The Numerical Discourses of the Buddha.</em> Boston: Wisdom Publications, 2012.</p>
+<p class="bib-entry">Norman, K. R., trad. <em>The Group of Discourses (Sutta-Nipāta).</em> Oxford: Pali Text Society, 1992.</p>
+<p class="bib-entry">Fronsdal, Gil, trad. <em>The Dhammapada.</em> Boston: Shambhala, 2005.</p>
+<p class="bib-entry">Horner, Isaline Blew, trad. <em>The Book of the Discipline (Vinaya-Piṭaka).</em> 6 vols. Londres: Pali Text Society, 1938-1966.</p>
+<p class="bib-entry">Bodhi, Bhikkhu, ed. <em>A Comprehensive Manual of Abhidhamma.</em> Kandy: Buddhist Publication Society, 1993.</p>
+</div>
+
+<div class="bib-section">
+<h3>Fonts primàries — Mahayana i Vajrayana</h3>
+<p class="bib-entry">Kern, Hendrik, trad. <em>Saddharma Pundarīka, or, The Lotus of the True Law.</em> Sacred Books of the East, vol. 21. Oxford: Clarendon Press, 1884.</p>
+<p class="bib-entry">Conze, Edward, trad. <em>Buddhist Wisdom: The Diamond Sutra and the Heart Sutra.</em> Nova York: Vintage Spiritual Classics, 2001.</p>
+<p class="bib-entry">Conze, Edward, trad. <em>The Perfection of Wisdom in Eight Thousand Lines.</em> Berkeley: Four Seasons Foundation, 1973.</p>
+<p class="bib-entry">Gómez, Luis O., trad. <em>The Land of Bliss.</em> Honolulu: University of Hawai'i Press, 1996.</p>
+<p class="bib-entry">Garfield, Jay L., trad. <em>The Fundamental Wisdom of the Middle Way: Nāgārjuna's Mūlamadhyamakakārikā.</em> Oxford: Oxford University Press, 1995. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Anacker, Stefan, trad. <em>Seven Works of Vasubandhu.</em> Delhi: Motilal Banarsidass, 1984.</p>
+<p class="bib-entry">Hopkins, Jeffrey, trad. <em>The Tibetan Book of the Dead.</em> Nova York: Penguin Classics, 2007.</p>
+<p class="bib-entry">Tsong-kha-pa. <em>The Great Treatise on the Stages of the Path to Enlightenment.</em> 3 vols. Ithaca: Snow Lion Publications, 2000-2004.</p>
+</div>
+
+<div class="bib-section">
+<h3>Fonts primàries — Chan/Zen</h3>
+<p class="bib-entry">Yampolsky, Philip B., trad. <em>The Platform Sutra of the Sixth Patriarch.</em> Nova York: Columbia University Press, 1967.</p>
+<p class="bib-entry">Tanahashi, Kazuaki, ed. <em>Treasury of the True Dharma Eye: Zen Master Dogen's Shobo Genzo.</em> Boston: Shambhala, 2010.</p>
+<p class="bib-entry">Suzuki, Daisetz Teitaro. <em>Essays in Zen Buddhism.</em> 3 vols. Londres: Luzac & Company, 1927-1934.</p>
+<p class="bib-entry">Watts, Alan. <em>The Way of Zen.</em> Nova York: Pantheon Books, 1957.</p>
+</div>
+
+<div class="bib-section">
+<h3>Obres de referència generals</h3>
+<p class="bib-entry">Gombrich, Richard F. <em>Theravada Buddhism: A Social History from Ancient Benares to Modern Colombo.</em> Londres: Routledge, 1988. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Gombrich, Richard F. <em>What the Buddha Thought.</em> Londres: Equinox Publishing, 2009.</p>
+<p class="bib-entry">Harvey, Peter. <em>An Introduction to Buddhism.</em> 2a ed. Cambridge: Cambridge University Press, 2013. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Williams, Paul. <em>Mahāyāna Buddhism: The Doctrinal Foundations.</em> 2a ed. Londres: Routledge, 2009. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Williams, Paul, Anthony Tribe, i Alexander Wynne. <em>Buddhist Thought.</em> 2a ed. Londres: Routledge, 2012.</p>
+<p class="bib-entry">Conze, Edward. <em>Buddhism: Its Essence and Development.</em> Oxford: Bruno Cassirer, 1951.</p>
+<p class="bib-entry">Lopez, Donald S., Jr. <em>The Story of Buddhism.</em> San Francisco: HarperOne, 2001.</p>
+<p class="bib-entry">Snellgrove, David L. <em>Indo-Tibetan Buddhism.</em> Boston: Shambhala, 1987.</p>
+<p class="bib-entry">Powers, John. <em>Introduction to Tibetan Buddhism.</em> Rev. ed. Ithaca: Snow Lion Publications, 2007.</p>
+</div>
+
+<div class="bib-section">
+<h3>Vida i figura històrica del Buda</h3>
+<p class="bib-entry">Bareau, André. <em>Recherches sur la biographie du Buddha.</em> 3 vols. París: École Française d'Extrême-Orient, 1963-1995.</p>
+<p class="bib-entry">Nakamura, Hajime. <em>Gotama Buddha: A Biography Based on the Most Reliable Texts.</em> 2 vols. Tòquio: Kosei Publishing, 2000-2005.</p>
+<p class="bib-entry">Thomas, Edward J. <em>The Life of Buddha as Legend and History.</em> Londres: Routledge & Kegan Paul, 1927.</p>
+<p class="bib-entry">Schumann, Hans Wolfgang. <em>The Historical Buddha.</em> Londres: Arkana, 1989.</p>
+<p class="bib-entry">Ñāṇamoli, Bhikkhu. <em>The Life of the Buddha: According to the Pali Canon.</em> Kandy: Buddhist Publication Society, 1972.</p>
+</div>
+
+<div class="bib-section">
+<h3>Context històric, social i econòmic de l'Índia antiga</h3>
+<p class="bib-entry">Thapar, Romila. <em>Aśoka and the Decline of the Mauryas.</em> 2a ed. Oxford: Oxford University Press, 1997. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Thapar, Romila. <em>Early India: From the Origins to AD 1300.</em> Berkeley: University of California Press, 2002.</p>
+<p class="bib-entry">Chakravarti, Uma. <em>The Social Dimensions of Early Buddhism.</em> Delhi: Oxford University Press, 1987. <strong>[Indispensable per al 8.2.]</strong></p>
+<p class="bib-entry">Schopen, Gregory. <em>Bones, Stones, and Buddhist Monks.</em> Honolulu: University of Hawai'i Press, 1997.</p>
+<p class="bib-entry">Ray, Himanshu Prabha. <em>Monastery and Guild: Commerce under the Sātavāhanas.</em> Delhi: Oxford University Press, 1986.</p>
+<p class="bib-entry">Liu, Xinru. <em>Ancient India and Ancient China: Trade and Religious Exchanges, AD 1-600.</em> Delhi: Oxford University Press, 1988.</p>
+<p class="bib-entry">Erdosy, George, ed. <em>Urbanisation in Early Historic India.</em> Oxford: BAR International Series, 1988.</p>
+<p class="bib-entry">Allchin, F. R. <em>The Archaeology of Early Historic South Asia.</em> Cambridge: Cambridge University Press, 1995.</p>
+</div>
+
+<div class="bib-section">
+<h3>Ashoka i l'Imperi Maurya</h3>
+<p class="bib-entry">Strong, John S. <em>The Legend of King Aśoka.</em> Princeton: Princeton University Press, 1983.</p>
+<p class="bib-entry">Hultzsch, Eugen, ed. i trad. <em>Inscriptions of Asoka.</em> Oxford: Clarendon Press, 1925.</p>
+<p class="bib-entry">Sircar, Dineschandra. <em>Inscriptions of Aśoka.</em> Nova Delhi: Publications Division, Government of India, 1957.</p>
+<p class="bib-entry">Halkias, Georgios T. «When the Greeks Converted the Buddha.» A <em>Religions and Trade,</em> ed. Peter Wick i Volker Rabens. Leiden: Brill, 2014.</p>
+</div>
+
+<div class="bib-section">
+<h3>Filosofia budista — Madhyamaka, Yogācāra, lògica</h3>
+<p class="bib-entry">Westerhoff, Jan. <em>Nāgārjuna's Madhyamaka: A Philosophical Introduction.</em> Oxford: Oxford University Press, 2009. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Siderits, Mark. <em>Buddhism as Philosophy.</em> Indianapolis: Hackett Publishing, 2007. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Siderits, Mark, i Shōryū Katsura, trad. <em>Nāgārjuna's Middle Way.</em> Boston: Wisdom Publications, 2013.</p>
+<p class="bib-entry">Schmithausen, Lambert. <em>Ālayavijñāna.</em> 2 vols. Tòquio: International Institute for Buddhist Studies, 1987.</p>
+<p class="bib-entry">Hattori, Masaaki, trad. <em>Dignāga, On Perception.</em> Cambridge: Harvard University Press, 1968.</p>
+<p class="bib-entry">Dunne, John D. <em>Foundations of Dharmakīrti's Philosophy.</em> Boston: Wisdom Publications, 2004.</p>
+<p class="bib-entry">Ganeri, Jonardon. <em>Philosophy in Classical India.</em> Londres: Routledge, 2001.</p>
+<p class="bib-entry">Siderits, Mark, Evan Thompson, i Dan Zahavi, eds. <em>Self, No Self?</em> Oxford: Oxford University Press, 2011.</p>
+</div>
+
+<div class="bib-section">
+<h3>Budisme i poder polític</h3>
+<p class="bib-entry">Tambiah, Stanley Jeyaraja. <em>World Conqueror and World Renouncer.</em> Cambridge: Cambridge University Press, 1976. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Tambiah, Stanley Jeyaraja. <em>Buddhism Betrayed?</em> Chicago: University of Chicago Press, 1992.</p>
+<p class="bib-entry">Gyatso, Tenzin (14th Dalai Lama). <em>Freedom in Exile.</em> San Francisco: HarperSanFrancisco, 1990.</p>
+<p class="bib-entry">Goldstein, Melvyn C. <em>A History of Modern Tibet, 1913-1951.</em> Berkeley: University of California Press, 1989.</p>
+<p class="bib-entry">Walton, Matthew J. <em>Buddhism, Politics and Political Thought in Myanmar.</em> Cambridge: Cambridge University Press, 2016. <strong>[Indispensable per al 8.8.4.]</strong></p>
+<p class="bib-entry">Frydenlund, Iselin. «Buddhist Militarism Beyond Texts.» <em>Journal of Religion and Violence</em> 5, núm. 1 (2017): 27-48.</p>
+</div>
+
+<div class="bib-section">
+<h3>Expansió geogràfica i sinització</h3>
+<p class="bib-entry">Zürcher, Erik. <em>The Buddhist Conquest of China.</em> 3a ed. Leiden: Brill, 2007. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Ch'en, Kenneth K. S. <em>Buddhism in China: A Historical Survey.</em> Princeton: Princeton University Press, 1964. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">Wriggins, Sally Hovey. <em>The Silk Road Journey with Xuanzang.</em> Boulder: Westview Press, 2004.</p>
+<p class="bib-entry">Tansen Sen. <em>Buddhism, Diplomacy, and Trade.</em> Honolulu: University of Hawai'i Press, 2003.</p>
+<p class="bib-entry">McRae, John R. <em>Seeing Through Zen.</em> Berkeley: University of California Press, 2003.</p>
+<p class="bib-entry">Kapstein, Matthew T. <em>The Tibetan Assimilation of Buddhism.</em> Oxford: Oxford University Press, 2000. <strong>[Indispensable per al 8.9.4.]</strong></p>
+<p class="bib-entry">Coedès, George. <em>The Indianized States of Southeast Asia.</em> Honolulu: University of Hawai'i Press, 1968.</p>
+<p class="bib-entry">Harris, Ian. <em>Cambodian Buddhism.</em> Honolulu: University of Hawai'i Press, 2005.</p>
+</div>
+
+<div class="bib-section">
+<h3>Budisme contemporani, mindfulness i Occident</h3>
+<p class="bib-entry">Almond, Philip C. <em>The British Discovery of Buddhism.</em> Cambridge: Cambridge University Press, 1988. <strong>[Indispensable.]</strong></p>
+<p class="bib-entry">McMahan, David L. <em>The Making of Buddhist Modernism.</em> Oxford: Oxford University Press, 2008. <strong>[Indispensable per a tot el 8.10.]</strong></p>
+<p class="bib-entry">Seager, Richard Hughes. <em>Buddhism in America.</em> Nova York: Columbia University Press, 1999.</p>
+<p class="bib-entry">Prebish, Charles S., i Kenneth K. Tanaka, eds. <em>The Faces of Buddhism in America.</em> Berkeley: University of California Press, 1998.</p>
+<p class="bib-entry">Kabat-Zinn, Jon. <em>Full Catastrophe Living.</em> Nova York: Delta, 1990.</p>
+<p class="bib-entry">Purser, Ronald. <em>McMindfulness.</em> Londres: Repeater Books, 2019.</p>
+<p class="bib-entry">Queen, Christopher S., i Sallie B. King, eds. <em>Engaged Buddhism.</em> Albany: State University of New York Press, 1996. <strong>[Indispensable per al 8.10.4.]</strong></p>
+<p class="bib-entry">Hanh, Thich Nhat. <em>Being Peace.</em> Berkeley: Parallax Press, 1987.</p>
+</div>
+
+<div class="bib-section">
+<h3>Influències creuades i metodologia</h3>
+<p class="bib-entry">Bronkhorst, Johannes. <em>Greater Magadha.</em> Leiden: Brill, 2007. <strong>[Indispensable per al 8.2.3.]</strong></p>
+<p class="bib-entry">Parfit, Derek. <em>Reasons and Persons.</em> Oxford: Oxford University Press, 1984.</p>
+<p class="bib-entry">Varela, Francisco J., Evan Thompson, i Eleanor Rosch. <em>The Embodied Mind.</em> Cambridge: MIT Press, 1991.</p>
+<p class="bib-entry">Lopez, Donald S., Jr., ed. <em>Curators of the Buddha.</em> Chicago: University of Chicago Press, 1995. <strong>[Indispensable per al 8.12.3.]</strong></p>
+<p class="bib-entry">Schopen, Gregory. «Archaeology and Protestant Presuppositions in the Study of Indian Buddhism.» <em>History of Religions</em> 31, núm. 1 (1991): 1-23.</p>
+<p class="bib-entry">Sharf, Robert H. «Buddhist Modernism and the Rhetoric of Meditative Experience.» <em>Numen</em> 42, núm. 3 (1995): 228-283. <strong>[Indispensable per al 8.12.4.]</strong></p>
+</div>
+
+<p class="note" style="font-size:.85rem;color:var(--ink-light);font-style:italic;border-top:1px solid var(--rule);margin-top:3rem;padding-top:1rem;opacity:.8;">Nota: Per a una introducció accessible en català o castellà, es recomana el capítol sobre el budisme de la <em>Historia de las religiones</em> de Mircea Eliade i Ioan P. Couliano (Madrid: Siruela, 1992), l'entrada «Budisme» de la <em>Gran Enciclopèdia Catalana</em>, i el volum <em>El budismo</em> de Richard Gombrich en la seva traducció castellana (Barcelona: Crítica, 2013). Per als textos primaris, la col·lecció Wisdom Publications i les traduccions en línia d'Access to Insight (accesstoinsight.org) i de 84000: Translating the Words of the Buddha (84000.co) ofereixen el millor punt de partida.</p>
+
+</section>
+</main>
+
+<a href="#cover" class="back-top" id="backTop" title="Tornar al principi">↑</a>
+
+<!-- Scripts Externs -->
+<script src="scripts.js"></script>
+</body>
+</html>

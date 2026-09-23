@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 6 — Zoroastrisme: Ètica i Imperi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Estils Externs -->
+<link rel="stylesheet" href="estil.css">
+
+<!-- Personalització de color per al Capítol 6 (Zoroastrisme) -->
+<style>
+  :root { 
+    --sidebar-bg: #16110a; /* Fons fosc atzabeja/brasa */
+  } 
+  /* Correcció de seguretat: el text sempre es veu */
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+</style>
+</head>
+
+
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- HEADER FIXE & NAV TOGGLE -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title">Capítol 6 — Zoroastrisme</div>
+  <!-- Aquest div buit serveix per centrar visualment el títol gràcies a flexbox -->
+  <div style="width: 44px;"></div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a href="index.html" style="font-family: 'Crimson Pro', serif; font-size: 0.75rem; color: #c4a44a; text-decoration: none; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block; margin-bottom: 0.5rem; opacity: 0.7;">← Índex General</a>
+    <div class="sidebar-title">Capítol 6<br>Zoroastrisme — Ètica i Imperi</div>
+  </div>
+  <nav>
+    <a href="#cover" class="lvl1">Portada</a>
+    <a href="#intro" class="lvl1">Introducció</a>
+    <a href="#s61" class="lvl1">6.1 Context històric i polític</a>
+    <a href="#s61-cir" class="lvl2">Cir el Gran</a>
+    <a href="#s61-bisutun" class="lvl2">La inscripció de Bisutun</a>
+    <a href="#s62" class="lvl1">6.2 Cosmovisió zoroastriana</a>
+    <a href="#s621" class="lvl2">6.2.1 Dualisme Asha/Druj</a>
+    <a href="#s622" class="lvl2">6.2.2 Ahura Mazda i els Amesha Spenta</a>
+    <a href="#s623" class="lvl2">6.2.3 La lluita còsmica</a>
+    <a href="#s624" class="lvl2">6.2.4 El Frashokereti</a>
+    <a href="#s625" class="lvl2">6.2.5 El Pont Chinvat</a>
+    <a href="#s626" class="lvl2">6.2.6 El judici individual</a>
+    <a href="#s627" class="lvl2">6.2.7 La victòria d'Asha</a>
+    <a href="#s63" class="lvl1">6.3 Ètica i responsabilitat humana</a>
+    <a href="#s631" class="lvl2">6.3.1 L'elecció moral</a>
+    <a href="#s632" class="lvl2">6.3.2 El triple camí</a>
+    <a href="#s633" class="lvl2">6.3.3 Responsabilitat col·lectiva</a>
+    <a href="#s64" class="lvl1">6.4 Ritual, comunitat i llei</a>
+    <a href="#s641" class="lvl2">6.4.1 El foc sagrat</a>
+    <a href="#s642" class="lvl2">6.4.2 Els mags</a>
+    <a href="#s643" class="lvl2">6.4.3 Els temples de foc</a>
+    <a href="#s644" class="lvl2">6.4.4 La llei Dāta</a>
+    <a href="#s65" class="lvl1">6.5 Influències sobre altres tradicions</a>
+    <a href="#s651" class="lvl2">6.5.1 Judaisme</a>
+    <a href="#s652" class="lvl2">6.5.2 Cristianisme</a>
+    <a href="#s653" class="lvl2">6.5.3 Islam</a>
+    <a href="#s654" class="lvl2">6.5.4 Hinduisme</a>
+    <a href="#s655" class="lvl2">6.5.5 Egipte faraònic</a>
+    <a href="#s66" class="lvl1">6.6 Llegat: la primera religió ètica d'Estat</a>
+    <a href="#s661" class="lvl2">6.6.1 De la religió tribal a l'ètica universal</a>
+    <a href="#s662" class="lvl2">6.6.2 De l'Aquemènida a Roma cristiana</a>
+    <a href="#s663" class="lvl2">6.6.3 Califat i regnes medievals</a>
+    <a href="#s664" class="lvl2">6.6.4 Perduració en el pensament occidental</a>
+    <a href="#s665" class="lvl2">6.6.5 El zoroastrisme avui</a>
+    <a href="#s67" class="lvl1">6.7 Metodologia</a>
+    <a href="#s671" class="lvl2">6.7.1 El problema de les fonts</a>
+    <a href="#s672" class="lvl2">6.7.2 El problema de la cronologia</a>
+    <a href="#s673" class="lvl2">6.7.3 El problema de la influència</a>
+    <a href="#s674" class="lvl2">6.7.4 El problema de la perspectiva</a>
+    <a href="#s675" class="lvl2">6.7.5 El problema de la comparació</a>
+    <a href="#s68" class="lvl1">6.8 Bibliografia</a>
+  </nav>
+</aside>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-menorah">🔥</div>
+  <div class="cover-ornament">Història de les Religions</div>
+  <div class="cover-rule"></div>
+  <div class="cover-hebrew">AŠA</div>
+  <h1 class="cover-chapter">Capítol 6</h1>
+  <div class="cover-subtitle">Zoroastrisme — Ètica i Imperi</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong> Zaratustra i el primer sistema ètic universal vinculat a un Estat imperial.
+  </div>
+  <div class="cover-scroll">
+    <span>Llegir</span>
+    <div class="cover-scroll-line"></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="content">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     INTRODUCCIÓ
+══════════════════════════════════════════════════════════════════════ -->
+<section id="intro" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num">Introducció</span>Qui era Zaratustra?</h1>
+
+  <p class="drop-cap">Hi ha figures en la història de la humanitat que transformen tan radicalment la manera de concebre el món que resulta gairebé impossible imaginar el pensament posterior sense elles. Zaratustra —conegut en grec com a Zoroastre— és una d'aquestes figures. I, tanmateix, és probablement la menys coneguda del gran panteó de fundadors religiosos que van posar les bases del pensament moral i espiritual d'Occident i d'Orient Mitjà.</p>
+
+  <p>La seva absència de la memòria col·lectiva contemporània és, en si mateixa, una paradoxa: es tracta del pensador que, com argumentarem al llarg d'aquest capítol, va donar forma als conceptes bàsics que més tard absorbirien el judaisme, el cristianisme i l'islam —el dualisme entre el bé i el mal, el judici individual de l'ànima, la resurrecció dels morts, el paradís i l'infern, la batalla còsmica entre forces oposades, i la responsabilitat moral de l'ésser humà com a agent lliure en la història.</p>
+
+  <p>Qui era, doncs, aquest home?</p>
+
+  <p>La primera dificultat és la cronologia. Les dates de Zaratustra han generat un debat acadèmic que no s'ha tancat fins avui. Les fonts antigues gregues —Hermip de Berit, Eudoxos de Cnidos, Aristòtil— situen el profeta entre sis mil i cinc mil anys abans de la guerra de Troia, xifres clarament llegendàries que reflecteixen la veneració extrema de la tradició posterior. La cronologia que avui accepta la majoria d'iranistes i historiadors de la religió, basada en anàlisi lingüística dels textos més antics del corpus zoroastrià —els <em>Gathas</em>, himnes compostos en un avèstic arcaic extraordinàriament proper al sànscrit védic—, situa Zaratustra entre els segles XIV i X aC, amb una posició de consens que tendeix cap al voltant del 1200-1000 aC. Alguns estudiosos, sobretot de la tradició parsi i certes escoles iranianes, defensen dates lleugerament posteriors, cap al segle VII aC, que el farien contemporani del gran moviment de reformes religioses que recorre l'àrea euro-asiàtica durant l'anomenada «Era Axial» de Karl Jaspers —el mateix període que veu néixer Confuci, Buda, els profetes hebreus del Segon Isaïes i els primers filòsofs grecs.</p>
+
+  <p>El context geogràfic original de Zaratustra és el que els especialistes anomenen la «Gran Iran», una franja vasta i mal definida que inclou l'actual Iran oriental, l'Afganistan occidental i les estepes de l'Àsia Central meridional —zones de pastors seminòmades, criadors de cavalls i bestiar, pobles organitzats en clans tribals dominats per una aristocràcia guerrera i una casta sacerdotal que els textos avèstics anomenen els <em>athravans</em>. La tradició zoroastriana pròpia situa el lloc de naixement de Zaratustra en un punt que les fonts anomenen <em>Airyana Vaēǰah</em>, la «llavor del poble ari», un territori mitificat que les tradicions posteriors han identificat amb regions tan diverses com Azerbaidjan, el Coràsmia, el Sistà o la Bactriana.</p>
+
+  <p>Els <em>Gathas</em> —la paraula significa «cants» o «himnes»— són un conjunt de disset composicions poètiques d'una densitat i una profunditat extraordinàries, probablement les paraules més antigues que tenim d'un fundador religiós en tota la història de la humanitat que parlen en primera persona. En ells, Zaratustra no es presenta com un transmissor passiu d'una revelació rebuda, sinó com un home que <em>discuteix</em> amb la divinitat, que exigeix respostes, que es lamenta de la seva solitud i de la incomprensió dels seus contemporanis, que demana a Ahura Mazda —el Senyor Savi, el seu Déu— que li expliqui el sentit del cosmos i de la lluita entre forces oposades. El to és, notablement, més proper a Job que a Moisès; més pròxim a la queixa dels Salms que a la promulgació de la Llei.</p>
+
+  <p>La revolució teològica i ètica de Zaratustra es pot resumir en tres moviments fonamentals que trenquen amb l'ordre religiós preexistent del món indo-iranià.</p>
+
+  <h4>El primer: la radicalització del monoteisme</h4>
+  <p>En el context politeista dels pobles iranians antics, Zaratustra nega la divinitat dels <em>daevas</em> —els déus del panteó tradicional— i els reclassifica com a forces del mal o del caos, subordinades a un principi d'engany i destrucció que anomena <em>Druj</em>. Enfront d'ells, afirma l'existència d'un únic Déu suprem, Ahura Mazda, principi de la veritat, de la llum i de l'ordre còsmic (<em>Asha</em>). Aquesta operació conceptual és d'una audàcia sense precedents en el seu context: no simplement preferir un déu per sobre dels altres —el que els historiadors anomenen <em>henoteisme</em>—, sinó negar activament la naturalesa divina dels déus tradicionals i relegar-los al bàndol del mal.</p>
+
+  <h4>El segon: el dualisme moral com a estructura de la realitat</h4>
+  <p>Per a Zaratustra, el cosmos no és un sistema de forces naturals que cal aplacar o manipular ritualment, sinó un camp de batalla entre dos principis metafísics oposats: <em>Asha</em> (veritat, ordre, justícia, llum) i <em>Druj</em> (mentida, caos, injustícia, foscor). Cada acte humà s'inscriu necessàriament en un costat d'aquest conflicte. La vida moral no és una negociació amb poders arbitraris, sinó una presa de posició en una guerra còsmica que té un desenllaç: el <em>Frashokereti</em>, la renovació final del món, quan <em>Asha</em> triomarà definitivament sobre <em>Druj</em>.</p>
+
+  <h4>El tercer: la centralitat de la llibertat i la responsabilitat individual</h4>
+  <p>En el sistema zoroastrià, cada ésser humà ha escollit, en un moment primordial d'existència premortal, el bàndol en el qual militarà. Però aquesta elecció es confirma i es realitza a cada instant de la vida a través de pensaments, paraules i actes. El principi del <em>Humata, Hukhta, Hvarshta</em> —«bons pensaments, bones paraules, bones accions»— és el triple camí que defineix la conducta del just. I aquesta conducta tindrà conseqüències post-mortem: l'ànima de cada individu serà jutjada en el <em>Pont Chinvat</em>, el «Pont del Separador», on les seves accions seran pesades i on es determinarà si mereix entrar a la «Casa de la Cançó» (<em>Garo Demana</em>, el paradís) o caure a la «Casa de la Mentida» (<em>Drujaskan</em>, un lloc de turment). Estem davant del primer sistema conegut de judici individual <em>postmortem</em> en la història de les religions.</p>
+
+  <p>Però la revolució de Zaratustra no hauria tingut l'impacte que va tenir si hagués romàs com a fenomen purament religiós d'un profeta solitari. El que va donar al zoroastrisme una dimensió històrica sense igual va ser la seva adopció com a religió —o, com a mínim, com a marc ideològic de legitimació— per part del poder polític iranià. Per primera vegada en la història de la humanitat, un sistema ètic de caràcter universal va quedar vinculat estructuralment a un Estat imperial, l'Imperi Aquemènida.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     6.1
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s61" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">6.1</span>Context històric i polític</h1>
+  <p style="font-style:italic; color:var(--ink-light); margin-bottom:2rem;">L'Imperi Aquemènida, la funció religiosa de l'Estat, la tolerància de Cir i la inscripció de Bisutun.</p>
+
+  <p class="drop-cap">Per comprendre la dimensió política del zoroastrisme, cal situar-se en el context d'un dels canvis geopolítics més sobtats i dramàtics de la història antiga: l'emergència, en menys de tres generacions, d'un imperi que va abastar des del Nil fins a l'Indus, des del Mar Negre fins al Golf Pèrsic, i que va reunir sota una única autoritat política pobles d'una diversitat ètnica, lingüística, religiosa i cultural sense precedents.</p>
+
+  <p>L'Imperi Aquemènida va néixer formalment el 550 aC, quan Cir II —que la tradició posterior coneixerà com a Cir el Gran— va derrotar Astíages, rei dels Medes, i va unificar els regnes de Mèdia i Pèrsia en un únic estat. El que va seguir va ser una expansió de velocitat i abast sense paral·lel en l'Antiguitat fins a Alexandre: la conquesta de Lídia el 547 aC, la caiguda de Babilònia el 539 aC i l'expansió posterior fins a Egipte, que va caure davant Cambises II el 525 aC. Quan Darios I va consolidar i reorganitzar l'imperi a finals del segle VI aC, els aquemènides governaven aproximadament vuit milions de quilòmetres quadrats i entre trenta i cinquanta milions de persones —potser el quaranta per cent de la població mundial de l'època.</p>
+
+  <p>Aquesta dimensió colossal plantejava un problema de legitimació política d'una complexitat nova. Tots els imperis anteriors —Assíria, Babilònia, Egipte— havien legitimat el poder de manera fonamentalment ètnica i religiosa: el rei era representant d'un déu local, i la seva autoritat s'estenia en la mesura que el seu déu triomfava sobre els déus dels pobles sotmesos. Els aquemènides van adoptar una estratègia radicalment diferent.</p>
+
+  <h2 id="s61-cir">Cir el Gran i el model de la tolerància imperial</h2>
+
+  <p>La conquesta de Babilònia el 539 aC és un moment fundacional no solament per a la història política, sinó per a la història de la religió i de l'ètica política. Quan les tropes perses van entrar a Babilònia, Cir va fer una cosa extraordinàriament inusual per als cànons del seu temps: va presentar-se no com a conqueridor, sinó com a alliberador. Va respectar els temples de Babilònia. Va honrar el déu Marduk. Va permetre als pobles deportats per Nabònides —i entre ells, de manera particularment significativa per a la tradició bíblica, els jueus exiliats des dels temps de Nabucodonosor— de retornar a les seves terres i de reconstruir els seus temples.</p>
+
+  <p>El document que registra aquest acte és el cèlebre <strong>Cilindre de Cir</strong>, una inscripció en escriptura cuneïforme que Cir va fer dipositar al temple de Marduk a Babilònia. El text és redactat en la tradició babilònica convencional i presenta Cir com l'elegit de Marduk. Però el contingut polític és notable: Cir declara que ha alliberat els habitants de Babilònia del jou injust, que ha restaurat els temples, que ha permès als déus de les ciutats veïnes que tornin a les seves capelles.</p>
+
+  <p>En el sistema zoroastrià, Ahura Mazda és el déu de la veritat universal, del principi còsmic d'ordre (<em>Asha</em>) que sustenta tota l'existència. No és un déu tribal, un protector ètnic d'un poble concret, sinó el fonament metafísic de tota la realitat. Des d'aquesta perspectiva, el rei just —aquell que governa conforme a <em>Asha</em>, que respecta la veritat i defensa l'ordre— és, per definició, un agent d'Ahura Mazda, independentment de quin déu invoquin els seus súbdits en els seus temples locals. La tolerància aquemènida cap als cultes locals no és simplement pragmatisme polític: té una lògica teològica coherent.</p>
+
+  <h2 id="s61-bisutun">Darios I i la inscripció de Bisutun</h2>
+
+  <p>Si Cir representa el moment de la tolerància fundacional, Darios I representa el moment de la sistematització ideològica de l'Imperi. I el document central d'aquesta sistematització és la <strong>inscripció de Bisutun</strong> (<em>Bīsotūn</em> o <em>Behistun</em>), un text trilingüe —en vell persa, en elamita i en babilònic— esculpit en un penyal escarpat de Kermanshah, a l'Iran occidental, a una alçada d'uns setanta metres.</p>
+
+  <p>Darios va fer inscriure a Bisutun el relat de com havia accedit al tron i com havia sufocat les múltiples rebel·lions que van esclatar arreu de l'Imperi en el moment de la seva ascensió. Però el que és filosòficament i religiosament significatiu és el marc interpretatiu: tot el que ell fa, ho fa perquè Ahura Mazda l'ha escollit. Tots els seus enemics practiquen la <em>Druj</em> —la mentida, el caos, el principi del mal— en oposició a l'<em>Asha</em> que Darios representa.</p>
+
+  <div class="highlight">
+    <p>«Ahura Mazda és un gran déu, el qual ha creat la terra, el cel i la felicitat dels homes; que ha fet de Darios el rei.» — Inscripció de Bisutun</p>
+  </div>
+
+  <p>El que fa la inscripció de Bisutun tan significant per al nostre argument és que no es tracta d'un text teològic ni d'un text purament propagandístic en el sentit convencional, sinó d'un document que <strong>integra la política i l'ètica en un sol marc de significat</strong>. El rei no és just perquè és poderós, ni poderós perquè els déus l'han afavorit capriciosament: és poderós <em>perquè és just</em>, perquè governa conforme a la veritat còsmica que Ahura Mazda representa.</p>
+
+  <p>Per primera vegada en la història de la humanitat, un Estat imperial no es va justificar simplement per la força, per la voluntat dels déus tribals o per la tradició ancestral, sinó per la seva adhesió a uns principis morals d'abast universal: la veritat, la justícia, l'ordre còsmic.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     6.2
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s62" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">6.2</span>Cosmovisió zoroastriana</h1>
+
+  <p class="drop-cap">La cosmovisió zoroastriana no és un conjunt de creences juxtaposades, sinó un sistema de pensament extraordinàriament coherent, en el qual cada element —el dualisme, la jerarquia divina, l'escatologia individual i còsmica— es desprèn lògicament d'un principi fundador únic: l'existència d'una tensió originària entre dos principis oposats i irreductibles, la veritat i la mentida, la llum i la foscor, l'ordre i el caos.</p>
+
+  <h2 id="s621">6.2.1 El dualisme Asha/Druj</h2>
+  <p>El punt de partida de tota la teologia zoroastriana és una afirmació que, dita en veu alta, sembla simple però que té implicacions filosòfiques d'un abast extraordinari: <strong>la realitat està dividida en dos principis oposats i en guerra permanent</strong>.</p>
+  <p>En els <em>Gathas</em>, Zaratustra formula aquesta oposició en termes de dos «esperits bessons» primordials —els <em>Mainyus</em>— que en el moment de la creació van escollir cadascun el seu camí: un va escollir <em>Asha</em> (veritat, ordre, justícia, vida), l'altre va escollir <em>Druj</em> (mentida, caos, injustícia, mort). Aquesta elecció no és un accident ni el resultat d'una corrupció posterior, com en el mite cristià de la caiguda de Llucifer: és constitutiva de la realitat des de l'origen.</p>
+  <p>La paraula <em>Asha</em> és d'una riquesa semàntica que cap traducció única pot abastar. En els textos avèstics designa alhora la veritat com a principi còsmic, la justícia com a ordre social, la rectitud com a condició moral individual, i la llum com a símbol físic de tot l'anterior. El seu equivalent védic és <em>Ṛta</em>, el principi d'ordre còsmic que sosté tant el moviment dels astres com la veritat del discurs humà i la justícia dels actes.</p>
+  <p><em>Druj</em>, per contrast, és la negació activa de tot això. No simplement l'error o la ignorància, sinó la mentida deliberada, la voluntat de destruir l'ordre, la força que corromp, que enganya, que emmetzina les relacions humanes i el cosmos sencer.</p>
+  <p>El dualisme zoroastrià no és, però, un dualisme absolut. Zaratustra és explícit: <em>Asha</em> vencerà. El mal és real i poderós, però no és etern ni equivalent a Déu. La seva derrota definitiva —el <em>Frashokereti</em>— és la promesa que estructura tota l'escatologia zoroastriana.</p>
+
+  <h2 id="s622">6.2.2 Ahura Mazda i els Amesha Spenta</h2>
+  <p>Si <em>Asha</em> és el principi còsmic, Ahura Mazda n'és la font personal. El nom significa literalment «Senyor (<em>Ahura</em>) Savi (<em>Mazda</em>)», i la seva naturalesa en els <em>Gathas</em> és la d'una divinitat que combina de manera inèdita tres atributs que les religions del seu entorn rarament unificaven: la saviesa infinita, la bondat absoluta i la potència creadora.</p>
+  <p>Ahura Mazda actua en el món a través de sis emanacions o atributs divins hipostasiats que els textos avèstics posteriors anomenen els <strong>Amesha Spenta</strong> —els «Immortals Benefactors»:</p>
+  <ul style="margin: 1rem 0 1.5rem 2rem; line-height:2;">
+    <li><strong>Vohu Manah</strong> — «Pensament Bo»: la ment divina, la saviesa que guia el just.</li>
+    <li><strong>Asha Vahishta</strong> — «Millor Veritat»: la personificació d'<em>Asha</em> en la seva forma més elevada. Associat amb el foc sagrat.</li>
+    <li><strong>Khshathra Vairya</strong> — «Poder Desitjable»: el poder diví que s'ha de manifestar com a justícia i bon govern.</li>
+    <li><strong>Spenta Armaiti</strong> — «Devoció Santa»: la pietat amorosa. Associada amb la terra i la feminitat.</li>
+    <li><strong>Haurvatat</strong> — «Integritat»: la perfecció i la salut. Associada amb l'aigua.</li>
+    <li><strong>Ameretat</strong> — «Immortalitat»: la vida eterna. Associada amb les plantes.</li>
+  </ul>
+  <p>Enfront dels Amesha Spenta, el principi del mal —que en els textos avèstics més tardans rep el nom d'<strong>Angra Mainyu</strong> («Esperit Destructiu»), i en el persa mitjà es coneixerà com a <strong>Ahriman</strong>— té els seus propis «arcàngels» malèvols, els <em>Daeva</em> i els <em>Druj</em> personificats, que actuen com a mirall distorsionat de la jerarquia del bé.</p>
+
+  <h2 id="s623">6.2.3 La lluita còsmica entre forces del bé i del mal</h2>
+  <p>La cosmovisió zoroastriana no concep el temps com un cicle —com en la majoria de les religions del seu entorn— sinó com una <strong>línia</strong> amb un principi, un desenvolupament i un desenllaç. Aquesta concepció lineal del temps és potser la contribució més revolucionària del zoroastrisme al pensament religiós de la humanitat.</p>
+  <p>Segons la cosmogonia zoroastriana desenvolupada en els textos del <em>Bundahishn</em>, la història còsmica es divideix en quatre períodes de tres mil anys cadascun. Durant el primer, Ahura Mazda existia en la llum i Angra Mainyu en la foscor. Al segon, Ahura Mazda va crear el món espiritual i material. Al tercer —el de la història humana—, Angra Mainyu va penetrar en la creació material i la va corrompre. El quart veurà la victòria definitiva del bé i la renovació del món.</p>
+
+  <h2 id="s624">6.2.4 El Frashokereti: la renovació definitiva del món</h2>
+  <p>El <em>Frashokereti</em> —terme avèstic que significa literalment «fer excel·lent», «fer meravellós», «renovar»— és el concepte escatològic central del zoroastrisme: la renovació final i definitiva de tota la creació, el moment en el qual el mal serà eliminat per sempre, els morts ressuscitaran, i l'univers sencer serà restaurat a la seva condició originària de puresa i perfecció.</p>
+  <p>El <em>Frashokereti</em> no és simplement la fi del món en el sentit de la seva destrucció o abandó, sinó la seva <strong>transfiguració</strong>. El cosmos no serà aniquilat i substituït per un altre; serà purificat i perfeccionat. Fins i tot els condemnats a l'infern participaran finalment en aquesta renovació, un cop hagin estat purificats pel foc.</p>
+  <p>El procés del <em>Frashokereti</em> s'inicia amb la vinguda del <strong>Saoshyant</strong>, el Salvador o «Benefactor del Món», un personatge messiànic que naixerà d'una verge fecundada per la llavor preservada de Zaratustra en un llac sagrat. La figura del Saoshyant és la primera formulació coneguda del <strong>messianisme</strong> en la història de les religions.</p>
+
+  <h2 id="s625">6.2.5 El Pont Chinvat: separació entre justos i pecadors</h2>
+  <p>Entre la mort individual i la renovació còsmica, el zoroastrisme situa el <strong>Pont Chinvat</strong> —el «Pont del Separador» o «Pont del Jutge»—, un pont que tota ànima ha de creuar en el moment de la mort per arribar al seu destí postmortem.</p>
+  <p>Segons la tradició avèstica, el Pont Chinvat s'estén des de la cima d'una muntanya sagrada —el mont Harburz, l'eix del món— fins a l'altre costat de la vida. En el moment en el qual l'ànima del difunt s'hi apropa, el pont canvia de naturalesa en funció dels actes de la persona: per als justos, s'eixampla fins a tenir la largada de nou llances; per als pecadors, s'estreny fins a ser tan fi com el tall d'una espasa, i l'ànima cau al buit de l'infern.</p>
+  <p>En el moment de la travessia, l'ànima del just es troba amb la seva pròpia <em>daena</em>, la personificació de la seva consciència moral: una figura bella en proporció a la rectitud de la vida viscuda. L'ànima del pecador, per contrast, es troba amb una figura lletja i repugnant que l'arrossega cap a l'abisme.</p>
+
+  <h2 id="s626">6.2.6 El judici individual postmortem</h2>
+  <p>Al quart dia després de la mort, l'ànima compareix davant d'un tribunal diví presidit per <strong>Mithra</strong> —el déu del contracte i de la veritat— i per <strong>Sraosha</strong> (l'Obediència) i <strong>Rashnu</strong> (la Justícia). En aquest tribunal, les accions de la persona morta són <strong>pesades</strong> en una balança còsmica: a un costat, els pensaments, paraules i actes bons; a l'altre, els pensaments, paraules i actes dolents.</p>
+  <p>Si els bons actes predominen, l'ànima ascendeix a la «Casa de la Cançó» (<em>Garo Demana</em>), el paradís d'Ahura Mazda. Si els dolents actes predominen, l'ànima cau a la «Casa de la Mentida» (<em>Drujaskan</em>). Si s'equilibren, l'ànima va a un lloc intermedi anomenat <em>Hamistagan</em>.</p>
+  <p>El sistema del judici individual zoroastrià és filosòficament revolucionari: estableix que el destí postmortem de l'ànima depèn exclusivament dels seus actes morals, independent de la pertinença ètnica, riquesa o casta. Estem davant del primer sistema conegut de judici individual postmortem en la història de les religions.</p>
+
+  <h2 id="s627">6.2.7 La victòria definitiva d'Asha sobre Druj</h2>
+  <p><em>Asha</em> no simplement és millor que <em>Druj</em>: és més real. El mal és una intrusió, una corrupció, una desviació de l'ordre que sustenta l'existència. No té la consistència ontològica del bé; no pot crear, només destruir i corrompre allò que el bé ha creat.</p>
+  <p>Aquesta convicció —que la victòria del bé no és simplement desitjable sinó inevitable— fa que la implicació moral de l'ésser humà no sigui una aposta en un resultat incert, sinó una <strong>participació en un triomf que ja és, en cert sentit, definitiu</strong>. El fidel zoroastrià no lluita perquè potser guanyarà; lluita perquè sap que guanyarà, i la seva lluita és el que fa que la victòria sigui real en el temps present.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     6.3
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s63" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">6.3</span>Ètica i responsabilitat humana</h1>
+  <p style="font-style:italic; color:var(--ink-light); margin-bottom:2rem;">L'elecció moral com a centre de la condició humana. El triple camí. La responsabilitat col·lectiva.</p>
+
+  <p class="drop-cap">Si la cosmovisió zoroastriana estableix el marc metafísic —la lluita còsmica entre <em>Asha</em> i <em>Druj</em>, la jerarquia divina, el judici postmortem, la renovació final del món—, el 6.3 n'és la conseqüència antropològica i pràctica: l'ésser humà és, essencialment i constitutivament, un ésser moral. No és simplement un animal entre altres, ni un joguet dels déus, ni un mecanisme determinat per forces còsmiques. És un agent lliure, capaç d'escollir entre el bé i el mal.</p>
+
+  <h2 id="s631">6.3.1 L'elecció moral com a centre de la condició humana</h2>
+  <p>El concepte central de l'ètica zoroastriana és <em>armaiti</em>, la devoció o la rectitud d'intenció, combinat amb la noció de lliure arbitri com a tret constitutiu de la naturalesa humana. A diferència de les religions del seu context, en les quals els éssers humans eren sovint concebuts com a servents dels déus, en el sistema zoroastrià l'ésser humà ha estat creat per a un propòsit moral específic: ser el company d'Ahura Mazda en la lluita contra el mal.</p>
+  <p>La llibertat de l'ésser humà no és, en el sistema zoroastrià, un defecte de la creació ni una font d'ansietat: és la condició de possibilitat de la col·laboració moral entre Déu i l'home. Ahura Mazda necessita aliats lliures, no esclaus obedients.</p>
+  <p>Aquesta valoració positiva del món material —enfront del despreciament del cos i de la matèria que caracteritzarà corrents gnòstics, ascètics i dualistes posteriors— és un tret distintiu del zoroastrisme. El cosmos material no és una presó de l'ànima, ni una il·lusió, ni un obstacle per a la salvació: és el camp de batalla en el qual la lluita entre el bé i el mal es decideix realment.</p>
+
+  <h2 id="s632">6.3.2 El triple camí: Humata, Hukhta, Hvarshta</h2>
+  <p>La fórmula ètica central del zoroastrisme s'expressa en tres paraules avèstiques:</p>
+
+  <div class="triple-path">
+    <div class="triple-card">
+      <span class="avesic">Humata</span>
+      <span class="meaning">Bons pensaments</span>
+    </div>
+    <div class="triple-card">
+      <span class="avesic">Hukhta</span>
+      <span class="meaning">Bones paraules</span>
+    </div>
+    <div class="triple-card">
+      <span class="avesic">Hvarshta</span>
+      <span class="meaning">Bones accions</span>
+    </div>
+  </div>
+
+  <p>Aquesta tríade no és simplement un eslògan devocional. És una arquitectura moral que estructurava la vida del fidel zoroastrià des de la seva dimensió més interior fins a la seva expressió més externa, i que reflecteix una comprensió profundament integrada de la naturalesa humana: l'ésser humà no és un ésser purament interior ni purament exterior, sinó una unitat de ment, paraula i acció en la qual cada nivell és igualment important.</p>
+  <p>El pensament és el primer camp de batalla moral. <em>Druj</em> no entra al món simplement a través dels actes violents o injustos; entra primer a través dels pensaments: la cobdícia, l'enveja, la ira, la deshonestedat amb un mateix. La tríade té una coherència interna precisa: el pensament és la font, la paraula és el vehicle, i l'acció és el fruit.</p>
+
+  <h2 id="s633">6.3.3 La responsabilitat col·lectiva</h2>
+  <p>El zoroastrisme no és una religió de salvació individual en el sentit que la salvació de cadascú sigui un afer estrictament privat entre l'individu i Déu. La dimensió col·lectiva de la responsabilitat moral és un element constitutiu del sistema, i es manifesta en cinc plans:</p>
+  <p><strong>La comunitat religiosa:</strong> Deixar que un membre de la comunitat s'entregui a la <em>Druj</em> sense intentar corregir-lo és una forma de complicitat amb el mal.</p>
+  <p><strong>La responsabilitat envers la creació material:</strong> La terra ha de ser conreada, l'aigua protegida, el foc mantingut pur, els animals domèstics cuidats.</p>
+  <p><strong>La responsabilitat envers l'ordre polític:</strong> El rei, el jutge, el sacerdot exerceixen funcions que contribueixen directament a l'expansió d'<em>Asha</em> o de <em>Druj</em> en el cos social. Un rei injust no és simplement un mal governant: és un agent de <em>Druj</em>.</p>
+  <p><strong>La responsabilitat intergeneracional:</strong> Les conseqüències dels actes humans no es limiten a la vida individual; les decisions d'ara afectaran les generacions futures.</p>
+  <p><strong>La responsabilitat universal:</strong> <em>Asha</em> no és el principi d'un poble ni d'una raça: és el principi que sustenta tota l'existència. Aquesta universalitat de l'horitzó moral zoroastrià és, en la seva època, absolutament inèdita.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     6.4
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s64" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">6.4</span>Ritual, comunitat i llei</h1>
+  <p style="font-style:italic; color:var(--ink-light); margin-bottom:2rem;">El foc sagrat, els mags, els temples de foc, la llei Dāta i l'ordre polític.</p>
+
+  <h2 id="s641">6.4.1 El foc sagrat: símbol, ritual i presència d'Ahura Mazda</h2>
+  <p class="drop-cap">El foc és, sens dubte, el símbol més recognoscible del zoroastrisme, i el que ha marcat de manera més visible la seva identitat davant de les tradicions religioses veïnes. Però comprendre el paper del foc en el zoroastrisme exigeix superar la caricatura que n'han fet algunes tradicions polèmiques —que presentaven els zoroastrians com a «adoradors del foc»— per arribar a la seva funció teològica i ritual precisa.</p>
+  <p>El foc, en la tradició avèstica, no és Déu ni un déu: és la manifestació visible d'<em>Asha Vahishta</em>, el segon dels Amesha Spenta. En tant que llum que il·lumina les tenebres, calor que expulsa el fred, puresa que crema la impuresa, el foc és el símbol físic més perfecte del principi còsmic que Zaratustra col·loca al centre del seu sistema.</p>
+  <p>La tradició zoroastriana classifica els focs sagrats en una jerarquia de tres graus: l'<strong>Atash Dadgah</strong> (foc domèstic o comunitari de primer rang), l'<strong>Atash Adaran</strong> (foc de rang intermedi) i l'<strong>Atash Bahram</strong> —el «Foc de la Victòria», el foc de rang suprem—, creat a través d'un ritual elaboradíssim que requeria la combinació de setze focs de fonts diverses. Avui en dia, la comunitat parsi de l'Índia conserva diversos Atash Bahram mantinguts encesos durant segles.</p>
+
+  <h2 id="s642">6.4.2 Els mags: origen, funció i transformació</h2>
+  <p>La paraula «mag» —que en les llengües modernes europees ha adquirit connotacions de màgia, misteri i poders sobrenaturals— deriva directament del terme persa <em>magu</em> (en grec, <em>magos</em>; en llatí, <em>magus</em>), que designava originalment els membres d'una tribu o casta sacerdotal meda especialitzada en la pràctica del culte zoroastrià.</p>
+  <p>Els mags eren especialistes en el manteniment dels focs sagrats, en la interpretació dels somnis i dels presagis, en la realització dels rituals de purificació, en la recitació dels textos sagrats i en l'administració dels temples. La seva posició era, alhora, religiosa, intel·lectual i social: eren els dipositaris de la tradició escrita i oral, els intèrprets de la llei divina i els consellers espirituals del poder polític.</p>
+  <p>La transformació semàntica de la paraula «mag» en el món hel·lenístic i romà és il·lustrativa de com les tradicions religioses es distorsionen en el pas d'una cultura a una altra. A mesura que el zoroastrisme es va difondre per l'àrea mediterrània, els «mags» van adquirir una reputació de savis orientals posseïdors de coneixements esotèrics sobre els astres, els somnis i les forces ocultes de la natura.</p>
+
+  <h2 id="s643">6.4.3 Els temples de foc: arquitectura, funció i significat comunitari</h2>
+  <p>El temple de foc zoroastrià —<em>atashkadeh</em> en persa, «casa del foc»— és una institució que no apareix en la seva forma plenament desenvolupada fins al període aquemènida tardà i, sobretot, al període sassànida. Al cor del temple hi ha la <strong>sala del foc</strong> (<em>chahar taq</em>, literalment «quatre arcs»), una cambra quadrada coberta per una cúpula en la qual arda el foc sagrat en un recipient metàl·lic sobre un altar de pedra. Aquesta cambra és accessible exclusivament als sacerdots purificats ritualísticament.</p>
+  <p>La funció del temple de foc no es limitava al culte estrictament religiós. En les societats zoroastrianes del període aquemènida i sassànida, el temple era simultàniament un centre de culte, un arxiu de registres civils, un lloc de reunió comunitària, un tribunal de justícia menor i, en alguns casos, un hospital o un lloc d'assistència als pobres.</p>
+
+  <h2 id="s644">6.4.4 La llei Dāta i l'ordre polític</h2>
+  <p>El terme avèstic <strong>Dāta</strong> designa, en el seu sentit més ampli, la «llei» o «allò que ha estat donat» —un concepte que en el sistema zoroastrià cobreix alhora la llei divina revelada per Ahura Mazda, la llei còsmica que regeix l'ordre de la creació, i la llei humana que ha de traduir l'una i l'altra en normes concretes de convivència. La <em>Dāta</em> és la dimensió jurídica d'<em>Asha</em>.</p>
+  <p>En el pla del dret de família, la llei zoroastriana regulava amb gran detall les obligacions mútues entre els membres de la família. La dona podia posseir béns, administrar propietats, participar en activitats econòmiques i, en certes circumstàncies, exercir funcions religioses —un estatut significativament més elevat que en molts sistemes legals contemporanis.</p>
+  <p>En el pla del dret contractual, el contracte —el <em>mithra</em>— era un acte religiós a més d'un acte jurídic, i la seva violació era no sols un delicte civil sinó un acte de <em>Druj</em>, una traïció a <em>Asha</em>.</p>
+  <p>En la ideologia zoroastriana, el Gran Rei no és la font de la llei: és el seu guardà i executor. La <em>Dāta</em> prové d'Ahura Mazda, i el rei la rep i l'aplica en la mesura que ell mateix és un agent d'<em>Asha</em>. Això significa que el poder reial és, en el sistema zoroastrià, un <strong>poder limitat per la llei divina</strong>. Aquesta limitació religiosa del poder polític per la llei divina és un dels llegats més duradors del zoroastrisme al pensament polític d'Occident.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     6.5
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s65" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">6.5</span>Influència sobre altres tradicions religioses</h1>
+
+  <!-- 6.5.1 JUDAISME -->
+  <div id="s651">
+    <div class="tradition-header">
+      <span class="tradition-icon">✡</span>
+      <h2 class="tradition-title" style="margin:0;">6.5.1 Judaisme</h2>
+    </div>
+    <h3>Context històric del contacte entre zoroastrisme i judaisme</h3>
+    <p>El contacte més profund entre el zoroastrisme i el judaisme es produeix durant l'exili del poble jueu a Babilònia, que s'estén des del 586 aC fins al 539 aC, i continua en el període persa posterior, que abasta del 539 aC al 332 aC. Aquest marc cronològic és fonamental per entendre la intensitat dels intercanvis intel·lectuals i religiosos, ja que els jueus desplaçats van viure sota el domini de l'Imperi Aquemènida, on el zoroastrisme era la religió dominant. Cir el Gran, rei de Pèrsia, és percebut per les fonts jueves com un alliberador, atès que va permetre el retorn dels exiliats a Jerusalem i la reconstrucció del Temple.</p>
+    <p>Aquesta acció política va obrir les portes a una presència estable de funcionaris i sacerdots zoroastrians en l'administració persa de Judea, la qual cosa va facilitar la transmissió de conceptes teològics. A més, entre els jueus que van tornar de l'exili hi havia individus que s'havien convertit al zoroastrisme o que havien estat influïts per aquesta tradició, i en reincorporar-se a la comunitat jueva van aportar elements perses. La influència persa es concentra de manera especial en els llibres bíblics escrits o editats després de l'exili, com ara la segona part d'Isaïes (anomenat Deuteroisaïes), Ezequiel, Daniel, Esdres, Nehemies i Cròniques.</p>
+    <h3>Influències principals del zoroastrisme sobre el judaisme</h3>
+    <h4>Dualisme moral</h4>
+    <p>Una de les aportacions més significatives del zoroastrisme al judaisme és la introducció d'un conflicte còsmic entre forces del bé i del mal, un concepte absent en el judaisme antic preexílic. En el judaisme anterior a l'exili, el mal provenia únicament de la desobediència humana a Jahvè, sense que existís una força antagònica independent i coeterna. No obstant això, després del contacte amb Pèrsia comença a aparèixer la figura de Satanàs, inicialment com a acusador al cel —encara sotmès a Déu— en textos com el llibre de Job. Més endavant, en llibres tardans com Daniel, el dualisme s'intensifica: l'arcàngel Miquel lluita contra els prínceps persa i grec, entesos com a àngels caiguts d'altres nacions. Aquesta evolució culmina en el judaisme rabínic posterior, que desenvolupa el dualisme del <em>yetzer ha-ra</em> (inclinació al mal) enfront del <em>yetzer ha-tov</em> (inclinació al bé), un paral·lelisme clar amb la lluita zoroastriana entre Asha i Druj.</p>
+    <h4>Angelologia</h4>
+    <p>En el judaisme antic no existia una angelologia desenvolupada; els missatgers divins eren aparicions sense nom ni jerarquia. Després de l'exili, en canvi, apareixen àngels amb noms i funcions específiques: Miquel, Gabriel, Rafael, Uriel, presentats com a arcàngels amb rols precisos (guerrer, missatger, curador, savi). Aquesta estructura presenta un paral·lelisme directe amb els Amesha Spenta zoroastrians. El llibre d'Enoch, tot i no ser canònic per al judaisme rabínic, va tenir una influència notable i presenta una angelologia molt propera a l'estructura zoroastriana, amb una organització en cercles i un detallat catàleg de noms angèlics.</p>
+    <h4>Demonologia</h4>
+    <p>Paral·lelament a l'auge de l'angelologia, la demonologia jueva experimenta una transformació profunda. Satanàs evoluciona des de l'«acusador al cel» del llibre de Job fins a convertir-se, en el judaisme tardà (especialment en el Talmud), en una figura oposada a Déu, amb atributs similars als d'Ahriman (Angra Mainyu): temptador, acusador i àngel de la mort. A més, apareixen dimonis amb noms propis: Asmodeu, Belial, Mastema, Samael. Els Manuscrits del Mar Mort, especialment la Regla de la Comunitat, parlen de Belial com a «esperit de perversitat», una expressió paral·lela a Angra Mainyu (l'Esperit Destructor).</p>
+    <h4>Escatologia</h4>
+    <p>L'escatologia jueva preexílica concebia el més enllà com un <em>sheol</em> indiferenciat, ombrívol i sense judici moral. Després del contacte amb Pèrsia, sorgeixen conceptes nous: el Gehenna com a lloc de càstig temporal, l'Olam Ha-Ba (Món per Vènir) com a recompensa, i la resurrecció dels cossos —no només de l'ànima—, un dogma absent en la tradició grega però central en el zoroastrisme, on el Frashokereti implica la restauració física del món i dels cossos. El judici final davant de Déu en la «vall de Jehoshafat» (llibre de Joel) presenta un paral·lel directe amb el judici de l'ànima en el pont Chinvat zoroastrià.</p>
+    <h4>Ètica universalista</h4>
+    <p>En el judaisme preexílic, Jahvè era sobretot el déu d'Israel, que defensava el seu poble enfront dels altres déus nacionals. Després de l'exili, Jahvè es converteix en el déu únic, que jutja totes les nacions segons el mateix criteri moral, una visió paral·lela a la d'Ahura Mazda com a senyor de l'ordre moral universal. El llibre de Jonàs n'és l'expressió més clara: Déu perdona els assiris de Nínive, una nació enemiga, perquè es penedeixen.</p>
+    <h4>Messianisme</h4>
+    <p>El messies jueu anterior a l'exili era simplement un rei humà de la dinastia de David que restauraria el regne d'Israel. Després del contacte amb Pèrsia, el messies adquireix dimensions còsmiques: derrota final del mal, resurrecció universal i pau perpètua. Aquestes característiques són paral·leles conceptuals directes amb el Saoshyant zoroastrià, el salvador que naixerà al final dels temps per renovar el món i ressuscitar els morts. El llibre de Daniel, especialment el capítol 7 amb la figura del «Fill d'home», presenta una imatge messiànica clarament influïda per l'escatologia persa.</p>
+  </div>
+
+  <div class="rule-ornament">— ✦ —</div>
+
+  <!-- 6.5.2 CRISTIANISME -->
+  <div id="s652">
+    <div class="tradition-header">
+      <span class="tradition-icon">✝</span>
+      <h2 class="tradition-title" style="margin:0;">6.5.2 Cristianisme</h2>
+    </div>
+    <h3>Context històric del contacte entre zoroastrisme i cristianisme</h3>
+    <p>El cristianisme neix en un entorn jueu que, durant segles, ja havia estat profundament influït pel pensament persa. A més, les comunitats jueves de la diàspora a l'Orient (Pèrsia, Babilònia) mantenien un contacte directe i continu amb el zoroastrisme. L'Imperi Part (247 aC – 224 dC), de cultura irànica i religió zoroastriana, dominava la regió durant el naixement del cristianisme. Posteriorment, l'Imperi Sassànida (224 – 651 dC) va establir el zoroastrisme com a religió d'Estat just en el període d'expansió del cristianisme. L'Evangeli de Mateu, l'únic que esmenta els mags, ja mostra aquesta influència persa en la narrativa cristiana primitiva.</p>
+    <h3>Influències principals del zoroastrisme sobre el cristianisme</h3>
+    <h4>Concepció del mal</h4>
+    <p>En el cristianisme primitiu, Satanàs adquireix un paper còsmic i moral similar al d'Ahriman. No és només un temptador, sinó «el príncep d'aquest món» (Joan 12:31) i l'adversari còsmic de Déu. L'episodi de la temptació de Crist (Mateu 4, Lluc 4) mostra Satanàs oferint «tots els regnes del món» a Jesús, un paral·lel clar amb Ahriman, que en la tradició zoroastriana ofereix dominis als humans per desviar-los del camí d'Asha. Satanàs no és una creació malvada de Déu, sinó un àngel caigut per lliure elecció, exactament igual que Ahriman va triar lliurement ser malvat en lloc de seguir Ahura Mazda. La batalla final entre Crist i Satanàs descrita a l'Apocalipsi (capítols 12 i 20) reprodueix l'estructura de la lluita còsmica zoroastriana. La figura de l'Anticrist, com a última encarnació del mal abans de la segona vinguda de Crist, és paral·lela a l'últim engany d'Ahriman abans del Frashokereti.</p>
+    <h4>Món espiritual estructurat</h4>
+    <p>El cristianisme hereta del judaisme postexílic una angelologia jerarquitzada, però la desenvolupa encara més, probablement sota influència persa continuada. La tradició pseudodionisiana (segle V-VI dC) estableix nou cors angèlics: serafins, querubins, trons, dominacions, virtuts, potestats, principats, arcàngels i àngels. Cada arcàngel té una funció específica: Miquel (guerrer), Gabriel (missatger), Rafael (curador), Uriel (savi), que són paral·lels directes als sis Amesha Spenta zoroastrians. La doctrina cristiana dels àngels caiguts —un terç dels àngels, segons Apocalipsi 12:4— que segueixen Satanàs recorda la divisió primordial entre els ahuras (fidels a Ahura Mazda) i els daevas (seguidors d'Ahriman).</p>
+    <h4>Escatologia cristiana</h4>
+    <p>L'escatologia cristiana presenta un judici final detallat, la resurrecció dels cossos, la purificació pel foc i el triomf definitiu del bé, conceptes presos directament del Frashokereti zoroastrià. El judici final en què Crist, assegut al tron, separa les ovelles dels cabrits (Mateu 25) és paral·lel al judici d'Ahura Mazda sobre les ànimes. La resurrecció dels cossos —no només la immortalitat de l'ànima— es converteix en un dogma central del cristianisme, absent en la tradició jueva preexílica i en el platonisme, però plenament present en el zoroastrisme. La purificació pel foc apareix a 1 Corintis 3: «la obra de cadascú es farà evident... el foc posarà a prova la qualitat de l'obra de cadascú». Pares de l'Església com Orígenes defensen l'apocatàstasi —la restauració final de tots els éssers, inclosos els pecadors—, una idea molt propera a la purificació temporal de l'infern zoroastrià.</p>
+    <h4>Paradís i infern</h4>
+    <p>El cristianisme desenvolupa espais moralitzats de recompensa i càstig, dissenyats sistemàticament com en el zoroastrisme. El paradís és la presència de Déu, la beatitud eterna i la reunió amb els justos, paral·lel al Garothman Behest zoroastrià. L'infern és foc, tenebres, plors i cruixir de dents, similar al Drujo Demana (la casa del Mal), però amb una diferència important: mentre l'infern cristià és sovint etern, l'infern zoroastrià és temporal. El purgatori, en el cristianisme catòlic, és el paral·lel exacte de l'Hamistagan zoroastrià: un lloc temporal de purificació per als pecadors que no han comès pecats mortals, on pateixen un foc purificador abans d'accedir al paradís.</p>
+    <h4>Simbolisme llum/foscor</h4>
+    <p>El cristianisme adopta un simbolisme de llum i foscor directament alineat amb la cosmologia irànica i el dualisme zoroastrià. Crist és la «Llum del món» (Joan 8:12), mentre que les tenebres són una força activa del mal (Joan 1:5: «la llum resplendeix en les tenebres, i les tenebres no la van vèncer»). A diferència del judaisme antic, on Jahvè creava la foscor i enviava plagues, en el cristianisme la foscor esdevé dolenta en si mateixa, com a símbol de Satanàs. Els Manuscrits del Mar Mort parlen de «fills de la llum» enfront de «fills de les tenebres», una terminologia directament zoroastriana que també apareix en l'Evangeli de Joan i en Pau.</p>
+    <h4>Messianisme universal</h4>
+    <p>Jesús és presentat com un salvador universal, no només dels jueus, una característica que recorda el Saoshyant zoroastrià, el salvador que vindrà al final dels temps per a tota la humanitat. En els evangelis, Jesús accepta pagans com a primers seguidors: el centurió romà (Mateu 8), la dona cananea (Mateu 15), i sobretot els mags perses (Mateu 2). La Gran Comissió final («aneu i feu deixebles de totes les nacions», Mateu 28:19) és paral·lela a la missió universal del Saoshyant.</p>
+    <h4>Incidència en la narrativa cristiana: els Mags</h4>
+    <p>La presència dels mags —sacerdots zoroastrians— a l'Evangeli de Mateu com a primers adoradors de Jesús té una importància teològica cabdal. Mateu vol contraposar l'acceptació de Jesús pels mags pagans amb el rebuig del rei Herodes i dels sacerdots jueus. El fet que uns sacerdots perses, hereus de Zaratustra, reconeguin l'estrella messiànica indica que la tradició profètica persa, derivada del contacte amb Daniel i altres textos jueus, ha conservat la veritat. Els tresors que ofereixen —or, encens i mirra— són simbòlics: l'or representa la reialesa de Crist, l'encens la seva divinitat, i la mirra la seva mort. Finalment, els mags tornen a «la seva terra» per un altre camí evitant Herodes, símbol que la salvació s'ha obert als pagans fora dels límits d'Israel.</p>
+  </div>
+
+  <div class="rule-ornament">— ✦ —</div>
+
+  <!-- 6.5.3 ISLAM -->
+  <div id="s653">
+    <div class="tradition-header">
+      <span class="tradition-icon">☪</span>
+      <h2 class="tradition-title" style="margin:0;">6.5.3 Islam</h2>
+    </div>
+    <h3>Context històric del contacte entre zoroastrisme i islam</h3>
+    <p>L'islam neix a la península Aràbiga al segle VII dC, però entra en contacte immediat amb l'Imperi Sassànida (224 – 651 dC), que tenia el zoroastrisme com a religió oficial d'Estat durant més de quatre segles. La conquesta musulmana de Pèrsia (636 – 651 dC) va posar els zoroastrians sota domini islàmic, però lluny de desaparèixer, la cultura persa va impregnar profundament l'islam. Durant els primers segles de l'islam, especialment sota el califat abbàssida (750 – 1258 dC), es va produir una «edat d'or» en què traductors perses i zoroastrians van convertir textos grecs i perses a l'àrab, transmetent així conceptes filosòfics i religiosos. Molts conversos perses a l'islam van aportar conceptes, estructures i sensibilitats zoroastrianes a la teologia islàmica.</p>
+    <h3>Influències principals del zoroastrisme sobre l'islam</h3>
+    <h4>Angelologia islàmica</h4>
+    <p>L'angelologia de l'islam presenta paral·lelismes evidents amb els Amesha Spenta zoroastrians. L'arcàngel Jibril (Gabriel) és l'àngel de la revelació, que transmet l'Alcorà a Mahoma, de manera anàloga a Vohu Manah (Bona Ment), que transmet la veritat a Zaratustra. Mikail (Miquel) és l'àngel de la provisió i la natura, com Haurvatat (Totalitat) i Ameretat (Immortalitat), que curen i protegeixen la creació. Israfil és l'àngel que bufa la trompeta del judici final, paral·lel a Sraosha (Obediència), que anuncia el Frashokereti. Azrail és l'àngel de la mort, que separa l'ànima del cos, una funció similar a la de Mithra (jutge) que guia l'ànima cap al pont Chinvat. L'islam també desenvolupa la creença en àngels guardians anomenats <em>mu'aqqibat</em>, que registren les bones i males accions de cada persona, com els registres zoroastrians on s'anoten els pensaments, paraules i obres.</p>
+    <h4>Demonologia islàmica</h4>
+    <p>Iblis (Satanàs) és una figura que rebutja obeir Déu i prosternar-se davant Adam, un relat que recorda Ahriman com a esperit rebel. A diferència del cristianisme, en l'islam Iblis no és un àngel caigut sinó un djinn, creat de foc sense fum, igual que Ahriman pertany a un ordre diferent del de les criatures bones. La tradició islàmica vacil·la entre considerar que Al·là va crear el mal o que Iblis va triar el mal per lliure albir, un problema teològic que reprodueix el debat zoroastrià sobre l'origen del mal. Els <em>shayatin</em> (dimonis) segueixen Iblis i tempten els humans, exactament com els daevas segueixen Ahriman.</p>
+    <h4>Escatologia islàmica</h4>
+    <p>L'escatologia islàmica presenta un element que és un paral·lel directe amb el pont Chinvat zoroastrià: el <strong>pont Sirat</strong>, descrit com un pont més fi que un cabell i més tallant que una espasa, estès sobre l'infern. Els justos el creuen ràpidament i entren al paradís, mentre que els pecadors hi cauen a l'infern. La resurrecció dels cossos (no només de l'ànima) és un dogma central de l'islam. El judici final presenta Al·là jutjant totes les ànimes, els llibres d'accions es despleguen i els pecats es pesen en una balança (<em>mizan</em>), un paral·lel clar del pesatge zoroastrià de les accions. El paradís (<em>Jannah</em>) és descrit com a jardins amb rius de llet, mel i vi. L'infern (<em>Jahannam</em>) té set nivells, foc, tenebres i càstigs proporcionals als pecats, com l'infern zoroastrià té diferents nivells. El poble d'<em>al-a'raf</em> (el mur) —persones amb bones i males accions equilibrades— és un paral·lel exacte de l'Hamistagan zoroastrià.</p>
+    <h4>Ètica del bé i el mal</h4>
+    <p>L'islam insisteix en la responsabilitat moral individual i en la lliure elecció entre la veritat i la mentida, com en el zoroastrisme. L'Alcorà afirma explícitament: «La veritat ve del vostre Senyor: qui vulgui, que cregui; qui vulgui, que no cregui» (18:29). No hi ha pecat original en l'islam: l'ésser humà neix pur (<em>fitra</em>) i és responsable només de les seves pròpies accions, exactament com en el zoroastrisme, on no existeix una culpa hereditària. La veritat (<em>haqq</em>) és un atribut d'Al·là, de la mateixa manera que Asha és l'atribut fonamental d'Ahura Mazda.</p>
+    <h4>Purificació pel foc</h4>
+    <p>Tot i que l'islam rebutja el culte al foc com a idolatria, el foc apareix com a element purificador en l'escatologia. Algunes corrents islàmiques, com els mutazilites i els xiïtes moderats, defensen que el foc de l'infern purifica els pecadors musulmans fins que aquests poden entrar al paradís. El concepte de <em>barzakh</em> (la tomba com a espai intermedi de purificació o càstig temporal) pot derivar de l'Hamistagan zoroastrià.</p>
+    <h4>Monoteisme radical i el seu diàleg amb el dualisme zoroastrià</h4>
+    <p>L'islam comparteix amb el zoroastrisme la idea d'un Déu únic, transcendent, creador de l'ordre moral, que no és només un déu tribal sinó Senyor de tots els pobles. No obstant això, l'islam rebutja explícitament el dualisme extrem: no hi ha dues forces originàries independents, perquè tot prové d'Al·là. Malgrat aquesta declaració teològica, l'islam persa —particularment el xiisme duodecimà— desenvolupa un dualisme moral dins de la unitat divina. En la pràctica, l'islam manté l'estructura dualista zoroastriana: lluita entre creients i infidels, àngels i dimonis, paradís i infern. Així, tot i rebutjar la coeternitat del bé i del mal, l'islam incorpora el marc dualista de manera operativa.</p>
+  </div>
+
+  <div class="rule-ornament">— ✦ —</div>
+
+  <!-- 6.5.4 HINDUISME -->
+  <div id="s654">
+    <div class="tradition-header">
+      <span class="tradition-icon">🕉</span>
+      <h2 class="tradition-title" style="margin:0;">6.5.4 Hinduisme</h2>
+    </div>
+    <h3>Context històric del contacte entre zoroastrisme i hinduisme</h3>
+    <p>El zoroastrisme i l'hinduisme emergeixen d'un tronc comú indoiranià, és a dir, de la cultura dels pobles aris abans de la seva separació, que els estudiosos situen cap al 2000 – 1500 aC. Prova d'aquest origen compartit és el fet que el Rig-Veda (l'hinduisme) i l'Avesta (el zoroastrisme) comparteixen una llengua, mites i un panteó diví molt similar. La separació es va produir quan els aris que van emigrar a l'Índia van desenvolupar l'hinduisme vèdic, mentre que els que van emigrar a l'Iran van desenvolupar el zoroastrisme. Posteriorment, hi va haver contactes a través de l'Imperi Aquemènida, que controlava parts del nord-oest de l'Índia des del 500 aC aproximadament.</p>
+    <h3>Influències principals (compartides, no només unidireccionals)</h3>
+    <h4>Arrels indo-iranianes compartides</h4>
+    <p>Existeixen paral·lels directes entre les divinitats vèdiques i les avèstiques. Mitra (vèdic) i Mithra (avèstic) són el déu del contracte, la justícia i el jurament. Varuna (vèdic), déu del cel i de l'ordre còsmic, presenta afinitats amb Ahura Mazda (avèstic, «Senyor Savi»), car ambdós són guardians de l'ordre còsmic i moral. Un cas notable d'inversió és Indra: mentre que en el panteó vèdic és el rei dels déus, en l'Avesta Andra és un dimoni. De la mateixa manera, els Nasatya vèdics apareixen en l'Avesta com a Nanghaithya, un dimoni. En canvi, Agni (vèdic), déu del foc, i Atar (avèstic), divinitat del foc, mantenen una correspondència positiva: ambdós són sagrats i centrals en els rituals.</p>
+    <h4>Convergència conceptual entre ṛta i Asha</h4>
+    <p>Un dels paral·lelismes més profunds és entre <em>ṛta</em> (vèdic: «ordre, veritat, curs correcte») i <em>asha</em> (avèstic, de la mateixa arrel indoeuropea h₂r̥tós). Ambdós termes designen l'ordre còsmic i moral que regeix l'univers, un ordre anterior i superior als mateixos déus. En l'hinduisme, <em>ṛta</em> evoluciona cap al concepte de <em>dharma</em> (deure moral, llei social, ordre religiós). En el zoroastrisme, <em>asha</em> evoluciona cap a la llei moral que regeix l'univers i que els humans han de triar lliurement. Ambdues tradicions conceben la veritat (sànscrit <em>satya</em>, avèstic <em>haithya</em>) com a manifestació directa d'aquest ordre subjacent.</p>
+    <h4>Dualismes morals presents en certes escoles hinduistes</h4>
+    <p>L'escola filosòfica Sāṃkhya, un dels sis sistemes ortodoxos de l'hinduisme, desenvolupa un dualisme radical entre <em>purusha</em> (consciència pura, immaterial i múltiple) i <em>prakriti</em> (matèria, una, activa i cega). En el Sāṃkhya, el patiment humà prové de la identificació falsa entre <em>purusha</em> i <em>prakriti</em>; l'alliberament requereix discriminació entre ambdues realitats. Aquest dualisme no és moral (bé/mal) sinó ontològic (consciència/matèria), però la seva estructura binària recorda el dualisme zoroastrià. D'altra banda, les escoles Bhakti (devocionals), sobretot el vishnuisme, oposen bé i mal com a forces personals: els déus (Vixnu, Krisna, Rama) lluiten contra dimonis (Hiranyakashipu, Ravana, Kamsa). L'ànima individual (<em>jiva</em>) tria entre el bé i el mal i reencarna segons el karma, però el karma no és un judici extern com en el zoroastrisme (on hi ha un déu jutge), sinó una llei automàtica de causa-efecte.</p>
+    <h4>Simbolisme del foc</h4>
+    <p>Agni (hinduisme) i Atar (zoroastrisme) comparteixen funcions purificadores i de mediació entre humans i divinitat. En l'hinduisme, el foc sacrificial (<em>yajña</em>) és central: el sacrifici de foc manté l'ordre còsmic. En el zoroastrisme, el foc sagrat és la presència d'Ahura Mazda a la terra, però amb la reforma de Zaratustra no s'ofereixen sacrificis animals. Ambdues tradicions tenen una beguda sagrada: soma a l'Índia, haoma a Pèrsia, amb propietats purificadores i extreta d'una planta. Els rituals <em>agnihotra</em> (vèdic) i <em>yasna</em> (avèstic) comparteixen estructures comunes: encendre el foc, fer ofrenes i recitar himnes.</p>
+  </div>
+
+  <div class="rule-ornament">— ✦ —</div>
+
+  <!-- 6.5.5 EGIPTE -->
+  <div id="s655">
+    <div class="tradition-header">
+      <span class="tradition-icon">𓂀</span>
+      <h2 class="tradition-title" style="margin:0;">6.5.5 Egipte faraònic</h2>
+    </div>
+    <h3>Context històric del contacte entre zoroastrisme i Egipte</h3>
+    <p>Egipte va ser conquerit per l'Imperi Aquemènida l'any 525 aC en la batalla de Pelúsium, sota el rei Cambises II. Pèrsia va dominar Egipte durant dos períodes: la 27a dinastia (525 – 402 aC) i la 31a dinastia (343 – 332 aC). Durant aquests segles, funcionaris, sacerdots i administradors perses (zoroastrians) es van desplaçar a Egipte, i els sacerdots egipcis van entrar en contacte amb el pensament persa. Tot i que el zoroastrisme no s'hi va imposar com a religió majoritària, hi va haver intercanvis intel·lectuals significatius; l'Egipte persa va ser un lloc de sincretisme.</p>
+    <h3>Influències principals (més aviat paral·lelismes amb possible contacte)</h3>
+    <h4>Asha i Ma'at: paral·lels entre ordre, veritat i justícia</h4>
+    <p>Ma'at (en egipci) és l'ordre còsmic, la veritat, la justícia i l'equilibri, el principi fonamental de l'univers egipci. Ma'at és alhora un concepte abstracte i una deessa (filla de Ra) que sosté l'univers. Asha i Ma'at són funcionalment idèntics: ambdós designen l'estructura de la realitat, la veritat com a força activa, i la justícia com a manifestació humana d'aquest ordre. El faraó egipci és el «sacerdot de Ma'at», el garant de l'ordre a la terra, de la mateixa manera que el rei persa és el garant d'Asha. La diferència principal és que Ma'at és també una deessa personal, mentre que Asha no es personifica (encara que hi ha Asha Vahishta com a un dels Amesha Spenta).</p>
+    <h4>Judici postmortem: pesatge del cor i pont Chinvat com a proves morals</h4>
+    <p>El Llibre dels Morts egipci (capítol 125) descriu el pesatge del cor: el cor del difunt es pesa en una balança contra la ploma de Ma'at (símbol de la veritat). El cor ha de ser lleuger, sense pecats; si pesa més que la ploma, és devorat per l'ogressa Ammit i l'ànima deixa d'existir (la «segon mort»). En el zoroastrisme, l'ànima és jutjada per Mithra, Sraosha i Rashnu; les accions es pesen en una balança; si les bones superen les males, l'ànima creua el pont Chinvat (ample) cap al paradís; si són inferiors, el pont s'estreny i l'ànima cau a l'infern. Els paral·lelismes són clars: balança de justícia, pesatge moral, destinació postmortem determinada per la conducta en vida. Les diferències també: en el judici egipci, els pecadors pateixen aniquilació (segon mort), mentre que en el zoroastrià pateixen purificació temporal.</p>
+    <h4>Ordre vs. caos: Ra vs. Apophis i la lluita còsmica entre Asha i Druj</h4>
+    <p>En la mitologia egípcia, Ra (el déu sol) lluita cada nit contra Apophis (Apep), un déu serp que intenta devorar el sol durant el seu viatge pel món subterrani. Si Apophis guanyés, el sol no tornaria a sortir i l'univers s'enfonsaria en el caos. En el zoroastrisme, la lluita còsmica entre Asha (ordre) i Druj (caos, mentida) és el motor de la història, i cada acció humana reforça un bàndol o l'altre. Estructuralment, ambdues tradicions presenten una força del caos (Apophis, Druj) que intenta destruir l'ordre (Ra, Ahura Mazda/Asha). Les diferències: a Egipte, la lluita és cíclica (cada nit es repeteix); en el zoroastrisme, la lluita és lineal i progressa cap a un final definitiu (Frashokereti).</p>
+    <h4>Ètica de la veritat</h4>
+    <p>Ambdues tradicions atorguen una importància cabdal a la rectitud i la sinceritat com a manifestació de l'ordre còsmic. A Egipte, la «confessió negativa» del Llibre dels Morts és la declaració del difunt que no ha comès 42 pecats específics: «No he robat, no he mentit, no he matat», etc. En el zoroastrisme, el pecat fonamental és la mentida (druj), i la veritat (asha) és la virtut suprema. Ambdues tradicions conceben l'ètica no com un manament diví arbitrari, sinó com un alineament amb l'estructura mateixa de la realitat.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     6.6
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s66" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">6.6</span>Llegat: la primera religió ètica d'Estat</h1>
+
+  <p class="drop-cap">Per comprendre el llegat del zoroastrisme cal fer primer un exercici de perspectiva històrica que sovint s'oblida quan es parla de religions «mortes» o «minoritàries»: el zoroastrisme no és una tradició que va influir sobre altres tradicions i després va desaparèixer. És una tradició que va transformar tan profundament les religions que en van heretar els elements fonamentals que, en absorbir-los, les va fer irreconeixibles respecte del que eren abans del contacte.</p>
+
+  <h2 id="s661">6.6.1 De la religió tribal a l'ètica universal: la ruptura fonamental</h2>
+  <p>Totes les religions que precediren Zaratustra —i la majoria de les que eren contemporànies seves— compartien una característica estructural fonamental: eren religions tribals o ètniques, sistemes de culte i de relació amb el sagrat que definien i protegien la identitat d'un grup humà específic enfront dels altres grups. La revolució de Zaratustra consisteix, en la seva dimensió més radical, a proclamar que el principi moral que governa l'univers —<em>Asha</em>, la veritat i l'ordre còsmic— no és el principi d'un poble ni d'una tribu, sinó el fonament de tota la realitat, accessible en principi a qualsevol ésser humà capaç de pensar, parlar i actuar conforme a la veritat.</p>
+  <p>Aquesta universalització del principi religiós és la ruptura fonamental que separa el zoroastrisme de totes les tradicions religioses que el precediren, i el fa filosòficament comparable —i cronològicament anterior— als grans sistemes universalistes que l'Era Axial produirà al llarg dels segles VI i V aC: el budisme, el confucianisme, el profetisme bíblic deuteroisaià, la filosofia grega.</p>
+
+  <h2 id="s662">6.6.2 El model de religió oficial i moral pública: de l'Imperi Aquemènida a Roma cristiana</h2>
+  <p>La primera realització plena del model zoroastrià de religió oficial vinculada a un sistema moral universal és, com hem vist al 6.1, l'Imperi Aquemènida. L'<strong>Imperi Sassànida</strong> (224-651 dC) és la segona gran realització del model: una estructura política en la qual el zoroastrisme era la religió oficial, els mags tenien funcions de govern, la llei <em>Dāta</em> era la llei de l'Estat. L'<strong>Imperi Romà cristià</strong> és el tercer gran exemple: quan Constantí va adoptar el cristianisme el 313 dC, i quan Teodosi el va fer religió oficial el 380 dC, van replicar —en un context teològic diferent, però amb una lògica estructural idèntica— el model aquemènida.</p>
+  <p>La iconografia política dels emperadors romans cristians —el <em>nimbe</em> o aurèola, la representació de l'emperador com a <em>vicarius Christi</em>, el ritual de la coronació com a acte religiós de consagració— reprodueix amb una fidelitat sorprenent l'estructura simbòlica de la legitimació imperial aquemènida.</p>
+
+  <h2 id="s663">6.6.3 El califat islàmic i els regnes medievals: la perduració del model</h2>
+  <p>El califat islàmic és, en molts sentits, l'exemple més directament influït pel model sassànida-zoroastrià de religió d'Estat, perquè va sorgir precisament de la conquesta de l'Imperi Sassànida i va heretar, juntament amb les seves estructures administratives, molts dels seus models de legitimació política i religiosa. El califa, en la teoria política islàmica clàssica, és alhora cap polític i guardà de la llei religiosa (<em>shari'a</em>). La seva legitimitat no deriva de la força ni de la tradició tribal, sinó de la seva capacitat de governar conforme a la voluntat de Déu. Aquesta estructura és estructuralment idèntica al model zoroastrià, transposat al context del monoteisme islàmic.</p>
+  <p>El gènere literari dels «espeills de prínceps» (<em>nasihat al-muluk</em> en àrab, <em>andarz</em> en persa) —tractats de filosofia política que aconsellen els governants sobre com exercir el poder just— arrela directament en la tradició persa preislàmica de la literatura sapiencial zoroastriana.</p>
+  <p>Els <strong>regnes medievals europeus</strong> hereten el model a través del doble filtre del dret romà cristià i de la teologia política de l'Església. La coronació dels reis medievals com a actes religiosos de consagració, el concepte del rei com a «rei per la gràcia de Déu» (<em>Dei gratia rex</em>), la idea que el governant tirà ha perdut la seva legitimitat perquè ha traït la seva obligació envers la justícia divina: tots aquests elements reprodueixen, en el context cristià, la lògica estructural que Zaratustra va articular per primera vegada.</p>
+
+  <h2 id="s664">6.6.4 La perduració en les religions abrahamítiques i en el pensament moral occidental</h2>
+  <p>En el <strong>judaisme</strong>, la transformació que es produeix entre el judaisme preexílic i el judaisme del Segon Temple és inseparable del contacte amb el zoroastrisme. El judaisme preexílic no coneixia un diable personal com a principi del mal, no coneixia una escatologia elaborada de judici individual, resurrecció i paradís/infern, no coneixia una jerarquia angèlica elaborada amb noms i funcions específiques. Tots aquests elements apareixen en el judaisme precisament durant i després del període persa.</p>
+  <p>En el <strong>cristianisme</strong>, la cristologia és impensable sense el substrat escatològic i messianístic que el zoroastrisme havia injectat en el judaisme dels segles anteriors. La figura de Satanàs com a príncep d'aquest món és la transposició cristiana d'Angra Mainyu.</p>
+  <p>En l'<strong>islam</strong>, el Corà coneix i discuteix la tradició zoroastriana —esmenta els <em>Majus</em> entre els pobles del Llibre—, i la teologia islàmica ha elaborat els seus conceptes escatològics bàsics en diàleg constant amb les tradicions zoroastriana i judeo-cristiana que la precedien.</p>
+  <p>En el <strong>pensament moral occidental modern</strong>, la idea que la història té un sentit i avança cap a un fi —la filosofia de la història de Hegel, el materialisme històric de Marx, el progressisme liberal del segle XIX— és, en la seva estructura profunda, una secularització de l'escatologia zoroastriana. Friedrich Nietzsche, que va escollir precisament Zaratustra com a portaveu del seu <em>Also sprach Zarathustra</em> (1883-1885), va comprendre intuïtivament —si bé de manera paradoxal i invertida— la dimensió revolucionària del profeta iranià.</p>
+
+  <h2 id="s665">6.6.5 El zoroastrisme avui: una tradició viva en la diàspora</h2>
+  <p>El llegat del zoroastrisme no és únicament el d'una tradició morta que ha influït sobre altres tradicions vives. El zoroastrisme continua existint com a religió practicada per comunitats disperses per tot el món. La <strong>comunitat parsi</strong> de l'Índia —descendent dels zoroastrians que van emigrar de l'Iran per preservar la seva fe davant la conquesta islàmica del segle VII— és la comunitat zoroastriana més nombrosa i més influent del món contemporani. Establerta principalment a Gujarat i a Mumbai, la comunitat parsi ha donat a l'Índia alguns dels seus industrials, filàntrops, científics i artistes més importants —les famílies Tata i Wadia en el món industrial, el director Zubin Mehta en el musical, Freddie Mercury (Farrokh Bulsara) en la cultura popular.</p>
+  <p>A l'<strong>Iran contemporani</strong>, una minoria zoroastriana —estimada en uns vint-i-cinc mil membres— continua practicant la religió ancestral del país sota les restriccions del règim de la República Islàmica.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     6.7 METODOLOGIA
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s67" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">6.7</span>Metodologia</h1>
+  <p style="font-style:italic; color:var(--ink-light); margin-bottom:2rem;">Advertències epistemològiques i criteris d'interpretació per a l'estudi del zoroastrisme i de les seves influències.</p>
+
+  <p class="drop-cap">L'estudi del zoroastrisme planteja a l'historiador de les religions, al filòsof i al pedagog un conjunt de dificultats metodològiques específiques que no es presenten —o no es presenten amb la mateixa intensitat— en l'estudi de les grans tradicions religioses que han dominat la historiografia acadèmica occidental. Explicitar-les no és un acte de modèstia formal: és una exigència intel·lectual de primer ordre, sense la qual qualsevol conclusió sobre el zoroastrisme i el seu llegat resta suspesa en un buit epistemològic que en compromet la validesa.</p>
+
+  <h2 id="s671">6.7.1 El problema de les fonts: antiguitat, fragmentació i estratigrafia textual</h2>
+  <p>La primera dificultat metodològica és la de les fonts. El corpus textual zoroastrià és, en comparació amb el de les tradicions abrahamítiques que en van heretar els elements, extraordinàriament fragmentari, tardà en la seva fixació escrita, i lingüísticament complex en graus que poques tradicions religioses igualin.</p>
+  <p>Els textos més antics —els <em>Gathas</em>, els disset himnes atribuïts directament a Zaratustra— estan compostos en un avèstic arcaic que és, en molts aspectes, tan proper al sànscrit védic com al persa del període aquemènida. L'<em>Avesta</em> en la seva totalitat no va ser fixat per escrit fins al període sassànida, probablement entre els segles III i VI dC. Els textos pahlavis que completen i interpreten el corpus avèstic —com el <em>Bundahishn</em>, el <em>Denkard</em> o el <em>Mādayān ī Hazār Dādestān</em>— són en la seva major part composicions del període islàmic primerenc. Distingir en aquests textos el que és doctrina genuïnament antiga del que és reelaboració medieval és una tasca filològica i hermenèutica de gran complexitat.</p>
+
+  <h2 id="s672">6.7.2 El problema de la cronologia: quan va viure Zaratustra?</h2>
+  <p>La data de Zaratustra no és simplement una curiositat erudita: és un element que determina profundament com interpretem les relacions entre el zoroastrisme i les tradicions que suposadament en van rebre influència. Si Zaratustra va viure cap al 1200-1000 aC —la data que la majoria dels iranistes moderns accepten—, aleshores va precedir en molts segles el profetisme bíblic de l'exili i del postexili, i la hipòtesi d'una influència zoroastriana sobre el judaisme del Segon Temple és cronològicament plausible. Si, en canvi, va viure cap al 600 aC —la data que algunes fonts antigues i alguns estudiosos moderns proposen—, la relació cronològica es fa molt més complexa.</p>
+  <p>Per a l'historiador, la conseqüència metodològica és clara: cal presentar la qüestió com a oberta, indicar les dues posicions principals i les seves bases d'evidència, i evitar construir arguments d'influència que depenguin d'una resolució definitiva d'un problema que la comunitat acadèmica no ha resolt.</p>
+
+  <h2 id="s673">6.7.3 El problema de la influència: transmissió, paral·lelisme i coincidència independent</h2>
+  <p>Com podem saber si una semblança entre el zoroastrisme i una tradició posterior és el resultat d'una influència directa, d'una herència comuna d'una tradició anterior, o d'una coincidència independent derivada de la resolució similar de problemes teològics similars? La posició metodològica més defensable és la que els especialistes anomenen <strong>«historicisme cautelós»</strong>: la plausibilitat d'una influència zoroastriana sobre una tradició posterior requereix la confluència de tres condicions necessàries:</p>
+  <p><strong>Plausibilitat cronològica:</strong> el concepte zoroastrià ha d'existir —de manera attestada en fonts datables— abans que aparegui en la tradició que suposadament n'ha rebut la influència.</p>
+  <p><strong>Plausibilitat del contacte:</strong> ha d'existir un mecanisme de transmissió plausible. En el cas de la influència zoroastriana sobre el judaisme, el context de l'exili babilònic, el retorn sota la protecció persa, i els dos segles de govern aquemènida sobre Judea proporcionen un marc de contacte intensiu i prolongat.</p>
+  <p><strong>Plausibilitat estructural:</strong> la semblança entre els dos conceptes ha de ser prou específica i prou detallada per excloure la possibilitat d'una coincidència independent.</p>
+
+  <h2 id="s674">6.7.4 El problema de la perspectiva: entre l'academicisme i el respecte a les comunitats vives</h2>
+  <p>L'estudi acadèmic del zoroastrisme opera en un territori en el qual les conclusions de la recerca històrica i filològica poden tenir implicacions directes sobre la manera en la qual les comunitats de creients es comprenen a si mateixes. La solució metodològica que proposa la majoria dels especialistes contemporanis —seguint la distinció clàssica de Wilfred Cantwell Smith entre la «fe» com a experiència viscuda i la «tradició acumulada» com a objecte d'estudi històric— és la de mantenir simultàniament dues perspectives: la perspectiva interna i la perspectiva externa.</p>
+
+  <h2 id="s675">6.7.5 El problema de la comparació: semblances, diferències i el risc de l'anacronisme</h2>
+  <p>Quan compararem el Pont Chinvat zoroastrià amb el Pont Sirat islàmic, o el <em>Frashokereti</em> amb el Judici Final cristià, fem operacions comparatives que són il·luminadores però que comporten un risc específic: el de projectar sobre els textos antics categories interpretatives que pertanyen al pensament modern i que distorsionen el significat original dels conceptes comparats.</p>
+  <p>El risc de l'anacronisme en la història de les religions es manifesta de dues maneres principals. La primera és la <strong>modernització dels conceptes antics</strong>. La segona és l'<strong>essencialització de les tradicions comparades</strong>: tractar el «zoroastrisme», el «judaisme» o el «cristianisme» com a entitats homogènies i estables al llarg dels segles. La solució és la <strong>precisió contextual</strong> com a virtut metodològica fonamental: comparar textos específics de períodes específics, identificar els mecanismes de transmissió concrets quan es pot fer, i reconèixer explícitament la incertesa quan no es pot.</p>
+  <p>Amb aquestes advertències metodològiques explicitades, el lector d'aquest capítol disposa de les eines crítiques necessàries per avaluar amb la deguda cautela les afirmacions que s'han fet al llarg de les seccions anteriors. Cap d'elles és una veritat definitiva i inapel·lable: totes elles són hipòtesis interpretatives construïdes sobre evidències parcials, formulades amb la màxima rigorositat possible, però obertes a la revisió a la llum de noves evidències i de nous marcs interpretatius.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     6.8 BIBLIOGRAFIA
+══════════════════════════════════════════════════════════════════════ -->
+<section id="s68" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">6.8</span>Bibliografia</h1>
+
+  <div class="bib-section">
+    <h3>Fonts primàries — Textos avèstics i pahlavis</h3>
+    <p class="bib-entry"><em>Avesta: The Sacred Books of the Parsis.</em> Trad. i ed. Karl Friedrich Geldner. Stuttgart: W. Kohlhammer, 1886-1896. 3 vols.</p>
+    <p class="bib-entry"><em>Gathas: The Hymns of Zarathushtra.</em> Trad. Jacques Duchesne-Guillemin. Boston: Beacon Press, 1963.</p>
+    <p class="bib-entry"><em>The Gathas of Zarathustra and the Other Old Avestan Texts.</em> Trad. i ed. Helmut Humbach i Pallan Ichaporia. Heidelberg: Carl Winter Universitätsverlag, 1994. 2 vols.</p>
+    <p class="bib-entry"><em>The Gāthās of Zarathustra.</em> Trad. Stanley Insler. Acta Iranica 8. Leiden: Brill, 1975.</p>
+    <p class="bib-entry"><em>Bundahishn: The Book of Primordial Creation.</em> Trad. Behramgore Tehmuras Anklesaria. Bombay: British India Press, 1956.</p>
+    <p class="bib-entry">Shaked, Shaul. <em>The Wisdom of the Sasanian Sages (Dēnkard VI).</em> Boulder: Westview Press, 1979.</p>
+    <p class="bib-entry">Perikhanian, Anahit. <em>The Book of a Thousand Judgements: A Sasanian Law-Book.</em> Costa Mesa: Mazda Publishers, 1997.</p>
+    <p class="bib-entry">West, Edward William. <em>Menog i Khrad.</em> Sacred Books of the East, vol. 24. Oxford: Clarendon Press, 1885.</p>
+    <p class="bib-entry">Darmesteter, James. <em>Videvdat (Vendidad).</em> Sacred Books of the East, vols. 4 i 23. Oxford: Clarendon Press, 1880-1883.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Fonts primàries — Inscripcions reials aquemènides</h3>
+    <p class="bib-entry">Kuhrt, Amélie, ed. <em>The Persian Empire: A Corpus of Sources from the Achaemenid Period.</em> Londres i Nova York: Routledge, 2007.</p>
+    <p class="bib-entry">Lecoq, Pierre. <em>Les inscriptions de la Perse achéménide.</em> París: Gallimard, 1997.</p>
+    <p class="bib-entry">Schmitt, Rüdiger, ed. <em>The Bisitun Inscriptions of Darius the Great: Old Persian Text.</em> Corpus Inscriptionum Iranicarum. Londres: SOAS, 1991.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Fonts clàssiques gregues i llatines</h3>
+    <p class="bib-entry">Heròdot. <em>Històries.</em> Trad. catalana: Manuel Balasch. Barcelona: Fundació Bernat Metge, 1990-2000.</p>
+    <p class="bib-entry">Plutarc. <em>De Iside et Osiride.</em> Ed. i trad. John Gwyn Griffiths. Cardiff: University of Wales Press, 1970.</p>
+    <p class="bib-entry">Estrabó. <em>Geografia.</em> Trad. anglesa: Horace Leonard Jones. Loeb Classical Library. Cambridge: Harvard University Press, 1917-1932.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Obres de referència generals</h3>
+    <p class="bib-entry">Boyce, Mary. <em>A History of Zoroastrianism.</em> Leiden: Brill, 1975-1991. 3 vols. <strong>[Indispensable.]</strong></p>
+    <p class="bib-entry">Boyce, Mary. <em>Zoroastrians: Their Religious Beliefs and Practices.</em> Londres: Routledge, 1979.</p>
+    <p class="bib-entry">Boyce, Mary. <em>Textual Sources for the Study of Zoroastrianism.</em> Chicago: University of Chicago Press, 1990.</p>
+    <p class="bib-entry">Gnoli, Gherardo. <em>De Zoroastre à Mani: Quatre leçons au Collège de France.</em> París: Institut d'Études Iraniennes, 1985.</p>
+    <p class="bib-entry">Kellens, Jean. <em>Essays on Zarathustra and Zoroastrianism.</em> Trad. Prods Oktor Skjærvø. Costa Mesa: Mazda Publishers, 2000.</p>
+    <p class="bib-entry">Skjærvø, Prods Oktor. <em>The Spirit of Zoroastrianism.</em> New Haven i Londres: Yale University Press, 2011.</p>
+    <p class="bib-entry">Stausberg, Michael, i Yuhan Sohrab-Dinshaw Vevaina, eds. <em>The Wiley Blackwell Companion to Zoroastrianism.</em> Chichester: Wiley Blackwell, 2015. <strong>[Indispensable.]</strong></p>
+    <p class="bib-entry">Zaehner, Robert Charles. <em>The Dawn and Twilight of Zoroastrianism.</em> Londres: Weidenfeld and Nicolson, 1961.</p>
+    <p class="bib-entry">Zaehner, Robert Charles. <em>Zurvan: A Zoroastrian Dilemma.</em> Oxford: Clarendon Press, 1955.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Context històric i polític</h3>
+    <p class="bib-entry">Briant, Pierre. <em>From Cyrus to Alexander: A History of the Persian Empire.</em> Trad. Peter T. Daniels. Winona Lake: Eisenbrauns, 2002. <strong>[Indispensable.]</strong></p>
+    <p class="bib-entry">Dandamaev, Muhammad A., i Vladimir G. Lukonin. <em>The Culture and Social Institutions of Ancient Iran.</em> Cambridge: Cambridge University Press, 1989.</p>
+    <p class="bib-entry">Frye, Richard Nelson. <em>The Heritage of Persia.</em> Cleveland i Nova York: World Publishing Company, 1963.</p>
+    <p class="bib-entry">Kuhrt, Amélie. <em>The Ancient Near East c. 3000-330 BC.</em> Londres: Routledge, 1995. 2 vols.</p>
+    <p class="bib-entry">Wiesehöfer, Josef. <em>Ancient Persia from 550 BC to 650 AD.</em> Trad. Azizeh Azodi. Londres: I. B. Tauris, 1996.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Influències zoroastrianes — Judaisme</h3>
+    <p class="bib-entry">Barr, James. «The Question of Religious Influence: The Case of Zoroastrianism, Judaism, and Christianity.» <em>Journal of the American Academy of Religion</em> 53, núm. 2 (1985): 201-235.</p>
+    <p class="bib-entry">Boyce, Mary, i Frantz Grenet. <em>A History of Zoroastrianism, vol. 3.</em> Leiden: Brill, 1991.</p>
+    <p class="bib-entry">Shaked, Shaul. «Iranian Influence on Judaism.» A <em>The Cambridge History of Judaism</em>, vol. 1. Cambridge: Cambridge University Press, 1984.</p>
+    <p class="bib-entry">Shaked, Shaul. <em>Dualism in Transformation.</em> Londres: School of Oriental and African Studies, 1994.</p>
+    <p class="bib-entry">Winston, David. «The Iranian Component in the Bible, Apocrypha, and Qumran.» <em>History of Religions</em> 5, núm. 2 (1966): 183-216.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Influències zoroastrianes — Cristianisme</h3>
+    <p class="bib-entry">Bidez, Joseph, i Franz Cumont. <em>Les Mages hellénisés.</em> París: Les Belles Lettres, 1938. 2 vols.</p>
+    <p class="bib-entry">Hinnells, John R. «Zoroastrian Influence on the Judaeo-Christian Tradition.» <em>Journal of the K. R. Cama Oriental Institute</em> 45 (1976): 1-23.</p>
+    <p class="bib-entry">Rudolph, Kurt. <em>Gnosis: The Nature and History of Gnosticism.</em> Trad. Robert McLachlan Wilson. San Francisco: Harper &amp; Row, 1983.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Influències zoroastrianes — Islam</h3>
+    <p class="bib-entry">Crone, Patricia. «Zoroastrian Communism.» <em>Comparative Studies in Society and History</em> 36, núm. 3 (1994): 447-462.</p>
+    <p class="bib-entry">Shaked, Shaul. «Some Islamic Reports Concerning Zoroastrianism.» <em>Jerusalem Studies in Arabic and Islam</em> 17 (1994): 43-84.</p>
+    <p class="bib-entry">Yarshater, Ehsan, ed. <em>The Cambridge History of Iran, vol. 3.</em> Cambridge: Cambridge University Press, 1983.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Influències zoroastrianes — Hinduisme</h3>
+    <p class="bib-entry">Kuiper, F. B. J. «The Bliss of Aša.» <em>Indo-Iranian Journal</em> 8 (1964): 96-129.</p>
+    <p class="bib-entry">Thieme, Paul. «The 'Aryan' Gods of the Mitanni Treaties.» <em>Journal of the American Oriental Society</em> 80 (1960): 301-317.</p>
+    <p class="bib-entry">Witzel, Michael. «Autochthonous Aryans?» <em>Electronic Journal of Vedic Studies</em> 7, núm. 3 (2001): 1-93.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Influències zoroastrianes — Egipte faraònic</h3>
+    <p class="bib-entry">Assmann, Jan. <em>Ma'at: Egypt and the Idea of Cosmic Order.</em> Cambridge: Harvard University Press, 2001.</p>
+    <p class="bib-entry">Brandon, Samuel George Frederick. <em>The Judgment of the Dead.</em> Nova York: Scribner, 1967.</p>
+    <p class="bib-entry">Hornung, Erik. <em>Conceptions of God in Ancient Egypt.</em> Trad. John Baines. Ithaca: Cornell University Press, 1982.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Comunitats zoroastrianes contemporànies</h3>
+    <p class="bib-entry">Hinnells, John R. <em>The Zoroastrian Diaspora: Religion and Migration.</em> Oxford: Oxford University Press, 2005.</p>
+    <p class="bib-entry">Kreyenbroek, Philip G., i Shehnaz Neville Munshi. <em>Living Zoroastrianism.</em> Richmond: Curzon Press, 2001.</p>
+    <p class="bib-entry">Luhrmann, Tanya M. <em>The Good Parsi.</em> Cambridge: Harvard University Press, 1996.</p>
+    <p class="bib-entry">Modi, Jivanji Jamshedji. <em>The Religious Ceremonies and Customs of the Parsees.</em> Bombay: British India Press, 1922.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Metodologia en la història de les religions</h3>
+    <p class="bib-entry">Eliade, Mircea. <em>The Sacred and the Profane.</em> Trad. Willard R. Trask. Nova York: Harcourt Brace, 1959.</p>
+    <p class="bib-entry">Eliade, Mircea, ed. <em>The Encyclopedia of Religion.</em> Nova York: Macmillan, 1987. 16 vols.</p>
+    <p class="bib-entry">Lincoln, Bruce. <em>Theorizing Myth.</em> Chicago: University of Chicago Press, 1999.</p>
+    <p class="bib-entry">Smith, Jonathan Z. <em>Imagining Religion.</em> Chicago: University of Chicago Press, 1982.</p>
+    <p class="bib-entry">Smith, Wilfred Cantwell. <em>The Meaning and End of Religion.</em> Nova York: Macmillan, 1963.</p>
+  </div>
+
+  <p class="note">Nota: Per a una introducció ràpida i fiable al zoroastrisme en català o castellà, es recomana el capítol corresponent de la <em>Historia de las religiones</em> de Mircea Eliade i Ioan P. Couliano (Madrid: Siruela, 1992) i l'entrada «Zoroastrisme» de la <em>Gran Enciclopèdia Catalana</em>, que proporcionen un marc general sòlid abans d'abordar la bibliografia especialitzada en anglès, alemany i francès que constitueix el nucli de la recerca acadèmica en aquest camp.</p>
+</section>
+
+</main>
+
+<a href="#cover" class="back-top" id="backTop" title="Tornar al principi">↑</a>
+
+<!-- Scripts Externs -->
+<script src="scripts.js"></script>
+</body>
+</html>

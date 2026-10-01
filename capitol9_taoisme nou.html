@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 9 — Taoisme</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+<!-- Estils Externs -->
+<link rel="stylesheet" href="estil.css">
+
+<!-- Personalització per al Capítol 9 (Taoisme) -->
+<style>
+  :root {
+    --sidebar-bg: #162820; /* Fons verd jade profund i noble */
+  }
+  /* Seguretat UI */
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+</style>
+</head>
+
+<body>
+<div class="progress-bar" id="progress"></div>
+<!-- HEADER FIXE & NAV TOGGLE -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title">Capítol 9 — Taoisme</div>
+  <div style="width: 44px;"></div>
+</header>
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a href="index.html" style="font-family: 'Crimson Pro', serif; font-size: 0.75rem; color: #c4a44a; text-decoration: none; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block; margin-bottom: 0.5rem; opacity: 0.7;">← Índex General</a>
+    <div class="sidebar-title">Capítol 9<br>Taoisme</div>
+  </div>
+  <nav>
+    <a href="#cover" class="lvl1">Portada</a>
+    <a href="#s91" class="lvl1">9.1 Introducció: Naturalesa i el parany occidental</a>
+    <a href="#s911" class="lvl2">9.1.1 Visió general</a>
+    <a href="#s912" class="lvl2">9.1.2 Filosòfic vs. religiós</a>
+    <a href="#s913" class="lvl2">9.1.3 El mite de Laozi</a>
+    
+    <a href="#s92" class="lvl1">9.2 Context històric: El col·lapse i les Cent Escoles</a>
+    <a href="#s921" class="lvl2">9.2.1 Els Regnes Combatents</a>
+    <a href="#s922" class="lvl2">9.2.2 Les Cent Escoles de Pensament</a>
+    <a href="#s923" class="lvl2">9.2.3 Xamans i eremites</a>
+    
+    <a href="#s93" class="lvl1">9.3 Els textos fundacionals</a>
+    <a href="#s931" class="lvl2">9.3.1 El Daodejing</a>
+    <a href="#s932" class="lvl2">9.3.2 El Zhuangzi</a>
+    <a href="#s933" class="lvl2">9.3.3 El Daozang (Cànon)</a>
+    
+    <a href="#s94" class="lvl1">9.4 Cosmovisió taoista</a>
+    <a href="#s941" class="lvl2">9.4.1 El Dao</a>
+    <a href="#s942" class="lvl2">9.4.2 Wu wei</a>
+    <a href="#s943" class="lvl2">9.4.3 Ziran</a>
+    <a href="#s944" class="lvl2">9.4.4 Yin, Yang i Qi</a>
+    <a href="#s945" class="lvl2">9.4.5 Fan (El retorn)</a>
+    
+    <a href="#s95" class="lvl1">9.5 Pràctiques i immortalitat</a>
+    <a href="#s951" class="lvl2">9.5.1 El cos com a microcosmos</a>
+    <a href="#s952" class="lvl2">9.5.2 Meditació i quietud</a>
+    <a href="#s953" class="lvl2">9.5.3 Alquímia externa (Waidan)</a>
+    <a href="#s954" class="lvl2">9.5.4 Alquímia interna (Neidan)</a>
+    <a href="#s955" class="lvl2">9.5.5 Qigong i Taijiquan</a>
+    
+    <a href="#s96" class="lvl1">9.6 Els moviments religiosos</a>
+    <a href="#s961" class="lvl2">9.6.1 Els Mestres Celestials</a>
+    <a href="#s962" class="lvl2">9.6.2 Escola Shangqing</a>
+    <a href="#s963" class="lvl2">9.6.3 Escola Lingbao</a>
+    <a href="#s964" class="lvl2">9.6.4 Quanzhen i monacat</a>
+    
+    <a href="#s97" class="lvl1">9.7 Taoisme i poder polític</a>
+    <a href="#s971" class="lvl2">9.7.1 Crítica anarquista</a>
+    <a href="#s972" class="lvl2">9.7.2 Els Turbants Grocs</a>
+    <a href="#s973" class="lvl2">9.7.3 Dinastia Tang</a>
+    <a href="#s974" class="lvl2">9.7.4 L'Imperi Xinès tardà</a>
+    
+    <a href="#s98" class="lvl1">9.8 El món modern i contemporani</a>
+    <a href="#s981" class="lvl2">9.8.1 La Revolució Cultural</a>
+    <a href="#s982" class="lvl2">9.8.2 Supervivència a la diàspora</a>
+    <a href="#s983" class="lvl2">9.8.3 Renaixement a la Xina</a>
+    <a href="#s984" class="lvl2">9.8.4 Globalització</a>
+    
+    <a href="#s99" class="lvl1">9.9 Influències i llegat</a>
+    <a href="#s991" class="lvl2">9.9.1 Budisme i Zen</a>
+    <a href="#s992" class="lvl2">9.9.2 Neoconfucianisme</a>
+    <a href="#s993" class="lvl2">9.9.3 Religió popular xinesa</a>
+    <a href="#s994" class="lvl2">9.9.4 Impacte a Occident</a>
+    
+    <a href="#s910" class="lvl1">9.10 Metodologia</a>
+    <a href="#s911" class="lvl1">9.11 Bibliografia</a>
+  </nav>
+</aside>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-menorah">☯</div>
+  <div class="cover-ornament">Història de les Religions</div>
+  <div class="cover-rule"></div>
+  <div class="cover-hebrew">道 • WU WEI</div>
+  <h1 class="cover-chapter">Capítol 9</h1>
+  <div class="cover-subtitle">Taoisme</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong> El taoisme constitueix la resposta de resistència filosòfica i d'adaptació existencial més profunda davant la violència política i la rigidesa burocràtica de l'antiga Xina. En proposar l'harmonia amb els processos naturals (el Dao) i l'acció sense esforç (wu wei) com a veritable tecnologia de poder, va desdibuixar per sempre les fronteres entre la mística, la medicina corporativa, l'anarquisme intel·lectual i la religió institucionalitzada.
+  </div>
+  <div class="cover-scroll"><span>Llegir</span><div class="cover-scroll-line"></div></div>
+</div>
+
+<main class="content">
+
+<!-- ======================================================= 9.1 -->
+<section id="s91" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.1</span>Introducció: Naturalesa del taoisme i el parany occidental</h1>
+
+<h2 id="s911">9.1.1 Visió general</h2>
+<p class="drop-cap">El taoisme és una de les dues grans tradicions indígenes que han configurat de manera decisiva la cosmovisió, l'estructura social i la identitat cultural de la civilització xinesa, essent l'altra el confucianisme. Si el confucianisme representa l'esfera pública, el deure social, la jerarquia i l'ordre burocràtic, el taoisme ha representat històricament l'esfera íntima, la connexió amb el món natural, la llibertat individual i, molt sovint, la subversió o la retirada conscient de les obligacions de l'Estat. No obstant això, definir el taoisme des de la perspectiva de la història de les religions resulta una tasca complexa, ja que no es tracta d'un sistema dogmàtic tancat, sinó d'un vast i fluid entramat de filosofia especulativa, pràctiques d'alquímia i longevitat, xamanisme antic i religió litúrgica institucionalitzada.</p>
+<p>L'eix vertebrador de tota aquesta tradició és el concepte de <em>Dao</em> (literalment, "el Camí" o "la Via"). Per a la cosmovisió taoista, l'univers no va ser modelat per un Déu creador antropomòrfic que imposés lleis des de l'exterior, sinó que és un organisme viu, autogenerat i en procés de mutació constant. El propòsit fonamental de qualsevol practicant taoista —ja sigui un savi retirat a les muntanyes, un metge tradicional o un sacerdot de poble— és assolir una alineació perfecta amb aquest flux natural, deixant d'oposar resistència amb l'objectiu de, paradoxalment, assolir la màxima eficàcia vital.</p>
+
+<h2 id="s912">9.1.2 El fals trencament: Taoisme filosòfic (Daojia) vs. religiós (Daojiao)</h2>
+<p>L'estudi del taoisme per part dels historiadors i acadèmics requereix, abans d'endinsar-se en els seus textos, la deconstrucció d'un dels biaixos metodològics més persistents de la sinologia moderna: la divisió artificial entre el "taoisme filosòfic" i el "taoisme religiós".</p>
+<p>Durant el segle XIX i bona part del XX, els acadèmics occidentals —profundament influïts per pressupòsits intel·lectuals d'arrel protestant i racionalista— van classificar el taoisme en dues categories estanques i oposades. D'una banda, van encunyar la idea d'un taoisme pur, elevat i filosòfic (identificat amb el terme xinès <em>Daojia</em>), basat exclusivament en la lectura de textos clàssics com el <em>Daodejing</em> i el <em>Zhuangzi</em>. D'altra banda, van desqualificar tot el vast sistema de rituals, sacerdots, exorcismes, cultes a deïtats immortals i pràctiques alquímiques posteriors (<em>Daojiao</em>) com si fossin una "degeneració supersticiosa" o una mera corrupció popular de la idea original.</p>
+<p>Avui dia, el consens de l'acadèmia contemporània (avalat per investigadors de referència com Kristofer Schipper o Isabelle Robinet) rebutja frontalment aquesta dicotomia. Segons els criteris metodològics actuals, el taoisme s'ha d'estudiar com un continu orgànic. Els conceptes filosòfics de buidor i espontaneïtat dels textos antics són exactament els mateixos fonaments teòrics que més tard estructuraran les tècniques de respiració, la medicina, la litúrgia i l'arquitectura dels temples. Separar el pensament taoista de la seva pràctica viva equivaldria a intentar comprendre el cristianisme estudiant només la teologia de Tomàs d'Aquino i ignorant per complet les esglésies, els sagraments i els creients.</p>
+
+<h2 id="s913">9.1.3 El mite del fundador: el problema històric de Laozi</h2>
+<p>A l'hora de buscar un punt d'origen històric per al taoisme, la tradició assenyala de manera unànime cap a la figura de Laozi (literalment, el "Vell Mestre" o "Vell Infant"), a qui se li atribueix l'autoria del text fundacional, el <em>Daodejing</em>. Segons la llegenda recollida pel gran historiador xinès Sima Qian (segle II aC), Laozi era un arxiver reial de la cort de la dinastia Zhou que, fastiguejat per la decadència moral del seu temps, va decidir abandonar la civilització cap a l'oest. Abans de creuar la frontera muntanyosa muntat sobre un búfal d'aigua, el guardià del pas li va suplicar que deixés per escrit la seva saviesa, donant lloc als aproximadament cinc mil caràcters del llibre.</p>
+<p>Metodològicament, la figura de Laozi planteja un escenari completament diferent al de figures com Siddharta Gautama o Jesús de Natzaret. Mentre que l'acadèmia reconeix l'existència històrica dels fundadors del budisme i el cristianisme, sota el mantell mític de les seves hagiografies, en el cas de Laozi el consens acadèmic actual conclou que pràcticament amb tota probabilitat no va existir mai com a individu històric. El nom de "Laozi" operaria més aviat com un pseudònim o una figura llegendària creada posteriorment per conferir autoritat ancestral a una amalgama de coneixements.</p>
+<p>L'anàlisi filològica demostra que el <em>Daodejing</em> no és l'obra d'un sol geni aïllat, sinó una compilació de màximes orals, proverbis i aforismes sapiencials de diversos corrents i mestres de l'antiguitat, que van ser finalment teixits i posats per escrit cap al segle IV o III aC. Tanmateix, per a l'evolució de la tradició taoista, la no-historicitat física de l'autor resulta irrellevant. Amb el pas dels segles, el Laozi humà i llegendari seria deïficat pels moviments taoistes posteriors, transformant-se en <em>Taishang Laojun</em> (el Suprem Senyor Lao), una personificació còsmica del mateix Dao que descendeix periòdicament a la terra per revelar ensenyaments salvífics a la humanitat.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.2 -->
+<section id="s92" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.2</span>Context històric: El col·lapse i les Cent Escoles</h1>
+
+<h2 id="s921">9.2.1 La crisi dels Regnes Combatents i la violència estructural</h2>
+<p class="drop-cap">Si el budisme va néixer durant la crisi de la Segona Urbanització a la vall del Ganges, el taoisme va germinar en un dels escenaris de desintegració sociopolítica i de violència estructural més extrems de l'antiguitat: el període dels Regnes Combatents (<em>Zhanguo</em>, c. 475 – 221 aC). Durant segles, la dinastia Zhou havia mantingut un ordre feudal basat en la lleialtat de la noblesa, els vincles de sang i un complex sistema de rituals codificats (<em>li</em>). Aquest univers ordenat, però, es va acabar col·lapsant definitivament. El poder central es va volatilitzar i el territori xinès es va fracturar en set grans estats que van iniciar una cursa armamentística implacable per aniquilar-se mútuament i aconseguir l'hegemonia total.</p>
+<p>La guerra va canviar de naturalesa. Les antigues escaramusses aristocràtiques basades en carros de combat i regides per codis de cavalleria van donar pas a l'ús massiu del ferro, a la invenció de la ballesta i a la mobilització de lleves camperoles gegantines. Les batalles es van convertir en carnisseries a una escala inèdita (com la batalla de Changping l'any 260 aC, on les cròniques parlen de centenars de milers de presoners executats). En aquest context, la vida humana va perdre qualsevol valor intrínsec; la població estava sotmesa a la fam, a reclutaments forçosos i a l'espoli constant per part d'uns governants tirànics que només buscaven l'expansió territorial i l'acumulació de riquesa.</p>
+<p>El taoisme primigeni no es pot entendre sense aquesta angoixa col·lectiva. Davant la pressió asfixiant per ser un engranatge "útil" en la maquinària de guerra i burocràcia de l'Estat, els primers pensadors taoistes formularan la supervivència com a màxima prioritat. En un món embogit per l'ambició, destacar, ser virtuós o ocupar un càrrec públic equivalia a posar-se una diana al pit. Com assenyalarien posteriorment els textos taoistes, només l'arbre retorçat, aquell que el fuster considera completament "inútil", aconsegueix salvar-se de la destral i viure fins a envellir en pau al bosc.</p>
+
+<h2 id="s922">9.2.2 Les Cent Escoles de Pensament i el debat sobre l'ordre social</h2>
+<p>Davant d'aquest abisme de violència i desgovern, la intel·lectualitat xinesa va reaccionar amb un esclat de creativitat filosòfica sense precedents conegut com el període de les <strong>Cent Escoles de Pensament</strong> (<em>Zhuzi baijia</em>). Mestres errants, filòsofs i estrategs (els <em>shi</em>) viatjaven de cort en cort oferint als monarques els seus tractats sobre com restaurar l'ordre sota el Cel. El mercat d'idees era ferotge, però estava dominat per dues grans ideologies profundament intervencionistes.</p>
+<p>D'una banda, el <strong>confucianisme</strong> proposava tornar a l'ideal moral del passat mitjançant el cultiu rigorós de la virtut, l'estudi, la rectificació del llenguatge i el respecte absolut a la jerarquia patriarcal i ritual. D'altra banda, el <strong>legalisme</strong> (<em>Fajia</em>) menyspreava la moralitat confuciana com a debilitat i defensava la creació d'un Estat totalitari pur: lleis implacables, càstigs brutals, censura i control absolut de la població per maximitzar el poder del monarca.</p>
+<p>El pensament taoista emergeix com una crítica devastadora a totes dues escoles. Per al taoisme, tant la moral artificial del confucianisme com l'Estat policial del legalisme formen part del problema, no de la posició de la solució. Obligar els éssers humans a encaixar en estructures rígides, lleis estrictes o rituals formals violenta la seva naturalesa innata (el seu <em>ziran</em>). El <em>Daodejing</em> diagnostica aquest fracàs de manera quirúrgica: <em>"Com més lleis i prohibicions hi ha en el món, més s'empobreix el poble [...] Com més decrets es promulguen, més lladres i bandits apareixen"</em>. La resposta taoista serà radical: l'única manera de restaurar l'ordre és que l'Estat deixi d'intervenir i permeti que la societat s'autoreguli seguint el flux de la naturalesa.</p>
+
+<h2 id="s923">9.2.3 Xamans, eremites i substrat naturalista: els antecedents</h2>
+<p>L'error més comú en estudiar les arrels del taoisme és creure que va néixer exclusivament com una tesi política o intel·lectual en els despatxos de la dinastia Zhou. Si bé el seu component antisistema és clar, el taoisme posseeix un substrat molt més antic, profund i irracional, fortament arrelat a les pràctiques espirituals perifèriques i a la geografia de l'antiga Xina, concretament a l'estat meridional de Chu, al voltant del riu Iangtsè.</p>
+<p>Mentre el nord (el bressol del confucianisme) era sec, agrícola i obsessionat amb l'ordre burocràtic, el sud de Chu era una terra frondosa, salvatge i profundament immersa en la cultura del <strong>xamanisme</strong> (la figura del <em>Wu</em>). Els xamans meridionals practicaven viatges en èxtasi cap a les estrelles, comunicació amb esperits de la natura, danses rituals, exorcismes i botànica curativa, fenòmens recollits en antologies poètiques extàtiques com les <em>Elegies de Chu</em> (<em>Chuci</em>). Aquesta imaginació xamànica, farcida de vols místics i relacions directes amb forces invisibles, serà la base del posterior panteó taoista i del seu interès per la immortalitat física i l'alquímia.</p>
+<p>A aquest substrat animista cal sumar-hi la tradició dels <strong>eremites</strong>: savis i ascetes que, segles abans de la redacció dels textos clàssics, ja havien pres la decisió d'abandonar el món corrupte de ciutats per amagar-se a les muntanyes sagrades. En lloc d'estudiar tractats polítics, aquests reclusos van desenvolupar el que coneixem com a corrent <strong>naturalista</strong> (l'escola <em>Yinyang jia</em>). Es dedicaven a observar els ritmes del cosmos, les fases de la lluna, les estacions i la circulació del <em>Qi</em> (l'energia vital), cultivant pràctiques de gimnàstica i macrobiòtica per allargar la vida.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.3 -->
+<section id="s93" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.3</span>Els textos fundacionals i la seva formació</h1>
+
+<h2 id="s931">9.3.1 El <em>Daodejing</em>: aforismes, arqueologia i crítica al poder</h2>
+<p class="drop-cap">El <em>Daodejing</em> (El Llibre de la Via i de la Virtut) és el text central de la tradició taoista i una de les obres més traduïdes de la història de la humanitat. Amb només uns cinc mil caràcters xinesos, distribuïts tradicionalment en vuitanta-un breus capítols, la seva estructura és aforística, poètica, profundament enigmàtica i deliberadament paradoxal. No ofereix cap narrativa lògica ni arguments sil·logístics, sinó que funciona gairebé com un manual de meditació o un tractat de subversió política camuflat de misticisme.</p>
+<p>Tal com hem establert, el consens acadèmic actual descarta l'existència d'un únic autor (Laozi). Aquesta visió s'ha vist confirmada de manera espectacular per l'arqueologia moderna. L'any 1973 es van descobrir a les tombes de Mawangdui unes versions del text escrites sobre seda (datades del 168 aC), i l'any 1993, a les tombes de Guodian, es van trobar feixos de tires de bambú (datades cap al 300 aC) que contenien fragments encara més antics. Aquests descobriments demostren que el <em>Daodejing</em> va circular durant segles com una tradició oral fluida, amb diferents versions alterades i editades segons el mestre que les recitava, fins a cristal·litzar en la versió estàndard (la versió de Wang Bi) cap al segle III dC.</p>
+<p>Temàticament, el llibre fa servir metàfores de la natura per subvertir els valors socials hegemònics. Allà on l'Estat lloa la força, la duresa, l'agressivitat masclista i la claredat, el <em>Daodejing</em> exalça la feblesa, la suavitat, el principi femení (la "Mare misteriosa") i l'obscuritat. La metàfora central és l'<strong>aigua</strong>: essent l'element més suau i adaptable del món, acaba sempre foradant la roca més dura. Des d'una perspectiva política, el text aconsella al governant ideal governar "fregint un peix petit" (és a dir, intervenint el mínim possible per no esmicolar-lo), suggerint que el veritable poder no s'exerceix mitjançant la coacció, sinó convertint-se en un centre de gravetat invisible al qual la resta d'elements s'ajusten de manera natural.</p>
+
+<h2 id="s932">9.3.2 El <em>Zhuangzi</em>: humor, relativisme i llibertat interior</h2>
+<p>Si el <em>Daodejing</em> sovint es llegeix com un críptic manual per al governant ideal, el <em>Zhuangzi</em> és el llibre de la llibertat individual absoluta. Atribuït al filòsof Zhuang Zhou (segle IV aC) —del qual es creu que va escriure autènticament els set primers capítols o "Capítols Interiors", mentre que la resta són afegits de deixebles posteriors—, aquesta obra representa un cim de la literatura xinesa per la seva genialitat narrativa, el seu to irònic i la seva irreverència.</p>
+<p>A diferència de la poesia abstracta de Laozi, el <em>Zhuangzi</em> s'articula a través de faules, anècdotes i diàlegs absurds on xamans, animals parlants, artesans humils i fins i tot criminals mutilats donen lliçons de saviesa als arrogants lletrats confucians. Filosòficament, el text presenta un <strong>relativisme epistemològic</strong> radical. L'anècdota més cèlebre és el Somni de la Papallona: Zhuang Zhou somia que és una papallona voleiant feliçment; en despertar, no sap si és un home que ha somiat ser una papallona, o una papallona que ara està somiant ser Zhuang Zhou. Aquesta paradoxa liquida les certeses categòriques humanes i demostra que totes les perspectives són limitades.</p>
+<p>Una altra aportació fonamental del <em>Zhuangzi</em> és el concepte d'habilitat consumada, exemplificat en el relat del carnisser Ding. Aquest humil treballador esquartera bous per al rei no a base de força bruta o anàlisi racional, sinó guiant el ganivet pels espais buits naturals de l'anatomia de l'animal gràcies a anys de buidar la seva ment d'intencions. Aquest estat de fluïdesa absoluta, en què el subjecte oblida l'ego i es fon amb l'acció, prefigura conceptes psicològics moderns i serà una influència directa, segles més tard, per a les arts marcials de l'Àsia oriental i l'estètica del budisme Zen.</p>
+
+<h2 id="s933">9.3.3 El <em>Daozang</em>: la immensa formació del cànon taoista</h2>
+<p>Si ens limitem al <em>Daodejing</em> i al <em>Zhuangzi</em>, caiem en la trampa metodològica occidental de reduir el taoisme a un fenomen purament filosòfic del període antic. La realitat textual del taoisme és el <strong>Daozang</strong> (el Cànon Taoista), una de les empreses editorials i religioses més colossals de la història humana.</p>
+<p>A mesura que el taoisme s'institucionalitzava i competia per l'hegemonia espiritual de la Xina, necessitava un corpus que pogués rivalitzar amb els textos confucians i amb la massiva entrada de sutres budistes traduïts del sànscrit. El procés de compilació va començar cap al segle V dC i va culminar en l'edició definitiva patrocinada per la dinastia Ming l'any 1445. Aquest Cànon definitiu conté més de mil quatre-cents textos que sumen milers de volums.</p>
+<p>El <em>Daozang</em> inclou tractats d'alquímia de laboratori, catàlegs de minerals, manuals d'exorcisme, tècniques de respiració fetal, llistes de talismans per invocar deïtats estel·lars, hagiografies d'immortals i regles monàstiques (aquestes darreres, sovint calcades literalment del <em>Vinaya</em> budista). L'estructura interna del Cànon està dividida en "Tres Cavernes" (<em>Dong</em>), una divisió que, tal com assenyalen els historiadors, és un calc directe i conscient de les "Tres Cistelles" (<em>Tripitaka</em>) del budisme, demostrant com l'evolució d'una religió és inseparable de la pressió i el contagi exercits per les altres tradicions del seu entorn sociològic.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.4 -->
+<section id="s94" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.4</span>Cosmovisió taoista: l'arquitectura de l'harmonia</h1>
+
+<h2 id="s941">9.4.1 El Dao: el principi inefable i matern</h2>
+<p class="drop-cap">El primer capítol del <em>Daodejing</em> s'obre amb una de les declaracions epistemològiques més famoses de la història de la filosofia: <em>"El Dao que pot ser expressat en paraules no és el Dao etern. El nom que pot ser anomenat no és el nom etern"</em>. Amb aquesta advertència, el taoisme posa fre a qualsevol intent de racionalitzar o tancar la realitat última en categories lingüístiques rígides. El <strong>Dao</strong> (el Camí, la Via, o el Curs) és el principi originari, inefable i omnipresent del qual emanen totes les coses i al qual totes retornen.</p>
+<p>Per a la història comparada de les religions, és fonamental entendre què <em>no</em> és el Dao. No és un Déu creador, no té voluntat pròpia, no jutja, no castiga ni planifica l'univers des de l'exterior. Si en les tradicions abrahàmiques la metàfora de la creació és la de l'arquitecte (un pare masculí que construeix el món a partir del no-res amb la seva paraula i la seva llei), la metàfora taoista és orgànica i <strong>maternal</strong>. El Dao es descriu constantment com l'úter fosc, l'origen femení, la Vall Profunda o la Mare de les Deu Mil Coses. L'univers no va ser construït, sinó que va "néixer" i continua creixent de manera autònoma des de dins.</p>
+
+<h2 id="s942">9.4.2 Wu wei: l'acció sense esforç o eficàcia natural</h2>
+<p>El <strong>Wu wei</strong> és, probablement, el concepte taoista més cèlebre i, alhora, el pitjor comprès a Occident. Traduït literalment com a "no-acció" o "inacció", ha estat freqüentment malinterpretat com una crida a la passivitat, la mandra o el fatalisme. Tanmateix, dins del pensament xinès, <em>wu wei</em> no significa quedar-se quiet sense fer res, sinó la <strong>no-acció coercitiva</strong> o l'<strong>acció sense fricció</strong>.</p>
+<p>Actuar amb <em>wu wei</em> vol dir intervenir de manera tan alineada amb les lleis naturals (el Dao) que l'esforç es redueix al mínim i l'eficàcia s'optimitza al màxim. La metàfora clàssica és l'aigua d'un riu que esquiva les roques en lloc de xocar-hi frontalment, o nedar a favor del corrent en comptes de malgastar energia nedant-hi en contra. En el terreny polític, el <em>wu wei</em> és una advertència directa contra el legalisme autoritari i el confucianisme: imposar morals artificials i lleis dracònianes genera resistència i desordre, mentre que el governant savi lidera de manera invisible, creant les condicions perquè el poble prosperi per si mateix sense adonar-se que està sent governat.</p>
+
+<h2 id="s943">9.4.3 Ziran: l'autenticitat espontània</h2>
+<p>L'objectiu final del <em>wu wei</em> és permetre que floreixi el <strong>Ziran</strong>. Traduït literalment com a "allò que és així per si mateix", <em>ziran</em> descriu la naturalitat, l'espontaneïtat o l'autenticitat intrínseca de qualsevol ésser abans de ser deformat per les pressions externes.</p>
+<p>En la cosmovisió taoista, els animals, les plantes i els elements posseeixen <em>ziran</em> de manera automàtica. Només l'ésser humà té la capacitat tràgica de perdre la seva naturalitat. Segons el taoisme, els rituals estancats, l'educació rígida, la recerca de fama, la cobdícia i l'esforç per encaixar en els motlles de l'Estat burocràtic són forces destructives que allunyen l'home del seu <em>ziran</em> original. La saviesa taoista no consisteix a "aprendre" més coses per ser superior, sinó a "desaprendre" (oblidar les normes artificials) per poder recuperar l'estat d'espontaneïtat originari. El text de Laozi empra la metàfora del <em>Pu</em>, el "bloc de fusta sense tallar": l'ésser humà en el seu estat d'integració natural, abans de ser tallat i esculpit pels cisells de la societat.</p>
+
+<h2 id="s944">9.4.4 Yin, Yang i Qi: la física de l'univers taoista</h2>
+<p>A diferència de les metafísiques occidentals que separen estrictament l'esperit immaterial del cos físic, l'univers taoista és un continu d'energia anomenat <strong>Qi</strong> (o <em>Txi</em>). El <em>Qi</em> és l'alè, el flux vital, la matèria vibracional que conforma tot allò que existeix. Una roca és <em>Qi</em> molt dens i condensat; els pensaments humans i l'esperit diví són <em>Qi</em> extremadament subtil i enrarit. Per tant, no hi ha cap barrera infranquejable entre el pla físic i l'espiritual, un fet que justificarà més tard tota la tradició de l'alquímia taoista i la medicina tradicional xinesa per allargar la vida.</p>
+<p>Aquest <em>Qi</em> universal funciona a través de dues modalitats o polaritats dinàmiques: el <strong>Yin</strong> (l'estat latent, fosc, receptiu, humit, el principi femení, el fred) i el <strong>Yang</strong> (l'estat actiu, lluminós, projectiu, sec, el principi masculí, la calor). És crucial subratllar que, a diferència del dualisme del zoroastrisme o del cristianisme maniqueu (on la Llum/Bé i la Foscor/Mal estan en guerra i l'objectiu és l'aniquilació d'un d'ells), el Yin i el Yang <strong>no tenen valor moral</strong> ni estan en conflicte absolut. Són polaritats interdependents que s'engendren mútuament: sense nit no hi ha dia, sense buit el recipient no pot contenir res. L'harmonia còsmica no prové del triomf del Yang sobre el Yin, sinó de l'equilibri dinàmic de la seva dansa contínua.</p>
+
+<h2 id="s945">9.4.5 Fan: el principi del retorn perpetu</h2>
+<p>L'últim gran pilar de l'arquitectura taoista és la noció del temps i del moviment. Per al taoisme, el temps no és una línia recta que avança cap a un apocalipsi o un judici final, sinó un cicle orgànic de pulsacions. El moviment fonamental del Dao és el <strong>Fan</strong> (la reversió o el retorn).</p>
+<p>Qualsevol fenomen en l'univers que assoleixi el seu grau màxim d'expressió començarà, inevitablement, a convertir-se en el seu oposat. Quan el migdia (màxim Yang) assoleix la seva plenitud, inevitablement engendra el capvespre (el naixement del Yin). Això té implicacions polítiques i vitals immenses: el taoisme adverteix que acumular massa riquesa, oprimir massa un poble o estirar massa una corda provocarà inexorablement la destruction de l'ambiciós. D'aquí la preferència taoista per la moderació, la retirada a temps i el "retorn" espiritual conscient cap a l'origen fosc i inefable d'on tots hem sorgit.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.5 -->
+<section id="s95" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.5</span>Pràctiques de transformació i recerca de la immortalitat</h1>
+
+<h2 id="s951">9.5.1 La visió del cos humà com a microcosmos</h2>
+<p class="drop-cap">Per comprendre les pràctiques taoistes de transformació, és imperatiu abandonar la noció occidental i platònica que divideix l'ésser humà en una "ànima" immortal empresonada dins d'un "cos" físic i degradable. En el taoisme, no existeix aquest dualisme. El cos humà és entès com un <strong>microcosmos</strong> exacte: una rèplica a petita escala de l'univers sencer (el macrocosmos).</p>
+<p>L'anatomia taoista no és una anatomia de teixits o òrgans aïllats, sinó una geografia sagrada. El clàssic mapa taoista del cos (el <em>Neijing Tu</em>) representa l'interior humà com un paisatge amb muntanyes, rius, boscos, estrelles i constel·lacions, habitat per milers de deïtats. El cap és la muntanya sagrada (el Cel), l'abdomen és la Terra, i els fluids corporals són els rius. Mantenir la salut i buscar la longevitat no és simplement una qüestió mèdica, sinó un deure religiós i cosmològic: si el cos és un univers, emmalaltir vol dir que els déus interns ens abandonen i que s'ha trencat l'harmonia amb el Dao. D'aquesta visió orgànica naixerà la necessitat vital de desenvolupar tècniques per retenir l'energia vital (<em>Qi</em>).</p>
+
+<h2 id="s952">9.5.2 Meditació, respiració i quietud</h2>
+<p>Les pràctiques més antigues de cultiu personal descrites en els textos taoistes es basen en el buidatge mental i la circulació del <em>Qi</em>. El <em>Zhuangzi</em> parla del <em>Zuowang</em>, "asseure's i oblidar", una forma de meditació en què el practicant abandona lentament l'aferrament a les identitats socials, als conceptes i fins i tot a les sensacions del propi cos, per fondre's en la unitat del Dao. Aquesta tècnica de contemplació silenciosa és l'ancestre directe de les pràctiques de meditació que posteriorment es fusionarien amb el budisme.</p>
+<p>En paral·lel a la quietud mental, el taoisme va desenvolupar sofisticades tècniques de control respiratori. La "respiració embrionària" (<em>taixi</em>) buscava imitar la respiració imperceptible d'un fetus dins del ventre matern. L'objectiu era fer que la respiració fos tan fina, llarga i contínua que ni tan sols una ploma col·locada sota el nas es mogués. Aquesta retenció i circulació de l'aire pretenia nodrir els òrgans interns i evitar la dispersió de l'energia cap a l'exterior, frenant el procés d'envelliment.</p>
+
+<h2 id="s953">9.5.3 Alquímia externa (Waidan): elixirs i minerals</h2>
+<p>A mesura que la religió taoista es va desenvolupar, la recerca de la longevitat va evolucionar cap a una obsessió més literal: la immortalitat física (esdevenir un <em>Xian</em> o immortal alat). Durant les dinasties Han i Tang, aquesta cerca es va vehicular a través del <strong>Waidan</strong> o alquímia externa.</p>
+<p>El laboratori taoista es va convertir en el bressol de la química xinesa (van ser ells, per accident, els qui van descobrir la pólvora buscant elixirs). Els alquimistes creien que si aconseguien sintetitzar substàncies immutables i impesables —com l'or o el cinabri (sulfur de mercuri)— i les ingerien, el cos humà absorbiria aquestes qualitats d'eternitat. Als seus gresols, aplicaven processos repetits d'escalfament i refredament (imitant els cicles del Yin i el Yang) per destil·lar l'"elixir de la immortalitat". Tràgicament, el consum freqüent de mercuri, plom i arsènic va causar la mort per enverinament de nombrosos savis taoistes i de diversos emperadors de la dinastia Tang que n'eren fervents patrocinadors.</p>
+
+<h2 id="s954">9.5.4 Alquímia interna (Neidan): la transformació de l'esperit</h2>
+<p>En part a causa dels evidents fracassos letals de l'alquímia externa, a partir de la dinastia Song (segle X dC) es va produir un canvi de paradigma fonamental cap al <strong>Neidan</strong> o alquímia interna. Aquesta escola va reinterpretar tot el vocabulari del <em>Waidan</em> (el gresol, els metalls, el foc, el cinabri) de manera totalment al·legòrica i simbòlica.</p>
+<p>En el <em>Neidan</em>, ja no s'utilitzen minerals tòxics ni foc de llenya. El "gresol" és el mateix abdomen del practicant (el <em>Dantian</em> o camp de cinabri). El "plom" i el "mercuri" són les energies internes del cos. L'objectiu de la pràctica és un refinament energètic en tres etapes, invertint el procés natural d'envelliment: primer, es refina l'essència reproductiva i física (<em>Jing</em>) per convertir-la en energia vital (<em>Qi</em>); segon, es refina el <em>Qi</em> per convertir-lo en esperit conscient (<em>Shen</em>); i finalment, el <em>Shen</em> retorna al buit primordial (el Dao). D'aquesta manera, l'immortalitat física cedeix el pas a una immortalitat espiritual, on es "gesta" un fetus immortal d'energia dins del propi cos que sobreviurà a la mort biològica.</p>
+
+<h2 id="s955">9.5.5 Qigong i les arts marcials internes (Taijiquan)</h2>
+<p>La culminació somàtica d'aquesta tradició de treball amb el <em>Qi</em> es troba en disciplines físiques que, si amb el temps es van sistematitzar en la seva forma actual durant els darrers segles de l'imperi (dinasties Ming i Qing), tenen arrels profundes en les antigues gimnàstiques taoistes d'estirament i respiració (<em>Daoyin</em>).</p>
+<p>El <strong>Qigong</strong> (literalment "treball de l'energia") engloba centenars de sistemes de meditació en moviment que busquen obrir els meridians del cos per on circula l'energia vital. Paral·lelament, els conceptes taoistes van donar lloc a les anomenades <em>neijia</em> (arts marcials internes), sent el <strong>Taijiquan</strong> (Tai-txi) la més cèlebre. En lloc de dependre de la tensió muscular, la rigidesa i la velocitat explosiva (arts externes o <em>waijia</em>, com el Kung Fu associat als monjos budistes de Shaolin), el Tai-txi aplica exactament els principis del <em>Daodejing</em> al combat cos a cos: la relaxació conscient, el <em>wu wei</em> (cedir davant la força de l'oponent en lloc de xocar-hi frontalment) i el manteniment d'un eix gravitatori perfecte per desequilibrar l'adversari utilitzant la seva pròpia empenta.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.6 -->
+<section id="s96" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.6</span>Els moviments religiosos i les escoles taoistes</h1>
+
+<h2 id="s961">9.6.1 Els Mestres Celestials (Tianshi Dao) i el naixement de l'església taoista</h2>
+<p class="drop-cap">El pas del taoisme com a corrent filosòfic dispers a una religió altament organitzada té una data fundacional precisa en la història de la Xina: l'any 142 dC. Enmig de la descomposició i la corrupció de la dinastia Han, l'eremita Zhang Daoling va afirmar haver rebut una revelació directa a la província de Sichuan. La deïtat que se li va aparèixer no era altra que el <em>Taishang Laojun</em> (Laozi deïficat com a personificació còsmica del Dao). Laozi li va atorgar el títol de Mestre Celestial i li va encomanar la missió de purificar el món, erradicar els cultes sagnants i instaurar un nou ordre d'harmonia abans de l'arribada d'una apocalipsi imminent.</p>
+<p>D'aquesta revelació en va néixer l'escola dels <strong>Mestres Celestials</strong> (<em>Tianshi Dao</em>), que establiria per primera vegada un estat teocràtic i una església taoista estructurada. S'organitzava en vint-i-quatre parròquies administratives on no hi havia distinció entre autoritat civil i religiosa. La genialitat política d'aquest moviment va ser la seva apropiació del llenguatge imperial: en comptes de rebutjar la burocràcia de l'Estat, els Mestres Celestials van crear una <strong>burocràcia celestial</strong>. El món espiritual imaginat per ells estava poblat per ministeris i funcionaris divins.</p>
+<p>Dins d'aquesta escola, la malaltia no es considerava un problema purament físic, sinó el resultat d'haver comès pecats que ofenien el Dao. La curació s'assolia mitjançant la confessió pública i l'enviament de <em>peticions</em> formals (escrits redactats pel sacerdot amb cal·ligrafia sagrada i cremats perquè pugessin com a fum fins als ministeris celestials). L'autoritat del Mestre Celestial s'ha transmès de manera hereditària dins de la família Zhang des d'aleshores fins a l'actualitat (en la branca coneguda avui com a <em>Zhengyi</em> o "Unitat Ortodoxa"), conformant el clergat taoista que viu en societat, es pot casar i oficia rituals a les comunitats locals.</p>
+
+<h2 id="s962">9.6.2 L'Escola Shangqing (Suprema Puresa): misticisme i visualització</h2>
+<p>Si els Mestres Celestials representaven el vessant comunitari i litúrgic del taoisme, al segle IV dC (c. 364) va sorgir al sud de la Xina una escola altament elitista i mística: l'escola <strong>Shangqing</strong> (Suprema Puresa). Aquest corrent va néixer arran de les revelacions rebudes pel visionari Yang Xi, a qui un grup de deïtats immortals perfectes (<em>Zhenren</em>) li van dictar textos d'una gran qualitat literària mentre es trobava en trànsit.</p>
+<p>L'escola <em>Shangqing</em> menyspreava les pràctiques de laboratori (l'alquímia externa amb minerals tòxics) i els ritus comunitaris sorollosos. Per a ells, la veritable immortalitat s'assolia mitjançant l'esforç mental i la <strong>visualització extàtica</strong>. Els practicants, generalment membres de l'aristocràcia cultivada, s'aïllaven a les muntanyes (especialment a la muntanya Maoshan) i aprenien a visualitzar com les divinitats estel·lars descendien de la Constel·lació de l'Óssa Major per entrar als seus òrgans interns. A través d'aquests viatges astrals i meditacions profundes, el mestre de <em>Shangqing</em> no necessitava escriure peticions als déus com els sacerdots de l'església, sinó que s'identificava directament amb el teixit diví de l'univers.</p>
+
+<h2 id="s963">9.6.3 L'Escola Lingbao (Joia Sagrada) i la integració de rituals</h2>
+<p>L'apogeu del taoisme religiós i la seva formulació litúrgica clàssica cristal·litzarà poc després, entre finals del segle IV i principis del V dC, amb l'escola <strong>Lingbao</strong> (Joia Sagrada), fundada per Ge Chaofu. Aquesta escola té una importància cabdal en la història comparada de les religions perquè representa el moment de <strong>màxima influència budista</strong> en el desenvolupament del taoisme.</p>
+<p>L'escola <em>Lingbao</em> va incorporar de manera directa la noció budista de la reencarnació, els cicles kàrmics i, el que és més important, l'ideal del bodhisattva (la salvació universal). El propòsit del ritual taoista ja no era només la longevitat individual d'un savi aristòcrata, sinó la salvació de tots els éssers i dels avantpassats atrapats en l'inframon. Per aconseguir-ho, <em>Lingbao</em> va sistematitzar els grans rituals comunitaris taoistes (com el ritual de renovació còsmica anomenat <em>Jiao</em>), estructurant la litúrgia, la música, els càntics i la vestimenta sacerdotal que encara avui s'utilitzen als temples taoistes d'arreu del món.</p>
+
+<h2 id="s964">9.6.4 Quanzhen (Realitat Completa) i el monacat taoista</h2>
+<p>El darrer gran canvi estructural del taoisme es va produir en el context traumàtic del segle XII, durant la dominació de la meitat nord de la Xina per part de la dinastia Jin i l'imminent ascens de l'Imperi Mongol. El mestre Wang Chongyang va fundar l'escola <strong>Quanzhen</strong> (Realitat Completa o Perfecció Total), que va introduir una autèntica revolució: el <strong>monacat taoista</strong>.</p>
+<p>Fins aquell moment, el clergat taoista (especialment la branca <em>Zhengyi</em>) vivia integrat en la societat, gestionava els santuaris locals i permetia el matrimoni sacerdotal. <em>Quanzhen</em>, adoptant conscientment l'estructura institucional del budisme Chan (Zen), va establir monestirs on els taoistes havien de viure una vida cèlibe, vegetariana, austera i completament dedicada a la meditació i a l'alquímia interna (<em>Neidan</em>). El taoisme <em>Quanzhen</em> té un caràcter profundament sincretista: defensava que "les Tres Ensenyaments (Confucianisme, Taoisme i Budisme) són una sola llar".</p>
+<p>El prestigi d'aquesta escola va ser tan gran que un dels seus patriarques, el cèlebre monjo Qiu Chuji, va viatjar a través de les estepes asiàtiques l'any 1222 per entrevistar-se personalment amb Genguis Khan. En lloc d'oferir-li la immortalitat física que el conqueridor mongol buscava, Qiu Chuji li va predicar la contenció dels desitjos i el respecte per la vida humana. Aquest episodi diplomàtic magistral va permetre a l'escola <em>Quanzhen</em> obtenir el patrocini i la protecció oficial de l'Imperi Mongol, assegurant-ne la supervivència històrica com una de les dues grans branques del taoisme modern (al costat de la branca ortodoxa <em>Zhengyi</em>).</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.7 -->
+<section id="s97" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.7</span>Taoisme i poder polític</h1>
+
+<h2 id="s971">9.7.1 La crítica anarquista a l'Estat confucià i al Legalisme</h2>
+<p class="drop-cap">Si analitzem el taoisme primigeni exclusivament a través de les ulleres de la ciència política contemporània, el <em>Daodejing</em> i el <em>Zhuangzi</em> es poden llegir com els primers tractats d'anarquisme filosòfic i llibertari de la història humana. Tanmateix, es tracta d'un anarquisme de caràcter quietista. A diferència dels moviments revolucionaris moderns, que busquen enderrocar l'Estat per construir-ne un de nou, l'anarquisme taoista proposa buidar l'Estat de funcions fins a fer-lo irrellevant.</p>
+<p>L'argument central de la política taoista és que el desordre social no és fruit de la manca de govern, sinó de l'excés d'intervenció. El <em>Zhuangzi</em> critica de manera mordaç la pretensió dels buròcrates confucians de voler "salvar" el món imposant l'estudi, la pietat filial i els deures rituals: intentar ordenar la societat amb regles morals artificials és tan perillós i contraproduent com intentar allargar les potes d'un ànec o escurçar les d'una grua per fer-les iguals. De la mateixa manera, el legalisme fracassa perquè la repressió armada i l'excés de càstigs només generen astúcia, evasió i violència per part del poble reprimit. El governant taoista ideal, aplicant el principi del <em>wu wei</em>, governa de manera tan invisible i no-coercitiva que, quan les coses van bé, el poble afirma convençut: <em>"Ho hem fet nosaltres mateixos"</em>.</p>
+
+<h2 id="s972">9.7.2 Mil·lenarisme i rebel·lions camperoles: Els Turbants Grocs</h2>
+<p>Aquesta doctrina de la no-intervenció, aparentment inofensiva i contemplativa, contenia un potencial subversiu enorme que va acabar esclatant durant el declivi de la dinastia Han oriental (segle II dC). Quan la corrupció de la cort imperial, els desastres naturals i els alts impostos van portar la pagesia a la inanició, el taoisme va deixar de ser una filosofia per a eremites i es va transformar en una ideologia revolucionària de masses de caràcter mil·lenarista.</p>
+<p>L'any 184 dC, Zhang Jiao, un curandero taoista carismàtic, va liderar l'anomenada <strong>Rebel·lió dels Turbants Grocs</strong>. Basant-se en el <em>Taiping Jing</em> (Clàssic de la Gran Pau), Zhang Jiao va proclamar que l'era de la dinastia Han (associada a l'element Terra i al color blau/negre) havia perdut el "Mandat del Cel" i estava destinada a desaparèixer per donar pas a una nova era utòpica de l'element Foc (el color groc). Els rebels es col·locaven un turbant groc al cap com a símbol del nou ordre de la Gran Pau (<em>Taiping</em>), un estadi d'igualtat social, redistribució de la terra i eradicació de l'explotació.</p>
+<p>Tot i que la rebel·lió va ser ofegada en sang pels exèrcits imperials, l'episodi va canviar per sempre la història de la Xina: va accelerar el col·lapse de l'Imperi Han i va demostrar que l'escatologia taoista posseïa una força de mobilització armada capaç de fer tremolar el poder constituït. Aquest patró de sectes escatològiques de base taoista liderant rebel·lions camperoles es repetiria contínuament fins a la història moderna.</p>
+
+<h2 id="s973">9.7.3 El taoisme com a religió d'Estat: la dinastia Tang</h2>
+<p>La culminació de la relació entre el taoisme i el poder polític es produeix sota la <strong>dinastia Tang</strong> (618–907 dC), una de les èpoques més cosmopolites i esplendoroses de la civilització xinesa. Paradoxalment, la doctrina que havia nascut rebutjant l'Estat burocràtic va ser adoptada com a principal eina de legitimació dinàstica.</p>
+<p>La família imperial dels Tang es deia <strong>Li</strong> (李). Els propagandistes de la cort van aprofitar hàbilment que el suposat cognom històric de Laozi era també Li (Li Er) per establir una genealogia mítica: els emperadors Tang van proclamar-se oficialment descendents directes del fundador del taoisme i, per tant, descendents de la mateixa personificació del Dao. L'any 666 dC, l'emperador Gaozong va atorgar títols imperials a Laozi; es van edificar temples taoistes finançats per l'Estat en cadascuna de les prefectures de l'imperi; el <em>Daodejing</em> va ser declarat lectura obligatòria per als exàmens imperials per accedir a la funció pública (desplaçant temporalment el monopoli dels clàssics confucians); i les princeses imperials es van ordenar com a sacerdotesses taoistes.</p>
+<p>Durant el període Tang, el taoisme no va ser únicament una pràctica espiritual, sinó l'arquitectura teològica que sustentava la maquinària política de l'imperi xinès davant de la gran amenaça estrangera d'aquell moment: el budisme.</p>
+
+<h2 id="s974">9.7.4 La relació ambivalent amb l'Imperi Xinès tardà</h2>
+<p>A partir de la dinastia Song i, especialment, sota els Ming i els Qing (l'última dinastia imperial), la relació del taoisme amb l'Estat va adoptar una forma profundament ambivalent, oscil·lant entre el patrocini luxós i la persecució estricta.</p>
+<p>D'una banda, la cort necessitava el taoisme. Els emperadors Ming (com l'emperador Jiajing, al segle XVI) n'estaven tan obsessionats que invertien enormes fortunes estatals en ritus alquímics buscant elixirs de longevitat per al monarca. Les muntanyes sagrades taoistes com el mont Wudang (bressol llegendari del Tai-txi) van rebre construccions monumentals sufragades pel tresor imperial, i el Mestre Celestial de la família Zhang va ser ascendit a funcionari de primer rang del govern.</p>
+<p>D'altra banda, l'Estat mantenia una paranoia justificada cap als components populars del taoisme. Qualsevol reunió, culte de sanació, trànsit xamànic o circulació de textos profètics no autoritzats era vista per la burocràcia (dominada ara per un rígid neoconfucianisme) com la llavor potencial d'una nova Rebel·lió dels Turbants Grocs. En conseqüència, els codis legals de la dinastia Qing van intentar prohibir severament tots els ritus taoistes populars, reduint l'activitat "lícita" del taoisme estrictament als monestirs aïllats o a la cort interior, i iniciant una política de control de les religions que anticiparia l'actitud de l'Estat xinès contemporani.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.8 -->
+<section id="s98" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.8</span>El taoisme en el món modern i contemporani</h1>
+
+<h2 id="s981">9.8.1 Segle XX: racionalització i persecució (La Revolució Cultural)</h2>
+<p class="drop-cap">L'entrada de la Xina a la modernitat durant el segle XX va suposar la prova de supervivència més dramàtica de la història del taoisme. Després de la caiguda de l'Imperi l'any 1911, la intel·lectualitat xinesa occidentalitzada (com la del Moviment del Quatre de Maig de 1919) va diagnosticar que el país era dèbil perquè estava atrapat en el passat. El taoisme, amb els seus déus, ritus d'exorcisme i astrologia, va ser assenyalat com la màxima expressió de la "superstició" feudal que calia eradicar en favor de la ciència i la raó modernes.</p>
+<p>Amb l'arribada del Partit Comunista Xinès i Mao Zedong al poder l'any 1949, la pressió es va institucionalitzar. Tot i així, el cop de gràcia el va propinar l'anomenada <strong>Revolució Cultural (1966-1976)</strong>. Durant aquesta dècada de fervor ideològic i violència iconoclasta liderada pels Guàrdies Rojos, el taoisme va ser literalment esborrat del mapa físic de la Xina continental. Milers de temples històrics van ser saquejats, les estàtues de les divinitats van ser esmicolades, i les xilografies úniques per imprimir el <em>Daozang</em> (el cànon taoista) van ser cremades. Els monjos de l'escola <em>Quanzhen</em> i els sacerdots <em>Zhengyi</em> van ser obligats a penjar els hàbits, casar-se per la força o ser enviats a camps de reeducació agrària.</p>
+
+<h2 id="s982">9.8.2 Supervivència i vitalitat a Taiwan, Hong Kong i la diàspora</h2>
+<p>Davant l'ofensiva del comunisme ateu al continent, la línia successòria de la branca <em>Zhengyi</em> va prendre una decisió històrica. L'any 1949, el seixanta-tresè Mestre Celestial, Zhang Enpu, va fugir de la Xina comunista per refugiar-se a l'illa de Taiwan, emportant-se amb ell els segells sagrats i les espases rituals que legitimaven la seva autoritat religiosa (que es remuntava a l'any 142 dC).</p>
+<p>Com a resultat, Taiwan, juntament amb Hong Kong i les comunitats de la diàspora xinesa al sud-est asiàtic (Singapur, Malàisia), es van convertir en les autèntiques arques de Noè per a la preservació del taoisme religiós viu. Lliures de les purgues de la Revolució Cultural, aquests territoris van poder mantenir la transmissió ininterrompuda de llinatges sacerdotals, textos litúrgics, rituals comunitaris com els grans <em>Jiao</em> de purificació, i un panteó popular exuberant. Va ser precisament a Taiwan on, durant els anys 60 i 70, la primera generació d'acadèmics occidentals moderns (com Kristofer Schipper) va poder observar per primera vegada com funcionava la religió taoista a la pràctica, desmuntant el prejudici que el taoisme era només una filosofia antiga morta.</p>
+
+<h2 id="s983">9.8.3 El renaixement regulat a la Xina continental actual</h2>
+<p>Després de la mort de Mao i l'inici de les reformes d'obertura impulsades per Deng Xiaoping a la dècada de 1980, la política religiosa de Pequín es va relaxar. El taoisme va iniciar un lent i dolorós procés de reconstrucció arquitectònica i institucional que avui assoleix proporcions espectaculars. Els temples que havien estat arrasats als monts Wudang, Qingcheng o Huashan s'han reconstruït majestuosament i reben milions de pelegrins i turistes anualment.</p>
+<p>Tanmateix, aquest renaixement es troba sotmès a un ferri control governamental. L'Estat regula la religió a través de l'<strong>Associació Taoista Xinesa</strong> (subordinada al Partit Comunista), encarregada d'atorgar les llicències als nous monjos i sacerdots per evitar que operin al marge de la llei. En l'època contemporània, el govern xinès promou oficialment el taoisme com a expressió de la "cultura tradicional autòctona" i el fa servir com a eina de <em>soft power</em> internacional. No obstant això, exigeix que es desposseeixi de qualsevol potencial subversiu, promovent aquells aspectes del <em>Daodejing</em> que exalcen la pau i l'harmonia social, i vigilant estretament per evitar l'aparició de líders religiosos carismàtics o sectes que puguin desafiar l'Estat central (l'eterna por a una nova Rebel·lió dels Turbants Grocs).</p>
+
+<h2 id="s984">9.8.4 Globalització: l'exportació descontextualitzada del Daodejing i el Tai-txi</h2>
+<p>El taoisme ha penetrat massivament a Occident, però ho ha fet mitjançant un procés de filtratge cultural gairebé total. Fora de les comunitats d'origen asiàtic, el taoisme religiós (la devoció als déus estel·lars, l'exorcisme, les ofrenes de paper cremat per als avantpassats) és pràcticament inexistent. En canvi, allò que Occident ha adoptat amb entusiasme és un taoisme descontextualitzat, abstracte i altament individualista.</p>
+<p>D'una banda, el <em>Daodejing</em> és, juntament amb la Bíblia, un dels llibres més traduïts de la història, esdevenint sovint un pilar de la literatura de l'autoajuda i de l'espiritualitat de la <em>New Age</em> (el "tao de la física", el "tao del lideratge", etc.). Aquest fenomen implica l'extracció d'una filosofia antiga xinesa, de caràcter col·lectivista i sovint anti-estatal, per reconvertir-la en una eina terapèutica per al confort psicològic de l'individu modern urbà.</p>
+<p>D'altra banda, les disciplines físiques derivades del pensament taoista, com el Tai-txi i el Qigong, s'han globalitzat com a pràctiques profanes de gimnàstica suau i gestió de l'estrès, desvinculades gairebé del tot del complex teològic de l'alquímia interna (<em>Neidan</em>) per a la qual van ser concebudes originalment. Aquesta "protestantització" del taoisme a Occident —on només s'accepta el text filosòfic pur, i es rebutja el ritual per considerar-lo "màgia" o folklore innecessari— reprodueix exactament el mateix patró d'apropiació cultural que va patir el Mindfulness (l'extracció de la pràctica de <em>vipassanā</em> del seu context ètic i soteriològic budista) que ja hem estudiat en el capítol anterior.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.9 -->
+<section id="s99" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.9</span>Influències i llegat</h1>
+<p class="drop-cap">El taoisme no s'ha limitat mai a ser un sistema tancat dins de les fronteres de la Xina, ni s'ha mantingut aïllat de la resta de corrents filosòfics. La història del seu pensament és la història d'un diàleg, una polèmica i una fecundació creuada contínua amb les altres grans tradicions del continent asiàtic, deixant un llegat que actualment transcendeix qualsevol geografia.</p>
+
+<h2 id="s991">9.9.1 La interacció amb el budisme a la Xina i la gènesi del Chan (Zen)</h2>
+<p>L'arribada del budisme a la Xina (a través de la Ruta de la Seda cap al segle I dC) va suposar un dels xocs culturals més formidables de la història de la humanitat. El budisme era una religió índia de caràcter de renúncia, amb un vocabulari metafísic basat en la vacuïtat i el patiment, categories inicialment incomprensibles per a la ment pragmàtica xinesa. Per poder fer comprensibles els sutres sànscrits al públic xinès, els primers traductors budistes van recórrer al <strong>geyi</strong> ("emparellament de conceptes"), utilitzant sistemàticament el vocabulari del taoisme clàssic. El terme <em>Dharma</em> es va traduir com a <em>Dao</em>; l'estat de <em>Nirvana</em> es va equiparar al <em>wu wei</em> (l'acció sense esforç); i els <em>Arhats</em> (els il·luminats) es van descriure com a immortals taoistes.</p>
+<p>Aquesta fecundació va ser bidireccional. Per sobreviure a la immensa capacitat organitzativa del budisme, el taoisme religiós va haver de copiar-li les estructures. El Cànon Taoista (<em>Daozang</em>) es va dividir en tres parts per imitar el <em>Tripitaka</em> budista; els taoistes van adoptar la idea del karma i dels inferns d'expiació, i fins i tot van imitar la institució monàstica i el celibat (com hem vist a l'escola <em>Quanzhen</em>).</p>
+<p>El llegat més universal d'aquesta hibridació, però, va ser el naixement del budisme <strong>Chan</strong> (el <strong>Zen</strong> japonès). Aquesta escola, tot i pertànyer doctrinalment al budisme Mahayana, és fonamentalment taoista pel que fa a l'estètica, l'amor per la paradoxa (com el <em>Zhuangzi</em>) i la desconfiança cap al llenguatge i les especulacions abstractes. El Zen és, essencialment, la psique taoista aplicada a la il·luminació budista.</p>
+
+<h2 id="s992">9.9.2 Polèmica i simbiosi amb el confucianisme (Neoconfucianisme)</h2>
+<p>La relació històrica amb el confucianisme s'ha definit sovint amb la cèlebre dita xinesa: <em>"Els xinesos són confucians de dia, i taoistes de nit"</em> (o bé, confucians quan ocupen un càrrec al govern, i taoistes quan es retiren o cauen en desgràcia). Durant segles, totes dues tradicions van conviure en tensió: el confucianisme posava l'èmfasi en l'ètica social, els deures i la raó d'Estat; el taoisme, en la preservació de la vida, la llibertat individual i l'harmonia amb el cosmos no-humà.</p>
+<p>Aquesta separació es va trencar definitivament durant la dinastia Song (segle XI-XIII dC) amb el naixement del <strong>Neoconfucianisme</strong>. Els grans erudits confucians com Zhou Dunyi i Zhu Xi van adonar-se que el confucianisme clàssic era feble perquè només tenia ètica, però no tenia metafísica (a diferència del budisme i el taoisme). Per solucionar-ho, Zhu Xi va integrar directament la cosmologia taoista (el Yin i el Yang, la teoria del <em>Qi</em> vital i el símbol del <em>Taiji</em> o Principi Suprem) dins del pensament confucià, construint un sistema on l'obediència social confuciana passava a estar justificada per les pròpies lleis de la física de l'univers taoista.</p>
+
+<h2 id="s993">9.9.3 L'absorció dins la religió popular xinesa</h2>
+<p>A nivell popular, les fronteres dogmàtiques entre budisme, taoisme i confucianisme no existeixen (el que es coneix com el <em>Sanjiao</em>, "els Tres Ensenyaments"). El taoisme ha estat el gran proveïdor de l'arquitectura teològica de la religió tradicional del poble xinès. Deïtats heroiques mortals, fenòmens atmosfèrics i antics funcionaris honorables han estat incorporats al panteó encapçalat per l'<strong>Emperador de Jade</strong> (deïtat suprema d'origen taoista). Avui dia, al mateix temple del sud-est asiàtic (o de qualsevol barri xinès occidental), s'hi pot trobar un altar a Guan Yin (la bodhisattva budista de la compassió) al costat de Guandi (el déu de la guerra i la lleialtat) protegits per l'astrologia taoista i atesos per sacerdots d'ambdues tradicions.</p>
+
+<h2 id="s994">9.9.4 L'impacte a Occident: ciència, ecologia i psicologia</h2>
+<p>En el món occidental, l'impacte del pensament taoista ha estat enorme, si bé totalment secularitzat. En <strong>psicologia</strong>, Carl G. Jung es va veure profundament influït pels textos alquímics taoistes (especialment <em>El Secret de la Flor d'Or</em> i l'<em>I Ching</em>), utilitzant-los per donar suport a la seva teoria de la sincronicitat i de la unió dels oposats al si de l'inconscient humà. En l'àmbit <strong>científic</strong>, filòsofs de la ciència i divulgadors (com Fritjof Capra a <em>El Tao de la Física</em>) han establert paral·lelismes, sovint molt debatuts, entre la visió taoista de l'univers com una xarxa d'energia fluctuant (el <em>Qi</em>) i els descobriments de la física quàntica contemporània.</p>
+<p>Finalment, en el terreny de la <strong>filosofia política i mediambiental</strong>, pensadors de l'ecologia profunda i autors anarquistes contemporanis han reivindicat el taoisme com la primera gran ideologia <em>ecocèntrica</em> (en contraposició a l'antropocentrisme judeocristià). Escriptores com Ursula K. Le Guin van fer del taoisme la columna vertebral de la seva ciència-ficció, destacant el missatge clàssic del <em>Daodejing</em>: intentar dominar i explotar la natura mitjançant la tècnica i la força és un camí segur cap a l'autodestrucció.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.10 -->
+<section id="s910" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.10</span>Metodologia</h1>
+<p style="font-style:italic;color:var(--ink-light);margin-bottom:2rem;">Advertències epistemològiques i criteris d'interpretació per a l'estudi del taoisme.</p>
+<p class="drop-cap">A l'hora d'abordar el taoisme des de la història comparada de les religions, cal blindar-se metodològicament contra la projecció de categories de pensament occidentals sobre una realitat intrínsecament fluida. El taoisme no s'adapta als patrons amb què a Europa ens hem acostumat a classificar "allò que és una religió".</p>
+
+<h2 id="s9101">9.10.1 El refús de la divisió "Filosofia vs. Religió"</h2>
+<p>Com s'ha argumentat al llarg del capítol, mantenir la distinció entre el taoisme filosòfic dels llibres antics (considerat "pur") i el taoisme litúrgic i alquímic (considerat "supersticiós") és perpetuar un biaix eurocèntric i purità del segle XIX. El mètode històric-crític modern exigeix estudiar les tècniques corporals (respiració, <em>qigong</em>) com una aplicació directa, somàtica i pràctica de les mateixes idees exposades al <em>Daodejing</em>.</p>
+
+<h2 id="s9102">9.10.2 El problema del secretisme iniciàtic i el text hermètic</h2>
+<p>Gran part del cànon taoista (el <em>Daozang</em>) no va ser escrit per ser llegit lliurement pel públic, com es faria amb la Bíblia, sinó que estava format per llibretes de laboratori, codis secrets i esquemes rituals destinats únicament als iniciats (que sovint juraven no revelar-los sota pena de càstig celestial). Desxifrar avui un manual d'alquímia interna exigeix comprendre que paraules com "plom", "mercuri" o "drac" no són referents físics, sinó que funcionen com un argot simbòlic xifrat per descriure processos de meditació al sistema nerviós central de l'adepte.</p>
+
+<h2 id="s9103">9.10.3 L'apropiació cultural a l'època contemporània</h2>
+<p>L'historiador ha de ser molt curós a l'hora d'analitzar el taoisme contemporani. Comerciar avui amb el taoisme a Occident sovint implica extirpar-li qualsevol religiositat incòmoda (deïtats, escepticisme cap a l'Estat, ofrenes, inferns), deixant només un producte consumible: una "saviesa asiàtica de saló" centrada en el benestar psicològic, totalment inofensiva per a l'ordre capitalista modern. Comprendre el taoisme en la seva plenitud requereix acceptar la seva radicalitat i el fet que va inspirar tant savis pacífics com rebels armats escatològics.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ======================================================= 9.11 BIBLIOGRAFIA -->
+<section id="s911" class="reveal">
+<h1 class="chapter-title"><span class="ch-num">9.11</span>Bibliografia</h1>
+
+<div class="bib-section">
+<h3>Fonts primàries clàssiques</h3>
+<p class="bib-entry">Laozi. <em>Daodejing (El Llibre del Dao i del De)</em>. Traducció directa del xinès i edició a càrrec de Seán Golden i Presas i Tai-loi Ma. Barcelona: Proa, 2000. <strong>[Edició de referència en català]</strong>.</p>
+<p class="bib-entry">Laozi. <em>Tao Te Ching</em>. Traducció i comentaris crítics per D.C. Lau. Londres: Penguin Classics, 1963.</p>
+<p class="bib-entry">Zhuangzi. <em>Zhuangzi: els capítols interiors</em>. Traducció d'Iñaki Preciado Idoeta. Barcelona: Kairós, 1996.</p>
+<p class="bib-entry">Zhuangzi. <em>The Complete Works of Chuang Tzu</em>. Traducció a l'anglès per Burton Watson. Nova York: Columbia University Press, 1968.</p>
+<p class="bib-entry">Cleary, Thomas (trad.). <em>The Secret of the Golden Flower (Tai Yi Jin Hua Zong Zhi)</em>. San Francisco: Harper, 1991.</p>
+</div>
+
+<div class="bib-section">
+<h3>Obres de referència generals sobre Taoisme (Secundàries)</h3>
+<p class="bib-entry">Schipper, Kristofer. <em>The Taoist Body</em>. Berkeley: University of California Press, 1993. <strong>[Indispensable per comprendre la unió entre el cos físic, l'alquímia i l'església taoista]</strong>.</p>
+<p class="bib-entry">Robinet, Isabelle. <em>Taoism: Growth of a Religion</em>. Stanford: Stanford University Press, 1997. <strong>[Fonamental per a la història de les diferents escoles: Shangqing, Lingbao i els Mestres Celestials]</strong>.</p>
+<p class="bib-entry">Pregadio, Fabrizio (ed.). <em>The Encyclopedia of Taoism</em>. 2 vols. Londres: Routledge, 2008. <strong>[Obra enciclopèdica acadèmica sobre terminologia, biografies i literatura taoista]</strong>.</p>
+<p class="bib-entry">Kohn, Livia. <em>Daoism and Chinese Culture</em>. Cambridge, MA: Three Pines Press, 2001.</p>
+<p class="bib-entry">Graham, A.C. <em>Disputers of the Tao: Philosophical Argument in Ancient China</em>. Chicago: Open Court, 1989. <strong>[Clàssic per al context del període de les Cent Escoles i la crisi política antiga]</strong>.</p>
+</div>
+
+<div class="bib-section">
+<h3>Alquímia, Qigong i Ciència</h3>
+<p class="bib-entry">Needham, Joseph. <em>Science and Civilisation in China, Vol. 5: Chemistry and Chemical Technology</em>. Cambridge: Cambridge University Press, 1983. <strong>[L'obra mestra sobre els coneixements proto-científics (Waidan) taoistes i els descobriments químics]</strong>.</p>
+<p class="bib-entry">Pregadio, Fabrizio. <em>Great Clarity: Daoism and Alchemy in Early Medieval China</em>. Stanford: Stanford University Press, 2006.</p>
+<p class="bib-entry">Despeux, Catherine. <em>Taoisme i cos humà</em>. París: Guy Trédaniel, 1994.</p>
+</div>
+
+<div class="bib-section">
+<h3>Taoisme contemporani, Política i Religió popular</h3>
+<p class="bib-entry">Goossaert, Vincent, i David A. Palmer. <em>The Religious Question in Modern China</em>. Chicago: University of Chicago Press, 2011. <strong>[Imprescindible per entendre la persecució durant el segle XX i el control estatal actual]</strong>.</p>
+<p class="bib-entry">Bokenkamp, Stephen R. <em>Early Daoist Scriptures</em>. Berkeley: University of California Press, 1997. <strong>[Contextualitza l'escenari mil·lenarista i les primeres esglésies apocalíptiques]</strong>.</p>
+<p class="bib-entry">Seidel, Anna. «Taoism: The Unofficial High Religion of China». A <em>Taoist Resources</em> 2.2, 1990. <strong>[Sobre la convivència entre l'Estat imperial confucià i l'activitat de l'església taoista]</strong>.</p>
+</div>
+</section>
+
+</main>
+
+<a href="#cover" class="back-top" id="backTop" title="Tornar al principi">↑</a>
+
+<!-- Scripts Externs -->
+<script src="scripts.js"></script>
+</body>
+</html>

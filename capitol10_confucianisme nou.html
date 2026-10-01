@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 10 — Confucianisme: L'Estat Burocràtic</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Personalització per al Capítol 10 (Confucianisme) -->
+<!-- Estils Externs -->
+<link rel="stylesheet" href="estil.css">
+
+<!-- Personalització per al Capítol 10 (Confucianisme) -->
+<style>
+  :root {
+    --sidebar-bg: #1c1512; /* To fusta noble de palisandre / laca imperial */
+    --jade: #1e4a3a;
+    --jade-light: #2a6b52;
+    --vermell: #6b1e1e;
+  }
+  
+  /* Seguretat UI */
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+
+  /* Components visuals exclusius del Capítol 10 */
+  .concept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 2rem 0; }
+  .concept-card { background: #100e08; color: #f4efe4; padding: 1.4rem; text-align: center; }
+  .concept-card .term { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: #b8912e; display: block; margin-bottom: 0.3rem; }
+  .concept-card .pinyin { font-size: 0.8rem; letter-spacing: 0.1em; color: #b8912e; text-transform: uppercase; display: block; margin-bottom: 0.4rem; }
+  .concept-card .def { font-size: 0.88rem; color: #c4b898; font-style: italic; line-height: 1.5; }
+
+  .relacions-list { margin: 1.5rem 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .relacions-list li { display: flex; align-items: baseline; gap: 1rem; padding: 0.75rem 1.25rem; border-left: 2px solid var(--jade-light); background: rgba(30, 74, 58, 0.05); }
+  .relacions-list li .rel-par { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--jade); min-width: 180px; flex-shrink: 0; }
+  .relacions-list li .rel-desc { font-size: 0.93rem; color: #2e2a1e; font-style: italic; }
+
+  .timeline { margin: 2rem 0; border-left: 2px solid rgba(184, 145, 46, 0.25); padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.2rem; }
+  .timeline-item { position: relative; }
+  .timeline-item::before { content: ''; position: absolute; left: -1.85rem; top: 0.4rem; width: 10px; height: 10px; border-radius: 50%; background: #b8912e; border: 2px solid #faf7f0; }
+  .timeline-date { font-family: 'IM Fell English', serif; font-size: 0.82rem; color: #7a5c14; letter-spacing: 0.08em; margin-bottom: 0.2rem; }
+  .timeline-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--jade); margin-bottom: 0.3rem; }
+  .timeline-text { font-size: 0.93rem; color: #2e2a1e; }
+
+  .debat-box { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 2rem 0; }
+  .debat-card { padding: 1.4rem; }
+  .debat-card.optimista { background: rgba(30, 74, 58, 0.05); border-top: 3px solid var(--jade-light); }
+  .debat-card.pessimista { background: rgba(107, 30, 30, 0.05); border-top: 3px solid var(--vermell); }
+  .debat-card .pensador { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem; }
+  .debat-card.optimista .pensador { color: var(--jade); }
+  .debat-card.pessimista .pensador { color: var(--vermell); }
+  .debat-card p { font-size: 0.93rem; text-align: left; margin: 0; }
+
+  .expansio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 2rem 0; }
+  .expansio-card { border: 1px solid rgba(184, 145, 46, 0.25); padding: 1.4rem; background: #f4efe4; }
+  .expansio-card .pais { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--jade); margin-bottom: 0.5rem; }
+  .expansio-card p { font-size: 0.9rem; text-align: left; margin: 0; }
+
+  @media(max-width:600px){
+    .concept-grid, .expansio-grid, .debat-box { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+<!-- HEADER FIXE & NAV TOGGLE -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title">Capítol 10 — Confucianisme</div>
+  <div style="width: 44px;"></div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+ <div class="sidebar-header">
+    <a href="index.html" style="font-family: 'Crimson Pro', serif; font-size: 0.75rem; color: #c4a44a; text-decoration: none; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block; margin-bottom: 0.5rem; opacity: 0.7;">← Índex General</a>
+    <div class="sidebar-title">Capítol 10<br>Confucianisme</div>
+  </div>
+  <nav>
+    <a href="#cover" class="lvl1">Portada</a>
+    <a href="#intro" class="lvl1">Introducció</a>
+    <a href="#context" class="lvl1">2. Context Històric</a>
+    <a href="#context-zhou" class="lvl2">L'enfonsament dels Zhou</a>
+    <a href="#context-rel" class="lvl2">Cel i Avantpassats</a>
+    <a href="#context-shi" class="lvl2">La crisi ritual i els shi</a>
+    <a href="#arq" class="lvl1">3. Arquitectura del pensament</a>
+    <a href="#confuci" class="lvl2">Confuci i els Analectes</a>
+    <a href="#li" class="lvl2">El Ritual (Li)</a>
+    <a href="#ren" class="lvl2">Ren, Xiao i Junzi</a>
+    <a href="#zhengming" class="lvl2">Rectificació dels noms</a>
+    <a href="#wulun" class="lvl2">Les Cinc Relacions</a>
+    <a href="#debat" class="lvl2">Menci vs. Xunzi</a>
+    <a href="#sagrat" class="lvl2">L'ontologia del sagrat</a>
+    <a href="#inst" class="lvl1">4. Institucionalització</a>
+    <a href="#dong" class="lvl2">Dong Zhongshu i els Han</a>
+    <a href="#examens" class="lvl2">Els exàmens imperials</a>
+    <a href="#libu" class="lvl2">Ministeri dels Ritus</a>
+    <a href="#debat-rel" class="lvl1">5. És una religió?</a>
+    <a href="#influencies" class="lvl1">6. Influències</a>
+    <a href="#inf-daoisme" class="lvl2">Daoisme i budisme</a>
+    <a href="#neo" class="lvl2">Neoconfucianisme</a>
+    <a href="#expansio" class="lvl2">Expansió a l'Àsia</a>
+    <a href="#conclusions" class="lvl1">7. Conclusions</a>
+    <a href="#metodologia" class="lvl1">8. Metodologia</a>
+    <a href="#bibliografia" class="lvl1">9. Bibliografia</a>
+  </nav>
+</aside>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-menorah">儒</div>
+  <div class="cover-ornament">Història de les Religions</div>
+  <div class="cover-rule"></div>
+  <div class="cover-hebrew">禮 • REN • LI</div>
+  <h1 class="cover-chapter">Capítol 10</h1>
+  <div class="cover-subtitle">Confucianisme — L'Estat Burocràtic</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong> El confucianisme no és una filosofia secular sinó la tecnologia de govern més sofisticada de la història: va naturalitzar la jerarquia convertint el ritual en ordre còsmic, la família en Estat, i el funcionari en sacerdot d'una religió cívica que va regir l'Àsia Oriental durant dos mil·lennis.
+  </div>
+  <div class="cover-scroll">
+    <span>Llegir</span>
+    <div class="cover-scroll-line"></div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="content">
+
+<!-- 1. INTRODUCCIÓ -->
+<section id="intro" class="section-start reveal">
+  <h1 class="chapter-title"><span class="ch-num">Introducció</span>El confucianisme com a tecnologia de govern</h1>
+
+  <p class="drop-cap">En l'estudi de la història de les religions, el confucianisme planteja un dels desafiaments interpretatius més fascinants. Sovint classificat des d'una òptica occidental com una simple escola filosòfica o un codi d'ètica secular, aquesta tradició constitueix, en realitat, una cosmovisió totalitzadora que va funcionar durant més de dos mil·lennis com la veritable religió cívica i d'Estat de l'Imperi xinès.</p>
+
+  <p>A diferència d'altres tradicions que hem analitzat en els capítols anteriors, el confucianisme no articula el seu sistema de creences al voltant d'una revelació divina directa, un panteó complex de divinitats intervencionistes o una escatologia centrada en el més-enllà. El seu focus d'atenció és radicalment <em>immanent</em>: la construcció i el manteniment d'una societat humana harmònica que reflecteixi l'ordre perfecte del cosmos.</p>
+
+  <p>Per aconseguir-ho, el confucianisme converteix el ritual (<em>li</em>) en l'eina principal d'enginyeria social. Dins d'aquest sistema, el ritual transcendeix la mera cerimònia al temple per esdevenir la coreografia meticulosa de tota la vida quotidiana i política. Des de la manera de saludar un pare fins als protocols de l'Emperador a la cort, cada acció pautada té l'objectiu de reforçar els lligams de la comunitat i establir clarament les jerarquies. L'Estat, sota aquesta concepció, no és més que una extensió natural de la família, on la pietat filial es transforma en lleialtat política.</p>
+
+  <p>Des de la perspectiva d'una «genealogia del poder» —el fil conductor d'aquesta obra—, el confucianisme representa una de les tecnologies de govern més sofisticades i duradores de la història humana. Mitjançant la figura del funcionari lletrat (el mandarí), el sistema confucià va crear una elit burocràtica que exercia, a la pràctica, funcions anàlogues a les d'un sacerdoci: ells eren els garants de l'ortodòxia, els conservadors dels textos sagrats i els encarregats d'interpretar la voluntat del Cel.</p>
+
+  <div class="tesi">
+    <p>El problema històric central d'aquest capítol és com les idees d'un modest funcionari del segle VI aC van ser recollides, reelaborades i sistematitzades fins a convertir-se en l'espina dorsal del poder imperial xinès: com l'ètica es va fer religió, com el ritual va substituir la força militar com a element de cohesió, i com aquest sistema va modelar de manera irreversible la identitat de tota l'Àsia Oriental.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 2. CONTEXT -->
+<section id="context" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">2</span>Context Històric i Cultural</h1>
+  <p class="section-lead">Cap tradició neix del no-res: el confucianisme com a resposta a una crisi estructural.</p>
+
+  <p class="drop-cap">Per comprendre la naturalesa del confucianisme, cal aplicar una premissa fonamental d'aquesta obra: cap tradició neix del no-res. El pensament confucià no és el producte d'una revelació sobtada, sinó la resposta intel·lectual i religiosa a una crisi històrica profunda, construïda sobre segles de creences ancestrals xineses. El segle VI aC —moment en què, seguint la nostra cronologia comparada, també sorgeixen el budisme a l'Índia i el zoroastrisme a Pèrsia— és una època de gran efervescència i inestabilitat.</p>
+</section>
+
+<section id="context-zhou" class="reveal">
+  <h2>L'enfonsament de l'ordre dels Zhou</h2>
+
+  <p>Durant els seus primers segles (des del c. 1046 aC), la dinastia Zhou havia aconseguit mantenir un regne pròsper i relativament centralitzat, basat en un sistema feudal on els senyors locals juraven lleialtat al monarca. Aquest període va ser posteriorment mitificat com una edat d'or d'harmonia i govern just. No obstant això, al segle VI aC, el poder central dels reis Zhou s'havia pràcticament esfumat. L'Era de les Primaveres i Tardors (722–481 aC) era una època marcada per la brutalitat de la guerra, la traïció, l'assassinat de monarques i la misèria de la pagesia.</p>
+
+  <p>La pregunta que es feien els pensadors d'aquella època era angoixant: com es podia restaurar l'ordre en un món que semblava haver perdut el rumb? Confuci (551–479 aC) va trobar la resposta mirant cap al passat, en la recuperació i reinterpretació de dues antigues institucions religioses: el culte als avantpassats i el Mandat del Cel.</p>
+</section>
+
+<section id="context-rel" class="reveal">
+  <h2>Antecedents religiosos: el Cel i els Avantpassats</h2>
+
+  <p>El substrat religiós de la Xina preconfuciana es basava en dues idees fonamentals. La primera era el <strong>culte als avantpassats</strong>: la convicció que l'esperit dels difunts continuava actiu i que tenia capacitat per influir en la fortuna dels vius. Aquest culte va consolidar la família —i no l'individu— com la unitat bàsica de la societat xinesa, establint una cadena ininterrompuda de deures entre generacions passades, presents i futures.</p>
+
+  <p>La segona era el concepte del <strong>Mandat del Cel</strong> (<em>Tianming</em>). Quan els Zhou van enderrocar els Shang al segle XI aC, necessitaven justificar la seva rebel·lió. Van introduir un canvi teològic revolucionari: van substituir el déu tribal <em>Shangdi</em> pel concepte de <em>Tian</em> (el Cel), una força còsmica, moral i universal. Segons el <em>Tianming</em>, el Cel atorga el dret de governar al «Fill del Cel» només si governa amb justícia i virtut. Si el governant es torna un tirà, perd el Mandat —manifestat a través de desastres naturals, fams o revoltes— legitimant el seu enderrocament.</p>
+
+  <div class="highlight">
+    <p>Per a Confuci, el Cel havia deixat de parlar directament als homes, però la seva voluntat continuava present en el ritual heretat dels savis del passat. El seu gran projecte no va ser fundar una nova religió, sinó extreure les implicacions ètiques i socials d'un marc religiós heretat.</p>
+  </div>
+</section>
+
+<section id="context-shi" class="reveal">
+  <h2>La crisi ritual i els <em>shi</em></h2>
+
+  <p>El col·lapse de l'autoritat Zhou no només va implicar una fragmentació política i militar, sinó una profunda crisi ritual i cosmològica. Quan els senyors feudals locals van usurpar cerimònies musicals reservades al Fill del Cel, no estaven trencant tan sols una llei terrenal: des de la seva cosmovisió, estaven alterant l'equilibri de l'univers. Aquesta «usurpació dels ritus» explicava, als ulls dels cronistes, les plagues i el caos endèmic.</p>
+
+  <p>A nivell sociològic, la descomposició del sistema feudal va generar un fenomen decisiu: l'aparició d'una nova classe social, els <strong>shi</strong> (cavallers, lletrats o funcionaris). Posseïdors del coneixement de les antigues escriptures, els shi van començar a viatjar d'un estat a un altre oferint els seus serveis com a consellers polítics i especialistes en rituals. Confuci naixeria, precisament, en el si d'aquesta classe shi empobrida.</p>
+
+  <p>L'evolució del Mandat del Cel va obligar a traslladar el pes de la religió des de la interacció espiritual externa cap a la responsabilitat humana. L'acció ritual ja no es concebia com una transacció màgica per comprar el favor d'una divinitat, sinó com un mecanisme per cultivar la virtut interna i garantir l'ordre cívic.</p>
+</section>
+
+<hr class="rule">
+
+<!-- 3. ARQUITECTURA -->
+<section id="arq" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">3</span>L'arquitectura del pensament confucià</h1>
+  <p class="section-lead">Com el confucianisme va dissenyar una estructura de sentit capaç de substituir l'ordre feudal col·lapsat per un nou model basat en l'ètica i el civisme.</p>
+</section>
+
+<section id="confuci" class="reveal">
+  <h2>Confuci: la figura històrica i el text sagrat</h2>
+
+  <p>El consens acadèmic actual diferencia clarament entre el Confuci històric i el savi divinitzat per la tradició imperial posterior. <strong>Kong Qiu</strong> (551–479 aC), conegut a Occident com a Confuci (llatinització de <em>Kong Fuzi</em>, «Mestre Kong»), va ser un funcionari de baix rang de l'estat de Lu. Frustrat pel seu fracàs a l'hora de convèncer els governants del seu temps d'aplicar les seves idees polítiques, va dedicar gran part de la seva vida a l'ensenyament itinerant.</p>
+
+  <div class="highlight">
+    <p>«Jo transmeto, no invento. Confio en el passat i l'estimo.»</p>
+    <span class="cita-autor">— Confuci, <em>Analectes</em> (Lunyu), VII.1</span>
+  </div>
+
+  <p>Confuci no es presentava com un profeta portador d'una nova revelació, sinó com un conservador que volia restaurar l'antiga saviesa. Les seves ensenyances no van ser escrites per ell, sinó recopilades per generacions successives de deixebles en una obra cabdal: <strong>Els Analectes</strong> (<em>Lunyu</em>). Aquest llibre esdevindria, a la pràctica, el text sagrat fonamental de la cultura xinesa, exercint una autoritat normativa sobre el pensament, la política i l'educació durant més de dos mil·lennis.</p>
+</section>
+
+<section id="li" class="reveal">
+  <h2>El Ritual (<em>Li</em>) com a ordre social i còsmic</h2>
+
+  <p>La pedra angular de l'arquitectura confuciana és el concepte de <em>Li</em>, traduït generalment com a «ritual», «ritus» o «decorum». Originalment, el <em>li</em> feia referència exclusiva a les cerimònies de sacrifici als esperits i als avantpassats. La genialitat evolutiva de Confuci va consistir a expandir aquest concepte religiós fins a abastar <em>tota</em> la interacció humana.</p>
+
+  <p>Per a Confuci, el ritual no es limita a l'espai del temple. Saludar un superior, beure te, el dol per un familiar o les audiències a la cort esdevenen actes rituals. Confuci sostenia que governar mitjançant lleis penals i càstigs només generava conformisme i evasió. En canvi, governar mitjançant el ritual interioritzava la norma: els individus actuaven correctament no per por a la presó, sinó per un profund sentit de la vergonya moral i del deure cap a la comunitat.</p>
+
+  <div class="concept-grid">
+    <div class="concept-card">
+      <span class="term">禮</span>
+      <span class="pinyin">Lǐ</span>
+      <span class="def">Ritual · Decorum<br>L'ordre còsmic manifestat en tota interacció humana pautada</span>
+    </div>
+    <div class="concept-card">
+      <span class="term">仁</span>
+      <span class="pinyin">Rén</span>
+      <span class="def">Humanitat · Benevolència<br>La qualitat moral que vivifica el ritual i el distingeix de la mecànica buida</span>
+    </div>
+    <div class="concept-card">
+      <span class="term">天</span>
+      <span class="pinyin">Tiān</span>
+      <span class="def">El Cel<br>Força còsmica moral i universal que regula l'ordre de la natura i de la humanitat</span>
+    </div>
+  </div>
+</section>
+
+<section id="ren" class="reveal">
+  <h2>La interiorització de la norma: <em>Ren</em>, <em>Xiao</em> i <em>Junzi</em></h2>
+
+  <p>El ritual executat de manera mecànica és buit. Confuci adverteix que el <em>li</em> només és vàlid si està vivificat pel <strong>Ren</strong> (humanitat, benevolència o empatia): la qualitat moral fonamental que consisteix en la capacitat de preocupar-se pels altres. L'espai d'entrenament principal per desenvolupar aquestes virtuts és la família, mitjançant el concepte de <strong>Xiao</strong> o pietat filial.</p>
+
+  <p>Des de la perspectiva de l'evolució del poder polític, el <em>Xiao</em> és un concepte revolucionari per la seva escalabilitat. Confuci concep l'Estat com una <em>macro-família</em>: el respecte que un fill deu al seu pare és estructuralment el mateix que un súbdit deu al seu monarca. L'ètica familiar es converteix així en tecnologia política.</p>
+
+  <p>La contribució ideològica més subversiva de Confuci va ser la redefinició del concepte de <strong>Junzi</strong>. Abans d'ell, aquest terme significava literalment «fill del governant» i designava l'aristocràcia de sang. Confuci buida el terme del seu significat biològic i el converteix en un estatus moral: el «noble de virtut» o la persona superior. Qualsevol home, independentment del seu origen, podia esdevenir un <em>junzi</em> a través de l'estudi, l'autocultiu i la pràctica del ritual. Així naixia la justificació teòrica de la futura burocràcia meritocràtica.</p>
+</section>
+
+<section id="zhengming" class="reveal">
+  <h2>La rectificació dels noms (<em>Zhengming</em>): el llenguatge com a ordre polític</h2>
+
+  <p>Un dels conceptes més fascinants i políticament rellevants de l'arquitectura confuciana és la doctrina de la «rectificació dels noms» (<em>Zhengming</em>). Als Analectes, quan un deixeble pregunta a Confuci quina seria la seva primera mesura si li encarreguessin el govern d'un estat, el mestre respon sense dubtar: «Rectificar els noms».</p>
+
+  <div class="highlight">
+    <p>«Que el governant sigui governant, el ministre ministre, el pare pare, i el fill fill.»</p>
+    <span class="cita-autor">— Confuci, <em>Analectes</em> XII.11</span>
+  </div>
+
+  <p>Per a la cosmovisió confuciana, el caos social de l'època derivava d'una desconnexió profunda entre el llenguatge i la realitat moral. Quan un usurpador s'atorgava el títol de «rei», els mots perdien el seu pes normatiu. Aquesta doctrina té implicacions profundes: estableix que el poder no s'exerceix simplement per força militar, sinó per l'adequació rigorosa entre el càrrec i la virtut que aquest exigeix. Si un sobirà no actua amb la benevolència pròpia d'un sobirà, perd la legitimitat del títol. És un mecanisme filosòfic dissenyat per limitar l'absolutisme.</p>
+</section>
+
+<section id="wulun" class="reveal">
+  <h2>Les Cinc Relacions (<em>Wu Lun</em>) i la xarxa d'obligacions</h2>
+
+  <p>El confucianisme no concep l'individu com un ésser aïllat o autònom, sinó com un node dins d'una xarxa densa de relacions comunitàries. Les <strong>Cinc Relacions Fonamentals</strong> (<em>Wu Lun</em>) estructuren tota la societat:</p>
+
+  <ul class="relacions-list">
+    <li>
+      <span class="rel-par">Sobirà – Súbdit</span>
+      <span class="rel-desc">Lleialtat del súbdit; benestar i seguretat del sobirà. La relació fonamental de l'Estat.</span>
+    </li>
+    <li>
+      <span class="rel-par">Pare – Fill</span>
+      <span class="rel-desc">Pietat filial del fill; amor protector del pare. La base de tota moralitat confuciana.</span>
+    </li>
+    <li>
+      <span class="rel-par">Marit – Muller</span>
+      <span class="rel-desc">Respecte de la muller; protecció i justícia del marit. Fonament de l'estabilitat familiar.</span>
+    </li>
+    <li>
+      <span class="rel-par">Germà gran – Germà petit</span>
+      <span class="rel-desc">Deferència del petit; gentilesa i guia del gran.</span>
+    </li>
+    <li>
+      <span class="rel-par">Amic – Amic</span>
+      <span class="rel-desc">L'única relació simètrica. Exigeix confiança i sinceritat recíproques.</span>
+    </li>
+  </ul>
+
+  <p>El rigor acadèmic ens obliga a matisar la idea occidental que el confucianisme és un simple sistema de submissió cega. La relació confuciana és fonamentalment <strong>recíproca</strong>: l'autoritat, en la tradició confuciana, sempre va lligada a la responsabilitat assistencial. L'incompliment d'aquesta responsabilitat per part del superior trenca el pacte sagrat i desestabilitza l'harmonia de l'Estat.</p>
+</section>
+
+<section id="debat" class="reveal">
+  <h2>El debat antropològic: Menci i Xunzi</h2>
+
+  <p>Confuci va deixar un buit teòric important: si el <em>Ren</em> és l'ideal, la naturalesa humana hi tendeix de manera natural, o bé és egoista per defecte? Aquesta qüestió va generar un dels debats acadèmics més importants de la història xinesa:</p>
+
+  <div class="debat-box">
+    <div class="debat-card optimista">
+      <div class="pensador">Menci (372–289 aC)</div>
+      <p><strong>Optimisme antropològic radical.</strong> La naturalesa humana és innatament bona. Tots els humans neixen amb les «llavors» de la compassió, la vergonya, la deferència i el sentit del bé i del mal. La maldat és el resultat d'un entorn hostil. La funció de l'Estat no és castigar, sinó crear les condicions perquè la bondat natural floreixi.</p>
+    </div>
+    <div class="debat-card pessimista">
+      <div class="pensador">Xunzi (c. 310–235 aC)</div>
+      <p><strong>Pessimisme mordaç.</strong> La naturalesa humana és intrínsecament egoista i competitiva. La bondat és una construcció completament artificial, producte del càlcul i la cultura. Només la disciplina fèrria de l'educació i la pràctica constant del ritual i la música ens poden civilitzar i transformar en éssers morals.</p>
+    </div>
+  </div>
+
+  <p>Aquesta bifurcació —l'optimisme de Menci basat en l'autocultiu interior, i el rigor de Xunzi basat en el control institucional exterior— proporcionaria al confucianisme la complexitat filosòfica necessària per enfrontar-se a nous reptes polítics, preparant el terreny per a la seva imminent adopció com a religió d'Estat imperial.</p>
+</section>
+
+<section id="sagrat" class="reveal">
+  <h2>L'ontologia del sagrat: el culte, el sacrifici i la cal·ligrafia</h2>
+
+  <p>L'experiència del sagrat en el confucianisme representa un repte per a l'observador modern. En la cosmovisió confuciana, el sagrat no és el que escapa a la naturalesa, sinó allò que la <em>perfecciona</em>. El sagrat és el <em>li</em> (ritual) quan esdevé l'eix sobre el qual gira l'existència.</p>
+
+  <h3>La litúrgia de l'ordre domèstic: el culte als ancestres</h3>
+  <p>El cor de l'experiència religiosa confuciana no es troba en els grans temples, sinó en l'espai privat de la llar. A cada llar xinesa, l'altar ancestral és una obertura cap a l'altre món. Les tauletes de fusta (<em>shenzhupai</em>) representen la presència física dels difunts. L'ofrena quotidiana de menjar, encens i vi no és simbòlica en el sentit occidental: per al confucià, el sacrifici és una acció que manté el vincle real. Si l'ancestre no és alimentat mitjançant el ritual, esdevé un esperit errant i maligne (<em>gui</em>). La veneració és un acte de memòria i, simultàniament, d'actualització del sagrat en el present.</p>
+
+  <h3>El Temple del Cel: el sacrifici imperial com a rendició de comptes</h3>
+  <p>A escala de l'Imperi, la litúrgia aconsegueix el seu punt culminant en els sacrificis imperials al Temple del Cel (<em>Tiantan</em>). L'Emperador, en dejú ritual durant dies, ascendia a l'Altar circular per oferir el seu propi cos i la seva humilitat al Cel. El sacrifici d'un bou, el vi d'arròs i les sedes cremades eren un acte d'<em>estabilització</em>: l'Emperador es presentava davant el Cel com a responsable de tot el que succeïa sota el seu govern. En aquell moment, l'Emperador es despullava de tot el seu poder polític i es convertia en un simple home davant el Pare Còsmic.</p>
+
+  <h3>L'escriptura com a teofania</h3>
+  <p>En el confucianisme, la cal·ligrafia xinesa és considerada un llegat del Cel. Estudiar els clàssics amb pinzell i tinta no és una feina intel·lectual: és una pràctica d'ascetisme. La correcció de la línia, l'equilibri de l'espai en el paper i la recitació melòdica del text tenien el poder de calmar les passions del lletrat i alinear la seva ment amb el <em>Li</em> universal. La biblioteca era un lloc de silenci sagrat, gairebé una extensió del temple on l'esperit de Confuci i dels savis del passat restava present.</p>
+</section>
+
+<hr class="rule">
+
+<!-- 4. INSTITUCIONALITZACIÓ -->
+<section id="inst" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">4</span>La institucionalització: d'escola filosòfica a religió d'Estat</h1>
+  <p class="section-lead">Com les idees de Confuci van sobreviure la purga de la Qin i van conquerir l'Imperi Han.</p>
+
+  <p class="drop-cap">Quan Confuci va morir l'any 479 aC, es considerava a si mateix un fracàs polític. Durant gairebé tres segles, les seves ensenyances no van ser res més que una escola de pensament entre moltes d'altres. De fet, la primera unificació imperial de la Xina sota la breu però brutal dinastia Qin (221–206 aC) es va aconseguir aplicant una filosofia radicalment oposada: el Legisme, que rebutjava la moralitat i confiava exclusivament en lleis penals implacables. Durant la dinastia Qin, el confucianisme va estar a punt de desaparèixer a causa de la infame purga coneguda com «la crema de llibres i l'enterrament de lletrats».</p>
+</section>
+
+<section id="dong" class="reveal">
+  <h2>La síntesi cosmològica de Dong Zhongshu i els Han</h2>
+
+  <p>Va ser la necessitat d'estabilitzar l'Imperi sota la subsegüent dinastia Han (206 aC – 220 dC) el que va propiciar una de les mutacions ideològiques més extraordinàries de la història. Els primers emperadors Han es van adonar que un imperi tan vast no es podia governar indefinidament només a través del terror i la força bruta; necessitaven una base de legitimitat ideològica.</p>
+
+  <p>La solució la va proporcionar el pensador <strong>Dong Zhongshu</strong> (c. 179–104 aC), que va dissenyar una grandiosa síntesi teològica i política. Va fusionar l'ètica social confuciana antiga amb teories cosmològiques com el Yin i el Yang i els Cinc Elements. En aquesta nova cosmovisió, l'univers, la societat humana i l'Estat funcionaven com un únic organisme viu i interconnectat. L'Emperador deixava de ser només un monarca administratiu per convertir-se en l'eix còsmic, l'enllaç sagrat encarregat de mantenir l'harmonia entre el Cel, la Terra i la Humanitat. Les catàstrofes naturals ja no eren vistes com a fenòmens meteorològics, sinó com a respostes directes del Cel a la corrupció de l'Emperador.</p>
+
+  <p>Sota l'emperador Wu de Han, al segle II aC, aquesta nova versió del pensament confucià va ser declarada l'ortodòxia oficial de l'Estat. Els escrits vinculats a Confuci van ser elevats a la categoria de text sagrat, formant els <strong>Cinc Clàssics</strong>, l'estudi dels quals va passar a ser obligatori per a qualsevol persona que aspirés a l'administració pública.</p>
+</section>
+
+<section id="examens" class="reveal">
+  <h2>La burocràcia divina: els exàmens imperials</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">Dinastia Han (206 aC – 220 dC)</div>
+      <div class="timeline-title">Germen del sistema</div>
+      <div class="timeline-text">L'Estat comença a reclutar funcionaris per coneixement dels textos confucians, no per llinatge aristocràtic. Naixement de la Universitat Imperial (<em>Taixue</em>).</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Dynasties Sui i Tang (ss. VI–X)</div>
+      <div class="timeline-title">Perfeccionament del sistema d'exàmens imperials</div>
+      <div class="timeline-text">El sistema s'estandarditza i s'obre formalment a qualsevol home lliure. Els exàmens avaluen el coneixement exhaustiu dels Clàssics i la capacitat per redactar assajos morals. Naixement dels <strong>mandarins</strong>.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Dynasties Song – Qing (ss. X–XIX)</div>
+      <div class="timeline-title">Apogeu i cristal·lització</div>
+      <div class="timeline-text">El sistema d'exàmens arriba a la seva forma definitiva. Els candidats memoritzen els Quatre Llibres i els Cinc Clàssics. La burocràcia dels mandarins és la columna vertebral de l'Estat xinès.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">1905</div>
+      <div class="timeline-title">Abolició</div>
+      <div class="timeline-text">La dinastia Qing aboleix el sistema d'exàmens imperials sota la pressió de la modernització. S'acaba una institució que havia durat dos mil·lennis i havia seleccionat centenars de milers de funcionaris.</div>
+    </div>
+  </div>
+
+  <p>La genialitat d'aquest sistema era la seva capacitat d'absorbir l'ambició humana: qualsevol home brillant de províncies, en comptes de liderar una rebel·lió armada, dedicava la seva vida a estudiar els clàssics per aprovar els exàmens, integrar-se al sistema i ascendir socialment. Així, el confucianisme va neutralitzar la dissidència política convertint-la en conformisme erudit.</p>
+</section>
+
+<section id="libu" class="reveal">
+  <h2>El Ministeri dels Ritus i el control de l'ortopràxia</h2>
+
+  <p>L'èxit d'aquesta monumental institucionalització no es pot entendre sense el <strong>Ministeri dels Ritus</strong> (<em>Libu</em>). En l'estudi de la història de les religions, sovint observem que el poder es divideix entre una esfera temporal (l'Estat) i una de espiritual (l'Església). A l'Imperi xinès, tanmateix, aquesta divisió era totalment inexistent. El Ministeri dels Ritus actuava com el veritable braç eclesiàstic del govern imperial.</p>
+
+  <p>Aquest ministeri no només supervisava el contingut i l'execució dels exàmens imperials, sinó que gestionava l'ordre del temps i de l'espai: calculava el calendari sagrat, aprovava quines deïtats locals podien rebre culte oficial, i dictaminava els protocols de dol i les normes de vestimenta segons la jerarquia social. El que interessava a l'Estat xinès no era l'<em>ortodòxia</em> (la fe interior o la creença teològica profunda de l'individu), sinó l'<strong>ortopràxia</strong> (la pràctica correcta i meticulosa del ritual). Seguint la perspectiva de Clifford Geertz, aquest sistema de rituals imposats per l'Estat teixia una xarxa de significats compartits que disciplinava els cossos i les ments, assegurant que qualsevol acció social reproduís l'esquema de l'autoritat imperial.</p>
+
+  <p>Malgrat aquesta maquinària de control, seria un error interpretar el confucianisme únicament com una eina per al despotisme absolut. El sistema ideològic contenia el seu propi mecanisme intern de contrapès: els mandarins confucians, com a experts en la història i en l'estudi del cosmos, s'arrogaven el dret d'interpretar els presagis naturals. En nombroses ocasions, funcionaris confucians van arriscar el seu propi exili —o l'execució— per retreure als emperadors els seus excessos, establint una línia vermella a la voluntat autoritària.</p>
+</section>
+
+<hr class="rule">
+
+<!-- 5. DEBAT RELIGIÓ -->
+<section id="debat-rel" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">5</span>El debat acadèmic: és el confucianisme una religió?</h1>
+
+  <p class="drop-cap">En la historiografia i la sociologia de les religions, poques qüestions han generat tanta tinta i controvèrsia com la classificació del confucianisme. Si utilitzem el patró heretat dels monoteismes abrahamítics, el confucianisme semblaria no encaixar-hi: Confuci evitava parlar del més-enllà, no reclamava inspiració divina i el seu pensament era radicalment immanent. De fet, en el xinès clàssic no existia cap paraula equivalent al concepte occidental de «religió» —el terme <em>zongjiao</em> és un neologisme introduït a finals del segle XIX a través del contacte amb Occident.</p>
+
+  <p>Tanmateix, el consens acadèmic actual adverteix que reduir el confucianisme a una «filosofia secular» és un anacronisme históric profund. El confucianisme no es pot entendre sense el seu ancoratge en una cosmovisió sagrada: la creença inamovible en el Mandat del Cel (<em>Tianming</em>), l'eficàcia espiritual del ritual (<em>li</em>) i l'obligació ineludible del culte als avantpassats.</p>
+
+  <p><strong>Max Weber</strong>, a <em>La religió de la Xina</em> (1915), va analitzar el confucianisme com una de les grans religions mundials, encunyant el terme «racionalisme d'adaptació al món» per descriure com buscava que l'individu s'ajustés harmònicament a l'ordre social i còsmic existent. <strong>Émile Durkheim</strong>, des de la seva perspectiva, veuria en el confucianisme potser l'exemple més pur de la religió com a sistema de cohesió social: la societat xinesa reverenciava el seu propi ordre, la seva història i les seves estructures de parentiu.</p>
+
+  <p>Avui dia, gran part de la sinologia acadèmica (com els treballs de <strong>C.K. Yang</strong>) utilitza el concepte de «<strong>religió difusa</strong>». A diferència de les religions «institucionals», la religió difusa no té una existència independent de les institucions socials seculars. En el confucianisme, la família i l'Estat <em>són</em> l'Església; el cap de família és el sacerdot; l'Emperador és el summe pontífex; l'administració burocràtica és el clergat que preserva el text sagrat. Classificar el confucianisme com a religió no és simplement pertinent: és imprescindible per comprendre per què a la Xina imperial la desobediència als pares no era vista com un simple delicte civil, sinó com una autèntica heretgia que alterava l'equilibri de l'univers.</p>
+</section>
+
+<hr class="rule">
+
+<!-- 6. INFLUÈNCIES -->
+<section id="influencies" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">6</span>Influències i transmissions: sincretisme i expansió imperial</h1>
+  <p class="section-lead">El confucianisme, lluny de ser un monòlit immòbil, va haver d'enfrontar-se a crisis existencials formidables i reinventar-se per sobreviure.</p>
+</section>
+
+<section id="inf-daoisme" class="reveal">
+  <h2>6.1. Influències rebudes: el repte del daoisme i del budisme</h2>
+
+  <p>Fins a l'arribada del budisme, el paisatge intel·lectual xinès estava dominat per una tensió dialèctica entre dues grans forces autòctones: el confucianisme i el daoisme. El daoisme filosòfic plantejava una crítica mordaç a l'artificialitat del confucianisme: mentre els confucians insistien en el ritual, la jerarquia i l'esforç, el daoisme proposava la no-acció (<em>wu wei</em>), l'espontaneïtat i el retorn a la puresa de la natura.</p>
+
+  <p>Malgrat aquesta fricció teòrica, ambdues tradicions van acabar funcionant com a complementàries dins la psique xinesa. Un lletrat podia ser estrictament confucià durant el dia —exercint de magistrat, aplicant la llei— i profundament daoista a la nit o en la vellesa, dedicant-se a la poesia, la pintura de paisatges i el retir espiritual. El confucianisme governava l'esfera social; el daoisme nodria l'esfera mística.</p>
+
+  <p>El veritable terratrèmol cultural, però, va arribar a partir del segle I dC, quan el budisme va penetrar a la Xina introduint un univers conceptual absolutament aliè a la mentalitat xinesa. Durant els segles de la dinastia Tang (618–907 dC), el budisme va posar el confucianisme contra les cordes per dues raons estructurals: el celibat monàstic trencava directament la pietat filial (<em>xiao</em>); i la seva arquitectura filosòfica oferia una profunditat metafísica que l'ètica confuciana d'ordenar l'Estat no semblava poder igualar.</p>
+</section>
+
+<section id="neo" class="reveal">
+  <h2>6.2. La reacció: el Neoconfucianisme i Zhu Xi</h2>
+
+  <p>Durant segles, les elits confucianes van contraatacar el budisme demanant-ne la persecució física i la destrucció dels monestirs. Però els intel·lectuals més brillants de la dinastia Song (960–1279 dC) van entendre que la força bruta no derrotaria una idea superior; calia vèncer el budisme al seu propi terreny metafísic.</p>
+
+  <p>Així va néixer el <strong>Neoconfucianisme</strong>. El seu gran arquitecte va ser l'erudit <strong>Zhu Xi</strong> (1130–1200), l'obra del qual és un dels grans esforços de síntesi racional de la història de les religions. Aplicant un profund sincretisme, va robar les eines conceptuals del budisme i la cosmologia del daoisme per reconstruir l'edifici confucià. Va establir una nova ontologia basada en dos principis: el <em>Li</em> (el Principi, el patró moral i racional que ordena l'univers) i el <em>Qi</em> (la força material o energia que dona forma a les coses).</p>
+
+  <div class="highlight">
+    <p>La pietat filial i l'ordre jeràrquic ja no eren «simples regles socials heretades», sinó que eren expressions del <em>Li</em> còsmic. El Neoconfucianisme va dotar la tradició de la profunditat mística i meditativa del budisme zen, però mantenint el focus posat en la responsabilitat política i l'acció en aquest món.</p>
+  </div>
+</section>
+
+<section id="expansio" class="reveal">
+  <h2>6.3. Influències exercides: l'esfera cultural confuciana</h2>
+
+  <p>Un cop l'Estat xinès va perfeccionar la maquinària del confucianisme, el model es va convertir en el principal producte d'exportació de la Xina. Corea, el Japó i el Vietnam gravitaran inevitablement cap a aquest centre de gravetat cultural.</p>
+
+  <div class="expansio-grid">
+    <div class="expansio-card">
+      <div class="pais">🇰🇷 Corea</div>
+      <p>Cap nació va absorbir l'ortodòxia confuciana tan profundament com Corea, especialment sota la dinastia Joseon (1392–1897). El control de l'Estat sobre el culte als avantpassats, les normes de separació de sexes i el sistema de llinatges agnàtics van reconfigurar brutalment una societat que prèviament havia gaudit de major flexibilitat en el dret de les dones. A la pràctica, Corea es va tornar socialment més «confuciana» que la mateixa Xina.</p>
+    </div>
+    <div class="expansio-card">
+      <div class="pais">🇯🇵 Japó</div>
+      <p>Durant el Shogunat Tokugawa (1603–1868), els governants militars van trobar en el neoconfucianisme l'eina perfecta per un ordre jeràrquic immòbil. Van acceptar tota l'ètica de lleialtat absoluta (<em>chu</em>) i pietat filial (<em>xiao</em>), però van rebutjar categòricament el «Mandat del Cel», que hauria legitimat l'enderrocament de la dinastia. La lleialtat japonesa es va tornar incondicional i cega, posant les bases ètiques del <em>Bushido</em>.</p>
+    </div>
+    <div class="expansio-card">
+      <div class="pais">🇻🇳 Vietnam</div>
+      <p>Sota mil anys de dominació xinesa directa i constants invasions posteriors, els vietnamites van entendre que l'única manera de resistir la pressió del nord era dotant-se d'un aparell d'Estat igualment robust. Les dinasties vietnamites van adoptar amb entusiasme els exàmens imperials, el model de mandarins i el dret civil xinès. Van emprar el «software» institucional confucià precisament per consolidar una identitat nacional capaç de defensar-se de l'Imperi xinès.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 7. CONCLUSIONS -->
+<section id="conclusions" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">7</span>Conclusions: la persistència de l'ordre confucià en la genealogia del poder</h1>
+
+  <p class="drop-cap">L'anàlisi del confucianisme com a tecnologia de govern no és simplement un exercici d'historiografia oriental; és una dissecció del funcionament profund de les estructures de dominació. El triomf históric del confucianisme no va raure en la seva capacitat de predicar una veritat metafísica o d'oferir una salvació escatològica. El seu triomf va ser la <strong>naturalització de la jerarquia</strong>. A través de la subtil transformació del ritual —d'un acte de culte als esperits a un codi de conducta cívica—, el confucianisme va aconseguir que l'estructura de l'Estat fos percebuda no com una construcció humana arbitrària, sinó com una extensió necessària i sagrada de l'ordre còsmic.</p>
+
+  <p>En establir que el <em>Junzi</em> (l'home superior) es construeix a si mateix a través de l'estudi dels clàssics i l'aplicació del ritual, el sistema va crear individus que es disciplinaven voluntàriament. La cohesió no emanava d'un control extern omnipresent, sinó de l'autocontrol de cada subjecte, qui sentia que, en complir amb el seu deure filial o amb la seva funció en la jerarquia, estava realitzant la seva humanitat més plena.</p>
+
+  <p>Si entenem la religió com el sistema que dona sentit a l'existència dins d'un cosmos determinat, el confucianisme va ser, efectivament, la religió més exitosa de la història de l'Àsia Oriental. La genealogia del poder confucià ens mostra una veritat incòmoda: <em>l'harmonia social pot ser el preu a pagar per la inhibició de la dissidència</em>.</p>
+
+  <p>Finalment, en el món contemporani, el confucianisme no ha desaparegut. Es manifesta en la valoració del mèrit, en la priorització de l'educació com a via d'ascensió social, i en l'estil de govern basat en el consens i la previsibilitat a llarg termini que observem en moltes de les societats d'Àsia Oriental. Amb el confucianisme, la política es va fer litúrgia, i el ritual es va fer govern. Aquesta fusió va configurar l'Àsia que coneixem i ens deixa preguntes fonamentals sobre el futur de les nostres pròpies estructures de poder.</p>
+</section>
+
+<hr class="rule">
+
+<!-- 8. METODOLOGIA -->
+<section id="metodologia" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">8</span>Consideracions metodològiques</h1>
+
+  <p>L'anàlisi d'aquest capítol s'ha basat en cinc principis metodològics:</p>
+
+  <p><strong>1. Desconstrucció del biaix terminològic.</strong> S'ha suspès la definició occidental de «religió» per analitzar el fenomen des de les pròpies estructures socials de la Xina. S'ha emprat el marc de la «religió difusa» (C.K. Yang) per evitar classificar el sistema confucià com una simple filosofia secular o un dogma teístic, permetent reconèixer el seu caràcter sagrat i institucional sense imposar categories alienes.</p>
+
+  <p><strong>2. Anàlisi de l'evolució diacrònica.</strong> S'ha evitat presentar el confucianisme com un bloc monolític. S'ha seguit una lògica diacrònica per identificar com la tradició ha estat subjecta a reinterpretacions constants: des de l'ètica itinerant de Confuci, passant per la institucionalització cosmològica de Dong Zhongshu, fins a la síntesi metafísica del Neoconfucianisme de Zhu Xi.</p>
+
+  <p><strong>3. Contrast sociológic comparat.</strong> Seguint la línia de Weber i Durkheim, s'ha analitzat el confucianisme com una tecnologia de dominació, prioritzant l'observació de com la litúrgia (<em>li</em>) funciona com un mecanisme de control social.</p>
+
+  <p><strong>4. Verificació cronológica i geogràfica.</strong> Per a l'apartat d'influències, s'ha aplicat el criteri d'estricte rigor cronológic, contrastant les dates de l'expansió budista amb la reacció neoconfuciana, i documentant les adaptacions del model en els casos de Corea, el Japó i el Vietnam.</p>
+
+  <p><strong>5. Distinció entre nivells de consens.</strong> S'ha distingit sistemàticament entre fets documentats, consens acadèmic i interpretacions historiogràfiques en disputa.</p>
+</section>
+
+<hr class="rule">
+
+<!-- 9. BIBLIOGRAFIA -->
+<section id="bibliografia" class="reveal">
+  <h1 class="chapter-title"><span class="ch-num">9</span>Bibliografia seleccionada</h1>
+
+  <div class="bib-section">
+    <h3>Fonts clàssiques i traduccions acadèmiques</h3>
+    <p class="bib-entry">Confuci (2014). <em>Analectes</em> (trad. M. Segarra). Barcelona: Fragmenta Editorial.</p>
+    <p class="bib-entry">Menci (2011). <em>Menci</em> (trad. M. Segarra). Barcelona: Fragmenta Editorial.</p>
+    <p class="bib-entry">Xunzi (2014). <em>Xunzi: The Complete Text</em> (trad. E. L. Hutton). Princeton: Princeton University Press.</p>
+    <p class="bib-entry">Zhu Xi (1990). <em>Learning to Be a Sage: Selections from the Conversations of Master Chu</em> (trad. D. K. Gardner). Berkeley: University of California Press.</p>
+    <p class="bib-entry">Laozi (2006). <em>Tao Te Ching</em> (trad. R. G. Henricks). Nova York: Modern Library.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Obres de referència i metodologia</h3>
+    <p class="bib-entry">Armstrong, K. (2006). <em>La gran transformación: El mundo en la época de Buda, Sócrates, Confucio y Jeremías.</em> Barcelona: Paidós.</p>
+    <p class="bib-entry">Bellah, R. N. (2011). <em>Religion in Human Evolution: From the Paleolithic to the Axial Age.</em> Cambridge: Belknap Press.</p>
+    <p class="bib-entry">Durkheim, É. (1912). <em>Les Formes elementals de la vida religiosa.</em> (ed. 2012). Madrid: Akal.</p>
+    <p class="bib-entry">Geertz, C. (1973). <em>La interpretación de las culturas.</em> Barcelona: Gedisa.</p>
+    <p class="bib-entry">Weber, M. (1915). <em>La religión de China: Confucianismo y taoísmo.</em> (ed. 2007). Mèxic: Fondo de Cultura Económica.</p>
+    <p class="bib-entry">Yang, C. K. (1961). <em>Religion in Chinese Society.</em> Berkeley: University of California Press.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Historia de la filosofia i el pensament xinès</h3>
+    <p class="bib-entry">Chan, W. T. (1963). <em>A Source Book in Chinese Philosophy.</em> Princeton: Princeton University Press.</p>
+    <p class="bib-entry">Fung, Y. L. (1952). <em>A History of Chinese Philosophy</em> (vol. 1 i 2). Princeton: Princeton University Press.</p>
+    <p class="bib-entry">Graham, A. C. (1989). <em>Disputers of the Tao: Philosophical Argument in Ancient China.</em> La Salle: Open Court.</p>
+    <p class="bib-entry">Schwartz, B. I. (1985). <em>The World of Thought in Ancient China.</em> Cambridge: Belknap Press.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Estudis sobre el ritual, la política i l'Estat</h3>
+    <p class="bib-entry">Ebrey, P. B. (1991). <em>Confucianism and Family Rituals in Imperial China.</em> Princeton: Princeton University Press.</p>
+    <p class="bib-entry">Fingarette, H. (1972). <em>Confucius: The Secular as Sacred.</em> Prospect Heights: Waveland Press.</p>
+    <p class="bib-entry">Lewis, M. E. (2007). <em>The Early Chinese Empires: Qin and Han.</em> Cambridge: Belknap Press.</p>
+    <p class="bib-entry">Poo, M. C. (1998). <em>In Search of Personal Welfare: A View of Ancient Chinese Religion.</em> Albany: SUNY Press.</p>
+    <p class="bib-entry">Taylor, R. L. (1990). <em>The Religious Dimensions of Confucianism.</em> Albany: SUNY Press.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Transmissió i influències a l'Àsia Oriental</h3>
+    <p class="bib-entry">De Bary, W. T. (1991). <em>The Trouble with Confucianism.</em> Cambridge: Harvard University Press.</p>
+    <p class="bib-entry">Elman, B. A. (2000). <em>A Cultural History of Civil Examinations in Late Imperial China.</em> Berkeley: University of California Press.</p>
+    <p class="bib-entry">Kalton, M. C. (1988). <em>To Become a Sage: The Ten Diagrams on Sage Learning by Yi T'oegye.</em> Nova York: Columbia University Press.</p>
+    <p class="bib-entry">Maruyama, M. (1974). <em>Studies in the Intellectual History of Tokugawa Japan.</em> Princeton: Princeton University Press.</p>
+    <p class="bib-entry">Woodside, A. B. (1988). <em>Vietnam and the Chinese Model.</em> Cambridge: Harvard University Press.</p>
+  </div>
+
+  <div class="bib-section">
+    <h3>Perspectives contemporànies</h3>
+    <p class="bib-entry">Angle, S. C. (2012). <em>Contemporary Confucianism: Political Philosophy in Post-Confucian Societies.</em> Cambridge: Polity.</p>
+    <p class="bib-entry">Bell, D. A. (2008). <em>China's New Confucianism: Politics and Everyday Life in a Changing Society.</em> Princeton: Princeton University Press.</p>
+    <p class="bib-entry">Tu, W. M. (1996). <em>Confucian Traditions in East Asian Modernity.</em> Cambridge: Harvard University Press.</p>
+  </div>
+
+  <div class="rule-ornament">✦ ✦ ✦</div>
+  <p class="note">Per a introduccions en català, consulteu els capítols corresponents de la <em>Gran Enciclopèdia Catalana</em> i de la <em>Historia de las religiones</em> de Mircea Eliade i Ioan P. Couliano (Madrid: Siruela, 1992). L'obra de Karen Armstrong, disponible en castellà i altres llengueses, ofereix el marc comparatiu de l'Època Axial indispensable per contextualitzar el confucianisme en el seu moment históric.</p>
+</section>
+
+</main>
+
+<a href="#cover" class="back-top" id="backTop" title="Tornar al principi">↑</a>
+
+<!-- Scripts Externs -->
+<script src="scripts.js"></script>
+</body>
+</html>

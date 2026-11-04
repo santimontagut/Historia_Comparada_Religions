@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 1 – El Fenomen Religiós</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1209;
+    --paper: #f5f0e8;
+    --cream: #ede7d4;
+    --gold: #b8860b;
+    --rust: #8b3a1e;
+    --sage: #4a5c3e;
+    --line: rgba(26,18,9,0.15);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.75; }
+
+  header { background: var(--ink); color: var(--paper); padding: 3.5rem 2rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 18px, rgba(184,134,11,0.06) 18px, rgba(184,134,11,0.06) 19px); }
+  header .eyebrow { font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; max-width: 700px; margin: 0 auto 1rem; }
+  header p.subtitle { font-size: 1rem; color: rgba(245,240,232,0.65); font-style: italic; max-width: 520px; margin: 0 auto; }
+
+  nav { background: var(--cream); border-bottom: 1px solid var(--line); padding: 0 1rem; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; position: sticky; top: 0; z-index: 100; }
+  nav::-webkit-scrollbar { display: none; }
+  nav button { background: none; border: none; font-family: 'Source Serif 4', serif; font-size: 0.78rem; letter-spacing: 0.06em; color: var(--ink); opacity: 0.6; padding: 0.9rem 1.1rem; cursor: pointer; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  nav button:hover { opacity: 1; }
+  nav button.active { opacity: 1; border-bottom-color: var(--gold); color: var(--rust); }
+
+  .container { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+  .section { display: none; animation: fadeIn 0.35s ease; }
+  .section.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  h2 { font-family: 'Playfair Display', serif; font-size: 1.65rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.25; }
+  h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; font-style: italic; color: var(--rust); margin: 2rem 0 0.6rem; }
+  p { margin-bottom: 1.1rem; }
+  .section-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+  .divider { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+
+  .author-card { border-left: 3px solid var(--gold); background: var(--cream); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
+  .author-card .author-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .author-card .author-dates { font-size: 0.78rem; color: var(--gold); letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  .author-card p { margin-bottom: 0; font-size: 0.95rem; }
+
+  .video-section { background: var(--ink); color: var(--paper); border-radius: 6px; padding: 1.5rem; margin: 2rem 0; }
+  .video-section .video-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .video-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media(min-width: 600px) { .video-grid { grid-template-columns: 1fr 1fr; } }
+  .video-card { background: rgba(255,255,255,0.07); border-radius: 4px; overflow: hidden; transition: transform 0.2s; }
+  .video-card:hover { transform: translateY(-2px); }
+  .video-thumb { position: relative; padding-top: 56.25%; background: #111; cursor: pointer; overflow: hidden; }
+  .video-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: opacity 0.2s; }
+  .video-thumb:hover img { opacity: 1; }
+  .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 48px; height: 48px; background: rgba(184,134,11,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+  .play-btn svg { width: 18px; fill: white; margin-left: 3px; }
+  .video-info { padding: 0.7rem 0.8rem 0.8rem; }
+  .video-info .v-title { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.2rem; color: var(--paper); }
+  .video-info .v-desc { font-size: 0.78rem; color: rgba(245,240,232,0.6); line-height: 1.4; }
+  .video-info a { color: var(--gold); font-size: 0.76rem; text-decoration: none; }
+  .video-info a:hover { text-decoration: underline; }
+  .video-embed-container { position: relative; padding-top: 56.25%; background: #000; }
+  .video-embed-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+
+  .bib-level { margin-bottom: 2rem; }
+  .bib-level h3 { font-style: normal; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; margin-top: 0; padding-bottom: 0.4rem; border-bottom: 1px solid var(--line); }
+  .bib-item { padding: 0.9rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 3px 1fr; gap: 0 1rem; }
+  .bib-bar { background: var(--gold); border-radius: 2px; }
+  .bib-content .bib-ref { font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.3rem; }
+  .bib-content .bib-note { font-size: 0.8rem; color: var(--rust); font-style: italic; }
+  .bib-content .bib-ref em { font-style: italic; }
+
+  .concept-box { border: 1px solid var(--gold); border-radius: 4px; padding: 1.2rem 1.4rem; margin: 1.5rem 0; position: relative; }
+  .concept-box .concept-tag { position: absolute; top: -0.6rem; left: 1rem; background: var(--paper); padding: 0 0.4rem; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+  .concept-box p { margin-bottom: 0; font-size: 0.93rem; }
+
+  .timeline { margin: 1.5rem 0; }
+  .tl-item { display: grid; grid-template-columns: 90px 1fr; gap: 0 1.2rem; margin-bottom: 1rem; align-items: start; }
+  .tl-date { font-family: 'Playfair Display', serif; font-size: 0.88rem; color: var(--gold); text-align: right; padding-top: 0.15rem; font-weight: 700; }
+  .tl-body { border-left: 2px solid var(--line); padding-left: 1rem; font-size: 0.92rem; line-height: 1.5; }
+  .tl-body strong { color: var(--rust); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Història de les Religions · Capítol 1</div>
+  <h1>El Fenomen Religiós com a Fet Històric i Arquitectura de Sentit</h1>
+  <p class="subtitle">Una perspectiva interdisciplinària: ciència cognitiva, sociologia, filosofia política i arqueologia</p>
+</header>
+
+<nav id="mainNav">
+  <button class="active" onclick="showSection('intro')">Introducció</button>
+  <button onclick="showSection('cognitiva')">Ciència Cognitiva</button>
+  <button onclick="showSection('geertz')">Geertz</button>
+  <button onclick="showSection('durkheim')">Durkheim</button>
+  <button onclick="showSection('marx')">Marx</button>
+  <button onclick="showSection('weber')">Weber</button>
+  <button onclick="showSection('foucault')">Foucault</button>
+  <button onclick="showSection('eliade')">Eliade</button>
+  <button onclick="showSection('metodologia')">Metodologia</button>
+  <button onclick="showSection('biblio')">📚 Bibliografia</button>
+</nav>
+
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="section active" id="intro">
+    <div class="section-label">Punt de partida</div>
+    <h2>Introducció</h2>
+    <hr class="divider">
+    <p>L'estudi de la religió des d'una perspectiva estrictament històrico-crítica i genealògica exigeix, com a condició epistemològica de partida, el desmantellament de qualsevol temptació hagiogràfica, confessional o essencialista. La religió no pot ser compresa com una veritat metafísica suspesa en el buit de la revelació, sinó com una producció cultural eminentment humana, d'una complexitat institucional extraordinària. Es tracta d'una arquitectura de sentit que opera com a dispositiu de codificació de la realitat material i, de manera indestriable, com una tecnologia per a la legitimació, consolidació i reproducció de formes diverses de poder al llarg de la història de les societats.</p>
+    <p>Aquest treball analitza el fenomen religiós a través d'una perspectiva interdisciplinària que integra la història, l'antropologia, la sociologia, la psicologia cognitiva i la filosofia política. L'objectiu no és determinar la veritat o falsedat dels continguts doctrinals de cap tradició religiosa, sinó comprendre les condicions històriques, culturals, cognitives i socials que han afavorit la seva aparició, desenvolupament i persistència.</p>
+    <p>Les religions constitueixen una de les institucions més influents creades per la humanitat. Han contribuït a estructurar comunitats, legitimar sistemes polítics, establir codis morals, explicar l'origen del món i oferir sentit davant la mort i la incertesa. Simultàniament, també han participat en processos de dominació, exclusió i control social. Aquesta ambivalència converteix el fenomen religiós en un objecte privilegiat per a l'anàlisi històrica.</p>
+
+    <hr class="divider">
+    <div class="section-label">Cronologia dels primers indicis arqueològics</div>
+    <h3>Del Paleolític a Göbekli Tepe</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">~60.000 aC</div>
+        <div class="tl-body"><strong>Shanidar (Iraq)</strong> — Enterraments ritualitzats de neandertals amb possibles ofrenes florals.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~28.000 aC</div>
+        <div class="tl-body"><strong>Sungir (Rússia)</strong> — Sepultures ornamentades amb milers de perles de mamut, que indiquen rituals complexos.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~17.000 aC</div>
+        <div class="tl-body"><strong>Lascaux (França)</strong> — Pintures rupestres amb probable significat simbòlic o ritual.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~10.000 aC</div>
+        <div class="tl-body"><strong>Göbekli Tepe (Turquia)</strong> — Conjunt monumental construït <em>abans</em> de l'agricultura, que qüestiona la idea tradicional sobre la relació entre religió i civilització.</div>
+      </div>
+    </div>
+
+    <div class="video-section">
+      <div class="video-label">📍 Arqueologia — Göbekli Tepe</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'aXAtqHD_OQI')">
+            <img src="https://img.youtube.com/vi/aXAtqHD_OQI/mqdefault.jpg" alt="Göbekli Tepe">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Göbekli Tepe, la cuna dels déus</div>
+            <div class="v-desc">Documental complet en castellà sobre el jaciment que va reescriure la prehistòria.</div>
+            <a href="https://www.youtube.com/watch?v=aXAtqHD_OQI" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'Cdm9_S9gixE')">
+            <img src="https://img.youtube.com/vi/Cdm9_S9gixE/mqdefault.jpg" alt="Göbekli Tepe 2025">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Göbekli Tepe: Documental Complet 2025</div>
+            <div class="v-desc">Les darreres troballes arqueològiques i el seu impacte en la comprensió de la civilització.</div>
+            <a href="https://www.youtube.com/watch?v=Cdm9_S9gixE" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COGNITIVA -->
+  <div class="section" id="cognitiva">
+    <div class="section-label">1.1 — Ciència Cognitiva de la Religió</div>
+    <h2>Una aproximació científica al fenomen religiós</h2>
+    <hr class="divider">
+    <p>L'estudi científic de la religió parteix del pressupòsit que les creences religioses formen part del comportament humà i, per tant, poden ser investigades mitjançant mètodes empírics. Lluny de considerar-les una excepció inexplicable, les ciències contemporànies intenten comprendre quins processos biològics, psicològics i culturals fan possible la seva aparició.</p>
+    <p>Durant les darreres dècades, disciplines com l'antropologia evolutiva, la psicologia cognitiva, l'arqueologia i les neurociències han desenvolupat un camp de recerca cada vegada més consolidat conegut com a ciència cognitiva de la religió. Aquesta perspectiva interpreta les religions com a fenòmens emergents que s'assenten sobre mecanismes cognitius universals desenvolupats al llarg de l'evolució humana.</p>
+
+    <h3>Els orígens evolutius de la religió</h3>
+    <p>Diverses hipòtesis suggereixen que la religió podria haver contribuït indirectament a l'èxit adaptatiu dels grups humans. Les creences compartides reforcen la cohesió social, faciliten la cooperació entre individus no emparentats i permeten coordinar accions col·lectives a gran escala.</p>
+    <p>Les comunitats que comparteixen mites fundacionals, normes morals i rituals comuns disposen d'eines eficaces per generar confiança i estabilitat interna. Aquesta capacitat va adquirir una importància creixent a mesura que les societats humanes augmentaven en grandària i complexitat.</p>
+    <p>Tanmateix, la major part dels investigadors contemporanis consideren que la religió no constitueix una adaptació biològica específica, sinó una conseqüència emergent de diversos mecanismes cognitius que van evolucionar inicialment per resoldre altres problemes adaptatius.</p>
+
+    <h3>La psicologia cognitiva de les creences religioses</h3>
+    <p>La ment humana presenta una tendència natural a detectar agents intencionals en l'entorn. Davant d'un fenomen ambigu, resulta evolutivament més segur assumir l'existència d'una presència que ignorar una possible amenaça.</p>
+    <p>Aquest mecanisme, conegut com a detecció hiperactiva d'agents, afavoreix la interpretació de determinats esdeveniments com el resultat de l'acció d'éssers invisibles o sobrenaturals.</p>
+    <p>Igualment important és la teoria de la ment, és a dir, la capacitat humana per atribuir pensaments, emocions i intencions als altres. Aquesta habilitat facilita la construcció conceptual de déus, esperits o avantpassats capaços d'observar i jutjar les accions humanes.</p>
+    <p>La tendència a buscar patrons, relacions causals i significats ocults en la realitat contribueix també a la formació de sistemes religiosos. Davant del caos aparent del món, la religió ofereix estructures narratives capaces d'organitzar l'experiència i reduir la incertesa.</p>
+
+    <h3>Neurociència i experiència religiosa</h3>
+    <p>Les experiències místiques constitueixen un objecte d'estudi legítim de les neurociències modernes.</p>
+    <p>Investigacions realitzades mitjançant tècniques de neuroimatge han identificat correlacions entre pràctiques com la meditació, la pregària intensa o els estats contemplatius i l'activació de determinades àrees cerebrals vinculades a l'atenció, l'emoció i la percepció del propi jo.</p>
+    <p>Aquestes observacions no permeten confirmar ni refutar les afirmacions metafísiques de les religions. El que sí permeten és descriure els processos neuronals associats a les experiències espirituals i comprendre millor la seva extraordinària força psicològica.</p>
+    <p>Des d'una perspectiva científica, l'experiència religiosa és considerada una experiència subjectiva real per a qui la viu, independentment de la interpretació filosòfica o teològica que se'n faci.</p>
+
+    <h3>Religió i evolució cultural</h3>
+    <p>Les religions poden ser analitzades com a sistemes culturals sotmesos a processos continus de transformació, competència i adaptació.</p>
+    <p>Les creences que aconsegueixen generar identitats col·lectives fortes, mecanismes de transmissió eficients i estructures institucionals estables tendeixen a perpetuar-se al llarg del temps. La seva supervivència depèn no només dels continguts doctrinals, sinó també de la seva capacitat per integrar-se en les dinàmiques socials i polítiques de cada context històric.</p>
+    <p>La història de les religions pot interpretar-se, així, com una història de mutació cultural permanent, en què els sistemes simbòlics competeixen per l'adhesió de les comunitats humanes.</p>
+
+    <h3>Els primers indicis arqueològics del pensament religiós</h3>
+    <p>L'arqueologia proporciona algunes de les evidències més antigues sobre l'aparició del comportament simbòlic humà.</p>
+    <p>Els enterraments ritualitzats documentats en jaciments com Shanidar, les sepultures ornamentades de Sungir o les pintures rupestres de Lascaux suggereixen que els humans del Paleolític desenvolupaven concepcions complexes sobre la mort, la identitat i la transcendència.</p>
+    <p>Particularment significatiu és el cas de Göbekli Tepe, a l'actual Turquia, un conjunt monumental construït fa aproximadament dotze mil anys. Aquest jaciment ha qüestionat la idea tradicional segons la qual les grans estructures religioses van aparèixer després de l'agricultura. Alguns investigadors han plantejat, inversament, que la necessitat de sostenir centres rituals podria haver contribuït al desenvolupament de formes més complexes d'organització social.</p>
+    <p>Aquestes evidències indiquen que la religió no és un fenomen recent, sinó una dimensió profundament arrelada en la història de l'espècie humana.</p>
+  </div>
+
+  <!-- GEERTZ -->
+  <div class="section" id="geertz">
+    <div class="section-label">1.2 — Antropologia Simbòlica</div>
+    <h2>La construcció de la realitat: el sistema cultural de Clifford Geertz</h2>
+    <hr class="divider">
+    <div class="author-card">
+      <div class="author-name">Clifford Geertz</div>
+      <div class="author-dates">1926 – 2006 · Antropologia simbòlica · EUA</div>
+      <p>Obra clau: <em>The Interpretation of Cultures</em> (1973). Va definir la religió com un sistema de símbols que estableix estats d'ànim i motivacions poderosos, penetrants i duradors en els éssers humans.</p>
+    </div>
+    <p>D'acord amb els marcs analítics bastits per l'antropologia simbòlica, especialment a través de l'obra de Clifford Geertz, la religió es defineix com un sistema de símbols que actua per establir estats d'ànim i motivacions poderosos, penetrants i duradors en els éssers humans.</p>
+    <p>Això s'aconsegueix mitjançant la formulació de concepcions generals sobre l'ordre de l'existència, revestint-les amb una aura de factualitat que les converteix en realitats aparentment objectives i indiscutibles.</p>
+    <p>La religió no es limita a descriure el món: el construeix simbòlicament. Estableix correspondències entre l'ordre còsmic i l'ordre social, transformant normes històriques i contingents en expressions d'una necessitat transcendent.</p>
+    <p>Quan les estructures socials es presenten com a reflex d'un ordre universal, el poder deixa d'aparèixer com una construcció humana i esdevé una realitat aparentment natural i inevitable.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 Vídeo recomanat — Clifford Geertz</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'Jf4JD4mpe0Q')">
+            <img src="https://img.youtube.com/vi/Jf4JD4mpe0Q/mqdefault.jpg" alt="Geertz teoria religió">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Explaining Clifford Geertz's Theory of Religion</div>
+            <div class="v-desc">Desglossament de la definició de religió de Geertz en unitats d'anàlisi. (Anglès, amb subtítols disponibles)</div>
+            <a href="https://www.youtube.com/watch?v=Jf4JD4mpe0Q" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DURKHEIM -->
+  <div class="section" id="durkheim">
+    <div class="section-label">1.3 — Sociologia de la Religió</div>
+    <h2>El fet social i la dicotomia Sagrat/Profà en Émile Durkheim</h2>
+    <hr class="divider">
+    <div class="author-card">
+      <div class="author-name">Émile Durkheim</div>
+      <div class="author-dates">1858 – 1917 · Sociologia · França</div>
+      <p>Obra clau: <em>Les formes elementals de la vida religiosa</em> (1912). Va definir la religió no per la creença en déus, sinó per la divisió fonamental del món entre el sagrat i el profà.</p>
+    </div>
+    <p>Per a Émile Durkheim, la religió és abans que res un fet social. El seu element central no és la creença en déus, sinó la divisió fonamental del món entre allò sagrat i allò profà.</p>
+    <p>El sagrat està constituït per aquells objectes, símbols o pràctiques que la comunitat separa de la vida ordinària i envolta de prohibicions i rituals. El profà correspon a l'àmbit quotidià de l'activitat humana.</p>
+    <p>Durant els rituals col·lectius es produeix allò que Durkheim va denominar efervescència col·lectiva: una experiència emocional intensa que genera la percepció d'una força superior als individus particulars.</p>
+    <p>Segons aquesta interpretació, allò que els membres d'una societat veneren sota la forma d'un déu és, en realitat, la mateixa comunitat projectada simbòlicament sobre una entitat transcendent.</p>
+    <p>La religió actua així com un mecanisme de cohesió i integració social que reforça la solidaritat del grup.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 Vídeo recomanat — Émile Durkheim</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, '5kUrledRIPA')">
+            <img src="https://img.youtube.com/vi/5kUrledRIPA/mqdefault.jpg" alt="Durkheim religió">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">La religión según Emile Durkheim</div>
+            <div class="v-desc">Explicació en castellà de la visió de Durkheim sobre la religió com a fet social i la distinció sagrat/profà.</div>
+            <a href="https://www.youtube.com/watch?v=5kUrledRIPA" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARX -->
+  <div class="section" id="marx">
+    <div class="section-label">1.4 — Materialisme Històric</div>
+    <h2>Karl Marx i la religió com a ideologia</h2>
+    <hr class="divider">
+    <div class="author-card">
+      <div class="author-name">Karl Marx</div>
+      <div class="author-dates">1818 – 1883 · Filosofia política i economia · Prússia/Anglaterra</div>
+      <p>Obra clau: <em>Contribució a la crítica de la filosofia del dret de Hegel</em> (1844). Va introduir la lectura materialista del fenomen religiós.</p>
+    </div>
+    <p>Karl Marx introdueix una lectura radicalment materialista del fenomen religiós.</p>
+    <p>Des de la seva perspectiva, la religió no és la causa principal de les estructures socials, sinó una conseqüència de les condicions materials d'existència. Les creences religioses emergeixen en contextos marcats per la desigualtat, l'explotació i la inseguretat, oferint consol simbòlic davant del sofriment.</p>
+    <p>La coneguda afirmació segons la qual la religió és «l'opi del poble» sovint ha estat simplificada excessivament. Marx no pretenia reduir la religió a una mera manipulació conscient, sinó destacar la seva funció dual: alleujar el dolor dels individus i, simultàniament, contribuir a la reproducció de les estructures que el generen.</p>
+    <p>La religió proporciona esperança i sentit, però també pot actuar com un mecanisme de legitimació de les relacions de poder existents.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 Vídeo recomanat — Karl Marx</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, '9_7c7RkVap0')">
+            <img src="https://img.youtube.com/vi/9_7c7RkVap0/mqdefault.jpg" alt="Marx religió opi del poble">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">«La religión es el opio del pueblo» – Darío Sztajnszrajber</div>
+            <div class="v-desc">Classe magistral sobre la frase de Marx en el seu context filosòfic complet. Divulgació de gran qualitat.</div>
+            <a href="https://www.youtube.com/watch?v=9_7c7RkVap0" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEBER -->
+  <div class="section" id="weber">
+    <div class="section-label">1.5 — Sociologia Comprensiva</div>
+    <h2>Max Weber i la legitimació de l'autoritat</h2>
+    <hr class="divider">
+    <div class="author-card">
+      <div class="author-name">Max Weber</div>
+      <div class="author-dates">1864 – 1920 · Sociologia i economia · Alemanya</div>
+      <p>Obra clau: <em>L'ètica protestant i l'esperit del capitalisme</em> (1905). Va analitzar la religió com una de les fonts històriques més importants de legitimació del poder.</p>
+    </div>
+    <p>Max Weber va analitzar la religió com una de les fonts històriques més importants de legitimació del poder.</p>
+    <p>L'exercici estable de l'autoritat requereix alguna cosa més que la força física: necessita ser percebut com a legítim pels qui hi estan sotmesos.</p>
+    <p>Weber identifica tres formes ideals de dominació legítima:</p>
+    <p>Autoritat carismàtica, basada en les qualitats excepcionals atribuïdes a una figura concreta, com un profeta o líder religiós.</p>
+    <p>Autoritat tradicional, fonamentada en la creença en la validesa de costums heretats i institucions ancestrals.</p>
+    <p>Autoritat legal-racional, característica de les societats modernes, basada en lleis abstractes i estructures burocràtiques.</p>
+    <p>Aquest procés es relaciona amb allò que Weber va anomenar desencantament del món: la progressiva substitució de les explicacions màgiques per formes de racionalitat tècnica i administrativa.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 Vídeo recomanat — Max Weber</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, '7RjuE4Q11YU')">
+            <img src="https://img.youtube.com/vi/7RjuE4Q11YU/mqdefault.jpg" alt="Weber dominació legítima">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Tipos de Dominación Legítima – Max Weber</div>
+            <div class="v-desc">Explicació dels tres tipus de dominació legítima de Weber: carismàtica, tradicional i legal-racional.</div>
+            <a href="https://www.youtube.com/watch?v=7RjuE4Q11YU" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOUCAULT -->
+  <div class="section" id="foucault">
+    <div class="section-label">1.6 — Biopolítica i Poder</div>
+    <h2>La biopolítica del sagrat: el vincle foucaultià</h2>
+    <hr class="divider">
+    <div class="author-card">
+      <div class="author-name">Michel Foucault</div>
+      <div class="author-dates">1926 – 1984 · Filosofia i historia · França</div>
+      <p>Obres clau: <em>Vigilar i castigar</em> (1975), <em>Història de la sexualitat</em> (1976–1984). Va expandir l'anàlisi del poder cap als cossos i la subjectivitat.</p>
+    </div>
+    <p>Michel Foucault permet ampliar l'anàlisi més enllà de les idees i les institucions per examinar la manera com el poder actua sobre els cossos.</p>
+    <p>Les religions no gestionen únicament creences abstractes. Històricament han participat en la regulació de la sexualitat, la reproducció, l'alimentació, la salut, la malaltia i la mort.</p>
+    <p>A través del que Foucault denomina poder pastoral, les institucions religioses desenvolupen mecanismes de supervisió individual que aspiren a dirigir no només les accions externes dels individus, sinó també els seus pensaments, desitjos i emocions.</p>
+    <p>Pràctiques com la confessió, l'examen de consciència o la interiorització del pecat constitueixen tecnologies de govern que transformen el subjecte en agent de la seva pròpia vigilància.</p>
+    <p>La coacció externa esdevé progressivament menys necessària perquè el control ha estat incorporat a la mateixa consciència individual.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 Vídeo recomanat — Michel Foucault</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'TchqFCgm42U')">
+            <img src="https://img.youtube.com/vi/TchqFCgm42U/mqdefault.jpg" alt="Foucault poder vigilància">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Foucault para principiantes: ¿Qué es el poder y quiénes te vigilan?</div>
+            <div class="v-desc">Les línies fonamentals del pensament de Foucault sobre el poder, la vigilància i el subjecte. (~15 min)</div>
+            <a href="https://www.youtube.com/watch?v=TchqFCgm42U" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELIADE -->
+  <div class="section" id="eliade">
+    <div class="section-label">1.7 — Fenomenologia de la Religió</div>
+    <h2>Mircea Eliade i l'experiència del sagrat</h2>
+    <hr class="divider">
+    <div class="author-card">
+      <div class="author-name">Mircea Eliade</div>
+      <div class="author-dates">1907 – 1986 · Història de les religions · Romania/EUA</div>
+      <p>Obra clau: <em>El sagrat i el profà</em> (1957). Va defensar que l'experiència del sagrat constitueix una dimensió irreductible de l'existència humana.</p>
+    </div>
+    <p>La interpretació de Mircea Eliade ofereix un contrapunt important a les perspectives sociològiques i materialistes.</p>
+    <p>Segons Eliade, la religió no pot ser reduïda exclusivament a funcions socials o polítiques. L'experiència del sagrat constitueix una dimensió fonamental de l'existència humana que es manifesta de manera recurrent en cultures molt diverses.</p>
+    <p>Eliade introdueix el concepte d'hierofania per descriure les formes mitjançant les quals el sagrat es revela en el món ordinari. Muntanyes, arbres, temples, rius o relats mítics poden convertir-se en punts de contacte entre la realitat quotidiana i una realitat considerada transcendent.</p>
+    <p>Tot i que moltes de les seves tesis han estat objecte de debat, la seva obra continua sent una referència imprescindible perquè recorda que la religió no només pot ser interpretada des de la lògica del poder o de la funció social, sinó també des de la recerca humana de significat.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 Vídeo recomanat — Mircea Eliade</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'iYbIj2n6kI4')">
+            <img src="https://img.youtube.com/vi/iYbIj2n6kI4/mqdefault.jpg" alt="Mircea Eliade biografia">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Mircea Eliade – Biografia breu</div>
+            <div class="v-desc">Vida i obra de l'historiador de les religions Mircea Eliade. Material elaborat per al públic hispanoparlant.</div>
+            <a href="https://www.youtube.com/watch?v=iYbIj2n6kI4" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- METODOLOGIA -->
+  <div class="section" id="metodologia">
+    <div class="section-label">1.8 — Consideracions metodològiques finals</div>
+    <h2>Una perspectiva plural i no excloent</h2>
+    <hr class="divider">
+    <p>Les perspectives presentades en aquest capítol no són necessàriament excloents. Cadascuna il·lumina dimensions diferents d'un fenomen extraordinàriament complex.</p>
+    <p>La religió pot ser estudiada simultàniament com una adaptació cultural, un sistema simbòlic, un mecanisme de cohesió social, una forma de legitimació del poder, una tecnologia de govern dels cossos o una expressió de la recerca humana de transcendència.</p>
+    <p>Aquest treball adopta una perspectiva històrico-crítica que privilegia l'anàlisi de les condicions materials, socials i polítiques que han configurat les tradicions religioses. Tanmateix, reconeix que el fenomen religiós no es deixa reduir completament a una única explicació teòrica.</p>
+    <p>Precisament aquesta pluralitat d'interpretacions constitueix una de les principals raons per les quals la història de les religions continua sent un camp d'estudi especialment ric, complex i intel·lectualment estimulant.</p>
+  </div>
+
+  <!-- BIBLIOGRAFIA -->
+  <div class="section" id="biblio">
+    <div class="section-label">Recursos i lectures</div>
+    <h2>Bibliografia comentada</h2>
+    <hr class="divider">
+
+    <div class="bib-level">
+      <h3>🟢 Nivell 1 — Introducció (públic general)</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Armstrong, Karen. <em>Una historia de Dios</em>. Barcelona: Paidós, 1994.</div>
+          <div class="bib-note">Un dels millors panorames sobre les tres grans religions monoteistes. Accessible i molt ben documentat.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Eliade, Mircea. <em>Lo sagrado y lo profano</em>. Barcelona: Labor, 1983.</div>
+          <div class="bib-note">Lectura imprescindible i sorprenentment curta (~150 pàg.) per entendre la fenomenologia religiosa.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Harari, Yuval Noah. <em>Sapiens. De animals a déus</em>. Barcelona: Columna, 2015.</div>
+          <div class="bib-note">Els capítols 2–3 i 12 tracten directament el paper de la religió en la cohesió dels grups humans. Molt accessible.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Dawkins, Richard. <em>El espejismo de Dios</em>. Madrid: Espasa, 2007.</div>
+          <div class="bib-note">Perspectiva crítica i evolucionista. Recomanable llegir-lo junt amb Armstrong per tenir el debat complet.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-level">
+      <h3>🟡 Nivell 2 — Intermedi (estudiants i curiosos)</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Durkheim, Émile. <em>Les formes elementals de la vida religiosa</em>. Madrid: Alianza, 1993.</div>
+          <div class="bib-note">Text fonamental de la sociologia de la religió. L'edició d'Alianza inclou un excel·lent estudi introductori.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Weber, Max. <em>Sociologia de la religió</em>. Madrid: Istmo, 1997.</div>
+          <div class="bib-note">Selecció de textos clau de Weber sobre religió, poder i racionalitat. Ideal com a primera aproximació.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Geertz, Clifford. <em>La interpretación de las culturas</em>. Barcelona: Gedisa, 2003.</div>
+          <div class="bib-note">El capítol 4 («Religion as a Cultural System») és la referència directa del text. Antropologia simbòlica en estat pur.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Boyer, Pascal. <em>¿Y el hombre creó a los dioses?</em> Madrid: Taurus, 2002.</div>
+          <div class="bib-note">La millor síntesi de ciència cognitiva de la religió per a un lector no especialitzat. Molt recomanable.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-level">
+      <h3>🔴 Nivell 3 — Avançat (acadèmic)</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Foucault, Michel. <em>Vigilar y castigar</em>. Madrid: Siglo XXI, 1976.</div>
+          <div class="bib-note">Per comprendre el concepte de «poder pastoral» aplicat a les institucions religioses. Lectura densa però transformadora.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Atran, Scott. <em>In Gods We Trust</em>. Oxford University Press, 2002.</div>
+          <div class="bib-note">Perspectiva cognitiva i evolutiva de la religió des de l'antropologia. Referència acadèmica de primer ordre.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Bellah, Robert N. <em>Religion in Human Evolution</em>. Harvard University Press, 2011.</div>
+          <div class="bib-note">Síntesi ambiciosa sobre l'evolució de la religió des del Paleolític fins a les grans civilitzacions axials.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Weber, Max. <em>L'ètica protestant i l'esperit del capitalisme</em>. Madrid: Alianza, 2012.</div>
+          <div class="bib-note">El text fundacional de Weber. Imprescindible per entendre la relació entre religió, economia i modernitat.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-level">
+      <h3>🌐 Recursos digitals</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Canal YouTube: <em>Religion for Breakfast</em> — Andrew Mark Henry (PhD, Boston University)</div>
+          <div class="bib-note">+1 milió de subscriptors. Vídeos acadèmics de divulgació en anglès. El millor canal sobre història de les religions a YouTube. <a href="https://www.youtube.com/@ReligionForBreakfast" target="_blank" style="color:var(--rust)">→ youtube.com/@ReligionForBreakfast</a></div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Stanford Encyclopedia of Philosophy — entrades: «Religion», «Durkheim», «Weber»</div>
+          <div class="bib-note">Referència acadèmica gratuïta i fiable. Ideal per aprofundir en qualsevol concepte del capítol. <a href="https://plato.stanford.edu" target="_blank" style="color:var(--rust)">→ plato.stanford.edu</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const ids = ['intro','cognitiva','geertz','durkheim','marx','weber','foucault','eliade','metodologia','biblio'];
+  document.querySelectorAll('nav button').forEach((b, i) => {
+    b.classList.toggle('active', ids[i] === id);
+  });
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+function embedVideo(thumbEl, videoId) {
+  const container = document.createElement('div');
+  container.className = 'video-embed-container';
+  container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allowfullscreen allow="autoplay"></iframe>`;
+  thumbEl.replaceWith(container);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 2 – L'Animisme</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1209;
+    --paper: #f5f0e8;
+    --cream: #ede7d4;
+    --gold: #b8860b;
+    --rust: #8b3a1e;
+    --sage: #3d5a3e;
+    --line: rgba(26,18,9,0.15);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.75; }
+
+  header { background: var(--sage); color: var(--paper); padding: 3.5rem 2rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 18px, rgba(255,255,255,0.04) 18px, rgba(255,255,255,0.04) 19px); }
+  header .eyebrow { font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(245,240,232,0.6); margin-bottom: 0.5rem; }
+  header .chapter-num { font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 700; color: rgba(255,255,255,0.08); position: absolute; top: 1rem; right: 2rem; line-height: 1; pointer-events: none; }
+  header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; max-width: 700px; margin: 0 auto 1rem; }
+  header p.subtitle { font-size: 1rem; color: rgba(245,240,232,0.65); font-style: italic; max-width: 520px; margin: 0 auto; }
+
+  nav { background: var(--cream); border-bottom: 1px solid var(--line); padding: 0 1rem; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; position: sticky; top: 0; z-index: 100; }
+  nav::-webkit-scrollbar { display: none; }
+  nav button { background: none; border: none; font-family: 'Source Serif 4', serif; font-size: 0.78rem; letter-spacing: 0.06em; color: var(--ink); opacity: 0.6; padding: 0.9rem 1.1rem; cursor: pointer; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  nav button:hover { opacity: 1; }
+  nav button.active { opacity: 1; border-bottom-color: var(--sage); color: var(--sage); }
+
+  .container { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+  .section { display: none; animation: fadeIn 0.35s ease; }
+  .section.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  h2 { font-family: 'Playfair Display', serif; font-size: 1.65rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.25; }
+  h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; font-style: italic; color: var(--sage); margin: 2rem 0 0.6rem; }
+  p { margin-bottom: 1.1rem; }
+  .section-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.6rem; }
+  .divider { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+
+  .thinker-card { border-left: 3px solid var(--sage); background: var(--cream); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
+  .thinker-card .thinker-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .thinker-card .thinker-dates { font-size: 0.78rem; color: var(--sage); letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  .thinker-card p { margin-bottom: 0; font-size: 0.95rem; }
+
+  .concept-box { border: 1px solid var(--sage); border-radius: 4px; padding: 1.2rem 1.4rem; margin: 1.5rem 0; position: relative; }
+  .concept-box .concept-tag { position: absolute; top: -0.6rem; left: 1rem; background: var(--paper); padding: 0 0.4rem; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); }
+  .concept-box p { margin-bottom: 0; font-size: 0.93rem; }
+
+  /* Tradition cards grid */
+  .tradition-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin: 1.5rem 0; }
+  @media(min-width: 600px) { .tradition-grid { grid-template-columns: 1fr 1fr; } }
+  .tradition-card { border: 1px solid var(--line); border-radius: 6px; padding: 1.2rem; background: var(--cream); }
+  .tradition-card .t-region { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.4rem; }
+  .tradition-card .t-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .tradition-card p { font-size: 0.92rem; line-height: 1.6; margin-bottom: 0; }
+
+  /* Panteisme comparison table */
+  .compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+  .compare-table th { background: var(--sage); color: var(--paper); padding: 0.7rem 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic; }
+  .compare-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .compare-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* Bibliography */
+  .bib-level { margin-bottom: 2rem; }
+  .bib-level h3 { font-style: normal; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; margin-top: 0; padding-bottom: 0.4rem; border-bottom: 1px solid var(--line); }
+  .bib-item { padding: 0.9rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 3px 1fr; gap: 0 1rem; }
+  .bib-bar { background: var(--sage); border-radius: 2px; }
+  .bib-content .bib-ref { font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.3rem; }
+  .bib-content .bib-note { font-size: 0.8rem; color: var(--rust); font-style: italic; }
+  .bib-content .bib-ref em { font-style: italic; }
+
+  .video-section { background: var(--ink); color: var(--paper); border-radius: 6px; padding: 1.5rem; margin: 2rem 0; }
+  .video-section .video-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .video-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media(min-width: 600px) { .video-grid { grid-template-columns: 1fr 1fr; } }
+  .video-card { background: rgba(255,255,255,0.07); border-radius: 4px; overflow: hidden; transition: transform 0.2s; }
+  .video-card:hover { transform: translateY(-2px); }
+  .video-thumb { position: relative; padding-top: 56.25%; background: #111; cursor: pointer; overflow: hidden; }
+  .video-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: opacity 0.2s; }
+  .video-thumb:hover img { opacity: 1; }
+  .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 48px; height: 48px; background: rgba(61,90,62,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+  .play-btn svg { width: 18px; fill: white; margin-left: 3px; }
+  .video-info { padding: 0.7rem 0.8rem 0.8rem; }
+  .video-info .v-title { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.2rem; color: var(--paper); }
+  .video-info .v-desc { font-size: 0.78rem; color: rgba(245,240,232,0.6); line-height: 1.4; }
+  .video-info a { color: #a8c5a0; font-size: 0.76rem; text-decoration: none; }
+  .video-info a:hover { text-decoration: underline; }
+  .video-embed-container { position: relative; padding-top: 56.25%; background: #000; }
+  .video-embed-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="chapter-num">2</div>
+  <div class="eyebrow">Història de les Religions · Capítol 2</div>
+  <h1>L'Animisme – L'Estructura Social Ancestral</h1>
+  <p class="subtitle">Ontologia, perspectivisme, xamanisme i economia del do: una relectura crítica i descolonial</p>
+</header>
+
+<nav id="mainNav">
+  <button class="active" onclick="showSection('intro')">Introducció</button>
+  <button onclick="showSection('natura-cultura')">2.1 Natura/Cultura</button>
+  <button onclick="showSection('totem')">2.2 Tòtem</button>
+  <button onclick="showSection('xamanisme')">2.3 Xamanisme</button>
+  <button onclick="showSection('tradicions')">2.4 Tradicions</button>
+  <button onclick="showSection('panteisme')">2.5 Panteisme</button>
+  <button onclick="showSection('avui')">2.6 Avui</button>
+  <button onclick="showSection('metodologia')">Metodologia</button>
+  <button onclick="showSection('biblio')">📚 Bibliografia</button>
+</nav>
+
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="section active" id="intro">
+    <div class="section-label">Introducció</div>
+    <h2>L'Animisme – L'Estructura Social Ancestral</h2>
+    <hr class="divider">
+    <p>L'animisme ha patit durant segles el menyspreu intel·lectual de l'antropologia victoriana de tall evolucionista. Autors com Edward Tylor el definien des d'una talaia colonial com una espècie d'error primitiu o «infantesa cognitiva» de la humanitat, imputant a les societats de caçadors-recol·lectors una incapacitat intel·lectual que els portava a projectar de forma ingènua una ànima antropomorfa sobre pedres, rius, arbres i animals inerts. Des de l'antropologia crítica contemporània, aquesta lectura ha estat completament desarticulada per demostrar que l'animisme és una ontologia profundament sofisticada, una praxi d'ecologia política i una estructura de relacions socials perfectament adaptada a comunitats de baixa densitat demogràfica i economies no productores.</p>
+
+    <div class="thinker-card">
+      <div class="thinker-name">Edward Burnett Tylor</div>
+      <div class="thinker-dates">1832 – 1917 · Antropologia evolucionista · Anglaterra</div>
+      <p>Obra clau: <em>Primitive Culture</em> (1871). Va encunyar el terme «animisme» per designar el que considerava la forma més primitiva de religió: la creença en éssers espirituals. La seva perspectiva, avui completament superada, va marcar durant dècades el debat acadèmic.</p>
+    </div>
+
+    
+    <div class="video-section">
+      <div class="video-label">📺 Introducció — Tylor i la crítica colonial a l'animisme</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'x7nTt7SSVog')">
+            <img src="https://img.youtube.com/vi/x7nTt7SSVog/mqdefault.jpg" alt="Tylor: A Ciência da Cultura (1871)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Tylor: A Ciência da Cultura (1871)</div>
+            <div class="v-desc">Classe sobre el pensament de Tylor, fundador de l'antropologia britànica i creador del concepte modern d'animisme. (Portuguès, accessible)</div>
+            <a href="https://www.youtube.com/watch?v=x7nTt7SSVog" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>La revisió crítica de Tylor no és un exercici merament acadèmic. Té implicacions polítiques i epistemològiques de primer ordre: si l'animisme és una ontologia sofisticada i no un error cognitiu, llavors la seva eliminació sistemàtica per part de les missions colonials i religioses constitueix un etnocidi intel·lectual de proporcions enormes.</p>
+  </div>
+
+  <!-- 2.1 NATURA/CULTURA -->
+  <div class="section" id="natura-cultura">
+    <div class="section-label">2.1 — Ontologia i Perspectivisme</div>
+    <h2>Un entorn saturat d'agència: Més enllà de la dualitat Natura/Cultura</h2>
+    <hr class="divider">
+
+    <div class="thinker-card">
+      <div class="thinker-name">Philippe Descola</div>
+      <div class="thinker-dates">1949 – · Antropologia · França · Collège de France</div>
+      <p>Obra clau: <em>Par-delà nature et culture</em> (2005). Va identificar quatre grans ontologies humanes (naturalisme, animisme, totemisme, analogisme) i va demostrar que la dicotomia occidental Natura/Cultura és una excepció històrica, no una universal.</p>
+    </div>
+
+    <p>L'ontologia de caràcter animista, tal com han desentrellat les extenses recerques d'antropòlegs contemporanis com Philippe Descola a <em>Par-delà nature et culture</em>, ignora de manera absoluta la dicotomia occidental que oposa la «Natura» a la «Cultura». En la ment moderna occidental, la Natura s'entén com un espai exterior, mecànic i objectiu buit d'esperit, mentre la Cultura és el monopoli exclusiu dels éssers humans. Per contra, en el món animista el teixit de l'existència es concep com un espai saturat de subjectivitats i d'agències múltiples interconnectades.</p>
+    <p>Els animals, el tro, les espècies vegetals o els accidents topogràfics del paisatge no són definits com a objectes, sinó com a persones no-humanes. Totes aquestes entitats comparteixen una única interioritat de caràcter universal —la condició de persona dotada d'intencionalitat, memòria, autoconsciència i capacitat de comunicació lingüística—, diferenciant-se únicament per la seva morfologia exterior, és a dir, el seu cos, que és interpretat com una roba o una eina perspectivística.</p>
+
+    <div class="thinker-card">
+      <div class="thinker-name">Eduardo Viveiros de Castro</div>
+      <div class="thinker-dates">1951 – · Antropologia · Brasil · Museu Nacional, Rio de Janeiro</div>
+      <p>Obra clau: <em>Metafísiques caníbals</em> (2009). Va elaborar el concepte de «perspectivisme amerindi» i de «multinaturalisme»: allà on Occident assumeix una sola natura i moltes cultures, les ontologies amazòniques assumeixen una sola cultura (la perspectiva del subjecte) i moltes natures.</p>
+    </div>
+
+    <p>Com assenyala Eduardo Viveiros de Castro en les seves anàlisis sobre el perspectivisme amerindi, l'humà, el jaguar i el peix es veuen a si mateixos com a humans, però perceben les altres espècies a través de la distorsió del seu propi cos: el jaguar veu la sang com a cervesa de blat de moro, i el peix veu el riu com un camí celestial. Aquesta desarticulació de l'antropocentrisme implica que la societat s'estén molt més enllà de les fronteres de la nostra espècie; l'univers és una comunitat política de subjectes en constant fricció i negociació.</p>
+
+    
+    <div class="video-section">
+      <div class="video-label">📺 2.1 — Philippe Descola: Més enllà de natura i cultura</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'OF9JlrkP2hY')">
+            <img src="https://img.youtube.com/vi/OF9JlrkP2hY/mqdefault.jpg" alt="Diálogos Transatlánticos: Philippe Descola (Canal Encuentro)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Diálogos Transatlánticos: Philippe Descola (Canal Encuentro)</div>
+            <div class="v-desc">Entrevista completa a Descola en castellà sobre les quatre ontologies, l'animisme i la superació de la dicotomia Natura/Cultura.</div>
+            <a href="https://www.youtube.com/watch?v=OF9JlrkP2hY" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div><div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'Irot2qEoeok')">
+            <img src="https://img.youtube.com/vi/Irot2qEoeok/mqdefault.jpg" alt="Entrevista a Philippe Descola, deixeble de Lévi-Strauss">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Entrevista a Philippe Descola, deixeble de Lévi-Strauss</div>
+            <div class="v-desc">Descola explica en castellà la seva obra i el concepte d'animisme com a ontologia alternativa al naturalisme occidental.</div>
+            <a href="https://www.youtube.com/watch?v=Irot2qEoeok" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="concept-box">
+      <span class="concept-tag">Concepte clau: Perspectivisme</span>
+      <p>El perspectivisme amerindi postula que tots els éssers del cosmos es perceben a si mateixos com a persones (humans), però que cada espècie veu el món a través de la seva morfologia corporal particular. No hi ha una natura objectiva i única: cada cos construeix la seva pròpia naturalesa. Viveiros de Castro anomena aquest principi «multinaturalisme», en oposició al multiculturalisme occidental.</p>
+    </div>
+  </div>
+
+  <!-- 2.2 TÒTEM -->
+  <div class="section" id="totem">
+    <div class="section-label">2.2 — Solidaritat i Vincle Social</div>
+    <h2>Solidaritat mecànica i el tòtem com a mirall de la tribu</h2>
+    <hr class="divider">
+    <p>Aquesta densitat ontològica interactua de manera perfecta amb un model d'organització fonamentat en el que Durkheim va batejar com a solidaritat mecànica. En les societats de caça i recol·lecció on la divisió tècnica del treball gairebé no existeix més enllà dels rols de gènere i edat, la consciència col·lectiva és tan absorbent que aclapara i dilueix la individualitat secular. El vincle social es referma mitjançant la pulsió i la repetició del tabú col·lectiu.</p>
+
+    <div class="concept-box">
+      <span class="concept-tag">Solidaritat mecànica · Durkheim</span>
+      <p>En les societats de baixa complexitat tècnica, la cohesió social no descansa en la interdependència funcional de rols especialitzats (solidaritat orgànica), sinó en la identitat i la semblança entre els membres del grup. La consciència col·lectiva absorbeix la consciència individual. El tòtem n'és l'expressió simbòlica central.</p>
+    </div>
+
+    <p>Dins d'aquest context, el tòtem esdevé el dispositiu simbòlic central per excel·lència. El tòtem —sigui l'ós, l'àguila o un element del paisatge— funciona com la materialització de la llei i la genealogia del clan. És el nexe ontològic sagrat que aglutina els vius amb la línia dels avantpassats fundacionals de la comunitat. El respecte cec cap a la figura del tòtem, la prohibició estricta de caçar-lo o de consumir la seva carn (tret de cerimònies excepcionals d'efervescència ritual), no respon a cap superstició ingènua, sinó que és la via jurídica utilitzada per protegir l'exogàmia, articular les aliances de parentiu i fixar el dret consuetudinari de la tribu. L'agressió al tòtem equival a l'autodestrucció de la societat.</p>
+
+    <div class="concept-box">
+      <span class="concept-tag">Concepte clau: Tabú i Exogàmia</span>
+      <p>La prohibició de consumir el tòtem no és un simple tabú alimentari. Funciona com una norma jurídica que regula les aliances matrimonials: dos clans amb el mateix tòtem no poden casar-se entre ells. L'exogàmia —obligació de buscar parella fora del grup propi— és, per a Lévi-Strauss, la primera gran norma social de la humanitat i la base de tots els sistemes de parentiu.</p>
+    </div>
+  </div>
+
+  <!-- 2.3 XAMANISME -->
+  <div class="section" id="xamanisme">
+    <div class="section-label">2.3 — Xamanisme i Economia del Do</div>
+    <h2>Les tecnologies del xamanisme i l'economia del do</h2>
+    <hr class="divider">
+    <p>A causa d'aquest univers on l'agència i el poder es troben absolutament fragmentats i distribuïts entre una infinitat d'actors no-humans, la figura del xaman emergeix com un especialista tecnològic imprescindible, molt distant del rol d'un sacerdot dogmàtic institucional. El xaman actua com un veritable ambaixador o diplomàtic de l'invisible, un tècnic capaç d'induir de forma controlada l'èxtasi a través d'estats alterats de la consciència (mitjançant el dejuni, el so rítmic del tambor o la ingesta d'entesògens) per despullar-se temporalment de la seva perspectiva humana i penetrar en els cossos i les comunitats de les persones no-humanes.</p>
+
+    <div class="thinker-card">
+      <div class="thinker-name">Mircea Eliade</div>
+      <div class="thinker-dates">1907 – 1986 · Història de les religions · Romania/EUA</div>
+      <p>Obra clau: <em>Le chamanisme et les techniques archaïques de l'extase</em> (1951). Primera síntesi comparativa transcultural del xamanisme. Eliade va identificar el «vol extàtic» —el viatge de l'ànima a altres realitats— com el tret definidor universal del xaman.</p>
+    </div>
+
+    <p>Aquesta funció és d'una rellevància cabdal per a la subsistència material del grup humà. La caça, per exemple, no s'interpreta en cap cas com un acte d'apropiació econòmica unilateral, sinó com un procés d'intercanvi polític. El xaman ha de realitzar el viatge espiritual per negociar amb els «Amos dels Animals» o els esperits de l'entorn per demanar que l'espècie cedeixi alguns dels seus membres per a l'aliment de la tribu. A canvi, els humans s'obliguen a oferir respecte i ritual, abstenir-se en determinats períodes de l'any i complir prohibicions estrictes.</p>
+
+    <div class="thinker-card">
+      <div class="thinker-name">Marcel Mauss</div>
+      <div class="thinker-dates">1872 – 1950 · Sociologia i etnologia · França</div>
+      <p>Obra clau: <em>Essai sur le don</em> (1925). Va descriure les tres obligacions universals que estructuren l'intercanvi en les societats arcaiques: <em>donar, rebre i retornar</em>. El do no és mai gratuït: crea vincles d'obligació i de poder entre qui dóna i qui rep.</p>
+    </div>
+
+    <p>Ens trobem davant de la transposició de l'economia del donar conceptualitzada per Marcel Mauss: la lògica social universal del donar, rebre i retornar (donar, contra-donar). Rompre el pacte ritual o extreure més recursos dels pactats col·lapsaria l'equilibri, traduint-se de manera immediata en malalties, l'allunyament de les preses o l'extinció biològica del clan.</p>
+
+    
+    <div class="video-section">
+      <div class="video-label">📺 2.3 — El xamanisme: tècnica de l'èxtasi</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'B_E7nPxxm7A')">
+            <img src="https://img.youtube.com/vi/B_E7nPxxm7A/mqdefault.jpg" alt="¿Qué es el CHAMANISMO?">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">¿Qué es el CHAMANISMO?</div>
+            <div class="v-desc">Introducció clara i rigorosa al xamanisme: els seus orígens, funcions socials i la figura del xaman com a especialista de la consciència.</div>
+            <a href="https://www.youtube.com/watch?v=B_E7nPxxm7A" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div><div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'NWwCnZZzUSw')">
+            <img src="https://img.youtube.com/vi/NWwCnZZzUSw/mqdefault.jpg" alt="Marcel Mauss: «Ensayo sobre el don» – Entre hilos">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Marcel Mauss: «Ensayo sobre el don» – Entre hilos</div>
+            <div class="v-desc">Debat acadèmic sobre l'obra central de Mauss, les tres obligacions del do (donar, rebre, retornar) i la seva relació amb la reciprocitat ritual.</div>
+            <a href="https://www.youtube.com/watch?v=NWwCnZZzUSw" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="concept-box">
+      <span class="concept-tag">Concepte clau: Entesògens</span>
+      <p>Els entesògens (del grec: «allò que fa aparèixer el diví a l'interior») són substàncies psicoactives d'origen vegetal utilitzades en contextos rituals per induir estats alterats de consciència. L'ayahuasca amazònica, el peyote dels pobles natius nord-americans o l'iboga africà en són exemples paradigmàtics. En el context xamànic, el seu ús és estrictament regulat per protocols rituals i no equiparable al consum recreatiu modern.</p>
+    </div>
+  </div>
+
+  <!-- 2.4 TRADICIONS -->
+  <div class="section" id="tradicions">
+    <div class="section-label">2.4 — Exemples etnogràfics i geogràfics</div>
+    <h2>Tradicions animistes al món</h2>
+    <hr class="divider">
+    <p>L'animisme no és una categoria homogènia. És un conjunt de tradicions enormement diverses que comparteixen uns principis ontològics comuns: la distribució de l'agència entre entitats humanes i no-humanes, la relacionalitat com a fonament de l'existència i la necessitat de mantenir equilibris rituals amb el món no-humà. A continuació es presenten alguns dels casos més significatius.</p>
+
+    <h3>Amèrica</h3>
+    <div class="tradition-grid">
+      <div class="tradition-card">
+        <div class="t-region">Amazònia · Brasil/Veneçuela</div>
+        <div class="t-name">Yanomami</div>
+        <p>Els xamans yanomami ingereixen el pols d'<em>yãkoana</em> per entrar en contacte amb els <em>xapiri</em> (esperits). El xaman Davi Kopenawa —figura internacional en la defensa dels drets indígenes— ha descrit com el xaman no simplement es relaciona amb els esperits sinó que literalment <em>esdevé</em> un d'ells. La cosmovisió yanomami és una de les més documentades gràcies a l'obra de Bruce Albert i Kopenawa, <em>The Falling Sky</em> (2013).</p>
+      </div>
+      <div class="tradition-card">
+        <div class="t-region">Planes del Nord · EUA</div>
+        <div class="t-name">Lakota</div>
+        <p>Els Lakota creuen en <em>Wakan Tanka</em> (el Gran Misteri), una força espiritual que impregna tota la creació. La cerimònia de la <em>sweat lodge</em> (cabaneta de suor) i el ritual del Sol (Sun Dance) són pràctiques centrals per mantenir la connexió entre els humans, els avantpassats i les forces naturals. El concepte de <em>mitákuye oyásʼiŋ</em> («tots som parents») expressa la interconnexió universal de tots els éssers.</p>
+      </div>
+    </div>
+
+    <h3>Sibèria i Àsia Central</h3>
+    <div class="tradition-grid">
+      <div class="tradition-card">
+        <div class="t-region">Sibèria Oriental · Rússia</div>
+        <div class="t-name">Evenks (Tungus)</div>
+        <p>El terme «xaman» prové de la llengua evenk (<em>šamán</em>). Els Evenks de Sibèria oriental són considerats el poble on s'observa el xamanisme en la seva forma més arcaica i en el qual es va originar el terme. El xaman evenk viatja als mons inferior i superior per recuperar ànimes perdudes, negociar amb els esperits dels animals i diagnosticar i curar malalties.</p>
+      </div>
+      <div class="tradition-card">
+        <div class="t-region">Mongòlia i Sibèria meridional</div>
+        <div class="t-name">Buriats</div>
+        <p>Entre els Buriats, el xamanisme coexisteix amb el budisme tibetà en una síntesi fascinant. Els <em>böö</em> (xamans masculins) i les <em>udagan</em> (xamans femenines) mantenen un complex sistema de relació amb els <em>ongon</em> (esperits ancestrals). Els buriats distingeixen entre el «xamanisme blanc» (orientat als esperits celestials) i el «xamanisme negre» (orientat als esperits del món inferior).</p>
+      </div>
+    </div>
+
+    <h3>Àfrica Subsahariana</h3>
+    <div class="tradition-grid">
+      <div class="tradition-card">
+        <div class="t-region">Àfrica del Sud · Botswana/Namíbia</div>
+        <div class="t-name">San (!Kung)</div>
+        <p>Els San, un dels pobles de caçadors-recol·lectors més antics de la Terra, practiquen la dansa de curació (<em>!kia</em>) on els curanderos entren en trànsit per accedir a un estat alterat (<!<em>num kxaosi</em>) que els permet expulsar malalties i malèfics. Les seves pintures rupestres —algunes de les més antigues del món— representen amb gran precisió els estats de trànsit xamànic, incloses les alucinacions entòptiques.</p>
+      </div>
+      <div class="tradition-card">
+        <div class="t-region">Àfrica Occidental · Nigèria/Benin</div>
+        <div class="t-name">Yoruba</div>
+        <p>La religió tradicional Yoruba organitza el cosmos al voltant dels <em>Òrìşà</em>, divinitats que representen forces naturals i dimensions de l'experiència humana. Cada persona posseeix un <em>orí</em> (destí personal). El sistema divinatiu <em>Ifá</em>, reconegut com a Patrimoni de la Humanitat per la UNESCO, constitueix un dels corpus orals més rics i complexos del món. La tradició Yoruba ha generat religions sincretistes com el Candomblé i la Santeria.</p>
+      </div>
+    </div>
+
+    <h3>Oceania</h3>
+    <div class="tradition-grid">
+      <div class="tradition-card">
+        <div class="t-region">Austràlia · Totes les regions</div>
+        <div class="t-name">Aborígens australians — El Temps del Somni</div>
+        <p>La tradició espiritual dels aborígens australians és una de les més antigues del planeta —almenys 65.000 anys de continuïtat cultural documentada. El <em>Tjukurpa</em> (Temps del Somni o Dreamtime) no és un temps passat sinó una realitat ontològica permanent: els éssers ancestrals van crear el paisatge i continuen presents en ell. La terra no és una propietat sinó un parent viu que cal cuidar. Les <em>songlines</em> (línies de cant) constitueixen mapes espirituals i geogràfics del continent.</p>
+      </div>
+    </div>
+
+    
+    <div class="video-section">
+      <div class="video-label">📺 2.4 — Yanomami: Davi Kopenawa i la lluita per l'Amazònia</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'ESICF3mHdEU')">
+            <img src="https://img.youtube.com/vi/ESICF3mHdEU/mqdefault.jpg" alt="Davi Kopenawa: «El home blanc em voldria menjar»">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Davi Kopenawa: «El home blanc em voldria menjar»</div>
+            <div class="v-desc">Entrevista en castellà al xaman yanomami Davi Kopenawa, coautor de «La Caiguda del Cel». Una de les veus més importants de l'animisme contemporani.</div>
+            <a href="https://www.youtube.com/watch?v=ESICF3mHdEU" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div><div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'Q4jitUday0g')">
+            <img src="https://img.youtube.com/vi/Q4jitUday0g/mqdefault.jpg" alt="Lucha por la Amazonia – DW Documental">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Lucha por la Amazonia – DW Documental</div>
+            <div class="v-desc">Documental de DW en castellà sobre els yanomami i la resistència de Davi Kopenawa davant la destrucció de la selva.</div>
+            <a href="https://www.youtube.com/watch?v=Q4jitUday0g" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Europa Precristiana</h3>
+    <p>Una de les dimensions més oblidades de la història religiosa és que els pobles europeus van posseir les seves pròpies ontologies animistes profundament arrelades, abans de la seva eliminació sistemàtica per la cristianització. Reconèixer aquest fet trenca la tendència a localitzar l'animisme exclusivament fora d'Europa i evidencia que la lògica colonial s'aplicà primer als propis territoris europeus.</p>
+    <div class="tradition-grid">
+      <div class="tradition-card">
+        <div class="t-region">Europa Occidental i Central · 800 aC – 400 dC</div>
+        <div class="t-name">Celtes i Druides</div>
+        <p>Els celtes concebien el món natural com un espai saturat de divinitats i esperits (<em>genius loci</em>). Llacs, fonts, rius i boscos eren llocs de culte i ofrena. Els druides —classe sacerdotal, jurídica i intel·lectual alhora— mantenien una profunda relació ritual amb el bosc de roures. L'arqueologia ha documentat dipòsits votius massius en llacs (Lake Neuchâtel) i pantans, cosa que revela la dimensió material d'aquesta espiritualitat de la naturalesa.</p>
+      </div>
+      <div class="tradition-card">
+        <div class="t-region">Europa Septentrional · Edat del Ferro – Edat Vikinga</div>
+        <div class="t-name">Nòrdics i Germànics</div>
+        <p>La religió nòrdica, documentada en les <em>Eddas</em> i les Sagues, presenta trets animistes clars: els boscos sagrats (<em>lundr</em>), els esperits de la natura (<em>landvættir</em>, guardians del territori), els <em>fylgjur</em> (esperits protectors animals) i la creença que elements de l'entorn com els arbres, les pedres i els rius posseïen agència pròpia. Tàcit, a la <em>Germania</em>, descriu les tribus germàniques adorant en boscos i bosquets sagrats.</p>
+      </div>
+      <div class="tradition-card">
+        <div class="t-region">Europa Oriental · Fins al segle XIII</div>
+        <div class="t-name">Eslavs</div>
+        <p>La religió eslava precristiana era politeista i profundament animista, caracteritzada per la veneració dels avantpassats (<em>Rody</em>), els esperits dels llocs naturals (<em>domovoi</em> per la llar, <em>leshy</em> pels boscos, <em>rusalki</em> per les aigües) i rituals estretament lligats al cicle agrícola. La seva cristianització, iniciada al segle IX amb Ciri i Metodi, va ser lenta i va produir una rica tradició de sincretisme («doble fe», <em>dvoeverie</em>) que perdura en el folklore eslau fins avui.</p>
+      </div>
+      <div class="tradition-card">
+        <div class="t-region">Pirineus i País Basc · Des de la Prehistòria</div>
+        <div class="t-name">Bascos — Mari i el Panteó Basc</div>
+        <p>La mitologia basca constitueix un dels sistemes simbòlics autòctons europeus més ben conservats, probablement d'arrel preindoeuropea. <em>Mari</em>, la divinitat femenina principal associada a la tempesta i les muntanyes, habita en coves i turons i encarna la força de la natura. El seu company <em>Sugaar</em> és un ésser serpentiforme. Entitats com els <em>laminak</em> (esperits femenins de l'aigua i de les coves) o el <em>Basajaun</em> (el «senyor del bosc») reflecteixen una ontologia on el paisatge pirinenc és un espai viu i poblat d'agències no-humanes.</p>
+      </div>
+    </div>
+  <div class="video-section">
+      <div class="video-label">📺 2.4 — Europa Precristiana: Celtes i Druides</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'tKXdixkW0uI')">
+            <img src="https://img.youtube.com/vi/tKXdixkW0uI/mqdefault.jpg" alt="Celtes, un poble de ferro (IV): Druides i cosmologia – La March">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Celtes, un poble de ferro (IV): Druides i cosmologia – La March</div>
+            <div class="v-desc">Conferència del catedràtic de la Universitat de Saragossa sobre la cosmologia celta i els druides. Rigorós i acadèmic.</div>
+            <a href="https://www.youtube.com/watch?v=tKXdixkW0uI" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div><div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'RAfsMqcd9eA')">
+            <img src="https://img.youtube.com/vi/RAfsMqcd9eA/mqdefault.jpg" alt="La religió celta: déus, druides i rituals">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">La religió celta: déus, druides i rituals</div>
+            <div class="v-desc">Explicació completa de la religió celta, la seva visió animista de la natura i el paper dels druides com a classe sacerdotal i jurídica.</div>
+            <a href="https://www.youtube.com/watch?v=RAfsMqcd9eA" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 2.5 PANTEISME -->
+  <div class="section" id="panteisme">
+    <div class="section-label">2.5 — Comparació conceptual</div>
+    <h2>Animisme i panteisme: fronteres i confluències</h2>
+    <hr class="divider">
+    <p>L'animisme i el panteisme comparteixen el rebuig de la divinitat transcendent i separada del món material, però difereixen profundament en la seva estructura ontològica. Mentre l'animisme distribueix l'agència en una multiplicitat de persones no-humanes amb les quals cal relacionar-se, negociar i mantenir aliances, el panteisme tendeix a identificar la totalitat de l'existència amb una única substància o principi diví immanent.</p>
+
+    <table class="compare-table">
+      <tr>
+        <th>Dimensió</th>
+        <th>Animisme</th>
+        <th>Panteisme</th>
+      </tr>
+      <tr>
+        <td><strong>Estructura ontològica</strong></td>
+        <td>Pluralitat de subjectes i agències no-humanes</td>
+        <td>Unitat de tot allò existent en un principi diví</td>
+      </tr>
+      <tr>
+        <td><strong>Relació amb la natura</strong></td>
+        <td>Negociació relacional amb persones no-humanes</td>
+        <td>Identitat o immanència de Déu en la natura</td>
+      </tr>
+      <tr>
+        <td><strong>Pràctica ritual</strong></td>
+        <td>Central: diplomàcia amb el no-humà</td>
+        <td>Variable: de la meditació al ritual formal</td>
+      </tr>
+      <tr>
+        <td><strong>Rol del xaman/sacerdot</strong></td>
+        <td>Mediador tècnic entre mons</td>
+        <td>Guia cap a la comprensió de la unitat</td>
+      </tr>
+    </table>
+
+    <h3>Tradicions panteistes principals</h3>
+    <div class="tradition-grid">
+      <div class="tradition-card">
+        <div class="t-region">Filosofia occidental · Països Baixos, s. XVII</div>
+        <div class="t-name">Baruch Spinoza (1632–1677)</div>
+        <p>Spinoza és considerat el gran filòsof del panteisme occidental. A l'<em>Ètica</em> (1677) va postular que Déu i la Natura (<em>Deus sive Natura</em>) són la mateixa i única substància infinita. Tot allò que existeix és una expressió o mode d'aquesta substància única. Per aquesta posició va ser excomunicat de la seva comunitat jueva. La seva influència sobre el romanticisme, Hegel i Einstein fou enorme.</p>
+      </div>
+      <div class="tradition-card">
+        <div class="t-region">Japó · Des del s. VIII</div>
+        <div class="t-name">Shinto</div>
+        <p>El Shinto és la tradició religiosa autòctona del Japó. El seu concepte fonamental és el de <em>kami</em>: presències espirituals que habiten en elements naturals (muntanyes, rius, pedres, arbres) i en els avantpassats. El Shinto no és estrictament panteista sinó més aviat animista-politeista, però la seva concepció de la natura com a espai sagrat el situa en una zona de confluència. El mont Fuji, el bosc de Nikko i innombrables santuaris (<em>jinja</em>) il·lustren aquesta sacralitat del paisatge.</p>
+      </div>
+      <div class="tradition-card">
+        <div class="t-region">Índia · Des del s. VIII aC</div>
+        <div class="t-name">Advaita Vedanta</div>
+        <p>L'Advaita Vedanta (escola filosòfica de l'hinduisme no-dual, sistematitzada per Adi Shankaracharya al s. VIII dC) postula que <em>Atman</em> (l'ànima individual) i <em>Brahman</em> (la realitat última universal) són una mateixa cosa. La percepció de la multiplicitat és <em>maya</em> (il·lusió). Aquesta posició és propera al panteisme filosòfic, tot i que la tradició hindú la distingeix amb precisió del teisme.</p>
+      </div>
+      <div class="tradition-card">
+        <div class="t-region">Xina · Des del s. VI aC</div>
+        <div class="t-name">Taoisme</div>
+        <p>El taoisme filosòfic de Laozi i Zhuangzi concep el <em>Tao</em> («el Camí») com el principi immanent i inefable que sustenta i travessa tota l'existència. El <em>Tao Te Ching</em> descriu el Tao com quelcom que no pot ser nomenat ni aprehès conceptualment, però que és present en tota cosa. La Stanford Encyclopedia of Philosophy el considera la tradició «més panteista» de les grans tradicions filosòfico-religioses, tot i que conté elements que el situen a mig camí entre el panteisme i el panenteisme.</p>
+      </div>
+    </div>
+  <div class="video-section">
+      <div class="video-label">📺 2.5 — Spinoza i el panteisme: Deus sive Natura</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'dwQYJj4oz0A')">
+            <img src="https://img.youtube.com/vi/dwQYJj4oz0A/mqdefault.jpg" alt="El Déu de Spinoza explicat fàcil – Filosofia Moderna">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">El Déu de Spinoza explicat fàcil – Filosofia Moderna</div>
+            <div class="v-desc">Explicació accessible i rigorosa del panteisme de Spinoza, el concepte «Deus sive Natura» i per què va ser excomunicat.</div>
+            <a href="https://www.youtube.com/watch?v=dwQYJj4oz0A" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 2.6 AVUI -->
+  <div class="section" id="avui">
+    <div class="section-label">2.6 — Rellevància Contemporània</div>
+    <h2>L'animisme avui: ecologia, descolonització i ontologies alternatives</h2>
+    <hr class="divider">
+    <p>La revalorització acadèmica de l'animisme no és un exercici nostàlgic ni exòtic. En el context de la crisi ecològica global, les ontologies animistes han tornat al centre del debat filosòfic, jurídic i polític com a alternatives epistèmiques al naturalisme occidental que històricament ha construït la natura com un recurs econòmicament disponible i jurídicament inert.</p>
+
+    <h3>Els drets de la natura</h3>
+    <p>Des dels anys 2000, moviments indígenes i juristes han impulsat el reconeixement legal de drets a entitats naturals: rius, boscos, ecosistemes. Equador va ser el primer país del món a incorporar els drets de la Pachamama (Mare Terra) a la seva constitució (2008), directament inspirat per ontologies animistes andines. Nova Zelanda ha reconegut el riu Whanganui com a persona jurídica (2017) a petició del poble Maori. Colòmbia ha fet el mateix amb l'Amazònia colombiana (2018).</p>
+
+    <h3>Bruno Latour i el «parlament de les coses»</h3>
+    <p>El filòsof i sociòleg de la ciència Bruno Latour (1947–2022), en obres com <em>Nous n'avons jamais été modernes</em> (1991) i <em>Politiques de la nature</em> (1999), va proposar una «cosmopolítica» que incorpora els no-humans a la deliberació política. La seva crítica a la «Gran Divisió» moderna entre Natura i Cultura és, en molts aspectes, convergent amb les conclusions de Descola i Viveiros de Castro, tot i procedir d'una tradició filosòfica diferent.</p>
+
+    <div class="concept-box">
+      <span class="concept-tag">Gir ontològic en antropologia</span>
+      <p>Des dels anys 1990, l'antropologia ha experimentat el que s'anomena «gir ontològic»: en lloc de preguntar com diverses cultures interpreten una mateixa realitat (multiculturalisme), es pregunta si hi ha diverses realitats ontològicament constituïdes (multinaturalisme). Descola, Viveiros de Castro, Marilyn Strathern i Tim Ingold en són els principals exponents. Aquesta perspectiva pren seriosament les afirmacions dels pobles indígenes no com a metàfores sinó com a descripcions d'una realitat diferent.</p>
+    </div>
+
+    <h3>Animisme i crisi ecològica</h3>
+    <p>Autors com Graham Harvey (<em>Animism: Respecting the Living World</em>, 2005) i Robin Wall Kimmerer (<em>Braiding Sweetgrass</em>, 2013) argumenten que les ontologies animistes ofereixen models alternatius de relació amb els ecosistemes basats en el respecte, la reciprocitat i la limitació voluntària de l'extracció, en contraposició al model extractivista capitalista basat en la maximització del rendiment. L'animisme, en aquest sentit, no és una reliquia del passat sinó una eina conceptual per al futur.</p>
+  <div class="video-section">
+      <div class="video-label">📺 2.6 — Animisme avui: drets de la natura i ecologia</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'xKzCeaRQylI')">
+            <img src="https://img.youtube.com/vi/xKzCeaRQylI/mqdefault.jpg" alt="Respeto la Pachamama – Chamán Alberto Taxo (Ecuador)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Respeto la Pachamama – Chamán Alberto Taxo (Ecuador)</div>
+            <div class="v-desc">El yachak (xaman) equatorià Alberto Taxo explica la cosmovisió animista andina i la necessitat de protegir la Pachamama.</div>
+            <a href="https://www.youtube.com/watch?v=xKzCeaRQylI" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- METODOLOGIA -->
+  <div class="section" id="metodologia">
+    <div class="section-label">Consideracions metodològiques finals</div>
+    <h2>Pluralitat ontològica i humilitat epistemològica</h2>
+    <hr class="divider">
+    <p>L'estudi de l'animisme exigeix una disposició metodològica particular: la voluntat de prendre seriosament ontologies que no compartim. Descola anomena aquest exercici «traducció ontològica» —un esforç de comprensió que no implica acceptació ni rebuig, sinó la suspensió provisional dels propis pressupòsits per fer visible allò que d'una altra manera restaria invisible.</p>
+    <p>La perspectiva histórico-crítica adoptada en aquest treball reconeix que totes les ontologies —inclòs el naturalisme occidental— són construccions culturals situades. Cap d'elles no és la descripció neutral i definitiva de la realitat. Aquesta constatació no condueix al relativisme ingenu, sinó a la possibilitat d'un diàleg epistemològic genuí entre tradicions.</p>
+    <p>Particularment important és la dimensió política d'aquesta qüestió. Les ontologies animistes no han estat simplement «superades» per la modernitat: han estat activament destruïdes per processos colonials, missioners i estatals. La seva recuperació contemporània en contextos indígenes no és un fenomen primitivista sinó un acte de resistència cultural i de sobirania epistèmica.</p>
+    <p>Finalment, cal subratllar que la distinció entre «animisme» i «panteisme» no és sempre nítida en les tradicions concretes. Com hem vist, tradicions com el Shinto, certes branques del taoisme o la religió yoruba combinen elements de les dues categories. La tasca de la història comparada de les religions no és imposar fronteres conceptuals rígides, sinó comprendre la riquesa i la complexitat de les formes humanes d'habitar el món.</p>
+  </div>
+
+  <!-- BIBLIOGRAFIA -->
+  <div class="section" id="biblio">
+    <div class="section-label">Recursos i lectures</div>
+    <h2>Bibliografia comentada</h2>
+    <hr class="divider">
+
+    <div class="bib-level">
+      <h3>🟢 Nivell 1 — Introducció (públic general)</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Kimmerer, Robin Wall. <em>Braiding Sweetgrass. Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants</em>. Minneapolis: Milkweed Editions, 2013.</div>
+          <div class="bib-note">Una botànica i membre de la nació Potawatomi entrellaça ciència i ontologia animista nativa americana. Probablement el llibre més accessible i emocionalment poderós per entendre l'animisme des de dins.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Kopenawa, Davi, i Bruce Albert. <em>The Falling Sky: Words of a Yanomami Shaman</em>. Cambridge: Harvard University Press, 2013.</div>
+          <div class="bib-note">El testimoni directe d'un xaman yanomami sobre la seva visió del món i la destrucció de la selva. Un document excepcional per comprendre l'animisme des de la perspectiva d'un dels seus practicants.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Harvey, Graham. <em>Animism: Respecting the Living World</em>. Londres: Hurst & Company, 2005.</div>
+          <div class="bib-note">La millor introducció al «nou animisme» en clau contemporània. Harvey mostra la rellevància de les ontologies animistes per al debat ecològic actual. Accessible i rigorós.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-level">
+      <h3>🟡 Nivell 2 — Intermedi (estudiants i curiosos)</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Eliade, Mircea. <em>El chamanismo y las técnicas arcaicas del éxtasis</em>. Madrid: Fondo de Cultura Económica, 1960.</div>
+          <div class="bib-note">L'obra clàssica de referència sobre el xamanisme transcultural. Tot i les crítiques metodològiques posteriors, continua sent una lectura imprescindible per la vastitud del material comparatiu reunit.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Mauss, Marcel. <em>Ensayo sobre el don: forma y función del intercambio en las sociedades arcaicas</em>. Madrid: Katz Editores, 2009.</div>
+          <div class="bib-note">Text fonamental i sorprenentment llegible (~150 pàg.). Indispensable per comprendre la lògica de la reciprocitat en les societats no capitalistes i la seva relació amb el xamanisme.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Descola, Philippe. <em>Más allá de naturaleza y cultura</em>. Buenos Aires: Amorrortu, 2012.</div>
+          <div class="bib-note">L'obra central de Descola. La primera part és accessible; la segona és més densa. Canvia de manera radical la manera d'entendre les ontologies humanes. Lectura transformadora.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Latour, Bruno. <em>Nunca fuimos modernos</em>. Madrid: Siglo XXI, 2007.</div>
+          <div class="bib-note">Crítica filosòfica de la «Gran Divisió» moderna entre Natura i Cultura. Convergeix amb Descola des de la sociologia de la ciència. Imprescindible per la secció 2.6.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-level">
+      <h3>🔴 Nivell 3 — Avançat (acadèmic)</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Viveiros de Castro, Eduardo. <em>Metafísicas caníbales. Líneas de antropología posestructural</em>. Madrid: Katz Editores, 2010.</div>
+          <div class="bib-note">Síntesi del perspectivisme amerindi i del projecte d'una «antropologia permanent». Obra densa però fonamental per la secció 2.1. La millor entrada al pensament de Viveiros de Castro.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Ingold, Tim. <em>The Perception of the Environment: Essays on Livelihood, Dwelling and Skill</em>. Londres: Routledge, 2000.</div>
+          <div class="bib-note">Aproximació fenomenològica a les ontologies animistes. Ingold proposa el concepte d'«habitar» com a alternativa a la dicotomia Natura/Cultura. Referència clau del gir ontològic.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Tylor, Edward B. <em>Primitive Culture</em>. Londres: John Murray, 1871. (Reed. Dover, 2016).</div>
+          <div class="bib-note">Lectura obligatòria com a referència crítica: és el text que cal desmuntar. Llegir Tylor i contrastar-lo amb Descola o Harvey és un exercici pedagògic de gran valor.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-level">
+      <h3>🌐 Recursos digitals</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Canal YouTube: <em>Religion for Breakfast</em> — episodis sobre animisme i xamanisme</div>
+          <div class="bib-note">Divulgació acadèmica de qualitat. Vídeos específics sobre animisme, xamanisme i perspectives indígenes. En anglès. <a href="https://www.youtube.com/@ReligionForBreakfast" target="_blank" style="color:var(--rust)">→ youtube.com/@ReligionForBreakfast</a></div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Descola, Philippe. Lliçons al Collège de France (audiovisuals)</div>
+          <div class="bib-note">Les lliçons de Descola al Collège de France estan disponibles en línia. En francès, però d'un nivell de divulgació accessible. <a href="https://www.college-de-france.fr/fr/chaire/philippe-descola-anthropologie-de-la-nature-chaire-statutaire" target="_blank" style="color:var(--rust)">→ college-de-france.fr</a></div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Stanford Encyclopedia of Philosophy — entrades: «Animism», «Pantheism», «Indigenous Philosophy»</div>
+          <div class="bib-note">Referència filosòfica rigorosa i gratuïta. L'entrada sobre panteisme és especialment útil per la secció 2.5. <a href="https://plato.stanford.edu" target="_blank" style="color:var(--rust)">→ plato.stanford.edu</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const ids = ['intro','natura-cultura','totem','xamanisme','tradicions','panteisme','avui','metodologia','biblio'];
+  document.querySelectorAll('nav button').forEach((b, i) => {
+    b.classList.toggle('active', ids[i] === id);
+  });
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function embedVideo(thumbEl, videoId) {
+  const container = document.createElement('div');
+  container.className = 'video-embed-container';
+  container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allowfullscreen allow="autoplay"></iframe>`;
+  thumbEl.replaceWith(container);
+}
+</script>
+</body>
+</html>

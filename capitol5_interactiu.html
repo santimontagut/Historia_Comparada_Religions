@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 5 – Religions Indoeuropees</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1209;
+    --paper: #f5f0e8;
+    --cream: #ede7d4;
+    --gold: #b8860b;
+    --accent: #4a3d6b;
+    --rust: #8b3a1e;
+    --line: rgba(26,18,9,0.15);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.75; }
+
+  .global-nav { background: #0e0c09; border-bottom: 1px solid rgba(201,168,76,0.15); padding: 0.7rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .global-nav a { font-family: 'Source Serif 4', serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(201,168,76,0.7); text-decoration: none; transition: color 0.2s; }
+  .global-nav a:hover { color: #c9a84c; }
+  .global-nav .gn-center { font-family: 'Source Serif 4', serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(201,168,76,0.35); text-align: center; }
+  .global-nav .gn-center span { display: block; font-size: 0.65rem; color: rgba(201,168,76,0.2); }
+
+  header { background: var(--accent); color: var(--paper); padding: 3.5rem 2rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 18px, rgba(255,255,255,0.04) 18px, rgba(255,255,255,0.04) 19px); }
+  header .chapter-num { font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 700; color: rgba(255,255,255,0.08); position: absolute; top: 1rem; right: 2rem; line-height: 1; pointer-events: none; }
+  header .eyebrow { font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(245,240,232,0.6); margin-bottom: 0.5rem; }
+  header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; max-width: 700px; margin: 0 auto 1rem; }
+  header p.subtitle { font-size: 1rem; color: rgba(245,240,232,0.65); font-style: italic; max-width: 520px; margin: 0 auto; }
+
+  nav { background: var(--cream); border-bottom: 1px solid var(--line); padding: 0 1rem; display: flex; overflow-x: auto; scrollbar-width: none; position: sticky; top: 0; z-index: 100; }
+  nav::-webkit-scrollbar { display: none; }
+  nav button { background: none; border: none; font-family: 'Source Serif 4', serif; font-size: 0.78rem; letter-spacing: 0.06em; color: var(--ink); opacity: 0.6; padding: 0.9rem 1.1rem; cursor: pointer; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  nav button:hover { opacity: 1; }
+  nav button.active { opacity: 1; border-bottom-color: var(--accent); color: var(--accent); }
+
+  .container { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+  .section { display: none; animation: fadeIn 0.35s ease; }
+  .section.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  h2 { font-family: 'Playfair Display', serif; font-size: 1.65rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.25; }
+  h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; font-style: italic; color: var(--accent); margin: 2rem 0 0.6rem; }
+  p { margin-bottom: 1.1rem; }
+  .section-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+  .divider { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+
+  .thinker-card { border-left: 3px solid var(--accent); background: var(--cream); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
+  .thinker-card .thinker-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .thinker-card .thinker-dates { font-size: 0.78rem; color: var(--accent); letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  .thinker-card p { margin-bottom: 0; font-size: 0.95rem; }
+
+  .concept-box { border: 1px solid var(--accent); border-radius: 4px; padding: 1.2rem 1.4rem; margin: 1.5rem 0; position: relative; }
+  .concept-box .concept-tag { position: absolute; top: -0.6rem; left: 1rem; background: var(--paper); padding: 0 0.4rem; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+  .concept-box p { margin-bottom: 0; font-size: 0.93rem; }
+
+  .function-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin: 1.5rem 0; }
+  @media(min-width: 600px) { .function-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .function-card { border-radius: 6px; padding: 1.3rem; position: relative; overflow: hidden; text-align: center; }
+  .function-card.f1 { background: rgba(74,61,107,0.08); border: 1px solid rgba(74,61,107,0.25); }
+  .function-card.f2 { background: rgba(139,58,30,0.08); border: 1px solid rgba(139,58,30,0.25); }
+  .function-card.f3 { background: rgba(61,90,62,0.08); border: 1px solid rgba(61,90,62,0.25); }
+  .function-card .f-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 300; opacity: 0.3; line-height: 1; margin-bottom: 0.3rem; }
+  .function-card.f1 .f-num { color: var(--accent); }
+  .function-card.f2 .f-num { color: var(--rust); }
+  .function-card.f3 .f-num { color: #3d5a3e; }
+  .function-card .f-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .function-card .f-sub { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.7rem; }
+  .function-card p { font-size: 0.88rem; line-height: 1.55; text-align: left; margin-bottom: 0; }
+
+  .pantheon-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.87rem; }
+  .pantheon-table th { background: var(--accent); color: var(--paper); padding: 0.65rem 0.9rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic; }
+  .pantheon-table td { padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .pantheon-table tr:nth-child(even) td { background: var(--cream); }
+  .pantheon-table .god-name { font-family: 'Playfair Display', serif; font-weight: 700; }
+
+  .tradition-block { border-left: 3px solid var(--accent); padding: 1rem 1.2rem; margin: 1.5rem 0; background: var(--cream); border-radius: 0 4px 4px 0; }
+  .tradition-block .tb-region { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+  .tradition-block .tb-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem; }
+  .tradition-block p { font-size: 0.93rem; margin-bottom: 0.7rem; }
+  .tradition-block p:last-child { margin-bottom: 0; }
+
+  .video-section { background: var(--ink); color: var(--paper); border-radius: 6px; padding: 1.5rem; margin: 2rem 0; }
+  .video-section .video-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .video-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media(min-width: 600px) { .video-grid { grid-template-columns: 1fr 1fr; } }
+  .video-card { background: rgba(255,255,255,0.07); border-radius: 4px; overflow: hidden; transition: transform 0.2s; }
+  .video-card:hover { transform: translateY(-2px); }
+  .video-thumb { position: relative; padding-top: 56.25%; background: #111; cursor: pointer; overflow: hidden; }
+  .video-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: opacity 0.2s; }
+  .video-thumb:hover img { opacity: 1; }
+  .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 48px; height: 48px; background: rgba(74,61,107,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+  .play-btn svg { width: 18px; fill: white; margin-left: 3px; }
+  .video-info { padding: 0.7rem 0.8rem 0.8rem; }
+  .video-info .v-title { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.2rem; color: var(--paper); }
+  .video-info .v-desc { font-size: 0.78rem; color: rgba(245,240,232,0.6); line-height: 1.4; }
+  .video-info a { color: #b8a4d4; font-size: 0.76rem; text-decoration: none; }
+  .video-info a:hover { text-decoration: underline; }
+  .video-embed-container { position: relative; padding-top: 56.25%; background: #000; }
+  .video-embed-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+
+  .bib-level { margin-bottom: 2rem; }
+  .bib-level h3 { font-style: normal; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; margin-top: 0; padding-bottom: 0.4rem; border-bottom: 1px solid var(--line); }
+  .bib-item { padding: 0.9rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 3px 1fr; gap: 0 1rem; }
+  .bib-bar { background: var(--accent); border-radius: 2px; }
+  .bib-content .bib-ref { font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.3rem; }
+  .bib-content .bib-note { font-size: 0.8rem; color: var(--rust); font-style: italic; }
+  .bib-content .bib-ref em { font-style: italic; }
+
+  .timeline { margin: 1.5rem 0; }
+  .tl-item { display: grid; grid-template-columns: 110px 1fr; gap: 0 1.2rem; margin-bottom: 1rem; align-items: start; }
+  .tl-date { font-family: 'Playfair Display', serif; font-size: 0.85rem; color: var(--gold); text-align: right; padding-top: 0.15rem; font-weight: 700; }
+  .tl-body { border-left: 2px solid var(--line); padding-left: 1rem; font-size: 0.92rem; line-height: 1.55; }
+  .tl-body strong { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="global-nav">
+  <a href="index_global.html">← Índex General</a>
+  <div class="gn-center">Història de les Religions<span>Una Genealogia del Poder</span></div>
+  <a href="capitol4_interactiu.html">← Capítol 4</a>
+</div>
+
+<header>
+  <div class="chapter-num">5</div>
+  <div class="eyebrow">Història de les Religions · Capítol 5</div>
+  <h1>Religions Indoeuropees – Mites de Sobirania i Guerra</h1>
+  <p class="subtitle">L'estructura trifuncional: sobirania, guerra i fertilitat com a claus de l'ordre social europeu</p>
+</header>
+
+<nav id="mainNav">
+  <button class="active" onclick="showSection('intro')">Introducció</button>
+  <button onclick="showSection('trifuncional')">5.1 Teoria Trifuncional</button>
+  <button onclick="showSection('nord')">5.2 Celtes, Nòrdics i Eslaus</button>
+  <button onclick="showSection('grecia')">5.3 Grècia Antiga</button>
+  <button onclick="showSection('roma')">5.4 Roma: República i Imperi</button>
+  <button onclick="showSection('cultura')">5.5 Funció Cultural</button>
+  <button onclick="showSection('conclusions')">5.6 Conclusions</button>
+  <button onclick="showSection('metodologia')">Metodologia</button>
+  <button onclick="showSection('biblio')">📚 Bibliografia</button>
+</nav>
+
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="section active" id="intro">
+    <div class="section-label">Tesi del capítol</div>
+    <h2>Religions Indoeuropees – Mites de Sobirania i Guerra</h2>
+    <hr class="divider">
+    <p>Quan parlem de les religions indoeuropees no parlem d'una única religió sinó d'una família de tradicions religioses que comparteixen una matriu comuna: una estructura de pensament, una organització del panteó i una concepció de l'ordre social que les fa recognosciblement parents malgrat les diferències enormes entre la Grècia clàssica, la Roma imperial, les cultures nòrdiques i les tradicions eslaves.</p>
+    <p>La tesi central d'aquest capítol és que aquesta família de religions comparteix una <strong>estructura trifuncional</strong> —sobirania, guerra i fertilitat— que no és simplement una classificació dels déus sinó un model de com hauria de funcionar la societat. Els panteons indoeuropeus no descriuen l'ordre còsmic: el <em>prescriuen</em>. Legitimen una jerarquia social concreta presentant-la com un reflex de l'ordre diví.</p>
+
+    <div class="concept-box">
+      <span class="concept-tag">Tesi central</span>
+      <p>Les religions indoeuropees no són un conjunt de mites pintorescs sobre déus amb poders especials. Són sistemes simbòlics que articulen, legitimen i transmeten una visió de l'ordre social basada en tres funcions complementàries i jeràrquiques: la sobirania sagrada i jurídica, la força guerrera, i la producció i la fertilitat. Comprendre aquesta estructura és comprendre la base ideològica de les cultures europees durant mil·lennis.</p>
+    </div>
+
+    <h3>Qui eren els indoeuropeus?</h3>
+    <p>El terme «indoeuropeu» designa la família lingüística més extensa del món: inclou el grec, el llatí, el sànscrit, les llengües germàniques, les eslaves, les celtiques, el persa i moltes altres. Totes deriven d'una llengua ancestral comuna, el protoindoeuropeu, parlada per un poble que els lingüistes i arqueòlegs han anat reconstruint a partir de les evidències disponibles.</p>
+    <p>La hipòtesi més acceptada avui —la <em>hipòtesi de la estepa</em>, proposada per Marija Gimbutas i David Anthony— situa el poble protoindoeuropeu a les estepes pòntico-càspies (actuals Ucraïna i Rússia meridional) cap al 4000–3000 aC. A partir d'aquí, migracions successives associades a la domesticació del cavall i a la tecnologia del carro van portar la llengua i la cultura indoeuropees fins a l'Índia per l'est i fins a l'Atlàntic per l'oest. Una hipòtesi rival, la <em>hipòtesi anatòlica</em> (Colin Renfrew), situa l'origen a Anatòlia lligat a l'expansió de l'agricultura (~7000 aC). La recerca més recent de l'Institut Max Planck (2023) proposa un model híbrid: origen al Caucas meridional amb una branca secundària a les estepes.</p>
+    <p>El que és indiscutible és la unitat cultural profunda que revelen les tradicions religioses d'aquests pobles: els mateixos déus amb noms diferents, els mateixos mites amb protagonistes variats, la mateixa estructura tripartida de la societat i del panteó.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 Introducció — L'origen dels indoeuropeus</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'PENDING_INTRO_1')">
+            <img src="https://img.youtube.com/vi/PENDING_INTRO_1/mqdefault.jpg" alt="Indoeuropeus origen">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">L'origen dels indoeuropeus — Per confirmar</div>
+            <div class="v-desc">Vídeo pendent de confirmació.</div>
+            <a href="#" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5.1 TEORIA TRIFUNCIONAL -->
+  <div class="section" id="trifuncional">
+    <div class="section-label">5.1 — La gran aportació acadèmica</div>
+    <h2>La teoria trifuncional: origen i formulació</h2>
+    <hr class="divider">
+
+    <div class="thinker-card">
+      <div class="thinker-name">Georges Dumézil</div>
+      <div class="thinker-dates">1898 – 1986 · Mitologia comparada · França · Collège de France</div>
+      <p>Obres clau: <em>Flamen-Brahman</em> (1935), <em>Mitra-Varuna</em> (1940), <em>Jupiter, Mars, Quirinus</em> (1941), <em>Mythe et Épopée</em> (1968–1973). Va revolucionar l'estudi de les religions indoeuropees identificant una estructura trifuncional comuna a totes les tradicions.</p>
+    </div>
+
+    <p>Georges Dumézil va proposar la seva hipòtesi trifuncional a partir dels anys 1920, i la va anar refinant al llarg d'una carrera de sis dècades. La seva tesi de fons és que les societats protoindoeuropees tenien una ideologia tripartida que organitzava tant l'ordre social com el panteó religiós al voltant de tres funcions complementàries i jeràrquiques.</p>
+    <p>En la formulació definitiva de Dumézil, la hipòtesi no postula tres castes socials rígides sinó una <strong>ideologia</strong>: una manera de concebre i organitzar la realitat que es manifesta en els mites, en l'organització dels panteons, en les institucions polítiques i en els codis morals de les cultures indoeuropees.</p>
+
+    <div class="function-grid">
+      <div class="function-card f1">
+        <div class="f-num">I</div>
+        <div class="f-name">Sobirania</div>
+        <div class="f-sub">Sagrada · Jurídica</div>
+        <p>El poder religiós i jurídic. Sacerdots, reis, jutges i mags. Té dues dimensions: la sobirania <em>jurídica</em> (llei, contracte, ordre formal) i la sobirania <em>màgica</em> (carisma, profecia, poder ocult). Déus representatius: Júpiter/Dius Fidius (romà), Odin/Tyr (nòrdic), Zeus (grec).</p>
+      </div>
+      <div class="function-card f2">
+        <div class="f-num">II</div>
+        <div class="f-name">Guerra</div>
+        <div class="f-sub">Força · Heroisme · Protecció</div>
+        <p>La força física i la capacitat guerrera. Guerrers, nobles i herois. Representa la defensa de la comunitat i l'expansió del seu poder. Déus representatius: Mart (romà), Thor (nòrdic), Ares (grec), Teutates (celta).</p>
+      </div>
+      <div class="function-card f3">
+        <div class="f-num">III</div>
+        <div class="f-name">Fertilitat</div>
+        <div class="f-sub">Producció · Prosperitat · Abundància</div>
+        <p>La producció agrícola, la fertilitat, la riquesa i el benestar. Pagesos, artesans i comerciants. Déus representatius: Quirinus/Ops (romà), Freyr/Freyja (nòrdic), Afrodita/Demèter (grec).</p>
+      </div>
+    </div>
+
+    <div class="concept-box">
+      <span class="concept-tag">La doble sobirania: jurídica i màgica</span>
+      <p>Un dels descobriments més originals de Dumézil és que la Primera Funció sempre es presenta dividida en dues cares complementàries: una <em>jurídica</em> (déus del contracte, la llei i l'ordre formal, com Mitra o Tyr) i una <em>màgica</em> (déus del poder ocult, la profecia i el carisma irracional, com Varuna o Odin). Aquesta dualitat reflecteix la tensió permanent entre la legitimitat institucional i el poder carismàtic.</p>
+    </div>
+
+    <h3>La Primera Funció: sobirania sagrada i jurídica</h3>
+    <p>La Primera Funció engloba dues dimensions indestriables: el poder religiós i el poder jurídic. En les cultures indoeuropees arcaiques, la llei era sagrada, i el sagrat tenia força de llei. Els especialistes d'aquesta funció —druides, flamens, gothar— eren simultàniament sacerdots, jutges, consellers i guardians de la memòria col·lectiva.</p>
+    <p><strong>Els druides celtes</strong> eren una classe sacerdotal d'altíssim prestigi que exercia simultàniament funcions religioses, jurídiques i intel·lectuals. La seva formació durava fins a vint anys i s'impartia exclusivament de forma oral. El seu poder era tan gran que podien detenir una guerra simplement interposant-se entre dos exèrcits.</p>
+    <p><strong>Els flamens romans</strong> eren sacerdots estatals especialitzats en el culte a divinitats concretes. El Col·legi de Pontífexs gestionava el calendari, el dret religiós i la interpretació de les lleis sagrades. La seva funció era mantenir la <em>pax deorum</em>. El Pontifex Maximus era el cap de l'Estat religiós, i Cèsar i August es van apressar a assumir aquest títol com a instrument de legitimació política.</p>
+    <p><strong>Els gothar nòrdics</strong> eren els caps religiosos i polítics de les comunitats locals islandeses. Administraven el temple local, presidien les assemblees (<em>þing</em>), arbitraven els conflictes i representaven la seva comunitat davant els déus. En ells, la Primera Funció es presentava en la seva versió més descentralitzada i personalista.</p>
+
+    <h3>La Segona Funció: guerra, força i heroisme</h3>
+    <p>La Segona Funció és la de la força física, la guerra i la protecció de la comunitat. El guerrer indoeuropeu no és simplement un soldat: és un tipus humà amb un codi moral propi, una estètica de la valentia i de la mort digna, i una relació amb els déus de la guerra que és directa, personal i sovint extàtica.</p>
+    <p><strong>Thor</strong> (nòrdic), <strong>Ares</strong> (grec) i <strong>Mart</strong> (romà) són les expressions més explícites de la Segona Funció. Thor és el déu del tro i de la protecció dels humans contra el caos. Ares és el déu de la guerra bruta i la violència irracional. Mart romà, en canvi, era el segon déu en importància del panteó, pare de Ròmul i fundador de Roma: la guerra romana era sagrada i disciplinada.</p>
+    <p>La mitologia celta irlandesa ofereix una de les expressions més poderoses del codi guerrer en la figura de <strong>Cú Chulainn</strong>, qui experimentava el <em>ríastrad</em>, un trànsit bèl·lic extàtic en batalla. L'<em>Ilíada</em> i l'<em>Edda</em> nòrdica no són simplement obres literàries: són codis morals que defineixen què significa ser un guerrer exemplar. La mort heroica en batalla no és un fracàs sinó la forma de vida més alta possible.</p>
+
+    <div class="concept-box">
+      <span class="concept-tag">L'heroisme com a teologia</span>
+      <p>En les tradicions indoeuropees, el guerrer no és simplement un instrument de l'Estat: és un tipus religiós. La seva mort en batalla és un acte sagrat. Aquesta sacralització de la violència guerrera és un dels llegats més duradors i problemàtics de la tradició indoeuropea: el guerrer cristià medieval, el <em>miles Christi</em>, n'és l'herència directa.</p>
+    </div>
+
+    <h3>La Tercera Funció: fertilitat, prosperitat i abundància</h3>
+    <p>La Tercera Funció és la de la producció, la fertilitat i la prosperitat. Representa la base material de la vida: les collites, el bestiar, la riquesa i la salut de la comunitat. Tot i ser la funció «inferior» en la jerarquia, té una dignitat teològica pròpia: sense la prosperitat que ella garanteix, ni la sobirania ni la guerra tenen sentit.</p>
+    <p><strong>Freyr</strong> era el déu de la fertilitat, les collites, la llum solar i la prosperitat als pobles nòrdics. La seva germana <strong>Freyja</strong> era la deessa de l'amor, la bellesa i la fertilitat, i alhora mestra del <em>seiðr</em> (la màgia xamànica femenina), cosa que la situa en una posició que creuava les fronteres entre les tres funcions.</p>
+    <p>En el panteó grec, <strong>Afrodita/Venus</strong> representa la fertilitat sexual i amorosa i <strong>Demèter/Ceres</strong> la fertilitat agrícola. El mite d'Eleusis —els Misteris Eleusins, el culte iniciàtic més important de la Grècia clàssica— expressava de manera ritual el cicle de mort i resurrecció de la natura.</p>
+
+    <h3>Debat acadèmic: força i límits del model</h3>
+    <p>La hipòtesi trifuncional és una de les teories més influents i també més debatudes de la mitologia comparada. Els crítics, com Bruce Lincoln, retreuen a Dumézil que imposa el model sobre les dades en lloc de derivar-lo inductivament, i que és difícilment aplicable als panteons grec i hitita. El propi Dumézil va reconèixer, a la seva obra tardana, que es tractava d'una <em>ideologia</em> —una manera de pensar— i no d'una realitat social directament observable.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 5.1 — La teoria trifuncional de Dumézil</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'PENDING_DUMEZIL')">
+            <img src="https://img.youtube.com/vi/PENDING_DUMEZIL/mqdefault.jpg" alt="Dumézil teoria trifuncional">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Georges Dumézil: La teoria trifuncional — Per confirmar</div>
+            <div class="v-desc">Vídeo pendent de confirmació.</div>
+            <a href="#" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5.2 PANTEONS DEL NORD -->
+  <div class="section" id="nord">
+    <div class="section-label">5.2 — Panteons del Nord</div>
+    <h2>Els panteons celtes, nòrdics/germànics i eslaus</h2>
+    <hr class="divider">
+
+    <h3>El panteó celta</h3>
+    <div class="tradition-block">
+      <div class="tb-region">Europa occidental i central · ~800 aC – 400 dC</div>
+      <div class="tb-name">Celtes: déus del bosc i de la guerra</div>
+      <p>El panteó celta és el menys ben documentat de tots, ja que els druides no deixaven res per escrit. Les nostres fonts principals són les descripcions greco-romanes, l'arqueologia i les tradicions literàries irlandeses i gal·leses medievals.</p>
+      <p>La sobirania celta és representada per <strong>Lugh</strong> —el déu polivalent i omniscient, mestre de totes les arts— i per la figura del druida com a especialista de la Primera Funció. La guerra és representada per una constel·lació de déus guerrers tribals i per herois com Cú Chulainn. La fertilitat i la prosperitat estan associades a divinitats de la natura, les aigües i la terra, entre les quals destaca la figura de la <strong>deessa mare</strong> —Danu, Brigid, Morrigan en les seves diverses funcions— i al culte dels llocs naturals sagrats: fonts, rius, bosc de roures.</p>
+      <p>Una característica pròpia del panteó celta és el paper central de les <strong>divinitats territorials</strong>: cada tribu, cada lloc i cada element del paisatge tenia el seu propi esperit o divinitat. Aquesta dimensió animista del politeisme celta el distingeix dels panteons grec i romà, més abstractes i personalistes.</p>
+    </div>
+
+    <h3>El panteó germànic i nòrdic</h3>
+    <div class="tradition-block">
+      <div class="tb-region">Europa septentrional · ~200 – 1100 dC</div>
+      <div class="tb-name">Nòrdics: Odin, Thor, Freyr i el Ragnarök</div>
+      <p>El panteó nòrdic, documentat sobretot a les <em>Eddas</em> islandeses, és el cas on la teoria trifuncional de Dumézil és aplicable de manera més precisa. La tríada <strong>Odin</strong> (sobirania màgica: saviesa, profecia i poder ocult), <strong>Tyr</strong> (sobirania jurídica: llei i honor), <strong>Thor</strong> (guerra: força física i protecció) i <strong>Freyr</strong> (fertilitat: collites i prosperitat) correspon exactament a les tres funcions.</p>
+      <p>Adam de Bremen, cronista alemany del segle XI, descriu un temple a Uppsala amb tres estàtues de Thor, Odin i Freyr, demostrant que aquesta tríada era reconeguda pels propis nòrdics com la representació de la totalitat divina.</p>
+      <p>El <strong>Ragnarök</strong> —la batalla final en la qual els déus i els gegants es destruiran mútuament— és un element teològic únic entre les religions indoeuropees: la idea que l'ordre còsmic és provisional i mortal. L'heroi nòrdic no lluita perquè vagi a guanyar sinó perquè és el que ha de fer, malgrat saber que és una causa perduda. La valentia davant el destí inevitable és la virtut suprema.</p>
+    </div>
+
+    <h3>El panteó eslau</h3>
+    <div class="tradition-block">
+      <div class="tb-region">Europa oriental · ~500 – 1200 dC</div>
+      <div class="tb-name">Eslaus: Perun, Veles i la dualitat còsmica</div>
+      <p>El panteó eslau precristià és el menys documentat de tots: la cristianització de les tribus eslaves (entre els segles IX i XII) va ser ràpida i va destruir la major part de les fonts.</p>
+      <p>El déu suprem del panteó eslau era <strong>Perun</strong>, déu del tro, el llamp, la guerra i la llei. Les seves correspondències amb Zeus, Júpiter, Thor i Indra il·lustren perfectament la unitat de la tradició indoeuropea. El seu oponent còsmic era <strong>Veles</strong>, déu del món subterrani, el bestiar, la màgia i el comerç. La lluita eterna entre Perun i Veles —Perun al cel, Veles a la terra i als inferns— és una de les expressions mitològiques de la dualitat còsmica eslava: ordre contra caos, cel contra terra, sec contra humit.</p>
+      <p>Amb la cristianització, Perun va ser substituït simbòlicament per Sant Elies (que «cavalca el cel en un carro de foc»), i Veles per figures del diable o de la natura salvatge. Però el dualisme còsmic va persistir en el folklore eslau fins a l'època moderna.</p>
+    </div>
+
+    <div class="video-section">
+      <div class="video-label">📺 5.2 — Els panteons celtes, nòrdics i eslaus</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'PENDING_NORD')">
+            <img src="https://img.youtube.com/vi/PENDING_NORD/mqdefault.jpg" alt="Panteons del nord">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Panteons celtes, nòrdics i eslaus — Per confirmar</div>
+            <div class="v-desc">Vídeo pendent de confirmació.</div>
+            <a href="#" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5.3 PANTEO GREC -->
+  <div class="section" id="grecia">
+    <div class="section-label">5.3 — Grècia Antiga</div>
+    <h2>Grècia Antiga: religió, poder i identitat</h2>
+    <hr class="divider">
+    <p>El panteó grec és el cas on la teoria trifuncional de Dumézil és menys aplicable de forma directa —el propi Dumézil ho reconeixia—, però on la funció política de la religió és la més visible. Zeus no és simplement el déu més poderós: és el <em>rex deorum</em>, el rei dels déus, el garant de la justícia i de l'ordre de la <em>polis</em>. La jerarquia olímpica és una metàfora de la jerarquia aristocràtica.</p>
+    <p>La divisió funcional és recognoscible, tot i les complicacions: Zeus/Apol·lo (sobirania jurídica i màgica), Ares/Atena (guerra bruta i guerra intel·ligent), Demèter/Afrodita (fertilitat agrícola i sexual). El fet que la guerra tingui dos déus amb valors oposats —Ares, violent i irracional, menyspreats pels olímpics; Atena, estratègica i civilitzadora— reflecteix la tensió grega entre la violència guerrera i la civilització de la <em>polis</em>.</p>
+
+    <table class="pantheon-table">
+      <tr><th>Déu/Deessa</th><th>Funció</th><th>Funció trifuncional</th><th>Significació política</th></tr>
+      <tr><td><span class="god-name">Zeus</span></td><td>Cel, llamp, llei, ordre</td><td>I — Sobirania jurídica</td><td>Model del rei just. Garant de la <em>polis</em> i del dret internacional (<em>xenia</em>)</td></tr>
+      <tr><td><span class="god-name">Apol·lo</span></td><td>Profecia, música, llum, medicina</td><td>I — Sobirania màgica</td><td>L'oracle de Delfos era el centre de la consulta política de tota Grècia</td></tr>
+      <tr><td><span class="god-name">Ares</span></td><td>Guerra bruta, violència</td><td>II — Guerra (aspecte negatiu)</td><td>Menyspreats pels olímpics; representa la guerra sense disciplina ni estratègia</td></tr>
+      <tr><td><span class="god-name">Atena</span></td><td>Saviesa, guerra estratègica, artesania</td><td>II — Guerra (aspecte positiu)</td><td>Patrona d'Atenes; model de la guerra justa i intel·ligent al servei de la <em>polis</em></td></tr>
+      <tr><td><span class="god-name">Demèter</span></td><td>Collites, agricultura, cicles naturals</td><td>III — Fertilitat agrícola</td><td>Els Misteris Eleusins eren el culte iniciàtic més important de Grècia</td></tr>
+      <tr><td><span class="god-name">Afrodita</span></td><td>Amor, bellesa, desig</td><td>III — Fertilitat sexual</td><td>Patrona de Corint; el seu culte regulava la dimensió eròtica de la vida social</td></tr>
+      <tr><td><span class="god-name">Posidó</span></td><td>Mar, terratrèmols, cavalls</td><td>I/II — Sobirania/Guerra</td><td>Rival de Zeus; el seu domini sobre el mar era fonamental per al comerç i la guerra naval</td></tr>
+      <tr><td><span class="god-name">Hermes</span></td><td>Missatger, comerç, viatges, morts</td><td>III — Producció/intercanvi</td><td>Déu dels mercaders i dels diplomàtics; mediador entre els mons</td></tr>
+    </table>
+
+    <h3>Els jocs i els festivals: religió i identitat pan-hel·lènica</h3>
+    <p>Els jocs olímpics, els jocs pítius, els istmics i els nemeus eren tots festivals religiosos dedicats als grans déus. La competició atlètica no era entreteniment secular sinó acte sagrat que reproduïa i reforçava els valors de la classe guerrera aristòcrata. L'atleta victoriós era un heroi que havia demostrat la seva <em>aretê</em> (excel·lència) davant els déus i els homes. Els jocs olímpics, celebrats cada quatre anys en honor de Zeus a Olímpia des del 776 aC, eren tan sagrats que durant la seva celebració totes les guerres entre les ciutats-estat gregues havien de ser suspeses.</p>
+    <p>Aquesta dimensió religiosa de la competició atlètica és una expressió directa de la Segona Funció indoeuropea: la valentia, la força i l'excel·lència física com a virtuts sagrades que apropen l'heroi als déus.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 5.3 — Grècia Antiga: religió i poder</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'PENDING_GREC')">
+            <img src="https://img.youtube.com/vi/PENDING_GREC/mqdefault.jpg" alt="Panteó grec Olimp">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">El panteó grec: l'Olimp com a model aristocràtic — Per confirmar</div>
+            <div class="v-desc">Vídeo pendent de confirmació.</div>
+            <a href="#" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5.4 PANTEO ROMA -->
+  <div class="section" id="roma">
+    <div class="section-label">5.4 — Roma: República i Imperi</div>
+    <h2>Roma: República i Imperi</h2>
+    <hr class="divider">
+    <p>A Roma, la teoria trifuncional de Dumézil troba la seva aplicació més clara i sistemàtica. La tríada capitolina original —Júpiter, Mart i Quirinus— correspon exactament a les tres funcions: Júpiter (sobirania), Mart (guerra) i Quirinus (la comunitat productiva dels Quirites, els ciutadans romans en temps de pau). Dumézil va dedicar gran part de la seva obra (<em>Jupiter, Mars, Quirinus</em>, 1941) a demostrar aquesta correspondència.</p>
+    <p>La <strong><em>pax deorum</em></strong> —«la pau dels déus»— era el concepte central de la religió romana d'Estat: la idea que el benestar de Roma depenia del manteniment d'una relació equilibrada i harmoniosa amb els seus déus a través dels rituals adequats. La religió romana no era una qüestió de fe o de salvació personal: era una <strong>obligació cívica</strong>. Els sacerdots —pontífexs, augurs, flamens— eren magistrats de l'Estat, i la seva funció era garantir que Roma complís les seves obligacions religioses envers els déus.</p>
+
+    <table class="pantheon-table">
+      <tr><th>Déu/Deessa</th><th>Funció</th><th>Funció trifuncional</th><th>Significació política</th></tr>
+      <tr><td><span class="god-name">Júpiter</span></td><td>Cel, llamp, llei, sobirania</td><td>I — Sobirania jurídica</td><td>Cap de la tríada capitolina. El seu temple al Capitoli era el centre religiós de l'Estat</td></tr>
+      <tr><td><span class="god-name">Janus</span></td><td>Inicis, portes, transicions</td><td>I — Sobirania màgica</td><td>Les seves portes al Fòrum s'obrien en temps de guerra i es tancaven en pau: rarament tancades</td></tr>
+      <tr><td><span class="god-name">Mart</span></td><td>Guerra, protecció de Roma</td><td>II — Guerra</td><td>Segon déu del panteó, pare de Ròmul. Les campanyes militars començaven i acabaven amb rituals a Mart</td></tr>
+      <tr><td><span class="god-name">Quirinus</span></td><td>Comunitat cívica en pau</td><td>III — Prosperitat</td><td>Representava els Quirites (ciutadans romans) en la seva vida productiva i pacífica</td></tr>
+      <tr><td><span class="god-name">Minerva</span></td><td>Saviesa, artesania, guerra estratègica</td><td>I/II — Sobirania/Guerra</td><td>Part de la tríada capitolina tardana (Júpiter-Juno-Minerva). Patrona dels artesans i dels metges</td></tr>
+      <tr><td><span class="god-name">Venus</span></td><td>Amor, bellesa, fertilitat</td><td>III — Fertilitat</td><td>Mare d'Enees i avantpassada de la <em>gens Iulia</em>: Cèsar i August la van usar per legitimar la seva dinastia</td></tr>
+      <tr><td><span class="god-name">Ceres</span></td><td>Collites, agricultura</td><td>III — Fertilitat agrícola</td><td>La seva plebs (el poble baix) es reunia al seu temple. Associada als drets del plebeus</td></tr>
+    </table>
+
+    <h3>El culte imperial: la culminació de la trifuncionalitat</h3>
+    <p>El culte imperial va ser la culminació lògica de la lògica trifuncional romana. Quan August va concentrar el poder polític i religiós en una sola persona —assumint el títol de Pontifex Maximus el 12 aC—, va completar la fusió entre sobirania humana i sobirania divina que la teoria trifuncional predeia. La deificació dels emperadors morts —i de vegades dels vius, especialment a les províncies orientals— era el mecanisme que legitimava el poder imperial com a continuació de l'ordre còsmic.</p>
+    <p>La col·lisió entre el culte imperial i el cristianisme no va ser simplement una persecució religiosa: va ser un xoc entre dos sistemes de legitimació política incompatibles. Els cristians que es negaven a fer sacrificis a l'emperador no estaven simplement exercint la llibertat religiosa: estaven negant la legitimitat de l'ordre polític romà. Per als romans, la <em>religio</em> era una obligació pública, no una opció privada. La negativa cristiana era, literalment, traïció a l'Estat.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 5.4 — Roma: República i Imperi</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'PENDING_ROMA')">
+            <img src="https://img.youtube.com/vi/PENDING_ROMA/mqdefault.jpg" alt="Panteó romà pax deorum">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">El panteó romà: la religió com a tecnologia d'Estat — Per confirmar</div>
+            <div class="v-desc">Vídeo pendent de confirmació.</div>
+            <a href="#" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 5.5 PANTEONS -->
+  <div class="section" id="panteons">
+    <div class="section-label">5.5 — Anàlisi Comparativa</div>
+    <h2>Els panteons indoeuropeus</h2>
+    <hr class="divider">
+    <p>L'aplicació de la teoria trifuncional als panteons indoeuropeus concrets revela alhora la força i els límits del model. En alguns casos, l'estructura tripartida és extraordinàriament nítida; en d'altres, la realitat és més complexa i ambigua. Examinem els cinc grans panteons de la tradició europea.</p>
+
+    <h3>5.5.1 El panteó grec</h3>
+    <div class="tradition-block">
+      <div class="tb-region">Mediterrani oriental · ~800 aC – 400 dC</div>
+      <div class="tb-name">Grècia: l'Olimp com a model aristocràtic</div>
+      <p>El panteó grec és el cas on la teoria trifuncional de Dumézil és menys aplicable de forma directa —el propi Dumézil ho reconeixia—, però on la funció política de la religió és la més visible. Zeus no és simplement el déu més poderós: és el <em>rex deorum</em>, el rei dels déus, el garant de la justícia i de l'ordre de la <em>polis</em>. La jerarquia olímpica és una metàfora de la jerarquia aristocràtica: els déus discuteixen, negocien i s'imposen els uns als altres exactament com fan els aristòcrates grecs.</p>
+      <p>La divisió funcional és reconeixible, tot i les complicacions: Zeus/Apol·lo (sobirania jurídica i màgica), Ares/Atena (guerra bruta i guerra intel·ligent), Demèter/Afrodita (fertilitat agrícola i sexual). El fet que la guerra tingui dos déus amb valors oposats —Ares, violent i irracional, menyspreats pels olímpics; Atena, estratègica i civilitzadora— reflecteix la tensió grega entre la violència guerrera i la civilització de la <em>polis</em>.</p>
+      <p>Els jocs olímpics, els jocs pítius, els istmics i els nemeus: tots eren festivals religiosos dedicats als grans déus. La competició atlètica no era entreteniment secular sinó acte sagrat que reproduïa i reforçava els valors de la classe guerrera aristòcrata.</p>
+    </div>
+
+    <h3>5.5.2 El panteó romà</h3>
+    <div class="tradition-block">
+      <div class="tb-region">Mediterrani occidental · ~700 aC – 400 dC</div>
+      <div class="tb-name">Roma: la religió com a tecnologia d'Estat</div>
+      <p>A Roma, la teoria trifuncional de Dumézil troba la seva aplicació més clara i sistemàtica. La tríada capitolina original —Júpiter, Mart i Quirinus— correspon exactament a les tres funcions: Júpiter (sobirania), Mart (guerra) i Quirinus (la comunitat productiva dels Quirites, els ciutadans romans en temps de pau). Dumézil va dedicar gran part de la seva obra (<em>Jupiter, Mars, Quirinus</em>, 1941) a demostrar aquesta correspondència.</p>
+      <p>La <em>pax deorum</em> —«la pau dels déus»— era el concepte central de la religió romana d'Estat: la idea que el benestar de Roma depenia del manteniment d'una relació equilibrada i harmoniosa amb els seus déus a través dels rituals adequats. La religió romana no era una qüestió de fe o de salvació personal: era una obligació cívica. Els sacerdots —pontífexs, augurs, flamens— eren magistrats de l'Estat, i la seva funció era garantir que Roma complís les seves obligacions religioses envers els déus.</p>
+      <p>El culte imperial va ser la culminació d'aquesta lògica: quan August va concentrar el poder polític i religious en una sola persona, va completar la fusió entre sobirania humana i sobirania divina que la teoria trifuncional predeia. La deificació dels emperors morts —i de vegades dels vius— era el mecanisme que legitimava el poder imperial com a continuació de l'ordre còsmic.</p>
+    </div>
+
+    <h3>5.5.3 El panteó celta</h3>
+    <div class="tradition-block">
+      <div class="tb-region">Europa occidental i central · ~800 aC – 400 dC</div>
+      <div class="tb-name">Celtes: déus del bosc i de la guerra</div>
+      <p>El panteó celta és el menys ben documentat de tots, ja que els druides no deixaven res per escrit. Les nostres fonts principals són les descripcions greco-romanes (parcialment hostils), l'arqueologia i les tradicions literàries irlandeses i gal·leses medievals. Tot i aquestes limitacions, l'estructura trifuncional és recognoscible.</p>
+      <p>La sobirania celta és representada per divinitats com <strong>Lugh</strong> —el déu polivalent i omniscient, mestre de totes les arts— i per la figura del druida com a especialista de la Primera Funció. La guerra és representada per una constel·lació de déus guerrers tribals i per herois com Cú Chulainn. La fertilitat i la prosperitat estan associades a divinitats de la natura, les aigües i la terra, entre les quals destaca la figura de la <strong>deessa mare</strong> —Danu, Brigid, Morrigan en les seves diverses funcions— i al culte dels llocs naturals sagrats: fonts, rius, bosc de roures.</p>
+      <p>Una característica pròpia del panteó celta és el paper central de les <strong>divinitats territorials</strong>: cada tribu, cada lloc i cada element del paisatge tenia el seu propi esperit o divinitat. Aquesta dimensió animista del politeisme celta és un element que el distingeix dels panteons grec i romà, més abstractes i personalistes.</p>
+    </div>
+
+    <h3>5.5.4 El panteó germànic i nòrdic</h3>
+    <div class="tradition-block">
+      <div class="tb-region">Europa septentrional · ~200 – 1100 dC</div>
+      <div class="tb-name">Nòrdics: Odin, Thor, Freyr i el Ragnarök</div>
+      <p>El panteó nòrdic, documentat sobretot a les <em>Eddas</em> islandeses (compostes al segle XIII però basades en tradicions molt més antigues), és el cas on la teoria trifuncional de Dumézil és aplicable de manera més precisa. La tríada Odin-Thor-Freyr correspon exactament a les tres funcions: <strong>Odin</strong> (sobirania màgica: saviesa, profecia, guerra estratègica i poder ocult), <strong>Tyr</strong> (sobirania jurídica: llei, contracte, honor), <strong>Thor</strong> (guerra: força física, protecció dels humans) i <strong>Freyr</strong> (fertilitat: collites, prosperitat, sexualitat).</p>
+      <p>Adam de Bremen, cronista alemany del segle XI, descriu un temple a Uppsala amb tres estàtues de Thor, Odin i Freyr, demostrant que aquesta tríada era reconeguda pels propis nòrdics com la representació de la totalitat divina.</p>
+      <p>El <strong>Ragnarök</strong> —la batalla final en la qual els déus i els gegants es destruiran mútuament— és un element teològic únic entre les religions indoeuropees: la idea que l'ordre còsmic és provisional i mortal, i que fins i tot els déus estan condemnats. Aquesta concepció tragicista del cosmos té implicacions ètiques profundes: l'heroi nòrdic no lluita perquè vagi a guanyar sinó perquè és el que ha de fer, malgrat saber que és una causa perduda. La valentia davant el destí inevitable és la virtut suprema.</p>
+    </div>
+
+    <h3>5.5.5 El panteó eslau</h3>
+    <div class="tradition-block">
+      <div class="tb-region">Europa oriental · ~500 – 1200 dC</div>
+      <div class="tb-name">Eslaus: Perun, Veles i la dualitat còsmica</div>
+      <p>El panteó eslau precristià és el menys documentat de tots: la cristianització de les tribus eslaves (entre els segles IX i XII) va ser ràpida i va destruir la major part de les fonts. No obstant, les cròniques medievals, l'arqueologia i el folklore han permès als investigadors reconstruir els seus elements principals.</p>
+      <p>El déu suprem del panteó eslau era <strong>Perun</strong>, déu del tro, el llamp, la guerra i la llei. Les seves correspondències amb els altres déus del tro indoeuropeus —Zeus, Júpiter, Thor, Indra— il·lustren perfectament la unitat de la tradició. El seu poder era el de la Primera i la Segona Funció: sobirania i guerra alhora, com correspon a un déu celestial guerrer.</p>
+      <p>El seu oponent còsmic era <strong>Veles</strong>, déu del món subterrani, el bestiar, la màgia i el comerç. La lluita eterna entre Perun i Veles —Perun al cel, Veles a la terra i als inferns— és una de les expressions mitològiques de la dualitat còsmica eslava: ordre contra caos, cel contra terra, sec contra humit. Quan Perun venç, la pluja cau i la terra és fèrtil; quan Veles guanya temporalment, arriba l'hivern i la mort de la vegetació.</p>
+      <p>Amb la cristianització, Perun va ser substituït simbòlicament per Sant Elies (que «cavalca el cel en un carro de foc»), i Veles per figures del diable o de la natura salvatge. Però el dualisme còsmic va persistir en el folklore eslau fins a l'època moderna.</p>
+    </div>
+
+    <h3>5.5.6 Correspondències i divergències entre tradicions</h3>
+    <table class="pantheon-table">
+      <tr><th>Funció</th><th>Grec</th><th>Romà</th><th>Nòrdic</th><th>Celta</th><th>Eslau</th></tr>
+      <tr>
+        <td><strong>I — Sobirania jurídica</strong></td>
+        <td><span class="god-name">Zeus</span> (llei, ordre)</td>
+        <td><span class="god-name">Júpiter / Dius Fidius</span></td>
+        <td><span class="god-name">Tyr</span></td>
+        <td><span class="god-name">Lugh</span></td>
+        <td><span class="god-name">Perun</span> (llei)</td>
+      </tr>
+      <tr>
+        <td><strong>I — Sobirania màgica</strong></td>
+        <td><span class="god-name">Apol·lo</span> (profecia)</td>
+        <td><span class="god-name">Júpiter Tonans</span></td>
+        <td><span class="god-name">Odin</span></td>
+        <td><span class="god-name">Druides</span></td>
+        <td><span class="god-name">Veles</span> (màgia)</td>
+      </tr>
+      <tr>
+        <td><strong>II — Guerra</strong></td>
+        <td><span class="god-name">Ares / Atena</span></td>
+        <td><span class="god-name">Mart</span></td>
+        <td><span class="god-name">Thor</span></td>
+        <td><span class="god-name">Teutates / Cú Chulainn</span></td>
+        <td><span class="god-name">Perun</span> (guerra)</td>
+      </tr>
+      <tr>
+        <td><strong>III — Fertilitat</strong></td>
+        <td><span class="god-name">Demèter / Afrodita</span></td>
+        <td><span class="god-name">Quirinus / Ceres / Venus</span></td>
+        <td><span class="god-name">Freyr / Freyja</span></td>
+        <td><span class="god-name">Brigid / deesses mare</span></td>
+        <td><span class="god-name">Mokosh / Veles</span> (bestiar)</td>
+      </tr>
+    </table>
+
+    <div class="video-section">
+      <div class="video-label">📺 5.5 — Els panteons indoeuropeus comparats</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'PENDING_PANTEONS')">
+            <img src="https://img.youtube.com/vi/PENDING_PANTEONS/mqdefault.jpg" alt="Panteons indoeuropeus comparats">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Panteons indoeuropeus: Grècia, Roma, Celtes, Nòrdics, Eslaus — Per confirmar</div>
+            <div class="v-desc">Vídeo pendent de confirmació.</div>
+            <a href="#" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5.6 FUNCIÓ CULTURAL -->
+  <div class="section" id="cultura">
+    <div class="section-label">5.5 — Llegat i persistència</div>
+    <h2>La funció cultural dels mites indoeuropeus</h2>
+    <hr class="divider">
+    <p>Els mites indoeuropeus no van morir amb la cristianització d'Europa. Van ser reelaborats, transformats i integrats en les noves estructures culturals medievals i modernes, deixant una petjada que és reconeixible fins avui en la literatura, la política, l'art i els valors col·lectius europeus.</p>
+
+    <h3>Com els mites estructuren la visió del poder</h3>
+    <p>La contribució més duradora dels mites indoeuropeus a la cultura europea és un model de legitimació del poder que combina les tres funcions en una jerarquia natural i inevitable. El rei bo és el que exerceix alhora la sobirania (coneix les lleis i és piadós), la força (protegeix el seu poble de les amenaces) i la prosperitat (garanteix el benestar material de la seva gent). Quan un d'aquests elements falla, el rei es deslegitima: el rei coward, el tirà injust o el governant incapaç d'assegurar la prosperitat del seu poble perden la seva legitimitat en tots tres eixos.</p>
+    <p>Aquest model de reialesa trifuncional va sobreviure la cristianització amb una facilitat sorprenent: simplement va ser revestit d'un vocabulari cristià. El «rei cristià» ideal de la literatura medieval combina la pietat (sobirania religiosa), la valentia guerrera (funció guerrera) i la protecció dels pobres (funció de prosperitat). La matriu ideològica és la mateixa; el sistema simbòlic ha canviat.</p>
+
+    <h3>La cavalleria medieval: la Segona Funció cristianitzada</h3>
+    <p>El codi de la cavalleria medieval és probablement l'exemple més visible de la persistència de la Segona Funció indoeuropea en la cultura europea posterior. El cavaller ideal dels romans de cavalleria —lleial al seu senyor, valerós en combat, cortès amb les dames, piadós amb els déus— és el guerrer indoeuropeu vestit amb armadura cristiana.</p>
+    <p>Les llegendes del rei Artús i els Cavallers de la Taula Rodona, compostes principalment entre els segles XII i XIV, estructuren el codi cavalleresc exactament al voltant de les tres funcions: la <em>quête</em> del Sant Graal (sobiranya religiosa i màgica), les aventures i combats (guerra i heroisme) i l'amor cortès (fertilitat i prosperitat en la seva dimensió amorosa). La Taula Rodona, on tots els cavallers seuen com a iguals, és una idealització de la comunitat guerrera indoeuropea.</p>
+
+    <h3>Persistència simbòlica en política, art i narrativa</h3>
+    <p>La persistència dels esquemes narratius i simbòlics indoeuropeus en la cultura contemporània és extraordinària. En política, la retòrica del «líder fort» que combina autoritat moral, capacitat de defensa i garantia de prosperitat reprodueix exactament el model trifuncional. En la narrativa popular —novel·les de fantasia, cinema, videojocs—, l'estructura del «rei, guerrer i camperol/mag» apareix recurrentment com a base de l'imaginari de gènere.</p>
+    <p>Richard Wagner va reconstruir conscientment la mitologia nòrdica al seu cicle operístic <em>Der Ring des Nibelungen</em> (1876) com a expressió d'una identitat cultural alemanya. J.R.R. Tolkien va construir la Terra Mitjana a partir d'una síntesi de tradicions mitològiques indoeuropees —especialment les nòrdiques, les finlandeses i les anglosaxones— amb la intenció explícita de crear una «mitologia per a Anglaterra». En ambdós casos, els mites indoeuropeus no eren materials del passat sinó eines actives de construcció d'identitat cultural.</p>
+
+    <div class="concept-box">
+      <span class="concept-tag">La trifuncionalitat en la cultura popular contemporània</span>
+      <p>De Star Wars a El Senyor dels Anells, de Game of Thrones a Harry Potter: les narracions populars contemporànies més exitoses reprodueixen amb una fidelitat sorprenent l'estructura trifuncional indoeuropea. El savi/mag (Primera Funció), el guerrer/heroi (Segona Funció) i el pagès/halfling/muggle (Tercera Funció) formen una tríada que el públic modern reconeix i troba satisfactòria perquè s'inscriu en una tradició narrativa de tres mil anys d'antiguitat.</p>
+    </div>
+
+    <div class="video-section">
+      <div class="video-label">📺 5.6 — El llegat dels mites indoeuropeus en la cultura europea</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'PENDING_LLEGAT')">
+            <img src="https://img.youtube.com/vi/PENDING_LLEGAT/mqdefault.jpg" alt="Llegat indoeuropeu cultura europea">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Els mites indoeuropeus en la cultura europea — Per confirmar</div>
+            <div class="v-desc">Vídeo pendent de confirmació.</div>
+            <a href="#" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5.7 CONCLUSIONS -->
+  <div class="section" id="conclusions">
+    <div class="section-label">5.6 — Síntesi</div>
+    <h2>Conclusions: vigència del model trifuncional</h2>
+    <hr class="divider">
+    <p>La teoria trifuncional de Dumézil ha resistit dècades de debat acadèmic no perquè sigui perfecta —les seves limitacions i els seus punts cecs estan ben documentats— sinó perquè il·lumina alguna cosa real i profunda en les tradicions religioses i culturals dels pobles indoeuropeus. La recurrència de l'estructura sobirania-guerra-fertilitat en tradicions tan diverses com la grega, la romana, la nòrdica, la celta i l'eslava no pot ser una coincidència: reflecteix una manera compartida de concebre l'ordre social i legitimar-lo a través del mite.</p>
+    <p>El que la teoria de Dumézil ens permet comprendre, en clau de la genealogia del poder que és la tesi d'aquest treball, és que les religions indoeuropees no eren sistemes de creences espirituals separats de la vida política i social: eren la infraestructura simbòlica sobre la qual es construïa la legitimitat de totes les formes de poder en les societats europees durant mil·lennis. El rei era legítim perquè els déus el validaven. La guerra era justa perquè els déus la ordenaven. La jerarquia social era natural perquè els déus l'encarnaven.</p>
+    <p>La cristianització d'Europa no va destruir aquesta infraestructura: la va revestir d'un nou sistema simbòlic. El Déu cristià va assumir els atributs de la Primera Funció; els sants guerrers i els cavallers cristians van heredar la Segona; i la tradició agrícola de les festes populars va preservar elements de la Tercera molt més temps que les elits polítiques i religioses haurien desitjat.</p>
+    <p>Avui, quan l'estructura trifuncional reapareix en la narrativa popular, en la retòrica política o en la imaginació col·lectiva europea, no és una curiositat arqueològica: és la prova que les estructures simbòliques profundes tenen una durada molt superior a les institucions que les van crear.</p>
+
+    <div class="video-section">
+      <div class="video-label">📺 5.7 — Síntesi: les religions indoeuropees i la seva vigència</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb" onclick="embedVideo(this, 'PENDING_CONCL')">
+            <img src="https://img.youtube.com/vi/PENDING_CONCL/mqdefault.jpg" alt="Religions indoeuropees vigència">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-info">
+            <div class="v-title">Síntesi: vigència dels mites indoeuropeus — Per confirmar</div>
+            <div class="v-desc">Vídeo pendent de confirmació.</div>
+            <a href="#" target="_blank">▶ Obrir a YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- METODOLOGIA -->
+  <div class="section" id="metodologia">
+    <div class="section-label">Consideracions metodològiques finals</div>
+    <h2>Entre el comparatisme i la crítica</h2>
+    <hr class="divider">
+    <p>L'estudi de les religions indoeuropees planteja reptes metodològics específics. El primer és el <strong>problema de les fonts</strong>: les tradicions religioses indoeuropees van ser majoritàriament orals i les fonts escrites disponibles —les Eddas, els textos homèrics, els tractats romans sobre religió— van ser compostes o redactades segles o mil·lennis després dels esdeveniments que pretenen descriure, i per autors amb les seves pròpies perspectives i distorsions. Qualsevol reconstrucció és, inevitablement, parcial i provisional.</p>
+    <p>El segon repte és el <strong>risc del comparatisme abusiu</strong>: la identificació de paral·lels entre tradicions diverses pot ser una eina analítica poderosa o una trampa intel·lectual que veu coherència on n'hi ha coincidència. La crítica a Dumézil —ben articulada per Bruce Lincoln i altres— és que el seu model és massa elegant per ser completament verdader: la realitat de les tradicions concretes és més caòtica, contradictòria i irreductible que qualsevol esquema tripartit.</p>
+    <p>El tercer repte és <strong>polític</strong>: la mitologia indoeuropea ha estat instrumentalitzada per moviments nacionalistes i racistes, especialment al segle XX. El nazisme va construir gran part de la seva ideologia sobre una lectura distorsionada de la mitologia nòrdica i indoeuropea. Aquesta instrumentalització obliga l'acadèmia a una vigilància constant sobre els usos polítics del comparatisme mitològic, sense per això abandonar l'estudi rigorós d'aquestes tradicions.</p>
+    <p>Amb totes aquestes precaucions, les religions indoeuropees continuen sent un camp d'estudi extraordinàriament fèrtil per comprendre com les societats humanes construeixen, legitimament i transmeten els seus sistemes de poder a través del mite.</p>
+  </div>
+
+  <!-- BIBLIOGRAFIA -->
+  <div class="section" id="biblio">
+    <div class="section-label">Recursos i lectures</div>
+    <h2>Bibliografia comentada</h2>
+    <hr class="divider">
+
+    <div class="bib-level">
+      <h3>🟢 Nivell 1 — Introducció (públic general)</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Guerber, H.A. <em>Mitos nórdicos</em>. Madrid: Atalanta, 2011.</div>
+          <div class="bib-note">La millor introducció als mites nòrdics per a públic general. Narració fluida i ben documentada de les principals llegendes de l'Edda.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Graves, Robert. <em>Los mitos griegos</em>. Madrid: Alianza Editorial, 1985. 2 vols.</div>
+          <div class="bib-note">La recopilació més completa dels mites grecs en castellà. Accessible i riquíssim en detalls. La interpretació de Graves és controvertida, però el material narratiu és excel·lent.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Anthony, David W. <em>El caballo, la rueda y el lenguaje</em>. Madrid: Crítica, 2010.</div>
+          <div class="bib-note">El millor llibre divulgatiu sobre els orígens dels indoeuropeus. Síntesi magistral d'arqueologia, lingüística i genètica. Imprescindible per la Introducció.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-level">
+      <h3>🟡 Nivell 2 — Intermedi</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Dumézil, Georges. <em>Los dioses de los indoeuropeos</em>. Barcelona: Seix Barral, 1970.</div>
+          <div class="bib-note">La millor introducció al pensament de Dumézil en castellà. Síntesi accessible de la hipòtesi trifuncional amb exemples dels principals panteons. El punt de partida obligatori per entendre el capítol.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Sturluson, Snorri. <em>Edda Menor (Edda Prosaica)</em>. Madrid: Alianza Editorial, 1998.</div>
+          <div class="bib-note">La font primària més important per a la mitologia nòrdica. Traduïda i anotada per Luis Lerate. Llegir l'original és irremplaçable per qualsevol dels apartats sobre el panteó nòrdic.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Scheid, John. <em>La religión en Roma</em>. Madrid: Ediciones Clásicas, 1991.</div>
+          <div class="bib-note">La millor síntesi sobre la religió romana com a tecnologia política: la <em>pax deorum</em>, el culte imperial i el paper dels sacerdots-magistrats. Imprescindible per la secció 5.5.2.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-level">
+      <h3>🔴 Nivell 3 — Avançat (acadèmic)</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Dumézil, Georges. <em>Mythe et Épopée I, II, III</em>. París: Gallimard, 1968–1973.</div>
+          <div class="bib-note">L'obra magna de Dumézil. L'aplicació sistemàtica de la hipòtesi trifuncional a les tradicions épiques indoeuropees. Referència acadèmica fonamental.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Lincoln, Bruce. <em>Theorizing Myth: Narrative, Ideology, and Scholarship</em>. Chicago: University of Chicago Press, 1999.</div>
+          <div class="bib-note">La crítica acadèmica més rigorosa a Dumézil i al comparatisme indoeuropeu en general. Imprescindible per la secció de consideracions metodològiques.</div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Mallory, J.P. <em>In Search of the Indo-Europeans: Language, Archaeology and Myth</em>. Londres: Thames and Hudson, 1989.</div>
+          <div class="bib-note">La síntesi acadèmica de referència sobre els orígens dels indoeuropeus: lingüística, arqueologia i mitologia comparada. Capítol 6 especialment rellevant per a la hipòtesi trifuncional.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-level">
+      <h3>🌐 Recursos digitals</h3>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Norse Mythology for Smart People — Daniel McCoy</div>
+          <div class="bib-note">El millor recurs en línia sobre mitologia nòrdica amb perspectiva acadèmica. Inclou una excel·lent introducció a Dumézil. En anglès. <a href="https://norse-mythology.org" target="_blank" style="color:var(--rust)">→ norse-mythology.org</a></div>
+        </div>
+      </div>
+      <div class="bib-item">
+        <div class="bib-bar"></div>
+        <div class="bib-content">
+          <div class="bib-ref">Theoi Greek Mythology — Aaron Atsma</div>
+          <div class="bib-note">Base de dades exhaustiva sobre els déus i mites grecs, amb totes les fonts antigues citades. Referència indispensable. <a href="https://www.theoi.com" target="_blank" style="color:var(--rust)">→ theoi.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const ids = ['intro','trifuncional','nord','grecia','roma','cultura','conclusions','metodologia','biblio'];
+  document.querySelectorAll('nav button').forEach((b, i) => {
+    b.classList.toggle('active', ids[i] === id);
+  });
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+function embedVideo(thumbEl, videoId) {
+  const container = document.createElement('div');
+  container.className = 'video-embed-container';
+  container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allowfullscreen allow="autoplay"></iframe>`;
+  thumbEl.replaceWith(container);
+}
+</script>
+</body>
+</html>

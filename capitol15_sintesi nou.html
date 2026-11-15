@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítol 15 - La religió davant la història</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Estils Externs -->
+<link rel="stylesheet" href="estil.css">
+<!-- Personalització de color per a aquest capítol de cloenda -->
+<style>
+  :root { --sidebar-bg: #0B1B2E; } 
+  /* Correcció de seguretat: el text sempre es veu */
+  .reveal { opacity: 1 !important; transform: translateY(0) !important; }
+</style>
+</head>
+
+<body>
+<div class="progress-bar" id="progress"></div>
+<!-- HEADER FIXE -->
+<header id="mainHeader">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="chapter-title">Capítol 15 · La religió davant la història</div>
+  <div style="width: 44px;"></div>
+</header>
+<div class="overlay" id="overlay"></div>
+
+
+<!-- COVER (PORTADA) -->
+<div class="cover" id="cover">
+  <div class="cover-menorah">✦</div>
+  <div class="cover-ornament">Història de les Religions</div>
+  <div class="cover-rule"></div>
+  <div class="cover-hebrew">SÍNTESI COMPARATIVA I PERSPECTIVA HISTÒRICA</div>
+  <h1 class="cover-chapter">Capítol 15</h1>
+  <div class="cover-subtitle">La religió davant la història: síntesi comparativa, poder i futur de la creença</div>
+  <div class="cover-tesi">
+    <strong>Tesi:</strong> La religió no ha estat un fenomen estàtic ni independent de les societats que l'han engendrat, sinó un dispositiu històric i dinàmic on la recerca de sentit existencial, la cohesió comunitària i la legitimació del poder s'entrellacen i es transformen constantment al llarg del temps.
+  </div>
+  <div class="cover-scroll">
+    <span>Llegir</span>
+    <div class="cover-scroll-line"></div>
+  </div>
+</div>
+
+<!-- SIDEBAR SINCRONITZADA -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a href="index.html" style="font-family: 'Crimson Pro', serif; font-size: 0.75rem; color: #c4a44a; text-decoration: none; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block; margin-bottom: 0.5rem; opacity: 0.7;">← Índex General</a>
+    <div class="sidebar-title">Capítol 15<br>La religió davant la història</div>
+  </div>
+  <nav>
+    <a href="#cover" class="lvl1">Portada</a>
+
+    <!-- 15.1 -->
+    <a href="#s151" class="lvl1">15.1. De la història a la interpretació global</a>
+    <a href="#s1511" class="lvl2">15.1.1. Objectius i plantejament</a>
+    <a href="#s1512" class="lvl2">15.1.2. Fenomen històric, social i simbòlic</a>
+    <a href="#s1513" class="lvl2">15.1.3. Creença, societat i poder</a>
+    <a href="#s1514" class="lvl2">15.1.4. La pregunta central</a>
+
+    <!-- 15.2 -->
+    <a href="#s152" class="lvl1">15.2. Les grans constants del fenomen religiós</a>
+    <a href="#s1521" class="lvl2">15.2.1. L'origen de l'univers</a>
+    <a href="#s1522" class="lvl2">15.2.2. La mort i la transcendència</a>
+    <a href="#s1523" class="lvl2">15.2.3. El mite i els arquetips</a>
+    <a href="#s1524" class="lvl2">15.2.4. El ritual i el sacrifici</a>
+    <a href="#s1525" class="lvl2">15.2.5. La sacralització de la conducta</a>
+
+    <!-- 15.3 -->
+    <a href="#s153" class="lvl1">15.3. Religió i poder: estructures de dominació</a>
+    <a href="#s1531" class="lvl2">15.3.1. De l'autoritat xamànica al sacerdoci</a>
+    <a href="#s1532" class="lvl2">15.3.2. Divinització i l'Estat sagrat</a>
+    <a href="#s1533" class="lvl2">15.3.3. Religió, imperi i legitimitat</a>
+    <a href="#s1534" class="lvl2">15.3.4. La llei divina i l'ordre social</a>
+    <a href="#s1535" class="lvl2">15.3.5. Cohesió i resistència</a>
+    <a href="#s1536" class="lvl2">15.3.6. Transformació de l'autoritat</a>
+
+    <!-- 15.4 -->
+    <a href="#s154" class="lvl1">15.4. Anàlisi comparativa transversal</a>
+    <a href="#s1541" class="lvl2">15.4.1. Concepcions del sagrat</a>
+    <a href="#s1542" class="lvl2">15.4.2. Revelació, filosofia i creença</a>
+    <a href="#s1543" class="lvl2">15.4.3. Religions ètniques, universals i salvació</a>
+    <a href="#s1544" class="lvl2">15.4.4. Temps, escatologia i judici final</a>
+    <a href="#s1545" class="lvl2">15.4.5. Individu, comunitat i autoritat</a>
+    <a href="#s1546" class="lvl2">15.4.6. Continuïtats, ruptures i préstecs</a>
+
+    <!-- 15.5 -->
+    <a href="#s155" class="lvl1">15.5. Supervivència, mutació i extinció</a>
+    <a href="#s1551" class="lvl2">15.5.1. Factors de supervivència històrica</a>
+    <a href="#s1552" class="lvl2">15.5.2. Expansió, adaptació i sincretisme</a>
+    <a href="#s1553" class="lvl2">15.5.3. Conquesta, persecució i desaparició</a>
+    <a href="#s1554" class="lvl2">15.5.4. Transmissió i memòria cultural</a>
+    <a href="#s1555" class="lvl2">15.5.5. Demografia, institucions i poder</a>
+
+    <!-- 15.6 -->
+    <a href="#s156" class="lvl1">15.6. El nou mapa religiós mundial</a>
+    <a href="#s1561" class="lvl2">15.6.1. El pes del Sud Global</a>
+    <a href="#s1562" class="lvl2">15.6.2. Àsia: continuïtat i modernitat</a>
+    <a href="#s1563" class="lvl2">15.6.3. Occident i els no afiliats</a>
+    <a href="#s1564" class="lvl2">15.6.4. Fonamentalismes i reaccions</a>
+    <a href="#s1565" class="lvl2">15.6.5. Pluralisme i migracions</a>
+
+    <!-- 15.7 -->
+    <a href="#s157" class="lvl1">15.7. La metamorfosi en la modernitat</a>
+    <a href="#s1571" class="lvl2">15.7.1. Secularització institucional</a>
+    <a href="#s1572" class="lvl2">15.7.2. Individualització i creença a la carta</a>
+    <a href="#s1573" class="lvl2">15.7.3. La religió digital</a>
+    <a href="#s1574" class="lvl2">15.7.4. Creure sense pertànyer</a>
+    <a href="#s1575" class="lvl2">15.7.5. La persistència de la transcendència</a>
+
+    <!-- 15.8 -->
+    <a href="#s158" class="lvl1">15.8. Nous mites i religions seculars</a>
+    <a href="#s1581" class="lvl2">15.8.1. Ideologies com a creença col·lectiva</a>
+    <a href="#s1582" class="lvl2">15.8.2. Sacralització de la nació</a>
+    <a href="#s1583" class="lvl2">15.8.3. Cultura de masses i mites</a>
+    <a href="#s1584" class="lvl2">15.8.4. Ciència i salvació tecnològica</a>
+    <a href="#s1585" class="lvl2">15.8.5. Transhumanisme i immortalitat digital</a>
+
+    <!-- 15.9 -->
+    <a href="#s159" class="lvl1">15.9. Conclusions generals</a>
+    <a href="#s1591" class="lvl2">15.9.1. Síntesi dels grans resultats</a>
+    <a href="#s1592" class="lvl2">15.9.2. Constant antropològica i canvi</a>
+    <a href="#s1593" class="lvl2">15.9.3. Sentit, cohesió i poder</a>
+    <a href="#s1594" class="lvl2">15.9.4. Permanències i ruptures</a>
+    <a href="#s1595" class="lvl2">15.9.5. El futur de la sacralitat</a>
+
+    <!-- 15.10 -->
+    <a href="#s1510" class="lvl1">15.10. Epíleg metodològic</a>
+    <a href="#s15101" class="lvl2">15.10.1. Perspectiva interdisciplinària</a>
+    <a href="#s15102" class="lvl2">15.10.2. Problemes de comparabilitat</a>
+    <a href="#s15103" class="lvl2">15.10.3. Límits de les fonts històriques</a>
+    <a href="#s15104" class="lvl2">15.10.4. Perspectives eurocèntriques i descolonials</a>
+
+    <!-- 15.11 -->
+    <a href="#s15bib" class="lvl1">15.11. Bibliografia general</a>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<main class="content">
+
+  <!-- ========================================== -->
+  <!-- 15.1 -->
+  <!-- ========================================== -->
+  <section id="s151" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.1</span>Introducció: de la història de les religions a la interpretació global</h1>
+    <p class="section-lead">Del fet històric particular a la comprensió transversal: la religió com a prisma de la condició humana i la vida col·lectiva.</p>
+    <p>L'estudi de les tradicions religioses no assoleix el seu ple sentit mentre es manté fragmentat en la descripció aïllada de cada fe. Després d'haver resseguit minuciosament la gènesi, el desenvolupament i les mutacions dels grans sistemes sagrats al llarg de catorze capítols, s'imposa el repte intel·lectual d'articular una mirada de conjunt capaç d'interrogar el fet religiós en la seva totalitat.</p>
+
+    <p>Aquesta secció introductòria fixa les bases metodològiques i teòriques de la síntesi final. S'hi exposen els objectius fonamentals d'aquest capítol de cloenda, s'hi defineix la religió com una realitat indissociablement històrica, social i simbòlica, i es presenta la tensió entre creença, societat i poder com l'eix vertebrador de tota l'obra, un recorregut que culmina amb l'explicació de la gran pregunta que ha guiat aquesta investigació des del seu inici.</p>
+    <h2 id="s1511">15.1.1 Objectius i plantejament de la síntesi final</h2>
+    <p>L'estudi històric de les religions arriba a la seva prova més exigent en el moment de la síntesi. Al llarg dels catorze capítols precedents, aquesta investigació ha recorregut mil·lennis d'experiència humana: des de les primeres manifestacions simbòliques del Paleolític i la revolució del Neolític fins a la consolidació dels grans sistemes politeistes del Pròxim Orient, Egipte, Grècia, Roma i Mesoamèrica; des de la profunda mutació ètica i metafísica de l'anomenat període axial a l'Índia, la Xina, Pèrsia i Israel, fins a l'aparició, expansió i institucionalització de les tradicions universals del cristianisme i l'islam. Aquest itinerari no s'ha concebut mai com una simple acumulació de monografies aïllades, sinó com una genealogia contínua de les idees sagrades.</p>
+
+    <p>Aquest darrer capítol té un propòsit epistemològic diferent i complementari al dels capítols precedents. No es tracta de reiterar la cronologia dels fets, ni de tornar a descriure els panteons, els llibres sagrats o les biografies dels fundadors religiosos. La tasca que s'obre aquí és essencialment analítica, transversal i comparativa: elevar les dades empíriques acumulades cap a una teoria explicativa sobre què ha representat la religió en la configuració de la història humana i quines són les seves perspectives en un món en transformació radical.</p>
+
+    <p>Per assolir aquest objectiu, la síntesi final s'articula sobre tres grans propòsits metodològics:</p>
+
+    <p>En primer lloc, identificar els patrons i les estructures recurrents que travessen tradicions culturals aparentment allunyades en el temps i en l'espai. La comparació sistemàtica permet destriar allò que constitueix una resposta antropològica fonamental davant de l'existència —l'angoixa davant la mort, l'ordenació del temps, el vincle ritual amb la comunitat— d'allò que respon a contingències històriques, geogràfiques o polítiques específiques.</p>
+
+    <p>En segon lloc, desmuntar la il·lusió de la immutabilitat religiosa. Cap de les grans tradicions que avui coneixem no va néixer acabada, ni ha romàs immune a la influència d'altres cultures. Totes són el producte d'una història feta de préstecs conceptuals, sincretismes assumits o ocultats, cismes doctrinals, reformes internes i adaptacions a nous contextos socials. Comprendre una religió implica reconèixer els seus deutes històrics amb el món que la va precedir i la seva capacitat de metamorfosi per sobreviure a la desaparició dels imperis que la van veure néixer.</p>
+
+    <p>En tercer lloc, analitzar la funció política i social de la sacralitat. Des de les primeres ciutats-estat mesopotàmiques fins als debats contemporanis sobre la laïcitat i el fonamentalisme, la religió ha mantingut una relació orgànica amb les estructures de dominació. Lluny de limitar-se a una esfera íntima de salvació personal, el fenomen religiós ha estat el principal creador de legitimitat política, el redactor dels codis morals i penals de la humanitat i, paradoxalment, un dels espais més potents de dissidència i revolta contra la injustícia social.</p>
+
+    <p>En definitiva, aquest capítol de cloenda no pretén clausurar el debat sobre el fet religiós, sinó situar-lo en la seva complexitat real: com una dimensió que ha definit la consciència de la humanitat, ha modelat la seva arquitectura social i política i que, fins i tot en la seva aparent crisi moderna, continua interrogant el destí de les nostres societats.</p>
+
+    <h2 id="s1512">15.1.2 La religió com a fenomen històric, social i simbòlic</h2>
+    <p>Definir la religió ha estat un dels grans desafiaments intel·lectuals de la modernitat. Al llarg dels darrers dos segles, la filosofia, l'antropologia, la sociologia i la història han intentat delimitar un fenomen tan vast com esquiu. Tanmateix, molts d'aquests intents han caigut en reduccionismes: considerar la religió exclusivament com una il·lusió psicològica davant de la por a la mort, com un simple instrument ideològic al servei de les classes dominants o com una vivència mística estrictament individual. Els catorze capítols precedents d'aquesta recerca demostren empíricament que qualsevol d'aquestes mirades unilaterals resulta insuficient. La religió només es pot comprendre en la seva complexitat si s'analitza a partir d'una tridimensionalitat indissociable: com a fet històric, com a estructura social i com a sistema simbòlic de sentit.</p>
+
+    <p>En la seva dimensió històrica, la religió és un producte cultural contingent, temporal i mutable. Cap tradició no s'ha manifestat en un buit atemporal ni ha romàs immillorable des dels seus orígens. Com hem comprovat des de les primeres manifestacions funeràries del Paleolític fins a la consolidació dels monoteismes urbans, les idees religioses neixen, s'articulen i es transformen en diàleg estret amb les condicions ecològiques, econòmiques i tecnològiques del seu entorn. La sedentarització i l'agricultura del Neolític van engendrar el culte a la fertilitat i a la deessa mare; la invenció de les ciutats i de l'escriptura a Mesopotàmia i a l'antic Egipte va necessitar panteons burocràtics i jerarquitzats que reflectissin l'ordre estatal; el col·lapse del bronze i les crisis imperials van afavorir l'anomenat gir axial, amb la seva interiorització ètica i la seva recerca d'un principi universal transcendent. Analitzar la religió històricament significa despullar-la de qualsevol pretensió d'immutabilitat per entendre-la com un procés obert de recepció, préstec, reinterpretació i transmissió.</p>
+
+    <p>En la seva dimensió social, la religió és la matriu fonamental sobre la qual la humanitat ha articulat la cohesió col·lectiva i les relacions de poder. Com va establir Émile Durkheim, el sagrat no és una entitat abstracta suspesa per damunt dels humans, sinó la força mateixa de la societat idealitzada i experimentada en comunitat. A través del ritu i de la divisió taxativa entre allò que és sagrat i allò que és profà, la religió genera el que el sociòleg francès va anomenar «efervescència col·lectiva»: un sentiment d'unitat i transcendència que reforça els vincles comunitaris i imposa obligacions morals compartides. Paral·lelament, tal com va teoritzar Max Weber, aquesta dimensió social és inseparable de les estructures d'autoritat i dominació. La religió no només connecta els individus entre ells, sinó que organitza la divisió del treball religiós (la contraposició entre el sacerdot institucional i el profeta carismàtic) i ofereix la legitimació necessària per justificar per què uns manen i els altres obeeixen, proveint un ordre transcendental que santifica tant les jerarquies terrenals com les expectatives de salvació dels sotmesos.</p>
+
+    <p>Finalment, en la seva dimensió simbòlica i existencial, la religió constitueix el dispositiu més potent que la humanitat ha creat per dotar de significat la realitat. L'ésser humà té una necessitat imperiosa de conferir sentit al món: no pot tolerar el caos, l'atzar cec ni la nuesa de la mort sense una estructura narrativa que els faci comprensibles. Des d'aquesta perspectiva, l'antropòleg Clifford Geertz va encertar en definir la religió com un sistema cultural de símbols que té per missió establir estats d'ànim i motivacions poderoses, formulant concepcions d'un ordre general de l'existència i revestint aquestes concepcions d'una aura de versemblança tan intensa que els fa semblar absolutament reals. Aquesta xarxa de significats és la que permet domesticar el patiment (teodicea), justificar el sacrifici i oferir la promesa que la destrucció biològica de l'individu no és la darrera paraula del cosmos. Mircea Eliade va mostrar amb precisió com la «hierofania» —la manifestació del sagrat en un objecte, un temps o un espai concrets— opera com a punt fix fundacional: un *axis mundi* que permet a la persona orientar-se enmig del caos indefinit del món profà.</p>
+
+    <p>Aquestes tres dimensions no operen com a compartiments separats, sinó que es troben en permanent interacció dinàmica. El símbol confereix a la societat la narrativa sagrada que fa suportable l'existència i legitima l'ordre establert; l'estructura social proveeix els rituals, les institucions i els espais que mantenen viu el símbol; i la història sotmet tant el símbol com la institució al pas inexorable del temps, obligant-los a mutar, a resistir o a desaparèixer. Només una anàlisi que mantingui simultàniament aquests tres vèrtexs és capaç de comprendre per què la religió, lluny de ser un residu arcaic, continua sent un dels motors centrals de la condició humana.</p>
+
+    <h2 id="s1513">15.1.3 La relació entre creença, societat i poder com a fil conductor</h2>
+    <p>Al llarg dels catorze capítols que componen aquesta investigació, les idees religioses mai no s'han presentat com a abstraccions teològiques flotant en un buit intemporal, sinó com a forces encarnades en la carn viva de la història. Rere cada panteó diví, cada litúrgia de sacrifici, cada codi de santedat o cada tractat de salvació s'hi amaga sempre una trama complexa de relacions humanes. El veritable fil conductor que uneix el temple sumeri d'Enki a Èridu amb les disputes confessionals de la modernitat és la tensió permanent i recíproca entre tres vectors: la creença individual i col·lectiva, la morfologia de la societat i els mecanismes de legitimació del poder polític.</p>
+
+    <p>Aquesta relació és, abans de res, una necessitat estructural de l'autoritat. Com va advertir lúcidament Max Weber, cap dominació política no es pot sostenir a llarg termini recolzada exclusivament en l'ús de la força física o en la coacció militar. La violència nua és costosa, inestable i fràgil; per perdurar, el poder necessita transformar l'obediència forçada en deure moral, i per aconseguir-ho requereix el que els clàssics anomenaven una «teodicea de la dominació». És aquí on la religió esdevé el gran aparell legitimador de la història universal. Des de les primeres ciutats mesopotàmiques, on el monarca governava com a simple administrador (*ensi*) en nom del déu de la ciutat, fins a l'Egipte faraònic, on el rei era l'encarnació vivent d'Horus i el garant còsmic de la *Maat*; des del *Mandat del Cel* (*Tianming*) a la Xina imperial fins a la divinització dels cèsars a Roma o la doctrina del dret diví dels reis a l'Europa medieval i moderna, el poder s'ha revestit invariablement d'atributs transcendentals. En santificar l'ordre jeràrquic, la religió converteix la revolta contra el sobirà en un sacrilegi contra l'ordre mateix de l'univers.</p>
+
+    <p>Tanmateix, reduir la religió a un mer instrument de control de les elits governants seria cometre un greu error historiogràfic. La història de les religions demostra que el sagrat és una arma de doble tall: allò mateix que serveix per consagrar el tron pot esdevenir la força més demolidora contra la tirania. En situar l'autoritat suprema en un pla transcendent per damunt de qualsevol governant terrenal, la religió ofereix un tribunal moral inapel·lable des del qual impugnar el poder establert. Ho vam constatar amb els profetes d'Israel (Amós, Isaïes, Jeremies), que denunciaven la corrupció dels seus propis reis i sacerdots en nom d'un Déu que exigia justícia per als orfes i les vídues abans que holocaustos sumptuosos; ho vam veure en el cristianisme primitiu, la negativa del qual a rendir culte al geni de l'emperador va ser percebuda com un acte de sedició política intolerable; en els moviments mil·lenaristes i camperols de la Reforma protestant encapçalats per Thomas Müntzer; i en la tradició monàstica del budisme o del jainisme, que en renunciar a la família i a l'Estat creaven un espai d'autonomia radical respecte a la coacció dels sobirans.</p>
+
+    <p>Aquesta tensió entre sacralització de l'ordre i rebel·lió profètica té lloc sempre a través de la mediació social. La creença no és un fenomen exclusivament introspectiu: les persones no trien les seves categories mentals a partir del no-res, sinó que les reben mitjançant el llenguatge, el ritu familiar, la memòria col·lectiva i les institucions de la seva comunitat. Com ha subratllat Jan Assmann a través del concepte de «memòria cultural», les societats utilitzen el text sagrat, el calendari festiu i els mites fundacionals per traçar les fronteres de la seva pròpia identitat, definint qui pertany a la comunitat i qui en queda exclòs com a heretge, bàrbar o impur. La fe configura així la xarxa moral que fa possible la convivència diària, regula els intercanvis econòmics, sanciona el matrimoni i sosté la solidaritat entre desconeguts.</p>
+
+    <p>Comprendre la religió com a fil conductor de la història humana exigeix, doncs, no dissociar mai aquests tres pols: la necessitat individual i existencial de sentit, que batega en la creença personal; la necessitat col·lectiva de cohesió i reproducció comunitària, que s'organitza en l'estructura social; i la necessitat estatal de justificació i control, que es materialitza en el poder polític. L'evolució, el triomf i l'ocàs de les grans tradicions religioses s'ha decidit sempre en el camp d'aquesta dialèctica ininterrompuda.</p>
+
+    <h2 id="s1514">15.1.4 La pregunta central de la investigació</h2>
+    <p>Després d'haver examinat detalladament l'aparició dels primers ritus funeraris, el naixement dels grans panteons de l'Antiguitat, les revolucions ètiques de l'era axial i la consolidació institucional dels monoteismes històrics, la investigació desemboca de manera ineludible en un dilema epistemològic fonamental. La gran diversitat de formes religioses que la humanitat ha creat al llarg dels mil·lennis no pot ser simplement catalogada; exigeix ser compresa en la seva arrel motivacional i estructural. Si retirem les capes específiques de cada teologia, de cada litúrgia particular i de cada context geogràfic, quin és el motor primordial que ha mantingut viva la flama del sagrat a través de totes les èpoques?</p>
+
+    <!-- CAIXA DESTACADA: LA GRAN PREGUNTA DE LA INVESTIGACIÓ -->
+    <div class="question-callout" style="border-left: 3px solid #c4a44a; background: rgba(196, 164, 74, 0.05); padding: 1.75rem 2rem; margin: 2.5rem 0; font-family: 'Crimson Pro', Georgia, serif;">
+      <p style="font-size: 1.3rem; font-weight: 600; color: #c4a44a; line-height: 1.45; margin-bottom: 1rem; letter-spacing: 0.01em;">
+        Sentit existencial, ordre col·lectiu o legitimació del poder: què ha estat, en la seva arrel última, el fenomen religiós al llarg de la història?
+      </p>
+      <p style="font-size: 1.12rem; line-height: 1.7; font-style: italic; margin: 0; color: inherit; opacity: 0.95;">
+        Ha estat la fe principalment una resposta universal a la necessitat humana de conferir sentit al cosmos i a la finitud de la mort, una estructura indispensable per fer possible la cohesió i l'organització social, o bé el vestit sagrat amb què el poder polític ha blindat històricament la seva dominació? Són aquestes tres dimensions forces independents i en tensió, o constitueixen els vèrtexs d'un mateix dispositiu històric que només es pot comprendre en la seva totalitat?
+      </p>
+    </div>
+
+    <p>Aquesta interrogació no admet respostes doctrinals ni simplificacions esquemàtiques. Al llarg de la història del pensament, cadascuna d'aquestes tres explicacions ha donat lloc a un paradigma teòric propi, sovint enfrontat als altres:</p>
+
+    <p>D'una banda, la tradició antropològica i fenomenològica —encapçalada per pensadors com Rudolf Otto, Mircea Eliade i, més recentment, Karen Armstrong— ha defensat la **primacia de la necessitat de sentit**. Des d'aquesta perspectiva, la religió arrela directament en la condició vulnerable i autoconscient de l'ésser humà: en la perplexitat davant del misteri de l'ésser, en l'angoixa que produeix el dolor i la certesa de la pròpia mort, i en l'experiència íntima d'una sacralitat que desborda el món profà. La religió seria, abans de tot, la resposta existencial a la tragèdia del buit i de l'absurd.</p>
+
+    <p>D'altra banda, la tradició sociològica clàssica —vertebrada sobretot per Émile Durkheim i l'escola funcionalista— ha sostingut la **primacia de l'ordre social**. Segons aquest enfocament, cap grup humà no hauria pogut sobreviure a la dispersió, a l'egoisme destructiu o a la violència interna sense un aparell sagrat capaç d'imposar normes intocables. A través del tabú, de la festa ritual compartida i de la consagració dels deures mutus, la religió opera com el ciment invisible que transforma una agrupació d'individus en una comunitat moral cohesionada. La religió, per tant, existiria perquè sense ella la vida social s'esfondraria.</p>
+
+    <p>Finalment, la tradició crítica i genealògica —des de Karl Marx i Friedrich Nietzsche fins a les anàlisis de Max Weber i la sociologia del poder contemporània— ha emfatitzat la **primacia de la dominació**. Lluny de ser un impuls desinteressat d'espiritualitat o un pacte innocent de convivència, la religió hauria estat històricament la tecnologia més eficaç inventada per les elits per consolidar privilegis, confiscar recursos i domesticar la resistència dels oprimits. Prometent la justícia en un més enllà llunyà i amenaçant amb càstigs eterns la desobediència terrenal, els déus s'haurien erigit en el millor escut de reis, emperadors i jerarquies sacerdotals.</p>
+
+    <p>El desafiament epistemològic d'aquest capítol de cloenda consisteix precisament a no prendre partit per cap d'aquestes tres visions de manera apriorística ni reduccionista. L'evidència acumulada al llarg dels catorze capítols anteriors ens adverteix que cap d'aquests vectors pot ser comprès de forma aïllada: la creença en el sentit transcendent ha sostingut la solidaritat social, però aquesta solidaritat ha estat simultàniament instrumentalitzada pel poder; i el poder, al seu torn, mai no ha aconseguit una submissió duradora sense oferir a canvi un relat que satisfés la set existencial dels governats.</p>
+
+    <p>Amb aquesta gran pregunta com a brúixola intel·lectual, podem endinsar-nos ja en la primera gran etapa d'aquesta síntesi: l'anàlisi de les grans constants que han definit l'experiència del sagrat des dels albors de la civilització.</p>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.2 -->
+  <!-- ========================================== -->
+  <section id="s152" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.2</span>Les grans constants del fenomen religiós</h1>
+    <p class="section-lead">Cosmos, mort, símbol, ritu i conducta: els cinc eixos estructurals de l'experiència sagrada al llarg de les civilitzacions.</p>
+
+    <h2 id="s1521">15.2.1 L'origen de l'univers i les explicacions del món</h2>
+    <!-- Contingut 15.2.1 -->
+
+    <h2 id="s1522">15.2.2 La mort, la transcendència i la promesa de continuïtat</h2>
+    <!-- Contingut 15.2.2 -->
+
+    <h2 id="s1523">15.2.3 El mite, els arquetips i la construcció de l'imaginari col·lectiu</h2>
+    <!-- Contingut 15.2.3 -->
+
+    <h2 id="s1524">15.2.4 El ritual, el sacrifici i la cohesió social</h2>
+    <!-- Contingut 15.2.4 -->
+
+    <h2 id="s1525">15.2.5 La sacralització de la conducta: tabú, puresa i obligació moral</h2>
+    <!-- Contingut 15.2.5 -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.3 -->
+  <!-- ========================================== -->
+  <section id="s153" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.3</span>Religió i poder: una genealogia de les estructures de dominació</h1>
+    <p class="section-lead">De la mediació xamànica a l'imperi sagrat: la justificació transcendental de l'autoritat i els espais de dissidència.</p>
+
+    <h2 id="s1531">15.3.1 De l'autoritat xamànica al poder sacerdotal</h2>
+    <!-- Contingut 15.3.1 -->
+
+    <h2 id="s1532">15.3.2 La divinització del governant i el naixement de l'Estat sagrat</h2>
+    <!-- Contingut 15.3.2 -->
+
+    <h2 id="s1533">15.3.3 Religió, imperi i legitimitat política</h2>
+    <!-- Contingut 15.3.3 -->
+
+    <h2 id="s1534">15.3.4 La llei divina i el control de l'ordre social</h2>
+    <!-- Contingut 15.3.4 -->
+
+    <h2 id="s1535">15.3.5 Les religions com a instruments de cohesió i resistència</h2>
+    <!-- Contingut 15.3.5 -->
+
+    <h2 id="s1536">15.3.6 La transformació de l'autoritat religiosa al llarg de la història</h2>
+    <!-- Contingut 15.3.6 -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.4 -->
+  <!-- ========================================== -->
+  <section id="s154" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.4</span>Anàlisi comparativa transversal: estructures, funcions i diferències entre les religions</h1>
+    <p class="section-lead">Tipologies morfològiques, cosmologies del temps i dinàmiques de transmissió a través de la història universal.</p>
+
+    <h2 id="s1541">15.4.1 Concepcions del sagrat: politeisme, dualisme, monoteisme i vies no teistes</h2>
+    <!-- Contingut 15.4.1 -->
+
+    <h2 id="s1542">15.4.2 Religions revelades, tradicions filosòfiques i sistemes de creença</h2>
+    <!-- Contingut 15.4.2 -->
+
+    <h2 id="s1543">15.4.3 Religions ètniques, universals i de salvació</h2>
+    <!-- Contingut 15.4.3 -->
+
+    <h2 id="s1544">15.4.4 Cosmologies temporals i destí final: temps cíclic, escatologia lineal i salvació</h2>
+    <!-- Contingut 15.4.4 -->
+
+    <h2 id="s1545">15.4.5 Individu, comunitat, autoritat i ordre social</h2>
+    <!-- Contingut 15.4.5 -->
+
+    <h2 id="s1546">15.4.6 Continuïtats, ruptures, préstecs i influències entre tradicions</h2>
+    <!-- Contingut 15.4.6 -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.5 -->
+  <!-- ========================================== -->
+  <section id="s155" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.5</span>Supervivència, transformació i desaparició de les religions</h1>
+    <p class="section-lead">Cànons, sincretismes i col·lapses: per què determinades tradicions perduren mil·lennis mentre d'altres s'extingeixen en l'oblit.</p>
+
+    <h2 id="s1551">15.5.1 Els factors històrics de la supervivència religiosa</h2>
+    <!-- Contingut 15.5.1 -->
+
+    <h2 id="s1552">15.5.2 Expansió, adaptació i sincretisme</h2>
+    <!-- Contingut 15.5.2 -->
+
+    <h2 id="s1553">15.5.3 Conquesta, persecució i desaparició de tradicions</h2>
+    <!-- Contingut 15.5.3 -->
+
+    <h2 id="s1554">15.5.4 La transmissió cultural i la memòria religiosa</h2>
+    <!-- Contingut 15.5.4 -->
+
+    <h2 id="s1555">15.5.5 El paper de la demografia, les institucions i el poder polític</h2>
+    <!-- Contingut 15.5.5 -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.6 -->
+  <!-- ========================================== -->
+  <section id="s156" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.6</span>El nou mapa religiós mundial: demografia, pluralisme i tensions</h1>
+    <p class="section-lead">El desplaçament cap al Sud Global, la reconfiguració asiàtica i les fractures de la convivència global contemporània.</p>
+
+    <h2 id="s1561">15.6.1 El desplaçament del centre demogràfic cap al Sud Global</h2>
+    <!-- Contingut 15.6.1 -->
+
+    <h2 id="s1562">15.6.2 Àsia: continuïtat de les tradicions i modernització</h2>
+    <!-- Contingut 15.6.2 -->
+
+    <h2 id="s1563">15.6.3 Occident: secularització i creixement dels no afiliats</h2>
+    <!-- Contingut 15.6.3 -->
+
+    <h2 id="s1564">15.6.4 Fonamentalismes, identitats i reaccions davant la modernitat</h2>
+    <!-- Contingut 15.6.4 -->
+
+    <h2 id="s1565">15.6.5 Pluralisme religiós, migracions i nous espais de contacte</h2>
+    <!-- Contingut 15.6.5 -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.7 -->
+  <!-- ========================================== -->
+  <section id="s157" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.7</span>La metamorfosi de la religió en la modernitat</h1>
+    <p class="section-lead">De la institució tutelar a l'espiritualitat individualitzada: redefinició del vincle sagrat en societats seculars.</p>
+
+    <h2 id="s1571">15.7.1 Secularització i pèrdua del monopoli institucional</h2>
+    <!-- Contingut 15.7.1 -->
+
+    <h2 id="s1572">15.7.2 Individualització de la creença, sincretisme i espiritualitat a la carta</h2>
+    <!-- Contingut 15.7.2 -->
+
+    <h2 id="s1573">15.7.3 La religió en l'era digital</h2>
+    <!-- Contingut 15.7.3 -->
+
+    <h2 id="s1574">15.7.4 Noves formes d'autoritat, comunitat i pertinença («creure sense pertànyer»)</h2>
+    <!-- Contingut 15.7.4 -->
+
+    <h2 id="s1575">15.7.5 La persistència de la necessitat humana de transcendència</h2>
+    <!-- Contingut 15.7.5 -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.8 -->
+  <!-- ========================================== -->
+  <section id="s158" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.8</span>Els nous mites i les religions seculars</h1>
+    <p class="section-lead">La transferència de la fe: de la sacralització de la política i la nació a l'escatologia tecnològica i el transhumanisme.</p>
+
+    <h2 id="s1581">15.8.1 Les ideologies polítiques com a sistemes de creença col·lectiva</h2>
+    <!-- Contingut 15.8.1 -->
+
+    <h2 id="s1582">15.8.2 Nacionalisme, identitat i sacralització de la nació</h2>
+    <!-- Contingut 15.8.2 -->
+
+    <h2 id="s1583">15.8.3 La cultura de masses i els nous imaginaris mitològics</h2>
+    <!-- Contingut 15.8.3 -->
+
+    <h2 id="s1584">15.8.4 Ciència, tecnologia i promeses de transcendència</h2>
+    <!-- Contingut 15.8.4 -->
+
+    <h2 id="s1585">15.8.5 Transhumanisme, intel·ligència artificial i immortalitat digital</h2>
+    <!-- Contingut 15.8.5 -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.9 -->
+  <!-- ========================================== -->
+  <section id="s159" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.9</span>Conclusions generals: la religió com a construcció de sentit, ordre social i poder</h1>
+    <p class="section-lead">Resposta a la gran pregunta de la investigació: síntesi interpretativa de l'evolució religiosa de la humanitat.</p>
+
+    <h2 id="s1591">15.9.1 Síntesi dels grans resultats de la investigació</h2>
+    <!-- Contingut 15.9.1 -->
+
+    <h2 id="s1592">15.9.2 La religió com a constant antropològica i realitat històrica canviant</h2>
+    <!-- Contingut 15.9.2 -->
+
+    <h2 id="s1593">15.9.3 La relació entre necessitat de sentit, cohesió social i legitimació del poder</h2>
+    <!-- Contingut 15.9.3 -->
+
+    <h2 id="s1594">15.9.4 Què ha canviat i què ha persistit en el fenomen religiós?</h2>
+    <!-- Contingut 15.9.4 -->
+
+    <h2 id="s1595">15.9.5 El futur de les religions i les noves formes de sacralitat</h2>
+    <!-- Contingut 15.9.5 -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.10 -->
+  <!-- ========================================== -->
+  <section id="s1510" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.10</span>Epíleg metodològic: abast, biaixos i límits de la investigació</h1>
+    <p class="section-lead">Reflexió epistemològica: condicions materials de les fonts, biaixos eurocèntrics i límits de la mirada comparativa.</p>
+
+    <h2 id="s15101">15.10.1 Perspectiva històrica, comparativa i interdisciplinària</h2>
+    <!-- Contingut 15.10.1 -->
+
+    <h2 id="s15102">15.10.2 Problemes de comparabilitat entre tradicions religioses</h2>
+    <!-- Contingut 15.10.2 -->
+
+    <h2 id="s15103">15.10.3 Límits de les fonts i de les interpretacions històriques</h2>
+    <!-- Contingut 15.10.3 -->
+
+    <h2 id="s15104">15.10.4 Perspectives eurocèntriques i necessitat d'una mirada plural i descolonial</h2>
+    <!-- Contingut 15.10.4 -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 15.11 -->
+  <!-- ========================================== -->
+  <section id="s15bib" class="section-start reveal">
+    <h1 class="chapter-title"><span class="ch-num">15.11</span>Bibliografia general i fonts de consulta</h1>
+    <p class="section-lead">Fonts primàries, edicions crítiques, monografies historiogràfiques i obres teòriques de referència.</p>
+    <!-- El llistat bibliogràfic anirà aquí -->
+  </section>
+
+</main>
+
+<a href="#cover" class="back-top" id="backTop" aria-label="Tornar al principi" title="Tornar al principi">↑</a>
+
+<!-- Scripts Externs -->
+<script src="scripts.js"></script>
+</body>
+</html>
